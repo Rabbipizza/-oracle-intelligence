@@ -1,179 +1,1307 @@
 {
   "counts": {
-    "frozen_picks": 720,
+    "candidate_groups": 144,
+    "listing_eligible_picks": 699,
+    "listing_rejections": 24,
     "price_failures": 0,
-    "price_tickers_loaded": 99,
-    "price_tickers_requested": 99,
-    "snapshot_files": 9
+    "price_tickers_loaded": 109,
+    "sec_companyfacts_loaded": 96,
+    "sec_failures": 3,
+    "snapshot_files": 10
   },
-  "engine": "ORACLE_V5_EXTERNAL_WORKER_3_STATIC_PIT",
-  "generated_at": "2026-09-06T18:40:18.510838+00:00",
-  "market_data": {
-    "frequency": "DAILY_ADJUSTED",
-    "provider": "YAHOO_CHART"
+  "current_decision": {
+    "candidates": [
+      {
+        "company_name": "AAON",
+        "composite_score": 83.1,
+        "decision": "PILOT_BUY",
+        "early_bird_score": 95,
+        "early_role": "AI_DATACENTER_COOLING",
+        "expectation_gap": {
+          "distance_52w_high_pct": -46.33569253559378,
+          "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+          "prior_return_12m": -3.748868666544214,
+          "prior_return_6m": -21.287019530613616,
+          "score": 75.0
+        },
+        "fundamental": {
+          "cash": 13000.0,
+          "debt": null,
+          "filed_cutoff": "2026-09-06",
+          "net_income": 107593000.0,
+          "quality": 85,
+          "revenue": 1442076000.0,
+          "revenue_growth_pct": 20.109442086895683,
+          "revenue_previous": 1200635000.0,
+          "score": 72.0,
+          "source": "SEC_COMPANYFACTS_PIT"
+        },
+        "max_paper_weight_pct": 15,
+        "status": "EARLY_BIRD",
+        "ticker": "AAON"
+      }
+    ],
+    "global": "PILOT_BUY"
   },
+  "engine": "ORACLE_V5_FINAL_EXTERNAL_PIT",
+  "generated_at": "2026-09-06T22:21:36.616240+00:00",
+  "listing_rejections": [
+    {
+      "as_of_date": "2017-04-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "HONA"
+    },
+    {
+      "as_of_date": "2017-04-01",
+      "model": "EARLY_ACCEL",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "HONA"
+    },
+    {
+      "as_of_date": "2017-04-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "HONA"
+    },
+    {
+      "as_of_date": "2018-01-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "PINS"
+    },
+    {
+      "as_of_date": "2018-01-01",
+      "model": "ACCEL_ONLY",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "PINS"
+    },
+    {
+      "as_of_date": "2018-01-01",
+      "model": "EARLY_ACCEL",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "PINS"
+    },
+    {
+      "as_of_date": "2018-01-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "PINS"
+    },
+    {
+      "as_of_date": "2018-04-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "UBER"
+    },
+    {
+      "as_of_date": "2018-04-01",
+      "model": "ACCEL_ONLY",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "UBER"
+    },
+    {
+      "as_of_date": "2018-04-01",
+      "model": "EARLY_ACCEL",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "UBER"
+    },
+    {
+      "as_of_date": "2018-04-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 2,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "UBER"
+    },
+    {
+      "as_of_date": "2019-07-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "CRCL"
+    },
+    {
+      "as_of_date": "2019-07-01",
+      "model": "EARLY_ACCEL",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "CRCL"
+    },
+    {
+      "as_of_date": "2019-07-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 3,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "CRCL"
+    },
+    {
+      "as_of_date": "2024-01-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 5,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-01-01",
+      "model": "EARLY_ACCEL",
+      "rank": 5,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-04-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-04-01",
+      "model": "EARLY_ACCEL",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-04-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 5,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-10-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 5,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2024-10-01",
+      "model": "EARLY_ACCEL",
+      "rank": 5,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2025-07-01",
+      "model": "ACCEL_EVIDENCE",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2025-07-01",
+      "model": "EARLY_ACCEL",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    },
+    {
+      "as_of_date": "2025-07-01",
+      "model": "EARLY_QUALITY_MOMENTUM",
+      "rank": 4,
+      "reason": "NOT_LISTED_AT_DECISION_DATE",
+      "ticker": "Q"
+    }
+  ],
   "methodology": {
     "benchmark": "QQQ",
-    "entry": "last trading close strictly before decision date",
-    "exit": "last trading close on or before decision date + 6 calendar months",
-    "fundamentals_in_model": false,
+    "derived_rules_frozen_before_outcomes": true,
+    "expectation_gap": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+    "fundamentals": "SEC Companyfacts with filed <= decision date",
     "horizon_months": 6,
-    "note": "SEC PIT fundamentals remain a separate gate until historical coverage is sufficient.",
+    "listing_gate": "must have traded strictly before decision date",
     "promotion_gate": "N>=100; median alpha>0; win-rate>55%; trimmed alpha>0; regime stability",
-    "selection_formula_frozen_before_outcomes": true,
     "top_n_per_quarter": 5
   },
   "models": {
     "ACCEL_EVIDENCE": {
       "latest_picks": [
         {
-          "alpha_6m": 2.284969952785265,
+          "alpha_6m": 2.2849599970051315,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": -0.1417839896006745,
+          "selected_rank": 1,
           "ticker": "F"
         },
         {
-          "alpha_6m": -24.37737161547021,
+          "alpha_6m": -24.377381571250343,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.6069081842171262,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 31.96390630355106,
+            "prior_return_6m": 34.2238718838668,
+            "score": 53.0
+          },
+          "fundamental": {
+            "cash": 6438000000.0,
+            "debt": 10728000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 2,
           "regime": "2022_2025",
           "return_6m": -26.80412555785615,
+          "selected_rank": 2,
           "ticker": "UBER"
         },
         {
-          "alpha_6m": 32.84324655300091,
+          "alpha_6m": 32.843252096361006,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.324673802761305,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 65.07644102642274,
+            "prior_return_6m": 68.52744969072182,
+            "score": 28.0
+          },
+          "fundamental": {
+            "cash": 3968000000.0,
+            "debt": 6692000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 3274000000.0,
+            "quality": 100,
+            "revenue": 10924000000.0,
+            "revenue_growth_pct": 34.26745329400197,
+            "revenue_previous": 8136000000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 30.416492610614966,
+          "return_6m": 30.416508109755203,
+          "selected_rank": 3,
           "ticker": "B"
         },
         {
-          "alpha_6m": 39.183165655473246,
+          "alpha_6m": 39.18315569969311,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -11.343451081167355,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 419.0682797780945,
+            "prior_return_6m": 163.96694685601156,
+            "score": 0
+          },
+          "fundamental": {
+            "cash": 564081000.0,
+            "debt": 70223000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": -190175000.0,
+            "quality": 100,
+            "revenue": 436214000.0,
+            "revenue_growth_pct": 78.34352717995682,
+            "revenue_previous": 244592000.0,
+            "score": 70.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 4,
           "regime": "2022_2025",
           "return_6m": 36.7564117130873,
+          "selected_rank": 4,
           "ticker": "RKLB"
         },
         {
-          "alpha_6m": 7.483921744970212,
+          "alpha_6m": 7.483904836684685,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752904986480516,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 1.6097925567343019,
+            "prior_return_6m": 8.897914213993419,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 800447000.0,
+            "debt": null,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 5.057167802584273,
+          "return_6m": 5.057160850078879,
+          "selected_rank": 5,
           "ticker": "O"
         },
         {
-          "alpha_6m": 16.047726938407195,
+          "alpha_6m": 16.047714527452527,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": 27.681136608871594,
+          "selected_rank": 1,
           "ticker": "MS"
         },
         {
-          "alpha_6m": -10.535394844951963,
+          "alpha_6m": -10.535407333669045,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 2,
           "regime": "2022_2025",
-          "return_6m": 1.098014825512439,
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 2,
           "ticker": "O"
         },
         {
-          "alpha_6m": 3.4011869923209037,
+          "alpha_6m": 3.401182929578871,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 15.034596662785304,
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
           "ticker": "L"
         },
         {
-          "alpha_6m": -5.595884154857833,
+          "alpha_6m": -5.595889447247471,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -3.916721658261979,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.409261816661232,
+            "prior_return_6m": 7.479550402656909,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 355000000.0,
+            "debt": 35289000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 2124000000.0,
+            "quality": 100,
+            "revenue": 14182000000.0,
+            "revenue_growth_pct": 5.15311040260992,
+            "revenue_previous": 13487000000.0,
+            "score": 53.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 6.037525515606568,
+          "return_6m": 6.037532634171594,
+          "selected_rank": 4,
           "ticker": "D"
         },
         {
-          "alpha_6m": 12.141006273114478,
+          "alpha_6m": 12.141001698691504,
           "as_of_date": "2025-04-01",
           "entry_date": "2025-03-31",
           "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.117217314697207,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.7293840587881,
+            "prior_return_6m": 16.672815988305544,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 188105000000.0,
+            "debt": null,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 12682000000.0,
+            "quality": 85,
+            "revenue": 81139000000.0,
+            "revenue_growth_pct": 3.4118426754352424,
+            "revenue_previous": 78462000000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_EVIDENCE",
           "qqq_return_6m": 28.940454541794324,
           "rank": 1,
           "regime": "2022_2025",
-          "return_6m": 41.0814608149088,
+          "return_6m": 41.08145624048583,
+          "selected_rank": 1,
           "ticker": "C"
         }
       ],
       "overall": {
-        "avg_alpha_6m": 1.6626422709629656,
-        "best_alpha": 373.9082823280271,
-        "median_alpha_6m": -0.377211696903756,
-        "n": 172,
-        "trimmed_alpha_90pct": -0.922298913146788,
-        "win_rate_vs_qqq": 48.25581395348837,
-        "worst_alpha": -70.09768537764717
+        "avg_alpha_6m": 1.7020099540809106,
+        "best_alpha": 373.9082909822699,
+        "median_alpha_6m": -0.34182442960821646,
+        "n": 173,
+        "trimmed_alpha_90pct": -0.8624547094348975,
+        "win_rate_vs_qqq": 48.554913294797686,
+        "worst_alpha": -70.09771684871421
       },
       "regimes": {
         "2017_2021": {
-          "avg_alpha_6m": -4.010859106322975,
-          "best_alpha": 30.76489834687011,
-          "median_alpha_6m": -1.12225925503917,
-          "n": 96,
-          "trimmed_alpha_90pct": -3.1596191973628027,
-          "win_rate_vs_qqq": 42.708333333333336,
-          "worst_alpha": -70.09768537764717
+          "avg_alpha_6m": -3.8821569609335853,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": -0.9663987398902609,
+          "n": 97,
+          "trimmed_alpha_90pct": -3.028910925345859,
+          "win_rate_vs_qqq": 43.29896907216495,
+          "worst_alpha": -70.09771684871421
         },
         "2022_2025": {
-          "avg_alpha_6m": 8.829170326482048,
-          "best_alpha": 373.9082823280271,
-          "median_alpha_6m": 2.0846336399234713,
+          "avg_alpha_6m": 8.829170358770464,
+          "best_alpha": 373.9082909822699,
+          "median_alpha_6m": 2.0846388391279884,
           "n": 76,
-          "trimmed_alpha_90pct": 3.197555968402764,
+          "trimmed_alpha_90pct": 3.1975564998464434,
           "win_rate_vs_qqq": 55.26315789473684,
-          "worst_alpha": -41.288543578805715
+          "worst_alpha": -41.28857171325853
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    },
+    "ACCEL_EVIDENCE_FUND_GAP": {
+      "latest_picks": [
+        {
+          "alpha_6m": 2.2849599970051315,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "selected_rank": 1,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": 7.483904836684685,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752904986480516,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 1.6097925567343019,
+            "prior_return_6m": 8.897914213993419,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 800447000.0,
+            "debt": null,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 5.057160850078879,
+          "selected_rank": 5,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 16.047714527452527,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "selected_rank": 1,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": -10.535407333669045,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 2,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 3.401182929578871,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": 12.141001698691504,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.117217314697207,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.7293840587881,
+            "prior_return_6m": 16.672815988305544,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 188105000000.0,
+            "debt": null,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 12682000000.0,
+            "quality": 85,
+            "revenue": 81139000000.0,
+            "revenue_growth_pct": 3.4118426754352424,
+            "revenue_previous": 78462000000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 41.08145624048583,
+          "selected_rank": 1,
+          "ticker": "C"
+        },
+        {
+          "alpha_6m": 3.656306096477934,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -15.612689714260874,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -4.6335089591958205,
+            "prior_return_6m": -1.858832560785173,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 5893000000.0,
+            "debt": 9497000000.0,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 32.59676063827226,
+          "selected_rank": 2,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 70.99222422846138,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -32.645364422090616,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 25.51422220405066,
+            "prior_return_6m": 0.5473094090327812,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 9307000000.0,
+            "debt": 42608000000.0,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 5895000000.0,
+            "quality": 100,
+            "revenue": 51574000000.0,
+            "revenue_growth_pct": 43.98503587481504,
+            "revenue_previous": 35819000000.0,
+            "score": 68.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 99.9326787702557,
+          "selected_rank": 3,
+          "ticker": "AVGO"
+        },
+        {
+          "alpha_6m": 4.604465962424498,
+          "as_of_date": "2025-01-01",
+          "entry_date": "2024-12-31",
+          "exit_date": "2025-07-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.714040550857735,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -2.1022358557695964,
+            "prior_return_6m": 4.277678574721899,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 396956000.0,
+            "debt": null,
+            "filed_cutoff": "2025-01-01",
+            "net_income": 872309000.0,
+            "quality": 85,
+            "revenue": 4078993000.0,
+            "revenue_growth_pct": 21.991093049845365,
+            "revenue_previous": 3343681000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 7.274790581536528,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 11.879256543961025,
+          "selected_rank": 2,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 28.717488501681878,
+          "as_of_date": "2025-01-01",
+          "entry_date": "2024-12-31",
+          "exit_date": "2025-07-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -26.4335839924011,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -12.287064931246794,
+            "prior_return_6m": -5.399640877470269,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 3968000000.0,
+            "debt": 6692000000.0,
+            "filed_cutoff": "2025-01-01",
+            "net_income": 3274000000.0,
+            "quality": 100,
+            "revenue": 10924000000.0,
+            "revenue_growth_pct": 34.26745329400197,
+            "revenue_previous": 8136000000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 7.274790581536528,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 35.992279083218406,
+          "selected_rank": 3,
+          "ticker": "B"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": 0.6027043007685943,
+        "best_alpha": 70.99222422846138,
+        "median_alpha_6m": 1.3572258856810349,
+        "n": 77,
+        "trimmed_alpha_90pct": 0.5888261201249608,
+        "win_rate_vs_qqq": 54.54545454545455,
+        "worst_alpha": -61.98670572112799
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -0.4257567524997198,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": 0.9455075248681055,
+          "n": 38,
+          "trimmed_alpha_90pct": 0.4178627441881497,
+          "win_rate_vs_qqq": 52.63157894736842,
+          "worst_alpha": -61.98670572112799
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 1.6047945577992593,
+          "best_alpha": 70.99222422846138,
+          "median_alpha_6m": 1.473763328855071,
+          "n": 39,
+          "trimmed_alpha_90pct": 0.8887387902423853,
+          "win_rate_vs_qqq": 56.41025641025641,
+          "worst_alpha": -41.28857171325853
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    },
+    "ACCEL_EVIDENCE_FUND_PIT": {
+      "latest_picks": [
+        {
+          "alpha_6m": 2.2849599970051315,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "selected_rank": 1,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": -24.377381571250343,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.6069081842171262,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 31.96390630355106,
+            "prior_return_6m": 34.2238718838668,
+            "score": 53.0
+          },
+          "fundamental": {
+            "cash": 6438000000.0,
+            "debt": 10728000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": -26.80412555785615,
+          "selected_rank": 2,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 32.843252096361006,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.324673802761305,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 65.07644102642274,
+            "prior_return_6m": 68.52744969072182,
+            "score": 28.0
+          },
+          "fundamental": {
+            "cash": 3968000000.0,
+            "debt": 6692000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 3274000000.0,
+            "quality": 100,
+            "revenue": 10924000000.0,
+            "revenue_growth_pct": 34.26745329400197,
+            "revenue_previous": 8136000000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 30.416508109755203,
+          "selected_rank": 3,
+          "ticker": "B"
+        },
+        {
+          "alpha_6m": 7.483904836684685,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752904986480516,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 1.6097925567343019,
+            "prior_return_6m": 8.897914213993419,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 800447000.0,
+            "debt": null,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.426743986605806,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 5.057160850078879,
+          "selected_rank": 5,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 16.047714527452527,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "selected_rank": 1,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": -10.535407333669045,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 2,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 3.401182929578871,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.633422081419065,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": 12.141001698691504,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.117217314697207,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.7293840587881,
+            "prior_return_6m": 16.672815988305544,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 188105000000.0,
+            "debt": null,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 12682000000.0,
+            "quality": 85,
+            "revenue": 81139000000.0,
+            "revenue_growth_pct": 3.4118426754352424,
+            "revenue_previous": 78462000000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 41.08145624048583,
+          "selected_rank": 1,
+          "ticker": "C"
+        },
+        {
+          "alpha_6m": 3.656306096477934,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -15.612689714260874,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -4.6335089591958205,
+            "prior_return_6m": -1.858832560785173,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 5893000000.0,
+            "debt": 9497000000.0,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 32.59676063827226,
+          "selected_rank": 2,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 70.99222422846138,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -32.645364422090616,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 25.51422220405066,
+            "prior_return_6m": 0.5473094090327812,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 9307000000.0,
+            "debt": 42608000000.0,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 5895000000.0,
+            "quality": 100,
+            "revenue": 51574000000.0,
+            "revenue_growth_pct": 43.98503587481504,
+            "revenue_previous": 35819000000.0,
+            "score": 68.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 99.9326787702557,
+          "selected_rank": 3,
+          "ticker": "AVGO"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": 0.5921562956117526,
+        "best_alpha": 70.99222422846138,
+        "median_alpha_6m": 1.0918821938690648,
+        "n": 91,
+        "trimmed_alpha_90pct": 0.26776342203330583,
+        "win_rate_vs_qqq": 51.64835164835165,
+        "worst_alpha": -61.98670572112799
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -1.5852243000905863,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": -0.19503463529817466,
+          "n": 47,
+          "trimmed_alpha_90pct": -0.8327817236797189,
+          "win_rate_vs_qqq": 48.93617021276596,
+          "worst_alpha": -61.98670572112799
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 2.917994659202887,
+          "best_alpha": 70.99222422846138,
+          "median_alpha_6m": 1.45842905834418,
+          "n": 44,
+          "trimmed_alpha_90pct": 1.6733882474002826,
+          "win_rate_vs_qqq": 54.54545454545455,
+          "worst_alpha": -41.28857171325853
         },
         "2026_FORWARD": {
           "avg_alpha_6m": null,
@@ -190,153 +1318,353 @@
     "ACCEL_ONLY": {
       "latest_picks": [
         {
-          "alpha_6m": 32.84324655300091,
+          "alpha_6m": 32.843252096361006,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.324673802761305,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 65.07644102642274,
+            "prior_return_6m": 68.52744969072182,
+            "score": 28.0
+          },
+          "fundamental": {
+            "cash": 3968000000.0,
+            "debt": 6692000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 3274000000.0,
+            "quality": 100,
+            "revenue": 10924000000.0,
+            "revenue_growth_pct": 34.26745329400197,
+            "revenue_previous": 8136000000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 1,
           "regime": "2022_2025",
-          "return_6m": 30.416492610614966,
+          "return_6m": 30.416508109755203,
+          "selected_rank": 1,
           "ticker": "B"
         },
         {
-          "alpha_6m": 2.284969952785265,
+          "alpha_6m": 2.2849599970051315,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 2,
           "regime": "2022_2025",
           "return_6m": -0.1417839896006745,
+          "selected_rank": 2,
           "ticker": "F"
         },
         {
-          "alpha_6m": 39.183165655473246,
+          "alpha_6m": 39.18315569969311,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -11.343451081167355,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 419.0682797780945,
+            "prior_return_6m": 163.96694685601156,
+            "score": 0
+          },
+          "fundamental": {
+            "cash": 564081000.0,
+            "debt": 70223000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": -190175000.0,
+            "quality": 100,
+            "revenue": 436214000.0,
+            "revenue_growth_pct": 78.34352717995682,
+            "revenue_previous": 244592000.0,
+            "score": 70.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 3,
           "regime": "2022_2025",
           "return_6m": 36.7564117130873,
+          "selected_rank": 3,
           "ticker": "RKLB"
         },
         {
-          "alpha_6m": -24.37737161547021,
+          "alpha_6m": -24.377381571250343,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.6069081842171262,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 31.96390630355106,
+            "prior_return_6m": 34.2238718838668,
+            "score": 53.0
+          },
+          "fundamental": {
+            "cash": 6438000000.0,
+            "debt": 10728000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 4,
           "regime": "2022_2025",
           "return_6m": -26.80412555785615,
+          "selected_rank": 4,
           "ticker": "UBER"
         },
         {
-          "alpha_6m": -7.969401411163213,
+          "alpha_6m": -7.969411366943347,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -15.365405914685415,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -11.714578463543656,
+            "prior_return_6m": 13.001822132438923,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 1535000000.0,
+            "debt": 2730000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 1289000000.0,
+            "quality": 100,
+            "revenue": 6510000000.0,
+            "revenue_growth_pct": -4.72705985657837,
+            "revenue_previous": 6833000000.0,
+            "score": 53.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 5,
           "regime": "2022_2025",
           "return_6m": -10.396155353549153,
+          "selected_rank": 5,
           "ticker": "A"
         },
         {
-          "alpha_6m": 16.047726938407195,
+          "alpha_6m": 16.047714527452527,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": 27.681136608871594,
+          "selected_rank": 1,
           "ticker": "MS"
         },
         {
-          "alpha_6m": 13.846820543704231,
+          "alpha_6m": 13.846819225853247,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 55.84601331466927,
+            "prior_return_6m": 24.830580374780233,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 167408000000.0,
+            "debt": 228723000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 14276000000.0,
+            "quality": 50,
+            "revenue": null,
+            "revenue_growth_pct": null,
+            "revenue_previous": null,
+            "score": null,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 2,
           "regime": "2022_2025",
-          "return_6m": 25.480230214168632,
+          "return_6m": 25.480241307272312,
+          "selected_rank": 2,
           "ticker": "GS"
         },
         {
-          "alpha_6m": 3.4011869923209037,
+          "alpha_6m": 3.401182929578871,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 15.034596662785304,
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
           "ticker": "L"
         },
         {
-          "alpha_6m": 13.180320588263085,
+          "alpha_6m": 13.180294343684862,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.9957975716696885,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 10.031011066400296,
+            "prior_return_6m": 8.21294019920873,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 182597000.0,
+            "debt": 246000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 293825000.0,
+            "quality": 100,
+            "revenue": 2585919000.0,
+            "revenue_growth_pct": 6.5852015867101485,
+            "revenue_previous": 2426152000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 4,
           "regime": "2022_2025",
-          "return_6m": 24.813730258727485,
+          "return_6m": 24.813716425103927,
+          "selected_rank": 4,
           "ticker": "NYT"
         },
         {
-          "alpha_6m": -10.535394844951963,
+          "alpha_6m": -10.535407333669045,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "ACCEL_ONLY",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 1.098014825512439,
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 5,
           "ticker": "O"
         }
       ],
       "overall": {
-        "avg_alpha_6m": -0.7604966631717699,
-        "best_alpha": 120.41048592227064,
-        "median_alpha_6m": -0.7204896734695039,
+        "avg_alpha_6m": -0.7604955184289223,
+        "best_alpha": 120.41048547002411,
+        "median_alpha_6m": -0.7204792253768755,
         "n": 178,
-        "trimmed_alpha_90pct": -1.6068888499630816,
+        "trimmed_alpha_90pct": -1.6068881199781655,
         "win_rate_vs_qqq": 46.62921348314607,
-        "worst_alpha": -70.09768537764717
+        "worst_alpha": -70.09771684871421
       },
       "regimes": {
         "2017_2021": {
-          "avg_alpha_6m": -3.929462073912735,
-          "best_alpha": 30.76489834687011,
-          "median_alpha_6m": -1.52027034162555,
+          "avg_alpha_6m": -3.9294596002486952,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": -1.5202282597083334,
           "n": 98,
-          "trimmed_alpha_90pct": -3.206962372960292,
+          "trimmed_alpha_90pct": -3.20695823123998,
           "win_rate_vs_qqq": 43.87755102040816,
-          "worst_alpha": -70.09768537764717
+          "worst_alpha": -70.09771684871421
         },
         "2022_2025": {
-          "avg_alpha_6m": 3.1214859649859124,
-          "best_alpha": 120.41048592227064,
-          "median_alpha_6m": 0.12765765159353748,
+          "avg_alpha_6m": 3.1214854818003,
+          "best_alpha": 120.41048547002411,
+          "median_alpha_6m": 0.12766280648897954,
           "n": 80,
-          "trimmed_alpha_90pct": 0.6476721680875209,
+          "trimmed_alpha_90pct": 0.6476729467229021,
           "win_rate_vs_qqq": 50.0,
-          "worst_alpha": -41.288543578805715
+          "worst_alpha": -41.28857171325853
         },
         "2026_FORWARD": {
           "avg_alpha_6m": null,
@@ -353,153 +1681,353 @@
     "EARLY_ACCEL": {
       "latest_picks": [
         {
-          "alpha_6m": 2.284969952785265,
+          "alpha_6m": 2.2849599970051315,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": -0.1417839896006745,
+          "selected_rank": 1,
           "ticker": "F"
         },
         {
-          "alpha_6m": -24.37737161547021,
+          "alpha_6m": -24.377381571250343,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.6069081842171262,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 31.96390630355106,
+            "prior_return_6m": 34.2238718838668,
+            "score": 53.0
+          },
+          "fundamental": {
+            "cash": 6438000000.0,
+            "debt": 10728000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 2,
           "regime": "2022_2025",
           "return_6m": -26.80412555785615,
+          "selected_rank": 2,
           "ticker": "UBER"
         },
         {
-          "alpha_6m": 32.84324655300091,
+          "alpha_6m": 32.843252096361006,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.324673802761305,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 65.07644102642274,
+            "prior_return_6m": 68.52744969072182,
+            "score": 28.0
+          },
+          "fundamental": {
+            "cash": 3968000000.0,
+            "debt": 6692000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 3274000000.0,
+            "quality": 100,
+            "revenue": 10924000000.0,
+            "revenue_growth_pct": 34.26745329400197,
+            "revenue_previous": 8136000000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 30.416492610614966,
+          "return_6m": 30.416508109755203,
+          "selected_rank": 3,
           "ticker": "B"
         },
         {
-          "alpha_6m": 7.483921744970212,
+          "alpha_6m": 7.483904836684685,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752904986480516,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 1.6097925567343019,
+            "prior_return_6m": 8.897914213993419,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 800447000.0,
+            "debt": null,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 4,
           "regime": "2022_2025",
-          "return_6m": 5.057167802584273,
+          "return_6m": 5.057160850078879,
+          "selected_rank": 4,
           "ticker": "O"
         },
         {
-          "alpha_6m": 6.103753256872135,
+          "alpha_6m": 6.10375028199297,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.36548919522404466,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 10.04158229241645,
+            "prior_return_6m": 11.307538834517539,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 344000000.0,
+            "debt": 35289000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 2124000000.0,
+            "quality": 100,
+            "revenue": 14182000000.0,
+            "revenue_growth_pct": 5.15311040260992,
+            "revenue_previous": 13487000000.0,
+            "score": 53.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 3.6769993144861957,
+          "return_6m": 3.677006295387164,
+          "selected_rank": 5,
           "ticker": "D"
         },
         {
-          "alpha_6m": 16.047726938407195,
+          "alpha_6m": 16.047714527452527,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": 27.681136608871594,
+          "selected_rank": 1,
           "ticker": "MS"
         },
         {
-          "alpha_6m": -10.535394844951963,
+          "alpha_6m": -10.535407333669045,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 2,
           "regime": "2022_2025",
-          "return_6m": 1.098014825512439,
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 2,
           "ticker": "O"
         },
         {
-          "alpha_6m": 3.4011869923209037,
+          "alpha_6m": 3.401182929578871,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 15.034596662785304,
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
           "ticker": "L"
         },
         {
-          "alpha_6m": -5.595884154857833,
+          "alpha_6m": -5.595889447247471,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -3.916721658261979,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.409261816661232,
+            "prior_return_6m": 7.479550402656909,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 355000000.0,
+            "debt": 35289000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 2124000000.0,
+            "quality": 100,
+            "revenue": 14182000000.0,
+            "revenue_growth_pct": 5.15311040260992,
+            "revenue_previous": 13487000000.0,
+            "score": 53.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 6.037525515606568,
+          "return_6m": 6.037532634171594,
+          "selected_rank": 4,
           "ticker": "D"
         },
         {
-          "alpha_6m": 12.141006273114478,
+          "alpha_6m": 12.141001698691504,
           "as_of_date": "2025-04-01",
           "entry_date": "2025-03-31",
           "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.117217314697207,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.7293840587881,
+            "prior_return_6m": 16.672815988305544,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 188105000000.0,
+            "debt": null,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 12682000000.0,
+            "quality": 85,
+            "revenue": 81139000000.0,
+            "revenue_growth_pct": 3.4118426754352424,
+            "revenue_previous": 78462000000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_ACCEL",
           "qqq_return_6m": 28.940454541794324,
           "rank": 1,
           "regime": "2022_2025",
-          "return_6m": 41.0814608149088,
+          "return_6m": 41.08145624048583,
+          "selected_rank": 1,
           "ticker": "C"
         }
       ],
       "overall": {
-        "avg_alpha_6m": 1.531219365243318,
-        "best_alpha": 373.9082823280271,
-        "median_alpha_6m": -0.528403625731988,
-        "n": 172,
-        "trimmed_alpha_90pct": -1.0265605841808076,
-        "win_rate_vs_qqq": 47.674418604651166,
-        "worst_alpha": -70.09768537764717
+        "avg_alpha_6m": 1.5713472710503587,
+        "best_alpha": 373.9082909822699,
+        "median_alpha_6m": -0.41257361170175066,
+        "n": 173,
+        "trimmed_alpha_90pct": -0.9660517830715435,
+        "win_rate_vs_qqq": 47.97687861271676,
+        "worst_alpha": -70.09771684871421
       },
       "regimes": {
         "2017_2021": {
-          "avg_alpha_6m": -3.9017479332519156,
-          "best_alpha": 30.76489834687011,
-          "median_alpha_6m": -1.6760361510682715,
-          "n": 96,
-          "trimmed_alpha_90pct": -3.0405888267398287,
-          "win_rate_vs_qqq": 41.666666666666664,
-          "worst_alpha": -70.09768537764717
+          "avg_alpha_6m": -3.7741697315169396,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": -1.2780076721345281,
+          "n": 97,
+          "trimmed_alpha_90pct": -2.9112169786782784,
+          "win_rate_vs_qqq": 42.2680412371134,
+          "worst_alpha": -70.09771684871421
         },
         "2022_2025": {
-          "avg_alpha_6m": 8.393914900184665,
-          "best_alpha": 373.9082823280271,
-          "median_alpha_6m": 2.0846336399234713,
+          "avg_alpha_6m": 8.393915024327042,
+          "best_alpha": 373.9082909822699,
+          "median_alpha_6m": 2.0846388391279884,
           "n": 76,
-          "trimmed_alpha_90pct": 2.724992934137034,
+          "trimmed_alpha_90pct": 2.72499356530787,
           "win_rate_vs_qqq": 55.26315789473684,
-          "worst_alpha": -41.288543578805715
+          "worst_alpha": -41.28857171325853
         },
         "2026_FORWARD": {
           "avg_alpha_6m": null,
@@ -516,153 +2044,353 @@
     "EARLY_QUALITY_MOMENTUM": {
       "latest_picks": [
         {
-          "alpha_6m": 2.284969952785265,
+          "alpha_6m": 2.2849599970051315,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752645560961005,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 19.738512766878923,
+            "prior_return_6m": 23.716962948446827,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 23020000000.0,
+            "debt": 291000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 5879000000.0,
+            "quality": 100,
+            "revenue": 184992000000.0,
+            "revenue_growth_pct": 4.9951473117242084,
+            "revenue_previous": 176191000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": -0.1417839896006745,
+          "selected_rank": 1,
           "ticker": "F"
         },
         {
-          "alpha_6m": -24.37737161547021,
+          "alpha_6m": -24.377381571250343,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.6069081842171262,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 31.96390630355106,
+            "prior_return_6m": 34.2238718838668,
+            "score": 53.0
+          },
+          "fundamental": {
+            "cash": 6438000000.0,
+            "debt": 10728000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 9856000000.0,
+            "quality": 100,
+            "revenue": 43978000000.0,
+            "revenue_growth_pct": 17.963573938467317,
+            "revenue_previous": 37281000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 2,
           "regime": "2022_2025",
           "return_6m": -26.80412555785615,
+          "selected_rank": 2,
           "ticker": "UBER"
         },
         {
-          "alpha_6m": 7.483921744970212,
+          "alpha_6m": 7.483904836684685,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -1.0752904986480516,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 1.6097925567343019,
+            "prior_return_6m": 8.897914213993419,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 800447000.0,
+            "debt": null,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 5.057167802584273,
+          "return_6m": 5.057160850078879,
+          "selected_rank": 3,
           "ticker": "O"
         },
         {
-          "alpha_6m": 6.103753256872135,
+          "alpha_6m": 6.10375028199297,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.36548919522404466,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 10.04158229241645,
+            "prior_return_6m": 11.307538834517539,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 344000000.0,
+            "debt": 35289000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 2124000000.0,
+            "quality": 100,
+            "revenue": 14182000000.0,
+            "revenue_growth_pct": 5.15311040260992,
+            "revenue_previous": 13487000000.0,
+            "score": 53.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 4,
           "regime": "2022_2025",
-          "return_6m": 3.6769993144861957,
+          "return_6m": 3.677006295387164,
+          "selected_rank": 4,
           "ticker": "D"
         },
         {
-          "alpha_6m": 3.9910543481367133,
+          "alpha_6m": 3.9910443923565797,
           "as_of_date": "2025-10-01",
           "entry_date": "2025-09-30",
           "exit_date": "2026-04-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -14.394671690019056,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": -4.660216764362901,
+            "prior_return_6m": 16.802818568040312,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 846000000.0,
+            "debt": 5636000000.0,
+            "filed_cutoff": "2025-10-01",
+            "net_income": 1296000000.0,
+            "quality": 100,
+            "revenue": 6648000000.0,
+            "revenue_growth_pct": -0.2849857507124644,
+            "revenue_previous": 6667000000.0,
+            "score": 41.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": -2.4267539423859397,
+          "qqq_return_6m": -2.426743986605806,
           "rank": 5,
           "regime": "2022_2025",
           "return_6m": 1.5643004057507737,
+          "selected_rank": 5,
           "ticker": "H"
         },
         {
-          "alpha_6m": 16.047726938407195,
+          "alpha_6m": 16.047714527452527,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 46.59233993954788,
+            "prior_return_6m": 13.693133876478747,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 90739000000.0,
+            "debt": 24241000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 13390000000.0,
+            "quality": 100,
+            "revenue": 34275000000.0,
+            "revenue_growth_pct": 5.48425814790878,
+            "revenue_previous": 32493000000.0,
+            "score": 77.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 1,
           "regime": "2022_2025",
           "return_6m": 27.681136608871594,
+          "selected_rank": 1,
           "ticker": "MS"
         },
         {
-          "alpha_6m": -10.535394844951963,
+          "alpha_6m": -10.535407333669045,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -7.560238199267799,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.738641090720872,
+            "prior_return_6m": 10.990810950769703,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 319007000.0,
+            "debt": null,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 860772000.0,
+            "quality": 85,
+            "revenue": 5271142000.0,
+            "revenue_growth_pct": 29.22655174941462,
+            "revenue_previous": 4078993000.0,
+            "score": 80.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 2,
           "regime": "2022_2025",
-          "return_6m": 1.098014825512439,
+          "return_6m": 1.0980147477500202,
+          "selected_rank": 2,
           "ticker": "O"
         },
         {
-          "alpha_6m": 3.4011869923209037,
+          "alpha_6m": 3.401182929578871,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": -0.3964646792211646,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 23.020412765904563,
+            "prior_return_6m": 8.386975117330287,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": null,
+            "debt": 10072000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 1414000000.0,
+            "quality": 85,
+            "revenue": 2893000000.0,
+            "revenue_growth_pct": 22.584745762711865,
+            "revenue_previous": 2360000000.0,
+            "score": 72.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 3,
           "regime": "2022_2025",
-          "return_6m": 15.034596662785304,
+          "return_6m": 15.034605010997936,
+          "selected_rank": 3,
           "ticker": "L"
         },
         {
-          "alpha_6m": 13.846820543704231,
+          "alpha_6m": 13.846819225853247,
           "as_of_date": "2025-07-01",
           "entry_date": "2025-06-30",
           "exit_date": "2025-12-31",
+          "expectation_gap": {
+            "distance_52w_high_pct": 0.0,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 55.84601331466927,
+            "prior_return_6m": 24.830580374780233,
+            "score": 65.0
+          },
+          "fundamental": {
+            "cash": 167408000000.0,
+            "debt": 228723000000.0,
+            "filed_cutoff": "2025-07-01",
+            "net_income": 14276000000.0,
+            "quality": 50,
+            "revenue": null,
+            "revenue_growth_pct": null,
+            "revenue_previous": null,
+            "score": null,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
-          "qqq_return_6m": 11.6334096704644,
+          "qqq_return_6m": 11.633422081419065,
           "rank": 5,
           "regime": "2022_2025",
-          "return_6m": 25.480230214168632,
+          "return_6m": 25.480241307272312,
+          "selected_rank": 4,
           "ticker": "GS"
         },
         {
-          "alpha_6m": 12.141006273114478,
+          "alpha_6m": 12.141001698691504,
           "as_of_date": "2025-04-01",
           "entry_date": "2025-03-31",
           "exit_date": "2025-10-01",
+          "expectation_gap": {
+            "distance_52w_high_pct": -16.117217314697207,
+            "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
+            "prior_return_12m": 15.7293840587881,
+            "prior_return_6m": 16.672815988305544,
+            "score": 75.0
+          },
+          "fundamental": {
+            "cash": 188105000000.0,
+            "debt": null,
+            "filed_cutoff": "2025-04-01",
+            "net_income": 12682000000.0,
+            "quality": 85,
+            "revenue": 81139000000.0,
+            "revenue_growth_pct": 3.4118426754352424,
+            "revenue_previous": 78462000000.0,
+            "score": 65.0,
+            "source": "SEC_COMPANYFACTS_PIT"
+          },
           "model": "EARLY_QUALITY_MOMENTUM",
           "qqq_return_6m": 28.940454541794324,
           "rank": 1,
           "regime": "2022_2025",
-          "return_6m": 41.0814608149088,
+          "return_6m": 41.08145624048583,
+          "selected_rank": 1,
           "ticker": "C"
         }
       ],
       "overall": {
-        "avg_alpha_6m": 0.8706105885946664,
-        "best_alpha": 373.9082823280271,
-        "median_alpha_6m": -0.528403625731988,
-        "n": 174,
-        "trimmed_alpha_90pct": -1.3745589454116238,
-        "win_rate_vs_qqq": 47.701149425287355,
-        "worst_alpha": -70.09768537764717
+        "avg_alpha_6m": 0.9140546508575138,
+        "best_alpha": 373.9082909822699,
+        "median_alpha_6m": -0.41257361170175066,
+        "n": 175,
+        "trimmed_alpha_90pct": -1.312622388564406,
+        "win_rate_vs_qqq": 48.0,
+        "worst_alpha": -70.09771684871421
       },
       "regimes": {
         "2017_2021": {
-          "avg_alpha_6m": -3.9555913600817294,
-          "best_alpha": 30.76489834687011,
-          "median_alpha_6m": -1.6760361510682715,
-          "n": 96,
-          "trimmed_alpha_90pct": -3.099327110554171,
-          "win_rate_vs_qqq": 42.708333333333336,
-          "worst_alpha": -70.09768537764717
+          "avg_alpha_6m": -3.827458462527703,
+          "best_alpha": 30.764890335365248,
+          "median_alpha_6m": -1.2780076721345281,
+          "n": 97,
+          "trimmed_alpha_90pct": -2.969295707982144,
+          "win_rate_vs_qqq": 43.29896907216495,
+          "worst_alpha": -70.09771684871421
         },
         "2022_2025": {
-          "avg_alpha_6m": 6.810551448504077,
-          "best_alpha": 373.9082823280271,
-          "median_alpha_6m": 2.0846336399234713,
+          "avg_alpha_6m": 6.810551727759643,
+          "best_alpha": 373.9082909822699,
+          "median_alpha_6m": 2.0846388391279884,
           "n": 78,
-          "trimmed_alpha_90pct": 1.3296246625626635,
+          "trimmed_alpha_90pct": 1.329625347129093,
           "win_rate_vs_qqq": 53.84615384615385,
-          "worst_alpha": -41.288543578805715
+          "worst_alpha": -41.28857171325853
         },
         "2026_FORWARD": {
           "avg_alpha_6m": null,
@@ -679,6 +2407,30 @@
   },
   "ok": true,
   "price_failures": [],
+  "production_readiness": {
+    "global_decision": "PILOT_BUY",
+    "real_money_alpha_validated": false,
+    "real_money_autonomous_trading_enabled": false,
+    "remaining_non_blocking_limitations": [
+      "TRUE_ANALYST_CONSENSUS_UNAVAILABLE_EXPECTATION_GAP_USES_MARKET_RERATING_PROXY",
+      "DELISTED_COMPANY_UNIVERSE_NOT_YET_COMPLETE"
+    ],
+    "research_product_complete": true
+  },
+  "sec_failures": [
+    {
+      "error": "GET failed: https://data.sec.gov/api/xbrl/companyfacts/CIK0000946770.json: HTTP Error 404: Not Found",
+      "ticker": "DTEGY"
+    },
+    {
+      "error": "GET failed: https://data.sec.gov/api/xbrl/companyfacts/CIK0001107457.json: HTTP Error 404: Not Found",
+      "ticker": "IFNNY"
+    },
+    {
+      "error": "GET failed: https://data.sec.gov/api/xbrl/companyfacts/CIK0001842726.json: HTTP Error 404: Not Found",
+      "ticker": "LSEGY"
+    }
+  ],
   "strict_pit": true,
   "supabase_dependency_for_backtest": false
 }
