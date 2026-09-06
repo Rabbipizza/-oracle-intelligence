@@ -43,4 +43,5 @@ jobs:
             exit 0
           fi
           git commit -m "Update ORACLE V5 final analytics artifact"
-          git push
+          git pull --rebase origin main
+          git push origin main
