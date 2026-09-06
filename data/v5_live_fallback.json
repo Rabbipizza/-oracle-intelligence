@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "api_version": "V5.1-FALLBACK",
+  "generated_at": "2026-09-06T06:58:53.151Z",
+  "fallback": true,
+  "display_run": {"id": 435, "status": "COMPLETED", "post_cycle_finalized": true},
+  "system": {"global_decision": "NO_ACTION", "live_run_id": 435, "display_run_id": 435, "live_running": false, "blockers": ["LIVE_DB_UNAVAILABLE_USING_LAST_CONFIRMED_SNAPSHOT"]},
+  "trend_chart": [
+    {"rank": 1, "canonical_name": "AI / Data Center Infrastructure", "trend_score": null, "acceleration_score": null, "persistence_score": null, "gate_status": "CONFIRMED", "direction": "STABLE", "rank_change": 0, "history": [{"run_id": 435, "rank": 1}]}
+  ],
+  "trends": [
+    {"canonical_name": "AI / Data Center Infrastructure", "trend_score": null, "acceleration_score": null, "persistence_score": null, "gate_status": "CONFIRMED"}
+  ],
+  "causal_nodes": [
+    {"node_type": "BOTTLENECK", "node_name": "AI Semiconductor Supply & Manufacturing Capacity", "status": "MULTI_BUYER_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null},
+    {"node_type": "PICKS_SHOVELS", "node_name": "Advanced Packaging & HBM Infrastructure", "status": "REQUIRED_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null},
+    {"node_type": "PICKS_SHOVELS", "node_name": "Data Center Power & Thermal Infrastructure", "status": "REQUIRED_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null}
+  ],
+  "companies": [
+    {"ticker": "AMD", "company_name": "Advanced Micro Devices", "economic_role": "AI semiconductor / packaging buyer", "economic_exposure_score": 95, "suggestion_stage": "TO_STUDY"},
+    {"ticker": "AVGO", "company_name": "Broadcom", "economic_role": "AI data center semiconductor exposure", "economic_exposure_score": 95, "suggestion_stage": "TO_STUDY"},
+    {"ticker": "VRT", "company_name": "Vertiv", "economic_role": "Data center power & thermal infrastructure", "economic_exposure_score": 94, "suggestion_stage": "TO_STUDY"},
+    {"ticker": "AMAT", "company_name": "Applied Materials", "economic_role": "Semiconductor manufacturing equipment", "economic_exposure_score": 89, "suggestion_stage": "TO_STUDY"},
+    {"ticker": "LRCX", "company_name": "Lam Research", "economic_role": "Advanced packaging / HBM equipment", "economic_exposure_score": 86, "suggestion_stage": "TO_STUDY"}
+  ],
+  "early_birds": [
+    {"ticker": "AAON", "company_name": "AAON", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 95, "status": "EARLY_BIRD"},
+    {"ticker": "ETN", "company_name": "Eaton", "early_role": "DATACENTER_POWER_EQUIPMENT", "early_bird_score": 63.65, "status": "THEME_VALIDATOR"},
+    {"ticker": "CEG", "company_name": "Constellation Energy", "early_role": "DATACENTER_POWER_GENERATION", "early_bird_score": 62.55, "status": "THEME_VALIDATOR"},
+    {"ticker": "AAOI", "company_name": "Applied Optoelectronics", "early_role": "AI_DATACENTER_OPTICAL_NETWORKING", "early_bird_score": 44.35, "status": "TOO_LATE"},
+    {"ticker": "TER", "company_name": "Teradyne", "early_role": "HBM_AI_TEST_EQUIPMENT", "early_bird_score": 28.25, "status": "TOO_LATE"},
+    {"ticker": "VRT", "company_name": "Vertiv", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 24.1, "status": "THEME_VALIDATOR"}
+  ],
+  "value_chains": [
+    {
+      "trend": {"canonical_name": "AI / Data Center Infrastructure", "gate_status": "CONFIRMED", "trend_score": null, "acceleration_score": null},
+      "nodes": [
+        {"node_type": "BOTTLENECK", "node_name": "AI Semiconductor Supply & Manufacturing Capacity", "status": "MULTI_BUYER_INPUT"},
+        {"node_type": "PICKS_SHOVELS", "node_name": "Advanced Packaging & HBM Infrastructure", "status": "REQUIRED_INPUT"},
+        {"node_type": "PICKS_SHOVELS", "node_name": "Data Center Power & Thermal Infrastructure", "status": "REQUIRED_INPUT"}
+      ],
+      "companies": [
+        {"ticker": "AMD", "company_name": "Advanced Micro Devices", "economic_exposure_score": 95},
+        {"ticker": "AVGO", "company_name": "Broadcom", "economic_exposure_score": 95},
+        {"ticker": "VRT", "company_name": "Vertiv", "economic_exposure_score": 94},
+        {"ticker": "AMAT", "company_name": "Applied Materials", "economic_exposure_score": 89},
+        {"ticker": "LRCX", "company_name": "Lam Research", "economic_exposure_score": 86}
+      ],
+      "early_birds": [
+        {"ticker": "AAON", "company_name": "AAON", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 95, "status": "EARLY_BIRD"},
+        {"ticker": "ETN", "company_name": "Eaton", "early_role": "DATACENTER_POWER_EQUIPMENT", "early_bird_score": 63.65, "status": "THEME_VALIDATOR"},
+        {"ticker": "CEG", "company_name": "Constellation Energy", "early_role": "DATACENTER_POWER_GENERATION", "early_bird_score": 62.55, "status": "THEME_VALIDATOR"}
+      ]
+    }
+  ]
+}
