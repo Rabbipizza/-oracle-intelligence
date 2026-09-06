@@ -1,6 +1,6 @@
 {
   "analytics_engine": "ORACLE_V5_FINAL_EXTERNAL_PIT",
-  "analytics_generated_at": "2026-09-06T22:21:36.616240+00:00",
+  "analytics_generated_at": "2026-09-06T22:51:17.383591+00:00",
   "api_version": "V5.1",
   "causal_nodes": [
     {
@@ -4700,7 +4700,7 @@
     }
   ],
   "fallback": true,
-  "fallback_source": "LAST_SUCCESSFUL_LIVE_API_EXPORT",
+  "fallback_source": "LAST_CONFIRMED_LIVE_PLUS_LATEST_EXTERNAL_ANALYTICS",
   "freshness": [
     {
       "details": {
@@ -4773,7 +4773,8 @@
       "total_batches": 129
     }
   },
-  "live_api_reachable_at_export": true,
+  "live_api_error": "The read operation timed out",
+  "live_api_reachable_at_export": false,
   "live_stages": [
     {
       "completed_at": "2026-09-06T08:47:45.156+00:00",
@@ -6689,6 +6690,7 @@
       }
     }
   },
+  "snapshot_checked_at": "2026-09-06T22:59:35.039286+00:00",
   "snapshot_exported_at": "2026-09-06T22:51:23.413813+00:00",
   "stages": [
     {
