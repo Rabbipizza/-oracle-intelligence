@@ -6,6 +6,9 @@ on:
     branches: [ main ]
     paths:
       - 'analytics/**'
+      - 'data/v5_ranked_picks/**'
+      - 'data/v5_ranked_reserve/**'
+      - 'data/v5_live_fallback.json'
       - '.github/workflows/oracle-v5-analytics.yml'
   schedule:
     - cron: '17 5 * * *'
@@ -30,8 +33,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Run ORACLE V5 analytics worker
-        run: python analytics/oracle_v5_worker.py
+      - name: Run ORACLE V5 final PIT analytics worker
+        run: python analytics/oracle_v5_final_worker.py
 
       - name: Commit analytics artifact when changed
         run: |
@@ -42,5 +45,5 @@ jobs:
             echo "No analytics changes"
             exit 0
           fi
-          git commit -m "Update ORACLE V5 analytics artifact"
+          git commit -m "Update ORACLE V5 final analytics artifact"
           git push
