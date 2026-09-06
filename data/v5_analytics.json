@@ -1,0 +1,684 @@
+{
+  "counts": {
+    "frozen_picks": 720,
+    "price_failures": 0,
+    "price_tickers_loaded": 99,
+    "price_tickers_requested": 99,
+    "snapshot_files": 9
+  },
+  "engine": "ORACLE_V5_EXTERNAL_WORKER_3_STATIC_PIT",
+  "generated_at": "2026-09-06T18:40:18.510838+00:00",
+  "market_data": {
+    "frequency": "DAILY_ADJUSTED",
+    "provider": "YAHOO_CHART"
+  },
+  "methodology": {
+    "benchmark": "QQQ",
+    "entry": "last trading close strictly before decision date",
+    "exit": "last trading close on or before decision date + 6 calendar months",
+    "fundamentals_in_model": false,
+    "horizon_months": 6,
+    "note": "SEC PIT fundamentals remain a separate gate until historical coverage is sufficient.",
+    "promotion_gate": "N>=100; median alpha>0; win-rate>55%; trimmed alpha>0; regime stability",
+    "selection_formula_frozen_before_outcomes": true,
+    "top_n_per_quarter": 5
+  },
+  "models": {
+    "ACCEL_EVIDENCE": {
+      "latest_picks": [
+        {
+          "alpha_6m": 2.284969952785265,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": -24.37737161547021,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": -26.80412555785615,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 32.84324655300091,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 30.416492610614966,
+          "ticker": "B"
+        },
+        {
+          "alpha_6m": 39.183165655473246,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 4,
+          "regime": "2022_2025",
+          "return_6m": 36.7564117130873,
+          "ticker": "RKLB"
+        },
+        {
+          "alpha_6m": 7.483921744970212,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 5.057167802584273,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 16.047726938407195,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": -10.535394844951963,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 1.098014825512439,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 3.4011869923209037,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034596662785304,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": -5.595884154857833,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 6.037525515606568,
+          "ticker": "D"
+        },
+        {
+          "alpha_6m": 12.141006273114478,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "model": "ACCEL_EVIDENCE",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 41.0814608149088,
+          "ticker": "C"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": 1.6626422709629656,
+        "best_alpha": 373.9082823280271,
+        "median_alpha_6m": -0.377211696903756,
+        "n": 172,
+        "trimmed_alpha_90pct": -0.922298913146788,
+        "win_rate_vs_qqq": 48.25581395348837,
+        "worst_alpha": -70.09768537764717
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -4.010859106322975,
+          "best_alpha": 30.76489834687011,
+          "median_alpha_6m": -1.12225925503917,
+          "n": 96,
+          "trimmed_alpha_90pct": -3.1596191973628027,
+          "win_rate_vs_qqq": 42.708333333333336,
+          "worst_alpha": -70.09768537764717
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 8.829170326482048,
+          "best_alpha": 373.9082823280271,
+          "median_alpha_6m": 2.0846336399234713,
+          "n": 76,
+          "trimmed_alpha_90pct": 3.197555968402764,
+          "win_rate_vs_qqq": 55.26315789473684,
+          "worst_alpha": -41.288543578805715
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    },
+    "ACCEL_ONLY": {
+      "latest_picks": [
+        {
+          "alpha_6m": 32.84324655300091,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 30.416492610614966,
+          "ticker": "B"
+        },
+        {
+          "alpha_6m": 2.284969952785265,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": 39.183165655473246,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 36.7564117130873,
+          "ticker": "RKLB"
+        },
+        {
+          "alpha_6m": -24.37737161547021,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 4,
+          "regime": "2022_2025",
+          "return_6m": -26.80412555785615,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": -7.969401411163213,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": -10.396155353549153,
+          "ticker": "A"
+        },
+        {
+          "alpha_6m": 16.047726938407195,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": 13.846820543704231,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 25.480230214168632,
+          "ticker": "GS"
+        },
+        {
+          "alpha_6m": 3.4011869923209037,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034596662785304,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": 13.180320588263085,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 4,
+          "regime": "2022_2025",
+          "return_6m": 24.813730258727485,
+          "ticker": "NYT"
+        },
+        {
+          "alpha_6m": -10.535394844951963,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "ACCEL_ONLY",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 1.098014825512439,
+          "ticker": "O"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": -0.7604966631717699,
+        "best_alpha": 120.41048592227064,
+        "median_alpha_6m": -0.7204896734695039,
+        "n": 178,
+        "trimmed_alpha_90pct": -1.6068888499630816,
+        "win_rate_vs_qqq": 46.62921348314607,
+        "worst_alpha": -70.09768537764717
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -3.929462073912735,
+          "best_alpha": 30.76489834687011,
+          "median_alpha_6m": -1.52027034162555,
+          "n": 98,
+          "trimmed_alpha_90pct": -3.206962372960292,
+          "win_rate_vs_qqq": 43.87755102040816,
+          "worst_alpha": -70.09768537764717
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 3.1214859649859124,
+          "best_alpha": 120.41048592227064,
+          "median_alpha_6m": 0.12765765159353748,
+          "n": 80,
+          "trimmed_alpha_90pct": 0.6476721680875209,
+          "win_rate_vs_qqq": 50.0,
+          "worst_alpha": -41.288543578805715
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    },
+    "EARLY_ACCEL": {
+      "latest_picks": [
+        {
+          "alpha_6m": 2.284969952785265,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": -24.37737161547021,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": -26.80412555785615,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 32.84324655300091,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 30.416492610614966,
+          "ticker": "B"
+        },
+        {
+          "alpha_6m": 7.483921744970212,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 4,
+          "regime": "2022_2025",
+          "return_6m": 5.057167802584273,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 6.103753256872135,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 3.6769993144861957,
+          "ticker": "D"
+        },
+        {
+          "alpha_6m": 16.047726938407195,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": -10.535394844951963,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 1.098014825512439,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 3.4011869923209037,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034596662785304,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": -5.595884154857833,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 6.037525515606568,
+          "ticker": "D"
+        },
+        {
+          "alpha_6m": 12.141006273114478,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "model": "EARLY_ACCEL",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 41.0814608149088,
+          "ticker": "C"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": 1.531219365243318,
+        "best_alpha": 373.9082823280271,
+        "median_alpha_6m": -0.528403625731988,
+        "n": 172,
+        "trimmed_alpha_90pct": -1.0265605841808076,
+        "win_rate_vs_qqq": 47.674418604651166,
+        "worst_alpha": -70.09768537764717
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -3.9017479332519156,
+          "best_alpha": 30.76489834687011,
+          "median_alpha_6m": -1.6760361510682715,
+          "n": 96,
+          "trimmed_alpha_90pct": -3.0405888267398287,
+          "win_rate_vs_qqq": 41.666666666666664,
+          "worst_alpha": -70.09768537764717
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 8.393914900184665,
+          "best_alpha": 373.9082823280271,
+          "median_alpha_6m": 2.0846336399234713,
+          "n": 76,
+          "trimmed_alpha_90pct": 2.724992934137034,
+          "win_rate_vs_qqq": 55.26315789473684,
+          "worst_alpha": -41.288543578805715
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    },
+    "EARLY_QUALITY_MOMENTUM": {
+      "latest_picks": [
+        {
+          "alpha_6m": 2.284969952785265,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": -0.1417839896006745,
+          "ticker": "F"
+        },
+        {
+          "alpha_6m": -24.37737161547021,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": -26.80412555785615,
+          "ticker": "UBER"
+        },
+        {
+          "alpha_6m": 7.483921744970212,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 5.057167802584273,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 6.103753256872135,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 4,
+          "regime": "2022_2025",
+          "return_6m": 3.6769993144861957,
+          "ticker": "D"
+        },
+        {
+          "alpha_6m": 3.9910543481367133,
+          "as_of_date": "2025-10-01",
+          "entry_date": "2025-09-30",
+          "exit_date": "2026-04-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": -2.4267539423859397,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 1.5643004057507737,
+          "ticker": "H"
+        },
+        {
+          "alpha_6m": 16.047726938407195,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 27.681136608871594,
+          "ticker": "MS"
+        },
+        {
+          "alpha_6m": -10.535394844951963,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 2,
+          "regime": "2022_2025",
+          "return_6m": 1.098014825512439,
+          "ticker": "O"
+        },
+        {
+          "alpha_6m": 3.4011869923209037,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 3,
+          "regime": "2022_2025",
+          "return_6m": 15.034596662785304,
+          "ticker": "L"
+        },
+        {
+          "alpha_6m": 13.846820543704231,
+          "as_of_date": "2025-07-01",
+          "entry_date": "2025-06-30",
+          "exit_date": "2025-12-31",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": 11.6334096704644,
+          "rank": 5,
+          "regime": "2022_2025",
+          "return_6m": 25.480230214168632,
+          "ticker": "GS"
+        },
+        {
+          "alpha_6m": 12.141006273114478,
+          "as_of_date": "2025-04-01",
+          "entry_date": "2025-03-31",
+          "exit_date": "2025-10-01",
+          "model": "EARLY_QUALITY_MOMENTUM",
+          "qqq_return_6m": 28.940454541794324,
+          "rank": 1,
+          "regime": "2022_2025",
+          "return_6m": 41.0814608149088,
+          "ticker": "C"
+        }
+      ],
+      "overall": {
+        "avg_alpha_6m": 0.8706105885946664,
+        "best_alpha": 373.9082823280271,
+        "median_alpha_6m": -0.528403625731988,
+        "n": 174,
+        "trimmed_alpha_90pct": -1.3745589454116238,
+        "win_rate_vs_qqq": 47.701149425287355,
+        "worst_alpha": -70.09768537764717
+      },
+      "regimes": {
+        "2017_2021": {
+          "avg_alpha_6m": -3.9555913600817294,
+          "best_alpha": 30.76489834687011,
+          "median_alpha_6m": -1.6760361510682715,
+          "n": 96,
+          "trimmed_alpha_90pct": -3.099327110554171,
+          "win_rate_vs_qqq": 42.708333333333336,
+          "worst_alpha": -70.09768537764717
+        },
+        "2022_2025": {
+          "avg_alpha_6m": 6.810551448504077,
+          "best_alpha": 373.9082823280271,
+          "median_alpha_6m": 2.0846336399234713,
+          "n": 78,
+          "trimmed_alpha_90pct": 1.3296246625626635,
+          "win_rate_vs_qqq": 53.84615384615385,
+          "worst_alpha": -41.288543578805715
+        },
+        "2026_FORWARD": {
+          "avg_alpha_6m": null,
+          "best_alpha": null,
+          "median_alpha_6m": null,
+          "n": 0,
+          "trimmed_alpha_90pct": null,
+          "win_rate_vs_qqq": null,
+          "worst_alpha": null
+        }
+      },
+      "status": "RESEARCH_ONLY"
+    }
+  },
+  "ok": true,
+  "price_failures": [],
+  "strict_pit": true,
+  "supabase_dependency_for_backtest": false
+}
