@@ -1,55 +1,81 @@
 {
   "ok": true,
-  "api_version": "V5.1-FALLBACK",
-  "generated_at": "2026-09-06T06:58:53.151Z",
+  "api_version": "V5.2-FALLBACK",
+  "generated_at": "2026-09-06T22:47:50.085405Z",
   "fallback": true,
-  "display_run": {"id": 435, "status": "COMPLETED", "post_cycle_finalized": true},
-  "system": {"global_decision": "NO_ACTION", "live_run_id": 435, "display_run_id": 435, "live_running": false, "blockers": ["LIVE_DB_UNAVAILABLE_USING_LAST_CONFIRMED_SNAPSHOT"]},
+  "fallback_source": "LIVE_TRENDS_RUN_443_WITH_LAST_CONFIRMED_CAUSAL_CHAIN",
+  "display_run": {"id": 443, "status": "COMPLETED", "post_cycle_finalized": true},
+  "causal_snapshot_run": 435,
+  "system": {
+    "global_decision": "PILOT_BUY",
+    "live_run_id": 443,
+    "display_run_id": 443,
+    "live_running": false,
+    "blockers": ["LIVE_API_MAY_DEGRADE_TO_FALLBACK", "CAUSAL_CHAIN_LAST_CONFIRMED_RUN_435"]
+  },
   "trend_chart": [
-    {"rank": 1, "canonical_name": "AI / Data Center Infrastructure", "trend_score": null, "acceleration_score": null, "persistence_score": null, "gate_status": "CONFIRMED", "direction": "STABLE", "rank_change": 0, "history": [{"run_id": 435, "rank": 1}]}
+    {"rank":1,"previous_rank":1,"rank_change":0,"direction":"FLAT","canonical_name":"Artificial Intelligence","trend_score":85.5455,"acceleration_score":98.35,"persistence_score":100,"gate_status":"CONFIRMED","phase":"CONFIRMED","run_id":443},
+    {"rank":2,"previous_rank":2,"rank_change":0,"direction":"FLAT","canonical_name":"Machine Learning","trend_score":80.3065,"acceleration_score":98.35,"persistence_score":100,"gate_status":"CONFIRMED","phase":"CONFIRMED","run_id":443},
+    {"rank":3,"previous_rank":3,"rank_change":0,"direction":"FLAT","canonical_name":"Neural Network","trend_score":71.7,"acceleration_score":25,"persistence_score":80,"gate_status":"WATCH","phase":"EMERGING","run_id":443},
+    {"rank":4,"previous_rank":4,"rank_change":0,"direction":"FLAT","canonical_name":"Language Model","trend_score":68.5,"acceleration_score":25,"persistence_score":80,"gate_status":"WATCH","phase":"EMERGING","run_id":443},
+    {"rank":5,"previous_rank":5,"rank_change":0,"direction":"FLAT","canonical_name":"Reinforcement Learning","trend_score":68.2,"acceleration_score":25,"persistence_score":60,"gate_status":"WATCH","phase":"EMERGING","run_id":443},
+    {"rank":6,"previous_rank":6,"rank_change":0,"direction":"FLAT","canonical_name":"Social Media","trend_score":67.3967,"acceleration_score":98.35,"persistence_score":90,"gate_status":"WATCH","phase":"ACCELERATING","run_id":443},
+    {"rank":7,"previous_rank":7,"rank_change":0,"direction":"FLAT","canonical_name":"Learning Approach","trend_score":63.6,"acceleration_score":25,"persistence_score":50,"gate_status":"WATCH","phase":"EMERGING","run_id":443},
+    {"rank":8,"previous_rank":8,"rank_change":0,"direction":"FLAT","canonical_name":"Monte Carlo","trend_score":54.6,"acceleration_score":25,"persistence_score":50,"gate_status":"WATCH","phase":"EMERGING","run_id":443},
+    {"rank":9,"previous_rank":9,"rank_change":0,"direction":"FLAT","canonical_name":"Mental Health","trend_score":54.5008,"acceleration_score":98.35,"persistence_score":70,"gate_status":"WATCH","phase":"ACCELERATING","run_id":443},
+    {"rank":10,"previous_rank":10,"rank_change":0,"direction":"FLAT","canonical_name":"Climate Change","trend_score":54.4201,"acceleration_score":98.3483,"persistence_score":50,"gate_status":"WATCH","phase":"ACCELERATING","run_id":443}
   ],
   "trends": [
-    {"canonical_name": "AI / Data Center Infrastructure", "trend_score": null, "acceleration_score": null, "persistence_score": null, "gate_status": "CONFIRMED"}
+    {"canonical_name":"Artificial Intelligence","trend_score":85.5455,"acceleration_score":98.35,"persistence_score":100,"gate_status":"CONFIRMED","phase":"CONFIRMED"},
+    {"canonical_name":"Machine Learning","trend_score":80.3065,"acceleration_score":98.35,"persistence_score":100,"gate_status":"CONFIRMED","phase":"CONFIRMED"},
+    {"canonical_name":"Neural Network","trend_score":71.7,"acceleration_score":25,"persistence_score":80,"gate_status":"WATCH","phase":"EMERGING"},
+    {"canonical_name":"Language Model","trend_score":68.5,"acceleration_score":25,"persistence_score":80,"gate_status":"WATCH","phase":"EMERGING"},
+    {"canonical_name":"Reinforcement Learning","trend_score":68.2,"acceleration_score":25,"persistence_score":60,"gate_status":"WATCH","phase":"EMERGING"},
+    {"canonical_name":"Social Media","trend_score":67.3967,"acceleration_score":98.35,"persistence_score":90,"gate_status":"WATCH","phase":"ACCELERATING"},
+    {"canonical_name":"Learning Approach","trend_score":63.6,"acceleration_score":25,"persistence_score":50,"gate_status":"WATCH","phase":"EMERGING"},
+    {"canonical_name":"Monte Carlo","trend_score":54.6,"acceleration_score":25,"persistence_score":50,"gate_status":"WATCH","phase":"EMERGING"},
+    {"canonical_name":"Mental Health","trend_score":54.5008,"acceleration_score":98.35,"persistence_score":70,"gate_status":"WATCH","phase":"ACCELERATING"},
+    {"canonical_name":"Climate Change","trend_score":54.4201,"acceleration_score":98.3483,"persistence_score":50,"gate_status":"WATCH","phase":"ACCELERATING"}
   ],
   "causal_nodes": [
-    {"node_type": "BOTTLENECK", "node_name": "AI Semiconductor Supply & Manufacturing Capacity", "status": "MULTI_BUYER_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null},
-    {"node_type": "PICKS_SHOVELS", "node_name": "Advanced Packaging & HBM Infrastructure", "status": "REQUIRED_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null},
-    {"node_type": "PICKS_SHOVELS", "node_name": "Data Center Power & Thermal Infrastructure", "status": "REQUIRED_INPUT", "causal_confidence": null, "evidence_quality": null, "evidence_documents": null, "source_families": null}
+    {"node_type":"BOTTLENECK","node_name":"AI Semiconductor Supply & Manufacturing Capacity","status":"MULTI_BUYER_INPUT","causal_confidence":null,"evidence_quality":null},
+    {"node_type":"PICKS_SHOVELS","node_name":"Advanced Packaging & HBM Infrastructure","status":"REQUIRED_INPUT","causal_confidence":null,"evidence_quality":null},
+    {"node_type":"PICKS_SHOVELS","node_name":"Data Center Power & Thermal Infrastructure","status":"REQUIRED_INPUT","causal_confidence":null,"evidence_quality":null}
   ],
   "companies": [
-    {"ticker": "AMD", "company_name": "Advanced Micro Devices", "economic_role": "AI semiconductor / packaging buyer", "economic_exposure_score": 95, "suggestion_stage": "TO_STUDY"},
-    {"ticker": "AVGO", "company_name": "Broadcom", "economic_role": "AI data center semiconductor exposure", "economic_exposure_score": 95, "suggestion_stage": "TO_STUDY"},
-    {"ticker": "VRT", "company_name": "Vertiv", "economic_role": "Data center power & thermal infrastructure", "economic_exposure_score": 94, "suggestion_stage": "TO_STUDY"},
-    {"ticker": "AMAT", "company_name": "Applied Materials", "economic_role": "Semiconductor manufacturing equipment", "economic_exposure_score": 89, "suggestion_stage": "TO_STUDY"},
-    {"ticker": "LRCX", "company_name": "Lam Research", "economic_role": "Advanced packaging / HBM equipment", "economic_exposure_score": 86, "suggestion_stage": "TO_STUDY"}
+    {"ticker":"AMD","company_name":"Advanced Micro Devices","economic_role":"AI semiconductor / packaging buyer","economic_exposure_score":95,"suggestion_stage":"TO_STUDY"},
+    {"ticker":"AVGO","company_name":"Broadcom","economic_role":"AI data center semiconductor exposure","economic_exposure_score":95,"suggestion_stage":"TO_STUDY"},
+    {"ticker":"VRT","company_name":"Vertiv","economic_role":"Data center power & thermal infrastructure","economic_exposure_score":94,"suggestion_stage":"TO_STUDY"},
+    {"ticker":"AMAT","company_name":"Applied Materials","economic_role":"Semiconductor manufacturing equipment","economic_exposure_score":89,"suggestion_stage":"TO_STUDY"},
+    {"ticker":"LRCX","company_name":"Lam Research","economic_role":"Advanced packaging / HBM equipment","economic_exposure_score":86,"suggestion_stage":"TO_STUDY"}
   ],
   "early_birds": [
-    {"ticker": "AAON", "company_name": "AAON", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 95, "status": "EARLY_BIRD"},
-    {"ticker": "ETN", "company_name": "Eaton", "early_role": "DATACENTER_POWER_EQUIPMENT", "early_bird_score": 63.65, "status": "THEME_VALIDATOR"},
-    {"ticker": "CEG", "company_name": "Constellation Energy", "early_role": "DATACENTER_POWER_GENERATION", "early_bird_score": 62.55, "status": "THEME_VALIDATOR"},
-    {"ticker": "AAOI", "company_name": "Applied Optoelectronics", "early_role": "AI_DATACENTER_OPTICAL_NETWORKING", "early_bird_score": 44.35, "status": "TOO_LATE"},
-    {"ticker": "TER", "company_name": "Teradyne", "early_role": "HBM_AI_TEST_EQUIPMENT", "early_bird_score": 28.25, "status": "TOO_LATE"},
-    {"ticker": "VRT", "company_name": "Vertiv", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 24.1, "status": "THEME_VALIDATOR"}
+    {"ticker":"AAON","company_name":"AAON","early_role":"AI_DATACENTER_COOLING","early_bird_score":95,"status":"EARLY_BIRD","decision":"PILOT_BUY","max_paper_weight_pct":15},
+    {"ticker":"ETN","company_name":"Eaton","early_role":"DATACENTER_POWER_EQUIPMENT","early_bird_score":63.65,"status":"THEME_VALIDATOR"},
+    {"ticker":"CEG","company_name":"Constellation Energy","early_role":"DATACENTER_POWER_GENERATION","early_bird_score":62.55,"status":"THEME_VALIDATOR"},
+    {"ticker":"AAOI","company_name":"Applied Optoelectronics","early_role":"AI_DATACENTER_OPTICAL_NETWORKING","early_bird_score":44.35,"status":"TOO_LATE"},
+    {"ticker":"TER","company_name":"Teradyne","early_role":"HBM_AI_TEST_EQUIPMENT","early_bird_score":28.25,"status":"TOO_LATE"},
+    {"ticker":"VRT","company_name":"Vertiv","early_role":"AI_DATACENTER_COOLING","early_bird_score":24.1,"status":"THEME_VALIDATOR"}
   ],
   "value_chains": [
     {
-      "trend": {"canonical_name": "AI / Data Center Infrastructure", "gate_status": "CONFIRMED", "trend_score": null, "acceleration_score": null},
+      "trend": {"canonical_name":"AI / Data Center Infrastructure","gate_status":"CONFIRMED","trend_score":null,"acceleration_score":null,"source_run":435},
       "nodes": [
-        {"node_type": "BOTTLENECK", "node_name": "AI Semiconductor Supply & Manufacturing Capacity", "status": "MULTI_BUYER_INPUT"},
-        {"node_type": "PICKS_SHOVELS", "node_name": "Advanced Packaging & HBM Infrastructure", "status": "REQUIRED_INPUT"},
-        {"node_type": "PICKS_SHOVELS", "node_name": "Data Center Power & Thermal Infrastructure", "status": "REQUIRED_INPUT"}
+        {"node_type":"BOTTLENECK","node_name":"AI Semiconductor Supply & Manufacturing Capacity","status":"MULTI_BUYER_INPUT"},
+        {"node_type":"PICKS_SHOVELS","node_name":"Advanced Packaging & HBM Infrastructure","status":"REQUIRED_INPUT"},
+        {"node_type":"PICKS_SHOVELS","node_name":"Data Center Power & Thermal Infrastructure","status":"REQUIRED_INPUT"}
       ],
       "companies": [
-        {"ticker": "AMD", "company_name": "Advanced Micro Devices", "economic_exposure_score": 95},
-        {"ticker": "AVGO", "company_name": "Broadcom", "economic_exposure_score": 95},
-        {"ticker": "VRT", "company_name": "Vertiv", "economic_exposure_score": 94},
-        {"ticker": "AMAT", "company_name": "Applied Materials", "economic_exposure_score": 89},
-        {"ticker": "LRCX", "company_name": "Lam Research", "economic_exposure_score": 86}
+        {"ticker":"AMD","company_name":"Advanced Micro Devices","economic_exposure_score":95},
+        {"ticker":"AVGO","company_name":"Broadcom","economic_exposure_score":95},
+        {"ticker":"VRT","company_name":"Vertiv","economic_exposure_score":94},
+        {"ticker":"AMAT","company_name":"Applied Materials","economic_exposure_score":89},
+        {"ticker":"LRCX","company_name":"Lam Research","economic_exposure_score":86}
       ],
       "early_birds": [
-        {"ticker": "AAON", "company_name": "AAON", "early_role": "AI_DATACENTER_COOLING", "early_bird_score": 95, "status": "EARLY_BIRD"},
-        {"ticker": "ETN", "company_name": "Eaton", "early_role": "DATACENTER_POWER_EQUIPMENT", "early_bird_score": 63.65, "status": "THEME_VALIDATOR"},
-        {"ticker": "CEG", "company_name": "Constellation Energy", "early_role": "DATACENTER_POWER_GENERATION", "early_bird_score": 62.55, "status": "THEME_VALIDATOR"}
+        {"ticker":"AAON","company_name":"AAON","early_role":"AI_DATACENTER_COOLING","early_bird_score":95,"status":"EARLY_BIRD"},
+        {"ticker":"ETN","company_name":"Eaton","early_role":"DATACENTER_POWER_EQUIPMENT","early_bird_score":63.65,"status":"THEME_VALIDATOR"},
+        {"ticker":"CEG","company_name":"Constellation Energy","early_role":"DATACENTER_POWER_GENERATION","early_bird_score":62.55,"status":"THEME_VALIDATOR"}
       ]
     }
   ]
