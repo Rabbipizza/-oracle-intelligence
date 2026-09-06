@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""ORACLE V5 external analytics worker.
+"""ORACLE V5 external walk-forward analytics.
 
-Supabase supplies only the compact PIT feature store. Heavy price retrieval and
-walk-forward calculations happen outside Supabase. Results are committed as a
-static JSON artifact for the investor cockpit.
-
-Model weights in this file are predefined; they are not tuned after observing
-worker results.
+This worker is intentionally independent from the live Supabase database.
+Selections are frozen as strict point-in-time snapshots under
+``data/v5_ranked_picks/*.json``. Market prices are fetched outside Supabase and
+only the compact result is committed for the investor cockpit.
 """
 from __future__ import annotations
 
@@ -14,23 +12,22 @@ import json
 import math
 import statistics
 import time
-import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-EXPORT_URL = "https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-analytics-export"
+PICKS_DIR = Path("data/v5_ranked_picks")
 OUT = Path("data/v5_analytics.json")
 
 
-def fetch_json(url: str, attempts: int = 5, timeout: int = 45) -> dict:
+def fetch_json(url: str, attempts: int = 4, timeout: int = 30) -> dict:
     last = None
     for i in range(attempts):
         try:
             req = urllib.request.Request(url, headers={
-                "User-Agent": "Mozilla/5.0 ORACLE-V5-Analytics/1.2",
+                "User-Agent": "Mozilla/5.0 ORACLE-V5-Analytics/2.0",
                 "Accept": "application/json",
             })
             with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -38,24 +35,8 @@ def fetch_json(url: str, attempts: int = 5, timeout: int = 45) -> dict:
         except Exception as e:
             last = e
             if i + 1 < attempts:
-                time.sleep(2 + i * 3)
-    raise RuntimeError(f"GET failed after {attempts} attempts: {url}: {last}")
-
-
-def get_features(limit: int = 100) -> list[dict]:
-    rows: list[dict] = []
-    offset = 0
-    while True:
-        p = fetch_json(f"{EXPORT_URL}?kind=features&offset={offset}&limit={limit}")
-        if not p.get("ok"):
-            raise RuntimeError(p.get("error", "feature export failed"))
-        batch = p.get("rows", [])
-        rows.extend(batch)
-        nxt = p.get("next_offset")
-        if nxt is None:
-            break
-        offset = int(nxt)
-    return rows
+                time.sleep(1.5 + i * 2)
+    raise RuntimeError(f"GET failed: {url}: {last}")
 
 
 def month_add(d: date, months: int) -> date:
@@ -70,13 +51,6 @@ def safe_float(x):
         return v if math.isfinite(v) else None
     except Exception:
         return None
-
-
-def pct_rank(values, v):
-    xs = sorted(x for x in values if x is not None and math.isfinite(x))
-    if not xs or v is None or not math.isfinite(v):
-        return 0.0
-    return 100.0 * sum(x <= v for x in xs) / len(xs)
 
 
 def avg(xs):
@@ -96,65 +70,29 @@ def trimmed90(xs):
     return avg(zs)
 
 
-def model_scores(rows):
-    accel = [safe_float(r.get("accel_ratio")) for r in rows]
-    src = [safe_float(r.get("source_diversity")) for r in rows]
-    sig = [safe_float(r.get("signal_diversity")) for r in rows]
-    anc = [safe_float(r.get("anchored_docs")) for r in rows]
-    qual = [safe_float(r.get("feature_quality")) for r in rows]
-
-    out = {k: [] for k in [
-        "ACCEL_ONLY",
-        "ACCEL_EVIDENCE",
-        "EARLY_ACCEL",
-        "EARLY_QUALITY_MOMENTUM",
-    ]}
-
-    for r in rows:
-        a = pct_rank(accel, safe_float(r.get("accel_ratio")))
-        s = pct_rank(src, safe_float(r.get("source_diversity")))
-        g = pct_rank(sig, safe_float(r.get("signal_diversity")))
-        h = pct_rank(anc, safe_float(r.get("anchored_docs")))
-        q = pct_rank(qual, safe_float(r.get("feature_quality")))
-        r6 = safe_float(r.get("prior_return_6m"))
-        r12 = safe_float(r.get("prior_return_12m"))
-
-        accel_only = a
-        evidence = 0.55*a + 0.15*s + 0.15*g + 0.15*h
-
-        penalty = 0.0
-        if r12 is not None and r12 > 60:
-            penalty += min(35.0, (r12 - 60) * 0.35)
-        if r6 is not None and r6 > 40:
-            penalty += min(20.0, (r6 - 40) * 0.30)
-
-        momentum = 50.0
-        if r6 is not None:
-            if 0 <= r6 <= 40:
-                momentum = 80.0
-            elif -20 <= r6 < 0:
-                momentum = 60.0
-            elif 40 < r6 <= 70:
-                momentum = 55.0
-            elif r6 > 70:
-                momentum = 20.0
-            else:
-                momentum = 30.0
-
-        early_quality = (
-            0.45*a + 0.20*s + 0.10*g + 0.10*h + 0.10*q
-            + 0.05*momentum - penalty
-        )
-
-        out["ACCEL_ONLY"].append((accel_only, r))
-        out["ACCEL_EVIDENCE"].append((evidence, r))
-        out["EARLY_ACCEL"].append((evidence - penalty, r))
-        out["EARLY_QUALITY_MOMENTUM"].append((early_quality, r))
-
-    return out
+def load_frozen_picks():
+    rows = []
+    files = sorted(PICKS_DIR.glob("*.json"))
+    if not files:
+        raise RuntimeError("No frozen V5 ranked-pick snapshots found")
+    for path in files:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if payload.get("strict_pit") is not True or payload.get("models_predefined") is not True:
+            raise RuntimeError(f"Snapshot integrity gate failed: {path}")
+        for row in payload.get("picks", []):
+            if len(row) < 4:
+                raise RuntimeError(f"Malformed pick in {path}: {row}")
+            rows.append({
+                "as_of_date": str(row[0]),
+                "model": str(row[1]),
+                "ticker": str(row[2]).upper(),
+                "rank": int(row[3]),
+            })
+    return files, rows
 
 
 def yahoo_symbol(ticker: str) -> str:
+    # Yahoo convention for class shares, e.g. BRK-B.
     return ticker.upper().replace(".", "-")
 
 
@@ -167,14 +105,14 @@ def yahoo_history(ticker: str) -> dict[date, float]:
         f"?period1={start}&period2={end}&interval=1d&events=history"
         "&includeAdjustedClose=true"
     )
-    payload = fetch_json(url, attempts=4, timeout=30)
+    payload = fetch_json(url)
     result = (((payload.get("chart") or {}).get("result") or [None])[0])
     if not result:
         return {}
     stamps = result.get("timestamp") or []
     adj = (((result.get("indicators") or {}).get("adjclose") or [{}])[0].get("adjclose") or [])
     close = (((result.get("indicators") or {}).get("quote") or [{}])[0].get("close") or [])
-    out: dict[date, float] = {}
+    out = {}
     for i, ts in enumerate(stamps):
         px = safe_float(adj[i] if i < len(adj) else None)
         if px is None:
@@ -184,12 +122,12 @@ def yahoo_history(ticker: str) -> dict[date, float]:
     return out
 
 
-def latest_before(history: dict[date, float], d: date):
+def latest_before(history, d):
     candidates = [(k, v) for k, v in history.items() if k < d]
     return max(candidates, default=(None, None), key=lambda x: x[0])
 
 
-def latest_on_or_before(history: dict[date, float], d: date):
+def latest_on_or_before(history, d):
     candidates = [(k, v) for k, v in history.items() if k <= d]
     return max(candidates, default=(None, None), key=lambda x: x[0])
 
@@ -197,7 +135,12 @@ def latest_on_or_before(history: dict[date, float], d: date):
 def outcome(histories, ticker: str, as_of: date):
     h = histories.get(ticker.upper(), {})
     entry_date, entry = latest_before(h, as_of)
-    exit_date, exit_px = latest_on_or_before(h, month_add(as_of, 6))
+    target = month_add(as_of, 6)
+    exit_date, exit_px = latest_on_or_before(h, target)
+    # Refuse an incomplete future horizon. This prevents current prices being
+    # silently substituted for an outcome that has not matured yet.
+    if target > datetime.now(timezone.utc).date():
+        return None
     if not entry or not exit_px:
         return None
     return {
@@ -229,69 +172,45 @@ def regime(d):
 
 
 def main():
-    features = get_features(limit=100)
-    strict = [r for r in features if (r.get("metadata") or {}).get("strict_price_pit") is True]
-    if len(strict) != len(features):
-        raise RuntimeError(f"strict PIT gate failed: {len(strict)}/{len(features)}")
-
-    by_date = defaultdict(list)
-    for r in strict:
-        by_date[r["as_of_date"]].append(r)
-
-    ranked_by_model_date = {}
-    needed = {"QQQ"}
-    for ds, rows in sorted(by_date.items()):
-        scores = model_scores(rows)
-        for model, ranked in scores.items():
-            ranked.sort(key=lambda z: (-z[0], str(z[1].get("ticker"))))
-            top = ranked[:5]
-            ranked_by_model_date[(model, ds)] = top
-            for _, r in top:
-                t = str(r.get("ticker") or "").upper()
-                if t:
-                    needed.add(t)
+    files, frozen = load_frozen_picks()
+    needed = {"QQQ"} | {p["ticker"] for p in frozen}
 
     histories = {}
     failures = []
     for i, ticker in enumerate(sorted(needed)):
         try:
-            h = yahoo_history(ticker)
-            if h:
-                histories[ticker] = h
+            hist = yahoo_history(ticker)
+            if hist:
+                histories[ticker] = hist
             else:
                 failures.append({"ticker": ticker, "error": "NO_PRICE_HISTORY"})
         except Exception as e:
             failures.append({"ticker": ticker, "error": str(e)[:180]})
-        if i and i % 20 == 0:
+        if i and i % 15 == 0:
             time.sleep(1.0)
 
+    qqq_cache = {}
     picks_by_model = defaultdict(list)
-    for (model, ds), ranked in ranked_by_model_date.items():
-        as_of = date.fromisoformat(ds[:10])
-        qqq = outcome(histories, "QQQ", as_of)
-        if not qqq:
+    for p in frozen:
+        as_of = date.fromisoformat(p["as_of_date"][:10])
+        if as_of not in qqq_cache:
+            qqq_cache[as_of] = outcome(histories, "QQQ", as_of)
+        qqq = qqq_cache[as_of]
+        ret = outcome(histories, p["ticker"], as_of)
+        if not qqq or not ret:
             continue
-        for rank, (score, r) in enumerate(ranked, 1):
-            ticker = str(r.get("ticker") or "").upper()
-            ret = outcome(histories, ticker, as_of)
-            if not ret:
-                continue
-            alpha = ret["return_6m"] - qqq["return_6m"]
-            picks_by_model[model].append({
-                "as_of_date": ds,
-                "ticker": ticker,
-                "rank": rank,
-                "score": round(score, 4),
-                "return_6m": ret["return_6m"],
-                "qqq_return_6m": qqq["return_6m"],
-                "alpha_6m": alpha,
-                "entry_date": ret["entry_date"],
-                "exit_date": ret["exit_date"],
-                "regime": regime(as_of),
-            })
+        picks_by_model[p["model"]].append({
+            **p,
+            "return_6m": ret["return_6m"],
+            "qqq_return_6m": qqq["return_6m"],
+            "alpha_6m": ret["return_6m"] - qqq["return_6m"],
+            "entry_date": ret["entry_date"],
+            "exit_date": ret["exit_date"],
+            "regime": regime(as_of),
+        })
 
     models = {}
-    for model, picks in picks_by_model.items():
+    for model, picks in sorted(picks_by_model.items()):
         overall = stats(picks)
         regimes = {
             rg: stats([p for p in picks if p["regime"] == rg])
@@ -312,20 +231,19 @@ def main():
             "overall": overall,
             "regimes": regimes,
             "latest_picks": sorted(
-                picks,
-                key=lambda p: (p["as_of_date"], -p["rank"]),
-                reverse=True,
+                picks, key=lambda x: (x["as_of_date"], -x["rank"]), reverse=True
             )[:10],
         }
 
     result = {
         "ok": True,
-        "engine": "ORACLE_V5_EXTERNAL_WORKER_2",
+        "engine": "ORACLE_V5_EXTERNAL_WORKER_3_STATIC_PIT",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "strict_pit": True,
+        "supabase_dependency_for_backtest": False,
         "counts": {
-            "features": len(features),
-            "feature_quarters": len(by_date),
+            "snapshot_files": len(files),
+            "frozen_picks": len(frozen),
             "price_tickers_requested": len(needed),
             "price_tickers_loaded": len(histories),
             "price_failures": len(failures),
@@ -333,7 +251,6 @@ def main():
         "market_data": {
             "provider": "YAHOO_CHART",
             "frequency": "DAILY_ADJUSTED",
-            "selection_prices_live_db_dependency": False,
         },
         "methodology": {
             "top_n_per_quarter": 5,
@@ -342,7 +259,7 @@ def main():
             "exit": "last trading close on or before decision date + 6 calendar months",
             "benchmark": "QQQ",
             "promotion_gate": "N>=100; median alpha>0; win-rate>55%; trimmed alpha>0; regime stability",
-            "weights_predefined": True,
+            "selection_formula_frozen_before_outcomes": True,
             "fundamentals_in_model": False,
             "note": "SEC PIT fundamentals remain a separate gate until historical coverage is sufficient.",
         },
