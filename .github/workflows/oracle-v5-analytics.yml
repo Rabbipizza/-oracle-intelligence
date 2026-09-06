@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'analytics/**'
+      - 'analytics/oracle_v5_final_worker.py'
       - 'data/v5_ranked_picks/**'
       - 'data/v5_ranked_reserve/**'
       - 'data/v5_live_fallback.json'
@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: oracle-v5-analytics
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   analytics:
@@ -27,15 +27,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Run ORACLE V5 final PIT analytics worker
         run: python analytics/oracle_v5_final_worker.py
-
       - name: Commit analytics artifact when changed
         run: |
           git config user.name "oracle-v5-bot"
