@@ -1,0 +1,36 @@
+name: ORACLE V5 Live Snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oracle-v5-live-snapshot
+  cancel-in-progress: true
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh last successful live snapshot
+        run: python analytics/update_live_snapshot.py
+      - name: Commit snapshot when changed
+        run: |
+          git config user.name "oracle-v5-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/v5_live_fallback.json
+          if git diff --cached --quiet; then
+            echo "No snapshot change"
+            exit 0
+          fi
+          git commit -m "Refresh ORACLE V5 live fallback snapshot"
+          git push
