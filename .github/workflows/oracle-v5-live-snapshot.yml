@@ -3,7 +3,7 @@ name: ORACLE V5 Live Snapshot
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
@@ -33,4 +33,5 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh ORACLE V5 live fallback snapshot"
+          git pull --rebase origin main
           git push
