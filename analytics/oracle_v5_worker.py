@@ -71,8 +71,6 @@ def model_scores(rows: list[dict]) -> dict[str, list[tuple[float, dict]]]:
     sig = [safe_float(r.get("signal_diversity")) for r in rows]
     anchor = [safe_float(r.get("anchored_docs")) for r in rows]
     qual = [safe_float(r.get("feature_quality")) for r in rows]
-    p6 = [safe_float(r.get("prior_return_6m")) for r in rows]
-    p12 = [safe_float(r.get("prior_return_12m")) for r in rows]
 
     out = {k: [] for k in ["ACCEL_ONLY", "ACCEL_EVIDENCE", "EARLY_ACCEL", "EARLY_QUALITY_MOMENTUM"]}
     for r in rows:
@@ -141,9 +139,15 @@ def latest_on_or_before(pm: dict[str, float], d: date):
 
 
 def outcome(price_map, ticker: str, as_of: date):
+    """Six monthly-close horizon.
+
+    A decision on 1 Jan uses the last known close (December) as entry and the June
+    monthly close as the 6-month outcome. Since price_month labels the month whose
+    close is stored, the exit target is as_of + 5 months, not +6.
+    """
     pm = price_map.get(ticker.upper(), {})
     _, entry = latest_before(pm, as_of)
-    _, exit6 = latest_on_or_before(pm, month_add(as_of, 6))
+    _, exit6 = latest_on_or_before(pm, month_add(as_of, 5))
     if not entry or not exit6:
         return None
     return 100.0 * (exit6 / entry - 1.0)
