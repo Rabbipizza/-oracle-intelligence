@@ -87,10 +87,10 @@ def merge_analytics(snapshot):
     return enrich_methodology(snapshot,analytics)
 
 existing=load_json(OUT) or {}
-req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.3','Accept':'application/json','Cache-Control':'no-store'})
+req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.4','Accept':'application/json','Cache-Control':'no-store'})
 now=datetime.now(timezone.utc).isoformat()
 try:
-    with urllib.request.urlopen(req,timeout=8) as r:
+    with urllib.request.urlopen(req,timeout=25) as r:
         if r.status!=200: raise RuntimeError(f'HTTP {r.status}')
         data=json.loads(r.read().decode('utf-8'))
     if not data.get('ok'): raise RuntimeError(data.get('error','API not ok'))
