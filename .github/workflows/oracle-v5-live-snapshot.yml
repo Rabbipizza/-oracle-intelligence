@@ -18,13 +18,15 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Refresh precomputed investor snapshot
-        run: |
-          sed -i 's/oracle-v5-investor-api/oracle-v5-investor-build/g' analytics/update_live_snapshot.py
-          python analytics/update_live_snapshot.py
+        env:
+          ORACLE_V5_API: https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-investor-build
+        run: python analytics/update_live_snapshot.py
       - name: Commit snapshot when changed
         run: |
           git config user.name "oracle-v5-bot"
@@ -36,4 +38,4 @@ jobs:
           fi
           git commit -m "Refresh ORACLE V5 precomputed investor snapshot"
           git pull --rebase origin main
-          git push
+          git push origin main
