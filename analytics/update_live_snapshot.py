@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import json
+import os
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-API='https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-investor-api'
+API=os.environ.get('ORACLE_V5_API','https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-investor-build')
 OUT=Path('data/v5_live_fallback.json')
 ANALYTICS=Path('data/v5_analytics.json')
 
@@ -24,7 +25,6 @@ def safe_num(v):
 
 
 def structural_score(e):
-    # Structural Early Bird must contain no price/rerating/market-cap input.
     pre=safe_num(e.get('pre_market_score'))
     if pre is not None:
         return round(max(0,min(100,pre)),2)
@@ -53,12 +53,9 @@ def enrich_methodology(snapshot, analytics):
         t=str(c.get('ticker') or '').upper()
         e=early_by_ticker.get(t,{})
         structural=structural_score(e) if e else safe_num(c.get('structural_early_bird_score'))
-        f=((c.get('fundamental') or {}).get('score'))
-        gap=((c.get('expectation_gap') or {}).get('score'))
-        fs=safe_num(f); gs=safe_num(gap)
-        entry=None
-        if structural is not None and fs is not None and gs is not None:
-            entry=round(.45*structural+.30*fs+.25*gs,2)
+        fs=safe_num((c.get('fundamental') or {}).get('score'))
+        gs=safe_num((c.get('expectation_gap') or {}).get('score'))
+        entry=round(.45*structural+.30*fs+.25*gs,2) if structural is not None and fs is not None and gs is not None else None
         x['structural_early_bird_score']=structural
         x['entry_score']=entry
         x['legacy_composite_score']=c.get('composite_score')
@@ -67,18 +64,12 @@ def enrich_methodology(snapshot, analytics):
             x['decision']='PILOT_BUY' if not ((analytics or {}).get('production_readiness') or {}).get('real_money_alpha_validated') else 'BUY_CANDIDATE'
             x['max_paper_weight_pct']=15 if x['decision']=='PILOT_BUY' else (35 if entry>=75 else 20)
         elif quality>=70:
-            x['decision']='WATCH'
-            x['max_paper_weight_pct']=0
+            x['decision']='WATCH'; x['max_paper_weight_pct']=0
         else:
-            x['decision']='WAIT_FOR_FUNDAMENTALS'
-            x['max_paper_weight_pct']=0
+            x['decision']='WAIT_FOR_FUNDAMENTALS'; x['max_paper_weight_pct']=0
         rebuilt.append(x)
     rebuilt.sort(key=lambda x:(x.get('entry_score') is not None,x.get('entry_score') or -1),reverse=True)
-    if rebuilt:
-        global_decision=rebuilt[0].get('decision','WATCH')
-    else:
-        global_decision='NO_ACTION'
-    snapshot['current_decision']={'global':global_decision,'candidates':rebuilt[:10],'method':'STRUCTURAL_EARLY_BIRD_THEN_ENTRY_V1'}
+    snapshot['current_decision']={'global':rebuilt[0].get('decision','WATCH') if rebuilt else 'NO_ACTION','candidates':rebuilt[:10],'method':'STRUCTURAL_EARLY_BIRD_THEN_ENTRY_V1'}
     snapshot['scoring_methodology']={
         'structural_early_bird':'pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap',
         'entry_score':'45% structural Early Bird + 30% fundamentals + 25% expectation-gap/rerating proxy',
@@ -96,7 +87,7 @@ def merge_analytics(snapshot):
     return enrich_methodology(snapshot,analytics)
 
 existing=load_json(OUT) or {}
-req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.2','Accept':'application/json','Cache-Control':'no-store'})
+req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.3','Accept':'application/json','Cache-Control':'no-store'})
 now=datetime.now(timezone.utc).isoformat()
 try:
     with urllib.request.urlopen(req,timeout=8) as r:
@@ -105,8 +96,8 @@ try:
     if not data.get('ok'): raise RuntimeError(data.get('error','API not ok'))
     if not isinstance(data.get('trends'),list) or not isinstance(data.get('causal_nodes'),list):
         raise RuntimeError('incomplete live payload')
-    data['fallback']=True
-    data['fallback_source']='LAST_SUCCESSFUL_LIVE_API_EXPORT'
+    data['fallback']=False
+    data['snapshot_source']='PRECOMPUTED_INVESTOR_BUILD'
     data['snapshot_exported_at']=now
     data['live_api_reachable_at_export']=True
     data=merge_analytics(data)
@@ -116,12 +107,12 @@ try:
 except Exception as e:
     if existing:
         existing['fallback']=True
-        existing['fallback_source']='LAST_CONFIRMED_LIVE_PLUS_LATEST_EXTERNAL_ANALYTICS'
+        existing['fallback_source']='LAST_CONFIRMED_SNAPSHOT'
         existing['snapshot_checked_at']=now
         existing['live_api_reachable_at_export']=False
         existing['live_api_error']=str(e)[:180]
         existing=merge_analytics(existing)
         OUT.write_text(json.dumps(existing,indent=2,sort_keys=True),encoding='utf-8')
-        print(f'live API unavailable; preserved live snapshot and refreshed analytics: {e}')
+        print(f'builder unavailable; preserved last snapshot: {e}')
     else:
-        print(f'live API unavailable and no fallback exists: {e}')
+        raise
