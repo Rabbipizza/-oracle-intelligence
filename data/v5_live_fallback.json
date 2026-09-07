@@ -4867,7 +4867,7 @@
     }
   ],
   "fallback": true,
-  "fallback_source": "LAST_SUCCESSFUL_LIVE_API_EXPORT",
+  "fallback_source": "LAST_CONFIRMED_LIVE_PLUS_LATEST_EXTERNAL_ANALYTICS",
   "freshness": [
     {
       "details": {
@@ -4940,7 +4940,8 @@
       "total_batches": 129
     }
   },
-  "live_api_reachable_at_export": true,
+  "live_api_error": "The read operation timed out",
+  "live_api_reachable_at_export": false,
   "live_stages": [
     {
       "completed_at": null,
@@ -5853,6 +5854,7 @@
     "status": "FAILED",
     "summary": {}
   },
+  "snapshot_checked_at": "2026-09-07T05:19:08.977191+00:00",
   "snapshot_exported_at": "2026-09-07T05:03:15.743910+00:00",
   "stages": [
     {
