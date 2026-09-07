@@ -4921,7 +4921,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-07T04:27:44.392Z",
+  "generated_at": "2026-09-07T04:42:14.933Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -5001,8 +5001,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-07T04:27:00.102768+00:00",
-        "id": 238,
+        "created_at": "2026-09-07T04:42:00.119572+00:00",
+        "id": 239,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5045,7 +5045,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-07T04:27:00.102768+00:00"
+      "updated_at": "2026-09-07T04:42:00.119572+00:00"
     }
   },
   "production_readiness": {
@@ -5119,7 +5119,7 @@
     "status": "RUNNING",
     "summary": {}
   },
-  "snapshot_exported_at": "2026-09-07T04:27:40.275229+00:00",
+  "snapshot_exported_at": "2026-09-07T04:42:11.041248+00:00",
   "stages": [
     {
       "completed_at": "2026-09-07T02:17:47.651+00:00",
@@ -11384,13 +11384,13 @@
     "mode": "V5_VALIDATION",
     "pit_fundamentals": {
       "sec_requests": {
-        "COMPLETED": 11,
-        "FAILED": 307,
-        "PENDING": 2,
-        "TOTAL": 320
+        "COMPLETED": 12,
+        "FAILED": 308,
+        "PENDING": 1,
+        "TOTAL": 321
       },
-      "valid_snapshots": 39,
-      "valid_tickers": 1
+      "valid_snapshots": 78,
+      "valid_tickers": 2
     }
   },
   "value_chains": [
