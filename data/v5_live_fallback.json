@@ -5002,7 +5002,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-07T23:41:17.742Z",
+  "generated_at": "2026-09-07T23:49:56.453Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -5031,13 +5031,13 @@
       "status": "RUNNING"
     },
     {
-      "completed_at": "2026-09-07T23:02:34.358+00:00",
+      "completed_at": "2026-09-07T23:47:26.951+00:00",
       "details": {
         "documents_scanned": 600,
         "ok": true,
         "relationships_written": 0,
-        "signals_detected": 11,
-        "signals_inserted": 11,
+        "signals_detected": 10,
+        "signals_inserted": 1,
         "version": "oracle_v4_extract_2"
       },
       "error": null,
@@ -5045,85 +5045,85 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T23:02:55.468+00:00",
+      "completed_at": "2026-09-07T23:47:48.123+00:00",
       "details": {},
       "error": "{\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"}",
       "stage": "FAILURE",
       "status": "FAILED"
     },
     {
-      "completed_at": "2026-09-07T23:02:18.846+00:00",
+      "completed_at": "2026-09-07T23:47:12.804+00:00",
       "details": {
-        "arxiv_category": "cs",
+        "arxiv_category": "econ",
         "discovery_scope": "open_world",
-        "inserted": 644,
+        "inserted": 148,
         "ok": true,
         "results": [
           {
             "index": 0,
-            "inserted": 35,
+            "inserted": 16,
             "ok": true,
             "seen": 38
           },
           {
             "index": 1,
-            "inserted": 50,
+            "inserted": 8,
             "ok": true,
             "seen": 70
           },
           {
             "index": 2,
-            "inserted": 44,
+            "inserted": 5,
             "ok": true,
-            "seen": 61
+            "seen": 63
           },
           {
             "index": 3,
-            "inserted": 24,
+            "inserted": 2,
             "ok": true,
             "seen": 70
           },
           {
             "index": 4,
-            "inserted": 26,
+            "inserted": 2,
             "ok": true,
             "seen": 70
           },
           {
             "index": 5,
-            "inserted": 63,
+            "inserted": 11,
             "ok": true,
             "seen": 70
           },
           {
             "index": 6,
-            "inserted": 7,
+            "inserted": 1,
             "ok": true,
             "seen": 26
           },
           {
             "index": 7,
-            "inserted": 1,
+            "inserted": 0,
             "ok": true,
             "seen": 10
           },
           {
             "index": 8,
-            "inserted": 19,
+            "inserted": 3,
             "ok": true,
             "seen": 45
           },
           {
             "index": 9,
-            "inserted": 25,
+            "inserted": 0,
             "ok": true,
             "seen": 25
           },
           {
             "index": 10,
-            "inserted": 150,
+            "inserted": 0,
             "ok": true,
-            "seen": 150
+            "seen": 19
           },
           {
             "index": 11,
@@ -5133,7 +5133,7 @@
           },
           {
             "index": 12,
-            "inserted": 100,
+            "inserted": 0,
             "ok": true,
             "seen": 100
           },
@@ -5158,54 +5158,54 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T23:02:34.879+00:00",
+      "completed_at": "2026-09-07T23:47:27.513+00:00",
       "details": {
         "as_of_date": "2026-09-07",
         "confidence": 0,
         "errors": [
           {
             "code": "BRENT",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "CFNAI",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "CORE_PCE",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "DTWEXBGS",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "FEDFUNDS",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "HY_OAS",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2 (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2 (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "ICSA",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "NFCI",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "T10Y2Y",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "T5YIFR",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "VIX",
-            "error": "error sending request from 10.33.2.155:54738 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.7.128:35672 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS (104.77.28.212:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           }
         ],
         "loaded": 0,
@@ -5225,7 +5225,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T23:02:23.465+00:00",
+      "completed_at": "2026-09-07T23:47:15.922+00:00",
       "details": {
         "batches": [
           {
@@ -5246,7 +5246,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T23:02:23.136+00:00",
+      "completed_at": "2026-09-07T23:47:15.623+00:00",
       "details": {
         "error": "oracle-v4-semantic-embed: 546",
         "status": "FAILED_NON_BLOCKING"
@@ -5256,27 +5256,27 @@
       "status": "FAILED"
     },
     {
-      "completed_at": "2026-09-07T23:02:33.237+00:00",
+      "completed_at": "2026-09-07T23:47:25.331+00:00",
       "details": {
         "baseline_bridge": "RETRO_104_WEEK_V1",
         "baseline_candidates": 600,
-        "baselines_validated": 40,
+        "baselines_validated": 44,
         "discovered_themes": 60,
         "documents_scanned": 5000,
         "ok": true,
-        "raw_phrases": 62371,
-        "run_id": 504,
+        "raw_phrases": 61784,
+        "run_id": 505,
         "seed_themes": 0,
         "top_themes": [
           {
             "components": {
               "acceleration": 98.3,
               "diffusion": 100,
-              "entrepreneurial_acceleration_proxy": 3.5,
+              "entrepreneurial_acceleration_proxy": 3.7,
               "independence": 100,
               "novelty": 87,
               "persistence": 100,
-              "structural_evidence": 66.4
+              "structural_evidence": 66.8
             },
             "gates": {
               "acceleration": true,
@@ -5290,25 +5290,25 @@
               "historical_events": 98,
               "history_weeks": 103,
               "last_history_date": "2026-08-01",
-              "recent_to_median_ratio": 62,
+              "recent_to_median_ratio": 60,
               "weekly_mean": 0.951456310679612,
               "weekly_p90": 3,
               "weekly_p95": 4.9,
-              "z_score": 18.047481931890385
+              "z_score": 17.446871063074646
             },
             "name": "Artificial Intelligence",
-            "ots": 88.7,
+            "ots": 88.8,
             "status": "STRUCTURAL_TREND"
           },
           {
             "components": {
               "acceleration": 98.3,
-              "diffusion": 99.5,
-              "entrepreneurial_acceleration_proxy": 0.8,
+              "diffusion": 100,
+              "entrepreneurial_acceleration_proxy": 0.7,
               "independence": 100,
               "novelty": 87,
               "persistence": 100,
-              "structural_evidence": 53.8
+              "structural_evidence": 52.5
             },
             "gates": {
               "acceleration": true,
@@ -5322,15 +5322,47 @@
               "historical_events": 62,
               "history_weeks": 103,
               "last_history_date": "2026-08-02",
-              "recent_to_median_ratio": 88,
+              "recent_to_median_ratio": 102,
               "weekly_mean": 0.601941747572815,
               "weekly_p90": 2,
               "weekly_p95": 4,
-              "z_score": 33.54899858427199
+              "z_score": 38.96036949685814
             },
             "name": "Machine Learning",
-            "ots": 84,
+            "ots": 83.6,
             "status": "TREND"
+          },
+          {
+            "components": {
+              "acceleration": 98.3,
+              "diffusion": 80,
+              "entrepreneurial_acceleration_proxy": 0,
+              "independence": 95,
+              "novelty": 87,
+              "persistence": 80,
+              "structural_evidence": 24.1
+            },
+            "gates": {
+              "acceleration": true,
+              "baseline": true,
+              "independence": true,
+              "persistence": true,
+              "structural": false
+            },
+            "historical_baseline": {
+              "active_weeks": 26,
+              "historical_events": 65,
+              "history_weeks": 103,
+              "last_history_date": "2026-08-01",
+              "recent_to_median_ratio": 54,
+              "weekly_mean": 0.631067961165049,
+              "weekly_p90": 2,
+              "weekly_p95": 3.9,
+              "z_score": 19.96210404475039
+            },
+            "name": "Deep Learning",
+            "ots": 64.6,
+            "status": "SIGNAL"
           },
           {
             "components": {
@@ -5430,6 +5462,38 @@
           },
           {
             "components": {
+              "acceleration": 98.3,
+              "diffusion": 56.1,
+              "entrepreneurial_acceleration_proxy": 1.4,
+              "independence": 61.3,
+              "novelty": 87,
+              "persistence": 60,
+              "structural_evidence": 28
+            },
+            "gates": {
+              "acceleration": true,
+              "baseline": true,
+              "independence": true,
+              "persistence": true,
+              "structural": false
+            },
+            "historical_baseline": {
+              "active_weeks": 19,
+              "historical_events": 24,
+              "history_weeks": 103,
+              "last_history_date": "2026-08-02",
+              "recent_to_median_ratio": 22,
+              "weekly_mean": 0.233009708737864,
+              "weekly_p90": 1,
+              "weekly_p95": 1,
+              "z_score": 14.35598705501618
+            },
+            "name": "Learning Framework",
+            "ots": 58,
+            "status": "SIGNAL"
+          },
+          {
+            "components": {
               "acceleration": 96.9,
               "diffusion": 56.1,
               "entrepreneurial_acceleration_proxy": 0.9,
@@ -5458,70 +5522,6 @@
             },
             "name": "Language Model",
             "ots": 57.7,
-            "status": "SIGNAL"
-          },
-          {
-            "components": {
-              "acceleration": 98.3,
-              "diffusion": 49.8,
-              "entrepreneurial_acceleration_proxy": 2.1,
-              "independence": 55.6,
-              "novelty": 87,
-              "persistence": 50,
-              "structural_evidence": 33.7
-            },
-            "gates": {
-              "acceleration": true,
-              "baseline": true,
-              "independence": true,
-              "persistence": true,
-              "structural": false
-            },
-            "historical_baseline": {
-              "active_weeks": 19,
-              "historical_events": 24,
-              "history_weeks": 103,
-              "last_history_date": "2026-08-02",
-              "recent_to_median_ratio": 14,
-              "weekly_mean": 0.233009708737864,
-              "weekly_p90": 1,
-              "weekly_p95": 1,
-              "z_score": 9.022653721682849
-            },
-            "name": "Learning Framework",
-            "ots": 57.6,
-            "status": "SIGNAL"
-          },
-          {
-            "components": {
-              "acceleration": 98.3,
-              "diffusion": 80,
-              "entrepreneurial_acceleration_proxy": 0,
-              "independence": 95,
-              "novelty": 87,
-              "persistence": 80,
-              "structural_evidence": 14.8
-            },
-            "gates": {
-              "acceleration": true,
-              "baseline": true,
-              "independence": true,
-              "persistence": true,
-              "structural": false
-            },
-            "historical_baseline": {
-              "active_weeks": 26,
-              "historical_events": 65,
-              "history_weeks": 103,
-              "last_history_date": "2026-08-01",
-              "recent_to_median_ratio": 38,
-              "weekly_mean": 0.631067961165049,
-              "weekly_p90": 2,
-              "weekly_p95": 3.9,
-              "z_score": 13.90585451129151
-            },
-            "name": "Deep Learning",
-            "ots": 57.2,
             "status": "SIGNAL"
           },
           {
@@ -5564,7 +5564,7 @@
               "independence": 72.5,
               "novelty": 100,
               "persistence": 50,
-              "structural_evidence": 14
+              "structural_evidence": 14.5
             },
             "gates": {
               "acceleration": true,
@@ -5578,25 +5578,25 @@
               "historical_events": 9,
               "history_weeks": 103,
               "last_history_date": "2025-10-02",
-              "recent_to_median_ratio": 22,
+              "recent_to_median_ratio": 20,
               "weekly_mean": 0.087378640776699,
               "weekly_p90": 0,
               "weekly_p95": 0.899999999999995,
-              "z_score": 14.550161812297736
+              "z_score": 13.216828478964402
             },
             "name": "Mental Health",
-            "ots": 49.7,
+            "ots": 50.2,
             "status": "SIGNAL"
           },
           {
             "components": {
               "acceleration": 98.3,
-              "diffusion": 50,
-              "entrepreneurial_acceleration_proxy": 2,
-              "independence": 47.5,
+              "diffusion": 53.5,
+              "entrepreneurial_acceleration_proxy": 1.8,
+              "independence": 53.1,
               "novelty": 87,
-              "persistence": 70,
-              "structural_evidence": 14.5
+              "persistence": 80,
+              "structural_evidence": 14
             },
             "gates": {
               "acceleration": true,
@@ -5610,14 +5610,78 @@
               "historical_events": 18,
               "history_weeks": 103,
               "last_history_date": "2026-08-02",
-              "recent_to_median_ratio": 20,
+              "recent_to_median_ratio": 22,
               "weekly_mean": 0.174757281553398,
               "weekly_p90": 1,
               "weekly_p95": 1,
-              "z_score": 13.100323624595468
+              "z_score": 14.433656957928802
             },
             "name": "Learning Model",
-            "ots": 47.9,
+            "ots": 49.6,
+            "status": "SIGNAL"
+          },
+          {
+            "components": {
+              "acceleration": 98.1,
+              "diffusion": 46.9,
+              "entrepreneurial_acceleration_proxy": 2.1,
+              "independence": 55.6,
+              "novelty": 87,
+              "persistence": 40,
+              "structural_evidence": 21.2
+            },
+            "gates": {
+              "acceleration": true,
+              "baseline": true,
+              "independence": true,
+              "persistence": true,
+              "structural": false
+            },
+            "historical_baseline": {
+              "active_weeks": 38,
+              "historical_events": 154,
+              "history_weeks": 103,
+              "last_history_date": "2026-08-02",
+              "recent_to_median_ratio": 34,
+              "weekly_mean": 1.49514563106796,
+              "weekly_p90": 5,
+              "weekly_p95": 7,
+              "z_score": 5.9624216731450055
+            },
+            "name": "Neural Network",
+            "ots": 49.3,
+            "status": "SIGNAL"
+          },
+          {
+            "components": {
+              "acceleration": 98.2,
+              "diffusion": 35.1,
+              "entrepreneurial_acceleration_proxy": 0,
+              "independence": 41.9,
+              "novelty": 100,
+              "persistence": 30,
+              "structural_evidence": 31
+            },
+            "gates": {
+              "acceleration": true,
+              "baseline": true,
+              "independence": true,
+              "persistence": false,
+              "structural": false
+            },
+            "historical_baseline": {
+              "active_weeks": 9,
+              "historical_events": 9,
+              "history_weeks": 103,
+              "last_history_date": "2026-07-01",
+              "recent_to_median_ratio": 10,
+              "weekly_mean": 0.087378640776699,
+              "weekly_p90": 0,
+              "weekly_p95": 1,
+              "z_score": 6.550161812297734
+            },
+            "name": "Performance Evaluation",
+            "ots": 49,
             "status": "SIGNAL"
           },
           {
@@ -5650,70 +5714,6 @@
             },
             "name": "Decision Support",
             "ots": 46.6,
-            "status": "SIGNAL"
-          },
-          {
-            "components": {
-              "acceleration": 98.2,
-              "diffusion": 37.9,
-              "entrepreneurial_acceleration_proxy": 0,
-              "independence": 41.9,
-              "novelty": 100,
-              "persistence": 40,
-              "structural_evidence": 20
-            },
-            "gates": {
-              "acceleration": true,
-              "baseline": true,
-              "independence": true,
-              "persistence": true,
-              "structural": false
-            },
-            "historical_baseline": {
-              "active_weeks": 9,
-              "historical_events": 9,
-              "history_weeks": 103,
-              "last_history_date": "2026-07-01",
-              "recent_to_median_ratio": 10,
-              "weekly_mean": 0.087378640776699,
-              "weekly_p90": 0,
-              "weekly_p95": 1,
-              "z_score": 6.550161812297734
-            },
-            "name": "Performance Evaluation",
-            "ots": 46.2,
-            "status": "SIGNAL"
-          },
-          {
-            "components": {
-              "acceleration": 97.7,
-              "diffusion": 40.6,
-              "entrepreneurial_acceleration_proxy": 2.5,
-              "independence": 50,
-              "novelty": 87,
-              "persistence": 30,
-              "structural_evidence": 21.9
-            },
-            "gates": {
-              "acceleration": true,
-              "baseline": true,
-              "independence": true,
-              "persistence": false,
-              "structural": false
-            },
-            "historical_baseline": {
-              "active_weeks": 38,
-              "historical_events": 154,
-              "history_weeks": 103,
-              "last_history_date": "2026-08-02",
-              "recent_to_median_ratio": 28,
-              "weekly_mean": 1.49514563106796,
-              "weekly_p90": 5,
-              "weekly_p95": 7,
-              "z_score": 4.80876588291219
-            },
-            "name": "Neural Network",
-            "ots": 46.1,
             "status": "SIGNAL"
           },
           {
@@ -5752,8 +5752,8 @@
         "trend_engine": "ORACLE_TREND_ENGINE_V1",
         "trend_status_counts": {
           "EMERGING": 1,
-          "NOISE": 34,
-          "SIGNAL": 23,
+          "NOISE": 35,
+          "SIGNAL": 22,
           "STRUCTURAL_TREND": 1,
           "TREND": 1
         },
@@ -5813,8 +5813,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-07T23:27:00.106513+00:00",
-        "id": 342,
+        "created_at": "2026-09-07T23:42:00.176607+00:00",
+        "id": 343,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5857,7 +5857,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-07T23:27:00.106513+00:00"
+      "updated_at": "2026-09-07T23:42:00.176607+00:00"
     }
   },
   "production_readiness": {
@@ -5903,10 +5903,10 @@
       "total": 129
     },
     "semantic": {
-      "done": 5,
-      "percent": 100,
-      "status": "COMPLETED",
-      "total": 5
+      "done": 0,
+      "percent": 0,
+      "status": "RUNNING",
+      "total": 0
     },
     "trends": {
       "done": 2,
@@ -5920,17 +5920,17 @@
       "CYCLE_FAILED",
       "NO_ACTION"
     ],
-    "completed_at": "2026-09-07T23:02:55.142+00:00",
-    "created_at": "2026-09-07T23:02:01.490653+00:00",
+    "completed_at": "2026-09-07T23:47:47.884+00:00",
+    "created_at": "2026-09-07T23:47:01.215688+00:00",
     "error": "{\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"}",
     "global_decision": "NO_ACTION",
-    "id": 504,
+    "id": 505,
     "methodology_version": "ORACLE_V4_CORE_1",
     "mode": "LIVE_SHADOW",
     "no_lookahead": true,
-    "source_cutoff": "2026-09-07T23:02:34.903+00:00",
+    "source_cutoff": "2026-09-07T23:47:27.554+00:00",
     "stage": "FAILED",
-    "started_at": "2026-09-07T23:02:01.490653+00:00",
+    "started_at": "2026-09-07T23:47:01.215688+00:00",
     "status": "FAILED",
     "summary": {}
   },
@@ -5939,7 +5939,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_exported_at": "2026-09-07T23:41:12.595584+00:00",
+  "snapshot_exported_at": "2026-09-07T23:49:47.637558+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
     {
@@ -6760,7 +6760,7 @@
     ],
     "display_run_id": 455,
     "global_decision": "NO_ACTION",
-    "live_run_id": 504,
+    "live_run_id": 505,
     "live_running": false,
     "stage": "FAILED",
     "status": "FAILED",
@@ -12205,10 +12205,10 @@
     "mode": "V5_VALIDATION",
     "pit_fundamentals": {
       "sec_requests": {
-        "COMPLETED": 15,
+        "COMPLETED": 16,
         "FAILED": 336,
         "PENDING": 1,
-        "TOTAL": 352
+        "TOTAL": 353
       },
       "valid_snapshots": 119,
       "valid_tickers": 4
