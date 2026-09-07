@@ -4921,7 +4921,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-07T03:21:52.825Z",
+  "generated_at": "2026-09-07T03:35:48.661Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -4950,13 +4950,13 @@
       "status": "RUNNING"
     },
     {
-      "completed_at": "2026-09-07T03:17:28.234+00:00",
+      "completed_at": "2026-09-07T03:32:30.149+00:00",
       "details": {
         "documents_scanned": 600,
         "ok": true,
         "relationships_written": 0,
-        "signals_detected": 9,
-        "signals_inserted": 0,
+        "signals_detected": 10,
+        "signals_inserted": 1,
         "version": "oracle_v4_extract_2"
       },
       "error": null,
@@ -4964,18 +4964,18 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T03:17:49.406+00:00",
+      "completed_at": "2026-09-07T03:32:51.22+00:00",
       "details": {},
       "error": "{\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"}",
       "stage": "FAILURE",
       "status": "FAILED"
     },
     {
-      "completed_at": "2026-09-07T03:17:16.458+00:00",
+      "completed_at": "2026-09-07T03:32:16.801+00:00",
       "details": {
-        "arxiv_category": "stat",
+        "arxiv_category": "math",
         "discovery_scope": "open_world",
-        "inserted": 155,
+        "inserted": 9,
         "ok": true,
         "results": [
           {
@@ -4986,7 +4986,7 @@
           },
           {
             "index": 1,
-            "inserted": 4,
+            "inserted": 1,
             "ok": true,
             "seen": 70
           },
@@ -4998,7 +4998,7 @@
           },
           {
             "index": 3,
-            "inserted": 0,
+            "inserted": 2,
             "ok": true,
             "seen": 70
           },
@@ -5028,7 +5028,7 @@
           },
           {
             "index": 8,
-            "inserted": 0,
+            "inserted": 2,
             "ok": true,
             "seen": 45
           },
@@ -5046,7 +5046,7 @@
           },
           {
             "index": 11,
-            "inserted": 97,
+            "inserted": 0,
             "ok": true,
             "seen": 97
           },
@@ -5063,14 +5063,13 @@
             "seen": 100
           },
           {
+            "error": "HTTP 429 api.gdeltproject.org",
             "index": 14,
-            "inserted": 50,
-            "ok": true,
-            "seen": 50
+            "ok": false
           }
         ],
         "seed_themes": 0,
-        "successful_sources": 15,
+        "successful_sources": 14,
         "version": "ORACLE_V4_OPEN_WORLD_3"
       },
       "error": null,
@@ -5078,54 +5077,54 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T03:17:28.764+00:00",
+      "completed_at": "2026-09-07T03:32:30.597+00:00",
       "details": {
         "as_of_date": "2026-09-07",
         "confidence": 0,
         "errors": [
           {
             "code": "BRENT",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "CFNAI",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=CFNAI (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "CORE_PCE",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "DTWEXBGS",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "FEDFUNDS",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "HY_OAS",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2 (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2 (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "ICSA",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "NFCI",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "T10Y2Y",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "T5YIFR",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=T5YIFR (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           },
           {
             "code": "VIX",
-            "error": "error sending request from 10.33.4.200:47210 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
+            "error": "error sending request from 10.33.6.137:54288 for https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS (104.79.30.40:443): client error (SendRequest): http2 error: stream error received: unexpected internal error encountered"
           }
         ],
         "loaded": 0,
@@ -5145,7 +5144,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T03:17:19.809+00:00",
+      "completed_at": "2026-09-07T03:32:20.736+00:00",
       "details": {
         "batches": [
           {
@@ -5166,7 +5165,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-07T03:17:19.514+00:00",
+      "completed_at": "2026-09-07T03:32:20.469+00:00",
       "details": {
         "error": "oracle-v4-semantic-embed: 546",
         "status": "FAILED_NON_BLOCKING"
@@ -5176,7 +5175,7 @@
       "status": "FAILED"
     },
     {
-      "completed_at": "2026-09-07T03:17:27.31+00:00",
+      "completed_at": "2026-09-07T03:32:29.446+00:00",
       "details": {
         "baseline_bridge": "RETRO_104_WEEK_V1",
         "baseline_candidates": 600,
@@ -5185,7 +5184,7 @@
         "documents_scanned": 5000,
         "ok": true,
         "raw_phrases": 62723,
-        "run_id": 459,
+        "run_id": 460,
         "seed_themes": 0,
         "top_themes": [
           {
@@ -5732,8 +5731,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-07T03:12:00.146902+00:00",
-        "id": 201,
+        "created_at": "2026-09-07T03:27:00.084852+00:00",
+        "id": 234,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5776,7 +5775,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-07T03:12:00.146902+00:00"
+      "updated_at": "2026-09-07T03:27:00.084852+00:00"
     }
   },
   "production_readiness": {
@@ -5822,8 +5821,8 @@
       "total": 129
     },
     "semantic": {
-      "done": 5,
-      "percent": 100,
+      "done": 4,
+      "percent": 80,
       "status": "COMPLETED",
       "total": 5
     },
@@ -5839,21 +5838,21 @@
       "CYCLE_FAILED",
       "NO_ACTION"
     ],
-    "completed_at": "2026-09-07T03:17:49.039+00:00",
-    "created_at": "2026-09-07T03:17:00.920226+00:00",
+    "completed_at": "2026-09-07T03:32:50.878+00:00",
+    "created_at": "2026-09-07T03:32:00.879003+00:00",
     "error": "{\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"}",
     "global_decision": "NO_ACTION",
-    "id": 459,
+    "id": 460,
     "methodology_version": "ORACLE_V4_CORE_1",
     "mode": "LIVE_SHADOW",
     "no_lookahead": true,
-    "source_cutoff": "2026-09-07T03:17:28.786+00:00",
+    "source_cutoff": "2026-09-07T03:32:30.628+00:00",
     "stage": "FAILED",
-    "started_at": "2026-09-07T03:17:00.920226+00:00",
+    "started_at": "2026-09-07T03:32:00.879003+00:00",
     "status": "FAILED",
     "summary": {}
   },
-  "snapshot_exported_at": "2026-09-07T03:21:46.713185+00:00",
+  "snapshot_exported_at": "2026-09-07T03:35:42.622919+00:00",
   "stages": [
     {
       "completed_at": "2026-09-07T02:17:47.651+00:00",
@@ -6673,7 +6672,7 @@
     ],
     "display_run_id": 455,
     "global_decision": "NO_ACTION",
-    "live_run_id": 459,
+    "live_run_id": 460,
     "live_running": false,
     "stage": "FAILED",
     "status": "FAILED",
@@ -12111,8 +12110,7 @@
     "pit_fundamentals": {
       "sec_requests": {
         "COMPLETED": 10,
-        "FAILED": 305,
-        "PENDING": 2,
+        "FAILED": 307,
         "TOTAL": 317
       },
       "valid_snapshots": 0,
