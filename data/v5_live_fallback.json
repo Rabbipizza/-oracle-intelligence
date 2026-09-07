@@ -573,6 +573,7 @@
         "drawdown_from_1y_high_pct": -46.441820218631435,
         "early_bird_score": 95,
         "early_role": "AI_DATACENTER_COOLING",
+        "entry_score": 84.36,
         "evidence": {
           "ai_keyword_required": false,
           "direct_demand_proxies": {
@@ -617,6 +618,7 @@
           "source": "SEC_COMPANYFACTS_PIT"
         },
         "latest_price": 79.4000015258789,
+        "legacy_composite_score": 83.1,
         "market_cap_estimate": 6546819062.414268,
         "market_cap_gate": "SMALL_MID_CAP",
         "market_data_quality": 90,
@@ -629,10 +631,12 @@
         "run_id": 455,
         "size_penalty": 8,
         "status": "EARLY_BIRD",
+        "structural_early_bird_score": 97.8,
         "ticker": "AAON"
       }
     ],
-    "global": "PILOT_BUY"
+    "global": "PILOT_BUY",
+    "method": "STRUCTURAL_EARLY_BIRD_THEN_ENTRY_V1"
   },
   "decisions": [
     {
@@ -870,6 +874,7 @@
       },
       "evidence_score": 100,
       "latest_price": 79.4000015258789,
+      "legacy_market_adjusted_early_bird_score": 95,
       "market_cap_estimate": 6546819062.414268,
       "market_cap_gate": "SMALL_MID_CAP",
       "market_data_quality": 90,
@@ -881,6 +886,8 @@
       "run_id": 455,
       "size_penalty": 8,
       "status": "EARLY_BIRD",
+      "structural_early_bird_score": 97.8,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "AAON"
     },
     {
@@ -916,6 +923,7 @@
       },
       "evidence_score": 89,
       "latest_price": 410.8500061035156,
+      "legacy_market_adjusted_early_bird_score": 63.65,
       "market_cap_estimate": 159574142370.60547,
       "market_cap_gate": "VERY_LARGE_CAP",
       "market_data_quality": 90,
@@ -927,6 +935,8 @@
       "run_id": 455,
       "size_penalty": 85,
       "status": "THEME_VALIDATOR",
+      "structural_early_bird_score": 93.4,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "ETN"
     },
     {
@@ -962,6 +972,7 @@
       },
       "evidence_score": 89,
       "latest_price": 298.9599914550781,
+      "legacy_market_adjusted_early_bird_score": 62.55,
       "market_cap_estimate": 105923730998.31111,
       "market_cap_gate": "VERY_LARGE_CAP",
       "market_data_quality": 90,
@@ -973,6 +984,8 @@
       "run_id": 455,
       "size_penalty": 85,
       "status": "THEME_VALIDATOR",
+      "structural_early_bird_score": 92.3,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "CEG"
     },
     {
@@ -1008,6 +1021,7 @@
       },
       "evidence_score": 83,
       "latest_price": 105.52999877929688,
+      "legacy_market_adjusted_early_bird_score": 44.35,
       "market_cap_estimate": 8924591477.376068,
       "market_cap_gate": "SMALL_MID_CAP",
       "market_data_quality": 90,
@@ -1019,6 +1033,8 @@
       "run_id": 455,
       "size_penalty": 8,
       "status": "TOO_LATE",
+      "structural_early_bird_score": 92.15,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "AAOI"
     },
     {
@@ -1054,6 +1070,7 @@
       },
       "evidence_score": 86,
       "latest_price": 357.0299987792969,
+      "legacy_market_adjusted_early_bird_score": 28.25,
       "market_cap_estimate": 55818337781.654366,
       "market_cap_gate": "LARGE_CAP",
       "market_data_quality": 90,
@@ -1065,6 +1082,8 @@
       "run_id": 455,
       "size_penalty": 55,
       "status": "TOO_LATE",
+      "structural_early_bird_score": 92.5,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "TER"
     },
     {
@@ -1100,6 +1119,7 @@
       },
       "evidence_score": 89,
       "latest_price": 280.5299987792969,
+      "legacy_market_adjusted_early_bird_score": 24.1,
       "market_cap_estimate": 108000731701.73375,
       "market_cap_gate": "VERY_LARGE_CAP",
       "market_data_quality": 90,
@@ -1111,6 +1131,8 @@
       "run_id": 455,
       "size_penalty": 85,
       "status": "THEME_VALIDATOR",
+      "structural_early_bird_score": 92.1,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "VRT"
     },
     {
@@ -1146,6 +1168,7 @@
       },
       "evidence_score": 92,
       "latest_price": 454.7099914550781,
+      "legacy_market_adjusted_early_bird_score": 12.6,
       "market_cap_estimate": 360856686525.3018,
       "market_cap_gate": "MEGA_CAP",
       "market_data_quality": 90,
@@ -1157,6 +1180,8 @@
       "run_id": 455,
       "size_penalty": 100,
       "status": "THEME_VALIDATOR",
+      "structural_early_bird_score": 92.6,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "AMAT"
     },
     {
@@ -1192,6 +1217,7 @@
       },
       "evidence_score": 89,
       "latest_price": 307.6499938964844,
+      "legacy_market_adjusted_early_bird_score": 12.3,
       "market_cap_estimate": 384968898012.5428,
       "market_cap_gate": "MEGA_CAP",
       "market_data_quality": 90,
@@ -1203,6 +1229,8 @@
       "run_id": 455,
       "size_penalty": 100,
       "status": "THEME_VALIDATOR",
+      "structural_early_bird_score": 92.3,
+      "structural_status": "STRUCTURAL_EARLY_BIRD",
       "ticker": "LRCX"
     }
   ],
@@ -4979,7 +5007,7 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "The read operation timed out",
+  "live_api_error": "HTTP Error 500: Internal Server Error",
   "live_api_reachable_at_export": false,
   "live_stages": [
     {
@@ -5893,7 +5921,12 @@
     "status": "FAILED",
     "summary": {}
   },
-  "snapshot_checked_at": "2026-09-07T06:10:40.949972+00:00",
+  "scoring_methodology": {
+    "entry_score": "45% structural Early Bird + 30% fundamentals + 25% expectation-gap/rerating proxy",
+    "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
+    "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
+  },
+  "snapshot_checked_at": "2026-09-07T06:34:01.490365+00:00",
   "snapshot_exported_at": "2026-09-07T05:55:42.806861+00:00",
   "stages": [
     {
