@@ -1,0 +1,52 @@
+{
+  "version": "ORACLE_PAPER_V1",
+  "as_of": "2026-09-07",
+  "status": "ACTIVE_PAPER_TEST",
+  "base_currency": "CHF",
+  "starting_capital_chf": 1000.0,
+  "objective": "Beat QQQ on a CHF total-return basis with lower or comparable drawdown using ORACLE hybrid analyst logic.",
+  "benchmark": {
+    "ticker": "QQQ",
+    "starting_value_chf": 1000.0,
+    "reference_price_usd": 718.96,
+    "reference_price_date": "2026-09-04",
+    "reference_chf_usd": 1.23579,
+    "synthetic_units": 1.71886,
+    "fx_included": true
+  },
+  "portfolio": {
+    "cash_chf": 850.0,
+    "invested_chf": 150.0,
+    "positions": [
+      {
+        "ticker": "AAON",
+        "role": "AI_DATACENTER_COOLING",
+        "decision": "PILOT_BUY",
+        "target_weight_pct": 15.0,
+        "entry_value_chf": 150.0,
+        "reference_price_usd": 79.40,
+        "reference_price_date": "2026-09-04",
+        "reference_chf_usd": 1.23579,
+        "synthetic_shares": 2.33461,
+        "structural_early_bird_score": 97.8,
+        "entry_score": 83.1,
+        "max_weight_pct": 15.0
+      }
+    ]
+  },
+  "rules": {
+    "full_investment_required": false,
+    "causal_chain_must_be_proven": true,
+    "inherited_causal_chain_allowed": false,
+    "structural_early_bird_excludes_price": true,
+    "entry_score_handles_rerating_valuation_timing": true,
+    "no_action_is_valid": true,
+    "real_orders_enabled": false,
+    "performance_measurement": "Portfolio CHF total return versus synthetic QQQ CHF total return including USDCHF movement",
+    "rebalance_trigger": "Evidence-backed change in trend, causal proof, structural early-bird quality, entry attractiveness, fundamentals, invalidation, macro/geopolitical risk, or material relative-performance deterioration"
+  },
+  "notes": [
+    "US market reference uses Sep 4 2026 close because Sep 7 2026 is a US market holiday.",
+    "This is a paper test only; no brokerage orders are placed."
+  ]
+}
