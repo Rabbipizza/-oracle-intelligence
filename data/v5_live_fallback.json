@@ -4948,8 +4948,7 @@
       "win_rate_vs_qqq": 47.5
     }
   ],
-  "fallback": true,
-  "fallback_source": "LAST_CONFIRMED_SNAPSHOT",
+  "fallback": false,
   "freshness": [
     {
       "details": {
@@ -5003,7 +5002,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-07T23:07:50.116Z",
+  "generated_at": "2026-09-07T23:31:07.452Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -5022,8 +5021,7 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "HTTP Error 500: Internal Server Error",
-  "live_api_reachable_at_export": false,
+  "live_api_reachable_at_export": true,
   "live_stages": [
     {
       "completed_at": null,
@@ -5815,8 +5813,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-07T22:57:00.109375+00:00",
-        "id": 308,
+        "created_at": "2026-09-07T23:27:00.106513+00:00",
+        "id": 342,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5859,7 +5857,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-07T22:57:00.109375+00:00"
+      "updated_at": "2026-09-07T23:27:00.106513+00:00"
     }
   },
   "production_readiness": {
@@ -5941,8 +5939,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_checked_at": "2026-09-07T23:20:57.420761+00:00",
-  "snapshot_exported_at": "2026-09-07T23:07:44.302617+00:00",
+  "snapshot_exported_at": "2026-09-07T23:31:01.171656+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
     {
@@ -12209,9 +12206,9 @@
     "pit_fundamentals": {
       "sec_requests": {
         "COMPLETED": 15,
-        "FAILED": 333,
-        "PENDING": 3,
-        "TOTAL": 351
+        "FAILED": 335,
+        "PENDING": 2,
+        "TOTAL": 352
       },
       "valid_snapshots": 119,
       "valid_tickers": 4
