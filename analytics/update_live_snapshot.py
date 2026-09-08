@@ -66,9 +66,9 @@ def merge_analytics(snapshot):
     if analytics:snapshot['analytics_generated_at']=analytics.get('generated_at');snapshot['production_readiness']=analytics.get('production_readiness');snapshot['analytics_engine']=analytics.get('engine')
     return enrich_methodology(snapshot,analytics)
 
-existing=load_json(OUT) or {};req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.5','Accept':'application/json','Cache-Control':'no-store'});now=datetime.now(timezone.utc).isoformat()
+existing=load_json(OUT) or {};req=urllib.request.Request(API,headers={'User-Agent':'ORACLE-V5-Snapshot/1.6','Accept':'application/json','Cache-Control':'no-store'});now=datetime.now(timezone.utc).isoformat()
 try:
-    with urllib.request.urlopen(req,timeout=25) as r:
+    with urllib.request.urlopen(req,timeout=75) as r:
         if r.status!=200:raise RuntimeError(f'HTTP {r.status}')
         data=json.loads(r.read().decode('utf-8'))
     if not data.get('ok'):raise RuntimeError(data.get('error','API not ok'))
