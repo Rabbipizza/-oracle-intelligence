@@ -43,7 +43,6 @@ def _persistence_probability(positive_weeks: list[date], as_of: date) -> tuple[f
         trials += 1
         if any((w + timedelta(weeks=k)) in week_set for k in range(1, HORIZON_WEEKS + 1)):
             successes += 1
-    # Beta(1,1) posterior predictive mean.
     return (successes + 1.0) / (trials + 2.0), successes, trials
 
 
@@ -134,7 +133,7 @@ def run(db_url: str) -> dict:
                 "trend_key": k,
                 "as_of": as_of_ts,
                 "first_detected_at": existing_first.get(k, detection_now),
-                "state": "DISCOVERY_CANDIDATE",
+                "state": "SIGNAL",
                 "p_structural": p_persist,
                 "novelty": novelty,
                 "acceleration": acceleration,
@@ -162,6 +161,7 @@ def run(db_url: str) -> dict:
             "candidates": len(payload),
             "persistence_horizon_weeks": HORIZON_WEEKS,
             "history_weeks": HISTORY_WEEKS,
+            "state_policy": "FDR survivors remain SIGNAL until lifecycle thresholds are calibrated",
         }
         conn.execute(text("""
             update public.oracle_v6_experiments
