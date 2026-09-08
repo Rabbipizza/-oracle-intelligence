@@ -5011,8 +5011,7 @@
       "win_rate_vs_qqq": 47.5
     }
   ],
-  "fallback": true,
-  "fallback_source": "LAST_CONFIRMED_SNAPSHOT",
+  "fallback": false,
   "freshness": [
     {
       "details": {
@@ -5066,7 +5065,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-08T11:59:22.544Z",
+  "generated_at": "2026-09-08T13:40:43.927Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -5085,35 +5084,26 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "The read operation timed out",
-  "live_api_reachable_at_export": false,
+  "live_api_reachable_at_export": true,
   "live_stages": [
     {
-      "completed_at": "2026-09-08T11:49:05.809+00:00",
-      "details": {},
-      "error": "oracle-v4-discover-themes: {\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"} @documents",
-      "stage": "FAILURE",
-      "status": "FAILED"
-    },
-    {
-      "completed_at": "2026-09-08T11:48:32.503+00:00",
+      "completed_at": "2026-09-08T12:47:40.281+00:00",
       "details": {
-        "arxiv_category": "q-bio",
+        "arxiv_category": "math",
         "discovery_scope": "open_world",
-        "inserted": 35,
+        "inserted": 27,
         "ok": true,
         "results": [
           {
+            "error": "[object Object]",
             "index": 0,
-            "inserted": 20,
-            "ok": true,
-            "seen": 38
+            "ok": false
           },
           {
             "index": 1,
-            "inserted": 11,
+            "inserted": 8,
             "ok": true,
-            "seen": 68
+            "seen": 70
           },
           {
             "error": "[object Object]",
@@ -5122,7 +5112,7 @@
           },
           {
             "index": 3,
-            "inserted": 4,
+            "inserted": 3,
             "ok": true,
             "seen": 70
           },
@@ -5142,9 +5132,10 @@
             "ok": false
           },
           {
-            "error": "[object Object]",
             "index": 7,
-            "ok": false
+            "inserted": 2,
+            "ok": true,
+            "seen": 10
           },
           {
             "error": "[object Object]",
@@ -5152,9 +5143,10 @@
             "ok": false
           },
           {
-            "error": "[object Object]",
             "index": 9,
-            "ok": false
+            "inserted": 14,
+            "ok": true,
+            "seen": 25
           },
           {
             "index": 10,
@@ -5174,9 +5166,10 @@
             "seen": 100
           },
           {
-            "error": "[object Object]",
             "index": 13,
-            "ok": false
+            "inserted": 0,
+            "ok": true,
+            "seen": 100
           },
           {
             "error": "HTTP 429 api.gdeltproject.org",
@@ -5185,7 +5178,7 @@
           }
         ],
         "seed_themes": 0,
-        "successful_sources": 5,
+        "successful_sources": 7,
         "version": "ORACLE_V4_OPEN_WORLD_3"
       },
       "error": null,
@@ -5193,7 +5186,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-08T11:48:49.683+00:00",
+      "completed_at": "2026-09-08T12:49:12.883+00:00",
       "details": {
         "batches": [
           {
@@ -5214,7 +5207,7 @@
       "status": "COMPLETED"
     },
     {
-      "completed_at": "2026-09-08T11:48:46.044+00:00",
+      "completed_at": "2026-09-08T12:49:03.786+00:00",
       "details": {
         "error": "oracle-v4-semantic-embed: 546",
         "status": "FAILED_NON_BLOCKING"
@@ -5277,8 +5270,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-08T11:57:09.450416+00:00",
-        "id": 374,
+        "created_at": "2026-09-08T13:27:01.201556+00:00",
+        "id": 377,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5321,7 +5314,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-08T11:57:09.450416+00:00"
+      "updated_at": "2026-09-08T13:27:01.201556+00:00"
     }
   },
   "production_readiness": {
@@ -5367,10 +5360,10 @@
       "total": 129
     },
     "semantic": {
-      "done": 0,
-      "percent": 0,
-      "status": "RUNNING",
-      "total": 0
+      "done": 5,
+      "percent": 100,
+      "status": "COMPLETED",
+      "total": 5
     },
     "trends": {
       "done": 2,
@@ -5380,22 +5373,19 @@
     }
   },
   "run": {
-    "blockers": [
-      "CYCLE_FAILED",
-      "NO_ACTION"
-    ],
-    "completed_at": "2026-09-08T11:49:05.064+00:00",
-    "created_at": "2026-09-08T11:47:26.103144+00:00",
-    "error": "oracle-v4-discover-themes: {\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"} @documents",
+    "blockers": [],
+    "completed_at": null,
+    "created_at": "2026-09-08T12:47:14.694431+00:00",
+    "error": null,
     "global_decision": "NO_ACTION",
-    "id": 525,
+    "id": 527,
     "methodology_version": "ORACLE_V4_CORE_1",
     "mode": "LIVE_SHADOW",
     "no_lookahead": true,
     "source_cutoff": null,
-    "stage": "FAILED",
-    "started_at": "2026-09-08T11:47:26.103144+00:00",
-    "status": "FAILED",
+    "stage": "INGESTION",
+    "started_at": "2026-09-08T12:47:14.694431+00:00",
+    "status": "RUNNING",
     "summary": {}
   },
   "scoring_methodology": {
@@ -5403,8 +5393,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_checked_at": "2026-09-08T13:25:18.851750+00:00",
-  "snapshot_exported_at": "2026-09-08T11:58:37.237524+00:00",
+  "snapshot_exported_at": "2026-09-08T13:40:10.838953+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
     {
@@ -6225,10 +6214,10 @@
     ],
     "display_run_id": 455,
     "global_decision": "NO_ACTION",
-    "live_run_id": 525,
-    "live_running": false,
-    "stage": "FAILED",
-    "status": "FAILED",
+    "live_run_id": 527,
+    "live_running": true,
+    "stage": "INGESTION",
+    "status": "RUNNING",
     "summary": {
       "causal_bridge": {
         "corroborated": 0,
@@ -10824,13 +10813,13 @@
     "mode": "V5_VALIDATION",
     "pit_fundamentals": {
       "sec_requests": {
-        "COMPLETED": 16,
-        "FAILED": 345,
+        "COMPLETED": 17,
+        "FAILED": 350,
         "PENDING": 15,
-        "TOTAL": 376
+        "TOTAL": 382
       },
-      "valid_snapshots": 119,
-      "valid_tickers": 4
+      "valid_snapshots": 158,
+      "valid_tickers": 5
     }
   },
   "value_chains": [
