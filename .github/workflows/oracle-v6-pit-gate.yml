@@ -26,6 +26,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install --quiet pytest
       - name: Run PIT unit tests
         run: python -m pytest -q tests/test_oracle_v6_pit_access.py
       - name: Compile PIT gateway
