@@ -1,6 +1,5 @@
-# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> transmission -> evaluation clock -> bottleneck -> company capture -> SEC FCF -> SEC position -> reverse DCF -> market expectations gate -> decision
+# ORACLE V6 autonomous scientific pipeline
 name: ORACLE V6 Discovery FDR
-
 on:
   workflow_dispatch:
   schedule:
@@ -8,38 +7,13 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'analytics/oracle_v6_formal_nulls.py'
-      - 'analytics/oracle_v6_discovery_pipeline.py'
-      - 'analytics/oracle_v6_trend_probability.py'
-      - 'analytics/oracle_v6_semantic_bridge.py'
-      - 'analytics/oracle_v6_transmission_graph.py'
-      - 'analytics/oracle_v6_evaluation_clock.py'
-      - 'analytics/oracle_v6_bottleneck_gate.py'
-      - 'analytics/oracle_v6_company_capture_gate.py'
-      - 'analytics/oracle_v6_sec_cashflow_ingest.py'
-      - 'analytics/oracle_v6_sec_position_ingest.py'
-      - 'analytics/oracle_v6_reverse_dcf.py'
-      - 'analytics/oracle_v6_market_expectations_gate.py'
-      - 'analytics/oracle_v6_decision_gate.py'
-      - 'analytics/oracle_v6_scientific_core.py'
+      - 'analytics/oracle_v6_*.py'
       - 'requirements-v6.txt'
+      - 'sql/v6_*.sql'
+      - 'sql/tests/v6_*.sql'
       - 'sql/p0_3_fdr_production_gate.sql'
-      - 'sql/v6_term_history_vintage_guard.sql'
-      - 'sql/v6_evaluation_clock.sql'
-      - 'sql/v6_sec_cashflow_pit.sql'
-      - 'sql/v6_sec_position_pit.sql'
       - 'sql/tests/p0_3_fdr_gate.sql'
-      - 'sql/tests/v6_discovery_pit_gate.sql'
-      - 'sql/tests/v6_term_history_vintage_gate.sql'
-      - 'sql/tests/v6_evaluation_clock_gate.sql'
-      - 'sql/tests/v6_company_capture_gate.sql'
-      - 'sql/tests/v6_sec_cashflow_pit_gate.sql'
-      - 'sql/tests/v6_sec_position_pit_gate.sql'
-      - 'sql/tests/v6_reverse_dcf_gate.sql'
-      - 'sql/tests/v6_market_expectations_gate.sql'
-      - 'sql/tests/v6_decision_gate.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
-
 concurrency:
   group: oracle-v6-discovery
   cancel-in-progress: true
@@ -48,85 +22,89 @@ permissions:
 jobs:
   fdr:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     env:
       ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
       ORACLE_V6_FDR_ALPHA: '0.05'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Validate database secret
         shell: bash
         run: |
-          case "$ORACLE_SUPABASE_DB_URL" in postgres://*|postgresql://*) ;; *) echo "ORACLE_SUPABASE_DB_URL is not a PostgreSQL URL" >&2; exit 1 ;; esac
-      - name: Set up Python
-        uses: actions/setup-python@v5
+          case "$ORACLE_SUPABASE_DB_URL" in postgres://*|postgresql://*) ;; *) exit 1 ;; esac
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-v6.txt
-      - name: Install pinned dependencies
+      - name: Install dependencies
         run: pip install -r requirements-v6.txt
-      - name: Compile V6 scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_sec_position_ingest.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
-      - name: Fit formal rolling count nulls
+      - name: Compile scientific code
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_sec_position_ingest.py analytics/oracle_v6_sec_inline_xbrl_fallback.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
+      - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
-      - name: Run production Benjamini-Hochberg family
+      - name: Production BH-FDR
         working-directory: analytics
         run: python oracle_v6_discovery_pipeline.py
-      - name: Estimate structural persistence probabilities
+      - name: Persistence probabilities
         working-directory: analytics
         run: python oracle_v6_trend_probability.py
-      - name: Build PIT lexical-to-structural semantic bridge
+      - name: PIT semantic bridge
         working-directory: analytics
         run: python oracle_v6_semantic_bridge.py
-      - name: Build PIT descriptive transmission graph
+      - name: Descriptive transmission graph
         working-directory: analytics
         run: python oracle_v6_transmission_graph.py
-      - name: Freeze live evaluation clock
+      - name: Freeze evaluation clock
         working-directory: analytics
         run: python oracle_v6_evaluation_clock.py
-      - name: Enforce calibrated bottleneck forecast gate
+      - name: Bottleneck calibration gate
         working-directory: analytics
         run: python oracle_v6_bottleneck_gate.py
-      - name: Build PIT SEC company capture evidence candidates
+      - name: Company capture evidence gate
         working-directory: analytics
         run: python oracle_v6_company_capture_gate.py
-      - name: Ingest PIT SEC cashflow and annual FCF
+      - name: Try SEC Companyfacts cashflow
         working-directory: analytics
         run: python oracle_v6_sec_cashflow_ingest.py
-      - name: Ingest PIT SEC balance position
+      - name: Try SEC Companyfacts position
         working-directory: analytics
         run: python oracle_v6_sec_position_ingest.py
-      - name: Measure PIT market expectations by reverse DCF
+      - name: SEC inline-XBRL fallback from archived filing URLs
+        working-directory: analytics
+        run: python oracle_v6_sec_inline_xbrl_fallback.py
+      - name: Materialize SEC PIT FCF and position
+        working-directory: analytics
+        run: python oracle_v6_sec_materialize.py
+      - name: Deterministic PIT reverse DCF
         working-directory: analytics
         run: python oracle_v6_reverse_dcf.py
-      - name: Enforce market expectations prerequisite gate
+      - name: Market expectations calibration gate
         working-directory: analytics
         run: python oracle_v6_market_expectations_gate.py
-      - name: Enforce final decision prerequisite gate
+      - name: Final decision gate
         working-directory: analytics
         run: python oracle_v6_decision_gate.py
       - name: Install PostgreSQL client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
-      - name: Run FDR gate integration test
+      - name: FDR gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_3_fdr_gate.sql
-      - name: Run Discovery PIT timestamp gate
+      - name: Discovery PIT gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_discovery_pit_gate.sql
-      - name: Run immutable term-history vintage gate
+      - name: Immutable term vintage gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_term_history_vintage_gate.sql
-      - name: Run evaluation clock gate
+      - name: Evaluation clock gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_evaluation_clock_gate.sql
-      - name: Run company capture evidence gate
+      - name: Company capture gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_company_capture_gate.sql
-      - name: Run SEC cashflow PIT gate
+      - name: SEC cashflow PIT gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_sec_cashflow_pit_gate.sql
-      - name: Run SEC position PIT gate
+      - name: SEC position PIT gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_sec_position_pit_gate.sql
-      - name: Run reverse DCF gate
+      - name: Reverse DCF gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_reverse_dcf_gate.sql
-      - name: Run market expectations prerequisite gate
+      - name: Market expectations gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_market_expectations_gate.sql
-      - name: Run final decision prerequisite gate
+      - name: Final decision gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_decision_gate.sql
