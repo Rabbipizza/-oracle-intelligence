@@ -7,8 +7,9 @@ missing weeks. Model selection is statistical rather than threshold-only:
 - formal Poisson dispersion test rejects -> Negative Binomial,
 - otherwise -> Poisson MLE.
 
-All p-values are exact one-sided upper-tail probabilities and are consumed by
-the production Benjamini-Hochberg FDR gate.
+The statistical test week is distinct from decision_as_of. decision_as_of is
+reconstructed from the actual availability of the retro occurrences and their
+source documents, so a weekly bucket is never backdated to its week_start.
 """
 from __future__ import annotations
 
@@ -17,7 +18,7 @@ import math
 import os
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timedelta
 
 from scipy.stats import chi2, nbinom, poisson
 from sqlalchemy import create_engine, text
@@ -68,8 +69,6 @@ def _fit_count_null(train: list[int], observed: int) -> Fit:
         dispersion_test_p = 1.0
 
     if total < SPARSE_TOTAL_THRESHOLD:
-        # Proper posterior predictive prevents first-ever observations from
-        # receiving artificial p=0 while remaining point-in-time.
         a = PRIOR_SHAPE + total
         b = PRIOR_RATE + n
         expected = a / b
@@ -132,37 +131,57 @@ def _engine(db_url: str):
 def run(db_url: str) -> dict:
     engine = _engine(db_url)
     with engine.begin() as conn:
-        as_of = conn.execute(text("select max(week_start) from public.oracle_v4_term_history_weekly")).scalar_one()
-        if as_of is None:
+        test_week = conn.execute(text("select max(week_start) from public.oracle_v4_term_history_weekly")).scalar_one()
+        if test_week is None:
             raise RuntimeError("term history empty")
-        if isinstance(as_of, datetime):
-            as_of = as_of.date()
+        if isinstance(test_week, datetime):
+            test_week = test_week.date()
 
-        train_start = as_of - timedelta(weeks=WINDOW_WEEKS)
-        train_end = as_of - timedelta(weeks=1)
+        last_event_date = conn.execute(text("""
+            select max(last_event_date)
+            from public.oracle_v4_term_history_weekly
+            where week_start=:test_week
+        """), {"test_week": test_week}).scalar_one()
+        if last_event_date is None:
+            raise RuntimeError("test-week last_event_date unavailable")
+
+        # Conservative KNOWN availability: an occurrence can only be used once
+        # both the source document has been fetched and the retrospective term
+        # occurrence has actually been materialized.
+        decision_as_of = conn.execute(text("""
+            select max(greatest(o.created_at,d.fetched_at))
+            from public.oracle_v4_retro_term_occurrences o
+            join public.oracle_raw_documents d on d.id=o.document_id
+            where o.event_date between :test_week and :last_event_date
+        """), {"test_week": test_week, "last_event_date": last_event_date}).scalar_one()
+        if decision_as_of is None:
+            raise RuntimeError("cannot establish KNOWN decision_as_of for test week")
+
+        train_start = test_week - timedelta(weeks=WINDOW_WEEKS)
+        train_end = test_week - timedelta(weeks=1)
 
         candidates = conn.execute(text("""
             select d.term_id,d.term_key,h.event_count
             from public.oracle_v4_term_history_weekly h
             join public.oracle_v4_term_dictionary d on d.term_id=h.term_id
-            where h.week_start=:as_of and h.event_count>0
+            where h.week_start=:test_week and h.event_count>0
             order by d.term_id
-        """), {"as_of": as_of}).mappings().all()
+        """), {"test_week": test_week}).mappings().all()
         if not candidates:
-            raise RuntimeError(f"no candidate terms for {as_of}")
+            raise RuntimeError(f"no candidate terms for {test_week}")
 
         history_rows = conn.execute(text("""
             with c as (
               select term_id
               from public.oracle_v4_term_history_weekly
-              where week_start=:as_of and event_count>0
+              where week_start=:test_week and event_count>0
             )
             select h.term_id,h.week_start,h.event_count
             from public.oracle_v4_term_history_weekly h
             join c using(term_id)
-            where h.week_start>=:train_start and h.week_start<:as_of
+            where h.week_start>=:train_start and h.week_start<:test_week
             order by h.term_id,h.week_start
-        """), {"as_of": as_of, "train_start": train_start}).mappings().all()
+        """), {"test_week": test_week, "train_start": train_start}).mappings().all()
 
         by_term: dict[int, dict[date, int]] = defaultdict(dict)
         for r in history_rows:
@@ -177,9 +196,17 @@ def run(db_url: str) -> dict:
             observed = int(c["event_count"])
             fit = _fit_count_null(train, observed)
             family_counts[fit.family] += 1
+            diagnostics = {
+                **fit.diagnostics,
+                "availability_quality": "KNOWN",
+                "decision_as_of": decision_as_of.isoformat(),
+                "test_week": test_week.isoformat(),
+                "test_last_event_date": last_event_date.isoformat(),
+                "availability_rule": "max(greatest(retro_occurrence.created_at, raw_document.fetched_at))",
+            }
             payload.append({
                 "signal_key": str(c["term_key"]),
-                "as_of": datetime.combine(as_of, datetime.min.time(), tzinfo=timezone.utc),
+                "as_of": decision_as_of,
                 "null_family": fit.family,
                 "observed_value": float(observed),
                 "expected_value": fit.expected,
@@ -191,14 +218,16 @@ def run(db_url: str) -> dict:
                     "weeks": WINDOW_WEEKS,
                     "train_start": train_start.isoformat(),
                     "train_end": train_end.isoformat(),
-                    "test_week": as_of.isoformat(),
+                    "test_week": test_week.isoformat(),
+                    "test_last_event_date": last_event_date.isoformat(),
+                    "decision_as_of": decision_as_of.isoformat(),
                     "zero_filled_missing_weeks": True,
                     "excludes_test_week": True,
                 }, sort_keys=True),
-                "diagnostics": json.dumps(fit.diagnostics, sort_keys=True),
+                "diagnostics": json.dumps(diagnostics, sort_keys=True),
             })
 
-        experiment_key = f"v6_formal_count_null_{as_of.isoformat()}"
+        experiment_key = f"v6_formal_count_null_{test_week.isoformat()}"
         specification = json.dumps({
             "window_weeks": WINDOW_WEEKS,
             "minimum_train_weeks": MIN_TRAIN_WEEKS,
@@ -207,6 +236,8 @@ def run(db_url: str) -> dict:
             "sparse_model": "Gamma-Poisson posterior predictive",
             "overdispersion_test": "Pearson dispersion index, chi-square upper tail",
             "dispersion_alpha": DISPERSION_ALPHA,
+            "test_week": test_week.isoformat(),
+            "decision_as_of_rule": "KNOWN source/extraction availability",
             "families": ["GAMMA_POISSON_SPARSE_104W", "NEGATIVE_BINOMIAL_ROLLING_104W", "POISSON_ROLLING_104W"],
         }, sort_keys=True)
         experiment_id = conn.execute(text("""
@@ -220,11 +251,16 @@ def run(db_url: str) -> dict:
               train_end=excluded.train_end,test_start=excluded.test_start,test_end=excluded.test_end,
               specification=excluded.specification,invalidated_at=null,invalidation_reason=null
             returning id
-        """), {"key": experiment_key, "version": MODEL_VERSION, "train_start": train_start, "train_end": train_end, "test": as_of, "spec": specification}).scalar_one()
+        """), {"key": experiment_key, "version": MODEL_VERSION, "train_start": train_start, "train_end": train_end, "test": test_week, "spec": specification}).scalar_one()
 
-        conn.execute(text("delete from public.oracle_v6_signal_null_models where as_of=:as_of and model_version=:version"), {
-            "as_of": datetime.combine(as_of, datetime.min.time(), tzinfo=timezone.utc), "version": MODEL_VERSION,
-        })
+        # Replace any prior materialization of this same test week, including
+        # the old incorrectly backdated as_of=week_start rows.
+        conn.execute(text("""
+            delete from public.oracle_v6_signal_null_models
+            where model_version=:version
+              and training_window->>'test_week'=:test_week
+        """), {"version": MODEL_VERSION, "test_week": test_week.isoformat()})
+
         insert_sql = text("""
             insert into public.oracle_v6_signal_null_models
               (signal_key,as_of,null_family,observed_value,expected_value,dispersion,surprise_z,p_value,model_version,training_window,diagnostics)
@@ -242,10 +278,21 @@ def run(db_url: str) -> dict:
             "median_p_value": pvals[len(pvals)//2],
             "formal_p_value": True,
             "temporary": False,
+            "test_week": test_week.isoformat(),
+            "test_last_event_date": last_event_date.isoformat(),
+            "decision_as_of": decision_as_of.isoformat(),
+            "availability_quality": "KNOWN",
         }, sort_keys=True)
         conn.execute(text("update public.oracle_v6_experiments set metrics=cast(:metrics as jsonb) where id=:id"), {"metrics": metrics, "id": experiment_id})
 
-    return {"ok": True, "experiment_id": int(experiment_id), "as_of": as_of.isoformat(), "rows": len(payload), "families": dict(family_counts)}
+    return {
+        "ok": True,
+        "experiment_id": int(experiment_id),
+        "test_week": test_week.isoformat(),
+        "decision_as_of": decision_as_of.isoformat(),
+        "rows": len(payload),
+        "families": dict(family_counts),
+    }
 
 
 def main() -> None:
