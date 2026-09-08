@@ -16,8 +16,10 @@ on:
       - 'analytics/oracle_v6_scientific_core.py'
       - 'requirements-v6.txt'
       - 'sql/p0_3_fdr_production_gate.sql'
+      - 'sql/v6_term_history_vintage_guard.sql'
       - 'sql/tests/p0_3_fdr_gate.sql'
       - 'sql/tests/v6_discovery_pit_gate.sql'
+      - 'sql/tests/v6_term_history_vintage_gate.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
 
 concurrency:
@@ -87,3 +89,6 @@ jobs:
 
       - name: Run Discovery PIT timestamp gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_discovery_pit_gate.sql
+
+      - name: Run immutable term-history vintage gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_term_history_vintage_gate.sql
