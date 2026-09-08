@@ -1,4 +1,4 @@
-# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> descriptive transmission
+# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> descriptive transmission -> bottleneck gate
 name: ORACLE V6 Discovery FDR
 
 on:
@@ -13,6 +13,7 @@ on:
       - 'analytics/oracle_v6_trend_probability.py'
       - 'analytics/oracle_v6_semantic_bridge.py'
       - 'analytics/oracle_v6_transmission_graph.py'
+      - 'analytics/oracle_v6_bottleneck_gate.py'
       - 'analytics/oracle_v6_scientific_core.py'
       - 'requirements-v6.txt'
       - 'sql/p0_3_fdr_production_gate.sql'
@@ -59,7 +60,7 @@ jobs:
         run: pip install -r requirements-v6.txt
 
       - name: Compile V6 scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_bottleneck_gate.py
 
       - name: Fit formal rolling count nulls
         working-directory: analytics
@@ -80,6 +81,10 @@ jobs:
       - name: Build PIT descriptive transmission graph
         working-directory: analytics
         run: python oracle_v6_transmission_graph.py
+
+      - name: Enforce calibrated bottleneck forecast gate
+        working-directory: analytics
+        run: python oracle_v6_bottleneck_gate.py
 
       - name: Install PostgreSQL client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
