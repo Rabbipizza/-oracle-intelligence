@@ -1,6 +1,6 @@
 {
   "analytics_engine": "ORACLE_V5_FINAL_EXTERNAL_PIT",
-  "analytics_generated_at": "2026-09-07T05:30:05.201025+00:00",
+  "analytics_generated_at": "2026-09-08T05:30:05.370135+00:00",
   "api_version": "V5.4_BUILD",
   "causal_nodes": [
     {
@@ -562,80 +562,8 @@
     }
   ],
   "current_decision": {
-    "candidates": [
-      {
-        "attention_penalty": 0,
-        "causal_theme": "Data Center Power & Thermal Infrastructure",
-        "company_name": "AAON, INC.",
-        "composite_score": 83.1,
-        "created_at": "2026-09-07T04:49:00.24411+00:00",
-        "decision": "PILOT_BUY",
-        "drawdown_from_1y_high_pct": -46.441820218631435,
-        "early_bird_score": 95,
-        "early_role": "AI_DATACENTER_COOLING",
-        "entry_score": 84.36,
-        "evidence": {
-          "ai_keyword_required": false,
-          "direct_demand_proxies": {
-            "backlog": true,
-            "capacity": true,
-            "orders": true
-          },
-          "drawdown_from_1y_high_pct": -46.441820218631435,
-          "evidence_keys": 10,
-          "external_docs": 0,
-          "external_domains": 0,
-          "latest_price": 79.4000015258789,
-          "market_and_size_known_by_cutoff": true,
-          "market_cap_estimate": 6546819062.414268,
-          "market_cap_not_yet_used": true,
-          "rerating_penalty": 0,
-          "return_1y_pct": -2.1565002675223877,
-          "return_6m_pct": -13.233526748609922,
-          "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-          "sec_docs": 3,
-          "size_penalty": 8,
-          "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-        },
-        "evidence_score": 100,
-        "expectation_gap": {
-          "distance_52w_high_pct": -46.33569253559378,
-          "kind": "MARKET_RERATING_PROXY_NOT_ANALYST_CONSENSUS",
-          "prior_return_12m": -3.748868666544214,
-          "prior_return_6m": -21.287019530613616,
-          "score": 75.0
-        },
-        "fundamental": {
-          "cash": 13000.0,
-          "debt": null,
-          "filed_cutoff": "2026-09-07",
-          "net_income": 107593000.0,
-          "quality": 85,
-          "revenue": 1442076000.0,
-          "revenue_growth_pct": 20.109442086895683,
-          "revenue_previous": 1200635000.0,
-          "score": 72.0,
-          "source": "SEC_COMPANYFACTS_PIT"
-        },
-        "latest_price": 79.4000015258789,
-        "legacy_composite_score": 83.1,
-        "market_cap_estimate": 6546819062.414268,
-        "market_cap_gate": "SMALL_MID_CAP",
-        "market_data_quality": 90,
-        "max_paper_weight_pct": 15,
-        "pre_market_score": 97.8,
-        "rerating_penalty": 0,
-        "return_1y_pct": -2.1565002675223877,
-        "return_6m_pct": -13.233526748609922,
-        "role_specificity_score": 96,
-        "run_id": 455,
-        "size_penalty": 8,
-        "status": "EARLY_BIRD",
-        "structural_early_bird_score": 97.8,
-        "ticker": "AAON"
-      }
-    ],
-    "global": "PILOT_BUY",
+    "candidates": [],
+    "global": "NO_ACTION",
     "method": "STRUCTURAL_EARLY_BIRD_THEN_ENTRY_V1"
   },
   "decisions": [
@@ -5022,7 +4950,7 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "HTTP Error 500: Internal Server Error",
+  "live_api_error": "The read operation timed out",
   "live_api_reachable_at_export": false,
   "live_stages": [
     {
@@ -5229,7 +5157,7 @@
     }
   },
   "production_readiness": {
-    "global_decision": "PILOT_BUY",
+    "global_decision": "NO_ACTION",
     "real_money_alpha_validated": false,
     "real_money_autonomous_trading_enabled": false,
     "remaining_non_blocking_limitations": [
@@ -5304,7 +5232,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_checked_at": "2026-09-08T05:21:28.130802+00:00",
+  "snapshot_checked_at": "2026-09-08T05:35:00.267072+00:00",
   "snapshot_exported_at": "2026-09-08T04:29:27.421902+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
