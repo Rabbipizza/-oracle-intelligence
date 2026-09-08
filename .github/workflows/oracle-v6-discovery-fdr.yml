@@ -1,4 +1,4 @@
-# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> descriptive transmission -> evaluation clock -> bottleneck gate -> company capture -> SEC FCF PIT -> market expectations -> decision gate
+# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> transmission -> evaluation clock -> bottleneck -> company capture -> SEC FCF -> SEC position -> market expectations -> decision
 name: ORACLE V6 Discovery FDR
 
 on:
@@ -17,6 +17,7 @@ on:
       - 'analytics/oracle_v6_bottleneck_gate.py'
       - 'analytics/oracle_v6_company_capture_gate.py'
       - 'analytics/oracle_v6_sec_cashflow_ingest.py'
+      - 'analytics/oracle_v6_sec_position_ingest.py'
       - 'analytics/oracle_v6_market_expectations_gate.py'
       - 'analytics/oracle_v6_decision_gate.py'
       - 'analytics/oracle_v6_scientific_core.py'
@@ -25,12 +26,14 @@ on:
       - 'sql/v6_term_history_vintage_guard.sql'
       - 'sql/v6_evaluation_clock.sql'
       - 'sql/v6_sec_cashflow_pit.sql'
+      - 'sql/v6_sec_position_pit.sql'
       - 'sql/tests/p0_3_fdr_gate.sql'
       - 'sql/tests/v6_discovery_pit_gate.sql'
       - 'sql/tests/v6_term_history_vintage_gate.sql'
       - 'sql/tests/v6_evaluation_clock_gate.sql'
       - 'sql/tests/v6_company_capture_gate.sql'
       - 'sql/tests/v6_sec_cashflow_pit_gate.sql'
+      - 'sql/tests/v6_sec_position_pit_gate.sql'
       - 'sql/tests/v6_market_expectations_gate.sql'
       - 'sql/tests/v6_decision_gate.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
@@ -52,7 +55,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Validate database secret
         shell: bash
         run: |
@@ -60,87 +62,69 @@ jobs:
             postgres://*|postgresql://*) ;;
             *) echo "ORACLE_SUPABASE_DB_URL is not a PostgreSQL URL" >&2; exit 1 ;;
           esac
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-v6.txt
-
       - name: Install pinned dependencies
         run: pip install -r requirements-v6.txt
-
       - name: Compile V6 scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
-
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_sec_position_ingest.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
       - name: Fit formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
-
       - name: Run production Benjamini-Hochberg family
         working-directory: analytics
         run: python oracle_v6_discovery_pipeline.py
-
       - name: Estimate structural persistence probabilities
         working-directory: analytics
         run: python oracle_v6_trend_probability.py
-
       - name: Build PIT lexical-to-structural semantic bridge
         working-directory: analytics
         run: python oracle_v6_semantic_bridge.py
-
       - name: Build PIT descriptive transmission graph
         working-directory: analytics
         run: python oracle_v6_transmission_graph.py
-
       - name: Freeze live evaluation clock
         working-directory: analytics
         run: python oracle_v6_evaluation_clock.py
-
       - name: Enforce calibrated bottleneck forecast gate
         working-directory: analytics
         run: python oracle_v6_bottleneck_gate.py
-
       - name: Build PIT SEC company capture evidence candidates
         working-directory: analytics
         run: python oracle_v6_company_capture_gate.py
-
       - name: Ingest PIT SEC cashflow and annual FCF
         working-directory: analytics
         run: python oracle_v6_sec_cashflow_ingest.py
-
+      - name: Ingest PIT SEC balance position
+        working-directory: analytics
+        run: python oracle_v6_sec_position_ingest.py
       - name: Enforce market expectations prerequisite gate
         working-directory: analytics
         run: python oracle_v6_market_expectations_gate.py
-
       - name: Enforce final decision prerequisite gate
         working-directory: analytics
         run: python oracle_v6_decision_gate.py
-
       - name: Install PostgreSQL client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
-
       - name: Run FDR gate integration test
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_3_fdr_gate.sql
-
       - name: Run Discovery PIT timestamp gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_discovery_pit_gate.sql
-
       - name: Run immutable term-history vintage gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_term_history_vintage_gate.sql
-
       - name: Run evaluation clock gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_evaluation_clock_gate.sql
-
       - name: Run company capture evidence gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_company_capture_gate.sql
-
       - name: Run SEC cashflow PIT gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_sec_cashflow_pit_gate.sql
-
+      - name: Run SEC position PIT gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_sec_position_pit_gate.sql
       - name: Run market expectations prerequisite gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_market_expectations_gate.sql
-
       - name: Run final decision prerequisite gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_decision_gate.sql
