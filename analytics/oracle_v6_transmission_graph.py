@@ -3,14 +3,14 @@
 
 This stage does NOT claim causality. It aggregates structured signal links that
 were actually available by the latest scientific decision time. Edges with
-support from >=2 distinct source families are SUPPORTED_DESCRIPTIVE; otherwise
-they remain HYPOTHESIS. Predictive/causal promotion belongs to later tests.
+support from >=2 distinct information-independence groups are
+SUPPORTED_DESCRIPTIVE; otherwise they remain HYPOTHESIS. Predictive/causal
+promotion belongs to later tests.
 """
 from __future__ import annotations
 
 import json
 import os
-from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime
 
@@ -31,7 +31,7 @@ class EdgeEvidence:
     last_available: datetime | None = None
     confidences: list[float] = field(default_factory=list)
     document_ids: set[str] = field(default_factory=set)
-    source_ids: set[str] = field(default_factory=set)
+    independence_groups: set[str] = field(default_factory=set)
     link_ids: list[str] = field(default_factory=list)
 
     def add(self, row) -> None:
@@ -42,7 +42,7 @@ class EdgeEvidence:
             self.last_available = available
         self.confidences.append(float(row["confidence"]))
         self.document_ids.add(str(row["document_id"]))
-        self.source_ids.add(str(row["source_id"]))
+        self.independence_groups.add(str(row["independence_group"]))
         if len(self.link_ids) < MAX_EVIDENCE_IDS:
             self.link_ids.append(str(row["id"]))
 
@@ -80,9 +80,14 @@ def run(db_url: str) -> dict:
 
         rows = conn.execute(text("""
             select l.id,l.document_id,l.src_type,l.src_name,l.relation_type,
-                   l.dst_type,l.dst_name,l.confidence,l.available_at,d.source_id
+                   l.dst_type,l.dst_name,l.confidence,l.available_at,
+                   coalesce(sf.independence_group,
+                            'unmapped:' || coalesce(src.source_type,'unknown')) as independence_group
             from public.oracle_signal_links l
             join public.oracle_raw_documents d on d.id=l.document_id
+            left join public.oracle_sources src on src.id=d.source_id
+            left join public.oracle_source_family_map sm on sm.source_type=src.source_type
+            left join public.oracle_source_families sf on sf.family=sm.family
             where l.available_at is not null
               and l.available_at <= :decision_as_of
               and d.fetched_at <= :decision_as_of
@@ -91,7 +96,10 @@ def run(db_url: str) -> dict:
 
         grouped: dict[tuple[str,str,str,str,str], EdgeEvidence] = {}
         for r in rows:
-            key = (str(r["src_type"]), str(r["src_name"]), str(r["relation_type"]), str(r["dst_type"]), str(r["dst_name"]))
+            key = (
+                str(r["src_type"]), str(r["src_name"]), str(r["relation_type"]),
+                str(r["dst_type"]), str(r["dst_name"]),
+            )
             if key not in grouped:
                 grouped[key] = EdgeEvidence(*key)
             grouped[key].add(r)
@@ -100,7 +108,7 @@ def run(db_url: str) -> dict:
         descriptive = 0
         hypotheses = 0
         for e in grouped.values():
-            independent_sources = len(e.source_ids)
+            independent_sources = len(e.independence_groups)
             status = "SUPPORTED_DESCRIPTIVE" if independent_sources >= 2 else "HYPOTHESIS"
             if status == "SUPPORTED_DESCRIPTIVE":
                 descriptive += 1
@@ -114,8 +122,9 @@ def run(db_url: str) -> dict:
                 "relation_type": e.relation_type,
                 "document_count": len(e.document_ids),
                 "independent_source_family_count": independent_sources,
+                "independence_groups": sorted(e.independence_groups),
                 "mean_extractor_confidence": sum(e.confidences) / len(e.confidences),
-                "support_policy": ">=2 source families => SUPPORTED_DESCRIPTIVE; never causal",
+                "support_policy": ">=2 independence groups => SUPPORTED_DESCRIPTIVE; never causal",
                 "causal_claim": False,
             }
             payload.append({
@@ -132,14 +141,17 @@ def run(db_url: str) -> dict:
                 "posterior_probability": None,
                 "independent_source_count": independent_sources,
                 "evidence_ids": json.dumps(e.link_ids),
-                "validation_method": "MULTI_SOURCE_DOCUMENT_REPLICATION" if independent_sources >= 2 else "SINGLE_SOURCE_HYPOTHESIS",
+                "validation_method": "MULTI_INDEPENDENCE_GROUP_REPLICATION" if independent_sources >= 2 else "SINGLE_GROUP_HYPOTHESIS",
                 "validation_stats": json.dumps(stats, sort_keys=True),
                 "generated_by_model": MODEL_VERSION,
                 "prompt_hash": None,
                 "evidence_cutoff_at": decision_as_of,
             })
 
-        conn.execute(text("delete from public.oracle_v6_graph_edges where generated_by_model=:model"), {"model": MODEL_VERSION})
+        conn.execute(
+            text("delete from public.oracle_v6_graph_edges where generated_by_model=:model"),
+            {"model": MODEL_VERSION},
+        )
         if payload:
             conn.execute(text("""
                 insert into public.oracle_v6_graph_edges
@@ -164,6 +176,7 @@ def run(db_url: str) -> dict:
             "test_week": test_week.isoformat() if test_week else None,
             "decision_as_of": decision_as_of.isoformat(),
             "availability_quality": "KNOWN",
+            "independence_unit": "oracle_source_families.independence_group",
         }
         conn.execute(text("""
             update public.oracle_v6_experiments
