@@ -7,6 +7,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - 'analytics/oracle_v6_formal_nulls.py'
       - 'analytics/oracle_v6_discovery_pipeline.py'
       - 'analytics/oracle_v6_scientific_core.py'
       - 'requirements-v6.txt'
@@ -20,7 +21,7 @@ permissions:
 jobs:
   fdr:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
       ORACLE_V6_FDR_ALPHA: '0.05'
@@ -47,7 +48,11 @@ jobs:
         run: pip install -r requirements-v6.txt
 
       - name: Compile V6 scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_discovery_pipeline.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py
+
+      - name: Fit formal rolling count nulls
+        working-directory: analytics
+        run: python oracle_v6_formal_nulls.py
 
       - name: Run production Benjamini-Hochberg family
         working-directory: analytics
