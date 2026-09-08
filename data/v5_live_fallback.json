@@ -1,7 +1,60 @@
 {
   "analytics_engine": "ORACLE_V5_FINAL_EXTERNAL_PIT",
   "analytics_generated_at": "2026-09-08T05:30:05.370135+00:00",
-  "api_version": "V5.4_BUILD",
+  "api_version": "V5.5_BUILD",
+  "causal_coverage_refresh": [
+    {
+      "nodes": 4,
+      "status": "EXISTING",
+      "trend": "Artificial Intelligence"
+    },
+    {
+      "error": "canceling statement due to statement timeout",
+      "status": "DOC_QUERY_ERROR",
+      "trend": "Machine Learning"
+    },
+    {
+      "documents": 180,
+      "nodes": 1,
+      "status": "PLAUSIBLE_OR_VALIDATION_REQUIRED",
+      "trend": "Neural Network"
+    },
+    {
+      "documents": 180,
+      "status": "ANALYZED_UNPROVEN",
+      "trend": "Reinforcement Learning"
+    },
+    {
+      "documents": 180,
+      "status": "ANALYZED_UNPROVEN",
+      "trend": "Language Model"
+    },
+    {
+      "nodes": 1,
+      "status": "EXISTING",
+      "trend": "Social Media"
+    },
+    {
+      "nodes": 1,
+      "status": "EXISTING",
+      "trend": "Learning Approach"
+    },
+    {
+      "error": "canceling statement due to statement timeout",
+      "status": "DOC_QUERY_ERROR",
+      "trend": "Supply Chain"
+    },
+    {
+      "documents": 180,
+      "status": "ANALYZED_UNPROVEN",
+      "trend": "Deep Learning"
+    },
+    {
+      "documents": 180,
+      "status": "ANALYZED_UNPROVEN",
+      "trend": "Learning Framework"
+    }
+  ],
   "causal_nodes": [
     {
       "causal_confidence": 90,
@@ -241,6 +294,88 @@
       "status": "REQUIRED_INPUT",
       "supply_rigidity_score": 55,
       "trend_id": 14744
+    },
+    {
+      "causal_confidence": 44,
+      "created_at": "2026-09-08T06:33:19.540794+00:00",
+      "demand_acceleration_score": 98.34997983467491,
+      "evidence_documents": 1,
+      "evidence_quality": 81,
+      "evidence_summary": {
+        "causality_proven": false,
+        "coverage_only": true,
+        "evidence_document_ids": [
+          "3023f5ac-bd2f-4a0a-ab9b-f377f193c68d"
+        ],
+        "investable_proven": false,
+        "method": "CAUSAL_COVERAGE_V2_BUILDER",
+        "requires_economic_gate": true
+      },
+      "id": 1508,
+      "node_name": "Copper",
+      "node_type": "PICKS_SHOVELS_CANDIDATE",
+      "pricing_power_score": null,
+      "relationship": "ENABLES",
+      "run_id": 455,
+      "source_families": 0,
+      "status": "VALIDATION_REQUIRED",
+      "supply_rigidity_score": null,
+      "trend_id": 14797
+    },
+    {
+      "causal_confidence": 48,
+      "created_at": "2026-09-08T06:33:21.293299+00:00",
+      "demand_acceleration_score": 25,
+      "evidence_documents": 2,
+      "evidence_quality": 81,
+      "evidence_summary": {
+        "causality_proven": false,
+        "coverage_only": true,
+        "evidence_document_ids": [
+          "4fb0bbfd-2d65-4bc3-84b0-303f923e38cd",
+          "3023f5ac-bd2f-4a0a-ab9b-f377f193c68d"
+        ],
+        "investable_proven": false,
+        "method": "CAUSAL_COVERAGE_V2_BUILDER",
+        "requires_economic_gate": true
+      },
+      "id": 1509,
+      "node_name": "Copper",
+      "node_type": "PICKS_SHOVELS_CANDIDATE",
+      "pricing_power_score": null,
+      "relationship": "ENABLES",
+      "run_id": 455,
+      "source_families": 0,
+      "status": "VALIDATION_REQUIRED",
+      "supply_rigidity_score": null,
+      "trend_id": 14768
+    },
+    {
+      "causal_confidence": 44,
+      "created_at": "2026-09-08T11:11:21.694101+00:00",
+      "demand_acceleration_score": 25,
+      "evidence_documents": 1,
+      "evidence_quality": 81,
+      "evidence_summary": {
+        "causality_proven": false,
+        "coverage_only": true,
+        "evidence_document_ids": [
+          "0af5cf1b-383f-4b27-b28c-a1c459148963"
+        ],
+        "investable_proven": false,
+        "method": "CAUSAL_COVERAGE_V2_BUILDER",
+        "requires_economic_gate": true
+      },
+      "id": 1513,
+      "node_name": "Quantum Processors",
+      "node_type": "TECHNOLOGY",
+      "pricing_power_score": null,
+      "relationship": "ASSOCIATED_WITH",
+      "run_id": 455,
+      "source_families": 0,
+      "status": "VALIDATION_REQUIRED",
+      "supply_rigidity_score": null,
+      "trend_id": 14781
     },
     {
       "causal_confidence": 77,
@@ -4876,8 +5011,7 @@
       "win_rate_vs_qqq": 47.5
     }
   ],
-  "fallback": true,
-  "fallback_source": "LAST_CONFIRMED_SNAPSHOT",
+  "fallback": false,
   "freshness": [
     {
       "details": {
@@ -4931,7 +5065,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-08T04:29:31.821Z",
+  "generated_at": "2026-09-08T11:11:52.575Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -4950,116 +5084,8 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "HTTP Error 500: Internal Server Error",
-  "live_api_reachable_at_export": false,
-  "live_stages": [
-    {
-      "completed_at": "2026-09-08T04:04:03.546+00:00",
-      "details": {
-        "arxiv_category": "math",
-        "discovery_scope": "open_world",
-        "inserted": 10,
-        "ok": true,
-        "results": [
-          {
-            "error": "[object Object]",
-            "index": 0,
-            "ok": false
-          },
-          {
-            "error": "[object Object]",
-            "index": 1,
-            "ok": false
-          },
-          {
-            "index": 2,
-            "inserted": 5,
-            "ok": true,
-            "seen": 53
-          },
-          {
-            "index": 3,
-            "inserted": 2,
-            "ok": true,
-            "seen": 70
-          },
-          {
-            "error": "[object Object]",
-            "index": 4,
-            "ok": false
-          },
-          {
-            "error": "[object Object]",
-            "index": 5,
-            "ok": false
-          },
-          {
-            "index": 6,
-            "inserted": 0,
-            "ok": true,
-            "seen": 26
-          },
-          {
-            "index": 7,
-            "inserted": 0,
-            "ok": true,
-            "seen": 10
-          },
-          {
-            "error": "[object Object]",
-            "index": 8,
-            "ok": false
-          },
-          {
-            "index": 9,
-            "inserted": 3,
-            "ok": true,
-            "seen": 25
-          },
-          {
-            "index": 10,
-            "inserted": 0,
-            "ok": true,
-            "seen": 0
-          },
-          {
-            "error": "[object Object]",
-            "index": 11,
-            "ok": false
-          },
-          {
-            "index": 12,
-            "inserted": 0,
-            "ok": true,
-            "seen": 100
-          },
-          {
-            "error": "[object Object]",
-            "index": 13,
-            "ok": false
-          },
-          {
-            "error": "HTTP 429 api.gdeltproject.org",
-            "index": 14,
-            "ok": false
-          }
-        ],
-        "seed_themes": 0,
-        "successful_sources": 7,
-        "version": "ORACLE_V4_OPEN_WORLD_3"
-      },
-      "error": null,
-      "stage": "INGESTION",
-      "status": "COMPLETED"
-    },
-    {
-      "completed_at": null,
-      "details": {},
-      "error": null,
-      "stage": "SEMANTIC_EMBEDDING",
-      "status": "RUNNING"
-    }
-  ],
+  "live_api_reachable_at_export": true,
+  "live_stages": [],
   "method_gates": [
     {
       "details": {
@@ -5090,18 +5116,13 @@
     }
   ],
   "methodology": {
-    "chart_rank_history": true,
     "early_bird_v2": true,
-    "early_bird_v3": true,
-    "ecosystem_roles": true,
-    "no_lookahead": true,
     "open_world": true,
     "point_in_time": true,
     "seed_themes": 0,
     "seeded_source_bias": false,
     "size_gate": true,
-    "too_late_gate": true,
-    "top10_value_chains": true
+    "too_late_gate": true
   },
   "ok": true,
   "paper": {
@@ -5109,8 +5130,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-08T04:27:00.11401+00:00",
-        "id": 355,
+        "created_at": "2026-09-08T10:57:04.222128+00:00",
+        "id": 372,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5153,7 +5174,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-08T04:27:00.11401+00:00"
+      "updated_at": "2026-09-08T10:57:04.222128+00:00"
     }
   },
   "production_readiness": {
@@ -5169,9 +5190,9 @@
   "progress": {
     "causal": {
       "done": 3,
-      "percent": 75,
+      "percent": 50,
       "status": "ECONOMIC_NODES",
-      "total": 4
+      "total": 6
     },
     "companies": {
       "done": 5,
@@ -5212,19 +5233,22 @@
     }
   },
   "run": {
-    "blockers": [],
-    "completed_at": null,
-    "created_at": "2026-09-08T04:02:36.632351+00:00",
-    "error": null,
+    "blockers": [
+      "CYCLE_FAILED",
+      "NO_ACTION"
+    ],
+    "completed_at": "2026-09-08T09:34:37.308+00:00",
+    "created_at": "2026-09-08T09:32:25.444837+00:00",
+    "error": "Signal timed out.",
     "global_decision": "NO_ACTION",
-    "id": 511,
+    "id": 524,
     "methodology_version": "ORACLE_V4_CORE_1",
     "mode": "LIVE_SHADOW",
     "no_lookahead": true,
     "source_cutoff": null,
-    "stage": "INGESTION",
-    "started_at": "2026-09-08T04:02:36.632351+00:00",
-    "status": "RUNNING",
+    "stage": "FAILED",
+    "started_at": "2026-09-08T09:32:25.444837+00:00",
+    "status": "FAILED",
     "summary": {}
   },
   "scoring_methodology": {
@@ -5232,8 +5256,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_checked_at": "2026-09-08T10:57:31.845523+00:00",
-  "snapshot_exported_at": "2026-09-08T04:29:27.421902+00:00",
+  "snapshot_exported_at": "2026-09-08T11:11:04.085758+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
     {
@@ -6054,10 +6077,10 @@
     ],
     "display_run_id": 455,
     "global_decision": "NO_ACTION",
-    "live_run_id": 511,
-    "live_running": true,
-    "stage": "INGESTION",
-    "status": "RUNNING",
+    "live_run_id": 524,
+    "live_running": false,
+    "stage": "FAILED",
+    "status": "FAILED",
     "summary": {
       "causal_bridge": {
         "corroborated": 0,
@@ -6976,48 +6999,6 @@
       "canonical_name": "Artificial Intelligence",
       "direction": "FLAT",
       "gate_status": "CONFIRMED",
-      "history": [
-        {
-          "rank": 1,
-          "run_id": 438,
-          "score": 85.29196299195917
-        },
-        {
-          "rank": 1,
-          "run_id": 439,
-          "score": 85.29196299195917
-        },
-        {
-          "rank": 1,
-          "run_id": 440,
-          "score": 85.29196299195917
-        },
-        {
-          "rank": 1,
-          "run_id": 442,
-          "score": 85.54551916871597
-        },
-        {
-          "rank": 1,
-          "run_id": 443,
-          "score": 85.54551916871597
-        },
-        {
-          "rank": 1,
-          "run_id": 446,
-          "score": 85.34414504456882
-        },
-        {
-          "rank": 1,
-          "run_id": 447,
-          "score": 85.34414533700124
-        },
-        {
-          "rank": 1,
-          "run_id": 455,
-          "score": 89.0990022044435
-        }
-      ],
       "persistence_score": 100,
       "previous_rank": 1,
       "rank": 1,
@@ -7031,48 +7012,6 @@
       "canonical_name": "Machine Learning",
       "direction": "FLAT",
       "gate_status": "CONFIRMED",
-      "history": [
-        {
-          "rank": 2,
-          "run_id": 438,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 439,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 440,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 442,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 443,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 446,
-          "score": 80.12915661411198
-        },
-        {
-          "rank": 2,
-          "run_id": 447,
-          "score": 80.30646108740996
-        },
-        {
-          "rank": 2,
-          "run_id": 455,
-          "score": 80.09114458395253
-        }
-      ],
       "persistence_score": 100,
       "previous_rank": 2,
       "rank": 2,
@@ -7086,48 +7025,6 @@
       "canonical_name": "Neural Network",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 4,
-          "run_id": 438,
-          "score": 71.7
-        },
-        {
-          "rank": 4,
-          "run_id": 439,
-          "score": 71.7
-        },
-        {
-          "rank": 4,
-          "run_id": 440,
-          "score": 71.7
-        },
-        {
-          "rank": 3,
-          "run_id": 442,
-          "score": 71.7
-        },
-        {
-          "rank": 3,
-          "run_id": 443,
-          "score": 71.7
-        },
-        {
-          "rank": 3,
-          "run_id": 446,
-          "score": 71.7
-        },
-        {
-          "rank": 3,
-          "run_id": 447,
-          "score": 69.7
-        },
-        {
-          "rank": 3,
-          "run_id": 455,
-          "score": 69.7
-        }
-      ],
       "persistence_score": 66.7,
       "previous_rank": 3,
       "rank": 3,
@@ -7141,48 +7038,6 @@
       "canonical_name": "Reinforcement Learning",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 6,
-          "run_id": 438,
-          "score": 68.2
-        },
-        {
-          "rank": 6,
-          "run_id": 439,
-          "score": 68.2
-        },
-        {
-          "rank": 6,
-          "run_id": 440,
-          "score": 68.2
-        },
-        {
-          "rank": 5,
-          "run_id": 442,
-          "score": 68.2
-        },
-        {
-          "rank": 5,
-          "run_id": 443,
-          "score": 68.2
-        },
-        {
-          "rank": 5,
-          "run_id": 446,
-          "score": 68.2
-        },
-        {
-          "rank": 4,
-          "run_id": 447,
-          "score": 66.7
-        },
-        {
-          "rank": 4,
-          "run_id": 455,
-          "score": 66.7
-        }
-      ],
       "persistence_score": 50,
       "previous_rank": 4,
       "rank": 4,
@@ -7196,48 +7051,6 @@
       "canonical_name": "Language Model",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 5,
-          "run_id": 438,
-          "score": 68.5
-        },
-        {
-          "rank": 5,
-          "run_id": 439,
-          "score": 68.5
-        },
-        {
-          "rank": 5,
-          "run_id": 440,
-          "score": 68.5
-        },
-        {
-          "rank": 4,
-          "run_id": 442,
-          "score": 68.5
-        },
-        {
-          "rank": 4,
-          "run_id": 443,
-          "score": 68.5
-        },
-        {
-          "rank": 4,
-          "run_id": 446,
-          "score": 68.5
-        },
-        {
-          "rank": 5,
-          "run_id": 447,
-          "score": 66.5
-        },
-        {
-          "rank": 5,
-          "run_id": 455,
-          "score": 66.5
-        }
-      ],
       "persistence_score": 66.7,
       "previous_rank": 5,
       "rank": 5,
@@ -7251,48 +7064,6 @@
       "canonical_name": "Social Media",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 8,
-          "run_id": 438,
-          "score": 62.04273912116924
-        },
-        {
-          "rank": 8,
-          "run_id": 439,
-          "score": 62.04273912116924
-        },
-        {
-          "rank": 8,
-          "run_id": 440,
-          "score": 62.04273912116924
-        },
-        {
-          "rank": 6,
-          "run_id": 442,
-          "score": 67.39669442258315
-        },
-        {
-          "rank": 6,
-          "run_id": 443,
-          "score": 67.39669442258315
-        },
-        {
-          "rank": 6,
-          "run_id": 446,
-          "score": 63.961876067116194
-        },
-        {
-          "rank": 6,
-          "run_id": 447,
-          "score": 63.96187641706164
-        },
-        {
-          "rank": 6,
-          "run_id": 455,
-          "score": 62.81310893054173
-        }
-      ],
       "persistence_score": 70,
       "previous_rank": 6,
       "rank": 6,
@@ -7306,48 +7077,6 @@
       "canonical_name": "Learning Approach",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 7,
-          "run_id": 438,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 439,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 440,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 442,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 443,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 446,
-          "score": 63.6
-        },
-        {
-          "rank": 7,
-          "run_id": 447,
-          "score": 62.5
-        },
-        {
-          "rank": 7,
-          "run_id": 455,
-          "score": 62.5
-        }
-      ],
       "persistence_score": 42.9,
       "previous_rank": 7,
       "rank": 7,
@@ -7361,48 +7090,6 @@
       "canonical_name": "Supply Chain",
       "direction": "UP",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 34,
-          "run_id": 438,
-          "score": 43.63707454805182
-        },
-        {
-          "rank": 34,
-          "run_id": 439,
-          "score": 43.63707454805182
-        },
-        {
-          "rank": 34,
-          "run_id": 440,
-          "score": 43.63707454805182
-        },
-        {
-          "rank": 24,
-          "run_id": 442,
-          "score": 46.34018765425701
-        },
-        {
-          "rank": 24,
-          "run_id": 443,
-          "score": 46.34018765425701
-        },
-        {
-          "rank": 23,
-          "run_id": 446,
-          "score": 46.34018765425701
-        },
-        {
-          "rank": 20,
-          "run_id": 447,
-          "score": 46.34018765425701
-        },
-        {
-          "rank": 8,
-          "run_id": 455,
-          "score": 57.885819258448535
-        }
-      ],
       "persistence_score": 50,
       "previous_rank": 20,
       "rank": 8,
@@ -7416,48 +7103,6 @@
       "canonical_name": "Deep Learning",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 12,
-          "run_id": 438,
-          "score": 53.09840264754663
-        },
-        {
-          "rank": 12,
-          "run_id": 439,
-          "score": 53.09840264754663
-        },
-        {
-          "rank": 12,
-          "run_id": 440,
-          "score": 53.09840264754663
-        },
-        {
-          "rank": 12,
-          "run_id": 442,
-          "score": 53.26834102882534
-        },
-        {
-          "rank": 12,
-          "run_id": 443,
-          "score": 53.26834102882534
-        },
-        {
-          "rank": 9,
-          "run_id": 446,
-          "score": 53.26834102882534
-        },
-        {
-          "rank": 9,
-          "run_id": 447,
-          "score": 53.26835465695092
-        },
-        {
-          "rank": 9,
-          "run_id": 455,
-          "score": 56.209530302489426
-        }
-      ],
       "persistence_score": 80,
       "previous_rank": 9,
       "rank": 9,
@@ -7471,48 +7116,6 @@
       "canonical_name": "Learning Framework",
       "direction": "UP",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 32,
-          "run_id": 438,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 32,
-          "run_id": 439,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 32,
-          "run_id": 440,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 33,
-          "run_id": 442,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 33,
-          "run_id": 443,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 31,
-          "run_id": 446,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 29,
-          "run_id": 447,
-          "score": 43.96250489342991
-        },
-        {
-          "rank": 10,
-          "run_id": 455,
-          "score": 54.748573760760024
-        }
-      ],
       "persistence_score": 50,
       "previous_rank": 29,
       "rank": 10,
@@ -7526,48 +7129,6 @@
       "canonical_name": "Monte Carlo",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 9,
-          "run_id": 438,
-          "score": 54.6
-        },
-        {
-          "rank": 9,
-          "run_id": 439,
-          "score": 54.6
-        },
-        {
-          "rank": 9,
-          "run_id": 440,
-          "score": 54.6
-        },
-        {
-          "rank": 8,
-          "run_id": 442,
-          "score": 54.6
-        },
-        {
-          "rank": 8,
-          "run_id": 443,
-          "score": 54.6
-        },
-        {
-          "rank": 8,
-          "run_id": 446,
-          "score": 54.6
-        },
-        {
-          "rank": 10,
-          "run_id": 447,
-          "score": 53.1
-        },
-        {
-          "rank": 11,
-          "run_id": 455,
-          "score": 53.1
-        }
-      ],
       "persistence_score": 40,
       "previous_rank": 10,
       "rank": 11,
@@ -7581,48 +7142,6 @@
       "canonical_name": "Climate Change",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 10,
-          "run_id": 438,
-          "score": 54.42006017031728
-        },
-        {
-          "rank": 10,
-          "run_id": 439,
-          "score": 54.42006017031728
-        },
-        {
-          "rank": 10,
-          "run_id": 440,
-          "score": 54.42006017031728
-        },
-        {
-          "rank": 10,
-          "run_id": 442,
-          "score": 54.42006017031728
-        },
-        {
-          "rank": 10,
-          "run_id": 443,
-          "score": 54.42006017031728
-        },
-        {
-          "rank": 16,
-          "run_id": 446,
-          "score": 47.8187969365644
-        },
-        {
-          "rank": 8,
-          "run_id": 447,
-          "score": 53.4441746319207
-        },
-        {
-          "rank": 12,
-          "run_id": 455,
-          "score": 51.28941493660511
-        }
-      ],
       "persistence_score": 40,
       "previous_rank": 8,
       "rank": 12,
@@ -7636,48 +7155,6 @@
       "canonical_name": "Optimal Control",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 13,
-          "run_id": 438,
-          "score": 52.5
-        },
-        {
-          "rank": 13,
-          "run_id": 439,
-          "score": 52.5
-        },
-        {
-          "rank": 13,
-          "run_id": 440,
-          "score": 52.5
-        },
-        {
-          "rank": 13,
-          "run_id": 442,
-          "score": 52.5
-        },
-        {
-          "rank": 13,
-          "run_id": 443,
-          "score": 52.5
-        },
-        {
-          "rank": 11,
-          "run_id": 446,
-          "score": 52.5
-        },
-        {
-          "rank": 12,
-          "run_id": 447,
-          "score": 51.1
-        },
-        {
-          "rank": 13,
-          "run_id": 455,
-          "score": 51.1
-        }
-      ],
       "persistence_score": 57.1,
       "previous_rank": 12,
       "rank": 13,
@@ -7691,48 +7168,6 @@
       "canonical_name": "Mental Health",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 3,
-          "run_id": 438,
-          "score": 74.4
-        },
-        {
-          "rank": 3,
-          "run_id": 439,
-          "score": 74.4
-        },
-        {
-          "rank": 3,
-          "run_id": 440,
-          "score": 74.4
-        },
-        {
-          "rank": 9,
-          "run_id": 442,
-          "score": 54.500828461065765
-        },
-        {
-          "rank": 9,
-          "run_id": 443,
-          "score": 54.500828461065765
-        },
-        {
-          "rank": 10,
-          "run_id": 446,
-          "score": 52.62763796391986
-        },
-        {
-          "rank": 11,
-          "run_id": 447,
-          "score": 52.62763811518114
-        },
-        {
-          "rank": 14,
-          "run_id": 455,
-          "score": 50.995356741942224
-        }
-      ],
       "persistence_score": 50,
       "previous_rank": 11,
       "rank": 14,
@@ -7746,48 +7181,6 @@
       "canonical_name": "Power System",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 14,
-          "run_id": 438,
-          "score": 51.6
-        },
-        {
-          "rank": 14,
-          "run_id": 439,
-          "score": 51.6
-        },
-        {
-          "rank": 14,
-          "run_id": 440,
-          "score": 51.6
-        },
-        {
-          "rank": 14,
-          "run_id": 442,
-          "score": 51.6
-        },
-        {
-          "rank": 14,
-          "run_id": 443,
-          "score": 51.6
-        },
-        {
-          "rank": 12,
-          "run_id": 446,
-          "score": 51.6
-        },
-        {
-          "rank": 13,
-          "run_id": 447,
-          "score": 50.3
-        },
-        {
-          "rank": 15,
-          "run_id": 455,
-          "score": 50.3
-        }
-      ],
       "persistence_score": 25,
       "previous_rank": 13,
       "rank": 15,
@@ -7801,48 +7194,6 @@
       "canonical_name": "Systematic Review",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 15,
-          "run_id": 438,
-          "score": 51
-        },
-        {
-          "rank": 15,
-          "run_id": 439,
-          "score": 51
-        },
-        {
-          "rank": 15,
-          "run_id": 440,
-          "score": 51
-        },
-        {
-          "rank": 15,
-          "run_id": 442,
-          "score": 51
-        },
-        {
-          "rank": 15,
-          "run_id": 443,
-          "score": 51
-        },
-        {
-          "rank": 13,
-          "run_id": 446,
-          "score": 51
-        },
-        {
-          "rank": 14,
-          "run_id": 447,
-          "score": 50
-        },
-        {
-          "rank": 16,
-          "run_id": 455,
-          "score": 50
-        }
-      ],
       "persistence_score": 33.3,
       "previous_rank": 14,
       "rank": 16,
@@ -7856,48 +7207,6 @@
       "canonical_name": "Learning Model",
       "direction": "FLAT",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 22,
-          "run_id": 438,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 22,
-          "run_id": 439,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 22,
-          "run_id": 440,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 22,
-          "run_id": 442,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 22,
-          "run_id": 443,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 20,
-          "run_id": 446,
-          "score": 47.07939133994114
-        },
-        {
-          "rank": 17,
-          "run_id": 447,
-          "score": 49.032488361593245
-        },
-        {
-          "rank": 17,
-          "run_id": 455,
-          "score": 49.6330599117404
-        }
-      ],
       "persistence_score": 80,
       "previous_rank": 17,
       "rank": 17,
@@ -7911,48 +7220,6 @@
       "canonical_name": "Risk Assessment",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 16,
-          "run_id": 438,
-          "score": 50.5
-        },
-        {
-          "rank": 16,
-          "run_id": 439,
-          "score": 50.5
-        },
-        {
-          "rank": 16,
-          "run_id": 440,
-          "score": 50.5
-        },
-        {
-          "rank": 16,
-          "run_id": 442,
-          "score": 50.5
-        },
-        {
-          "rank": 16,
-          "run_id": 443,
-          "score": 50.5
-        },
-        {
-          "rank": 14,
-          "run_id": 446,
-          "score": 50.5
-        },
-        {
-          "rank": 15,
-          "run_id": 447,
-          "score": 49.5
-        },
-        {
-          "rank": 18,
-          "run_id": 455,
-          "score": 49.5
-        }
-      ],
       "persistence_score": 33.3,
       "previous_rank": 15,
       "rank": 18,
@@ -7966,48 +7233,6 @@
       "canonical_name": "Power Plant",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 19,
-          "run_id": 438,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 19,
-          "run_id": 439,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 19,
-          "run_id": 440,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 19,
-          "run_id": 442,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 19,
-          "run_id": 443,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 15,
-          "run_id": 446,
-          "score": 49.31548965930051
-        },
-        {
-          "rank": 16,
-          "run_id": 447,
-          "score": 49.31686599310484
-        },
-        {
-          "rank": 19,
-          "run_id": 455,
-          "score": 49.31686599310484
-        }
-      ],
       "persistence_score": 20,
       "previous_rank": 16,
       "rank": 19,
@@ -8021,48 +7246,6 @@
       "canonical_name": "Performance Evaluation",
       "direction": "DOWN",
       "gate_status": "WATCH",
-      "history": [
-        {
-          "rank": 23,
-          "run_id": 438,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 23,
-          "run_id": 439,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 23,
-          "run_id": 440,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 23,
-          "run_id": 442,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 23,
-          "run_id": 443,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 21,
-          "run_id": 446,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 18,
-          "run_id": 447,
-          "score": 46.702777713785956
-        },
-        {
-          "rank": 20,
-          "run_id": 455,
-          "score": 47.40774305853911
-        }
-      ],
       "persistence_score": 50,
       "previous_rank": 18,
       "rank": 20,
@@ -11488,21 +10671,15 @@
     }
   ],
   "validation": {
-    "factor_promotion_gate": {
-      "min_median_alpha_6m": 0,
-      "min_sample": 100,
-      "min_trimmed_alpha_90pct": 0,
-      "min_win_rate_vs_qqq": 55
-    },
     "feature_store_rows": 1481,
     "live_orders": false,
     "mode": "V5_VALIDATION",
     "pit_fundamentals": {
       "sec_requests": {
         "COMPLETED": 16,
-        "FAILED": 338,
-        "PENDING": 5,
-        "TOTAL": 359
+        "FAILED": 345,
+        "PENDING": 13,
+        "TOTAL": 374
       },
       "valid_snapshots": 119,
       "valid_tickers": 4
@@ -11535,7 +10712,6 @@
           "id": 609,
           "identity_verified": true,
           "issuer_name": "Broadcom Inc.",
-          "link_basis": "DIRECT_OR_THEME",
           "run_id": 455,
           "sec_documents": 2,
           "source_families": 19,
@@ -11565,7 +10741,6 @@
           "id": 610,
           "identity_verified": true,
           "issuer_name": "ADVANCED MICRO DEVICES INC",
-          "link_basis": "DIRECT_OR_THEME",
           "run_id": 455,
           "sec_documents": 2,
           "source_families": 6,
@@ -11595,7 +10770,6 @@
           "id": 613,
           "identity_verified": true,
           "issuer_name": "Vertiv Holdings Co",
-          "link_basis": "DIRECT_OR_THEME",
           "run_id": 455,
           "sec_documents": 1,
           "source_families": 5,
@@ -11625,7 +10799,6 @@
           "id": 611,
           "identity_verified": true,
           "issuer_name": "APPLIED MATERIALS INC /DE",
-          "link_basis": "DIRECT_OR_THEME",
           "run_id": 455,
           "sec_documents": 1,
           "source_families": 2,
@@ -11655,7 +10828,6 @@
           "id": 612,
           "identity_verified": true,
           "issuer_name": "LAM RESEARCH CORP",
-          "link_basis": "DIRECT_OR_THEME",
           "run_id": 455,
           "sec_documents": 1,
           "source_families": 1,
@@ -11663,384 +10835,7 @@
           "ticker": "LRCX"
         }
       ],
-      "early_birds": [
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Data Center Power & Thermal Infrastructure",
-          "company_name": "AAON, INC.",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 97.8,
-          "early_role": "AI_DATACENTER_COOLING",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": true,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 10,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 3,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 100,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 97.8,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 96,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "AAON"
-        },
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Data Center Power Infrastructure",
-          "company_name": "Eaton Corporation, PLC Ordinary Shares",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 93.4,
-          "early_role": "DATACENTER_POWER_EQUIPMENT",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": true,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 9,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 89,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 93.4,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 94,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "ETN"
-        },
-        {
-          "attention_penalty": 4,
-          "causal_theme": "Advanced Packaging & HBM Infrastructure",
-          "company_name": "APPLIED MATERIALS INC /DE",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.6,
-          "early_role": "ADVANCED_PACKAGING_EQUIPMENT",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": true,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 10,
-            "external_docs": 1,
-            "external_domains": 1,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 92,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.6,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 92,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "AMAT"
-        },
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Advanced Packaging & HBM Infrastructure",
-          "company_name": "TERADYNE, INC",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.5,
-          "early_role": "HBM_AI_TEST_EQUIPMENT",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": true,
-              "capacity": true,
-              "orders": false
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 8,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 86,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.5,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 94,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "TER"
-        },
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Data Center Power Supply",
-          "company_name": "Constellation Energy Corp",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.3,
-          "early_role": "DATACENTER_POWER_GENERATION",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": false,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 6,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 2,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 89,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.3,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 92,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "CEG"
-        },
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Advanced Packaging & HBM Infrastructure",
-          "company_name": "LAM RESEARCH CORP",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.3,
-          "early_role": "ADVANCED_PACKAGING_EQUIPMENT",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": false,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 9,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 89,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.3,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 92,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "LRCX"
-        },
-        {
-          "attention_penalty": 0,
-          "causal_theme": "Data Center Networking / Optical",
-          "company_name": "APPLIED OPTOELECTRONICS, INC.",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.15,
-          "early_role": "AI_DATACENTER_OPTICAL_NETWORKING",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": false,
-              "capacity": true,
-              "orders": false
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 7,
-            "external_docs": 0,
-            "external_domains": 0,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 83,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.15,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 95,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "AAOI"
-        },
-        {
-          "attention_penalty": 16,
-          "causal_theme": "Data Center Power & Thermal Infrastructure",
-          "company_name": "Vertiv Holdings, LLC Class A Common Stock",
-          "created_at": "2026-09-08T01:19:00.245533+00:00",
-          "drawdown_from_1y_high_pct": null,
-          "early_bird_score": 92.1,
-          "early_role": "AI_DATACENTER_COOLING",
-          "evidence": {
-            "ai_keyword_required": false,
-            "direct_demand_proxies": {
-              "backlog": true,
-              "capacity": true,
-              "orders": true
-            },
-            "drawdown_from_1y_high_pct": null,
-            "evidence_keys": 9,
-            "external_docs": 4,
-            "external_domains": 4,
-            "latest_price": null,
-            "market_and_size_known_by_cutoff": false,
-            "market_cap_estimate": null,
-            "market_cap_not_yet_used": true,
-            "rerating_penalty": null,
-            "return_1y_pct": null,
-            "return_6m_pct": null,
-            "role_precision": "V3_CAUSAL_BUSINESS_ROLE",
-            "sec_docs": 1,
-            "size_penalty": null,
-            "too_late_gate": "EARLY_BIRD_MARKET_SIZE_GATE_V2_PIT"
-          },
-          "evidence_score": 89,
-          "latest_price": null,
-          "link_basis": "EARLY_THEME",
-          "market_cap_estimate": null,
-          "market_cap_gate": "SIZE_DATA_PENDING",
-          "market_data_quality": 0,
-          "pre_market_score": 92.1,
-          "rerating_penalty": null,
-          "return_1y_pct": null,
-          "return_6m_pct": null,
-          "role_specificity_score": 96,
-          "run_id": 455,
-          "size_penalty": null,
-          "status": "MARKET_DATA_PENDING",
-          "ticker": "VRT"
-        }
-      ],
+      "early_birds": [],
       "leaders": [
         {
           "company_name": "NVIDIA CORP",
@@ -12516,48 +11311,6 @@
         "canonical_name": "Artificial Intelligence",
         "direction": "FLAT",
         "gate_status": "CONFIRMED",
-        "history": [
-          {
-            "rank": 1,
-            "run_id": 438,
-            "score": 85.29196299195917
-          },
-          {
-            "rank": 1,
-            "run_id": 439,
-            "score": 85.29196299195917
-          },
-          {
-            "rank": 1,
-            "run_id": 440,
-            "score": 85.29196299195917
-          },
-          {
-            "rank": 1,
-            "run_id": 442,
-            "score": 85.54551916871597
-          },
-          {
-            "rank": 1,
-            "run_id": 443,
-            "score": 85.54551916871597
-          },
-          {
-            "rank": 1,
-            "run_id": 446,
-            "score": 85.34414504456882
-          },
-          {
-            "rank": 1,
-            "run_id": 447,
-            "score": 85.34414533700124
-          },
-          {
-            "rank": 1,
-            "run_id": 455,
-            "score": 89.0990022044435
-          }
-        ],
         "persistence_score": 100,
         "previous_rank": 1,
         "rank": 1,
@@ -12580,48 +11333,6 @@
         "canonical_name": "Machine Learning",
         "direction": "FLAT",
         "gate_status": "CONFIRMED",
-        "history": [
-          {
-            "rank": 2,
-            "run_id": 438,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 439,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 440,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 442,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 443,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 446,
-            "score": 80.12915661411198
-          },
-          {
-            "rank": 2,
-            "run_id": 447,
-            "score": 80.30646108740996
-          },
-          {
-            "rank": 2,
-            "run_id": 455,
-            "score": 80.09114458395253
-          }
-        ],
         "persistence_score": 100,
         "previous_rank": 2,
         "rank": 2,
@@ -12637,55 +11348,41 @@
       "company_gate_reason": "NO_CAUSAL_BOTTLENECK_OR_PICKS_SHOVELS",
       "early_birds": [],
       "leaders": [],
-      "maturity": "NOT_ANALYZED",
-      "nodes": [],
+      "maturity": "ANALYZED_UNPROVEN",
+      "nodes": [
+        {
+          "causal_confidence": 44,
+          "created_at": "2026-09-08T11:11:21.694101+00:00",
+          "demand_acceleration_score": 25,
+          "evidence_documents": 1,
+          "evidence_quality": 81,
+          "evidence_summary": {
+            "causality_proven": false,
+            "coverage_only": true,
+            "evidence_document_ids": [
+              "0af5cf1b-383f-4b27-b28c-a1c459148963"
+            ],
+            "investable_proven": false,
+            "method": "CAUSAL_COVERAGE_V2_BUILDER",
+            "requires_economic_gate": true
+          },
+          "id": 1513,
+          "node_name": "Quantum Processors",
+          "node_type": "TECHNOLOGY",
+          "pricing_power_score": null,
+          "relationship": "ASSOCIATED_WITH",
+          "run_id": 455,
+          "source_families": 0,
+          "status": "VALIDATION_REQUIRED",
+          "supply_rigidity_score": null,
+          "trend_id": 14781
+        }
+      ],
       "trend": {
         "acceleration_score": 25,
         "canonical_name": "Neural Network",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 4,
-            "run_id": 438,
-            "score": 71.7
-          },
-          {
-            "rank": 4,
-            "run_id": 439,
-            "score": 71.7
-          },
-          {
-            "rank": 4,
-            "run_id": 440,
-            "score": 71.7
-          },
-          {
-            "rank": 3,
-            "run_id": 442,
-            "score": 71.7
-          },
-          {
-            "rank": 3,
-            "run_id": 443,
-            "score": 71.7
-          },
-          {
-            "rank": 3,
-            "run_id": 446,
-            "score": 71.7
-          },
-          {
-            "rank": 3,
-            "run_id": 447,
-            "score": 69.7
-          },
-          {
-            "rank": 3,
-            "run_id": 455,
-            "score": 69.7
-          }
-        ],
         "persistence_score": 66.7,
         "previous_rank": 3,
         "rank": 3,
@@ -12708,48 +11405,6 @@
         "canonical_name": "Reinforcement Learning",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 6,
-            "run_id": 438,
-            "score": 68.2
-          },
-          {
-            "rank": 6,
-            "run_id": 439,
-            "score": 68.2
-          },
-          {
-            "rank": 6,
-            "run_id": 440,
-            "score": 68.2
-          },
-          {
-            "rank": 5,
-            "run_id": 442,
-            "score": 68.2
-          },
-          {
-            "rank": 5,
-            "run_id": 443,
-            "score": 68.2
-          },
-          {
-            "rank": 5,
-            "run_id": 446,
-            "score": 68.2
-          },
-          {
-            "rank": 4,
-            "run_id": 447,
-            "score": 66.7
-          },
-          {
-            "rank": 4,
-            "run_id": 455,
-            "score": 66.7
-          }
-        ],
         "persistence_score": 50,
         "previous_rank": 4,
         "rank": 4,
@@ -12772,48 +11427,6 @@
         "canonical_name": "Language Model",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 5,
-            "run_id": 438,
-            "score": 68.5
-          },
-          {
-            "rank": 5,
-            "run_id": 439,
-            "score": 68.5
-          },
-          {
-            "rank": 5,
-            "run_id": 440,
-            "score": 68.5
-          },
-          {
-            "rank": 4,
-            "run_id": 442,
-            "score": 68.5
-          },
-          {
-            "rank": 4,
-            "run_id": 443,
-            "score": 68.5
-          },
-          {
-            "rank": 4,
-            "run_id": 446,
-            "score": 68.5
-          },
-          {
-            "rank": 5,
-            "run_id": 447,
-            "score": 66.5
-          },
-          {
-            "rank": 5,
-            "run_id": 455,
-            "score": 66.5
-          }
-        ],
         "persistence_score": 66.7,
         "previous_rank": 5,
         "rank": 5,
@@ -12829,55 +11442,41 @@
       "company_gate_reason": "NO_CAUSAL_BOTTLENECK_OR_PICKS_SHOVELS",
       "early_birds": [],
       "leaders": [],
-      "maturity": "NOT_ANALYZED",
-      "nodes": [],
+      "maturity": "ANALYZED_UNPROVEN",
+      "nodes": [
+        {
+          "causal_confidence": 44,
+          "created_at": "2026-09-08T06:33:19.540794+00:00",
+          "demand_acceleration_score": 98.34997983467491,
+          "evidence_documents": 1,
+          "evidence_quality": 81,
+          "evidence_summary": {
+            "causality_proven": false,
+            "coverage_only": true,
+            "evidence_document_ids": [
+              "3023f5ac-bd2f-4a0a-ab9b-f377f193c68d"
+            ],
+            "investable_proven": false,
+            "method": "CAUSAL_COVERAGE_V2_BUILDER",
+            "requires_economic_gate": true
+          },
+          "id": 1508,
+          "node_name": "Copper",
+          "node_type": "PICKS_SHOVELS_CANDIDATE",
+          "pricing_power_score": null,
+          "relationship": "ENABLES",
+          "run_id": 455,
+          "source_families": 0,
+          "status": "VALIDATION_REQUIRED",
+          "supply_rigidity_score": null,
+          "trend_id": 14797
+        }
+      ],
       "trend": {
         "acceleration_score": 98.34997983467491,
         "canonical_name": "Social Media",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 8,
-            "run_id": 438,
-            "score": 62.04273912116924
-          },
-          {
-            "rank": 8,
-            "run_id": 439,
-            "score": 62.04273912116924
-          },
-          {
-            "rank": 8,
-            "run_id": 440,
-            "score": 62.04273912116924
-          },
-          {
-            "rank": 6,
-            "run_id": 442,
-            "score": 67.39669442258315
-          },
-          {
-            "rank": 6,
-            "run_id": 443,
-            "score": 67.39669442258315
-          },
-          {
-            "rank": 6,
-            "run_id": 446,
-            "score": 63.961876067116194
-          },
-          {
-            "rank": 6,
-            "run_id": 447,
-            "score": 63.96187641706164
-          },
-          {
-            "rank": 6,
-            "run_id": 455,
-            "score": 62.81310893054173
-          }
-        ],
         "persistence_score": 70,
         "previous_rank": 6,
         "rank": 6,
@@ -12893,55 +11492,42 @@
       "company_gate_reason": "NO_CAUSAL_BOTTLENECK_OR_PICKS_SHOVELS",
       "early_birds": [],
       "leaders": [],
-      "maturity": "NOT_ANALYZED",
-      "nodes": [],
+      "maturity": "ANALYZED_UNPROVEN",
+      "nodes": [
+        {
+          "causal_confidence": 48,
+          "created_at": "2026-09-08T06:33:21.293299+00:00",
+          "demand_acceleration_score": 25,
+          "evidence_documents": 2,
+          "evidence_quality": 81,
+          "evidence_summary": {
+            "causality_proven": false,
+            "coverage_only": true,
+            "evidence_document_ids": [
+              "4fb0bbfd-2d65-4bc3-84b0-303f923e38cd",
+              "3023f5ac-bd2f-4a0a-ab9b-f377f193c68d"
+            ],
+            "investable_proven": false,
+            "method": "CAUSAL_COVERAGE_V2_BUILDER",
+            "requires_economic_gate": true
+          },
+          "id": 1509,
+          "node_name": "Copper",
+          "node_type": "PICKS_SHOVELS_CANDIDATE",
+          "pricing_power_score": null,
+          "relationship": "ENABLES",
+          "run_id": 455,
+          "source_families": 0,
+          "status": "VALIDATION_REQUIRED",
+          "supply_rigidity_score": null,
+          "trend_id": 14768
+        }
+      ],
       "trend": {
         "acceleration_score": 25,
         "canonical_name": "Learning Approach",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 7,
-            "run_id": 438,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 439,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 440,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 442,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 443,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 446,
-            "score": 63.6
-          },
-          {
-            "rank": 7,
-            "run_id": 447,
-            "score": 62.5
-          },
-          {
-            "rank": 7,
-            "run_id": 455,
-            "score": 62.5
-          }
-        ],
         "persistence_score": 42.9,
         "previous_rank": 7,
         "rank": 7,
@@ -12964,48 +11550,6 @@
         "canonical_name": "Supply Chain",
         "direction": "UP",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 34,
-            "run_id": 438,
-            "score": 43.63707454805182
-          },
-          {
-            "rank": 34,
-            "run_id": 439,
-            "score": 43.63707454805182
-          },
-          {
-            "rank": 34,
-            "run_id": 440,
-            "score": 43.63707454805182
-          },
-          {
-            "rank": 24,
-            "run_id": 442,
-            "score": 46.34018765425701
-          },
-          {
-            "rank": 24,
-            "run_id": 443,
-            "score": 46.34018765425701
-          },
-          {
-            "rank": 23,
-            "run_id": 446,
-            "score": 46.34018765425701
-          },
-          {
-            "rank": 20,
-            "run_id": 447,
-            "score": 46.34018765425701
-          },
-          {
-            "rank": 8,
-            "run_id": 455,
-            "score": 57.885819258448535
-          }
-        ],
         "persistence_score": 50,
         "previous_rank": 20,
         "rank": 8,
@@ -13028,48 +11572,6 @@
         "canonical_name": "Deep Learning",
         "direction": "FLAT",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 12,
-            "run_id": 438,
-            "score": 53.09840264754663
-          },
-          {
-            "rank": 12,
-            "run_id": 439,
-            "score": 53.09840264754663
-          },
-          {
-            "rank": 12,
-            "run_id": 440,
-            "score": 53.09840264754663
-          },
-          {
-            "rank": 12,
-            "run_id": 442,
-            "score": 53.26834102882534
-          },
-          {
-            "rank": 12,
-            "run_id": 443,
-            "score": 53.26834102882534
-          },
-          {
-            "rank": 9,
-            "run_id": 446,
-            "score": 53.26834102882534
-          },
-          {
-            "rank": 9,
-            "run_id": 447,
-            "score": 53.26835465695092
-          },
-          {
-            "rank": 9,
-            "run_id": 455,
-            "score": 56.209530302489426
-          }
-        ],
         "persistence_score": 80,
         "previous_rank": 9,
         "rank": 9,
@@ -13092,48 +11594,6 @@
         "canonical_name": "Learning Framework",
         "direction": "UP",
         "gate_status": "WATCH",
-        "history": [
-          {
-            "rank": 32,
-            "run_id": 438,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 32,
-            "run_id": 439,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 32,
-            "run_id": 440,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 33,
-            "run_id": 442,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 33,
-            "run_id": 443,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 31,
-            "run_id": 446,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 29,
-            "run_id": 447,
-            "score": 43.96250489342991
-          },
-          {
-            "rank": 10,
-            "run_id": 455,
-            "score": 54.748573760760024
-          }
-        ],
         "persistence_score": 50,
         "previous_rank": 29,
         "rank": 10,
