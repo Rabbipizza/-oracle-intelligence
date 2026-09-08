@@ -49,7 +49,7 @@ def run(db_url: str) -> dict:
               (experiment_id,external_run_id,signal_available_at,evaluation_as_of,metadata)
             values
               (:experiment_id,:external_run_id,:signal_available_at,clock_timestamp(),
-               jsonb_build_object('model_version',:model_version,'source','github_actions'))
+               jsonb_build_object('model_version',cast(:model_version as text),'source','github_actions'))
             on conflict (external_run_id) do update
               set external_run_id=excluded.external_run_id
             returning id,experiment_id,external_run_id,signal_available_at,evaluation_as_of
