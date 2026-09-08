@@ -15,7 +15,7 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,14 +28,24 @@ jobs:
           ORACLE_V5_API: https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-investor-build
         run: python analytics/update_live_snapshot.py
       - name: Commit snapshot when changed
+        env:
+          ORACLE_V5_API: https://ayjqeuljbznanmscpzlv.supabase.co/functions/v1/oracle-v5-investor-build
         run: |
           git config user.name "oracle-v5-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/v5_live_fallback.json
-          if git diff --cached --quiet; then
-            echo "No snapshot change"
-            exit 0
+          publish() {
+            git add data/v5_live_fallback.json
+            if git diff --cached --quiet; then
+              echo "No snapshot change"
+              return 0
+            fi
+            git commit -m "Refresh ORACLE V5 precomputed investor snapshot"
+            git push origin main
+          }
+          if ! publish; then
+            echo "Remote changed while snapshot was building; regenerate from latest main"
+            git fetch origin main
+            git reset --hard origin/main
+            python analytics/update_live_snapshot.py
+            publish
           fi
-          git commit -m "Refresh ORACLE V5 precomputed investor snapshot"
-          git pull --rebase origin main
-          git push origin main
