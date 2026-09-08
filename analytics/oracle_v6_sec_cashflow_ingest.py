@@ -57,8 +57,6 @@ def _parse_date(value: str | None) -> date | None:
 
 
 def _availability_from_filed(filed: date) -> datetime:
-    # Companyfacts lacks filing acceptance time. Next-day midnight UTC is a
-    # transparent conservative approximation and is tagged as estimated.
     return datetime.combine(filed + timedelta(days=1), dtime.min, tzinfo=timezone.utc)
 
 
@@ -84,8 +82,6 @@ def _iter_fact_rows(ticker: str, cik: str, payload: dict[str, Any]):
         if not node:
             continue
         units = node.get("units", {})
-        # Cash-flow statement values should be USD. We intentionally do not
-        # convert other units or infer missing currencies.
         for item in units.get("USD", []):
             filed = _parse_date(item.get("filed"))
             end = _parse_date(item.get("end"))
@@ -158,8 +154,7 @@ def _materialize_annual_fcf(conn, tickers: list[str]) -> int:
                ) source_accessions
         from picked c
         join picked x on x.ticker=c.ticker and x.period_end=c.period_end
-        where c.kind='CFO' and x.kind='CAPEX'
-          and x.value>=0
+        where c.kind='CFO' and x.kind='CAPEX' and x.value>=0
         order by c.ticker,c.period_end
     """), {"tickers": tickers, "cfo_tags": list(CFO_TAGS), "capex_tags": list(CAPEX_TAGS)}).mappings().all()
 
@@ -167,17 +162,23 @@ def _materialize_annual_fcf(conn, tickers: list[str]) -> int:
         "model": MODEL_VERSION, "tickers": tickers,
     })
     if rows:
+        payload = []
+        for r in rows:
+            d = dict(r)
+            d["source_accessions"] = json.dumps(d["source_accessions"], default=str, sort_keys=True)
+            d["model_version"] = MODEL_VERSION
+            payload.append(d)
         conn.execute(text("""
             insert into public.oracle_v6_fcf_snapshots
               (ticker,as_of,fiscal_period_end,operating_cash_flow,capex,free_cash_flow,
                source_accessions,source_quality,model_version,metadata)
             values
               (:ticker,:as_of,:period_end,:operating_cash_flow,:capex,:free_cash_flow,
-               :source_accessions,'SEC_COMPANYFACTS_PIT_CONSERVATIVE',:model_version,
+               cast(:source_accessions as jsonb),'SEC_COMPANYFACTS_PIT_CONSERVATIVE',:model_version,
                jsonb_build_object('fcf_definition','operating_cash_flow_minus_capex',
                                   'annual_period_required',true,
                                   'availability_quality','ESTIMATED_CONSERVATIVE_FROM_FILED_DATE'))
-        """), [dict(r, model_version=MODEL_VERSION) for r in rows])
+        """), payload)
     return len(rows)
 
 
@@ -218,13 +219,13 @@ def run(db_url: str) -> dict[str, Any]:
                     """), facts)
                     inserted_facts += max(result.rowcount or 0, 0)
             fetched += 1
-        except Exception as exc:  # keep one issuer failure from destroying the whole family
+        except Exception as exc:
             failed.append({"ticker": ticker, "error": type(exc).__name__})
         time.sleep(0.12)
 
     tickers = [str(t["ticker"]) for t in targets]
     with engine.begin() as conn:
-        fcf_rows = _materialize_annual_fcf(conn, tickers)
+        _materialize_annual_fcf(conn, tickers)
         coverage = conn.execute(text("""
             select count(distinct ticker) tickers,
                    count(*) snapshots,
