@@ -40,13 +40,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Require reference database secret
+      - name: Validate reference database secret
         shell: bash
         run: |
           test -n "$SUPABASE_DB_URL" || {
             echo "Missing required secret ORACLE_SUPABASE_DB_URL" >&2
             exit 1
           }
+          case "$SUPABASE_DB_URL" in
+            postgres://*|postgresql://*) ;;
+            *)
+              echo "ORACLE_SUPABASE_DB_URL must be a full postgres:// or postgresql:// connection URI" >&2
+              exit 1
+              ;;
+          esac
 
       - name: Apply repository V6 schema to clean PostgreSQL
         run: psql -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d oracle_ci -f sql/oracle_v6_scientific_schema.sql
@@ -54,14 +61,16 @@ jobs:
       - name: Compute local schema fingerprint
         shell: bash
         run: |
-          LOCAL_FP=$(psql -At -h 127.0.0.1 -U postgres -d oracle_ci -f sql/oracle_v6_schema_contract.sql)
+          LOCAL_FP=$(psql -v ON_ERROR_STOP=1 -At -h 127.0.0.1 -U postgres -d oracle_ci -f sql/oracle_v6_schema_contract.sql)
+          test -n "$LOCAL_FP"
           echo "LOCAL_FP=$LOCAL_FP" >> "$GITHUB_ENV"
           echo "Local V6 fingerprint: $LOCAL_FP"
 
       - name: Compute Supabase production schema fingerprint
         shell: bash
         run: |
-          REMOTE_FP=$(psql -At "$SUPABASE_DB_URL" -f sql/oracle_v6_schema_contract.sql)
+          REMOTE_FP=$(psql -v ON_ERROR_STOP=1 -At --dbname="$SUPABASE_DB_URL" -f sql/oracle_v6_schema_contract.sql)
+          test -n "$REMOTE_FP"
           echo "REMOTE_FP=$REMOTE_FP" >> "$GITHUB_ENV"
           echo "Remote V6 fingerprint: $REMOTE_FP"
 
@@ -76,9 +85,10 @@ jobs:
           fi
           echo "ORACLE V6 schema drift: zero"
 
-      - name: Supabase CLI diagnostic diff
+      - name: Install Supabase CLI
         uses: supabase/setup-cli@v1
         with:
           version: latest
+
       - name: Record CLI availability
         run: supabase --version
