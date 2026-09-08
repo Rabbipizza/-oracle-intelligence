@@ -4952,10 +4952,10 @@
     {
       "avg_alpha_6m": 2.39,
       "criteria": {
-        "median_alpha_gt_0": true,
+        "median_alpha_gt": 0,
         "min_sample": 100,
-        "trimmed_alpha_gt_0": true,
-        "win_rate_gt_55": true
+        "trimmed_alpha_gt": 0,
+        "win_rate_gt": 55
       },
       "factor_name": "ATTENTION_ABS",
       "median_alpha_6m": -0.99,
@@ -4972,10 +4972,10 @@
     {
       "avg_alpha_6m": 3.86,
       "criteria": {
-        "median_alpha_gt_0": true,
+        "median_alpha_gt": 0,
         "min_sample": 100,
-        "trimmed_alpha_gt_0": true,
-        "win_rate_gt_55": true
+        "trimmed_alpha_gt": 0,
+        "win_rate_gt": 55
       },
       "factor_name": "ATTENTION_ACCEL",
       "median_alpha_6m": -0.7,
@@ -4993,10 +4993,10 @@
     {
       "avg_alpha_6m": 1.89,
       "criteria": {
-        "median_alpha_gt_0": true,
+        "median_alpha_gt": 0,
         "min_sample": 100,
-        "trimmed_alpha_gt_0": true,
-        "win_rate_gt_55": true
+        "trimmed_alpha_gt": 0,
+        "win_rate_gt": 55
       },
       "factor_name": "EARLY_ATTENTION_ACCEL",
       "median_alpha_6m": -0.78,
@@ -5011,8 +5011,7 @@
       "win_rate_vs_qqq": 47.5
     }
   ],
-  "fallback": true,
-  "fallback_source": "LAST_CONFIRMED_SNAPSHOT",
+  "fallback": false,
   "freshness": [
     {
       "details": {
@@ -5066,7 +5065,7 @@
       "status": "FRESH"
     }
   ],
-  "generated_at": "2026-09-08T11:11:52.575Z",
+  "generated_at": "2026-09-08T11:59:22.544Z",
   "historical_validation": {
     "persistent_progress": {
       "completed_batches": 129,
@@ -5085,9 +5084,153 @@
       "total_batches": 129
     }
   },
-  "live_api_error": "The read operation timed out",
-  "live_api_reachable_at_export": false,
-  "live_stages": [],
+  "live_api_reachable_at_export": true,
+  "live_stages": [
+    {
+      "completed_at": "2026-09-08T11:49:05.809+00:00",
+      "details": {},
+      "error": "oracle-v4-discover-themes: {\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"} @documents",
+      "stage": "FAILURE",
+      "status": "FAILED"
+    },
+    {
+      "completed_at": "2026-09-08T11:48:32.503+00:00",
+      "details": {
+        "arxiv_category": "q-bio",
+        "discovery_scope": "open_world",
+        "inserted": 35,
+        "ok": true,
+        "results": [
+          {
+            "index": 0,
+            "inserted": 20,
+            "ok": true,
+            "seen": 38
+          },
+          {
+            "index": 1,
+            "inserted": 11,
+            "ok": true,
+            "seen": 68
+          },
+          {
+            "error": "[object Object]",
+            "index": 2,
+            "ok": false
+          },
+          {
+            "index": 3,
+            "inserted": 4,
+            "ok": true,
+            "seen": 70
+          },
+          {
+            "error": "[object Object]",
+            "index": 4,
+            "ok": false
+          },
+          {
+            "error": "[object Object]",
+            "index": 5,
+            "ok": false
+          },
+          {
+            "error": "[object Object]",
+            "index": 6,
+            "ok": false
+          },
+          {
+            "error": "[object Object]",
+            "index": 7,
+            "ok": false
+          },
+          {
+            "error": "[object Object]",
+            "index": 8,
+            "ok": false
+          },
+          {
+            "error": "[object Object]",
+            "index": 9,
+            "ok": false
+          },
+          {
+            "index": 10,
+            "inserted": 0,
+            "ok": true,
+            "seen": 0
+          },
+          {
+            "error": "[object Object]",
+            "index": 11,
+            "ok": false
+          },
+          {
+            "index": 12,
+            "inserted": 0,
+            "ok": true,
+            "seen": 100
+          },
+          {
+            "error": "[object Object]",
+            "index": 13,
+            "ok": false
+          },
+          {
+            "error": "HTTP 429 api.gdeltproject.org",
+            "index": 14,
+            "ok": false
+          }
+        ],
+        "seed_themes": 0,
+        "successful_sources": 5,
+        "version": "ORACLE_V4_OPEN_WORLD_3"
+      },
+      "error": null,
+      "stage": "INGESTION",
+      "status": "COMPLETED"
+    },
+    {
+      "completed_at": "2026-09-08T11:48:49.683+00:00",
+      "details": {
+        "batches": [
+          {
+            "ok": true,
+            "status": "IDLE"
+          }
+        ],
+        "last": {
+          "ok": true,
+          "status": "IDLE"
+        },
+        "max_batches_per_cycle": 6,
+        "progress": null,
+        "status": "COMPLETED"
+      },
+      "error": null,
+      "stage": "RETRO_WALK_FORWARD",
+      "status": "COMPLETED"
+    },
+    {
+      "completed_at": "2026-09-08T11:48:46.044+00:00",
+      "details": {
+        "error": "oracle-v4-semantic-embed: 546",
+        "status": "FAILED_NON_BLOCKING"
+      },
+      "error": "oracle-v4-semantic-embed: 546",
+      "stage": "SEMANTIC_EMBEDDING",
+      "status": "FAILED"
+    },
+    {
+      "completed_at": null,
+      "details": {
+        "seed_themes": 0
+      },
+      "error": null,
+      "stage": "THEME_DISCOVERY",
+      "status": "RUNNING"
+    }
+  ],
   "method_gates": [
     {
       "details": {
@@ -5132,8 +5275,8 @@
       {
         "asset_type": "CASH_CHF",
         "composite_score": null,
-        "created_at": "2026-09-08T10:57:04.222128+00:00",
-        "id": 372,
+        "created_at": "2026-09-08T11:57:09.450416+00:00",
+        "id": 374,
         "portfolio_id": 1,
         "rationale": {
           "pit_cutoff": "2026-09-07T02:17:26.697+00:00",
@@ -5176,7 +5319,7 @@
       },
       "status": "ACTIVE",
       "strategy_version": "EARLY_BIRD_PORTFOLIO_V1",
-      "updated_at": "2026-09-08T10:57:04.222128+00:00"
+      "updated_at": "2026-09-08T11:57:09.450416+00:00"
     }
   },
   "production_readiness": {
@@ -5192,9 +5335,9 @@
   "progress": {
     "causal": {
       "done": 3,
-      "percent": 50,
+      "percent": 43,
       "status": "ECONOMIC_NODES",
-      "total": 6
+      "total": 7
     },
     "companies": {
       "done": 5,
@@ -5222,10 +5365,10 @@
       "total": 129
     },
     "semantic": {
-      "done": 5,
-      "percent": 100,
-      "status": "COMPLETED",
-      "total": 5
+      "done": 0,
+      "percent": 0,
+      "status": "RUNNING",
+      "total": 0
     },
     "trends": {
       "done": 2,
@@ -5239,17 +5382,17 @@
       "CYCLE_FAILED",
       "NO_ACTION"
     ],
-    "completed_at": "2026-09-08T09:34:37.308+00:00",
-    "created_at": "2026-09-08T09:32:25.444837+00:00",
-    "error": "Signal timed out.",
+    "completed_at": "2026-09-08T11:49:05.064+00:00",
+    "created_at": "2026-09-08T11:47:26.103144+00:00",
+    "error": "oracle-v4-discover-themes: {\"code\":\"57014\",\"details\":null,\"hint\":null,\"message\":\"canceling statement due to statement timeout\"} @documents",
     "global_decision": "NO_ACTION",
-    "id": 524,
+    "id": 525,
     "methodology_version": "ORACLE_V4_CORE_1",
     "mode": "LIVE_SHADOW",
     "no_lookahead": true,
     "source_cutoff": null,
     "stage": "FAILED",
-    "started_at": "2026-09-08T09:32:25.444837+00:00",
+    "started_at": "2026-09-08T11:47:26.103144+00:00",
     "status": "FAILED",
     "summary": {}
   },
@@ -5258,8 +5401,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
-  "snapshot_checked_at": "2026-09-08T11:50:06.880780+00:00",
-  "snapshot_exported_at": "2026-09-08T11:11:04.085758+00:00",
+  "snapshot_exported_at": "2026-09-08T11:58:37.237524+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
     {
@@ -6080,7 +6222,7 @@
     ],
     "display_run_id": 455,
     "global_decision": "NO_ACTION",
-    "live_run_id": 524,
+    "live_run_id": 525,
     "live_running": false,
     "stage": "FAILED",
     "status": "FAILED",
@@ -10681,8 +10823,8 @@
       "sec_requests": {
         "COMPLETED": 16,
         "FAILED": 345,
-        "PENDING": 13,
-        "TOTAL": 374
+        "PENDING": 15,
+        "TOTAL": 376
       },
       "valid_snapshots": 119,
       "valid_tickers": 4
