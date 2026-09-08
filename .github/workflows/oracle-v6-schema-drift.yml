@@ -1,0 +1,84 @@
+name: ORACLE V6 Schema Drift
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'sql/oracle_v6_scientific_schema.sql'
+      - 'sql/oracle_v6_schema_contract.sql'
+      - '.github/workflows/oracle-v6-schema-drift.yml'
+  pull_request:
+    paths:
+      - 'sql/oracle_v6_scientific_schema.sql'
+      - 'sql/oracle_v6_schema_contract.sql'
+      - '.github/workflows/oracle-v6-schema-drift.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  schema-drift:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: oracle_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      PGPASSWORD: postgres
+      SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Require reference database secret
+        shell: bash
+        run: |
+          test -n "$SUPABASE_DB_URL" || {
+            echo "Missing required secret ORACLE_SUPABASE_DB_URL" >&2
+            exit 1
+          }
+
+      - name: Apply repository V6 schema to clean PostgreSQL
+        run: psql -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d oracle_ci -f sql/oracle_v6_scientific_schema.sql
+
+      - name: Compute local schema fingerprint
+        shell: bash
+        run: |
+          LOCAL_FP=$(psql -At -h 127.0.0.1 -U postgres -d oracle_ci -f sql/oracle_v6_schema_contract.sql)
+          echo "LOCAL_FP=$LOCAL_FP" >> "$GITHUB_ENV"
+          echo "Local V6 fingerprint: $LOCAL_FP"
+
+      - name: Compute Supabase production schema fingerprint
+        shell: bash
+        run: |
+          REMOTE_FP=$(psql -At "$SUPABASE_DB_URL" -f sql/oracle_v6_schema_contract.sql)
+          echo "REMOTE_FP=$REMOTE_FP" >> "$GITHUB_ENV"
+          echo "Remote V6 fingerprint: $REMOTE_FP"
+
+      - name: Fail on schema drift
+        shell: bash
+        run: |
+          if [ "$LOCAL_FP" != "$REMOTE_FP" ]; then
+            echo "ORACLE V6 schema drift detected" >&2
+            echo "local=$LOCAL_FP" >&2
+            echo "remote=$REMOTE_FP" >&2
+            exit 1
+          fi
+          echo "ORACLE V6 schema drift: zero"
+
+      - name: Supabase CLI diagnostic diff
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Record CLI availability
+        run: supabase --version
