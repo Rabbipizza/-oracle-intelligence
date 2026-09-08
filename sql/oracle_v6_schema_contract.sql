@@ -10,14 +10,14 @@ with tables as (
 ), objects as (
   select 'T|' || t.relname || '|RLS=' || t.relrowsecurity::text as line from tables t
   union all
-  select 'C|' || t.relname || '|' || a.attnum || '|' || a.attname || '|' ||
+  select 'C|' || t.relname || '|' || a.attnum::text || '|' || a.attname || '|' ||
          pg_catalog.format_type(a.atttypid,a.atttypmod) || '|NN=' || a.attnotnull::text ||
          '|D=' || coalesce(pg_get_expr(ad.adbin,ad.adrelid),'')
   from tables t
   join pg_attribute a on a.attrelid=t.oid and a.attnum>0 and not a.attisdropped
   left join pg_attrdef ad on ad.adrelid=a.attrelid and ad.adnum=a.attnum
   union all
-  select 'K|' || t.relname || '|' || con.conname || '|' || con.contype || '|' || pg_get_constraintdef(con.oid,true)
+  select 'K|' || t.relname || '|' || con.conname || '|' || con.contype::text || '|' || pg_get_constraintdef(con.oid,true)
   from tables t join pg_constraint con on con.conrelid=t.oid
   union all
   select 'I|' || t.relname || '|' || ci.relname || '|' || pg_get_indexdef(i.indexrelid)
