@@ -1,0 +1,58 @@
+{
+  "version": "V6",
+  "experiment_id": 7,
+  "signal_available_at": "2026-09-08T19:27:58.480854+00:00",
+  "evaluation_as_of": "2026-09-08T20:29:51.442716+00:00",
+  "decision": "NO_ACTION",
+  "decision_state": "NO_ACTION_PREREQUISITES_INCOMPLETE",
+  "data_gaps": [
+    "MISSING_CALIBRATED_EXPECTATION_GAP",
+    "NO_OOS_INCREMENTAL_RETURN_MODEL",
+    "NO_VALIDATED_BOTTLENECK_FORECAST",
+    "UNCALIBRATED_ECONOMIC_CAPTURE"
+  ],
+  "discovery": {
+    "hypotheses_tested": 3430,
+    "fdr_survivors": 1878,
+    "fdr_alpha": 0.05,
+    "semantic_concepts": 25,
+    "semantic_edges": 156,
+    "transmission_edges": 6,
+    "supported_descriptive_edges": 1,
+    "predictive_edges": 0,
+    "causal_edges": 0
+  },
+  "capture": {
+    "candidate_tickers": 14,
+    "candidate_pairs": 42,
+    "concepts_with_sec_support": 7,
+    "capture_probabilities_written": 0
+  },
+  "market_expectations": {
+    "state": "NO_EXPECTATION_MODEL_MISSING_PIT_FCF_INPUTS",
+    "reverse_dcf_rows": 0,
+    "pit_fcf_tickers": 0,
+    "proxy_substitution_allowed": false
+  },
+  "system": {
+    "sec_companyfacts_status": "HTTP_403_FROM_GITHUB_RUNNERS",
+    "sec_inline_xbrl_fallback": "IN_PROGRESS",
+    "evaluation_run_id": 5
+  },
+  "candidates": [
+    {"ticker":"AMD","trends":["AI Infrastructure","Artificial Intelligence","Data Center","Data Centers"],"evidence_pairs":4},
+    {"ticker":"AVGO","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
+    {"ticker":"DELL","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
+    {"ticker":"ETN","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
+    {"ticker":"INTC","trends":["Artificial Intelligence","Data Center","Data Centers","Physical AI"],"evidence_pairs":4},
+    {"ticker":"ROK","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
+    {"ticker":"TSLA","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
+    {"ticker":"HON","trends":["Artificial Intelligence","Machine Learning","Supply Chain"],"evidence_pairs":3},
+    {"ticker":"AAPL","trends":["Artificial Intelligence","Data Center"],"evidence_pairs":2},
+    {"ticker":"ISRG","trends":["Artificial Intelligence","Supply Chain"],"evidence_pairs":2},
+    {"ticker":"LRCX","trends":["Artificial Intelligence","Supply Chain"],"evidence_pairs":2},
+    {"ticker":"QCOM","trends":["Artificial Intelligence","Data Center"],"evidence_pairs":2},
+    {"ticker":"TER","trends":["Artificial Intelligence","Data Center"],"evidence_pairs":2},
+    {"ticker":"RKLB","trends":["Supply Chain"],"evidence_pairs":1}
+  ]
+}
