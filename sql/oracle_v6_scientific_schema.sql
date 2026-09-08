@@ -1,4 +1,5 @@
 -- ORACLE V6 scientific schema
+-- SOURCE OF TRUTH: production Supabase schema, synchronized 2026-09-08.
 -- Non-destructive: additive tables only. Existing V5 tables/workers are preserved.
 
 create table if not exists public.oracle_v6_experiments (
@@ -33,14 +34,12 @@ create table if not exists public.oracle_v6_pit_observations (
   ingested_at timestamptz not null default now(),
   vintage_id text,
   payload_hash text,
-  metadata jsonb not null default '{}'::jsonb,
-  unique(source_type, source_id, available_at, coalesce(vintage_id,''))
+  metadata jsonb not null default '{}'::jsonb
 );
-
-create index if not exists idx_oracle_v6_pit_available_at
-  on public.oracle_v6_pit_observations(available_at);
-create index if not exists idx_oracle_v6_pit_entity
-  on public.oracle_v6_pit_observations(entity_key, available_at);
+create index if not exists idx_oracle_v6_pit_available_at on public.oracle_v6_pit_observations(available_at);
+create index if not exists idx_oracle_v6_pit_entity on public.oracle_v6_pit_observations(entity_key, available_at);
+create unique index if not exists oracle_v6_pit_obs_uq
+  on public.oracle_v6_pit_observations(source_type, source_id, available_at, coalesce(vintage_id,''));
 
 create table if not exists public.oracle_v6_signal_null_models (
   id bigserial primary key,
@@ -54,9 +53,10 @@ create table if not exists public.oracle_v6_signal_null_models (
   p_value double precision,
   model_version text,
   training_window jsonb,
-  diagnostics jsonb not null default '{}'::jsonb,
-  unique(signal_key, as_of, null_family, coalesce(model_version,''))
+  diagnostics jsonb not null default '{}'::jsonb
 );
+create unique index if not exists oracle_v6_signal_null_uq
+  on public.oracle_v6_signal_null_models(signal_key, as_of, null_family, coalesce(model_version,''));
 
 create table if not exists public.oracle_v6_trend_probabilities (
   id bigserial primary key,
@@ -71,9 +71,10 @@ create table if not exists public.oracle_v6_trend_probabilities (
   source_diversity double precision,
   convergence double precision,
   model_version text,
-  evidence_ids jsonb not null default '[]'::jsonb,
-  unique(trend_key, as_of, coalesce(model_version,''))
+  evidence_ids jsonb not null default '[]'::jsonb
 );
+create unique index if not exists oracle_v6_trend_prob_uq
+  on public.oracle_v6_trend_probabilities(trend_key, as_of, coalesce(model_version,''));
 
 create table if not exists public.oracle_v6_graph_edges (
   id bigserial primary key,
@@ -97,6 +98,8 @@ create table if not exists public.oracle_v6_graph_edges (
   evidence_cutoff_at timestamptz not null,
   created_at timestamptz not null default now()
 );
+create index if not exists oracle_v6_graph_edges_nodes_idx
+  on public.oracle_v6_graph_edges(source_node, target_node, valid_from);
 
 create table if not exists public.oracle_v6_bottleneck_forecasts (
   id bigserial primary key,
@@ -112,9 +115,10 @@ create table if not exists public.oracle_v6_bottleneck_forecasts (
   model_version text,
   realized_outcome boolean,
   realized_at timestamptz,
-  brier_component double precision,
-  unique(bottleneck_key, as_of, horizon_months, coalesce(model_version,''))
+  brier_component double precision
 );
+create unique index if not exists oracle_v6_bottleneck_uq
+  on public.oracle_v6_bottleneck_forecasts(bottleneck_key, as_of, horizon_months, coalesce(model_version,''));
 
 create table if not exists public.oracle_v6_company_capture (
   id bigserial primary key,
@@ -130,9 +134,10 @@ create table if not exists public.oracle_v6_company_capture (
   capex_required jsonb,
   capture_probability double precision check (capture_probability between 0 and 1),
   model_version text,
-  evidence_ids jsonb not null default '[]'::jsonb,
-  unique(ticker, trend_key, as_of, coalesce(model_version,''))
+  evidence_ids jsonb not null default '[]'::jsonb
 );
+create unique index if not exists oracle_v6_company_capture_uq
+  on public.oracle_v6_company_capture(ticker, trend_key, as_of, coalesce(model_version,''));
 
 create table if not exists public.oracle_v6_market_expectations (
   id bigserial primary key,
@@ -143,9 +148,10 @@ create table if not exists public.oracle_v6_market_expectations (
   fundamental_forecast jsonb not null default '{}'::jsonb,
   p_fundamentals_exceed_expectations double precision check (p_fundamentals_exceed_expectations between 0 and 1),
   gap_magnitude jsonb,
-  model_version text,
-  unique(ticker, as_of, coalesce(model_version,''))
+  model_version text
 );
+create unique index if not exists oracle_v6_market_expectations_uq
+  on public.oracle_v6_market_expectations(ticker, as_of, coalesce(model_version,''));
 
 create table if not exists public.oracle_v6_return_targets (
   id bigserial primary key,
@@ -157,9 +163,10 @@ create table if not exists public.oracle_v6_return_targets (
   residual_return double precision,
   transaction_cost double precision default 0,
   residual_return_net double precision,
-  factor_model_version text,
-  unique(ticker, as_of, horizon_months, coalesce(factor_model_version,''))
+  factor_model_version text
 );
+create unique index if not exists oracle_v6_return_targets_uq
+  on public.oracle_v6_return_targets(ticker, as_of, horizon_months, coalesce(factor_model_version,''));
 
 create table if not exists public.oracle_v6_model_predictions (
   id bigserial primary key,
@@ -177,6 +184,8 @@ create table if not exists public.oracle_v6_model_predictions (
   baseline_prediction double precision,
   metadata jsonb not null default '{}'::jsonb
 );
+create index if not exists oracle_v6_predictions_experiment_idx
+  on public.oracle_v6_model_predictions(experiment_id, as_of);
 
 create table if not exists public.oracle_v6_multiple_testing (
   id bigserial primary key,
@@ -188,6 +197,8 @@ create table if not exists public.oracle_v6_multiple_testing (
   selected boolean,
   created_at timestamptz not null default now()
 );
+create index if not exists oracle_v6_multiple_testing_exp_idx
+  on public.oracle_v6_multiple_testing(experiment_id);
 
 create table if not exists public.oracle_v6_decisions (
   id bigserial primary key,
@@ -202,11 +213,11 @@ create table if not exists public.oracle_v6_decisions (
   uncertainty jsonb,
   invalidation_conditions jsonb not null default '[]'::jsonb,
   data_gaps jsonb not null default '[]'::jsonb,
-  model_version text,
-  unique(ticker, as_of, coalesce(model_version,''))
+  model_version text
 );
+create unique index if not exists oracle_v6_decisions_uq
+  on public.oracle_v6_decisions(ticker, as_of, coalesce(model_version,''));
 
--- RLS is enabled proactively because public is normally Data-API exposed in Supabase.
 alter table public.oracle_v6_experiments enable row level security;
 alter table public.oracle_v6_pit_observations enable row level security;
 alter table public.oracle_v6_signal_null_models enable row level security;
@@ -221,4 +232,3 @@ alter table public.oracle_v6_multiple_testing enable row level security;
 alter table public.oracle_v6_decisions enable row level security;
 
 -- No public policies are created here. Service-side workers should use protected credentials.
--- Add narrowly scoped authenticated policies only after the access model is defined.
