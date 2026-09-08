@@ -1,0 +1,60 @@
+name: ORACLE V6 Discovery FDR
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '42 5 * * *'
+  push:
+    branches: [ main ]
+    paths:
+      - 'analytics/oracle_v6_discovery_pipeline.py'
+      - 'analytics/oracle_v6_scientific_core.py'
+      - 'requirements-v6.txt'
+      - 'sql/p0_3_fdr_production_gate.sql'
+      - 'sql/tests/p0_3_fdr_gate.sql'
+      - '.github/workflows/oracle-v6-discovery-fdr.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  fdr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+      ORACLE_V6_FDR_ALPHA: '0.05'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate database secret
+        shell: bash
+        run: |
+          case "$ORACLE_SUPABASE_DB_URL" in
+            postgres://*|postgresql://*) ;;
+            *) echo "ORACLE_SUPABASE_DB_URL is not a PostgreSQL URL" >&2; exit 1 ;;
+          esac
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-v6.txt
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements-v6.txt
+
+      - name: Compile V6 scientific code
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_discovery_pipeline.py
+
+      - name: Run production Benjamini-Hochberg family
+        working-directory: analytics
+        run: python oracle_v6_discovery_pipeline.py
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
+
+      - name: Run FDR gate integration test
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_3_fdr_gate.sql
