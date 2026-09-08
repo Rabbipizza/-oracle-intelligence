@@ -4948,7 +4948,8 @@
       "win_rate_vs_qqq": 47.5
     }
   ],
-  "fallback": false,
+  "fallback": true,
+  "fallback_source": "LAST_CONFIRMED_SNAPSHOT",
   "freshness": [
     {
       "details": {
@@ -5021,7 +5022,8 @@
       "total_batches": 129
     }
   },
-  "live_api_reachable_at_export": true,
+  "live_api_error": "HTTP Error 500: Internal Server Error",
+  "live_api_reachable_at_export": false,
   "live_stages": [
     {
       "completed_at": "2026-09-08T04:04:03.546+00:00",
@@ -5302,6 +5304,7 @@
     "principle": "being underpriced is an entry-timing question, not an Early Bird definition",
     "structural_early_bird": "pre_market_score = causal role specificity + evidence + low attention; excludes price, rerating and market cap"
   },
+  "snapshot_checked_at": "2026-09-08T04:43:56.695851+00:00",
   "snapshot_exported_at": "2026-09-08T04:29:27.421902+00:00",
   "snapshot_source": "PRECOMPUTED_INVESTOR_BUILD",
   "stages": [
