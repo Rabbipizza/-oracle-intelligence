@@ -1,4 +1,4 @@
-# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> descriptive transmission -> bottleneck gate -> company capture evidence gate
+# ORACLE V6: formal null -> BH-FDR -> persistence -> semantic bridge -> descriptive transmission -> bottleneck gate -> company capture evidence gate -> market expectations gate
 name: ORACLE V6 Discovery FDR
 
 on:
@@ -15,6 +15,7 @@ on:
       - 'analytics/oracle_v6_transmission_graph.py'
       - 'analytics/oracle_v6_bottleneck_gate.py'
       - 'analytics/oracle_v6_company_capture_gate.py'
+      - 'analytics/oracle_v6_market_expectations_gate.py'
       - 'analytics/oracle_v6_scientific_core.py'
       - 'requirements-v6.txt'
       - 'sql/p0_3_fdr_production_gate.sql'
@@ -23,6 +24,7 @@ on:
       - 'sql/tests/v6_discovery_pit_gate.sql'
       - 'sql/tests/v6_term_history_vintage_gate.sql'
       - 'sql/tests/v6_company_capture_gate.sql'
+      - 'sql/tests/v6_market_expectations_gate.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
 
 concurrency:
@@ -62,7 +64,7 @@ jobs:
         run: pip install -r requirements-v6.txt
 
       - name: Compile V6 scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_market_expectations_gate.py
 
       - name: Fit formal rolling count nulls
         working-directory: analytics
@@ -92,6 +94,10 @@ jobs:
         working-directory: analytics
         run: python oracle_v6_company_capture_gate.py
 
+      - name: Enforce market expectations prerequisite gate
+        working-directory: analytics
+        run: python oracle_v6_market_expectations_gate.py
+
       - name: Install PostgreSQL client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
 
@@ -106,3 +112,6 @@ jobs:
 
       - name: Run company capture evidence gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_company_capture_gate.sql
+
+      - name: Run market expectations prerequisite gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_market_expectations_gate.sql
