@@ -2,8 +2,8 @@
 """ORACLE V6 PIT company-capture evidence gate.
 
 Structural concepts are frozen at the signal's immutable availability time.
-Company evidence is evaluated at the current evaluation-run timestamp, allowing
-newly available SEC evidence without rewriting first detection history.
+Company evidence is evaluated at the current evaluation-run timestamp and only
+for securities present in the point-in-time listed universe on that date.
 """
 from __future__ import annotations
 
@@ -64,16 +64,28 @@ def run(db_url: str) -> dict:
         if not concepts:
             raise RuntimeError("no structural concepts from semantic bridge")
 
+        investable = [str(x) for x in conn.execute(text("""
+            select ticker from public.oracle_v6_universe_as_of(cast(:evaluation_date as date))
+            order by ticker
+        """), {"evaluation_date": evaluation_as_of.date()}).scalars().all()]
+        if not investable:
+            raise RuntimeError("dynamic investable universe is empty")
+
         rows = conn.execute(text("""
             select e.id,e.ticker,e.evidence_key,e.excerpt,e.source_url,
                    coalesce(e.available_at,e.known_at,e.created_at) available_at,
                    e.source_quality,c.concept
             from public.oracle_v4_sec_economic_evidence e
             cross join unnest(cast(:concepts as text[])) as c(concept)
-            where coalesce(e.available_at,e.known_at,e.created_at)<=:evaluation_cutoff
+            where e.ticker=any(:investable)
+              and coalesce(e.available_at,e.known_at,e.created_at)<=:evaluation_cutoff
               and lower(e.excerpt) like '%'||lower(c.concept)||'%'
             order by c.concept,e.ticker,e.id
-        """), {"concepts": concepts, "evaluation_cutoff": evaluation_as_of}).mappings().all()
+        """), {
+            "concepts": concepts,
+            "investable": investable,
+            "evaluation_cutoff": evaluation_as_of,
+        }).mappings().all()
 
         grouped: dict[tuple[str,str], list[dict]] = defaultdict(list)
         for r in rows:
@@ -120,13 +132,14 @@ def run(db_url: str) -> dict:
             "model_version": MODEL_VERSION,
             "signal_available_at": signal_available_at.isoformat(),
             "evaluation_as_of": evaluation_as_of.isoformat(),
+            "dynamic_universe_size": len(investable),
             "structural_concepts_considered": len(concepts),
             "candidate_pairs": len(payload),
             "tickers": len({p["ticker"] for p in payload}),
             "concepts_with_sec_support": len({p["trend_key"] for p in payload}),
             "capture_probabilities_written": 0,
             "financial_impact_fields_written": 0,
-            "state": "EVIDENCE_CANDIDATES_ONLY_UNCALIBRATED",
+            "state": "INVESTABLE_EVIDENCE_CANDIDATES_ONLY_UNCALIBRATED",
         }
         conn.execute(text("""
             update public.oracle_v6_experiments
