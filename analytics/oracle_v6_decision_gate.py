@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """ORACLE V6 final decision prerequisite gate.
 
-Writes explicit NO_ACTION decisions for evidence-supported company candidates
-when required calibrated layers are missing. Numeric probabilities and expected
-returns remain NULL; data_gaps explain why action is blocked.
+Decisions are evaluated at the current evaluation-run timestamp, not the
+immutable signal-detection timestamp. Until calibrated downstream layers exist,
+all current candidates remain explicit NO_ACTION with numeric fields NULL.
 """
 from __future__ import annotations
 
@@ -27,23 +27,35 @@ def _engine(db_url: str):
 
 def run(db_url: str) -> dict:
     engine = _engine(db_url)
+    run_id = os.environ.get("GITHUB_RUN_ID")
     with engine.begin() as conn:
         exp = conn.execute(text("""
-            select id,(metrics->>'decision_as_of')::timestamptz decision_as_of,
-                   metrics->'market_expectations_gate'->>'state' expectation_state,
-                   metrics->'bottleneck_gate'->>'state' bottleneck_state
+            select id,(metrics->>'decision_as_of')::timestamptz signal_available_at
             from public.oracle_v6_experiments
             where model_family='COUNT_NULL_MODEL'
               and model_version='FORMAL_COUNT_NULL_V1'
               and invalidated_at is null
-              and metrics ? 'decision_as_of'
             order by created_at desc,id desc limit 1
         """)).mappings().one_or_none()
-        if not exp or exp["decision_as_of"] is None:
+        if not exp:
             raise RuntimeError("latest PIT experiment unavailable")
-
         experiment_id = int(exp["id"])
-        cutoff = exp["decision_as_of"]
+
+        cutoff = None
+        if run_id:
+            cutoff = conn.execute(text("""
+                select evaluation_as_of from public.oracle_v6_evaluation_runs
+                where experiment_id=:experiment_id and external_run_id=:run_id
+            """), {"experiment_id": experiment_id, "run_id": run_id}).scalar_one_or_none()
+        if cutoff is None:
+            cutoff = conn.execute(text("""
+                select evaluation_as_of from public.oracle_v6_evaluation_runs
+                where experiment_id=:experiment_id
+                order by evaluation_as_of desc,id desc limit 1
+            """), {"experiment_id": experiment_id}).scalar_one_or_none()
+        if cutoff is None:
+            raise RuntimeError("no evaluation clock for decision gate")
+
         tickers = [str(x) for x in conn.execute(text("""
             select distinct ticker
             from public.oracle_v6_company_capture
@@ -61,10 +73,11 @@ def run(db_url: str) -> dict:
         if conn.execute(text("select count(*) from public.oracle_v6_market_expectations where as_of=:cutoff"), {"cutoff": cutoff}).scalar_one() == 0:
             gaps.append("MISSING_EXPECTATION_GAP")
 
-        if conn.execute(text("select count(*) from public.oracle_v6_bottleneck_forecasts where as_of=:cutoff"), {"cutoff": cutoff}).scalar_one() == 0:
+        # Bottleneck forecasts may legitimately have an earlier signal cutoff;
+        # until a calibrated forecast exists at or before evaluation time, block.
+        if conn.execute(text("select count(*) from public.oracle_v6_bottleneck_forecasts where as_of<=:cutoff"), {"cutoff": cutoff}).scalar_one() == 0:
             gaps.append("NO_VALIDATED_BOTTLENECK_FORECAST")
 
-        # No validated expected residual-return model exists yet.
         gaps.append("NO_OOS_INCREMENTAL_RETURN_MODEL")
         gaps = sorted(set(gaps))
 
@@ -79,6 +92,7 @@ def run(db_url: str) -> dict:
             "uncertainty": json.dumps({
                 "probabilities_calibrated": False,
                 "expected_residual_return_calibrated": False,
+                "signal_available_at": exp["signal_available_at"].isoformat() if exp["signal_available_at"] else None,
             }, sort_keys=True),
             "data_gaps": json.dumps(gaps),
             "invalidation_conditions": json.dumps([]),
@@ -98,7 +112,8 @@ def run(db_url: str) -> dict:
 
         summary = {
             "model_version": MODEL_VERSION,
-            "decision_as_of": cutoff.isoformat(),
+            "signal_available_at": exp["signal_available_at"].isoformat() if exp["signal_available_at"] else None,
+            "evaluation_as_of": cutoff.isoformat(),
             "candidate_tickers": len(tickers),
             "decision_rows_written": len(payload),
             "decision": "NO_ACTION",
