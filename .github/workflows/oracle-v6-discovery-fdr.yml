@@ -20,6 +20,10 @@ on:
       - 'sql/tests/v6_discovery_pit_gate.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
 
+concurrency:
+  group: oracle-v6-discovery
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
