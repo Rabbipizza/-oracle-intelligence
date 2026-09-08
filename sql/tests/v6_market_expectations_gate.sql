@@ -23,11 +23,11 @@ begin
   from public.oracle_v6_market_expectations
   where model_version='MARKET_EXPECTATIONS_GATE_V1';
 
-  if v_state='NO_EXPECTATION_MODEL_MISSING_FCF_INPUTS' and v_rows<>0 then
-    raise exception 'V6 MARKET EXPECTATIONS FAIL: reverse-DCF rows exist despite missing FCF inputs';
+  if v_rows<>0 then
+    raise exception 'V6 MARKET EXPECTATIONS FAIL: prerequisite gate wrote valuation rows';
   end if;
 
-  if v_state not in ('NO_EXPECTATION_MODEL_MISSING_FCF_INPUTS','INPUT_SCHEMA_PRESENT_REQUIRES_MODEL_IMPLEMENTATION') then
+  if v_state not in ('NO_EXPECTATION_MODEL_MISSING_PIT_FCF_INPUTS','PIT_FCF_AVAILABLE_REVERSE_DCF_MODEL_PENDING') then
     raise exception 'V6 MARKET EXPECTATIONS FAIL: unexpected state %',v_state;
   end if;
 end $$;
