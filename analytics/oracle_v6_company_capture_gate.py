@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """ORACLE V6 PIT company-capture evidence gate.
 
-Creates evidence-supported company/trend candidates only when a PIT-eligible
-SEC economic-evidence excerpt explicitly contains a canonical structural concept
-emitted by the semantic bridge. No fuzzy matching and no synthetic capture
-probability are used. Probability and financial-impact fields remain NULL until
-calibrated models exist.
+Structural concepts are frozen at the signal's immutable availability time.
+Company evidence is evaluated at the current evaluation-run timestamp, allowing
+newly available SEC evidence without rewriting first detection history.
 """
 from __future__ import annotations
 
@@ -30,9 +28,10 @@ def _engine(db_url: str):
 
 def run(db_url: str) -> dict:
     engine = _engine(db_url)
+    external_run_id = os.environ.get("GITHUB_RUN_ID")
     with engine.begin() as conn:
         exp = conn.execute(text("""
-            select id,(metrics->>'decision_as_of')::timestamptz decision_as_of
+            select id,(metrics->>'decision_as_of')::timestamptz signal_available_at
             from public.oracle_v6_experiments
             where model_family='COUNT_NULL_MODEL'
               and model_version='FORMAL_COUNT_NULL_V1'
@@ -40,34 +39,41 @@ def run(db_url: str) -> dict:
               and metrics ? 'decision_as_of'
             order by created_at desc,id desc limit 1
         """)).mappings().one_or_none()
-        if not exp or exp["decision_as_of"] is None:
+        if not exp or exp["signal_available_at"] is None:
             raise RuntimeError("latest PIT Discovery experiment unavailable")
 
         experiment_id = int(exp["id"])
-        decision_as_of = exp["decision_as_of"]
+        signal_available_at = exp["signal_available_at"]
+        evaluation_as_of = signal_available_at
+        if external_run_id:
+            ev = conn.execute(text("""
+                select evaluation_as_of from public.oracle_v6_evaluation_runs
+                where external_run_id=:run_id and experiment_id=:experiment_id
+            """), {"run_id": external_run_id, "experiment_id": experiment_id}).scalar_one_or_none()
+            if ev is not None:
+                evaluation_as_of = ev
 
         concepts = [str(x) for x in conn.execute(text("""
             select distinct split_part(g.target_node,':',2) concept
             from public.oracle_v6_graph_edges g
             where g.generated_by_model='SEMANTIC_BRIDGE_V1'
-              and g.evidence_cutoff_at=:cutoff
+              and g.evidence_cutoff_at=:signal_cutoff
               and split_part(g.target_node,':',2)<>''
             order by 1
-        """), {"cutoff": decision_as_of}).scalars().all()]
+        """), {"signal_cutoff": signal_available_at}).scalars().all()]
         if not concepts:
-            raise RuntimeError("no current structural concepts from semantic bridge")
+            raise RuntimeError("no structural concepts from semantic bridge")
 
         rows = conn.execute(text("""
             select e.id,e.ticker,e.evidence_key,e.excerpt,e.source_url,
                    coalesce(e.available_at,e.known_at,e.created_at) available_at,
-                   e.source_quality,
-                   c.concept
+                   e.source_quality,c.concept
             from public.oracle_v4_sec_economic_evidence e
             cross join unnest(cast(:concepts as text[])) as c(concept)
-            where coalesce(e.available_at,e.known_at,e.created_at)<=:cutoff
+            where coalesce(e.available_at,e.known_at,e.created_at)<=:evaluation_cutoff
               and lower(e.excerpt) like '%'||lower(c.concept)||'%'
             order by c.concept,e.ticker,e.id
-        """), {"concepts": concepts, "cutoff": decision_as_of}).mappings().all()
+        """), {"concepts": concepts, "evaluation_cutoff": evaluation_as_of}).mappings().all()
 
         grouped: dict[tuple[str,str], list[dict]] = defaultdict(list)
         for r in rows:
@@ -76,9 +82,7 @@ def run(db_url: str) -> dict:
         payload = []
         for (ticker, concept), evidence_rows in sorted(grouped.items()):
             evidence = []
-            evidence_keys = set()
             for r in evidence_rows[:MAX_EVIDENCE]:
-                evidence_keys.add(str(r["evidence_key"]))
                 evidence.append({
                     "sec_evidence_id": int(r["id"]),
                     "evidence_key": str(r["evidence_key"]),
@@ -92,13 +96,13 @@ def run(db_url: str) -> dict:
             payload.append({
                 "ticker": ticker,
                 "trend_key": concept,
-                "as_of": decision_as_of,
+                "as_of": evaluation_as_of,
                 "model_version": MODEL_VERSION,
                 "evidence_ids": json.dumps(evidence, sort_keys=True),
             })
 
         conn.execute(text("delete from public.oracle_v6_company_capture where model_version=:model and as_of=:cutoff"), {
-            "model": MODEL_VERSION, "cutoff": decision_as_of,
+            "model": MODEL_VERSION, "cutoff": evaluation_as_of,
         })
         if payload:
             conn.execute(text("""
@@ -114,14 +118,14 @@ def run(db_url: str) -> dict:
 
         summary = {
             "model_version": MODEL_VERSION,
-            "decision_as_of": decision_as_of.isoformat(),
+            "signal_available_at": signal_available_at.isoformat(),
+            "evaluation_as_of": evaluation_as_of.isoformat(),
             "structural_concepts_considered": len(concepts),
             "candidate_pairs": len(payload),
             "tickers": len({p["ticker"] for p in payload}),
             "concepts_with_sec_support": len({p["trend_key"] for p in payload}),
             "capture_probabilities_written": 0,
             "financial_impact_fields_written": 0,
-            "match_policy": "exact canonical concept substring in PIT SEC economic evidence",
             "state": "EVIDENCE_CANDIDATES_ONLY_UNCALIBRATED",
         }
         conn.execute(text("""
