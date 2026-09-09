@@ -6,7 +6,7 @@ availability timestamp of the full text. It only extracts evidence when a bottle
 alias and a capture keyword co-occur in a local context window.
 """
 from __future__ import annotations
-import json, os, re
+import json, os
 from sqlalchemy import create_engine, text
 
 MODEL_VERSION='SEC_CAPTURE_FULLTEXT_V1'
@@ -88,24 +88,19 @@ def run(db_url:str)->dict:
                     lctx=ctx.lower()
                     for ek,terms in KEYWORDS.items():
                         if not any(t.lower() in lctx for t in terms): continue
-                        # ensure the dependency itself is in this exact local window
                         if not any(a.lower() in lctx for a in aliases): continue
                         res=c.execute(text("""
                           insert into public.oracle_v4_sec_economic_evidence
-                            (document_id,ticker,filing_date,evidence_key,excerpt,source_url,known_at,source_quality,available_at)
-                          values (:doc,:ticker,cast(:filing as date),:key,:excerpt,:url,:known,1.0,:known)
-                          on conflict (document_id,evidence_key) do update
-                          set excerpt=excluded.excerpt, source_url=excluded.source_url,
-                              known_at=greatest(public.oracle_v4_sec_economic_evidence.known_at,excluded.known_at),
-                              available_at=greatest(public.oracle_v4_sec_economic_evidence.available_at,excluded.available_at),
-                              source_quality=greatest(public.oracle_v4_sec_economic_evidence.source_quality,excluded.source_quality)
+                            (document_id,ticker,filing_date,evidence_key,excerpt,source_url,known_at,source_quality)
+                          values (:doc,:ticker,cast(:filing as date),:key,:excerpt,:url,:known,1.0)
+                          on conflict (document_id,evidence_key) do nothing
                           returning id
-                        """),{'doc':d['id'],'ticker':ticker,'filing':d['published_at'].date().isoformat() if d['published_at'] else None,'key':ek,'excerpt':ctx[:1400],'url':d['url'],'known':d['fetched_at']}).scalar_one()
+                        """),{'doc':d['id'],'ticker':ticker,'filing':d['published_at'].date().isoformat() if d['published_at'] else None,'key':ek,'excerpt':ctx[:1400],'url':d['url'],'known':d['fetched_at']}).scalar_one_or_none()
                         if res is not None: inserted+=1
                         matched_docs.add(str(d['id'])); pair_keys.add(ek)
                         break
             pair_stats.append({'ticker':ticker,'bottleneck_node':node,'fulltext_docs':len(docs),'matched_docs':len(matched_docs),'evidence_types':sorted(pair_keys)})
-        summary={'model_version':MODEL_VERSION,'evaluation_as_of':cutoff.isoformat(),'supplier_pairs':len(pairs),'docs_scanned':docs_seen,'evidence_upserts':inserted,'pairs':pair_stats,'state':'SEC_CAPTURE_EVIDENCE_BACKFILLED' if pairs else 'NO_TENSION_SUPPLIERS'}
+        summary={'model_version':MODEL_VERSION,'evaluation_as_of':cutoff.isoformat(),'supplier_pairs':len(pairs),'docs_scanned':docs_seen,'evidence_inserted':inserted,'pairs':pair_stats,'state':'SEC_CAPTURE_EVIDENCE_BACKFILLED' if pairs else 'NO_TENSION_SUPPLIERS'}
         c.execute(text("update public.oracle_v6_experiments set metrics=jsonb_set(coalesce(metrics,'{}'::jsonb),'{sec_capture_backfill}',cast(:s as jsonb),true) where id=:e"),{'s':json.dumps(summary,sort_keys=True),'e':exp})
     return {'ok':True,'experiment_id':exp,**summary}
 
