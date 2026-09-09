@@ -10,9 +10,9 @@ on:
       - 'analytics/oracle_v6_*.py'
       - 'requirements-v6.txt'
       - 'sql/v6_*.sql'
+      - 'sql/p0_*.sql'
       - 'sql/tests/v6_*.sql'
-      - 'sql/p0_3_fdr_production_gate.sql'
-      - 'sql/tests/p0_3_fdr_gate.sql'
+      - 'sql/tests/p0_*.sql'
       - '.github/workflows/oracle-v6-discovery-fdr.yml'
 concurrency:
   group: oracle-v6-discovery
@@ -40,16 +40,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_demographic_context.py analytics/oracle_v6_demographic_trends.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_capture_calibration_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py analytics/oracle_v6_forward_validation.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_sequential_fdr.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_signal_lifecycle.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_demographic_context.py analytics/oracle_v6_demographic_trends.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_capture_calibration_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py analytics/oracle_v6_forward_validation.py analytics/oracle_v6_tension_benchmark.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
+      - name: Allocate sequential alpha budget
+        working-directory: analytics
+        run: python oracle_v6_sequential_fdr.py
       - name: Production BH-FDR
         working-directory: analytics
         run: python oracle_v6_discovery_pipeline.py
       - name: Persistence probabilities
         working-directory: analytics
         run: python oracle_v6_trend_probability.py
+      - name: Temporal signal lifecycle
+        working-directory: analytics
+        run: python oracle_v6_signal_lifecycle.py
       - name: PIT semantic bridge
         working-directory: analytics
         run: python oracle_v6_semantic_bridge.py
@@ -117,6 +123,12 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
       - name: FDR gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_3_fdr_gate.sql
+      - name: P0-6 Analyst Memory independence gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_6_memory_link_independence.sql
+      - name: P0-7 sequential multiple-testing gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_7_sequential_fdr_gate.sql
+      - name: P0-8 tension downstream safety gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/p0_8_tension_validation_safety.sql
       - name: Discovery PIT gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_discovery_pit_gate.sql
       - name: Immutable term vintage gate
