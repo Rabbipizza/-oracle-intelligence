@@ -4,6 +4,10 @@
 Consumes only formal null-model p-values, applies the canonical
 Benjamini-Hochberg selector, and persists the entire hypothesis family before
 any downstream trend can be inserted.
+
+P0-7: the within-run BH alpha is allocated *before* this stage by
+oracle_v6_sequential_fdr.py. A fixed 0.05 is used only outside the production
+workflow for explicit local calls; production prefers ORACLE_V6_FDR_ALPHA_ALLOCATED.
 """
 from __future__ import annotations
 
@@ -136,6 +140,7 @@ def run_fdr(db_url: str, alpha: float = DEFAULT_ALPHA) -> FDRResult:
             "formal_null_model_version": FORMAL_MODEL_VERSION,
             "as_of": as_of.isoformat(),
             "alpha": alpha,
+            "alpha_source": "P0_7_SEQUENTIAL_ALLOCATOR" if os.environ.get("ORACLE_V6_FDR_ALPHA_ALLOCATED") else "EXPLICIT_OR_LOCAL_DEFAULT",
             "family_size": family_size,
             "selected_count": selected_count,
         }
@@ -150,7 +155,7 @@ def run_fdr(db_url: str, alpha: float = DEFAULT_ALPHA) -> FDRResult:
 
 def main() -> None:
     db_url = os.environ.get("ORACLE_SUPABASE_DB_URL", "")
-    alpha = float(os.environ.get("ORACLE_V6_FDR_ALPHA", str(DEFAULT_ALPHA)))
+    alpha = float(os.environ.get("ORACLE_V6_FDR_ALPHA_ALLOCATED", os.environ.get("ORACLE_V6_FDR_ALPHA", str(DEFAULT_ALPHA))))
     result = run_fdr(db_url, alpha)
     print(json.dumps({
         "ok": True,
