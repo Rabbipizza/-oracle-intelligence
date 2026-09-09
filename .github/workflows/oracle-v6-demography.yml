@@ -1,0 +1,25 @@
+name: ORACLE V6 Demography
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 5 * * 1'
+permissions:
+  contents: read
+jobs:
+  demography:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-v6.txt
+      - name: Install dependencies
+        run: pip install -r requirements-v6.txt
+      - name: Refresh demographic snapshots
+        working-directory: analytics
+        run: python oracle_v6_demography_refresh.py
