@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 """P0-8 benchmark for Evidence-Backed Tension extraction.
 
-Requires two independent human annotations per sampled excerpt. Cohen's kappa is
-computed BEFORE adjudication. Disagreements require an explicit adjudication row.
-The current rule-based extractor is evaluated as a 4-class classifier that emits
-REAL_TENSION when the current detector fires, otherwise NO_TENSION.
+Supports two explicit validation modes:
+- DOUBLE_HUMAN: original protocol with two independent annotators + Cohen kappa.
+- SINGLE_MODEL_EXPERT: explicit user-authorized waiver. Uses one frozen reference
+  annotation per excerpt and DOES NOT claim inter-annotator agreement.
 
-A benchmark passes only when:
-  * >= configured minimum sample size are double-annotated,
-  * Cohen's kappa >= configured minimum,
-  * every disagreement used in the benchmark is adjudicated,
-  * precision(REAL_TENSION) >= configured threshold.
+Both modes require a frozen sample and precision(REAL_TENSION) >= configured
+threshold. Predictions come from the production contextual classifier.
 """
 from __future__ import annotations
 
@@ -19,10 +16,11 @@ import os
 from collections import Counter
 from math import isfinite
 from sqlalchemy import create_engine, text
+from oracle_v6_bottleneck_tension import is_real_tension, CLASSIFIER_VERSION
 
-CONFIG_VERSION = "TENSION_VALIDATION_V1"
-BENCHMARK_VERSION = "TENSION_BENCHMARK_V1"
+BENCHMARK_VERSION = "TENSION_CONTEXT_RULES_V2_BENCHMARK"
 SAMPLE_VERSION = "TENSION_SAMPLE_V1"
+SINGLE_ANNOTATOR = "GPT56_SOL_SINGLE_REVIEW_V1"
 LABELS = ["REAL_TENSION","RESOLVED_TENSION","NO_TENSION","AMBIGUOUS"]
 
 
@@ -62,61 +60,86 @@ def metrics(y_true: list[str], y_pred: list[str]) -> dict:
 
 def run(db_url: str) -> dict:
     with _engine(db_url).begin() as conn:
-        cfg=conn.execute(text("select * from public.oracle_v6_tension_validation_config where config_version=:v and active=true"),{'v':CONFIG_VERSION}).mappings().one()
-        rows=conn.execute(text("""
-          with a as (
-            select s.id sample_id,s.current_classifier_positive,
-                   array_agg(x.label order by x.annotator_id) labels,
-                   array_agg(x.annotator_id order by x.annotator_id) annotators,
-                   j.label adjudicated_label
-            from public.oracle_v6_tension_annotation_sample s
-            join public.oracle_v6_tension_annotations x on x.sample_id=s.id
-            left join public.oracle_v6_tension_adjudications j on j.sample_id=s.id
-            where s.sample_version=:sv
-            group by s.id,s.current_classifier_positive,j.label
-            having count(distinct x.annotator_id)=2 and count(*)=2
-          ) select * from a order by sample_id
-        """),{'sv':SAMPLE_VERSION}).mappings().all()
-
-        double_n=len(rows)
-        min_n=int(cfg['minimum_sample_size'])
+        cfg=conn.execute(text("select * from public.oracle_v6_tension_validation_config where active=true order by created_at desc limit 1")).mappings().one()
+        mode=str(cfg.get('annotation_mode') or 'DOUBLE_HUMAN')
+        min_n=int(cfg.get('minimum_reference_labels') or cfg['minimum_sample_size'])
         failure=[]
-        if double_n < min_n:
-            failure.append(f"DOUBLE_ANNOTATED_SAMPLE_TOO_SMALL:{double_n}<{min_n}")
-            kappa=None; per_class={}; rp=rr=rf=None
-        else:
-            a=[r['labels'][0] for r in rows]; b=[r['labels'][1] for r in rows]
-            kappa=cohen_kappa(a,b)
-            if kappa < float(cfg['minimum_kappa']):
-                failure.append(f"KAPPA_TOO_LOW:{kappa:.6f}<{float(cfg['minimum_kappa']):.6f}")
-            y_true=[]; y_pred=[]; unresolved=0
-            for r in rows:
-                l1,l2=r['labels']
-                if l1==l2: truth=l1
-                elif r['adjudicated_label'] is not None: truth=str(r['adjudicated_label'])
-                else:
-                    unresolved+=1
-                    continue
-                y_true.append(truth)
-                y_pred.append('REAL_TENSION' if r['current_classifier_positive'] else 'NO_TENSION')
-            if unresolved:
-                failure.append(f"UNADJUDICATED_DISAGREEMENTS:{unresolved}")
-            if len(y_true)<min_n:
-                failure.append(f"FINAL_LABEL_SAMPLE_TOO_SMALL:{len(y_true)}<{min_n}")
-            per_class=metrics(y_true,y_pred) if y_true else {}
-            real=per_class.get('REAL_TENSION',{})
-            rp=float(real.get('precision',0.0)); rr=float(real.get('recall',0.0)); rf=float(real.get('f1',0.0))
-            if rp < float(cfg['required_real_tension_precision']):
-                failure.append(f"REAL_TENSION_PRECISION_TOO_LOW:{rp:.6f}<{float(cfg['required_real_tension_precision']):.6f}")
+        kappa=None
 
-        passed=(not failure and kappa is not None and isfinite(kappa))
-        result={"benchmark_version":BENCHMARK_VERSION,"sample_version":SAMPLE_VERSION,"sample_size":double_n,"double_annotated_size":double_n,"cohen_kappa":kappa,"per_class_metrics":per_class,"real_tension_precision":rp,"real_tension_recall":rr,"real_tension_f1":rf,"required_precision":float(cfg['required_real_tension_precision']),"minimum_kappa":float(cfg['minimum_kappa']),"benchmark_pass":passed,"failure_reason":";".join(failure) if failure else None}
+        if mode=='DOUBLE_HUMAN':
+            rows=conn.execute(text("""
+              with a as (
+                select s.id sample_id,s.excerpt,array_agg(x.label order by x.annotator_id) labels,
+                       j.label adjudicated_label
+                from public.oracle_v6_tension_annotation_sample s
+                join public.oracle_v6_tension_annotations x on x.sample_id=s.id
+                left join public.oracle_v6_tension_adjudications j on j.sample_id=s.id
+                where s.sample_version=:sv
+                group by s.id,s.excerpt,j.label
+                having count(distinct x.annotator_id)=2 and count(*)=2
+              ) select * from a order by sample_id
+            """),{'sv':SAMPLE_VERSION}).mappings().all()
+            double_n=len(rows); reference_n=0
+            if double_n < min_n:
+                failure.append(f"DOUBLE_ANNOTATED_SAMPLE_TOO_SMALL:{double_n}<{min_n}")
+                y_true=[]; y_pred=[]
+            else:
+                a=[r['labels'][0] for r in rows]; b=[r['labels'][1] for r in rows]
+                kappa=cohen_kappa(a,b)
+                if kappa < float(cfg['minimum_kappa']):
+                    failure.append(f"KAPPA_TOO_LOW:{kappa:.6f}<{float(cfg['minimum_kappa']):.6f}")
+                y_true=[]; y_pred=[]; unresolved=0
+                for r in rows:
+                    l1,l2=r['labels']
+                    if l1==l2: truth=l1
+                    elif r['adjudicated_label'] is not None: truth=str(r['adjudicated_label'])
+                    else:
+                        unresolved+=1; continue
+                    y_true.append(truth)
+                    y_pred.append('REAL_TENSION' if is_real_tension(str(r['excerpt'] or '')) else 'NO_TENSION')
+                if unresolved: failure.append(f"UNADJUDICATED_DISAGREEMENTS:{unresolved}")
+        elif mode=='SINGLE_MODEL_EXPERT':
+            rows=conn.execute(text("""
+              select s.id sample_id,s.excerpt,a.label
+              from public.oracle_v6_tension_annotation_sample s
+              join public.oracle_v6_tension_annotations a on a.sample_id=s.id
+              where s.sample_version=:sv and a.annotator_id=:ann
+              order by s.id
+            """),{'sv':SAMPLE_VERSION,'ann':SINGLE_ANNOTATOR}).mappings().all()
+            double_n=0; reference_n=len(rows)
+            if reference_n < min_n:
+                failure.append(f"REFERENCE_SAMPLE_TOO_SMALL:{reference_n}<{min_n}")
+            y_true=[str(r['label']) for r in rows]
+            y_pred=['REAL_TENSION' if is_real_tension(str(r['excerpt'] or '')) else 'NO_TENSION' for r in rows]
+        else:
+            raise RuntimeError(f'unsupported annotation_mode:{mode}')
+
+        per_class=metrics(y_true,y_pred) if y_true else {}
+        real=per_class.get('REAL_TENSION',{})
+        rp=float(real.get('precision',0.0)); rr=float(real.get('recall',0.0)); rf=float(real.get('f1',0.0))
+        if rp < float(cfg['required_real_tension_precision']):
+            failure.append(f"REAL_TENSION_PRECISION_TOO_LOW:{rp:.6f}<{float(cfg['required_real_tension_precision']):.6f}")
+        if len(y_true)<min_n:
+            failure.append(f"FINAL_LABEL_SAMPLE_TOO_SMALL:{len(y_true)}<{min_n}")
+        passed=not failure and (mode!='DOUBLE_HUMAN' or (kappa is not None and isfinite(kappa)))
+
+        result={
+          "benchmark_version":BENCHMARK_VERSION,"classifier_version":CLASSIFIER_VERSION,
+          "sample_version":SAMPLE_VERSION,"sample_size":len(y_true),"double_annotated_size":double_n,
+          "reference_labeled_size":reference_n,"annotation_mode":mode,"cohen_kappa":kappa,
+          "per_class_metrics":per_class,"real_tension_precision":rp,"real_tension_recall":rr,"real_tension_f1":rf,
+          "required_precision":float(cfg['required_real_tension_precision']),"minimum_kappa":float(cfg['minimum_kappa']),
+          "benchmark_pass":passed,"failure_reason":";".join(failure) if failure else None,
+          "waiver_note":"SINGLE_MODEL_EXPERT does not claim independent-human agreement" if mode=='SINGLE_MODEL_EXPERT' else None,
+        }
         conn.execute(text("""
           insert into public.oracle_v6_tension_benchmark_runs
             (benchmark_version,sample_version,sample_size,double_annotated_size,cohen_kappa,per_class_metrics,
-             real_tension_precision,real_tension_recall,real_tension_f1,required_precision,minimum_kappa,benchmark_pass,failure_reason)
+             real_tension_precision,real_tension_recall,real_tension_f1,required_precision,minimum_kappa,benchmark_pass,
+             failure_reason,annotation_mode,reference_labeled_size)
           values(:benchmark_version,:sample_version,:sample_size,:double_annotated_size,:cohen_kappa,cast(:per_class_metrics as jsonb),
-             :real_tension_precision,:real_tension_recall,:real_tension_f1,:required_precision,:minimum_kappa,:benchmark_pass,:failure_reason)
+             :real_tension_precision,:real_tension_recall,:real_tension_f1,:required_precision,:minimum_kappa,:benchmark_pass,
+             :failure_reason,:annotation_mode,:reference_labeled_size)
         """),{**result,'per_class_metrics':json.dumps(per_class,sort_keys=True)})
     return {"ok":passed,**result}
 
