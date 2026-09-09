@@ -2,20 +2,25 @@
   "version":"V6",
   "experiment_id":7,
   "signal_available_at":"2026-09-08T19:27:58.480854+00:00",
-  "evaluation_as_of":"2026-09-09T06:14:20.063033+00:00",
+  "evaluation_as_of":"2026-09-09T08:17:34.875619+00:00",
   "decision":"NO_ACTION",
   "decision_state":"NO_ACTION_PREREQUISITES_INCOMPLETE",
   "data_gaps":["MISSING_CALIBRATED_EXPECTATION_GAP","NO_OOS_INCREMENTAL_RETURN_MODEL","NO_VALIDATED_BOTTLENECK_FORECAST","UNCALIBRATED_ECONOMIC_CAPTURE"],
   "discovery":{"hypotheses_tested":3430,"fdr_survivors":1878,"fdr_alpha":0.05,"semantic_concepts":25,"semantic_edges":156,"transmission_edges":6,"supported_descriptive_edges":1,"predictive_edges":0,"causal_edges":0},
   "structural_bottlenecks":{
-    "state":"STRUCTURAL_CANDIDATES_AVAILABLE","count":69,"probabilities_written":0,
+    "state":"EVIDENCE_BACKED_TENSION_AVAILABLE","count":69,"probabilities_written":0,
+    "unique_tension_bottlenecks":2,"tension_rows":8,
     "by_category":{"COMPONENT":22,"INFRASTRUCTURE":19,"RAW_MATERIAL":11,"PROCESS":9,"ENERGY":6,"CAPACITY":1,"TECHNOLOGY":1},
-    "note":"Structural prerequisite only; scarcity/tension is not yet proven.",
+    "note":"69 necessary dependencies remain in the structural map. Two unique bottlenecks now have independent PIT SEC tension evidence; this is still not a calibrated bottleneck probability.",
+    "tension_backed":[
+      {"name":"Semiconductors","node":"COMPONENT:Semiconductors","independent_issuers":7,"evidence_count":14,"evidence_types":["CAPACITY","CONSTRAINT","DEMAND","ORDERS","SUPPLY"],"issuers":["AAPL","AMAT","ASTS","AVGO","KLAC","LRCX","QCOM"],"supplier_candidates":["AMD","LRCX"]},
+      {"name":"Grid Power Capacity","node":"INFRASTRUCTURE:Grid Power Capacity","independent_issuers":2,"evidence_count":2,"evidence_types":["BACKLOG","ORDERS"],"issuers":["ACA","CEG"],"supplier_candidates":["ETN"]}
+    ],
     "groups":[
       {"trend":"AI Infrastructure / Data Centers","dependencies":[
         {"name":"AI Accelerators","category":"COMPONENT","reason":"Training and inference at scale require accelerator compute capacity."},
         {"name":"High Bandwidth Memory","category":"COMPONENT","reason":"High-throughput accelerator workloads depend on memory bandwidth."},
-        {"name":"Grid Power Capacity","category":"ENERGY","reason":"Large-scale compute requires reliable electrical power capacity."},
+        {"name":"Grid Power Capacity","category":"ENERGY","reason":"Large-scale compute requires reliable electrical power capacity.","status":"EVIDENCE_BACKED_TENSION"},
         {"name":"Power Transformers","category":"INFRASTRUCTURE","reason":"New high-load compute facilities require grid interconnection and transformer capacity."},
         {"name":"Data Center Cooling","category":"INFRASTRUCTURE","reason":"Dense compute cannot operate continuously without thermal management."},
         {"name":"High-Speed Networking","category":"INFRASTRUCTURE","reason":"Distributed compute clusters depend on high-bandwidth interconnects."},
@@ -25,7 +30,7 @@
         {"name":"Actuators and Motors","category":"COMPONENT","reason":"Robotic motion requires actuators and motors."},
         {"name":"Batteries","category":"COMPONENT","reason":"Mobile autonomous systems require onboard energy storage."},
         {"name":"Power Electronics","category":"COMPONENT","reason":"Electric actuation requires power conversion and control electronics."},
-        {"name":"Semiconductors","category":"COMPONENT","reason":"Autonomous machines require onboard compute and control semiconductors."},
+        {"name":"Semiconductors","category":"COMPONENT","reason":"Autonomous machines require onboard compute and control semiconductors.","status":"EVIDENCE_BACKED_TENSION"},
         {"name":"Sensors","category":"COMPONENT","reason":"Physical autonomy depends on perception and feedback sensors."},
         {"name":"Rare Earth Magnets","category":"RAW_MATERIAL","reason":"High-performance compact motors often depend on permanent magnets containing rare-earth materials."}]},
       {"trend":"Energy Storage","dependencies":[
@@ -44,36 +49,42 @@
   },
   "structural_company_bridge":{
     "state":"STRUCTURAL_EXPOSURE_CANDIDATES_AVAILABLE","matching_policy":"STRICT_EXPLICIT_DEPENDENCY_TERM_AND_ROLE_CUE","supplier_candidate_count":6,
-    "note":"Explicit SEC supply-side wording. Research lead only; no scarcity, capture, valuation or return probability implied.",
+    "note":"Explicit SEC supply-side wording. Only AMD, LRCX and ETN currently sit on bottlenecks with independent tension evidence.",
     "supplier_candidates":[
-      {"ticker":"LRCX","bottlenecks":["High Bandwidth Memory","Advanced Semiconductor Packaging","Semiconductors"],"evidence_links":4,"why":"SEC evidence describes HBM 3D-stacking and wafer-level packaging solutions."},
-      {"ticker":"AMD","bottlenecks":["AI Accelerators","Semiconductors"],"evidence_links":3,"why":"SEC evidence states AMD products include AI accelerators, CPUs and GPUs."},
-      {"ticker":"AVGO","bottlenecks":["High-Speed Networking"],"evidence_links":1,"why":"SEC evidence describes network-interface cards, switches and subsystems used in AI data centers."},
-      {"ticker":"DELL","bottlenecks":["High-Speed Networking"],"evidence_links":1,"why":"SEC evidence describes Dell's data-center networking portfolio and switches."},
-      {"ticker":"ETN","bottlenecks":["Data Center Cooling"],"evidence_links":1,"why":"SEC evidence describes cooling and electrical-power products serving data-center markets."},
-      {"ticker":"TER","bottlenecks":["High Bandwidth Memory"],"evidence_links":1,"why":"SEC evidence describes HBM and DRAM test solutions supporting AI compute deployments."}
+      {"ticker":"LRCX","bottlenecks":["High Bandwidth Memory","Advanced Semiconductor Packaging","Semiconductors"],"evidence_links":4,"tension_backed":true,"tension_bottlenecks":["Semiconductors"],"why":"SEC evidence describes semiconductor process solutions, HBM 3D-stacking and wafer-level packaging."},
+      {"ticker":"AMD","bottlenecks":["AI Accelerators","Semiconductors"],"evidence_links":3,"tension_backed":true,"tension_bottlenecks":["Semiconductors"],"why":"SEC evidence states AMD products include AI accelerators, CPUs and GPUs."},
+      {"ticker":"ETN","bottlenecks":["Grid Power Capacity","Data Center Cooling"],"evidence_links":2,"tension_backed":true,"tension_bottlenecks":["Grid Power Capacity"],"why":"SEC evidence explicitly describes electrical-power products sold into data centers, utilities and other power-demand markets."},
+      {"ticker":"AVGO","bottlenecks":["High-Speed Networking"],"evidence_links":1,"tension_backed":false,"why":"SEC evidence describes network-interface cards, switches and subsystems used in AI data centers."},
+      {"ticker":"DELL","bottlenecks":["High-Speed Networking"],"evidence_links":1,"tension_backed":false,"why":"SEC evidence describes Dell's data-center networking portfolio and switches."},
+      {"ticker":"TER","bottlenecks":["High Bandwidth Memory"],"evidence_links":1,"tension_backed":false,"why":"SEC evidence describes HBM and DRAM test solutions supporting AI compute deployments."}
+    ]
+  },
+  "bottleneck_forecast":{"state":"NO_FORECAST_UNCALIBRATED","unique_candidates":2,"candidate_bottlenecks":["COMPONENT:Semiconductors","INFRASTRUCTURE:Grid Power Capacity"],"calibration_outcomes":0,"minimum_calibration_outcomes":20,"probabilities_written":0,"note":"Observed tension is descriptive. ORACLE still refuses to assign P(bottleneck) without historical realized outcomes."},
+  "economic_capture":{
+    "state":"CAPTURE_EVIDENCE_AVAILABLE_UNCALIBRATED","tension_supplier_candidates":3,"capture_evidence_backed":0,"capture_probabilities_written":0,"pricing_power_probabilities_written":0,
+    "note":"Supplier role plus bottleneck tension is not enough. V1 requires at least two independent PIT SEC documents with both commercial pull and ability/supply evidence before even calling capture evidence backed.",
+    "suppliers":[
+      {"ticker":"AMD","bottleneck":"Semiconductors","status":"CAPTURE_EVIDENCE_CANDIDATE","independent_documents":0,"commercial_pull":false,"ability_supply":false,"pricing_power":false},
+      {"ticker":"LRCX","bottleneck":"Semiconductors","status":"CAPTURE_EVIDENCE_CANDIDATE","independent_documents":1,"evidence_types":["DEMAND","ORDERS"],"commercial_pull":true,"ability_supply":false,"pricing_power":false},
+      {"ticker":"ETN","bottleneck":"Grid Power Capacity","status":"CAPTURE_EVIDENCE_CANDIDATE","independent_documents":1,"evidence_types":["DEMAND"],"commercial_pull":true,"ability_supply":false,"pricing_power":false}
     ]
   },
   "capture":{"candidate_tickers":14,"candidate_pairs":42,"concepts_with_sec_support":7,"capture_probabilities_written":0},
   "market_expectations":{
-    "state":"REVERSE_DCF_AVAILABLE_NO_CALIBRATED_FORWARD_EXPECTATION_GAP",
-    "reverse_dcf_rows":7,
-    "pit_fcf_tickers":10,
-    "pit_fcf_snapshots":148,
-    "position_tickers":11,
-    "proxy_substitution_allowed":false,
-    "note":"Reverse DCF measures what FCF growth the market price implies. It is not a BUY signal until ORACLE has a calibrated forward-fundamentals forecast.",
+    "state":"REVERSE_DCF_AVAILABLE_NO_CALIBRATED_FORWARD_EXPECTATION_GAP","reverse_dcf_rows":7,"pit_fcf_tickers":10,"pit_fcf_snapshots":148,"position_tickers":11,"proxy_substitution_allowed":false,
+    "note":"Reverse DCF measures what FCF growth the market price implies. FCF5Y_RIDGE_PIT_V1 improved holdout MAE versus baseline but failed probability calibration, so no P(fundamentals exceed expectations) is emitted.",
+    "forecast_validation":{"model_version":"FCF5Y_RIDGE_PIT_V1","holdout_n":97,"holdout_mae":0.0950510274,"baseline_mae":0.2533476715,"improvement_vs_baseline":0.6248198106,"interval80_coverage":0.8247422680,"pit_ks_p":0.0005586691,"calibrated":false,"probabilities_written":0},
     "reverse_dcf":[
-      {"ticker":"AAPL","implied_fcf_cagr_5y":0.3501652657,"base_fcf":98767000000.0},
-      {"ticker":"AMD","implied_fcf_cagr_5y":0.6957472004,"base_fcf":5519000000.0},
-      {"ticker":"AVGO","implied_fcf_cagr_5y":0.4416813881,"base_fcf":26914000000.0},
-      {"ticker":"HON","implied_fcf_cagr_5y":-0.0087104739,"base_fcf":5089000000.0},
-      {"ticker":"ROK","implied_fcf_cagr_5y":0.3136834053,"base_fcf":1213500000.0},
-      {"ticker":"TER","implied_fcf_cagr_5y":0.6488592147,"base_fcf":450406000.0},
-      {"ticker":"TSLA","implied_fcf_cagr_5y":0.8673436514,"base_fcf":6220000000.0}
+      {"ticker":"AAPL","implied_fcf_cagr_5y":0.3501652657,"forecast_fcf_cagr_5y":0.0150258298,"forecast_low":-0.1234908624,"forecast_high":0.2393866105},
+      {"ticker":"AMD","implied_fcf_cagr_5y":0.6957472004,"forecast_fcf_cagr_5y":0.0034684600,"forecast_low":-0.1334710422,"forecast_high":0.2252746057},
+      {"ticker":"AVGO","implied_fcf_cagr_5y":0.4416813881,"forecast_fcf_cagr_5y":-0.0070837533,"forecast_low":-0.1425832352,"forecast_high":0.2123899367},
+      {"ticker":"HON","implied_fcf_cagr_5y":-0.0087104739,"forecast_fcf_cagr_5y":0.0554502709,"forecast_low":-0.0885829901,"forecast_high":0.2887464490},
+      {"ticker":"ROK","implied_fcf_cagr_5y":0.3136834053,"forecast_fcf_cagr_5y":0.0629623811,"forecast_low":-0.0820960289,"forecast_high":0.2979190321},
+      {"ticker":"TER","implied_fcf_cagr_5y":0.6488592147,"forecast_fcf_cagr_5y":0.1213955245,"forecast_low":-0.0316370330,"forecast_high":0.3692682071},
+      {"ticker":"TSLA","implied_fcf_cagr_5y":0.8673436514,"forecast_fcf_cagr_5y":0.0467181671,"forecast_low":-0.0961234571,"forecast_high":0.2780842056}
     ]
   },
-  "system":{"sec_companyfacts_status":"HTTP_200_VIA_SUPABASE_EDGE","sec_financials_transport":"SUPABASE_EDGE_RUNTIME","evaluation_run_id":13,"ci_run_id":34318088090,"ci_status":"SUCCESS"},
+  "system":{"sec_companyfacts_status":"HTTP_200_VIA_SUPABASE_EDGE","sec_financials_transport":"SUPABASE_EDGE_RUNTIME","evaluation_run_id":19,"ci_run_id":34328228388,"ci_status":"SUCCESS_THROUGH_SCIENTIFIC_STAGES"},
   "candidates":[
     {"ticker":"AMD","trends":["AI Infrastructure","Artificial Intelligence","Data Center","Data Centers"],"evidence_pairs":4},
     {"ticker":"AVGO","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
