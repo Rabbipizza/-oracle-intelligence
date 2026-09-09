@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
@@ -71,6 +71,12 @@ jobs:
       - name: Bottleneck calibration gate
         working-directory: analytics
         run: python oracle_v6_bottleneck_gate.py
+      - name: SEC capture full-text via Supabase Edge
+        working-directory: analytics
+        run: python oracle_v6_sec_capture_trigger.py
+      - name: Materialize PIT SEC capture evidence
+        working-directory: analytics
+        run: python oracle_v6_sec_capture_backfill.py
       - name: Economic capture evidence
         working-directory: analytics
         run: python oracle_v6_economic_capture_evidence.py
