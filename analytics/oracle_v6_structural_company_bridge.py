@@ -33,7 +33,7 @@ RULES={
  "Batteries":({"SUPPLY","DEMAND","AI"},r"\b(battery|batteries)\b"),
  "Rare Earth Magnets":({"SUPPLY","CONSTRAINT"},r"\b(rare earth magnet|rare-earth magnet|permanent magnet|permanent magnets)\b"),
 }
-SUPPLIER_CUE=re.compile(r"\b(our products|products include|our solutions|we offer|portfolio includes|our portfolio|we provide|we supply|develop and supply|manufacture|manufacturing|test solutions|solutions that|produced and sold|designer and builder|systems we sell|equipment we sell)\b",re.I)
+SUPPLIER_CUE=re.compile(r"\b(our products|products include|our solutions|we offer|portfolio includes|our portfolio|we provide|we supply|develop and supply|we manufacture|we produce|test solutions|solutions that|produced and sold|designer and builder|systems we sell|equipment we sell)\b",re.I)
 
 def engine_for(url):
  if url.startswith('postgres://'): url='postgresql+psycopg://'+url[len('postgres://'):]
