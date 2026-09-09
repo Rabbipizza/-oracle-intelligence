@@ -34,6 +34,7 @@ RULES={
  "Rare Earth Magnets":({"SUPPLY","CONSTRAINT"},r"\b(rare earth magnet|rare-earth magnet|permanent magnet|permanent magnets)\b"),
 }
 SUPPLIER_CUE=re.compile(r"\b(our products|products include|our solutions|we offer|portfolio includes|our portfolio|we provide|we supply|develop and supply|we manufacture|we produce|test solutions|solutions that|produced and sold|designer and builder|systems we sell|equipment we sell)\b",re.I)
+GRID_SUPPLIER_CUE=re.compile(r"\b(these products are used|sales are made through|sales are made directly|power distribution and assemblies)\b",re.I)
 
 def engine_for(url):
  if url.startswith('postgres://'): url='postgresql+psycopg://'+url[len('postgres://'):]
@@ -65,7 +66,7 @@ def run(db_url):
     k=(str(dep['trend_node']),str(dep['bottleneck_node']),ticker,int(ev['id']))
     if k in seen: continue
     seen.add(k)
-    role='SUPPLIER_CANDIDATE' if SUPPLIER_CUE.search(excerpt) else 'DEMAND_SIDE_EXPOSURE'
+    role='SUPPLIER_CANDIDATE' if (SUPPLIER_CUE.search(excerpt) or (name=='Grid Power Capacity' and GRID_SUPPLIER_CUE.search(excerpt))) else 'DEMAND_SIDE_EXPOSURE'
     rows.append({"experiment_id":int(exp),"evaluation_as_of":evaluation_as_of,"trend_node":str(dep['trend_node']),"bottleneck_node":str(dep['bottleneck_node']),"ticker":ticker,"role":role,"evidence_key":key,"evidence_id":int(ev['id']),"evidence_available_at":ev['available_at'],"source_url":ev['source_url'],"excerpt":excerpt,"mapping_rule":f"STRICT_EXPLICIT:{name}:{key}:{pattern}"})
   if rows: conn.execute(text("insert into public.oracle_v6_structural_company_exposure (experiment_id,evaluation_as_of,trend_node,bottleneck_node,ticker,exposure_status,exposure_role,evidence_key,evidence_id,evidence_available_at,source_url,excerpt,mapping_rule) values (:experiment_id,:evaluation_as_of,:trend_node,:bottleneck_node,:ticker,'STRUCTURAL_EXPOSURE_CANDIDATE',:role,:evidence_key,:evidence_id,:evidence_available_at,:source_url,:excerpt,:mapping_rule) on conflict do nothing"),rows)
   stats=conn.execute(text("select count(*) evidence_links,count(distinct ticker) tickers,count(distinct bottleneck_node) bottlenecks,count(distinct trend_node) trends,count(*) filter(where exposure_role='SUPPLIER_CANDIDATE') supplier_links,count(distinct ticker) filter(where exposure_role='SUPPLIER_CANDIDATE') supplier_tickers from public.oracle_v6_structural_company_exposure where experiment_id=:e and evaluation_as_of=:a"),{"e":exp,"a":evaluation_as_of}).mappings().one()
