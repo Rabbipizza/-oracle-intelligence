@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_capture_calibration_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
@@ -80,6 +80,9 @@ jobs:
       - name: Economic capture evidence
         working-directory: analytics
         run: python oracle_v6_economic_capture_evidence.py
+      - name: Economic capture calibration readiness
+        working-directory: analytics
+        run: python oracle_v6_capture_calibration_gate.py
       - name: Company capture evidence gate
         working-directory: analytics
         run: python oracle_v6_company_capture_gate.py
@@ -119,6 +122,8 @@ jobs:
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_bottleneck_tension_gate.sql
       - name: Economic capture evidence gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_economic_capture_evidence_gate.sql
+      - name: Economic capture calibration gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_capture_calibration_gate.sql
       - name: Company capture gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_company_capture_gate.sql
       - name: SEC cashflow PIT gate
