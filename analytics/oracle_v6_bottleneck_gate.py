@@ -31,7 +31,7 @@ def run(db_url:str)->dict:
         if cutoff is None:
             cutoff=conn.execute(text("select evaluation_as_of from public.oracle_v6_evaluation_runs where experiment_id=:e order by evaluation_as_of desc,id desc limit 1"),{'e':experiment_id}).scalar_one_or_none()
         if cutoff is None: raise RuntimeError('no evaluation clock')
-        candidates=conn.execute(text("select distinct bottleneck_node,independent_source_count,metadata from public.oracle_v6_structural_bottlenecks where experiment_id=:e and evaluation_as_of=:a and structural_status='EVIDENCE_BACKED_TENSION' and independent_source_count>=:n order by bottleneck_node"),{'e':experiment_id,'a':cutoff,'n':MIN_INDEPENDENT_GROUPS}).mappings().all()
+        candidates=conn.execute(text("select bottleneck_node,max(independent_source_count) independent_source_count from public.oracle_v6_structural_bottlenecks where experiment_id=:e and evaluation_as_of=:a and structural_status='EVIDENCE_BACKED_TENSION' and independent_source_count>=:n group by bottleneck_node order by bottleneck_node"),{'e':experiment_id,'a':cutoff,'n':MIN_INDEPENDENT_GROUPS}).mappings().all()
         calibration_outcomes=int(conn.execute(text("select count(*) from public.oracle_v6_bottleneck_forecasts where realized_outcome is not null and realized_at is not null and model_version is not null")).scalar_one())
         calibrated=calibration_outcomes>=MIN_CALIBRATION_OUTCOMES
         if not candidates: state='NO_FORECAST_INSUFFICIENT_INDEPENDENT_EVIDENCE'
