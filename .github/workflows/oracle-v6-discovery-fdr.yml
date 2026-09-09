@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
@@ -80,6 +80,9 @@ jobs:
       - name: Deterministic PIT reverse DCF
         working-directory: analytics
         run: python oracle_v6_reverse_dcf.py
+      - name: Walk-forward fundamental forecast
+        working-directory: analytics
+        run: python oracle_v6_fundamental_forecast.py
       - name: Market expectations calibration gate
         working-directory: analytics
         run: python oracle_v6_market_expectations_gate.py
@@ -108,6 +111,8 @@ jobs:
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_sec_position_pit_gate.sql
       - name: Reverse DCF gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_reverse_dcf_gate.sql
+      - name: Fundamental forecast calibration gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_fundamental_forecast_gate.sql
       - name: Market expectations gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_market_expectations_gate.sql
       - name: Final decision gate
