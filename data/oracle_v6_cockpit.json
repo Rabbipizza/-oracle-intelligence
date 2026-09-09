@@ -1,102 +1,63 @@
 {
-  "version": "V6",
-  "experiment_id": 7,
-  "signal_available_at": "2026-09-08T19:27:58.480854+00:00",
-  "evaluation_as_of": "2026-09-08T21:55:52.471231+00:00",
-  "decision": "NO_ACTION",
-  "decision_state": "NO_ACTION_PREREQUISITES_INCOMPLETE",
-  "data_gaps": [
-    "MISSING_CALIBRATED_EXPECTATION_GAP",
-    "NO_OOS_INCREMENTAL_RETURN_MODEL",
-    "NO_VALIDATED_BOTTLENECK_FORECAST",
-    "UNCALIBRATED_ECONOMIC_CAPTURE"
-  ],
-  "discovery": {
-    "hypotheses_tested": 3430,
-    "fdr_survivors": 1878,
-    "fdr_alpha": 0.05,
-    "semantic_concepts": 25,
-    "semantic_edges": 156,
-    "transmission_edges": 6,
-    "supported_descriptive_edges": 1,
-    "predictive_edges": 0,
-    "causal_edges": 0
-  },
-  "structural_bottlenecks": {
-    "state": "STRUCTURAL_CANDIDATES_AVAILABLE",
-    "count": 69,
-    "probabilities_written": 0,
-    "by_category": {"COMPONENT":22,"INFRASTRUCTURE":19,"RAW_MATERIAL":11,"PROCESS":9,"ENERGY":6,"CAPACITY":1,"TECHNOLOGY":1},
-    "note": "Structural prerequisite only; scarcity/tension is not yet proven.",
-    "groups": [
-      {
-        "trend": "AI Infrastructure / Data Centers",
-        "dependencies": [
-          {"name":"AI Accelerators","category":"COMPONENT","reason":"Training and inference at scale require accelerator compute capacity."},
-          {"name":"High Bandwidth Memory","category":"COMPONENT","reason":"High-throughput accelerator workloads depend on memory bandwidth."},
-          {"name":"Grid Power Capacity","category":"ENERGY","reason":"Large-scale compute requires reliable electrical power capacity."},
-          {"name":"Power Transformers","category":"INFRASTRUCTURE","reason":"New high-load compute facilities require grid interconnection and transformer capacity."},
-          {"name":"Data Center Cooling","category":"INFRASTRUCTURE","reason":"Dense compute cannot operate continuously without thermal management."},
-          {"name":"High-Speed Networking","category":"INFRASTRUCTURE","reason":"Distributed compute clusters depend on high-bandwidth interconnects."},
-          {"name":"Advanced Semiconductor Packaging","category":"PROCESS","reason":"Leading accelerators depend on advanced packaging capacity."},
-          {"name":"Copper","category":"RAW_MATERIAL","reason":"Power distribution and data-center electrical infrastructure require substantial copper content."}
-        ]
-      },
-      {
-        "trend": "Physical AI / Robot Learning",
-        "dependencies": [
-          {"name":"Actuators and Motors","category":"COMPONENT","reason":"Robotic motion requires actuators and motors."},
-          {"name":"Batteries","category":"COMPONENT","reason":"Mobile autonomous systems require onboard energy storage."},
-          {"name":"Power Electronics","category":"COMPONENT","reason":"Electric actuation requires power conversion and control electronics."},
-          {"name":"Semiconductors","category":"COMPONENT","reason":"Autonomous machines require onboard compute and control semiconductors."},
-          {"name":"Sensors","category":"COMPONENT","reason":"Physical autonomy depends on perception and feedback sensors."},
-          {"name":"Rare Earth Magnets","category":"RAW_MATERIAL","reason":"High-performance compact motors often depend on permanent magnets containing rare-earth materials."}
-        ]
-      },
-      {
-        "trend": "Energy Storage",
-        "dependencies": [
-          {"name":"Cell Manufacturing Capacity","category":"CAPACITY","reason":"Storage deployment requires scalable cell manufacturing capacity."},
-          {"name":"Grid Interconnection","category":"INFRASTRUCTURE","reason":"Grid-scale storage cannot monetize without interconnection capacity."},
-          {"name":"Battery Materials","category":"RAW_MATERIAL","reason":"Electrochemical storage requires active-material feedstocks whose exact mix depends on chemistry."},
-          {"name":"Copper","category":"RAW_MATERIAL","reason":"Battery systems and grid interconnection require conductive copper."}
-        ]
-      },
-      {
-        "trend": "Rare Earths",
-        "dependencies": [
-          {"name":"Rare Earth Separation and Refining","category":"PROCESS","reason":"Mined rare-earth material requires separation and refining before high-value use."},
-          {"name":"Permanent Magnet Manufacturing","category":"PROCESS","reason":"Magnet applications require downstream alloying and magnet manufacturing capacity."}
-        ]
-      },
-      {
-        "trend": "Chip System",
-        "dependencies": [
-          {"name":"Lithography Equipment","category":"TECHNOLOGY","reason":"Advanced semiconductor manufacturing requires lithography capability."},
-          {"name":"Advanced Semiconductor Packaging","category":"PROCESS","reason":"Advanced chips increasingly require complex packaging and integration."},
-          {"name":"Semiconductor Materials and Gases","category":"RAW_MATERIAL","reason":"Wafer fabrication depends on specialty materials and process gases."}
-        ]
-      }
+  "version":"V6",
+  "experiment_id":7,
+  "signal_available_at":"2026-09-08T19:27:58.480854+00:00",
+  "evaluation_as_of":"2026-09-08T21:55:52.471231+00:00",
+  "decision":"NO_ACTION",
+  "decision_state":"NO_ACTION_PREREQUISITES_INCOMPLETE",
+  "data_gaps":["MISSING_CALIBRATED_EXPECTATION_GAP","NO_OOS_INCREMENTAL_RETURN_MODEL","NO_VALIDATED_BOTTLENECK_FORECAST","UNCALIBRATED_ECONOMIC_CAPTURE"],
+  "discovery":{"hypotheses_tested":3430,"fdr_survivors":1878,"fdr_alpha":0.05,"semantic_concepts":25,"semantic_edges":156,"transmission_edges":6,"supported_descriptive_edges":1,"predictive_edges":0,"causal_edges":0},
+  "structural_bottlenecks":{
+    "state":"STRUCTURAL_CANDIDATES_AVAILABLE","count":69,"probabilities_written":0,
+    "by_category":{"COMPONENT":22,"INFRASTRUCTURE":19,"RAW_MATERIAL":11,"PROCESS":9,"ENERGY":6,"CAPACITY":1,"TECHNOLOGY":1},
+    "note":"Structural prerequisite only; scarcity/tension is not yet proven.",
+    "groups":[
+      {"trend":"AI Infrastructure / Data Centers","dependencies":[
+        {"name":"AI Accelerators","category":"COMPONENT","reason":"Training and inference at scale require accelerator compute capacity."},
+        {"name":"High Bandwidth Memory","category":"COMPONENT","reason":"High-throughput accelerator workloads depend on memory bandwidth."},
+        {"name":"Grid Power Capacity","category":"ENERGY","reason":"Large-scale compute requires reliable electrical power capacity."},
+        {"name":"Power Transformers","category":"INFRASTRUCTURE","reason":"New high-load compute facilities require grid interconnection and transformer capacity."},
+        {"name":"Data Center Cooling","category":"INFRASTRUCTURE","reason":"Dense compute cannot operate continuously without thermal management."},
+        {"name":"High-Speed Networking","category":"INFRASTRUCTURE","reason":"Distributed compute clusters depend on high-bandwidth interconnects."},
+        {"name":"Advanced Semiconductor Packaging","category":"PROCESS","reason":"Leading accelerators depend on advanced packaging capacity."},
+        {"name":"Copper","category":"RAW_MATERIAL","reason":"Power distribution and data-center electrical infrastructure require substantial copper content."}]},
+      {"trend":"Physical AI / Robot Learning","dependencies":[
+        {"name":"Actuators and Motors","category":"COMPONENT","reason":"Robotic motion requires actuators and motors."},
+        {"name":"Batteries","category":"COMPONENT","reason":"Mobile autonomous systems require onboard energy storage."},
+        {"name":"Power Electronics","category":"COMPONENT","reason":"Electric actuation requires power conversion and control electronics."},
+        {"name":"Semiconductors","category":"COMPONENT","reason":"Autonomous machines require onboard compute and control semiconductors."},
+        {"name":"Sensors","category":"COMPONENT","reason":"Physical autonomy depends on perception and feedback sensors."},
+        {"name":"Rare Earth Magnets","category":"RAW_MATERIAL","reason":"High-performance compact motors often depend on permanent magnets containing rare-earth materials."}]},
+      {"trend":"Energy Storage","dependencies":[
+        {"name":"Cell Manufacturing Capacity","category":"CAPACITY","reason":"Storage deployment requires scalable cell manufacturing capacity."},
+        {"name":"Grid Interconnection","category":"INFRASTRUCTURE","reason":"Grid-scale storage cannot monetize without interconnection capacity."},
+        {"name":"Battery Materials","category":"RAW_MATERIAL","reason":"Electrochemical storage requires active-material feedstocks whose exact mix depends on chemistry."},
+        {"name":"Copper","category":"RAW_MATERIAL","reason":"Battery systems and grid interconnection require conductive copper."}]},
+      {"trend":"Rare Earths","dependencies":[
+        {"name":"Rare Earth Separation and Refining","category":"PROCESS","reason":"Mined rare-earth material requires separation and refining before high-value use."},
+        {"name":"Permanent Magnet Manufacturing","category":"PROCESS","reason":"Magnet applications require downstream alloying and magnet manufacturing capacity."}]},
+      {"trend":"Chip System","dependencies":[
+        {"name":"Lithography Equipment","category":"TECHNOLOGY","reason":"Advanced semiconductor manufacturing requires lithography capability."},
+        {"name":"Advanced Semiconductor Packaging","category":"PROCESS","reason":"Advanced chips increasingly require complex packaging and integration."},
+        {"name":"Semiconductor Materials and Gases","category":"RAW_MATERIAL","reason":"Wafer fabrication depends on specialty materials and process gases."}]}
     ]
   },
-  "capture": {
-    "candidate_tickers": 14,
-    "candidate_pairs": 42,
-    "concepts_with_sec_support": 7,
-    "capture_probabilities_written": 0
+  "structural_company_bridge":{
+    "state":"STRUCTURAL_EXPOSURE_CANDIDATES_AVAILABLE","matching_policy":"STRICT_EXPLICIT_DEPENDENCY_TERM_AND_ROLE_CUE","supplier_candidate_count":6,
+    "note":"Explicit SEC supply-side wording. Research lead only; no scarcity, capture, valuation or return probability implied.",
+    "supplier_candidates":[
+      {"ticker":"LRCX","bottlenecks":["High Bandwidth Memory","Advanced Semiconductor Packaging","Semiconductors"],"evidence_links":4,"why":"SEC evidence describes HBM 3D-stacking and wafer-level packaging solutions."},
+      {"ticker":"AMD","bottlenecks":["AI Accelerators","Semiconductors"],"evidence_links":3,"why":"SEC evidence states AMD products include AI accelerators, CPUs and GPUs."},
+      {"ticker":"AVGO","bottlenecks":["High-Speed Networking"],"evidence_links":1,"why":"SEC evidence describes network-interface cards, switches and subsystems used in AI data centers."},
+      {"ticker":"DELL","bottlenecks":["High-Speed Networking"],"evidence_links":1,"why":"SEC evidence describes Dell's data-center networking portfolio and switches."},
+      {"ticker":"ETN","bottlenecks":["Data Center Cooling"],"evidence_links":1,"why":"SEC evidence describes cooling and electrical-power products serving data-center markets."},
+      {"ticker":"TER","bottlenecks":["High Bandwidth Memory"],"evidence_links":1,"why":"SEC evidence describes HBM and DRAM test solutions supporting AI compute deployments."}
+    ]
   },
-  "market_expectations": {
-    "state": "NO_EXPECTATION_MODEL_MISSING_PIT_FCF_INPUTS",
-    "reverse_dcf_rows": 0,
-    "pit_fcf_tickers": 0,
-    "proxy_substitution_allowed": false
-  },
-  "system": {
-    "sec_companyfacts_status": "HTTP_403_FROM_GITHUB_RUNNERS",
-    "sec_inline_xbrl_fallback": "RERUN_AFTER_PIT_BACKFILL",
-    "evaluation_run_id": 7
-  },
-  "candidates": [
+  "capture":{"candidate_tickers":14,"candidate_pairs":42,"concepts_with_sec_support":7,"capture_probabilities_written":0},
+  "market_expectations":{"state":"NO_EXPECTATION_MODEL_MISSING_PIT_FCF_INPUTS","reverse_dcf_rows":0,"pit_fcf_tickers":0,"proxy_substitution_allowed":false},
+  "system":{"sec_companyfacts_status":"HTTP_403_FROM_GITHUB_RUNNERS","sec_inline_xbrl_fallback":"HTTP_403_FROM_GITHUB_RUNNERS","evaluation_run_id":7},
+  "candidates":[
     {"ticker":"AMD","trends":["AI Infrastructure","Artificial Intelligence","Data Center","Data Centers"],"evidence_pairs":4},
     {"ticker":"AVGO","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
     {"ticker":"DELL","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
