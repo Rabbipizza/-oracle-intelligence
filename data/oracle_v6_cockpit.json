@@ -2,7 +2,7 @@
   "version":"V6",
   "experiment_id":7,
   "signal_available_at":"2026-09-08T19:27:58.480854+00:00",
-  "evaluation_as_of":"2026-09-08T21:55:52.471231+00:00",
+  "evaluation_as_of":"2026-09-09T06:14:20.063033+00:00",
   "decision":"NO_ACTION",
   "decision_state":"NO_ACTION_PREREQUISITES_INCOMPLETE",
   "data_gaps":["MISSING_CALIBRATED_EXPECTATION_GAP","NO_OOS_INCREMENTAL_RETURN_MODEL","NO_VALIDATED_BOTTLENECK_FORECAST","UNCALIBRATED_ECONOMIC_CAPTURE"],
@@ -55,8 +55,25 @@
     ]
   },
   "capture":{"candidate_tickers":14,"candidate_pairs":42,"concepts_with_sec_support":7,"capture_probabilities_written":0},
-  "market_expectations":{"state":"NO_EXPECTATION_MODEL_MISSING_PIT_FCF_INPUTS","reverse_dcf_rows":0,"pit_fcf_tickers":0,"proxy_substitution_allowed":false},
-  "system":{"sec_companyfacts_status":"HTTP_403_FROM_GITHUB_RUNNERS","sec_inline_xbrl_fallback":"HTTP_403_FROM_GITHUB_RUNNERS","evaluation_run_id":7},
+  "market_expectations":{
+    "state":"REVERSE_DCF_AVAILABLE_NO_CALIBRATED_FORWARD_EXPECTATION_GAP",
+    "reverse_dcf_rows":7,
+    "pit_fcf_tickers":10,
+    "pit_fcf_snapshots":148,
+    "position_tickers":11,
+    "proxy_substitution_allowed":false,
+    "note":"Reverse DCF measures what FCF growth the market price implies. It is not a BUY signal until ORACLE has a calibrated forward-fundamentals forecast.",
+    "reverse_dcf":[
+      {"ticker":"AAPL","implied_fcf_cagr_5y":0.3501652657,"base_fcf":98767000000.0},
+      {"ticker":"AMD","implied_fcf_cagr_5y":0.6957472004,"base_fcf":5519000000.0},
+      {"ticker":"AVGO","implied_fcf_cagr_5y":0.4416813881,"base_fcf":26914000000.0},
+      {"ticker":"HON","implied_fcf_cagr_5y":-0.0087104739,"base_fcf":5089000000.0},
+      {"ticker":"ROK","implied_fcf_cagr_5y":0.3136834053,"base_fcf":1213500000.0},
+      {"ticker":"TER","implied_fcf_cagr_5y":0.6488592147,"base_fcf":450406000.0},
+      {"ticker":"TSLA","implied_fcf_cagr_5y":0.8673436514,"base_fcf":6220000000.0}
+    ]
+  },
+  "system":{"sec_companyfacts_status":"HTTP_200_VIA_SUPABASE_EDGE","sec_financials_transport":"SUPABASE_EDGE_RUNTIME","evaluation_run_id":13,"ci_run_id":34318088090,"ci_status":"SUCCESS"},
   "candidates":[
     {"ticker":"AMD","trends":["AI Infrastructure","Artificial Intelligence","Data Center","Data Centers"],"evidence_pairs":4},
     {"ticker":"AVGO","trends":["Artificial Intelligence","Data Center","Data Centers","Supply Chain"],"evidence_pairs":4},
