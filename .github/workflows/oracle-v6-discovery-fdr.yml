@@ -80,6 +80,9 @@ jobs:
       - name: Materialize evidence-backed bottleneck tension
         working-directory: analytics
         run: python oracle_v6_bottleneck_tension.py
+      - name: P0-8 contextual tension benchmark
+        working-directory: analytics
+        run: python oracle_v6_tension_benchmark.py
       - name: Bottleneck calibration gate
         working-directory: analytics
         run: python oracle_v6_bottleneck_gate.py
