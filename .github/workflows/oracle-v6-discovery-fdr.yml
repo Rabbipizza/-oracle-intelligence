@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_sec_position_ingest.py analytics/oracle_v6_sec_inline_xbrl_fallback.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_cashflow_ingest.py analytics/oracle_v6_sec_position_ingest.py analytics/oracle_v6_sec_inline_xbrl_fallback.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
@@ -62,6 +62,9 @@ jobs:
       - name: Anticipate structural bottlenecks
         working-directory: analytics
         run: python oracle_v6_structural_bottlenecks.py
+      - name: Map structural bottlenecks to company evidence
+        working-directory: analytics
+        run: python oracle_v6_structural_company_bridge.py
       - name: Bottleneck calibration gate
         working-directory: analytics
         run: python oracle_v6_bottleneck_gate.py
@@ -101,6 +104,8 @@ jobs:
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_evaluation_clock_gate.sql
       - name: Structural bottleneck gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_structural_bottleneck_gate.sql
+      - name: Structural bottleneck company bridge gate
+        run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_structural_company_bridge_gate.sql
       - name: Company capture gate
         run: psql --set=ON_ERROR_STOP=1 --dbname="$ORACLE_SUPABASE_DB_URL" --file=sql/tests/v6_company_capture_gate.sql
       - name: SEC cashflow PIT gate
