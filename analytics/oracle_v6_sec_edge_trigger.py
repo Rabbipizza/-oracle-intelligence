@@ -34,8 +34,16 @@ def main():
     payload=json.loads(row['content'] or '{}')
     if not payload.get('ok'):
         raise RuntimeError(f"SEC edge application failure: {payload}")
-    if int(payload.get('issuers_fetched') or 0)<1:
-        raise RuntimeError(f"SEC edge returned no issuers: {payload}")
+
+    target_tickers=int(payload.get('target_tickers') or 0)
+    issuers_fetched=int(payload.get('issuers_fetched') or 0)
+    if target_tickers == 0:
+        payload['state']='NO_REPLICATED_CANDIDATE_TICKERS'
+        payload['p0_7_fail_closed']=True
+        print(json.dumps(payload,sort_keys=True))
+        return
+    if issuers_fetched < 1:
+        raise RuntimeError(f"SEC edge returned no issuers for non-empty target set: {payload}")
     print(json.dumps(payload,sort_keys=True))
 
 if __name__=='__main__':
