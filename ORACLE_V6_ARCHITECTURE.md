@@ -1,5 +1,19 @@
 # ORACLE V6 — Scientific Architecture
 
+> ## P0-9 — DUAL PIT CLOCK: NON-NEGOTIABLE CONTRACT
+>
+> ORACLE maintains two different temporal clocks and they MUST NEVER be mixed.
+>
+> **LIVE clock — `available_at`**: the instant a datum was actually available to the production ORACLE system. It preserves real ingestion/materialization latency and is the only clock used by current production decisions, forward validation and the live sequential alpha budget.
+>
+> **SIMULATED HISTORICAL clock — `available_at_simulated`**: the earliest defensible instant at which the source-world datum could have been observed by an historical ORACLE simulation, irrespective of when the present system ingested it.
+>
+> **INVALID BACKTEST WARNING:** any rolling historical backtest that reads `available_at` instead of `available_at_simulated` is invalid. Historical reads must go through `get_features_as_of(..., mode='simulated_historical')`. Derived signals (structural signals, z-scores, persistence, null-model fits, FDR selections, tension scores and downstream decisions) MUST be recomputed independently at every historical cutoff T. Copying a present-day derived value and merely replacing its timestamp is forbidden because it reintroduces look-ahead through all-history statistics.
+>
+> Current source-world conventions are explicit backtest parameters: SEC facts/evidence become available at `filed_date 23:59:59 UTC`; arXiv documents at `published_at + 1 day` (conservative indexing/reading delay); daily market closes at market date + 1 day; monthly bars at the first day of the following month. These conventions may be revised only as versioned methodology changes.
+>
+> The simulated historical sequential multiple-testing budget is isolated from LIVE. Historical reconstruction uses its own counter with `gamma_t = 6/(pi^2*t^2)` and `alpha_t = target_alpha*gamma_t`; it never spends or rewrites the production alpha ledger.
+
 ## Executive synthesis of the two audits
 
 Both reviews agree on the same diagnosis: ORACLE has a defensible economic intuition but its current implementation risks converting plausible stories into apparently precise scores. V6 therefore separates three independent engines and makes all outputs testable against explicit null models and baselines.
@@ -205,8 +219,12 @@ The primary research comparison is:
 
 ## Point-in-time protocol
 
-Every observation requires `available_at`.
-Historical simulation at T may use only rows with `available_at <= T`.
+Every source observation has two distinct temporal semantics where historical reconstruction is supported:
+- `available_at`: LIVE availability in ORACLE;
+- `available_at_simulated`: source-world availability for simulated historical research.
+
+LIVE evaluation at T may use only rows whose LIVE `available_at <= T`.
+Historical rolling simulation at T may use only source rows whose `available_at_simulated <= T`, and every derived feature must be recalculated from that truncated information set.
 
 For revised datasets store vintages. For equities store historical universe membership and delisting outcomes.
 
@@ -214,7 +232,7 @@ LLM historical runs must use frozen evidence packs and persist:
 - model identifier/version;
 - prompt hash;
 - source-document ids;
-- max available_at;
+- maximum effective availability under the selected clock;
 - output hash.
 
 ## Walk-forward protocol
