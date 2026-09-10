@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-v6.txt
       - name: Compile scientific code
-        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_sequential_fdr.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_signal_lifecycle.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_demographic_context.py analytics/oracle_v6_demographic_trends.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_capture_calibration_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py analytics/oracle_v6_forward_validation.py analytics/oracle_v6_tension_benchmark.py
+        run: python -m py_compile analytics/oracle_v6_scientific_core.py analytics/oracle_v6_formal_nulls.py analytics/oracle_v6_sequential_fdr.py analytics/oracle_v6_discovery_pipeline.py analytics/oracle_v6_trend_probability.py analytics/oracle_v6_signal_lifecycle.py analytics/oracle_v6_semantic_bridge.py analytics/oracle_v6_transmission_graph.py analytics/oracle_v6_evaluation_clock.py analytics/oracle_v6_demographic_context.py analytics/oracle_v6_demographic_trends.py analytics/oracle_v6_structural_bottlenecks.py analytics/oracle_v6_structural_company_bridge.py analytics/oracle_v6_bottleneck_tension.py analytics/oracle_v6_bottleneck_gate.py analytics/oracle_v6_sec_capture_trigger.py analytics/oracle_v6_sec_capture_backfill.py analytics/oracle_v6_economic_capture_evidence.py analytics/oracle_v6_capture_calibration_gate.py analytics/oracle_v6_company_capture_gate.py analytics/oracle_v6_sec_edge_trigger.py analytics/oracle_v6_sec_materialize.py analytics/oracle_v6_reverse_dcf.py analytics/oracle_v6_fundamental_forecast.py analytics/oracle_v6_market_expectations_gate.py analytics/oracle_v6_decision_gate.py analytics/oracle_v6_forward_validation.py analytics/oracle_v6_tension_benchmark.py analytics/oracle_v6_end_to_end_edge_audit.py
       - name: Formal rolling count nulls
         working-directory: analytics
         run: python oracle_v6_formal_nulls.py
@@ -122,6 +122,9 @@ jobs:
       - name: Record and mature forward validation
         working-directory: analytics
         run: python oracle_v6_forward_validation.py
+      - name: End-to-end OOS edge audit
+        working-directory: analytics
+        run: python oracle_v6_end_to_end_edge_audit.py
       - name: Install PostgreSQL client
         run: sudo apt-get update -qq && sudo apt-get install -y -qq postgresql-client
       - name: FDR gate
