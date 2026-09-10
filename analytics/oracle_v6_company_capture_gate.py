@@ -4,6 +4,12 @@
 Structural concepts are frozen at the signal's immutable availability time.
 Company evidence is evaluated at the current evaluation-run timestamp and only
 for securities present in the point-in-time listed universe on that date.
+
+P0-7 interaction: if there are no replicated structural concepts, this stage is
+not an error. It must fail closed by producing no company-capture candidates and
+an explicit NO_REPLICATED_STRUCTURAL_CONCEPTS state. This prevents a transient
+absence of eligible signals from crashing the scientific pipeline or, worse,
+falling back to unreplicated concepts.
 """
 from __future__ import annotations
 
@@ -24,6 +30,14 @@ def _engine(db_url: str):
     else:
         raise ValueError("db_url must be PostgreSQL")
     return create_engine(db_url, pool_pre_ping=True)
+
+
+def _write_summary(conn, experiment_id: int, summary: dict) -> None:
+    conn.execute(text("""
+        update public.oracle_v6_experiments
+        set metrics=jsonb_set(coalesce(metrics,'{}'::jsonb),'{company_capture_gate}',cast(:summary as jsonb),true)
+        where id=:experiment_id
+    """), {"summary": json.dumps(summary, sort_keys=True), "experiment_id": experiment_id})
 
 
 def run(db_url: str) -> dict:
@@ -61,8 +75,31 @@ def run(db_url: str) -> dict:
               and split_part(g.target_node,':',2)<>''
             order by 1
         """), {"signal_cutoff": signal_available_at}).scalars().all()]
+
+        # P0-7 fail-closed behavior: no replicated concepts means no downstream
+        # company-capture candidates. Do not substitute historical/unreplicated
+        # concepts and do not crash the run.
         if not concepts:
-            raise RuntimeError("no structural concepts from semantic bridge")
+            conn.execute(text("""
+                delete from public.oracle_v6_company_capture
+                where model_version=:model and as_of=:cutoff
+            """), {"model": MODEL_VERSION, "cutoff": evaluation_as_of})
+            summary = {
+                "model_version": MODEL_VERSION,
+                "signal_available_at": signal_available_at.isoformat(),
+                "evaluation_as_of": evaluation_as_of.isoformat(),
+                "dynamic_universe_size": 0,
+                "structural_concepts_considered": 0,
+                "candidate_pairs": 0,
+                "tickers": 0,
+                "concepts_with_sec_support": 0,
+                "capture_probabilities_written": 0,
+                "financial_impact_fields_written": 0,
+                "state": "NO_REPLICATED_STRUCTURAL_CONCEPTS",
+                "p0_7_fail_closed": True,
+            }
+            _write_summary(conn, experiment_id, summary)
+            return {"ok": True, "experiment_id": experiment_id, **summary}
 
         investable = [str(x) for x in conn.execute(text("""
             select ticker from public.oracle_v6_universe_as_of(cast(:evaluation_date as date))
@@ -140,12 +177,9 @@ def run(db_url: str) -> dict:
             "capture_probabilities_written": 0,
             "financial_impact_fields_written": 0,
             "state": "INVESTABLE_EVIDENCE_CANDIDATES_ONLY_UNCALIBRATED",
+            "p0_7_fail_closed": False,
         }
-        conn.execute(text("""
-            update public.oracle_v6_experiments
-            set metrics=jsonb_set(coalesce(metrics,'{}'::jsonb),'{company_capture_gate}',cast(:summary as jsonb),true)
-            where id=:experiment_id
-        """), {"summary": json.dumps(summary, sort_keys=True), "experiment_id": experiment_id})
+        _write_summary(conn, experiment_id, summary)
 
     return {"ok": True, "experiment_id": experiment_id, **summary}
 
