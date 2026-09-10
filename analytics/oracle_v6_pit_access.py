@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Central point-in-time feature access for ORACLE V6 backtests.
+"""Central point-in-time feature access for ORACLE V6.
 
-All V6 historical feature reads go through the database PIT gateway. Source type
-is mandatory so a request cannot accidentally scan every historical source.
+P0-9 dual-clock contract:
+- mode='live' uses the time the datum was actually available to ORACLE.
+- mode='simulated_historical' uses source-world availability for rolling backtests.
+
+Derived historical signals are never relabelled: the database gateway rejects
+STRUCTURAL_SIGNAL reads in simulated mode so they must be reconstructed at T.
 """
 from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Iterable
+
+VALID_MODES = {"live", "simulated_historical"}
 
 
 @dataclass(frozen=True)
@@ -32,15 +38,17 @@ def get_features_as_of(
     after_available_at: datetime | None = None,
     after_source_id: str | None = None,
     limit: int = 1000,
+    mode: str = "live",
 ) -> list[PITFeature]:
-    """Return one keyset-paginated PIT page available by ``decision_time``.
+    """Return a PIT page under one explicit clock.
 
-    ``source_type`` is mandatory by design. The database gateway routes heavy
-    sources such as RAW_DOCUMENT and STRUCTURAL_SIGNAL directly to their indexed
-    tables, while smaller/vintage sources come from oracle_v6_pit_observations.
+    Rolling historical backtests MUST pass mode='simulated_historical'. The
+    default remains live to preserve production behavior.
     """
     if decision_time.tzinfo is None:
         raise ValueError("decision_time must be timezone-aware")
+    if mode not in VALID_MODES:
+        raise ValueError("mode must be 'live' or 'simulated_historical'")
     if not source_type or not source_type.strip():
         raise ValueError("source_type is required")
     if not 1 <= limit <= 5000:
@@ -51,21 +59,12 @@ def get_features_as_of(
     sql = """
         select source_type, source_id, entity_key, event_date, published_at,
                available_at, ingested_at, vintage_id, metadata
-        from public.get_features_as_of_v2(%s, %s, %s, %s, %s, %s)
+        from public.get_features_as_of_v3(%s, %s, %s, %s, %s, %s, %s)
         order by available_at, source_id
     """
     with connection.cursor() as cur:
-        cur.execute(
-            sql,
-            (
-                decision_time,
-                source_type,
-                entity_key,
-                after_available_at,
-                after_source_id,
-                limit,
-            ),
-        )
+        cur.execute(sql, (decision_time, mode, source_type, entity_key,
+                          after_available_at, after_source_id, limit))
         rows = cur.fetchall()
 
     out: list[PITFeature] = []
@@ -73,7 +72,7 @@ def get_features_as_of(
         feature = PITFeature(*row)
         if feature.available_at > decision_time:
             raise RuntimeError(
-                f"PIT violation: {feature.source_type}/{feature.source_id} "
+                f"PIT violation[{mode}]: {feature.source_type}/{feature.source_id} "
                 f"available_at={feature.available_at.isoformat()} > "
                 f"decision_time={decision_time.isoformat()}"
             )
@@ -87,27 +86,21 @@ def iter_features_as_of(
     source_type: str,
     entity_key: str | None = None,
     page_size: int = 1000,
+    mode: str = "live",
 ) -> Iterable[PITFeature]:
-    """Stream all PIT features using keyset pagination, never OFFSET scans."""
+    """Stream PIT features using keyset pagination under the selected clock."""
     after_time = None
     after_id = None
     while True:
         page = get_features_as_of(
-            connection,
-            decision_time,
-            source_type,
-            entity_key,
-            after_time,
-            after_id,
-            page_size,
+            connection, decision_time, source_type, entity_key,
+            after_time, after_id, page_size, mode,
         )
         if not page:
             return
-        for feature in page:
-            yield feature
+        yield from page
         last = page[-1]
-        after_time = last.available_at
-        after_id = last.source_id
+        after_time, after_id = last.available_at, last.source_id
         if len(page) < page_size:
             return
 
@@ -122,9 +115,4 @@ def assert_no_lookahead(features: Iterable[PITFeature], decision_time: datetime)
         )
 
 
-__all__ = [
-    "PITFeature",
-    "get_features_as_of",
-    "iter_features_as_of",
-    "assert_no_lookahead",
-]
+__all__ = ["PITFeature", "get_features_as_of", "iter_features_as_of", "assert_no_lookahead"]
