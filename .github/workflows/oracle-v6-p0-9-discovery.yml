@@ -1,0 +1,57 @@
+name: ORACLE V6 P0-9 Discovery Diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analytics/oracle_v6_simulated_historical_nulls.py'
+      - '.github/workflows/oracle-v6-p0-9-discovery.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  discovery-diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+      ORACLE_V6_SIMULATED_DATES: '2019-06-30,2020-12-31,2022-03-31'
+      ORACLE_V6_RECONSTRUCTION_RUN: 'P0_9_DIAGNOSTIC_3DATES_V2'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate database secret
+        shell: bash
+        run: |
+          case "$ORACLE_SUPABASE_DB_URL" in
+            postgres://*|postgresql://*) ;;
+            *) echo 'ORACLE_SUPABASE_DB_URL is not a PostgreSQL URL' >&2; exit 1 ;;
+          esac
+      - name: Install dependencies
+        run: pip install -r requirements-v6.txt
+      - name: Compile reconstructer
+        run: python -m py_compile analytics/oracle_v6_simulated_historical_nulls.py
+      - name: Run three-date anti-selection diagnostic
+        working-directory: analytics
+        run: python oracle_v6_simulated_historical_nulls.py | tee /tmp/p0_9.json
+      - name: Enforce non-empty families and print z distribution
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/p0_9.json'))
+          assert p.get('conditional_selection_guard') is True, p
+          assert p.get('family_rule') == 'TERM_SEEN_IN_104W_PRETEST_TRAINING', p
+          assert len(p['dates']) == 3, p
+          for d in p['dates']:
+              assert d['family_size'] > 0, d
+              z=d['z_distribution']
+              assert z['median'] is not None and z['max'] is not None, d
+              print(json.dumps({'date':d['date'],'family_size':d['family_size'],'discoveries':d['discoveries'],**z},sort_keys=True))
+          PY
