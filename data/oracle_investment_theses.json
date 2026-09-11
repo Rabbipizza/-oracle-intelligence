@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-11T09:23:00Z",
-  "method": "ORACLE_V6_DISCOVERY_V2_ANALYST_SYNTHESIS",
+  "generated_at": "2026-09-11T12:58:00Z",
+  "method": "ORACLE_V6_DISCOVERY_V2_ANALYST_SYNTHESIS_WITH_PICK_AND_SHOVEL_MAPPING",
   "disclaimer": "Research output, not an investment recommendation. Promotion to BUY requires lifecycle replication plus valuation/timing gates.",
   "theses": [
     {
@@ -8,89 +8,147 @@
       "id": "AI_POWER_GEOTHERMAL",
       "title": "AI power bottleneck → next-generation geothermal",
       "status": "EPHEMERAL_SIGNAL",
-      "conviction": 86,
+      "conviction": 88,
       "signal_keys": ["geothermal"],
-      "thesis": "AI data-center growth is tightening demand for reliable 24/7 power. Enhanced geothermal can provide firm low-carbon generation close to large loads and is emerging as a direct solution to the power constraint.",
-      "causal_chain": ["AI compute growth", "Data-center electricity demand", "Grid / firm-power constraint", "24/7 generation need", "Enhanced geothermal deployment"],
+      "thesis": "AI data-center growth is tightening demand for reliable 24/7 power. Enhanced geothermal is emerging as a direct firm-power solution, while the more diversified picks-and-shovels opportunity sits in drilling, subsurface technology and electrical infrastructure.",
+      "causal_chain": ["AI compute growth", "Data-center electricity demand", "Grid / firm-power constraint", "24/7 generation need", "Enhanced geothermal deployment", "Drilling / subsurface / electrical equipment demand"],
       "evidence": [
         "Discovery: geothermal observed 4 vs ~0.033 expected, z≈21.62, BH-adjusted p≈0.00013.",
-        "Multiple contemporaneous documents reference the Google/Fervo geothermal agreement, including a 396 MW Utah data-center supply deal.",
-        "SEC evidence in ORACLE links geothermal context to power/data-center beneficiaries including CEG and AAON."
+        "Multiple contemporaneous documents reference a large Google/Fervo geothermal agreement.",
+        "Baker Hughes has active 2026 geothermal agreements targeting industrial-scale deployment and explicitly cites AI/hyperscale power demand.",
+        "SLB and Ormat are actively advancing EGS site development and industrialization."
       ],
-      "bottlenecks": ["Firm power availability", "Grid interconnection", "Drilling capacity", "Power distribution equipment"],
-      "picks_and_shovels": ["Electrical distribution", "Switchgear / transformers", "Cooling infrastructure", "Drilling and well services"],
+      "bottlenecks": ["Firm power availability", "Grid interconnection", "Deep drilling capacity", "Subsurface characterization", "Power distribution equipment"],
+      "picks_and_shovels": [
+        {"name": "Geothermal drilling / subsurface services", "priority": 1, "companies": ["BKR", "SLB"], "evidence_status": "DIRECT_COMMERCIAL_EVIDENCE"},
+        {"name": "Electrical distribution / switchgear / transformers", "priority": 2, "companies": ["ETN", "GEV"], "evidence_status": "DIRECT_DEMAND_EVIDENCE"},
+        {"name": "Data-center power and thermal infrastructure", "priority": 3, "companies": ["VRT"], "evidence_status": "DIRECT_AI_INFRASTRUCTURE_EVIDENCE"}
+      ],
       "companies": [
-        {"ticker": "ETN", "role": "PICKS_AND_SHOVELS", "priority": 1, "note": "Electrical infrastructure beneficiary of data-center power buildout."},
-        {"ticker": "FRVO", "role": "DIRECT_BENEFICIARY", "priority": 2, "note": "Pure-play enhanced geothermal exposure; higher asymmetry and higher execution risk."},
-        {"ticker": "CEG", "role": "FIRM_POWER_BENEFICIARY", "priority": 3, "note": "Reliable power supplier exposed to data-center electricity demand."},
-        {"ticker": "AAON", "role": "DATA_CENTER_INFRASTRUCTURE", "priority": 4, "note": "HVAC / cooling infrastructure linkage in ORACLE SEC evidence."}
+        {"ticker": "BKR", "role": "PRIMARY_GEOTHERMAL_PICK_AND_SHOVEL", "priority": 1, "note": "Integrated subsurface and surface geothermal technology; active 2026 commercial agreements."},
+        {"ticker": "SLB", "role": "GEOTHERMAL_SUBSURFACE_PICK_AND_SHOVEL", "priority": 2, "note": "Subsurface characterization, drilling and EGS development technology."},
+        {"ticker": "ETN", "role": "ELECTRICAL_PICK_AND_SHOVEL", "priority": 3, "note": "Electrical infrastructure and power distribution beneficiary of data-center buildout."},
+        {"ticker": "GEV", "role": "GRID_AND_POWER_EQUIPMENT", "priority": 4, "note": "Power and electrification equipment with rapidly growing data-center orders/backlog."},
+        {"ticker": "VRT", "role": "DATA_CENTER_POWER_THERMAL", "priority": 5, "note": "Power and thermal systems for high-density AI infrastructure."},
+        {"ticker": "FRVO", "role": "DIRECT_BENEFICIARY", "priority": 6, "note": "Pure-play enhanced geothermal exposure; higher upside and execution risk."},
+        {"ticker": "CEG", "role": "FIRM_POWER_BENEFICIARY", "priority": 7, "note": "Reliable generation beneficiary; not a pure picks-and-shovels exposure."}
       ],
-      "next_gate": "Needs independent temporal replication before semantic promotion and investment ranking."
+      "next_gate": "Independent temporal replication plus valuation/timing ranking of BKR, SLB, ETN, GEV and VRT."
     },
     {
       "rank": 2,
-      "id": "AI_GRID_INFRASTRUCTURE",
-      "title": "AI infrastructure → electrical grid bottleneck",
-      "status": "EPHEMERAL_SIGNAL",
-      "conviction": 82,
-      "signal_keys": ["shortage", "yield"],
-      "thesis": "The scarce resource around AI deployment is shifting from chips alone toward power delivery: transformers, switchgear, interconnection, generation capacity and cooling. Picks-and-shovels can capture spend regardless of which AI platform wins.",
-      "causal_chain": ["AI capex", "Data-center construction", "Power-density increase", "Electrical equipment shortages / lead times", "Grid-equipment pricing power"],
+      "id": "ROBOT_LEARNING_SEMICONDUCTORS",
+      "title": "Robot Learning / Physical AI → semiconductor bottleneck",
+      "status": "EVIDENCE_BACKED_TENSION",
+      "conviction": 87,
+      "signal_keys": ["Robot Learning"],
+      "thesis": "Physical AI and continuously learning robots require increasing amounts of edge compute, sensing and control silicon. ORACLE's live bottleneck engine identifies semiconductors as an evidence-backed tension for Robot Learning. The strongest picks-and-shovels are semiconductor manufacturing/process-control equipment, while Qualcomm is a direct edge/robotics platform beneficiary.",
+      "causal_chain": ["Robot learning acceleration", "More onboard perception / inference", "Higher semiconductor content", "Leading-edge / advanced-packaging complexity", "Wafer-fab and process-control equipment demand"],
       "evidence": [
-        "Discovery flags shortage with z≈13.99 and BH-adjusted p≈0.00632.",
-        "ORACLE SEC evidence links shortage/constraint language to ETN, AMAT, VST, AMD and INTC.",
-        "The lexical signal is broad, so only economically specific SEC corroboration is retained."
+        "ORACLE live: COMPONENT:Semiconductors is EVIDENCE_BACKED_TENSION for TREND:Robot Learning with 3 independent issuer sources and 4 hard tension evidence rows.",
+        "KLA explicitly positions process control on the critical path of AI infrastructure and advanced packaging.",
+        "Lam Research states nearly every advanced chip uses Lam technology and is investing >$3B in AI-era semiconductor R&D labs.",
+        "Qualcomm has expanded into robotics and industrial AI platforms and targets $8B of Industrial/Networking/Robotics revenue by FY2029."
       ],
-      "bottlenecks": ["Transformers", "Switchgear", "Interconnection", "Cooling", "Generation capacity"],
-      "picks_and_shovels": ["Electrical equipment", "Power management", "Thermal management", "Grid services"],
+      "bottlenecks": ["Semiconductors", "Advanced packaging", "Process control", "Edge compute", "Power-efficient AI silicon"],
+      "picks_and_shovels": [
+        {"name": "Wafer fabrication equipment", "priority": 1, "companies": ["AMAT", "LRCX"], "evidence_status": "DIRECT_SEMICON_EQUIPMENT_EXPOSURE"},
+        {"name": "Process control / inspection / metrology", "priority": 2, "companies": ["KLAC"], "evidence_status": "DIRECT_AI_PROCESS_CONTROL_EVIDENCE"},
+        {"name": "Edge AI / robotics compute platform", "priority": 3, "companies": ["QCOM"], "evidence_status": "DIRECT_ROBOTICS_PLATFORM_EVIDENCE"}
+      ],
       "companies": [
-        {"ticker": "ETN", "role": "PRIMARY_PICK_AND_SHOVEL", "priority": 1, "note": "Best current ORACLE fit for electrical bottleneck exposure."},
-        {"ticker": "VST", "role": "POWER_CAPACITY", "priority": 2, "note": "Power availability and lead-time/constraint exposure."},
-        {"ticker": "AMAT", "role": "SEMICON_CAPACITY", "priority": 3, "note": "Constraint exposure exists, but signal is less pure than grid equipment."},
-        {"ticker": "AMD", "role": "AI_COMPUTE", "priority": 4, "note": "Beneficiary but not a picks-and-shovels solution to the power bottleneck itself."}
+        {"ticker": "KLAC", "role": "PRIMARY_PROCESS_CONTROL_PICK_AND_SHOVEL", "priority": 1, "note": "Process-control complexity rises with leading-edge logic, memory and advanced packaging."},
+        {"ticker": "LRCX", "role": "WAFER_FAB_PICK_AND_SHOVEL", "priority": 2, "note": "Core wafer-fabrication equipment supplier with broad advanced-chip exposure."},
+        {"ticker": "AMAT", "role": "WAFER_FAB_PICK_AND_SHOVEL", "priority": 3, "note": "Broad semiconductor manufacturing equipment exposure and already appears in ORACLE tension evidence."},
+        {"ticker": "QCOM", "role": "DIRECT_EDGE_ROBOTICS_PLATFORM", "priority": 4, "note": "Direct physical-AI, robotics and industrial edge platform exposure."}
       ],
-      "next_gate": "Disaggregate generic shortage into named physical bottlenecks and validate supplier exposure."
+      "next_gate": "Run valuation/quality/timing gates on KLAC, LRCX, AMAT and QCOM; keep bottleneck status distinct from BUY status."
     },
     {
       "rank": 3,
-      "id": "DISTRIBUTED_RNA_MANUFACTURING",
-      "title": "Distributed / on-demand RNA therapy manufacturing",
-      "status": "EPHEMERAL_SIGNAL",
-      "conviction": 71,
-      "signal_keys": ["therapy", "tumor", "nanoparticle"],
-      "thesis": "Biopharma manufacturing may shift toward smaller, automated and distributed systems capable of producing personalized RNA therapies near the point of care. The investable angle is likely in enabling tools rather than single drug programs.",
-      "causal_chain": ["Personalized medicine", "Small-batch RNA demand", "Automated local manufacturing", "LNP / synthesis / QC bottlenecks", "Bioprocess tools demand"],
+      "id": "AI_GRID_INFRASTRUCTURE",
+      "title": "AI infrastructure → grid power capacity bottleneck",
+      "status": "EVIDENCE_BACKED_TENSION",
+      "conviction": 90,
+      "signal_keys": ["shortage", "yield", "Grid Power Capacity"],
+      "thesis": "Power delivery is becoming a pacing item for AI and broader electrification. ORACLE independently confirms Grid Power Capacity as an evidence-backed tension. The cleanest picks-and-shovels are electrical distribution, transformers, switchgear, grid equipment and data-center power/thermal systems.",
+      "causal_chain": ["AI / electrification capex", "Load growth", "Grid capacity constraint", "Transformer / switchgear / power-system demand", "Backlog and pricing power for equipment suppliers"],
       "evidence": [
-        "therapy: observed 8 vs ~0.077 expected, z≈28.57, BH-adjusted p≈1.5e-10.",
-        "A high-economic-relevance source reports ARPA-H funding for on-demand custom RNA therapy manufacturing.",
-        "ORACLE SEC evidence links therapy-related supply/demand language to AAQL and ABEO, but listed-company mapping remains immature."
+        "ORACLE live classifies INFRASTRUCTURE:Grid Power Capacity as EVIDENCE_BACKED_TENSION across multiple structural trends.",
+        "Eaton reported Q1 2026 Electrical Americas orders +42% and backlog +44%, driven by data-center momentum; data-center orders were up ~240% year-on-year in Q1.",
+        "GE Vernova reported Q2 2026 orders +88% organically, with robust Power and Electrification growth and +$13B sequential backlog growth.",
+        "GE Vernova's Q1 Electrification equipment orders supporting data centers exceeded all of 2025.",
+        "Vertiv identifies power as an industry pacing item and develops integrated power/thermal architectures for gigawatt-scale AI infrastructure."
       ],
-      "bottlenecks": ["RNA synthesis", "Lipid nanoparticles", "Microfluidics", "Quality control", "Single-use bioprocessing"],
-      "picks_and_shovels": ["Bioprocess equipment", "Analytical instruments", "Automation", "LNP formulation tooling"],
+      "bottlenecks": ["Grid power capacity", "Transformers", "Switchgear", "Interconnection", "Power conversion", "Thermal management"],
+      "picks_and_shovels": [
+        {"name": "Electrical distribution / switchgear", "priority": 1, "companies": ["ETN"], "evidence_status": "DIRECT_ORDER_BACKLOG_EVIDENCE"},
+        {"name": "Grid / transformer / generation equipment", "priority": 2, "companies": ["GEV"], "evidence_status": "DIRECT_ORDER_BACKLOG_EVIDENCE"},
+        {"name": "Data-center power and thermal management", "priority": 3, "companies": ["VRT"], "evidence_status": "DIRECT_AI_INFRASTRUCTURE_EVIDENCE"}
+      ],
       "companies": [
-        {"ticker": "ABEO", "role": "BIOTECH_EXPOSURE", "priority": 1, "note": "SEC supply evidence exists; not yet a validated picks-and-shovels winner."},
-        {"ticker": "AAQL", "role": "BIOTECH_EXPOSURE", "priority": 2, "note": "Demand/supply evidence exists; requires entity and business-model validation."}
+        {"ticker": "ETN", "role": "PRIMARY_GRID_PICK_AND_SHOVEL", "priority": 1, "note": "Strongest current evidence of data-center-driven electrical order/backlog acceleration."},
+        {"ticker": "GEV", "role": "GRID_AND_POWER_EQUIPMENT", "priority": 2, "note": "Electrification and power equipment with exceptional 2026 order/backlog growth."},
+        {"ticker": "VRT", "role": "AI_POWER_THERMAL_INFRASTRUCTURE", "priority": 3, "note": "Direct beneficiary of power-density and cooling constraints inside data centers."},
+        {"ticker": "CEG", "role": "POWER_CAPACITY_BENEFICIARY", "priority": 4, "note": "Generation beneficiary; less pure as equipment pick-and-shovel."},
+        {"ticker": "VST", "role": "POWER_CAPACITY_BENEFICIARY", "priority": 5, "note": "Power availability exposure; not the preferred equipment pick-and-shovel."}
       ],
-      "next_gate": "Map enabling-tool vendors and validate recurring revenue capture before ranking stocks."
+      "next_gate": "Rank ETN vs GEV vs VRT on valuation, FCF growth, backlog conversion and expectation gap."
     },
     {
       "rank": 4,
+      "id": "DISTRIBUTED_RNA_MANUFACTURING",
+      "title": "Distributed / on-demand RNA therapy manufacturing",
+      "status": "EPHEMERAL_SIGNAL",
+      "conviction": 74,
+      "signal_keys": ["therapy", "tumor", "nanoparticle"],
+      "thesis": "Biopharma manufacturing may shift toward smaller, automated and distributed systems capable of producing personalized RNA therapies near the point of care. The strongest investable angle is enabling tools rather than binary drug-development programs.",
+      "causal_chain": ["Personalized medicine", "Small-batch RNA demand", "Automated local manufacturing", "DNA/RNA synthesis + LNP + QC bottlenecks", "Bioprocess-tools demand"],
+      "evidence": [
+        "therapy: observed 8 vs ~0.077 expected, z≈28.57, BH-adjusted p≈1.5e-10.",
+        "A high-economic-relevance source reports ARPA-H funding for on-demand custom RNA therapy manufacturing.",
+        "Repligen is a listed bioprocessing tools manufacturer focused on technologies used to manufacture biological drugs.",
+        "Twist Bioscience provides an industrialized synthetic-DNA platform that can serve upstream nucleic-acid workflows."
+      ],
+      "bottlenecks": ["DNA/RNA synthesis", "Lipid nanoparticles", "Microfluidics", "Quality control", "Single-use bioprocessing"],
+      "picks_and_shovels": [
+        {"name": "Bioprocessing tools / filtration / fluid management", "priority": 1, "companies": ["RGEN"], "evidence_status": "DIRECT_BIOPROCESSING_TOOLS_EXPOSURE"},
+        {"name": "Synthetic DNA / upstream nucleic-acid tooling", "priority": 2, "companies": ["TWST"], "evidence_status": "DIRECT_SYNTHETIC_DNA_PLATFORM_EXPOSURE"},
+        {"name": "Broad life-science tools / analytical infrastructure", "priority": 3, "companies": ["TMO", "DHR"], "evidence_status": "BROAD_ENABLER_CANDIDATE"}
+      ],
+      "companies": [
+        {"ticker": "RGEN", "role": "PRIMARY_BIOPROCESS_PICK_AND_SHOVEL", "priority": 1, "note": "Focused bioprocessing tools exposure; recurring manufacturing workflow relevance."},
+        {"ticker": "TWST", "role": "NUCLEIC_ACID_TOOLING", "priority": 2, "note": "Synthetic-DNA platform; upstream enabling exposure rather than drug-program risk."},
+        {"ticker": "TMO", "role": "LIFE_SCIENCE_TOOLS", "priority": 3, "note": "Broad enabling infrastructure; lower thematic purity but diversified capture."},
+        {"ticker": "DHR", "role": "BIOPROCESS_AND_ANALYTICAL_TOOLS", "priority": 4, "note": "Broad life-science/bioprocess enabling exposure."}
+      ],
+      "next_gate": "Validate direct RNA/LNP revenue exposure and recurring-revenue capture before stock ranking."
+    },
+    {
+      "rank": 5,
       "id": "HYDROGEN_INDUSTRIALIZATION",
       "title": "Hydrogen industrialization and electrochemical infrastructure",
       "status": "EPHEMERAL_SIGNAL",
-      "conviction": 62,
+      "conviction": 66,
       "signal_keys": ["hydrogen", "electrochemical"],
-      "thesis": "Hydrogen remains a real industrial decarbonization theme, but project economics and demand certainty are weaker than the AI-power thesis. The better opportunity may be in components and electrochemical infrastructure rather than pure hydrogen producers.",
-      "causal_chain": ["Decarbonization / energy security", "Hydrogen projects", "Electrolyzer and balance-of-plant demand", "Materials / power bottlenecks", "Industrial equipment opportunity"],
+      "thesis": "Hydrogen remains a real industrial decarbonization theme, but project economics and demand certainty remain weaker than AI power. The preferred exposure is diversified equipment, compression, storage and balance-of-plant rather than pure-play hydrogen producers.",
+      "causal_chain": ["Decarbonization / energy security", "Hydrogen projects", "Electrolyzer / compression / storage demand", "Balance-of-plant bottlenecks", "Industrial equipment opportunity"],
       "evidence": [
         "hydrogen: observed 5 vs ~0.163 expected, z≈11.96, BH-adjusted p≈0.00036.",
         "Signal spans multiple research channels but includes semantic noise, so conviction is discounted.",
-        "No sufficiently strong listed-company mapping has yet passed ORACLE's economic exposure gate."
+        "Baker Hughes completed its acquisition of Chart Industries in July 2026, materially expanding industrial gas, transport, storage and infrastructure capabilities."
       ],
-      "bottlenecks": ["Electrolyzers", "Cheap electricity", "Hydrogen transport / storage", "Offtake contracts"],
-      "picks_and_shovels": ["Electrochemical components", "Power electronics", "Compression / storage equipment"],
-      "companies": [],
-      "next_gate": "Require commercial offtake and listed-company revenue exposure before promotion."
+      "bottlenecks": ["Electrolyzers", "Cheap electricity", "Compression", "Hydrogen transport / storage", "Offtake contracts"],
+      "picks_and_shovels": [
+        {"name": "Compression / storage / industrial gas equipment", "priority": 1, "companies": ["BKR"], "evidence_status": "DIRECT_EQUIPMENT_PLATFORM_EVIDENCE"},
+        {"name": "Electrolyzer / distributed energy systems", "priority": 2, "companies": ["BE", "PLUG"], "evidence_status": "HIGHER_RISK_DIRECT_EXPOSURE"}
+      ],
+      "companies": [
+        {"ticker": "BKR", "role": "PRIMARY_DIVERSIFIED_PICK_AND_SHOVEL", "priority": 1, "note": "Diversified energy equipment platform; Chart acquisition broadens hydrogen transport/storage capabilities."},
+        {"ticker": "BE", "role": "DIRECT_ELECTROCHEMICAL_EXPOSURE", "priority": 2, "note": "Higher thematic purity and higher execution/valuation risk."},
+        {"ticker": "PLUG", "role": "SPECULATIVE_PURE_PLAY", "priority": 3, "note": "Very high risk; should remain behind balance-sheet and cash-burn gates."}
+      ],
+      "next_gate": "Require commercial offtake, cash-flow viability and balance-sheet strength before any promotion."
     }
   ],
   "rejected_or_watch": [
