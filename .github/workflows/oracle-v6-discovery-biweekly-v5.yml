@@ -1,0 +1,52 @@
+name: ORACLE V6 Discovery Biweekly V5
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analytics/oracle_v6_discovery_biweekly_v5.py'
+      - '.github/workflows/oracle-v6-discovery-biweekly-v5.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  biweekly-grid:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+      ORACLE_V6_SIMULATED_DATES: '2018-12-31,2019-06-30,2019-12-31,2020-06-30,2020-12-31,2021-12-31,2022-03-31,2022-12-31,2023-06-30,2023-12-31,2024-06-30,2024-12-31,2025-06-30,2025-12-31'
+      ORACLE_V6_RECONSTRUCTION_RUN: 'DISCOVERY_BIWEEKLY_V5_2018_2025'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate database secret
+        shell: bash
+        run: |
+          case "$ORACLE_SUPABASE_DB_URL" in
+            postgres://*|postgresql://*) ;;
+            *) echo 'ORACLE_SUPABASE_DB_URL is not a PostgreSQL URL' >&2; exit 1 ;;
+          esac
+      - run: pip install -r requirements-v6.txt
+      - name: Run V5 biweekly reconstruction
+        working-directory: analytics
+        run: python oracle_v6_discovery_biweekly_v5.py | tee /tmp/discovery_v5.json
+      - name: Verify PIT and unchanged FDR policy
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/discovery_v5.json'))
+          assert p['biweekly_acceleration_test'] is True
+          assert p['inference_thresholds_changed'] is False
+          assert p['conditional_selection_guard'] is True
+          assert p['bin_weeks']==2 and p['training_bins']==52
+          assert len(p['dates'])==14
+          for d in p['dates']:
+              assert d['family_size']>0, d
+              print(json.dumps(d,sort_keys=True))
+          PY
