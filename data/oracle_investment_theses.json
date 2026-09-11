@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-09-11T09:23:00Z",
+  "method": "ORACLE_V6_DISCOVERY_V2_ANALYST_SYNTHESIS",
+  "disclaimer": "Research output, not an investment recommendation. Promotion to BUY requires lifecycle replication plus valuation/timing gates.",
+  "theses": [
+    {
+      "rank": 1,
+      "id": "AI_POWER_GEOTHERMAL",
+      "title": "AI power bottleneck → next-generation geothermal",
+      "status": "EPHEMERAL_SIGNAL",
+      "conviction": 86,
+      "signal_keys": ["geothermal"],
+      "thesis": "AI data-center growth is tightening demand for reliable 24/7 power. Enhanced geothermal can provide firm low-carbon generation close to large loads and is emerging as a direct solution to the power constraint.",
+      "causal_chain": ["AI compute growth", "Data-center electricity demand", "Grid / firm-power constraint", "24/7 generation need", "Enhanced geothermal deployment"],
+      "evidence": [
+        "Discovery: geothermal observed 4 vs ~0.033 expected, z≈21.62, BH-adjusted p≈0.00013.",
+        "Multiple contemporaneous documents reference the Google/Fervo geothermal agreement, including a 396 MW Utah data-center supply deal.",
+        "SEC evidence in ORACLE links geothermal context to power/data-center beneficiaries including CEG and AAON."
+      ],
+      "bottlenecks": ["Firm power availability", "Grid interconnection", "Drilling capacity", "Power distribution equipment"],
+      "picks_and_shovels": ["Electrical distribution", "Switchgear / transformers", "Cooling infrastructure", "Drilling and well services"],
+      "companies": [
+        {"ticker": "ETN", "role": "PICKS_AND_SHOVELS", "priority": 1, "note": "Electrical infrastructure beneficiary of data-center power buildout."},
+        {"ticker": "FRVO", "role": "DIRECT_BENEFICIARY", "priority": 2, "note": "Pure-play enhanced geothermal exposure; higher asymmetry and higher execution risk."},
+        {"ticker": "CEG", "role": "FIRM_POWER_BENEFICIARY", "priority": 3, "note": "Reliable power supplier exposed to data-center electricity demand."},
+        {"ticker": "AAON", "role": "DATA_CENTER_INFRASTRUCTURE", "priority": 4, "note": "HVAC / cooling infrastructure linkage in ORACLE SEC evidence."}
+      ],
+      "next_gate": "Needs independent temporal replication before semantic promotion and investment ranking."
+    },
+    {
+      "rank": 2,
+      "id": "AI_GRID_INFRASTRUCTURE",
+      "title": "AI infrastructure → electrical grid bottleneck",
+      "status": "EPHEMERAL_SIGNAL",
+      "conviction": 82,
+      "signal_keys": ["shortage", "yield"],
+      "thesis": "The scarce resource around AI deployment is shifting from chips alone toward power delivery: transformers, switchgear, interconnection, generation capacity and cooling. Picks-and-shovels can capture spend regardless of which AI platform wins.",
+      "causal_chain": ["AI capex", "Data-center construction", "Power-density increase", "Electrical equipment shortages / lead times", "Grid-equipment pricing power"],
+      "evidence": [
+        "Discovery flags shortage with z≈13.99 and BH-adjusted p≈0.00632.",
+        "ORACLE SEC evidence links shortage/constraint language to ETN, AMAT, VST, AMD and INTC.",
+        "The lexical signal is broad, so only economically specific SEC corroboration is retained."
+      ],
+      "bottlenecks": ["Transformers", "Switchgear", "Interconnection", "Cooling", "Generation capacity"],
+      "picks_and_shovels": ["Electrical equipment", "Power management", "Thermal management", "Grid services"],
+      "companies": [
+        {"ticker": "ETN", "role": "PRIMARY_PICK_AND_SHOVEL", "priority": 1, "note": "Best current ORACLE fit for electrical bottleneck exposure."},
+        {"ticker": "VST", "role": "POWER_CAPACITY", "priority": 2, "note": "Power availability and lead-time/constraint exposure."},
+        {"ticker": "AMAT", "role": "SEMICON_CAPACITY", "priority": 3, "note": "Constraint exposure exists, but signal is less pure than grid equipment."},
+        {"ticker": "AMD", "role": "AI_COMPUTE", "priority": 4, "note": "Beneficiary but not a picks-and-shovels solution to the power bottleneck itself."}
+      ],
+      "next_gate": "Disaggregate generic shortage into named physical bottlenecks and validate supplier exposure."
+    },
+    {
+      "rank": 3,
+      "id": "DISTRIBUTED_RNA_MANUFACTURING",
+      "title": "Distributed / on-demand RNA therapy manufacturing",
+      "status": "EPHEMERAL_SIGNAL",
+      "conviction": 71,
+      "signal_keys": ["therapy", "tumor", "nanoparticle"],
+      "thesis": "Biopharma manufacturing may shift toward smaller, automated and distributed systems capable of producing personalized RNA therapies near the point of care. The investable angle is likely in enabling tools rather than single drug programs.",
+      "causal_chain": ["Personalized medicine", "Small-batch RNA demand", "Automated local manufacturing", "LNP / synthesis / QC bottlenecks", "Bioprocess tools demand"],
+      "evidence": [
+        "therapy: observed 8 vs ~0.077 expected, z≈28.57, BH-adjusted p≈1.5e-10.",
+        "A high-economic-relevance source reports ARPA-H funding for on-demand custom RNA therapy manufacturing.",
+        "ORACLE SEC evidence links therapy-related supply/demand language to AAQL and ABEO, but listed-company mapping remains immature."
+      ],
+      "bottlenecks": ["RNA synthesis", "Lipid nanoparticles", "Microfluidics", "Quality control", "Single-use bioprocessing"],
+      "picks_and_shovels": ["Bioprocess equipment", "Analytical instruments", "Automation", "LNP formulation tooling"],
+      "companies": [
+        {"ticker": "ABEO", "role": "BIOTECH_EXPOSURE", "priority": 1, "note": "SEC supply evidence exists; not yet a validated picks-and-shovels winner."},
+        {"ticker": "AAQL", "role": "BIOTECH_EXPOSURE", "priority": 2, "note": "Demand/supply evidence exists; requires entity and business-model validation."}
+      ],
+      "next_gate": "Map enabling-tool vendors and validate recurring revenue capture before ranking stocks."
+    },
+    {
+      "rank": 4,
+      "id": "HYDROGEN_INDUSTRIALIZATION",
+      "title": "Hydrogen industrialization and electrochemical infrastructure",
+      "status": "EPHEMERAL_SIGNAL",
+      "conviction": 62,
+      "signal_keys": ["hydrogen", "electrochemical"],
+      "thesis": "Hydrogen remains a real industrial decarbonization theme, but project economics and demand certainty are weaker than the AI-power thesis. The better opportunity may be in components and electrochemical infrastructure rather than pure hydrogen producers.",
+      "causal_chain": ["Decarbonization / energy security", "Hydrogen projects", "Electrolyzer and balance-of-plant demand", "Materials / power bottlenecks", "Industrial equipment opportunity"],
+      "evidence": [
+        "hydrogen: observed 5 vs ~0.163 expected, z≈11.96, BH-adjusted p≈0.00036.",
+        "Signal spans multiple research channels but includes semantic noise, so conviction is discounted.",
+        "No sufficiently strong listed-company mapping has yet passed ORACLE's economic exposure gate."
+      ],
+      "bottlenecks": ["Electrolyzers", "Cheap electricity", "Hydrogen transport / storage", "Offtake contracts"],
+      "picks_and_shovels": ["Electrochemical components", "Power electronics", "Compression / storage equipment"],
+      "companies": [],
+      "next_gate": "Require commercial offtake and listed-company revenue exposure before promotion."
+    }
+  ],
+  "rejected_or_watch": [
+    {"signal": "orbital", "classification": "FALSE_POSITIVE", "reason": "Current spike is dominated by coverage of the video game Orbitals, not space infrastructure."},
+    {"signal": "android", "classification": "EVENT_CLUSTER", "reason": "Mostly product/update news; no structural investment thesis yet."},
+    {"signal": "dairy", "classification": "WATCH", "reason": "Large Chobani investment event is real, but the spike is not yet evidence of a broad investable trend."},
+    {"signal": "shortage", "classification": "CONTEXT_ONLY", "reason": "Too generic alone; useful only after economic disambiguation."}
+  ]
+}
