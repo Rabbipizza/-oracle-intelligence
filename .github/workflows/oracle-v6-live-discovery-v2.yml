@@ -1,0 +1,48 @@
+name: ORACLE V6 Live Discovery V2
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analytics/oracle_v6_formal_nulls_live_v2.py'
+      - 'analytics/oracle_v6_sequential_fdr_v2.py'
+      - 'analytics/oracle_v6_discovery_pipeline_v2.py'
+      - '.github/workflows/oracle-v6-live-discovery-v2.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  live-discovery-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ORACLE_SUPABASE_DB_URL: ${{ secrets.ORACLE_SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-v6.txt
+      - name: Build corrected formal family
+        working-directory: analytics
+        run: python oracle_v6_formal_nulls_live_v2.py | tee /tmp/live_null_v2.json
+      - name: Allocate sequential alpha
+        working-directory: analytics
+        run: python oracle_v6_sequential_fdr_v2.py | tee /tmp/live_seq_v2.json
+      - name: Apply BH/FDR
+        working-directory: analytics
+        run: python oracle_v6_discovery_pipeline_v2.py | tee /tmp/live_fdr_v2.json
+      - name: Verify anti-selection invariant
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('/tmp/live_null_v2.json'))
+          b=json.load(open('/tmp/live_fdr_v2.json'))
+          assert a['conditional_selection_guard'] is True, a
+          assert a['rows'] > 0, a
+          assert b['family_size'] == a['rows'], (a,b)
+          print(json.dumps({'nulls':a,'fdr':b},sort_keys=True))
+          PY
