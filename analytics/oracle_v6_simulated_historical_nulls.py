@@ -5,6 +5,12 @@ Re-applies the frozen ORACLE_V4_RETRO_OPEN_WORLD_2 document-local title
 extractor directly to source documents observable at T. It never reads the
 2026 materialization timestamps of oracle_v4_retro_term_occurrences, never
 reuses an all-history count baseline, and never touches LIVE alpha/FDR tables.
+
+Critical anti-selection rule: the tested family is frozen from the 104-week
+PRE-TEST history. A term is eligible iff it appeared at least once during that
+training window. Test-week N(t) is never used to decide family membership, so
+zero observations remain in-family and brand-new test-week terms are not
+silently conditioned into the family.
 """
 from __future__ import annotations
 import hashlib, json, math, os, re, unicodedata
@@ -16,6 +22,7 @@ from oracle_v6_formal_nulls import _fit_count_null, WINDOW_WEEKS
 TARGET_ALPHA=0.05
 MODEL_VERSION='FORMAL_COUNT_NULL_V1_SIMULATED_P0_9'
 EXTRACTION_VERSION='ORACLE_V4_RETRO_OPEN_WORLD_2'
+FAMILY_RULE='TERM_SEEN_IN_104W_PRETEST_TRAINING'
 DEFAULT_DATES=['2018-12-31','2019-06-30','2019-12-31','2020-06-30','2020-12-31','2021-12-31','2022-06-30','2022-12-31','2023-06-30','2023-12-31']
 STOP=set(('a an and are as at be been being by can could did do does for from had has have how if in into is it its may more most new no not of on or our out over said says than that the their them there these they this those to under up use used using via was were what when where which while who will with would you your after before about amid among across also first one two three report reports study studies research researchers latest today year years company companies market markets tax themes theme record records title implied fncact soc crisislex uspec http https www com org net html amp source sources unknown article story official monitoring bbc website form filed filing press release against').split())
 GENERIC=set(('global world industry business technology science health news update analysis future growth change changes impact system systems service services product products group team people time way work case launch operation conduct successful checking north south').split())
@@ -90,6 +97,20 @@ def build_occurrences(docs):
             out.append((event,term,str(d['id']),d['available_at_simulated']))
     return out
 
+def z_stats(family):
+    zs=sorted(float(x['surprise_z']) for x in family)
+    n=len(zs)
+    if not n:
+        return {'median':None,'max':None,'pct_z_ge_3':None,'pct_z_ge_5':None}
+    mid=n//2
+    median=zs[mid] if n%2 else (zs[mid-1]+zs[mid])/2.0
+    return {
+        'median':median,
+        'max':zs[-1],
+        'pct_z_ge_3':100.0*sum(1 for z in zs if z>=3.0)/n,
+        'pct_z_ge_5':100.0*sum(1 for z in zs if z>=5.0)/n,
+    }
+
 def family_at(occ,cutoff_dt,test_week):
     train_start=test_week-timedelta(weeks=WINDOW_WEEKS); test_end=min(test_week+timedelta(days=6),cutoff_dt.date())
     by=defaultdict(lambda:defaultdict(set))
@@ -99,16 +120,20 @@ def family_at(occ,cutoff_dt,test_week):
     weeks=[train_start+timedelta(weeks=i) for i in range(WINDOW_WEEKS)]
     payload=[]
     for key,h in sorted(by.items()):
-        observed=len(h.get(test_week,set()))
-        if observed<=0: continue
         train=[len(h.get(w,set())) for w in weeks]
+        # Family membership is determined ONLY from pre-test information.
+        # Terms absent from the entire 104-week training window are not tested
+        # in this family; terms that were seen in training remain in the family
+        # even when the test-week observation is zero.
+        if sum(train)<=0: continue
+        observed=len(h.get(test_week,set()))
         fit=_fit_count_null(train,observed)
-        payload.append({'signal_key':key,'null_family':fit.family,'observed_value':observed,'expected_value':fit.expected,'dispersion':fit.dispersion,'surprise_z':fit.z_score,'p_value':fit.p_value,'training_window':{'weeks':WINDOW_WEEKS,'train_start':train_start.isoformat(),'train_end':(test_week-timedelta(weeks=1)).isoformat(),'test_week':test_week.isoformat(),'test_end':test_end.isoformat(),'cutoff':cutoff_dt.isoformat(),'clock_mode':'simulated_historical','source_filter':'arXiv available_at_simulated<=T'},'diagnostics':{**fit.diagnostics,'point_in_time':True,'clock_mode':'simulated_historical','recomputed_at_cutoff':True,'all_history_baseline_reused':False,'extraction_version':EXTRACTION_VERSION}})
+        payload.append({'signal_key':key,'null_family':fit.family,'observed_value':observed,'expected_value':fit.expected,'dispersion':fit.dispersion,'surprise_z':fit.z_score,'p_value':fit.p_value,'training_window':{'weeks':WINDOW_WEEKS,'train_start':train_start.isoformat(),'train_end':(test_week-timedelta(weeks=1)).isoformat(),'test_week':test_week.isoformat(),'test_end':test_end.isoformat(),'cutoff':cutoff_dt.isoformat(),'clock_mode':'simulated_historical','source_filter':'arXiv available_at_simulated<=T','family_rule':FAMILY_RULE},'diagnostics':{**fit.diagnostics,'point_in_time':True,'clock_mode':'simulated_historical','recomputed_at_cutoff':True,'all_history_baseline_reused':False,'extraction_version':EXTRACTION_VERSION,'family_rule':FAMILY_RULE,'family_membership_depends_on_test_observation':False}})
     return payload
 
 def run(db_url):
     dates=parse_dates(); run_material=','.join(d.isoformat() for d in dates)
-    recon=os.environ.get('ORACLE_V6_RECONSTRUCTION_RUN') or 'P0_9_'+hashlib.sha256(run_material.encode()).hexdigest()[:16]
+    recon=os.environ.get('ORACLE_V6_RECONSTRUCTION_RUN') or 'P0_9_'+hashlib.sha256((run_material+'|'+FAMILY_RULE).encode()).hexdigest()[:16]
     summaries=[]; cumulative=0.0
     with engine(db_url).begin() as conn:
         min_event=week_start(dates[0])-timedelta(weeks=WINDOW_WEEKS)
@@ -121,7 +146,7 @@ def run(db_url):
             for i,x in enumerate(family): rows.append({**{k:v for k,v in x.items() if k not in ('training_window','diagnostics')},'r':recon,'d':d,'c':c,'tw':json.dumps(x['training_window'],sort_keys=True),'dg':json.dumps(x['diagnostics'],sort_keys=True),'ap':adj[i],'sel':selected[i],'alpha':alpha_t})
             if rows: conn.execute(text("""insert into public.oracle_v6_simulated_null_models(reconstruction_run,evaluation_date,decision_as_of,signal_key,null_family,observed_value,expected_value,dispersion,surprise_z,p_value,training_window,diagnostics,bh_adjusted_p,bh_selected,alpha_t) values(:r,:d,:c,:signal_key,:null_family,:observed_value,:expected_value,:dispersion,:surprise_z,:p_value,cast(:tw as jsonb),cast(:dg as jsonb),:ap,:sel,:alpha)"""),rows)
             disc=sum(selected); conn.execute(text("""insert into public.oracle_v6_simulated_alpha_budget(reconstruction_run,sequence_t,evaluation_date,gamma_t,alpha_t,cumulative_alpha_spend,family_size,discoveries) values(:r,:t,:d,:g,:a,:cum,:n,:k)"""),{'r':recon,'t':t,'d':d,'g':gamma,'a':alpha_t,'cum':cumulative,'n':len(family),'k':disc})
-            summaries.append({'date':d.isoformat(),'test_week':w.isoformat(),'family_size':len(family),'discoveries':disc,'gamma_t':gamma,'alpha_t':alpha_t})
-    return {'ok':True,'clock_mode':'simulated_historical','reconstruction_run':recon,'source_documents':len(docs),'reconstructed_occurrences':len(occ),'dates':summaries,'target_alpha':TARGET_ALPHA,'cumulative_alpha_spend':cumulative,'live_budget_touched':False}
+            summaries.append({'date':d.isoformat(),'test_week':w.isoformat(),'family_size':len(family),'discoveries':disc,'gamma_t':gamma,'alpha_t':alpha_t,'z_distribution':z_stats(family)})
+    return {'ok':True,'clock_mode':'simulated_historical','family_rule':FAMILY_RULE,'conditional_selection_guard':True,'reconstruction_run':recon,'source_documents':len(docs),'reconstructed_occurrences':len(occ),'dates':summaries,'target_alpha':TARGET_ALPHA,'cumulative_alpha_spend':cumulative,'live_budget_touched':False}
 
 if __name__=='__main__': print(json.dumps(run(os.environ.get('ORACLE_SUPABASE_DB_URL','')),sort_keys=True))
