@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "rule": "Presentation-only semantic normalization. Never mutate historical Supabase snapshots.",
+  "families": {
+    "ai_optical_photonics": {
+      "label": "AI optical interconnect / InP photonics",
+      "aliases": ["ai_optical_interconnect", "optical-ai-interconnect", "inp-ai-photonics"]
+    },
+    "grid_equipment": {
+      "label": "AI power / grid equipment",
+      "aliases": ["ai_grid_equipment", "grid_equipment", "grid-equipment"]
+    },
+    "physical_ai": {
+      "label": "Physical AI / robotics infrastructure",
+      "aliases": ["humanoid_actuators", "physical-ai-edge-compute"]
+    },
+    "rare_earth_magnets": {
+      "label": "Ex-China rare-earth magnets",
+      "aliases": ["rare_earths_china_controls", "rare_earth_magnets", "rare-earth-magnets"]
+    },
+    "copper_supply": {
+      "label": "Structural copper supply",
+      "aliases": ["copper_structural_deficit", "copper_supply", "copper-deficit"]
+    },
+    "hbm_memory": {
+      "label": "AI HBM memory",
+      "aliases": ["ai_hbm"]
+    },
+    "nuclear_uranium": {
+      "label": "Nuclear / uranium",
+      "aliases": ["nuclear_uranium"]
+    }
+  }
+}
