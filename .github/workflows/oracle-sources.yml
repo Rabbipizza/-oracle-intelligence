@@ -3,8 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "15 7,15,21 * * 1-5"
+
 permissions:
   contents: write
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
@@ -13,12 +15,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Collect upstream sources
+      - name: Collect and analyze upstream sources
         env:
           ORACLE_USER_AGENT: "ORACLE research pipeline"
           ORACLE_SEC_CIKS: "0001996810"
-          ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"\n          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"
-        run: |\n          python oracle_sources.py\n          python oracle_science.py\n          python oracle_discovery.py\n          python oracle_source_gate.py\n          python oracle_audit.py
+          ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"
+          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"
+        run: |
+          python oracle_sources.py
+          python oracle_science.py
+          python oracle_discovery.py
+          python oracle_source_gate.py
+          python oracle_audit.py
       - name: Persist snapshots
         run: |
           git config user.name "oracle-bot"
