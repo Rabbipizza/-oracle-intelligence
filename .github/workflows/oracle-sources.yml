@@ -18,11 +18,11 @@ jobs:
           ORACLE_USER_AGENT: "ORACLE research pipeline"
           ORACLE_SEC_CIKS: "0001996810"
           ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"
-        run: python oracle_sources.py
+        run: |\n          python oracle_sources.py\n          python oracle_source_gate.py
       - name: Persist snapshots
         run: |
           git config user.name "oracle-bot"
           git config user.email "oracle-bot@users.noreply.github.com"
-          git add data/source_snapshots
+          git add data/source_snapshots data/source-gate-status.json
           git diff --cached --quiet || git commit -m "ORACLE: source snapshots"
           git push
