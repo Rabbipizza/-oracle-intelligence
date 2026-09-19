@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: oracle-source-ingestion
+  cancel-in-progress: false
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
@@ -20,7 +24,10 @@ jobs:
           ORACLE_USER_AGENT: "ORACLE research pipeline"
           ORACLE_SEC_CIKS: "0001996810"
           ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"
-          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"\n          ORACLE_ARXIV_LOOKBACK_DAYS: "110"\n          ORACLE_ARXIV_WINDOW_DAYS: "7"\n          ORACLE_ARXIV_MAX_PER_WINDOW: "200"
+          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"
+          ORACLE_ARXIV_LOOKBACK_DAYS: "110"
+          ORACLE_ARXIV_WINDOW_DAYS: "7"
+          ORACLE_ARXIV_MAX_PER_WINDOW: "200"
         run: |
           python oracle_sources.py
           python oracle_science.py
@@ -33,4 +40,5 @@ jobs:
           git config user.email "oracle-bot@users.noreply.github.com"
           git add data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/audit
           git diff --cached --quiet || git commit -m "ORACLE: source snapshots"
-          git pull --rebase origin main\n          git push
+          git pull --rebase origin main
+          git push
