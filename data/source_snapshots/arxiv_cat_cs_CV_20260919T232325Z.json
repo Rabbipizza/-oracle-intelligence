@@ -1,0 +1,944 @@
+{
+  "meta": {
+    "family": "science",
+    "source": "arXiv",
+    "primary": true,
+    "query": "cat:cs.CV",
+    "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.CV&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending",
+    "fetched_at": "20260919T232325Z"
+  },
+  "data": [
+    {
+      "id": "http://arxiv.org/abs/2609.20822v1",
+      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+      "published": "2026-09-17T17:59:58Z",
+      "updated": "2026-09-17T17:59:58Z",
+      "summary": "Coding agents have emerged as a promising paradigm for robot manipulation: a language model writes the robot controller as a program, and agents built in this way now operate robots without robot-specific training.Whether this paradigm is also safe, however, has not been asked. We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch. The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety. The agent reasons about the obstacle in its traces, and the prompt already forbids touching it, so neither perception nor instruction is at fault; the fault lies in the planning, where the stated constraint never becomes a priority. By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure. Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible. At the contact, it is unaware that contact execution is bounded by the same constraint. To close this gap, we present SafeHarness, which equips the model with two obstacle-aware harnesses that enable it to prioritize the safety constraint. Obstacle-aware route planning grounds the objects as bounding boxes and draws candidate routes over them as sequences of waypoints. The agent then plans a route in advance, verifies it, replans when necessary, and only then executes it. Obstacle-aware contact execution instead selects the contact position so that the contact itself avoids the obstacle. SafeHarness attains 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0%, respectively. These results are $2.3\\times$ and $1.5\\times$ those of the same agent without harnesses.",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Zhen Dong",
+        "Emilio Ferrara"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20819v1",
+      "title": "Can 4D Foundation Models Remember?",
+      "published": "2026-09-17T17:59:50Z",
+      "updated": "2026-09-17T17:59:50Z",
+      "summary": "Perceiving and remembering the visual world is fundamental to navigating and interacting with our environment. Current 4D foundation models, such as camera-controllable video models or 4D reconstruction models, can perceive and reconstruct dynamic environments, but how well they remember what they have perceived remains an open question. Existing benchmarks largely rely on pixel-level metrics and lack ground truth for objects once they leave the field of view, making them unable to evaluate visual memory in an object-centric manner against references. To fill this gap, we introduce PersistBench, a dataset and metric suite that leverages 360\u00b0 videos as omniscient ground truth and proposes three evaluation aspects: object permanence, motion continuity, and appearance preservation. Evaluating various models across diverse categories reveals that current models can only maintain short-term consistency that degrades significantly once objects leave the field of view. Our findings highlight the gap between current model capabilities and robust visual memory (\"seeing is not remembering\"), providing guidance for future development of 4D foundation models. Dataset and code are available on the project page: https://guangzhaohe.com/persistbench.",
+      "authors": [
+        "Guangzhao He",
+        "Hadar Averbuch-Elor",
+        "Wei-Chiu Ma"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20818v1",
+      "title": "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
+      "published": "2026-09-17T17:59:41Z",
+      "updated": "2026-09-17T17:59:41Z",
+      "summary": "A splash lives for a fraction of a second: sheets tear into ligaments and droplets, appearance is view-dependent and nearly textureless, and little persists long enough to track. Reconstruction research has consequently focused on smoke, synthetic liquids, or gently deforming surfaces. To our knowledge, no synchronized multi-view dataset of splashing liquids exists. We therefore introduce a benchmark of 20 real scenes, from coherent streams to violent splashes, captured by seven synchronized, calibrated 4K cameras at 60 fps, with manually refined per-view liquid and container masks and fixed evaluation splits. We further present SplashSplat, built on a single principle: impose physical structure only where the observations can constrain it. Per-frame liquid SDFs fused from the masks provide the geometry, level-set transport between consecutive SDFs yields a coarse velocity field, and Lagrangian carriers advected along this flow, corrected against each new observation and reseeded where coverage is lost, decode local Gaussians for differentiable rendering. SplashSplat outperforms state-of-the-art dynamic Gaussian splatting methods on our real captures and on a synthetic benchmark, with physically more plausible motion and a lower training cost. The same representation supports temporal interpolation and style transfer without re-optimization.",
+      "authors": [
+        "Peiyu Liu",
+        "Dingxi Zhang",
+        "Federico Tombari",
+        "Marc Pollefeys",
+        "Christina Tsalicoglou",
+        "Daniel Barath"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20817v1",
+      "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+      "published": "2026-09-17T17:59:40Z",
+      "updated": "2026-09-17T17:59:40Z",
+      "summary": "Modeling articulated objects from sparse monocular views is challenging because each observation reveals only partial geometry and motion evidence. Most feed-forward methods infer articulation from a single observation and therefore rely heavily on learned category-level shape priors. We present FAMOS, a feed-forward model that predicts movable-part segmentation and joint parameters from a sparse, unordered set of partial point clouds. Our model jointly reasons over multiple observations and naturally supports a variable number of inputs, including a single view. To aggregate articulation cues across observations, we introduce a Multi-state Articulation Transformer with alternating state-wise and global attention. We further propose an observed articulation span objective that supervises the motion range each part exhibits across the input observations, encouraging the model to leverage the full observation set. To overcome the limited scale and diversity of existing datasets, we introduce a procedural data generator that synthesizes self-annotated assets during training. Experiments on PartNet-Mobility, ACD, and ArtiCraft-10K demonstrate consistent improvements over both feed-forward and optimization-based baselines. Project page: https://kevinqu7.github.io/famos",
+      "authors": [
+        "Kevin Qu",
+        "Tao Sun",
+        "Massimiliano Viola",
+        "Liyuan Zhu",
+        "Zhizhuo Zhou",
+        "Sayan Deb Sarkar",
+        "Konrad Schindler",
+        "Iro Armeni"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20816v1",
+      "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+      "published": "2026-09-17T17:59:30Z",
+      "updated": "2026-09-17T17:59:30Z",
+      "summary": "Professional design requires any-color control: the ability to specify an object's target color with any 24-bit hex value for image generation and editing. Prior work has explored color generation, editing, and colorization, but often relies on dedicated color representations or specialized inference procedures. Advances in large language models offer a simpler starting point: even compact models can associate hex values with color semantics. We present Paint-Anything, which learns a shared hex-prompt interface for generation and editing through object-level color supervision. We develop a data pipeline that constructs Paint-500K from real images through object grounding, perceptual color labeling, and editing-pair synthesis. Since shadows make real-image labels only approximate colors, we complement this supervision with pure-color anchors whose pixels exactly match their paired hex values. These anchors are used only at high-noise timesteps, leaving low-noise training to natural images. We further introduce Any Color Benchmark (ACBench), comprising ACBench-T2I and ACBench-Edit, to measure object-level hex color fidelity across both tasks. On FLUX.2-4B, Paint-Anything improves ACBench-T2I and ACBench-Edit scores by 85.3% and 28.3%, respectively, relative to the base model, with ablations supporting the training recipe. It also achieves the highest average CompColor score among the compared methods.",
+      "authors": [
+        "Ji Xie",
+        "Dewei Zhou",
+        "Xinyu Huang",
+        "Zhennan Chen",
+        "Xun Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20815v1",
+      "title": "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis",
+      "published": "2026-09-17T17:59:28Z",
+      "updated": "2026-09-17T17:59:28Z",
+      "summary": "Hereditary polyposis syndromes can be precursor lesions to colorectal cancer and are associated with a broad spectrum of extracolonic tumors. Early identification and accurate classification of these syndromes are essential for timely diagnosis, individualized patient management, and targeted surveillance strategies for affected families. However, public endoscopic datasets are largely organized around the individual sporadic polyp, and none links the polyposis phenotype to histopathology and germline findings at the patient level. Here, we present ERCPMP-Gx, an endoscopic, histopathological, and genomic dataset developed to support the application of artificial intelligence (AI) in the recognition, characterization, and classification of colorectal polyposis. Most procedures were performed using the Olympus EVIS X1 system with white-light endoscopy (WLE), narrow-band imaging (NBI), magnifying NBI (M-NBI), and NBI with near focus modes, yielding 160 images and accompanying video clips. Approximately eighty percent of cases represent clinically and/or genetically confirmed hereditary polyposis syndromes (PG), including familial adenomatous polyposis (FAP), Peutz-Jeghers syndrome (PJS), juvenile polyposis syndrome (JPS), and ganglioneuroma syndrome (GNS), while the remaining twenty percent comprise non-hereditary polyps and polyp-mimicking lesions with overlapping morphological features (Non-PG), included to support differential classification. Each released record is linked, where available, to standardized endoscopic annotations, representative histopathology, and clinically reported germline findings, forming an AI-ready, patient-level annotation framework. The dataset is publicly accessible at Mendeley (https://doi.org/10.17632/nzyfc544bx.2). For the latest updates and further information, readers are referred to the DataBioX website: https://databiox.com.",
+      "authors": [
+        "Zahra Ghaffari",
+        "Massih Bahar",
+        "Mojgan Forootan",
+        "Ali Darvishi",
+        "Hamidreza Bolhasani"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20769v1",
+      "title": "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+      "published": "2026-09-17T17:46:07Z",
+      "updated": "2026-09-17T17:46:07Z",
+      "summary": "Flow matching has emerged as the state-of-the-art generative model and has been used for plug-and-play (PnP) priors to solve inverse problems in computational imaging. However, existing flow-based inverse solvers assume linear forward models and/or make simplifying approximations in posterior sampling. To circumvent these problems, we introduce FlowSGS, a flow-based posterior sampling method using Split Gibbs Sampling (SGS) to decompose the posterior into a likelihood step and a prior step. Specifically, we sample from the likelihood step using Langevin dynamics and leverage the Stochastic Interpolants (SI) framework to integrate a pretrained flow model into the prior step. We provide a form for the prior step that uses SI's reverse-time SDE, and show connections to previous PnP methods. Moreover, with the aid of the flow prior's straight probability paths and a novel timestep correction technique for the reverse-time SDE, FlowSGS requires fewer network evaluations in its prior step than plug-and-play diffusion samplers. Our experiments show state-of-the-art performance on a range of inverse problems. For the first time, we provide an experiment on a nonlinear inverse problem (Fourier phase retrieval) for flow-based inverse solvers.",
+      "authors": [
+        "Tianao Li",
+        "Xinhui Qian",
+        "Emma Alexander"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20756v1",
+      "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+      "published": "2026-09-17T17:41:51Z",
+      "updated": "2026-09-17T17:41:51Z",
+      "summary": "As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\\times$ and 9.5$\\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approximately three orders of magnitude fewer simulator interactions than direct RL post-training, while staying closer to the human prior. Project page: https://01dami23.github.io/opted/",
+      "authors": [
+        "Damiano Da Col",
+        "Maximilian Igl",
+        "Peter Karkus",
+        "Kashyap Chitta",
+        "Boris Ivanovic",
+        "Marco Pavone",
+        "Konrad Schindler",
+        "Christos Sakaridis"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20700v1",
+      "title": "Should This Case Be Adapted? Prediction Fragmentation Controls Test-Time Adaptation",
+      "published": "2026-09-17T17:02:53Z",
+      "updated": "2026-09-17T17:02:53Z",
+      "summary": "Episodic test-time adaptation resets a frozen segmenter to source weights $M_0$ on each case and adapts for a fixed step count. A fixed horizon conflates a cohort-level question, how far to adapt, with an irreducibly per-case one, whether this case should be adapted at all. Cohort means hide that decision: on cross-vendor cardiac MRI the mean $\u0394$Dice from adaptation is statistically indistinguishable from zero while 58.7% of cases are individually made worse. We quantify this harm as harmful accepted area (HA), the harmful fraction of the edited area a controller deploys. Held-out tuning gives a stronger baseline than a fixed horizon, but the budget it selects transfers on neither of the two main medical benchmarks, and no global budget can condition on the case. We show that prediction fragmentation---the disagreement geometry between $M_0$ and the adapted mask $M_k$---predicts HA with no labels or extra backward passes at decision time, comparably on three benchmarks (Spearman $\u03c1$ 0.50--0.60), at a quarter of gradient-norm's latency. A case-level router built on it cuts HA from 0.228 to 0.139 on a benchmark that took no part in its design, with the design frozen and only cut-points recalibrated there. On the cardiac benchmark the design was selected on, the router cuts HA from 0.129 to 0.013 at matched Dice and 1.10 deployed updates, against the retrospective-best budget found post hoc on evaluation labels, and reduces that 58.7% to 20.0%, an upper bound we quantify. Where the retained cases are not net-helped (as on prostate), the router still cuts HA but concedes accuracy, a boundary we report. Thresholds are fit once on a labeled split disjoint from evaluation; decisions use no labels or gradients. The template ports across architecture and domain (nnU-Net$\\to$SegFormer, Cityscapes$\\to$ACDC) with coordinate, thresholds and per-bucket actions instantiated per domain.",
+      "authors": [
+        "Lili Wang",
+        "Jing Li",
+        "Xiaowen Sun",
+        "Xiangyu Hu",
+        "Zhuangzhuang Gu",
+        "Jian Liu",
+        "Srihari Nelakuditi",
+        "Yan Tong"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20680v1",
+      "title": "Towards Scaling Marine Perception with Synthetic Data",
+      "published": "2026-09-17T16:51:02Z",
+      "updated": "2026-09-17T16:51:02Z",
+      "summary": "Scalable machine learning in challenging underwater environments is strongly limited by the lack of labeled real-world training data. This data is often expensive and laborious to gather, making large-scale real-world data challenging to gather and curate. However, simulated data can help close the gap, enabling many learning-based tasks for underwater perception. In this work, we extend OceanSim, an IsaacSim-based underwater perception simulator, with a Synthetic Data Generation (SDG) pipeline for training models to be used in underwater scenarios. The proposed pipeline enables users to generate large, automatically labeled, photorealistic datasets with configurable scene appearance, structure, and sensor settings. We evaluate the pipeline on a real-world sea urchin detection task and study how different forms of synthetic scene variation affect sim-to-real performance. Based on these experiments, we discuss findings on our results, main limitations of the current pipeline and identify future directions for improving underwater rendering fidelity, scene diversity, and the evaluation of sim-to-real generalization. The open-source code can be found at https://github.com/umfieldrobotics/OceanSim.",
+      "authors": [
+        "Haoyu Ma",
+        "Onur Bagoren",
+        "Anja Sheppard",
+        "Elias Fandi",
+        "Ashrith Edukulla",
+        "Tanner Aslan",
+        "Natasha Sieh",
+        "Jingyu Song",
+        "Katherine A. Skinner"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20673v1",
+      "title": "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+      "published": "2026-09-17T16:48:05Z",
+      "updated": "2026-09-17T16:48:05Z",
+      "summary": "To operate effectively in human environments, robots must identify articulated objects, segment their movable and interactive parts, and estimate their kinematic models. Existing articulated scene representations typically recover kinematics from observed interactions, while methods operating on static scans often decouple articulation from functional interactive elements. We present FunArt, a framework that constructs articulation-aware functional 3D scene graphs from posed RGB-D observations captured in a single static configuration. FunArt reconstructs object instances, converts their fused geometry directly into the O-Voxel representation of TRELLIS.2, and exploits its frozen, sparse-compression VAE as a structural prior. A lightweight query-based decoder combines compact object-level latents with dense, surface-aligned features to jointly segment movable parts and functional interactive elements while estimating motion type, axis, origin, and range. On the Articulate3D dataset, FunArt achieves state-of-the-art performance across movable-part segmentation, articulation estimation, and functional-element segmentation, both with and without ground-truth object input. In the end-to-end setting, it outperforms the strongest baselines by 1.5 AP_{50} points for movable parts, 2.8 AP_{50} points under joint origin-and-axis constraints, and 6.7 AP_{50} points for functional elements. These results demonstrate that generative 3D latents encode actionable structural cues that can initialize robotic perception and planning before physical interaction.",
+      "authors": [
+        "Dennis Rotondi",
+        "Abdelrhman Werby",
+        "Kai O. Arras"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20669v1",
+      "title": "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+      "published": "2026-09-17T16:44:13Z",
+      "updated": "2026-09-17T16:44:13Z",
+      "summary": "3D diffusion policies are strong at generating geometrically grounded actions from current observations, but successful manipulation requires not only knowing what motion is feasible now, but also anticipating where the interaction is heading. Existing policies largely leave such foresight to emerge implicitly from action learning. We introduce Movement Trend Guidance, a simple but effective way to provide this foresight without introducing an explicit plan. From a short observation history, the policy learns a compact latent representation of interaction evolution. During training, sparse future gripper states supervise this representation; at inference, only the latent is retained as future-oriented conditioning alongside the current observation. The latent provides global conditioning for action generation, while an additional gated FiLM branch is used only at the UNet bottleneck. Despite adding only 3.52% more parameters to DP3, our method preserves the original dense-action and receding-horizon formulation and consistently improves upon DP3 across RoboTwin2.0, LIBERO-40, and DexArt. It reaches 62.8% vs. 56.1% in 50-task RoboTwin2.0 mixed training, 71.93% vs. 37.08% on LIBERO-40, and 72.0% vs. 49.0% on five real-robot tasks. These results show that a diffusion policy can benefit substantially from knowing where an interaction is heading, without being told exactly where to move.",
+      "authors": [
+        "Zhongbo Zhang",
+        "Zaibin Zhang",
+        "Yifan Wang",
+        "Changbo Yan",
+        "Lijun Wang",
+        "Huchuan Lu"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20662v1",
+      "title": "Earth Surface Immune System for Rapid Monitoring of Unknown Anomalies",
+      "published": "2026-09-17T16:39:26Z",
+      "updated": "2026-09-17T16:39:26Z",
+      "summary": "Earth surface anomalies, driven by escalating climate change, and expanding human activities, are increasing in both frequency and diversity, yet their limited historical data and unpredictability make them fundamentally different from conventional remote sensing targets. Existing methods address specific anomaly categories or stop at localization, leaving a gap between detection and actionable information. Here we present ESIA, an Earth Surface Immune System whose architecture is constrained by three principles from the biological immune system, refined over millions of years against equally diverse and uncertain threats. A non-specific innate immune stage treats anomalies as unobserved changes in time-series satellite imagery, generating binary localization maps at 14.51 km2/s without assuming any anomaly category, surpassing the strongest general baseline by 37% in F1. A specific adaptive immune stage applies negative selection to filter text prompts and matches surviving prompts with localized image patches through a multi-modal foundation model, enabling open-vocabulary recognition of unknown anomaly attributes including category, affected area, and damage severity, with recognition F1 exceeding 80%. A mutation mechanism tunes minimal embeddings at test time, adapting to each scene in 3.26s using a single reference image pair. We validate ESIA on a global-scale dataset covering 19,801.60 km2 across six anomaly categories, comparing against 22 models, and further apply it to quantify degraded farmland in the Dnipro Delta following the Kakhovka Dam collapse and assess burn severity from 2025 Palisades Fire in Los Angeles. This unprecedented flexibility in handling unknown anomalies opens new avenues for real-time disaster response and environmental surveillance.",
+      "authors": [
+        "Jingtao Li",
+        "Qian Zhu",
+        "Xinyu Wang",
+        "Deren Li",
+        "Liangpei Zhang",
+        "Yanfei Zhong"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20649v1",
+      "title": "DexTouch-WM: Learning Action-Conditioned Tactile World Models from Human Touch for Dexterous Robot Manipulation",
+      "published": "2026-09-17T16:28:34Z",
+      "updated": "2026-09-17T16:28:34Z",
+      "summary": "Learning predictive models of contact-rich dexterous manipulation requires dense tactile interaction, but such data are costly to scale on real robots and remain tied to embodiment-specific sensors. We introduce DexTouch-WM, an action-conditioned world model that learns from scalable human touch to jointly predict future RGB observations and bilateral tactile dynamics. Our insight is that human and robot manipulation share transferable contact dynamics when their tactile observations and action spaces are made compatible. We deploy flexible piezoresistive arrays with a shared sensing layout on both human and dexterous robot hands, and retarget human motion into the robot action space so that human interaction can supervise the same dynamics model used for real-robot prediction. DexTouch-WM couples a pretrained video expert with a lightweight tactile expert using anatomy-aware tactile tokens and aligned action conditioning. In human-to-robot scaling experiments, we keep five hours of real-robot supervision fixed while increasing human interaction from 0 to 100 hours, and observe substantial improvements in held-out robot-domain visual, geometric, and contact prediction despite disjoint human and robot task sets. Beyond prediction, we evaluate the world models as surrogate environments for policy evaluation and as generators of synthetic trajectories for real-robot policy learning, showing that scalable human interaction provides a complementary data axis for learning dexterous robot world models.",
+      "authors": [
+        "Yan Qin",
+        "Yue Chen",
+        "Wenwei Lin",
+        "Shujia Liu",
+        "Chuqiao Lyu",
+        "Kailun Su",
+        "Chenze Yu",
+        "Ping Luo",
+        "Wenbo Ding",
+        "Tianxing Chen",
+        "Renjing Xu"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20638v1",
+      "title": "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
+      "published": "2026-09-17T16:22:25Z",
+      "updated": "2026-09-17T16:22:25Z",
+      "summary": "An assistant watching egocentric video should notice a mistake from past frames alone, before the next step begins, and keep working once the person recovers. A mistake changes the state of the work, so every later step has to be read against what was done rather than against the plan. The first-mistake protocol that current online methods report on cuts each recording at its first mistake, so a fixed-time rule that never looks at the video is right on every case. We evaluate on complete trials, where mistakes and recoveries arise naturally, under a validation false-alarm budget and against controls that use timing alone. PROVIA keeps two records apart: a factual state, a learned summary of the steps each actor performed, mistakes included, and the accepted progress, an exact posterior over the state of an automaton induced from correct demonstrations by Bayesian state merging and over the execution status of each actor. Procedure-state transitions occur only in the correct-status branch; the mistake and correction branches retain the source state. A sequential test turns the per-frame mistake probability into alarms. With one filter and one optimization rule, PROVIA ranks mistakes best among the evaluated controlled baselines on CaptainCook4D, IndustReal, HoloAssist and IMPACT-ego. At a validation budget of 0.1 false alarms per minute it recalls .154 against .128 on CaptainCook4D and .034 against .015 on HoloAssist, where it leads at every budget. The pipeline runs at 58-70 frames per second. The source code is available at https://github.com/Kratos-Wen/PROVIA.",
+      "authors": [
+        "Di Wen",
+        "Kailun Yang",
+        "Jimmy Weissert",
+        "Luc Maria Scherrer",
+        "Cedric Z\u00f6llner",
+        "Ruiping Liu",
+        "Yufan Chen",
+        "Jiale Wei",
+        "Junwei Zheng",
+        "Kunyu Peng"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20633v1",
+      "title": "Refinement Is Inherently Editable: Training-Free Prompt-to-Prompt Image Editing with Generative Refinement Network",
+      "published": "2026-09-17T16:19:28Z",
+      "updated": "2026-09-17T16:19:28Z",
+      "summary": "Text-guided image editing must introduce the requested changes while preserving unrelated source content. Diffusion-based editors rely on spatial controls whose inaccuracies can leave edits incomplete or alter unrelated regions. Causal autoregressive editors face a further constraint: their fixed decoding order limits revision of earlier decisions. We introduce RefineEdit, a training-free prompt-to-prompt image editing framework built on a Generative Refinement Network. Our key idea is to couple edit localization with content generation through the global refinement of binary image codes, allowing editing evidence to be reassessed as the image evolves. RefineEdit initializes an editing branch from an intermediate source state, reusing the emerging layout. We compare the probabilities assigned by the two branches to the same source-sampled bits, using their signed differences to select editable positions and bits. Selected bits follow editing refinement, while the remaining bits copy the evolving source state. To stabilize editing across refinement steps, adaptive spatial freezing limits unnecessary mask expansion, while finite bit locking keeps recently selected bits editable. The framework requires no additional training, external masks, or attention control. Across nine editing categories of PIE-Bench, RefineEdit achieves the best background-preservation scores in PSNR, LPIPS, MSE and SSIM, together with the highest whole-image and edited-region CLIP scores among the evaluated methods.",
+      "authors": [
+        "Yulong Chen",
+        "Ziqian Zhang",
+        "Haoyu Zhang",
+        "Ao He",
+        "Senmao Li",
+        "Kai Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20623v1",
+      "title": "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+      "published": "2026-09-17T16:07:03Z",
+      "updated": "2026-09-17T16:07:03Z",
+      "summary": "Recent single-view feed-forward 3D Gaussian Splatting (3DGS) generation predicts a fixed number of Gaussians per camera ray, introducing severe spatial redundancy. Most existing compaction strategies target multi-view setups to exploit cross-view consistency and are incompatible with single-image models. Instead of retraining the base feed-forward network to directly output compact representations, our insight is to keep the base models frozen and apply post-hoc pruning and recurrent refinement to the generated Gaussians. Consequently, we propose a backbone-agnostic compaction pipeline for single-view feed-forward 3DGS that couples an importance-score-based pruning mechanism with a trainable, lightweight recurrent refinement module, which iteratively updates the surviving primitives to restore image quality. Our results demonstrate seamless integration with existing baselines while preserving novel-view rendering fidelity and achieving high memory reduction. Furthermore, our method supports flexible inference-time keep ratios for application needs.",
+      "authors": [
+        "Rinto Yagawa",
+        "Han Cheng",
+        "Dieter Schmalstieg",
+        "Hideo Saito",
+        "Shohei Mori"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20615v1",
+      "title": "INSPECT: Learning Robot View Selection from Assistant Use",
+      "published": "2026-09-17T16:00:17Z",
+      "updated": "2026-09-17T16:00:17Z",
+      "summary": "Robots inspecting an assembly must determine which parts are present and whether they are correctly installed. During egocentric assembly assistance, head motion and workpiece handling reveal evidence for these checks, while spoken state confirmations link observations to procedural outcomes. We introduce INSPECT, which learns robot view preferences from records of a smart-glasses assistant that answers part queries and provides next-step guidance. Presence-Invariant TwinSwap (PI-TwinSwap) calibrates object evidence through paired identity interventions. Claim-indexed supervision separates evidence requirements from camera-reproducible observation changes. Object-centered calibration adapts relative view preferences to robot poses, while clause-level screening checks predicted evidence. The robot selects views using only its current observation and known poses, without candidate images. Evaluation uses annotated assistant-video replay to simulate state feedback, without target-domain view labels for policy training. On images of physical gearbox assemblies, INSPECT achieves the highest view utility among the compared non-oracle policies and raises human-rated full verifiability from 34.8% to 41.7% compared with keeping the current view. On commercial angle-grinder recordings in IMPACT, the transferred relative-view selector increases the correct decision rate from 50.6% to 54.3% with a frozen perception head. The source code is available at https://github.com/Kratos-Wen/INSPECT.",
+      "authors": [
+        "Di Wen",
+        "Kailun Yang",
+        "Wenhao Guo",
+        "Yitian Shi",
+        "Junwei Zheng",
+        "Yufan Chen",
+        "Ruiping Liu",
+        "Jiale Wei",
+        "Rania Rayyes",
+        "Kunyu Peng"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20589v1",
+      "title": "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
+      "published": "2026-09-17T15:41:32Z",
+      "updated": "2026-09-17T15:41:32Z",
+      "summary": "Current dense visual SLAM systems rely almost exclusively on 8-bit tonemapped Low Dynamic Range (LDR) inputs, limiting their robustness in extreme lighting where shadows and highlights trigger tracking drift and mapping collapse. Conversely, existing raw and High Dynamic Range (HDR) reconstruction pipelines operate strictly offline. They depend on Structure-from-Motion preprocessing and are not suited for large inter-frame motion. We present, to the best of our knowledge, the first online Gaussian SLAM framework that tracks and maps directly on single-exposure 16-bit linear HDR imagery. Our method rests on three core components: an architecture-agnostic HDR Gaussian Splatting module featuring an MLP-free logarithmic parameterization of Gaussian color features; a Reinhard range-compressed photometric objective; and structure-guided spatial gradient weighting. Combined, these components allow our approach to outperform a direct HDR adaptation of MonoGS in both trajectory and reconstruction accuracy, while rendering natively in linear scene radiance for post-rendering processing. The same formulation runs unchanged on standard 8-bit inputs, roughly halving the MonoGS baseline error. Furthermore, our HDR Gaussian module transfers seamlessly to SplaTAM, Gaussian SLAM, and DROID-W, eliminating all tracking failures these systems suffer on challenging illumination sequences. To enable this research, we introduce RawSLAM: a dataset of 10 real-world indoor sequences featuring 16-bit RAW imagery, aligned depth, IMU measurements, and external OptiTrack poses. Code and dataset will be made publicly available soon.",
+      "authors": [
+        "Marina Orozco Gonz\u00e1lez",
+        "Luis Merino"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20586v1",
+      "title": "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+      "published": "2026-09-17T15:39:25Z",
+      "updated": "2026-09-17T15:39:25Z",
+      "summary": "Referring scene understanding for embodied robots requires grounding object- and relation-centric language queries from a designated viewpoint. While a local semantic Gaussian map can support such grounding within one agent's observations, cooperative settings require this ability to remain effective after independently reconstructed maps are aligned and fused. In this setting, the referred target or its contextual landmark may come from another agent's observations, while spatial relations must still be interpreted from the querying robot's viewpoint. We formulate this problem as cooperative referring Gaussian grounding over fused maps, which requires geometric alignability, instance-level semantic comparability, and view-conditioned relation reasoning. Existing language-aware Gaussian methods mainly focus on single-map querying, whereas Gaussian registration methods optimize geometric or photometric alignment without preserving language-grounding-oriented semantic compatibility. We propose CoRef-GS, a cooperative referring Gaussian splatting framework. CoRef-GS constructs local open-vocabulary instance-aware Gaussian maps, then aligns partially overlapping maps with a cross-agent alignment module by geometric and semantic consistency, and grounds queries using a view-conditioned mask relation graph. We further introduce CoQuad-Ref, a dual-quadruped benchmark spanning both real-world and simulated indoor scenes. Experiments show that, on simulated scenes, CoRef-GS reduces the rotation error from 2.58\u00b0 after coarse initialization to 0.15\u00b0 after refinement, and improves real-world referring mIoU over ReferSplat from 52.6% to 68.8%. The established benchmark and source code will be publicly released at https://github.com/ruojiruoli17/CoRef-GS.git.",
+      "authors": [
+        "Zhikun Zhou",
+        "Kunyu Peng",
+        "Runyi Yang",
+        "Junhao Cai",
+        "Di Wen",
+        "Ruiping Liu",
+        "Danda Pani Paudel",
+        "Yi Zhou",
+        "Luc Van Gool",
+        "Kailun Yang"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "eess.IV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20574v1",
+      "title": "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+      "published": "2026-09-17T15:32:30Z",
+      "updated": "2026-09-17T15:32:30Z",
+      "summary": "Answer grounding in document visual question answering remains an open challenge: most benchmarks lack grounding annotations or provide limited-quality labels, while constructing grounded datasets still requires costly manual effort. We introduce DocAttriBench (DAB), a large-scale benchmark for fine-grained, element-level source attribution in Document VQA, grounding answers to specific layout elements such as text blocks, tables, and images. To build DAB, we propose a Mask-based Perplexity-Derived Attribution method (MAPPET) that combines document layout and language modeling to identify the most informative element for each answer. MAPPET measures the increase in perplexity after masking candidate elements and attributes the answer to the element contributing most to model confidence. Applying MAPPET to multiple existing Document VQA datasets yields DAB, with 237k documents and 296k question-answer pairs with element-level grounding. We benchmark grounding-capable multimodal LLMs on DAB, evaluating answer accuracy, attribution accuracy, and overall answer quality. Results show that while larger models generally achieve higher answer accuracy, even the strongest models often fail to localize the supporting elements. DAB provides a scalable benchmark for developing grounded, verifiable, and trustworthy Document VQA models. Dataset and code are available at https://aimagelab.github.io/DocAttriBench/.",
+      "authors": [
+        "Luca De Grandis",
+        "Silvia Cappelletti",
+        "William Raccagni",
+        "Marcella Cornia",
+        "Lorenzo Baraldi",
+        "Rita Cucchiara"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20566v1",
+      "title": "OmniMimic: Dynamics-completed Motion Augmentation for Multi-style Omnidirectional Quadruped Locomotion",
+      "published": "2026-09-17T15:28:48Z",
+      "updated": "2026-09-17T15:28:48Z",
+      "summary": "Animal demonstrations provide quadruped robots with natural and distinctive gait styles that are difficult to specify through hand-crafted rewards. However, their narrow directional coverage leaves little style-consistent supervision for backward, lateral, and turning commands. We present OmniMimic, a training framework that turns directionally limited animal demonstrations into a single multi-gait policy over target per-axis velocity ranges. OmniMimic first combines temporal reversal, constrained dynamics completion, and sagittal reflection to construct robot-specific kinematic and physical supervision beyond the observed directions. It then expands commands progressively from the demonstrated velocity distribution toward the target per-axis bounds, and uses a shared actor with soft-gated, gait-specialized residual experts to balance reusable locomotion skills with gait-specific corrections. Across four gaits in simulation, OmniMimic reduces mean foot-position RMSE at forward and backward reference velocities by 12.9% and velocity-tracking RMSE on a uniform Cartesian command grid by 63.1%, compared with the matched APEX baseline. The project page is at https://OmniMimic.github.io.",
+      "authors": [
+        "Sheng Wu",
+        "Guoqiang Zhao",
+        "Zhe Yang",
+        "Fei Teng",
+        "Zhikun Zhou",
+        "Yanlin Yang",
+        "Zheng Fang",
+        "Hong Zheng",
+        "Yaonan Wang",
+        "Kailun Yang"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "eess.IV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20562v1",
+      "title": "A Dual-Stream Regulated Reconstruction and Segmentation Network with Hierarchical Artifact-Prior Modeling for Ultra-Low-Field Pediatric Neuroimaging",
+      "published": "2026-09-17T15:26:57Z",
+      "updated": "2026-09-17T15:26:57Z",
+      "summary": "Automated quality assessment, enhancement, and segmentation of multiple structures in $0.064\\,\\mathrm{T}$ ultra-low-field pediatric MRI are limited by a low signal-to-noise ratio, weak anatomical boundaries, and frequent artifacts. We present a unified framework for the LISA 2026 Challenge that performs all three tasks together within one inference pipeline. A network with two coupled streams, built on a 3D U-Net, first reconstructs an enhanced uLF volume and then combines the original and enhanced images for subcortical segmentation. To improve boundary stability, we add an auxiliary class covering brain tissue outside the target structures, derived from whole brain masks. A head conditioned on an artifact graph predicts the seven artifact ratings from reconstruction residuals and frozen segmentation features. We address the scarcity of dense annotations using diffeomorphic registration from atlas to target for label propagation and to regularize anatomical reconstruction. We report validation results across all three tasks.",
+      "authors": [
+        "Bahram Jafrasteh",
+        "Leo Milecki",
+        "Qingyu Zhao"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20509v1",
+      "title": "Automated Goldsmith's Mark Retrieval in Silverware",
+      "published": "2026-09-17T14:51:46Z",
+      "updated": "2026-09-17T14:51:46Z",
+      "summary": "For art historians, goldsmith marks play a critical role in the identification and dating of artifacts. In practice, experts must manually compare a query mark against hundreds of documented examples, a process that is both tedious and highly dependent on specialist knowledge. To address this, we present an AI-assisted retrieval pipeline that combines mark localization with metric-learning fine-tuning across three backbone architectures: an ImageNet-pretrained ResNet-50, a supervised ViT-S/16, and a self-supervised DINOv2 ViT-S/14. We conduct a systematic evaluation of cropping strategies, where we measure the impact of no cropping, manual ground-truth cropping, and learned detection-based cropping, and assess their interaction with each backbone. Our strongest configuration, DINOv2 ViT-S/14 with manual crop and metric-learning fine-tuning, achieves an mAP of 62.63% and a Top-1 accuracy of 73.74%. Our experiments show that self-supervised pretraining and mark localization are the two most impactful factors, with learned cropping recovering the majority of the gain from manual cropping without requiring ground-truth annotations at inference time. To enable reproducibility and adoption in the digital humanities, we release our manually annotated dataset and codebase, and deploy the system via a public web interface.",
+      "authors": [
+        "Atmik Tiwari",
+        "Vincent Christlein",
+        "Mark Fichtner",
+        "Freya Gohlke",
+        "Birgit Sch\u00fcbel",
+        "Theresa Witting",
+        "Heike Zech",
+        "Mathias Zinnen"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.DL"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20508v1",
+      "title": "Grounded Product Understanding in Livestream Videos",
+      "published": "2026-09-17T14:51:18Z",
+      "updated": "2026-09-17T14:51:18Z",
+      "summary": "E-commerce livestreams have emerged as an important channel for presenting products to online consumers, containing multiple products whose information is scattered in different moments. This poses significant challenges for downstream product understanding applications, such as product-centric livestream clipping, where models need to identify the product and its relevant segments for information gathering. However, existing benchmarks for general product understanding typically evaluate product retrieval and temporal localization in isolation, leaving the critical correspondence between product identity and temporal evidence largely unassessed. To address this limitation, we introduce GPUB, a large-scale benchmark comprising 3,000 livestream instances with quality-controlled multi-moment temporal annotations and a catalog of over 31K fashion products. GPUB supports three evaluation tasks: the main task Grounded Product Understanding (GPrU) requires jointly identifying the target product and localizing its supporting moments from a livestream video and a candidate product set; Product Retrieval and Product Moment Localization serve as two complementary subtasks. Evaluation of existing multimodal models shows that GPrU remains highly challenging, with the best-performing baseline achieving only 10.13% Pair mAP@.3. To narrow the performance gap, we further develop UniPro, a unified product understanding model that derives product-aligned and temporally structured representations from shared multimodal encoding, improving Pair mAP@.3 to 21.53% while achieving 37.23% Joint R@1@.3 on GPrU.",
+      "authors": [
+        "Xinyu Zhang",
+        "Junjie Chen",
+        "Jiawei Ge",
+        "Qianlong Li",
+        "Libin Ma",
+        "Baokun Pan",
+        "Yahui Luo"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20475v1",
+      "title": "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
+      "published": "2026-09-17T14:32:00Z",
+      "updated": "2026-09-17T14:32:00Z",
+      "summary": "Open-vocabulary scene understanding is fundamental for robotics, laying the groundwork for spatial reasoning and object manipulation. While closed-vocabulary 3D instance segmentation heavily leverages 3D shape information, state-of-the-art open-vocabulary methods remain predominantly restricted to 2D image features or image-distilled representations during mask labeling. In this paper, we propose SenseFuse, a label-free fusion method that balances 2D image and 3D shape encoders for robust open-vocabulary 3D instance segmentation, refining only the mask-labeling stage of existing pipelines. We reveal that 2D image and 3D shape encoders exhibit largely disjoint failure patterns and rarely share identical wrong labels, whereas two 2D image encoders frequently repeat the same errors. This distinct behavior makes the 2D and 3D pair inherently complementary. We introduce an adaptive mechanism that selects a scene-level fusion weight to maximize a label-free sensitivity measure, estimated directly from a single scene's unlabeled proposals in milliseconds. SenseFuse improves labeling accuracy in every evaluated setting across ScanNet200, Replica, and ScanNet++, recovering 67-100% (median 93%) of the gain achievable with an oracle weight, and it raises instance AP in 21 of 22 reported settings. Code is available at https://github.com/hanes1207/SenseFuse.",
+      "authors": [
+        "Euiseok Han",
+        "Tri Ton",
+        "Hwanhee Kim",
+        "Seungyeon Ryu",
+        "Chang D. Yoo"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20441v1",
+      "title": "Cross-Architecture Foundation-Model Distillation for Edge Flood Segmentation",
+      "published": "2026-09-17T14:15:01Z",
+      "updated": "2026-09-17T14:15:01Z",
+      "summary": "Geospatial foundation models can provide strong flood-segmentation performance, but their size limits deployment on memory-constrained edge hardware. We distill a 300-million-parameter Prithvi-EO-2.0 teacher, fine-tuned on the 252 manually labeled Sen1Floods11 training scenes, into a 0.7-million-parameter EfficientViT-B0 student. The teacher supervises additional unlabeled Sentinel-2 imagery, allowing the student training set to grow without new manual annotations. At the matched budget of 252 scenes, teacher-supervised training is competitive with direct training and improves STURM-Flood performance across tested configurations; a geometry-matched control shows that label source alone does not explain the difference. Scaling the teacher-supervised pool to 2,500 scenes narrows the remaining student--teacher gap: the float student reaches 0.787 water intersection over union on the Sen1Floods11 test split against 0.822 for the teacher, matches the teacher on STURM-Flood under our evaluation protocol, and remains below it on WorldFloods-v2. After activation replacement and quantization-aware training, the student runs as a 1.5-megabyte 8-bit integer (INT8) TensorRT engine on a Jetson Xavier NX at 5.57 milliseconds of graphics processing unit (GPU) compute per 512-by-512 image, with approximately 14 megabytes of runtime device memory. A fixed modified normalized difference water index (MNDWI) threshold is competitive with both models on the two clean external benchmarks, so we interpret those benchmarks as generalization tests rather than as evidence of learned-model superiority over a spectral rule. The results support the conclusion: foundation-model supervision can amplify a fixed manual annotation budget into a substantially larger training set and yield a compact, deployable edge model.",
+      "authors": [
+        "Fabian Schmalstieg",
+        "Karsten Mueller",
+        "Wojciech Samek"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20427v1",
+      "title": "When Do Language-Grounded Explanations Help? A Graph-Bottleneck for Farm Monitoring Interpretable Sheep Facial Pain",
+      "published": "2026-09-17T14:08:16Z",
+      "updated": "2026-09-17T14:08:16Z",
+      "summary": "Automated pain recognition from facial expression could make continuous welfare assessment practical in sheep, but adoption depends on trust: a stockperson cannot act on a score that arrives without justification. We ground a model in the Sheep Pain Facial Expression Scale (SPFES) by letting each detected facial region attend over text embeddings of the clinical descriptors and then test whether the resulting explanations mean anything. They do not. Ablating an entire descriptor changes the predicted logit by about $10^{-4}$, and the most-attended cue agrees with the predicted pain level in only $32.6\\%$ of regions, although the attention maps, the learned gate, and the generated text all proposed otherwise. We therefore remove the appearance bypass with a concept bottleneck whose classifier reads only SPFES concept scores, supervised by per-region state annotations that image-level pipelines discard. This costs $0.05$--$0.10$ in Cohen's $\u03ba$ but yields concepts that are demonstrably learned: minority pain-indicating states are recovered at $3.5$--$8.3\\times$ their base rates, and the ear and eye severity orderings emerge without severity supervision. Removing the supervision alone leaves $\u03ba$ unchanged while concept accuracy falls to $0.109$, showing that architectural necessity does not imply semantic validity. We also show that pooled concept accuracy is misleading under clinical imbalance and provide a cross-validated, protocol-matched benchmark of seven methods on this dataset.",
+      "authors": [
+        "Alam Noor",
+        "Miguel Guti'errez Gait'an"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20423v1",
+      "title": "WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing",
+      "published": "2026-09-17T14:04:31Z",
+      "updated": "2026-09-17T14:04:31Z",
+      "summary": "Document parsing converts document images into structured content and requires reliable performance across diverse layouts and acquisition conditions. Yet training corpora are biased toward common document types and clean digital pages, while expanding coverage alone does not specify how to address a parser's remaining weaknesses. We present WeVisDoc, a two-stage data-centric framework for robust end-to-end document parsing. Stage I broadens semantic, structural, and appearance coverage through heterogeneous data and structure-preserving degradation synthesis. Stage II uses a held-out probe to measure the Stage I parser's residual errors within fixed visual-structural clusters. These diagnostics guide targeted data construction and reallocation of the target-token budget. WeVisDoc-4B achieves an Overall score of 95.38 on OmniDocBench v1.6 and a mean Overall score of 75.54 across the three PureDocBench tracks, ranking first among the compared end-to-end parsers in all four settings. Compared with Stage I, Stage II improves Overall scores for the 2B and 4B models on both benchmarks, with larger gains on the degraded PureDocBench tracks, including a 4.03-point gain for the 4B model on the Real Degraded track.",
+      "authors": [
+        "Hao Yu",
+        "Kang Liu",
+        "Linnan Zhao",
+        "Jiabo Zhan",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20414v1",
+      "title": "TouchSight: Bare-Handed Tactile Prediction from Egocentric Video via Generative Visual Augmentation",
+      "published": "2026-09-17T13:58:43Z",
+      "updated": "2026-09-17T13:58:43Z",
+      "summary": "Tactile signals provide direct contact and force measurements that are essential for understanding physical interactions and enabling dexterous robotic manipulation. However, tactile sensing requires direct measurement at contact interfaces, making large-scale data collection reliant on intrusive, costly, and restrictive instrumentation. We present TouchSight, a monocular egocentric vision framework for dense full-hand contact force prediction that leverages 500 hours of pressure-glove recordings and extensive hand-object interaction (HOI) data. To address the appearance gap between gloved training data and bare-hand real-world scenarios, we construct TwinTouch-20H: 20 hours of paired visual data in which generative video models re-render gloved recordings as bare-hand observations against new backgrounds while preserving the original measured tactile labels. TouchSight predicts dense force from both gloved and generated bare-hand videos, outperforms prior contact prediction methods on OakInk2, qualitatively generalizes to natural bare-hand egocentric videos from unseen datasets, and improves consistently as glove supervision scales. These results demonstrate that dense tactile signals can be recovered from egocentric vision alone, without tactile instrumentation at capture time.",
+      "authors": [
+        "Danyan Zhou",
+        "Jinxuan Lu",
+        "Jiawei Lin",
+        "Tianxing Chen",
+        "Chuqiao Lyu",
+        "Wenbo Ding"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20388v1",
+      "title": "Navi-Agent: Unlocalized Monocular Navigation Agent",
+      "published": "2026-09-17T13:41:27Z",
+      "updated": "2026-09-17T13:41:27Z",
+      "summary": "Vision-Language Navigation in Continuous Environments (VLN-CE) requires an embodied agent to execute long-horizon instructions in unknown environments. Existing zero-shot VLN-CE systems typically maintain spatial states through geometric localization or coordinate-based representations. Recent geometry-constrained navigation removes depth and globally consistent coordinates, but maintaining persistent spatial awareness for place confirmation, progress verification, and recovery remains challenging. We present Navi-Agent, a zero-shot VLN-CE agent that constructs a coordinate-free spatial state from visual observations and executed motion histories. Navi-Agent organizes this state as a navigation topology, where nodes represent visual places and edges represent motion transitions. This representation enables observation-based approximate self-localization, task progress verification, and visual revisitation-based recovery. Navi-Agent performs closed-loop navigation by decomposing instructions into sub-goals, executing local visual navigation, and verifying visited places through the constructed spatial state. Experiments on zero-shot VLN-CE benchmark and real-world robot platforms show that Navi-Agent achieves state-of-the-art performance among geometry-constrained methods while remaining competitive with approaches relying on geometric localization.",
+      "authors": [
+        "Wenyuan Xie",
+        "Mengyang Hong",
+        "Yongzhong Wang",
+        "Yanbiao Ji",
+        "Yijin Zhou",
+        "Shaokai Wu",
+        "Shalayiding Sirejiding",
+        "Huayi Zhou",
+        "Yi-Chao Chen",
+        "Ma Ling",
+        "Yue Ding",
+        "Hongtao Lu"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20386v1",
+      "title": "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation",
+      "published": "2026-09-17T13:39:18Z",
+      "updated": "2026-09-17T13:39:18Z",
+      "summary": "Iris presentation attack detection (PAD) is security-critical when a subsystem that appears reliable during development encounters presentation attack instruments (PAIs) or acquisition conditions absent from validation data. We benchmark three compact scratch-trained computer-vision models, each with at most approximately 0.26 million trainable parameters, on the Notre Dame subset of LivDet-Iris 2017 under PAI-driven domain shift and environmental degradation. All models are trained without external pretraining or data augmentation and evaluated over five seeds. A validation-selected threshold is transferred unchanged to the known-attack, unknown-attack, corrupted, and pooled test partitions. From known to unknown attack presentations, Attack Presentation Classification Error Rate (APCER) increases by 17.11-30.47 percentage points and Detection Equal Error Rate (D-EER) increases by 7.38-12.73 percentage points. At the validation-selected threshold, ZACH-ViT obtains the lowest unknown-attack APCER (47.69 +/- 4.84%) and D-EER (38.87 +/- 0.93%), while Compact-TransMIL obtains the lowest Bona Fide Presentation Classification Error Rate (BPCER). ZACH-ViT also gives the lowest unknown-attack BPCER at an APCER limit of 10% (81.29 +/- 1.95%). The high absolute errors show that the comparative advantage of the best compact model does not constitute deployment readiness under unknown PAIs.",
+      "authors": [
+        "Athanasios Angelakis",
+        "Marta Gomez-Barrero"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CR"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20377v1",
+      "title": "MM-Future: Multi-Mode Joint World-Action Modeling for Autonomous Driving",
+      "published": "2026-09-17T13:31:59Z",
+      "updated": "2026-09-17T13:31:59Z",
+      "summary": "Autonomous driving involves coupled decision-making and scene evolution under multi-mode uncertainty. To capture this coupling and uncertainty, we introduce MM-Future, a world-action model that generates multiple paired scene-action hypotheses and models bidirectional interaction within each pair. Each hypothesis is initialized from a structured action prior and an independent future scene source, which are then co-evolved through a modality-aware diffusion Transformer. To support efficient multi-mode rollout, MM-Future compresses multi-view video into planning-oriented representations, dubbed MM-Tokens. Finally, a future-conditioned proposal scorer ranks trajectory candidates by shared history context and their paired predicted future. On NAVSIM navtest, MM-Future achieves 94.0 PDMS and 91.5 EPDMS, while attaining a 32.3 HD-Score in zero-shot closed-loop evaluation on HUGSIM. Ablations show consistent improvements over both single-mode and action-only variants, validating the benefit of multi-mode joint world-action modeling.",
+      "authors": [
+        "Shuai Liu",
+        "Hechangle Gong",
+        "Hao Jiang",
+        "Runlin He",
+        "Junxiang Zhan",
+        "Kai Huang",
+        "Sheng Yang",
+        "Shaoqing Ren"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20348v1",
+      "title": "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
+      "published": "2026-09-17T13:12:49Z",
+      "updated": "2026-09-17T13:12:49Z",
+      "summary": "Conventional 3D Gaussian Splatting assumes a closed set of observations and long optimization schedules. Continual RGB-D mapping in contrast poses the problem that new observations arrive online, while previously reconstructed regions must be preserved. We present EliGSiR (Evidence-guided Load-adaptive Incremental Gaussian Splatting with Image Replay), a continual Gaussian mapper that controls how the available optimization budget is used as the reconstruction evolves. Map-Guided View Scheduling filters redundant incoming views and reconsiders retained views according to the current state of the map. Load-Adaptive Fidelity adjusts supervision resolution to the current mapping load instead of following a fixed resolution schedule. Targeted Geometry Growth separates depth supervision from Gaussian creation and adds geometric capacity only where repeated RGB-D observations indicate missing or misplaced structure. Together, these mechanisms adapt which views are optimized, how much image detail is used, and where the representation grows while mapping remains active. We evaluate EliGSiR on Replica, TUM RGB-D, ScanNet++, and real RGB-D sensor sequences, considering both the final reconstruction and the map available throughout acquisition. On TUM RGB-D fr3/long_office_household, EliGSiR reaches 21.52 dB with the same ground-truth mapping poses used by the controlled baselines, compared with 19.42 dB for SplaTAM. In the tracked-pose comparison, EliGSiR with live ORB-SLAM3 poses reaches 23.02 dB in 155.5 s, compared with 20.10 dB in 230.9 s for CaRtGS using its native tracker. We further evaluate reconstruction throughout acquisition and show how EliGSiR adaptive view scheduling, supervision fidelity, and geometry growth improve the use of the available mapping budget.",
+      "authors": [
+        "Bj\u00f6rn Ellensohn",
+        "Elmar Rueckert",
+        "Christian Rauch"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20341v1",
+      "title": "Fast Cross-Strength Multi-Contrast Brain MRI Translation using Latent Bridge Matching",
+      "published": "2026-09-17T13:10:38Z",
+      "updated": "2026-09-17T13:10:38Z",
+      "summary": "Magnetic Resonance Imaging (MRI) acquired at different field strengths exhibits pronounced variation in noise, resolution, homogeneity, and contrast, which limits comparability across acquisition settings and complicates downstream analysis. We address this with a unified conditional model for controllable field-to-field synthesis, built on the framework of conditional latent bridge matching. Our single model achieves highly competitive results across the validation phase for all three tasks of the MRIxFields2026 challenge without task-specific architectures or training. We achieve fast generation with only a single inference step, producing all modality and field-strength combinations for $30$ axial slices in under $90$ seconds, as well as cross-modality-strength translation for a full volume in under $70$ seconds, on a single NVIDIA A5000 GPU. We further provide extensive ablations regarding different components of our solution. Code: https://gitlab.com/siddharthsrivastava/mrixfields-2026",
+      "authors": [
+        "Siddharth Srivastava",
+        "Till Bretschneider"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20340v1",
+      "title": "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
+      "published": "2026-09-17T13:09:56Z",
+      "updated": "2026-09-17T13:09:56Z",
+      "summary": "Ultrasound image analysis plays a crucial role in cancer screening and prenatal diagnosis, yet comprehensive assessment requires jointly addressing tasks such as lesion segmentation and benign-malignant classification. While recent vision foundation models have shown remarkable universal representations, unlocking their potential for ultrasound is bottlenecked by the considerable domain gap from natural images. Existing methods typically fine-tune heavy vision encoders for isolated tasks, incurring substantial computational overhead while overlooking the underlying commonalities across heterogeneous tasks. In this work, we propose FreqDINO++, a frequency-guided multi-task routing vision foundation model for universal ultrasound analysis. We first introduce a Multi-task Routing Adapter (MR-Adapter) to support parameter-efficient integration of task-common and task-specific knowledge, a Frequency-aware Feature Enhancer (F$^2$-Enhancer) is then designed to capture the rich multi-scale frequency characteristics of ultrasound images, and a Task-aligned Collaborative Decoder (TC-Decoder) is devised to promote collaboration between dense and global prediction tasks through global-local token interaction. Extensive experiments on large-scale multi-task and external single-task ultrasound benchmarks demonstrate that FreqDINO++ consistently outperforms strong baselines and recent foundation models across 27 diverse clinical task scenarios, while also showing promising generalization to unseen data. The code is at https://github.com/MingLang-FD/FreqDINO-Plus.",
+      "authors": [
+        "Qing Xu",
+        "Yixuan Zhang",
+        "Yue Li",
+        "Xiangjian He",
+        "Qian Zhang",
+        "Mainul Haque",
+        "Rong Qu",
+        "Wenting Duan",
+        "Jieyun Bai",
+        "Zhen Chen"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20325v1",
+      "title": "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+      "published": "2026-09-17T12:59:11Z",
+      "updated": "2026-09-17T12:59:11Z",
+      "summary": "Agricultural image understanding requires fine-grained recognition of plant diseases, pests, crop structures, and botanical species under complex real-world conditions. Despite recent advances in Multimodal Large Language Models (MLLMs), existing models remain limited to text-only outputs and lack pixel-level visual grounding capabilities. In this work, we introduce AgriScope, a unified pixel-grounded multimodal framework for agricultural image understanding. AgriScope jointly supports image-level, region-level, and pixel-level understanding within a unified framework, enabling tasks such as grounded caption generation, referring expression segmentation, and multi-turn multimodal interaction for agricultural imagery. AgriScope integrates biologically specialized semantic representations with dense spatial grounding through biological-semantic encoding, dense spatial representations, and pixel decoding. To support large-scale grounded learning, we introduce AgriGround, a large-scale pixel-grounded agricultural multimodal instruction-tuning dataset containing over 500K images and 11M instruction-following samples spanning plant disease analysis, crop and weed identification, insect pest recognition, and fine-grained botanical understanding. AgriGround is constructed through a multi-stage automatic annotation pipeline that integrates multimodal caption generation, phrase-level grounding, segmentation mask generation, and task-oriented instruction synthesis to produce densely grounded supervision. Extensive experiments across multiple agricultural vision-language tasks demonstrate the effectiveness of AgriScope in pixel-grounded multimodal understanding, establishing a strong benchmark for agricultural vision-language learning and visual grounding. The dataset and code will be made publicly available at (https://github.com/boudiafA/AgriScope)",
+      "authors": [
+        "Abderrahmene Boudiaf",
+        "Mohamad Alanssari",
+        "Irfan Hussain",
+        "Sajid Javed"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20160v1",
+      "title": "Needles in a Raystack: Ultra-Sparse LiDAR Occupancy Detection for Bat Tracks",
+      "published": "2026-09-17T12:49:42Z",
+      "updated": "2026-09-17T12:49:42Z",
+      "summary": "Monitoring flying animals is important for understanding and protecting biodiversity, but nocturnal species such as bats are difficult to observe in the field. Using LiDAR, bat movements at night result in ultra-sparse 3D spatio-temporal data in which standard reconstruction losses tend to predict only background and miss real flight paths. We study this problem as voxel-wise occupancy detection in sensor-centric LiDAR raystacks. A lightweight 3D U-Net is proposed that preserves temporal resolution, uses skip connections for spatial detail, and combines weighted binary cross-entropy with Dice loss to handle the strong class imbalance. In real LiDAR recordings of bats over open fields, cross-checked with acoustic monitoring, a reconstruction-based 3D convolutional autoencoder baseline fails to recover foreground trajectories. In contrast, the proposed U-Net recovers sparse foreground occupancy in diagnostic experiments and produces coherent occupancy patterns along bat flight trajectories, providing a practical basis for validation-scale experiments, later clustering of flight tracks, and future integration of bat activity information into biodiversity-aware turbine curtailment strategies.",
+      "authors": [
+        "Nico Klar",
+        "Pankaj Rana",
+        "Nizam Gifary",
+        "Jakob Traub",
+        "Aamir Ahmad"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20151v1",
+      "title": "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation",
+      "published": "2026-09-17T12:44:00Z",
+      "updated": "2026-09-17T12:44:00Z",
+      "summary": "Objectives: Quantitative assessment of infarct hypodensity on non-contrast computed tomography (NCCT), including net water uptake (NWU), requires manual or semi-manual lesion delineation, often guided by CT perfusion or diffusion-weighted MRI, limiting clinical applicability. Automated segmentation on NCCT could enable efficient biomarker extraction such as NWU but remains challenging across heterogeneous multicenter data. This study aimed to develop and externally test a domain-aware deep learning framework for ischemic stroke segmentation on NCCT and assess its suitability for NWU quantification. Materials & Methods: In this retrospective multicenter study of 801 patients from four datasets, an nnU-Net-based model was trained on NCCT scans from the University Medical Center Hamburg-Eppendorf and the Acute Ischemic Stroke Dataset. To adapt to new domains, the model was fine-tuned on target-domain subsets from Boston (n=11) and ISLES (n=75), with evaluation on held-out cases not used for fine-tuning. Automated segmentations and NWU values were compared with expert references. Results: For lesions $\\geq$ 30 mL, median Dice was 0.68 (Boston) and 0.56 (ISLES). Including smaller lesions, which predominated in ISLES, median Dice was 0.54 (interquartile range [IQR] 0.30-0.70) for acute lesion segmentation (Boston dataset) and 0.20 (IQR 0.03-0.41) for NCCT lesion segmentations when compared to post-treatment infarct (primary target of the ISLES challenge). Automated NWU mean absolute error was 1.37 percentage points (SD 1.61, Boston). Conclusion: Target-domain adaptation supported NCCT-only infarct segmentation across heterogeneous external cohorts, although performance varied across domains. The approach enabled low-error NWU quantification from baseline NCCT without advanced imaging, supporting further prospective clinical evaluation.",
+      "authors": [
+        "Linus Britt",
+        "Maximilian Nielsen",
+        "Susan Klapproth",
+        "Andre Kemmling",
+        "Michael H. Lev",
+        "Gabriel Broocks",
+        "Rene Werner",
+        "Thilo Sentker"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20150v1",
+      "title": "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
+      "published": "2026-09-17T12:41:44Z",
+      "updated": "2026-09-17T12:41:44Z",
+      "summary": "Conventional satellite remote sensing transmission follows a reconstruct-then-infer paradigm that optimizes pixel-level fidelity, creating an objective mismatch with downstream tasks such as classification and detection, especially at low SNR. This paper investigates a task-oriented framework that bypasses image reconstruction and directly transmits semantic features extracted by a multitask-pretrained backbone. A lightweight channel adaptation module (CAM) compresses feature dimensionality for bandwidth reduction, and a feature restorer recovers task-relevant structure after channel corruption. With the backbone frozen, the CAM and task-specific downstream heads are jointly optimized with task and feature-level supervision under random-SNR training. Under the adopted AWGN setting, experiments on scene classification and object detection show consistent gains over reconstruction-oriented JSCC baselines across different SNR conditions, with the largest improvements in the low-SNR regime.",
+      "authors": [
+        "Shuoyuan Sun",
+        "Hongyu Wang",
+        "Mugen Peng",
+        "Wenjia Xu"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20147v1",
+      "title": "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+      "published": "2026-09-17T12:38:33Z",
+      "updated": "2026-09-17T12:38:33Z",
+      "summary": "Cortical hypometabolism measured by Fluorodeoxyglucose Positron Emission Tomography (FDG-PET) is a highly sensitive biomarker for dementia diagnosis. However, high costs, radiation exposure, and limited accessibility constrain its clinical utility. While cross-modal synthesis from Magnetic Resonance Imaging (MRI) offers a promising alternative, existing volumetric generation methods do not explicitly account for the highly folded cortical geometry, where disease-related patterns predominantly reside. To address this, we introduce a novel surface-based diffusion bridge framework DB-SUiT for MRI-to-PET translation that operates natively on the cortical manifold. A conditional Spherical U-shaped vision Transformer (SUiT) is specifically designed to model the intricate cross-modal relationships while preserving surface topology. It combines spherical convolutional encoders for multi-scale surface feature extraction with bottleneck Transformers to capture long-range spatial dependencies, while incorporating demographic and subcortical conditions to refine the synthesis. Evaluated on two datasets, including subjects with different dementia types, DB-SUiT demonstrates high-fidelity synthesis that substantially outperforms other baselines. In automated dementia classification, synthesized PET surfaces improve performance over MRI by 14.2% and PET volumes by 11.3%, approaching the performance of real PET surfaces. In a blinded reader study, synthetic PET achieved 85.5% diagnostic accuracy, compared with 75.8% for MRI and 95.2% for real PET. This further demonstrates cross-cohort and cross-pathology generalization, as the model was evaluated without retraining on an external cohort that included a dementia subtype not represented during training. Our code is available at https://github.com/ai-med/DB-SUiT.",
+      "authors": [
+        "Yitong Li",
+        "Alexandra Samoylova",
+        "Fabian Bongratz",
+        "Timo Grimmer",
+        "Dennis M. Hedderich",
+        "Igor Yakushev",
+        "Christian Wachinger"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20139v1",
+      "title": "Cross-Modal Attention Acts as a Frequency Filter: Why Verbose Prompts Improve Robustness in Vision-Language Models",
+      "published": "2026-09-17T12:31:07Z",
+      "updated": "2026-09-17T12:31:07Z",
+      "summary": "Vision-language models (VLMs) are fragile under image corruption. We find that the wording of the question affects VLMs in two opposite ways. Verbose questions make VLMs substantially more robust---e.g., rephrasing \"Is there a cat?\" into \"Please look carefully and answer: is there a cat?\". Conversely, VLMs become more fragile under corruption when the question is semantically complex or finer-grained, e.g., \"what colour is the cup left of the chair?\" instead of \"is there a cup?\". Both effects stem from question-conditioned cross-modal attention, which induces a spectral filter over image patches: verbose questions broaden its frequency support, while fine-grained questions concentrate it onto fewer visual scales. The model's answer drifts most when this filter and the corruption sit on the same spatial frequencies. We test the filter view on Qwen3-VL and LLaVA-OneVision across GQA and CLEVR; verbose paraphrasing reduces drift variance by 70--81% on the 8B models. The practical recipe---pad the prompt---further yields measurable gains in accuracy, even under image corruption.",
+      "authors": [
+        "Farooq Ahmad Wani",
+        "Maria Sofia Bucarelli",
+        "Mujtaba Hussain Mirza",
+        "Oleksandr Pryymak",
+        "Aryo Pradipta Gema",
+        "Iacopo Masi",
+        "Pasquale Minervini",
+        "Fabrizio Silvestri"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20106v1",
+      "title": "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
+      "published": "2026-09-17T12:07:22Z",
+      "updated": "2026-09-17T12:07:22Z",
+      "summary": "Robotic reward models evaluate task execution from visual observations, but their predictions can change with camera viewpoint and occlusion even when the underlying task state is unchanged. Adapting a pretrained reward model to a local task therefore requires accounting for how that task is observed. We introduce AnyviewMeter, a geometry-conditioned adaptation framework for robotic reward models that represent task progress as a scalar reward signal. It combines low-rank fine-tuning with token-aligned Plucker rays and synchronous block attention: ray conditioning incorporates camera geometry into visual features and attention queries and keys, while block attention fuses synchronized views inside the pretrained decoder. The framework supports both single-view reward prediction and joint multi-view evaluation through parameter-efficient adaptation of a pretrained Robometer model. On PickCube, single-view adaptation improves progress prediction in every camera group and reduces mean absolute error under a changed field of view by approximately 21% relative to RGB fine-tuning. Across simulated manipulation tasks, joint multi-view prediction reduces progress error by 41-69% compared with averaging single-view RGB predictions and improves temporal ordering in approximately 88% of task-camera groups. On real tasks with fixed and wrist-mounted cameras, mean absolute error decreases by approximately 21% relative to averaged RGB fine-tuning. These results support camera geometry and joint visual evidence as useful components of task-specific robotic reward adaptation.",
+      "authors": [
+        "Yuang Tu",
+        "Runjia Tan",
+        "Yujie Yan",
+        "Jinghan Hu",
+        "Chen Lv"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20100v1",
+      "title": "A Smaller Transformer in Your Transformer",
+      "published": "2026-09-17T12:01:13Z",
+      "updated": "2026-09-17T12:01:13Z",
+      "summary": "Recent findings indicate that Vision Transformers settle into locally similar computational phases, implying a level of depthwise computational redundancy. However, existing methods to exploit this redundancy either fail to reduce inference compute or severely degrade model expressivity. In this work, we formalise a unified view of block redundancy that decouples the geometry from specific surrogate interventions. We then introduce Transformer-Within-Transformer (TWT), a post-hoc method that fuses contiguous groups of redundant layers into a single learned surrogate layer. TWT reduces parameter count and inference compute while remaining competitive with original models using half the depth on natural images, and in several downstream histopathology settings, TWT matches or even improves on the original baseline.",
+      "authors": [
+        "Dhananjay Tomar",
+        "Marius Aasan",
+        "Andreas Kleppe",
+        "Ad\u00edn Ram\u00edrez Rivera"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20088v1",
+      "title": "G^2RA-NET: Graph-based Cross-Slice Relation Modeling with Attention Gating for Medical Image Segmentation",
+      "published": "2026-09-17T11:48:52Z",
+      "updated": "2026-09-17T11:48:52Z",
+      "summary": "Medical image segmentation supports quantitative clinical analysis and computer-aided diagnosis. Recent methods for medical image segmentation have improved both local feature representation and volumetric context modeling. However, existing methods still strug- gle to efficiently model cross-slice relations in anisotropic volumet- ric images, limiting segmentation consistency and accuracy. This pa- per proposes G^2RA-Net, a medical image segmentation framework that combines graph-based cross-slice relation modeling with atten- tion gating. Graph-Based Slice Relationship Modeling (GSRM) cap- tures anatomical dependencies across consecutive slices by repre- senting each slice as a graph node and propagating semantic con- text through graph message passing. The Cross-Slice Attention Gate (CSAG) then selects relevant neighboring context and emphasizes target anatomical regions through attention-guided feature modula- tion. Experiments on brain MRI and abdominal CT datasets demon- strate that G^2RA-Net outperforms representative methods in seg- mentation accuracy and boundary quality. Ablation studies further validate the proposed design.",
+      "authors": [
+        "Shengye Wang",
+        "Zonglin Wu",
+        "Liang Fan",
+        "Yule Xue",
+        "Haozhe Zhao"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20066v1",
+      "title": "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation",
+      "published": "2026-09-17T11:16:59Z",
+      "updated": "2026-09-17T11:16:59Z",
+      "summary": "Event cameras offer high temporal resolution and motion sensitivity for tiny UAV detection, yet distant targets generate sparse and fragmented events that are easily overwhelmed by clutter and ego-motion. Existing methods mainly rely on dense event representations or local sparse spatiotemporal modeling, resulting in redundant computation or fragmented modeling of motion continuity across distant asynchronous events. To address this limitation, we introduce serialized motion evidence accumulation, which treats motion continuity as an ordered evidence propagation process. Specifically, the same event stream is organized into locality-preserving spatiotemporal paths and chronology-preserving temporal paths through the latent complementary serializations. Based on this principle, we propose PointEvent, a lightweight event-wise state-space framework that alternates serialized scans across the complementary orders, progressively consolidating fragmented motion evidence beyond fixed local neighborhoods. A high-resolution event branch preserves fine-grained target responses, while compact context modulation suppresses interference. Experiments demonstrate that PointEvent achieves SOTA with the fewest parameters and fastest measured inference among the compared methods. Code: https://github.com/wzz-z/PointEvent",
+      "authors": [
+        "Zongze Wu",
+        "Baofeng Jia",
+        "Weiqi Yan",
+        "Jingyuan Zhang",
+        "Yu Zang",
+        "Xiaoyu Chen",
+        "Jing Han"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20064v1",
+      "title": "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
+      "published": "2026-09-17T11:15:07Z",
+      "updated": "2026-09-17T11:15:07Z",
+      "summary": "Despite impressive reported scores, large vision-language models have seen limited practical uptake in historical automatic text recognition because of their computational cost, dependence on large-scale pretraining, and hallucination. Historical ATR therefore continues to rely largely on compact CRNN line recognizers, which are visually grounded and trainable on modest data. Lightweight recurrence-free recognizers promise the accuracy of larger models with the practical advantages of CRNNs, yet have not been comprehensively evaluated on historical writing. We adapt PP-OCRv6, a recent compact text recognizer without strong language modeling, for historical line recognition and compare it with a conventional CRNN across generalized pretraining, domain-specific training, corpus-level fine-tuning, and manuscript-specific few-shot adaptation on multilingual Latin- and Arabic-script material. While PP-OCRv6 does not consistently outperform the baseline when trained from scratch, heterogeneous pretraining produces markedly better generalization. Comparisons with the Qwen3.5-based Medusa recognizer further show that fine-tuned PP-OCRv6 can outperform a large VLM tailored towards historical Latin-script HTR.",
+      "authors": [
+        "Benjamin Kiessling"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20034v1",
+      "title": "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
+      "published": "2026-09-17T10:38:22Z",
+      "updated": "2026-09-17T10:38:22Z",
+      "summary": "We present Astronex-World 1.0, an open controllable video world-model foundation. Given a text prompt (text-to-video) or an initial observation (image-to-video), the model predicts future visual states under frame-aligned camera trajectories, continuous actions, and an embodiment identifier, and accepts text events inserted at a specified position of a rollout. The family provides a bidirectional model for full-context generation and a causal model with block-causal attention and cross-block KV caching for persistent generation, both built on the Wan2.2-TI2V-5B prior. PRoPE injects camera intrinsics and extrinsics, while a 64-dimensional action stream modulates every Transformer layer. A five-stage training path develops bidirectional camera and action control, converts the backbone to block-causal generation, distills a few-step student, restores mixed-domain dynamics, and applies asymmetric DMD/DMD2 distribution matching. The causal model generates 832x480 video at 24 fps. All five training stages run on two NVIDIA L20 48 GB GPUs, and the causal model streams in real time on one. It scores 73.5 on WBench Navi and 70.0 on WBench Full. On Full, this 5B model is above the 13.6B LongCat-Video and the 14B Helios, within one point of the 22B LTX-2.3, and above YUME 1.5, which is post-trained from the same 5B prior on NVIDIA A100 GPUs. The reserved action input and output interfaces allow post-training for embodied intelligence and autonomous driving.",
+      "authors": [
+        "Xin Zhou",
+        "Cong Miao"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20012v1",
+      "title": "GRF-Recon: Global Ray-Field Optimization for Long-Sequence Feed-forward Reconstruction",
+      "published": "2026-09-17T10:21:52Z",
+      "updated": "2026-09-17T10:21:52Z",
+      "summary": "Feed-forward 3D reconstruction provides an efficient paradigm for scene modeling from image sequences. Scaling these models to large monocular scenarios are constrained by excessive GPU memory footprint, degraded local geometry, and long-term trajectory drift. Existing chunk-based optimization strategies provide limited geometric constraints and fail to maintain global consistency over extended trajectories. We present a unified framework for stable and scalable feed-forward 3D reconstruction from long monocular sequences. Our approach builds on coarse-to-fine trajectory alignment augmented by lightweight geometric prior injection. Distilling monocular geometric cues into the feed-forward backbone via LoRA adaptation improves depth accuracy on fine structures while preserving inference efficiency. We introduce a hybrid-weight sparse ray-field optimization that leverages high-frequency geometric features to guide local point-cloud refinement and enforce consistent inter-frame ray constraints. Unlike prior chunk-based methods, this establishes strong cross-frame geometric coupling while maintaining scalability. Finally, an efficient trajectory stitching strategy with joint ray-error optimization explicitly reduces accumulated drift. Extensive experiments show that our approach achieves competitive trajectory accuracy compared with representative SLAM systems, while maintaining globally consistent 3D reconstruction in large-scale scenarios.",
+      "authors": [
+        "Enpeng Li",
+        "Yunzhou Zhang",
+        "Zhiyao Zhang",
+        "Dexuan Lyu",
+        "Chenyu Wang",
+        "Chiyuan Cui",
+        "Cheng Cheng"
+      ],
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.19991v1",
+      "title": "AVTrace: Diagnosing Audio-Visual Temporal Reasoning in Omni Models",
+      "published": "2026-09-17T09:58:27Z",
+      "updated": "2026-09-17T09:58:27Z",
+      "summary": "Omni models can describe video content, but can they locate events in time, preserve event order, and judge audio-visual synchronization? We introduce AVTrace (Audio-Visual Temporal Reasoning Assessment and Capability Evaluation), a silver-standard diagnostic suite spanning onset and span grounding, synchronization, next-step prediction, cross-modal localization, chain parsing, and event-conditioned comprehension. It contains 34,114 training examples and category-balanced development and test splits of 3,500 and 7,000 examples. We evaluate five open omni models under their respective input configurations using reference-blind response normalization followed by deterministic scoring. All five off-the-shelf systems score below the test split's majority-label baseline of 0.556 on synchronization verification, and obtain low scores on chain parsing and event-conditioned grounding and comprehension. Development-set perturbations reveal task-dependent sensitivity in Qwen3-Omni-30B to modality removal and changes in visual input processing, without isolating their underlying causes. Parameter-efficient temporal post-training improves Gemma4-E4B-it on several benchmark metrics. On three external image benchmarks, task metrics change modestly, including some degradations, while teacher-forcing perplexity decreases. Together, these findings show that semantic reference-text overlap should not be treated as a proxy for temporal localization, and that AVTrace can identify task-specific weaknesses while providing a testbed for temporal post-training.",
+      "authors": [
+        "Longyin Zhang",
+        "Parth Sakhare Mahendra",
+        "Chengwei Wei",
+        "Ning Zhang",
+        "Lim Ming Chong",
+        "Sirui He",
+        "Ai Ti Aw"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    }
+  ]
+}

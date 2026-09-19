@@ -1,0 +1,947 @@
+{
+  "meta": {
+    "family": "science",
+    "source": "arXiv",
+    "primary": true,
+    "query": "cat:cs.LG",
+    "url": "https://export.arxiv.org/api/query?search_query=cat%3Acs.LG&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending",
+    "fetched_at": "20260919T232325Z"
+  },
+  "data": [
+    {
+      "id": "http://arxiv.org/abs/2609.20821v1",
+      "title": "Embedding Models Measure in Peculiar Ways",
+      "published": "2026-09-17T17:59:54Z",
+      "updated": "2026-09-17T17:59:54Z",
+      "summary": "Embedding spaces define notions of semantic similarity and distance. We study whether those embeddings reflect physical measurements of mass, distance, time and volume, which admit a unique, objective notion of semantic equivalence and distance. We find that physical measurement is only weakly modeled in the embedding space, and that instead quite peculiar measurement patterns can be observed. Further analysis indicates that embedding representations of physical measurements are strongly influenced by superficial string similarity, and recalibration of similarity does not substantially improve the alignment.",
+      "authors": [
+        "Juri Opitz",
+        "Andrianos Michail"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20816v1",
+      "title": "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+      "published": "2026-09-17T17:59:30Z",
+      "updated": "2026-09-17T17:59:30Z",
+      "summary": "Professional design requires any-color control: the ability to specify an object's target color with any 24-bit hex value for image generation and editing. Prior work has explored color generation, editing, and colorization, but often relies on dedicated color representations or specialized inference procedures. Advances in large language models offer a simpler starting point: even compact models can associate hex values with color semantics. We present Paint-Anything, which learns a shared hex-prompt interface for generation and editing through object-level color supervision. We develop a data pipeline that constructs Paint-500K from real images through object grounding, perceptual color labeling, and editing-pair synthesis. Since shadows make real-image labels only approximate colors, we complement this supervision with pure-color anchors whose pixels exactly match their paired hex values. These anchors are used only at high-noise timesteps, leaving low-noise training to natural images. We further introduce Any Color Benchmark (ACBench), comprising ACBench-T2I and ACBench-Edit, to measure object-level hex color fidelity across both tasks. On FLUX.2-4B, Paint-Anything improves ACBench-T2I and ACBench-Edit scores by 85.3% and 28.3%, respectively, relative to the base model, with ablations supporting the training recipe. It also achieves the highest average CompColor score among the compared methods.",
+      "authors": [
+        "Ji Xie",
+        "Dewei Zhou",
+        "Xinyu Huang",
+        "Zhennan Chen",
+        "Xun Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20814v1",
+      "title": "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+      "published": "2026-09-17T17:59:24Z",
+      "updated": "2026-09-17T17:59:24Z",
+      "summary": "Pretraining a neural PDE surrogate can reduce the amount of new CFD data needed when geometry or modeled physics changes. However, it remains unclear how different components of distribution shift affect this benefit. We pretrain a surrogate on 254,909 RANS solutions from one airfoil family and fine-tune it on a new family under two target settings with matched freestream ranges: the same Spalart-Allmaras (SA) modeling and SA with added $e^N$ transition modeling. At $N=1000$, the pretrained model matches the accuracy of a model trained from scratch on $3.25\\times$ as many samples for the same-SA target, but $2.58\\times$ as many for the transition-modeled target. By $N=5000$, this ordering reverses ($1.56\\times$ versus $1.86\\times$). At $N=1000$, sampling more distinct airfoils lowers error on both targets, but only for the same-SA target is the gain increase larger than the observed draw-to-draw variation ($3.3\\times$ to $4.0\\times$). These results show that pretraining value depends jointly on target-data budget, target-data coverage, and whether source and target differ in modeled physics.",
+      "authors": [
+        "Pochinapeddi Sai Bhargav",
+        "Nithin Somasekharan",
+        "Rohit Sunil Kanchi",
+        "Sicheng He",
+        "Shaowu Pan"
+      ],
+      "categories": [
+        "physics.comp-ph",
+        "cs.LG",
+        "physics.flu-dyn"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20812v1",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "published": "2026-09-17T17:59:04Z",
+      "updated": "2026-09-17T17:59:04Z",
+      "summary": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. An agent overclaims when its final response contradicts information in its context. This definition requires no inference about intent and is independent of task success. We introduce \\emph{OverclaimBench}, an evaluation suite composed of five file-review scenarios, transcript-based coverage measurements, and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces, and four open-weight models under a single fixed harness on OverclaimBench and find that 1) agents do not read all the files they were asked to review in 67.9\\% of runs; 2) among runs where not all files are read, agents are \\emph{misleading} 80.4\\% of the time (59--96\\% per model), either falsely claiming to have read all files or omitting that coverage is incomplete; 3) requiring delegation to subagents increased reading coverage, but among reviews that remained incomplete, a large majority were still misleading; and 4) agents that falsely claimed a complete review missed planted defects at about 1.8 times the rate of agents that read every file, showing that claims of completion can conceal substantive failures. Together, these results show that agents' final responses are not reliable accounts of their actions.",
+      "authors": [
+        "Nolan Smyth",
+        "Yorguin-Jose Mantilla-Ramos",
+        "Pascal Jr Tikeng Notsawo",
+        "Saskia Helbling",
+        "Alberto Tosato",
+        "Mohamed Amine Merzouk",
+        "Nouha Dziri",
+        "Gauthier Gidel",
+        "Tommaso Tosato"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20807v1",
+      "title": "Score Centering Stabilizes Off-policy Reinforcement Learning",
+      "published": "2026-09-17T17:58:17Z",
+      "updated": "2026-09-17T17:58:17Z",
+      "summary": "Reinforcement learning (RL) of large language models is notoriously sensitive to small differences between training and inference engines, often referred to as the training-inference mismatch (TIM). However, completely eliminating TIM is impractical, as it would come at a major cost to rollout efficiency. In this paper, we show that the instability of RL under TIM is primarily caused by drift: a persistent bias between training and inference engines that accumulates with every training step. We derive an additive \"score centering\" correction term that stabilizes RL under TIM by canceling drift. When training models from 0.6B to 30B parameters, score centering alone matches or outperforms methods based on importance sampling under quantization, with the gap growing as the mismatch becomes more severe. Because the correction is additive, score centering also composes with importance sampling -- their composition outperforms pure importance-sampling baselines in our staleness experiments.",
+      "authors": [
+        "Martin Marek",
+        "Max Ryabinin"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20804v1",
+      "title": "An Empirical Study of Harness Design for Coding Agents",
+      "published": "2026-09-17T17:58:07Z",
+      "updated": "2026-09-17T17:58:07Z",
+      "summary": "Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management. Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space. We find that: (1) Context management becomes increasingly valuable as the context-window budget tightens, with most of its benefit coming from preventing context-overflow failures. (2) Staging rule-based elision before LLM-based summarization provides the strongest overall efficiency among the context-management strategies, whereas making elided content recoverable adds machinery that models rarely use and yields no accuracy gain. (3) Planning shifts from an accuracy scaffold for weaker models to a cost saver for stronger models, with little change in accuracy. (4) Predefined tools improve performance for models with weaker bash proficiency, whereas bash-capable models can operate effectively with a bash-only interface and achieve substantially lower cost, especially on command-line-centric tasks. Trajectory-level analysis explains these effects: context management extends execution trajectories without substantially altering agent behavior, planning changes where trajectories stop, and the action space changes the granularity at which code is written. These findings inform model- and budget-aware harness design and provide a modular framework for evaluating future harness components.",
+      "authors": [
+        "Run-Ze Fan",
+        "Zihao Zhang",
+        "Simin Ma",
+        "Yebowen Hu",
+        "Shouju Wang",
+        "Kaiqiang Song",
+        "Fei Liu",
+        "Hamed Zamani",
+        "Xiaoyang Wang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20794v1",
+      "title": "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+      "published": "2026-09-17T17:54:12Z",
+      "updated": "2026-09-17T17:54:12Z",
+      "summary": "Generative models are increasingly used to solve scientific inverse problems, but existing evaluations still focus primarily on whether a method can produce a single plausible reconstruction. This is insufficient for ill-posed problems, where multiple solutions may be consistent with the same sparse or noisy observations. In these settings, a method can achieve strong pointwise accuracy while still failing to capture the true posterior through mode collapse, overconfident uncertainty, or averaging incompatible solutions. We introduce PosteriorBench, a benchmark for evaluating the distributional accuracy of generative inverse solvers. PosteriorBench evaluates four physics-based inverse problems: Darcy flow inversion, Poisson source recovery, carbon capture and storage, and light transport material inference. For each task, we construct high-fidelity reference posteriors using computationally heavy but established procedures such as rejection sampling and Markov chain Monte Carlo, enabling direct assessment of whether solvers recover the full set of solutions rather than the single best sample. We pair these references with a five-metric posterior evaluation suite: posterior-mean error, posterior-standard-deviation error, maximum mean discrepancy, sliced Wasserstein distance, and radially averaged power-spectrum error. These metrics assess pointwise accuracy, marginal uncertainty, distributional alignment, and global frequency fidelity. The benchmark spans sparse sensing, low-resolution observations, nonlinear forward models, varying noise levels, and multimodal priors, with a unified pipeline for distribution matching and uncertainty quantification. Our experiments reveal substantial distribution-matching gaps across current solvers, while showing that neural operators improve resolution robustness, and guidance weights and generation noise are key to posterior-variance calibration.",
+      "authors": [
+        "Jiachen Yao",
+        "Zi-Siang Hsu",
+        "Xi Deng",
+        "Aditi Gupta",
+        "Xin Ju",
+        "Sally M Benson",
+        "Gege Wen",
+        "Anima Anandkumar"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20776v1",
+      "title": "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+      "published": "2026-09-17T17:48:07Z",
+      "updated": "2026-09-17T17:48:07Z",
+      "summary": "Action chunking is widely used for action generation and execution in Vision-Language-Action (VLA) policies, yet existing approaches commonly use a fixed action horizon. During a rollout, different task stages may require different levels of action continuity, control precision, and closed-loop feedback, making a fixed horizon unable to accommodate changing control requirements. We propose \\textbf{GeoAAC}, a geometry-based adaptive action chunking method for flow-based VLA policies that adjusts the action horizon according to the reliability of the current action prediction. We show that the geometry of Flow Matching denoising trajectories provides process-level information for characterizing prediction reliability, with geometric variation across action prefixes remaining positively correlated with predictive uncertainty. GeoAAC uses this prefix-wise geometry to construct a horizon-wise geometric profile and adaptively determine the action horizon from a single generation without additional training. Experiments with GR00T N1.5 and \u03c00.5 on LIBERO, LIBERO-Pro, RoboCasa365, and real-world manipulation tasks show consistent improvements over fixed-action-horizon baselines and existing adaptive methods, including up to 8.7 percentage points in simulation and an increase in average real-world success rate from 53.3\\% to 74.4\\%.",
+      "authors": [
+        "Xin Chen",
+        "Sen Chen",
+        "Yujuan Ding",
+        "Jian Liu",
+        "Guoqing Wang",
+        "Wei Ye",
+        "Heng Tao Shen",
+        "Yi Bin"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20765v1",
+      "title": "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+      "published": "2026-09-17T17:44:22Z",
+      "updated": "2026-09-17T17:44:22Z",
+      "summary": "Radio Frequency(RF)-Fingerprinting is a spectrum monitoring technique that identifies specific transmitters based on hardware impairments imprinted within the emitted signal. Although widely researched, studies almost exclusively consider scenarios where only one transmitter is emitting at a time, limiting real world applicability. In this work, we further the study of RF-Fingerprinting by considering co-channel interference, with multiple emitted signals interfering with each other, overlapping in time and frequency. Specifically, we formulate this problem as a multi-label classification problem and employ a 1D convolutional neural network (CNN). Furthermore, the models are calibrated such that the confidence thresholds for the label probabilities are derived, with guarantees on the upper bound on the average number of False Negatives, providing a degree of confidence in not missing a true spectrum policy violation. The proposed method is validated using real world data from the POWDER 5G testbed on devices transmitting 802.11a(Wi-Fi), 4G LTE, and 5G NR waveforms. The results show accuracy as high as 97% and as low as 73% after calibration depending on channel conditions. Also calibrating for various average false negatives upper bounds achieves micro recall scores of approximately (1 - calibrated false negatives) with the calibration robust to out-of-distribution interference, demonstrating the potential of the proposed method in a realistic high contention wireless environment",
+      "authors": [
+        "Tariq Abdul-Quddoos",
+        "Xiangfang Li",
+        "Lijun Qian"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20761v1",
+      "title": "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+      "published": "2026-09-17T17:43:51Z",
+      "updated": "2026-09-17T17:43:51Z",
+      "summary": "World Action Models (WAMs) advance beyond conventional visuomotor policies by jointly predicting future world states and robot actions, enabling the policy to learn physical dynamics that support effective control. However, recent tactile WAMs often rely on large-scale pretrained generative backbones to capture contact-rich physical dynamics, which limit their inference efficiency and flexible deployment. In this paper, we present \\ABBR{}, an agile tactile World Action Model for contact-rich robot control. \\ABBR{} encodes visual and tactile observations into a shared latent that serves as the source of a direct vision-tactile-to-action flow-matching process, which can jointly generate latent representations of action chunks and future visual/tactile latents. A key observation is that vision and tactile signals evolve at inherently different timescales: adjacent visual frames are often highly similar, whereas tactile signals can change abruptly upon contact. We therefore introduce multi-horizon multimodal prediction in \\ABBR{}, which provides supervision for visual latent at a larger temporal offset while predicting the tactile latent in the next frame to capture fine-grained contact dynamics. Across nine simulated and five real-world contact-rich manipulation tasks, \\ABBR{} demonstrates strong and robust performance, outperforming the strongest baseline in success rate while maintaining low inference latency. In particular, in five real-world experiments, \\ABBR{} yields a relative gain of $\\textbf{29.4\\%}$ in overall success rates while achieving inference latency of $\\textbf{11.9 ms}$. These results demonstrate that multimodal WAM can be achieved with an agile architecture suitable for precise and high-frequency robot control. More details are available on our project page: https://hanchuzhou.github.io/TARO_project_page/.",
+      "authors": [
+        "Hanchu Zhou",
+        "Brendan Lynch",
+        "Raman Goyal",
+        "Dechen Gao",
+        "Begum Kasap",
+        "Boqi Zhao",
+        "Junshan Zhang"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20758v1",
+      "title": "Prediction-Powered Smoothing and Validation for Disaggregated AI Evaluation",
+      "published": "2026-09-17T17:42:29Z",
+      "updated": "2026-09-17T17:42:29Z",
+      "summary": "Evaluating an AI system requires disaggregated assessment, as performance varies across domains such as benchmark task types or conversation types in deployed agents. Exhaustive testing is expensive, so evaluation rests on a sample of labeled units. We treat the evaluation set as a finite population and seek accurate point and interval estimates of each domain mean. Direct estimators, including prediction-powered inference (PPI), use only a domain's own labels and are imprecise where labels are few. Small area estimation addresses this problem, and we build on it to develop an integrated workflow for estimation and validation. For estimation, we propose prediction-powered smoothing (PP-S), a Bayesian model fit to each domain's prediction-powered estimate, with an extension that borrows strength across a reporting taxonomy (PP-TS). For validation, we derive a new, approximately unbiased design-based cross-validation score for choosing among direct and smoothed estimators. We study a curated benchmark with verifiable grading and deployed agent traffic graded by humans, each with every outcome observed. In both, the proposed estimators improve on the direct estimators in point and interval estimation, with near-nominal coverage. At the same sampling budget, our score selects as well as an independent validation sample does and estimates the selected estimator's error far more accurately.",
+      "authors": [
+        "Sho Kawano",
+        "Zehang Richard Li",
+        "Paul A. Parker"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG",
+        "stat.AP",
+        "stat.ME"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20756v1",
+      "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+      "published": "2026-09-17T17:41:51Z",
+      "updated": "2026-09-17T17:41:51Z",
+      "summary": "As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\\times$ and 9.5$\\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approximately three orders of magnitude fewer simulator interactions than direct RL post-training, while staying closer to the human prior. Project page: https://01dami23.github.io/opted/",
+      "authors": [
+        "Damiano Da Col",
+        "Maximilian Igl",
+        "Peter Karkus",
+        "Kashyap Chitta",
+        "Boris Ivanovic",
+        "Marco Pavone",
+        "Konrad Schindler",
+        "Christos Sakaridis"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20751v1",
+      "title": "dQwen3.5: Hybrid-Attention Diffusion Language Models",
+      "published": "2026-09-17T17:39:46Z",
+      "updated": "2026-09-17T17:39:46Z",
+      "summary": "Adapting a pretrained autoregressive (AR) model is a cost-efficient route to a diffusion language model (DLM). While nearly all such adaptations start from a full-attention transformer, AR modeling has shifted toward hybrid architectures that interleave attention and RNN layers. This creates an obstacle for adaptation: unlike attention, RNNs are structurally causal and nontrivial to bidirectionalize. Despite this mismatch, we investigate whether such backbones can become effective DLMs by adapting Qwen3.5 at 0.8B, 2B, 4B, and 9B scales, yielding the dQwen3.5 family. We find that hybrid backbones can be efficient starting points for adaptation: against a full-attention control, the hybrid reaches a given training loss in about half the tokens. Across scales, dQwen3.5 resembles full-attention DLMs in any-order decoding behavior and performs strongly under parallel decoding.",
+      "authors": [
+        "Anton Xue",
+        "Litu Rout",
+        "Aditya Akella",
+        "Adam Klivans",
+        "Sujay Sanghavi",
+        "Sanjay Shakkottai"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20747v1",
+      "title": "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+      "published": "2026-09-17T17:35:22Z",
+      "updated": "2026-09-17T17:35:22Z",
+      "summary": "Reinforcement learning constitutes a promising approach owing to its potential for superhuman performance and self-learned policies. However, its application to real-world autonomous driving remains scarce, particularly in unstructured environments, because of the challenges associated with sim-to-real transfer for unstructured environments. In this work, we present MILER, an end-to-end policy framework with zero-shot sim-to-real transfer. During offline training, we employ a custom semantic mid-level representation (MLR) simulator and train the policy network using reinforcement learning, with its control outputs applied directly to a bicycle model. During deployment on the real vehicle, camera and LiDAR data are processed by BEVFusion to generate a semantic bird's-eye-view representation consistent with that of the MLR simulator. The actions generated by the policy network are not applied directly to the real vehicle. Instead, we employ a trajectory-alignment strategy that enables zero-shot sim-to-real transfer of both perception and control. We extensively evaluate the proposed framework on a diverse test track comprising numerous challenges, including various obstacles, hairpin curves, velocities of up to 33.6 km/h, and off-road sections. In total, we drove 17.3 km with two different vehicles on a 3.0 km test track without human intervention, thereby demonstrating the effectiveness of our approach. Furthermore, the entire software stack runs on a Jetson AGX Orin.",
+      "authors": [
+        "Thomas Steinecker",
+        "Denis Trescher",
+        "Alexander Bienemann",
+        "Thorsten Luettel",
+        "Mirko Maehlisch"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20744v1",
+      "title": "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+      "published": "2026-09-17T17:33:15Z",
+      "updated": "2026-09-17T17:33:15Z",
+      "summary": "Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and has been widely adopted in recent large language models, but directly applying it to video models often fails to preserve the fine-grained interactions required for high-quality generation. We present Video DeltaNet (VDN), which combines local Softmax attention with bidirectional linear memory for long-range video context. Its linear branch introduces Video Delta Attention (VDA), which updates memory once per frame by jointly incorporating its spatial tokens. Separate output projections and learnable gates calibrate the two branches, while a staged teacher-alignment recipe progressively introduces the new pathway into pretrained models. We instantiate VDN on MiniMax H3, applying the hybrid to video-to-video interactions while retaining Softmax for interactions involving text or audio. With eight-step distillation and an optimized SGLang serving stack, VDN-H3 completes DiT denoising for a 14.3-second, 768p video in 6.70 seconds on eight NVIDIA B200 GPUs, corresponding to a 14.5x speedup over the 50-step dense H3 baseline on the same GPU count.",
+      "authors": [
+        "Haocheng Xi",
+        "Yiming Xie",
+        "Hexu Zhao",
+        "Yiwen Zhang",
+        "Michael Liu",
+        "Thomas Creavin",
+        "Kurt Keutzer",
+        "Xiuyu Li",
+        "Zhaoyang Lv",
+        "Chenfeng Xu",
+        "Haiwen Feng"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20715v1",
+      "title": "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+      "published": "2026-09-17T17:11:29Z",
+      "updated": "2026-09-17T17:11:29Z",
+      "summary": "Agent trajectories record what an agent does and what happens next. Yet standard supervised fine-tuning (SFT) applies loss only to agent-authored action tokens, using environment observations as context but not as prediction targets. We ask whether this convention provides the best initialization for subsequent reinforcement learning. We introduce ActObs, which also supervises the observation tokens already present in each trajectory. Although deployed agents never generate observations, learning to predict them encourages the policy to model action consequences without adding data, parameters, sequence tokens, or forward passes. The methods perform similarly after SFT but diverge after GRPO. On Qwen3-4B, GRPO from ActObs achieves higher pass@k at every evaluated sampling budget than its action-only counterpart on Terminal-Bench 2.0. On Qwen3-8B, it trades some pass@1 reliability for higher pass@k (+3.4 pp at pass@16) and solves more distinct tasks. The advantage extends to cross-domain code editing on aider-polyglot (+4.2 pp at pass@1 at 4B), whose tasks are unseen during SFT and RL. ActObs retains more entropy during RL while requiring less policy movement, leaving the final policy closer to its SFT initialization. Our analysis traces this difference to SFT: action and observation gradients rapidly become orthogonal, while action-only training leaves a large residual observation gradient and degrades environment prediction below the base model. Joint supervision prevents this one-sided specialization, preserving consequence prediction and preparing the policy for downstream exploration.",
+      "authors": [
+        "Juzheng Zhang",
+        "Disha Makhija",
+        "Manoj Ghuhan Arivazhagan",
+        "Vinayshekhar Bannihatti Kumar",
+        "Rashmi Gangadharaiah"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20701v1",
+      "title": "Stable Movement for Nondual Lipschitz Convex Optimization: Efficiency and Nearly Optimal Oracle Rates",
+      "published": "2026-09-17T17:02:55Z",
+      "updated": "2026-09-17T17:02:55Z",
+      "summary": "We study efficient algorithms for realizing the first-order oracle complexity of optimization of $G$-Lipschitz convex functions with respect to the $\\ell_{q}$-norm over an $\\ell_{p}$-ball of radius $R$, where $1\\leq p,q\\leq \\infty$. For $p<q$, we obtain error $\\widetilde{O}_{p,q}(GR/T^{1/p-(1/q-1/2)_{+}})$ after $T$ oracle queries, efficiently realizing the nearly optimal rates of (MBG+26), thereby resolving the nonsmooth end of the COLT 2015 open problem (Guz15b). In particular, the rate is $\\widetilde{O}(GR/T)$ for Euclidean Lipschitzness over an $\\ell_1$-ball of radius $R$ ($p=1,q=2$). Our solution consists of reducing convex Lipschitz optimization to the chasing nested convex sets problem in sublevel sets of an evolving bundle (LNN95; BBE+20): at each query we either find a point with low function value or we produce a deep cut in the current sublevel of the bundle, that we chase. The dichotomy between stability of selectors and forced movement by deep cuts bounds the number of iterations of the algorithm near optimally. For nested subsets of $R B_{p}^{d}$, we introduce a novel notion of stable center whose movement is bounded by $\\widetilde{O}_{p,q}(RT^{1-1/p+(1/q-1/2)_{+}})$ in the $\\ell_{q}$-norm after $T$ steps, which we show is nearly optimal in high dimensions. A Monte Carlo average of the proposed selector achieves near-optimal rates with high probability and can be implemented in polynomial time for our optimization algorithm in the real-arithmetic model.",
+      "authors": [
+        "David Mart\u00ednez-Rubio",
+        "Crist\u00f3bal Guzm\u00e1n"
+      ],
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20693v1",
+      "title": "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+      "published": "2026-09-17T16:58:52Z",
+      "updated": "2026-09-17T16:58:52Z",
+      "summary": "Detecting phases of matter in general relies on identifying the correct order parameter - a task that remains notoriously difficult for unknown transitions and traditionally is guided by physical intuition and educated guess. Neural networks have recently offered an alternative route by locating phase transitions in known models without any a priori physical knowledge. Yet these approaches remain black boxes and only identify phases without elucidating their properties. Moreover, they often struggle when confronted with realistic, noisy experimental data, which constitute the ultimate testbed for automated methods in physics. Here, we bridge these perspectives by introducing TetrisCNN, a convolutional architecture with parallel branches of differently shaped filters, reminiscent of Tetris blocks, that learns sparse, interpretable latent representations directly in terms of spin correlators. Applied to experimental snapshots of two-dimensional Ising and XY quantum simulators measured in multiple bases, the network not only detects phase transitions and crossovers but also expresses its latent representation and decision boundaries as symbolic formulas built from experimentally measurable spin correlators. This framework opens the way to integrating interpretable neural networks with quantum simulators to uncover and understand new phases of matter.",
+      "authors": [
+        "Kacper Cybi\u0144ski",
+        "Bj\u00f6rn van Zwol",
+        "James Enouen",
+        "Guillaume Bornet",
+        "Thierry Lahaye",
+        "Antoine Browaeys",
+        "Antoine Georges",
+        "Anna Dawid"
+      ],
+      "categories": [
+        "quant-ph",
+        "cond-mat.dis-nn",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20687v1",
+      "title": "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
+      "published": "2026-09-17T16:55:54Z",
+      "updated": "2026-09-17T16:55:54Z",
+      "summary": "We study first-order black-box convex optimization over an $\\ell_p$-ball for objectives Lipschitz in the $\\ell_q$-norm, solving in the affirmative the nonsmooth version of the COLT open question (Guz15b) on whether the geometry of a smaller feasible set ($p < q$) can improve convergence rates in convex optimization, and matching prior lower bounds up to logarithmic factors. Our rates include \\(\\widetilde O(1/T)\\) for convex Euclidean-Lipschitz optimization over the $\\ell_1$-ball, improving on the $O(1/\\sqrt{T})$ classical rate under general assumptions. The key technical device is a new online learning game, where the comparator is evaluated using the maximum of affine losses observed so far. We bound the value of this game above and below in terms of a combinatorial online learning quantity: the sequential fat-shattering dimension, which we characterize for the $\\ell_p / \\ell_q$ case. Our results generally apply when the feasible set $X$ and the set of possible subgradients $H$ are convex, centrally symmetric, and admit a type of minmax theorem, advancing on a fundamental question by Sridharan [Sri12, Section 10.1.2, Q3]. As a geometric consequence of our analysis, of independent interest, we obtain estimates for the expected distance of a convex hull of samples to their mean in several Banach geometries, a version of the celebrated Wendel's theorem (Wen62), but quantitative and for bounded general distributions as opposed to centrally symmetric ones.",
+      "authors": [
+        "David Mart\u00ednez-Rubio",
+        "Brian Bullins",
+        "Crist\u00f3bal Guzm\u00e1n",
+        "Mathieu Molina"
+      ],
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20677v1",
+      "title": "RISC-V and machine learning: a survey",
+      "published": "2026-09-17T16:49:06Z",
+      "updated": "2026-09-17T16:49:06Z",
+      "summary": "The intersection of open-source processor architectures and machine learning is driving the demand for customizable, efficient, and accessible hardware. This survey examines the state of the RISC-V ISA in machine learning applications, analyzing current capabilities, challenges, and future directions based on recent research. The analysis covers academic and commercial implementations, software frameworks, and real-world applications. The RISC-V machine learning ecosystem is evaluated, from instruction set extensions and core implementations to compiler optimizations and deployment strategies. Key contributions include a unified taxonomy of RISC-V ML implementations, a comparative analysis of performance and design trade-offs, an evaluation of software toolchain maturity, and the identification of emerging trends in instruction set extensions and specialized accelerators. Findings reveal progress in energy efficiency, specialized instruction development, and framework integration, while highlighting challenges in standardization, verification complexity, and ecosystem fragmentation. The analysis proposes four research directions to address current limitations: specialized neural processing extensions, adaptive and modular processor architectures, security frameworks, and energy-efficient multi-domain architectures. These directions provide a roadmap for advancing RISC-V as a foundational platform for next-generation machine learning systems.",
+      "authors": [
+        "Shriman Keshri",
+        "Apparna Singh",
+        "Chinmaya Kumar Palo",
+        "Shreya Adya",
+        "Subhankar Mishra"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AR"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20676v1",
+      "title": "Epidemiological Causal Graph Identification: Challenges, Identifiability and Algorithms",
+      "published": "2026-09-17T16:48:45Z",
+      "updated": "2026-09-17T16:48:45Z",
+      "summary": "Causal discovery from observational data is fundamental to statistics and machine learning, yet determining causal direction without interventions necessitates structural assumptions. Existing identifiability research primarily focuses on continuous variables under additive noise models, often neglecting mixed datasets containing ordinal scales, counts, and continuous measurements. This paper investigates causal discovery in Directed Acyclic Graphs (DAGs) where nodes follow either an ordinal distribution (via an ordered logit model) or a regular one-parameter exponential family distribution. We prove that the edge direction between an ordinal and an exponential family node is distributionally identifiable for generic parameter values. Our findings generalize previous Ordinal-Poisson results to the broader exponential family. Computationally, we introduce a score-based exhaustive search and a masked continuous optimization framework using DAGMA for larger graphs. Numerical results validate the theory, recovering edge orientations within a Markov equivalence class that are unidentifiable under classical structural equation models.",
+      "authors": [
+        "Sambit Mishra",
+        "Yingying Wang",
+        "Christine K. Johnson",
+        "Urbashi Mitra"
+      ],
+      "categories": [
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20650v1",
+      "title": "Multi-center Medical Data Mining with FL-Net - A One-stop Shop for Federated Learning",
+      "published": "2026-09-17T16:28:45Z",
+      "updated": "2026-09-17T16:28:45Z",
+      "summary": "Federated learning enables collaborative training without sharing patient-level data, but most studies remain simulations. Based on five requirements derived from the literature, we analyzed 14 FL frameworks and found that none fully satisfied these requirements. We present FL-Net, a novel federated clinical research framework to fulfill all requirements. It integrates modular data harmonization, data discovery, disclosure control, securely built versioned FL-Net-Tools and containerized federated workflow execution into a persistent network. It enables the re-use of harmonized data and workflows across studies. FL-Net's end-to-end capabilities were evaluated through harmonization, cross-study patient discovery across MIMIC and US-130, and reproducible, audited federated workflows with up to 50 concurrent clients. FL-Net is being developed within the dAIbetes and Microb-AI-ome EU projects and will cover over 800,000 patients across 10 hospitals in 9 countries covering longitudinal and single point in time data, FL-Net provides a practical foundation for interoperable, reproducible, and privacy-preserving multicenter clinical research.",
+      "authors": [
+        "Simon S\u00fcwer",
+        "Julian Klemm",
+        "Elisa Acitelli",
+        "Mathieu Almeida",
+        "Lucia Altucci",
+        "Zsolt Bagyura",
+        "Michelangela Barbieri",
+        "Zsolt-Zolt\u00e1n Bed\u0151",
+        "Rosaria Benedetti",
+        "B\u00e9la Bihari",
+        "Csongor Csal\u00f3ka",
+        "Lucia Dicunta",
+        "Stanislav Ehrlich",
+        "Bjoern M. Eskofier",
+        "S\u00e1ndor-J\u00f3zsef Fej\u00e9r",
+        "Georg Fr\u00f6wis",
+        "Walter H\u00f6tzendorfer",
+        "Alexandra Kautzky-Willer",
+        "Jens Johann Georg Lohmann",
+        "Marianna Maranghi",
+        "Lorenzo Marconi",
+        "Rudolf Mayer",
+        "Wouter Leonard Megchelenbrink",
+        "Monika Moga",
+        "Adham Mottalib",
+        "Sanjeev Mehta",
+        "Madeleine M\u00fcller",
+        "Thomas Nystr\u00f6m",
+        "Bal\u00e1zs-Attila Orb\u00e1n",
+        "Paul O'Toole",
+        "Giuseppe Paolisso",
+        "Paolo Parini",
+        "Matteo Pedrelli",
+        "Enrico Petrillo",
+        "Philipp Poindl",
+        "Niklas Probul",
+        "Anastasia Pustozerova",
+        "Tanja \u0160ar\u010devi\u0107",
+        "Lukas Weilguny",
+        "Jan Baumbach",
+        "Andreas Maier"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "cs.DC"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20641v1",
+      "title": "Beyond PINNs: A Unified Gauss--Newton and Petrov--Galerkin Framework for Neural and Hybrid PDE Solvers",
+      "published": "2026-09-17T16:23:56Z",
+      "updated": "2026-09-17T16:23:56Z",
+      "summary": "Physics-informed neural networks and finite element methods provide two different paradigms for the numerical approximation of partial differential equations: the former are commonly trained by minimizing pointwise strong residuals, whereas the latter are naturally built from weak variational formulations and the finite-dimensional systems obtained after discretization. In this work, we introduce a common framework based on the discretization of functional Gauss--Newton problems by finite families of linear measurements. We show that, through an appropriate duality pairing, the linear measurements can be represented by test functions. The resulting Gauss--Newton system is then precisely a Petrov--Galerkin discretization of the linearized functional problem. This perspective recovers pointwise collocation and natural-gradient constructions as particular cases, while making the choice of test functions an explicit algorithmic design choice. We specialize this framework to elliptic problems, where it naturally leads to weak residual formulations and to a hybrid finite element--neural construction acting on complementary approximation spaces. Numerical experiments support the proposed framework and demonstrate the effectiveness of weak Gauss--Newton formulations and hybrid finite element--neural approximations.",
+      "authors": [
+        "Nilo Schwencke",
+        "Roland Maier"
+      ],
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20598v1",
+      "title": "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
+      "published": "2026-09-17T15:47:46Z",
+      "updated": "2026-09-17T15:47:46Z",
+      "summary": "In this paper, we tackle the problem of jointly estimating the system states and partially unknown dynamics within distributed sensor-equipped networks, particularly in scenarios where only partial state observations are available. To address this issue, we propose an observer-based dynamic cooperative learning framework incorporating online distributed Gaussian Process (GP) regression, which enables accurate estimation despite incomplete in measurements and deficient GP models. In addition, a novel data collection strategy is introduced, with theoretical conditions ensuring feasible data acquisition. Moreover, we also derive an error upper bound encompassing state estimation and model estimation, leveraging the deterministic error bounds of GPs. Empirical simulations demonstrate the superiority of our approach compared to existing distributed GP-based methods.",
+      "authors": [
+        "Zewen Yang",
+        "Xiaobing Dai",
+        "Zhenxiao Yin",
+        "Hang Zhao",
+        "Zhijun Li",
+        "C. C. Chan"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.MA",
+        "eess.SY"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20594v1",
+      "title": "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+      "published": "2026-09-17T15:46:06Z",
+      "updated": "2026-09-17T15:46:06Z",
+      "summary": "Quantum long short-term memory (QLSTM) models extend recurrent sequence learning with variational quantum circuits, but their optimization behavior can vary substantially across random initializations and temporal contexts. This paper evaluates a recursive QLSTM architecture against a standard QLSTM for one-step-ahead prediction of daily minimum and maximum temperature. Using daily weather observations from Toronto and identical training settings, we compare convergence, predictive accuracy, and generalization across input windows of 8, 16, and 32 days over 20 random seeds. The recursive model consistently reaches a near-optimal test loss earlier, reduces mean absolute error and root mean squared error, and exhibits a smaller generalization gap. These results indicate that recursive quantum feature transformations can improve stability and out-of-sample performance for compact hybrid quantum--classical temporal models.",
+      "authors": [
+        "Mu-En Lee",
+        "Yen-Ku Liu",
+        "Samuel Yen-Chi Chen",
+        "Yun-Cheng Tsai"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20592v1",
+      "title": "CrystalMO-TuRBO: Multi-Objective Trust-Region Bayesian Optimization for High-precision Joint Crystal Structure Refinement",
+      "published": "2026-09-17T15:45:06Z",
+      "updated": "2026-09-17T15:45:06Z",
+      "summary": "Crystal structure refinement is a fundamental inverse problem in materials characterization, where structural parameters are optimized to reproduce experimental diffraction data. Conventional approaches, such as least-squares and likelihood-based optimization, rely on local search and often struggle with non-convex, noisy, and highly correlated parameter landscapes, particularly when integrating multiple diffraction modalities. Joint refinement of X-ray and neutron data is especially challenging due to their complementary but competing sensitivities, which are typically combined through scalarized objectives requiring manual weighting and leading to suboptimal solutions. We propose CrystalMO-TuRBO, a multi-objective trust region Bayesian optimization architecture for joint crystal structure refinement. The method models X-ray and neutron discrepancies as separate objectives and transforms the problem into a normalized maximization setting. A two-phase optimization strategy is introduced: Phase 1 performs global exploration using parallel trust-region Bayesian optimization across multiple scalarizations to identify promising regions of the parameter space, while Phase 2 conducts localized refinement within a shrinking region to achieve high-precision solutions. This design explicitly separates global search from fine-grained optimization, addressing the unique accuracy requirements of refinement tasks. We evaluate the proposed method on experimentally collected X-ray and neutron diffraction data from single-crystal Ho2Ti2O7. Results demonstrate improved convergence, robustness, and parameter precision compared to classical refinement methods and Bayesian optimization baselines on refinement of a single-crystal pyrochlore material system.",
+      "authors": [
+        "Joseph Agada",
+        "Yishu Wang",
+        "Arpan Biswas"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20578v1",
+      "title": "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
+      "published": "2026-09-17T15:35:42Z",
+      "updated": "2026-09-17T15:35:42Z",
+      "summary": "Connected-vehicle safety evaluations rely on coupled traffic and network simulations, but standard channel models ignore radio resource competition in 5G NR sidelink Mode-2, reporting unrealistically high message delivery in dense traffic. This study introduces resource-competition losses without requiring full protocol reimplementation. We labeled 10.5 million reception outcomes from ns-3 5G-LENA traces (calibrated on 3GPP scenarios and driven by SUMO trajectories) to fit NS3Learn - a closed-form model capturing half-duplex loss, scheduling collisions, receiver capture, and decoding. Evaluation spanned two signalized urban networks, six penetration levels (1-100%), and five random seeds per condition. NS3Learn achieved a mean absolute deviation of 0.06 in per-instant delivery compared to ns-3 5G-LENA, outperforming alternative models (0.44 and 0.55 deviation). Fitted parameters transferred to a distinct intersection with only 20% additional error. Crucially, using realistic communication models reversed simulated traffic speed trends and more than doubled predicted hard-braking events. The framework transfers reception realism between simulators via model distillation instead of full reimplementation. Every stage maps directly to an explicit physical mechanism. Researchers and transportation agencies can maintain existing simulation pipelines while accurately accounting for dense-traffic packet loss and denial-of-service impacts. Adapting to new radio configurations requires only offline refitting rather than code modification.",
+      "authors": [
+        "Rasheed Bello",
+        "Arthur Mukwaya",
+        "Gurcan Comert",
+        "Varghese Vaidyan",
+        "Vijay Bendigeri",
+        "Anthony Dontoh",
+        "Jagruti Sahoo",
+        "Judith Mwakalonge"
+      ],
+      "categories": [
+        "cs.NI",
+        "cs.LG",
+        "cs.MA",
+        "eess.SY"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20577v1",
+      "title": "TAP Accuracy Below the Fluctuation Scale and Universal Posterior Geometry in Spherical Linear Models",
+      "published": "2026-09-17T15:34:40Z",
+      "updated": "2026-09-17T15:34:40Z",
+      "summary": "We study the Bayes-optimal spherical linear model as the ambient dimension and sample size grow proportionally, under a quantitative Marchenko--Pastur spectral-regularity condition on the design. This condition is satisfied by normalized i.i.d. designs with standardized entries of finite fourth moment, but does not require entrywise independence or impose conditions on the singular vectors. Under this condition, we prove a quantitative all-temperature TAP approximation and characterize the posterior geometry. For the natural finite-aspect-ratio TAP functional, the normalized spherical free energy and the TAP optimum differ by $O_P(p^{-1})$. Each is within $O_P(p^{-1/2})$ of its explicit deterministic equivalent, and this fluctuation scale is sharp. Uniformly over all global TAP maximizers, the normalized squared Euclidean distance to the spherical posterior mean is $O_P(p^{-1})$. We also prove that the posterior mass outside a data-dependent band determined by the ridge estimator has sharp exponential order. More precisely, uniformly over sufficiently small band widths $\\varepsilon$, the logarithm of this mass is at most $-cp\\varepsilon^2+O_P(1)$. For every fixed geometrically admissible width, a spherical-cap construction gives a matching exponential-order lower bound on this mass. For every deterministic sequence of widths $\\varepsilon_p\\gg p^{-1/2}$, the corresponding bands capture asymptotically all posterior mass.",
+      "authors": [
+        "Jingbo Liu",
+        "Zhiyuan Yu"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20575v1",
+      "title": "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+      "published": "2026-09-17T15:33:07Z",
+      "updated": "2026-09-17T15:33:07Z",
+      "summary": "Learning visual policies for locomotion and manipulation requires coordinating contact with the environment and can incur substantial computation and GPU memory costs. First-order policy gradients (FoPG) reduce training cost through differentiable simulation, but local optimization can converge to unintended contact patterns. To address this shortfall, we propose Sampling-Guided Policy Search (SGPS), which couples recurring action-target refinement by sampling-based model-predictive control with first-order policy optimization. Behavior cloning initializes the policy from sampled actions; training then alternates sampling-based refinement with short-horizon FoPG updates under perturbed initial states and randomized dynamics. For visual policy training, we use a decoupled FoPG formulation that excludes rendering from the computation graph, enabling direct learning from depth observations without a state-policy teacher. On a single GPU, SGPS learns policies for locomotion, obstacle traversal, crate pushing, and bimanual carrying on simulated Unitree Go2 and G1 robots. Our experiments further show that refinement improves policy learning beyond initialization and tracking alone. For hardware deployment, the distilled policy transfers zero-shot to a real Go2 and uses onboard depth to autonomously trot, crawl, clear hurdles, and switch between these behaviors.",
+      "authors": [
+        "Yilang Liu",
+        "Haoxiang You",
+        "Qian Wang",
+        "Daniel Rakita",
+        "Ian Abraham"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20548v1",
+      "title": "Mitigating Retaliatory Algorithmic Collusion in Repeated Games",
+      "published": "2026-09-17T15:12:59Z",
+      "updated": "2026-09-17T15:12:59Z",
+      "summary": "Reinforcement learning agents trained to maximize their own reward in repeated interactions can converge to supra-competitive outcomes resembling explicit collusion, without communication or shared design. Existing mitigation approaches are largely tied to specific economic settings, like two-sided platforms and auctions, leaving open how to design interventions for general repeated games. We address this gap by formalizing the connection between empirical observations from prior work on Q-learning collusion and classical theory of Simple Penal Codes (SPCs). We show any non-trivial SPC induces a quantifiable conditional dependence in agents' policies, detectable via the total variation distance between an agent's action distributions across cooperation and defection histories. Building on this connection, we propose CURB (Collusion Unwinding via Reward shaping and Belief injection), a reward-shaping framework that penalizes this Total Variation (TV) distance signal during Q-learning and is guaranteed to convert any SPC fixed point of the dynamics into a trivial one, thus precluding collusive equilibria sustained by punishment threats. Empirically, CURB substantially reduces collusion by Q-learning agents in both Bertrand and Cournot Competition Repeated Games. We further demonstrate that CURB extends to deep Q-network agents in Bertrand competition, suggesting the mechanism generalizes beyond tabular Q-learning.",
+      "authors": [
+        "Karthik Sivachandran",
+        "Rohan Paleja"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20539v1",
+      "title": "Parallelism, critical windows, and separations among diffusion language models",
+      "published": "2026-09-17T15:10:18Z",
+      "updated": "2026-09-17T15:10:18Z",
+      "summary": "A popular selling point of diffusion large language models (dLLMs) is their capacity for parallelism: the ability to generate sequences of text far more efficiently than autoregressive models, which require one forward pass per token. Yet among the many competing paradigms for dLLMs, from masked to uniform to Gaussian diffusion, principled understanding of how these different proposals compare in parallelism remains limited. In this work, we initiate a fine-grained comparison of the capacity for parallelism among these three leading approaches and prove the following: - Uniform and Gaussian diffusion can sample in a number of forward passes which scales with the dual total correlation of the underlying distribution, a measure of intrinsic complexity which can be much smaller than the context length. Previously, it was only known how to achieve this using masked diffusion. - For a certain family of random empirical measures, we show that $\\widetilde\u0398(\\sqrt{d})$ forward passes are necessary and sufficient to sample using uniform or Gaussian diffusion, yet there exist approximate score oracles for which $\\widetilde\u03a9(d)$ forward passes are needed for masked diffusion. This establishes the first provable separation in parallelism between the three prevailing dLLM paradigms. Contrary to popular intuition that masked diffusions are harder to parallelize because they must commit to token values, the latter separation instead comes from the fact that the critical windows in masked diffusion sampling are asymptotically narrower than those in uniform and Gaussian diffusion sampling.",
+      "authors": [
+        "Sitan Chen",
+        "Liye Wang"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.DS",
+        "math.ST",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20530v1",
+      "title": "Relational Attention for Data-Efficient Language Modeling",
+      "published": "2026-09-17T15:05:19Z",
+      "updated": "2026-09-17T15:05:19Z",
+      "summary": "We present Relational BabyLM, a system submission to the BabyLM 2026 challenge that combines two cognitively motivated inductive biases in a single decoder-only Transformer. Architecturally, we replace standard self-attention with a Dual Attention Transformer (DAT), which separates the routing of object-level (\"sensory\") lexical features from structural/relational information (Altabaa and Lafferty, 2025; Altabaa et al., 2024; Webb et al., 2024; Kerg et al., 2022; Webb et al., 2021). Relational attention (RA) disentangled from self-attention greatly increases data efficiency and out-of-training-sample generalization on purely relational tasks, but language modeling requires object-level and relational information to be integrated as well as disentangled, and RA-based LMs have remained largely unexplored. BabyLM's data-constrained training and comprehensive evaluation is an ideal testing ground for whether that data efficiency transfers. As a training intervention, we add a Next-Latent Prediction (NextLat; Teoh et al. 2026) objective that encourages hidden states to compress history incrementally into a dense belief state. Architecture is the dominant factor for structural linguistic generalization; the objective is secondary but still significant. DAT's three relational attention types (full RA vs. the simpler RCA and DisRCA variants) are largely interchangeable at 10M words; full RA pulls ahead at 100M. We also introduce a novel symbol-retrieval mechanism (RoPE-based, as opposed to learned, relative symbols) that matches learned symbol libraries while adding no parameters. On the strict (100M-word) track, our best model ranks 6th of 55 overall and 3rd of 55 on the leaderboard's NLP-task subset at the time of writing; our two strongest models outperform the GPT-2 baseline on most benchmarks, with one attaining the highest EWoK score among strict-track entries.",
+      "authors": [
+        "Adrian Brasoveanu",
+        "Ece Takmaz",
+        "Jakub Dotla\u010dil"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20523v1",
+      "title": "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+      "published": "2026-09-17T15:01:02Z",
+      "updated": "2026-09-17T15:01:02Z",
+      "summary": "Quantum communication underpins secure information processing and scalable quantum networks. In particular, remote state preparation (RSP) enables efficient quantum state transfer, but accurately estimating target states under complex noise remains challenging. Here, we propose a Transformer-based Quantum State Characterizer (TQSC) model for noisy RSP experiments. Our model reconstructs experimentally prepared pure and mixed photonic polarization states from noisy measurements in complex scattering environments, while its attention patterns provide physically grounded insights into correlations among the measured observables. The method achieves a mean estimator-target fidelity exceeding 99.999% under complex scattering and dynamic Gaussian noise, while its robustness and generalization are further examined using Qiskit-simulated Bloch-ball states.Furthermore, in a practical MNIST image transmission task with held-out states, the decoded bit error rate is reduced from 50.34% to zero after TQSC post-processing. The TQSC model enables accurate tomographic characterization under dynamic noise and provides physically grounded post-hoc insights, holding promise for intelligent quantum information processing applications.",
+      "authors": [
+        "Bo Tang",
+        "Zixuan Liao",
+        "Hao Li",
+        "Yilin Yang",
+        "Jiani Lei",
+        "Zengya Li",
+        "Jing Qiu",
+        "Zhaohui Dong",
+        "Zhengyang Mao",
+        "Yuanhua Li",
+        "Yuanlin Zheng",
+        "Xianfeng Chen"
+      ],
+      "categories": [
+        "quant-ph",
+        "cs.LG",
+        "physics.optics"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20511v1",
+      "title": "When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation",
+      "published": "2026-09-17T14:53:39Z",
+      "updated": "2026-09-17T14:53:39Z",
+      "summary": "We study length inflation in on-policy distillation (OPD), where student responses can become excessively long and even exhaust the generation budget. We identify \\emph{termination-token mismatch} between base students and post-trained teachers as an important source of this behavior. Across Qwen3, Llama, and Gemma, the two models can place their stopping probability on different EOS tokens, even when their declared stopping sets are identical. This mismatch can suppress the student's preferred termination action without reliably transferring the teacher-preferred alternative. We show that aligning the decoding stopping set alone is insufficient, while treating functionally equivalent EOS tokens as a shared semantic stopping action substantially mitigates mismatch-induced length inflation across all three model families. To further understand how termination behavior evolves over training, we study OPD across different K2-Horizon training stages. This stage-wise analysis shows that termination preferences can shift substantially during training, while also revealing a distinct length inflation late in the OPD run that persists beyond termination alignment. Together, these results identify termination mismatch as an important, but not exhaustive, source of OPD length dynamics. We release an implementation incorporating the proposed termination-handling corrections.",
+      "authors": [
+        "Yuxiao Yang",
+        "Tianrun Yu",
+        "Shangzhe Li",
+        "Kaixiang Zhao",
+        "Xuchao Zhang",
+        "Chetan Bansal",
+        "Huaxiu Yao",
+        "Taylor W. Killian",
+        "Weitong Zhang"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20510v1",
+      "title": "Truncated automatic sparse differentiation for machine learning interatomic potentials",
+      "published": "2026-09-17T14:53:14Z",
+      "updated": "2026-09-17T14:53:14Z",
+      "summary": "Machine learning interatomic potentials (MLIPs) learn the mapping from atomic positions to potential energy. The forces, the negative gradient of this energy, drive molecular dynamics and are readily obtained using automatic differentiation. Higher-order derivatives, most notably the Hessian, describe collective motion and allow the direct prediction of experimental observables, but are considered computationally inaccessible for large systems. We suggest a solution: in physical systems, interactions decay with distance, and most MLIPs build on this locality through message passing up to a finite receptive field. This implies both sparsity of higher-order derivatives and their decay with distance. This structure can be exploited using automatic sparse differentiation (ASD). We explain how to compute the sparsity pattern for MLIP derivatives and demonstrate that, for multiple foundation MLIPs, ASD computes full Hessians of large porous materials exactly, but with modest speedups at best. The larger gains come from truncated ASD: discarding small, but nonzero, Hessian entries between distant atoms yields order-of-magnitude speedups with negligible impact on predicted observables.",
+      "authors": [
+        "Marcel F. Langer",
+        "Adrian Hill",
+        "Michele Ceriotti"
+      ],
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20507v1",
+      "title": "Radio Frequency Detection and Classification of Microplastics in Water",
+      "published": "2026-09-17T14:51:08Z",
+      "updated": "2026-09-17T14:51:08Z",
+      "summary": "Micro- and nano-plastic particles (MPs/NPs) are ubiquitous environmental contaminants whose increasing abundance and potential health impacts have created an urgent need for rapid, label-free detection methods. As particle size decreases to the low-micrometer range, conventional optical and spectroscopic techniques become increasingly challenging because of limited throughput and/or complex sample preparation. In this work, we present a machine learning (ML)-assisted radio-frequency (RF) dielectric spectroscopic cytometry (DiSC) platform for the label-free detection and classification of MPs. Eight types of $ 10 $ \u03bcm nominal-diameter MP particles suspended in deionized (DI) water were characterized at four frequencies spanning $ 0.2\\text{-}9\\text{ GHz} $. The measured alterations in RF scattering parameters (S-parameters), referenced to the carrier medium, were used to train supervised ML models for material classification, including the identification of MPs in mixed samples and saline-water environments. For eight MP classes suspended in DI water, the proposed method achieved macro-average F1-score, precision, and recall values exceeding $ 0.71 $. Furthermore, PET classification performance was largely maintained in saline carrier media containing $3.3\\% $ and $ 6.6\\% $ sea salt. These results demonstrate the feasibility of ML-assisted RF DiSC for rapid, single-particle MP classification in aqueous environments. Future work will focus on improving classification performance through enhanced RF calibration, increased spectral coverage, larger training datasets, and validation using environmentally aged and biologically contaminated microplastics.",
+      "authors": [
+        "Jaden Tolbert",
+        "Md Saiful Islam",
+        "Pingshan Wang"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20501v1",
+      "title": "Distributionally Robust Federated Learning with Multi-Source Data",
+      "published": "2026-09-17T14:48:22Z",
+      "updated": "2026-09-17T14:48:22Z",
+      "summary": "Federated learning trains a shared model from private client data. In practice, data-generating distributions may differ, and the true mixture across clients is often unknown, making the underlying group distribution difficult to specify. Existing approaches address cross-client mixture uncertainty by optimizing against the worst-case mixture, yet assume accurate client-wise distribution estimates. However, these estimates can be unreliable when based on finite samples. To handle both cross-client mixture uncertainty and within-client distributional ambiguity, we construct a global ambiguity set as the union of admissible mixtures of local ambiguity sets. The construction allows client-specific ambiguity radii and admits a client-wise separable reformulation. Leveraging this structure, we establish a high-probability out-of-sample performance guarantee. We further develop a federated algorithm for a penalty-based reformulation and prove its convergence under milder regularity conditions. Simulations validate the algorithm's effectiveness.",
+      "authors": [
+        "Yingzhu Liu",
+        "Zhongkui Li",
+        "Pengcheng You",
+        "Ashish Cherukuri"
+      ],
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20489v1",
+      "title": "Resolution limits for process comparison from event data",
+      "published": "2026-09-17T14:39:09Z",
+      "updated": "2026-09-17T14:39:09Z",
+      "summary": "One hospital runs bloods and imaging at the same time. Another runs them one after the other, in either order, equally often. Knowing which actually happened, and how it is recorded in data, is critical for all operational managers. In process mining, the standard approach is to construct an event log, and attempt to discover concurrent and sequential processes in a data-driven way. We show this standard approach, built on the stochastic language of an event log, reports only the assumptions of its discovery algorithm, because every such log is explained equally well by a model with no concurrency at all. Further, before any data is acquired, we characterise when data can and cannot distinguish concurrent behaviour. Where it cannot, the distinction is recoverable from evidence the stochastic language discards, such as the times at which activities start and end, or object-centric records that fix an order within an execution. The remedy is therefore a choice of what is recorded, rather than a larger sample. This impacts decision making, as planning resource for truly concurrent services is very different from sequential services.",
+      "authors": [
+        "Antony R. Lee",
+        "Peter Ti\u0148o",
+        "Iain B. Styles"
+      ],
+      "categories": [
+        "cs.DB",
+        "cs.LG",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20467v1",
+      "title": "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+      "published": "2026-09-17T14:26:12Z",
+      "updated": "2026-09-17T14:26:12Z",
+      "summary": "The categorization of cognitive and resting states derived from electroencephalography (EEG) signals is crucial for comprehending fluctuations in brain activity linked to various mental states. EEG provides a non-intrusive approach for documenting brain function in both resting and task-oriented cognitive conditions, whilst deep learning techniques enable the automatic extraction of significant patterns from intricate EEG data. This study presents a deep learning framework to distinguish between resting and cognitive states through EEG records. The proposed framework integrates a Convolutional Neural Network (CNN) stacked with a Gated Recurrent Unit (GRU) for the extraction of features from EEG signals. Time-frequency analysis is conducted to explore the salient aspects of signals, and the derived features are then assessed utilizing conventional deep learning and machine learning classifiers, including the suggested 2D-Net architecture. The proposed approach and feature extraction strategy outperform the evaluated comparative methods, achieving accuracies of 83.177% for resting-versus-mathematical task classification, 76.107% for resting-versus-memory task classification, and 83.432% for resting-versus-music task classification. The findings illustrate the efficacy of integrating signal processing with deep learning methodologies to discriminate resting from cognitive states utilizing EEG signals.",
+      "authors": [
+        "K. A. Januka S. Fernando",
+        "Harshit Srivastava"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20465v1",
+      "title": "Training Neural Networks to Approach the Optimum Bayes Estimator in Dense Multi-Emitter Localization",
+      "published": "2026-09-17T14:25:49Z",
+      "updated": "2026-09-17T14:25:49Z",
+      "summary": "We train neural networks on synthesized frames to approach the optimum Bayes estimator for dense emitter localization. The result justifies the future work on training neural networks to achieve high-throughput large-FOV super spatiotemporal resolution SMLM.",
+      "authors": [
+        "Yi Sun",
+        "Mona Sharifi",
+        "Muzna Yumman"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20461v1",
+      "title": "Correlation-Free Transition Path Sampling through Shooting Point Generation Guided by Committor Learning",
+      "published": "2026-09-17T14:24:14Z",
+      "updated": "2026-09-17T14:24:14Z",
+      "summary": "Studying the dynamical behavior of a system often depends on characterizing how it transitions between long-lived states. Because such transitions are rare, observing them usually requires specialized enhanced sampling techniques. Transition Path Sampling (TPS) is a well-established method for generating reactive trajectories, which is simple to implement and does not require the definition of a preconceived reaction coordinate. However, its efficiency is limited by its sequential nature and the resulting correlations between sampled paths. Previous work addressed this limitation by combining TPS with a sampling scheme based on conditioned Boltzmann Generators, a generative machine learning model capable of sampling a given target probability distribution. This approach produces uncorrelated transition paths but relies on an accurate reaction coordinate, which is rarely known in advance. Building on recent advances in committor learning, specifically on the Artificial Intelligence for Molecular Mechanism Discovery (AIMMD) method, in this work we introduce GenAIMMD, an iterative algorithm that actively and self-consistently learns the ideal reaction coordinate (the committor) and trains a conditioned Boltzmann Generator to sample from arbitrary bias windows along it. GenAIMMD thereby provides a correlation-free and fully parallelizable path sampling scheme that does not require prior knowledge of the system's transition mechanism. We apply GenAIMMD to a two-dimensional toy model and a higher-dimensional polymer system. In both cases, GenAIMMD succeeds in training the Boltzmann Generator and learning the committor. Benchmark results show a substantial increase in performance compared to standard TPS.",
+      "authors": [
+        "Maximilian Negedly",
+        "Sebastian Falkner",
+        "Alessandro Coretti",
+        "Christoph Dellago"
+      ],
+      "categories": [
+        "physics.comp-ph",
+        "cond-mat.stat-mech",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20454v1",
+      "title": "Online Supervised Dimension Reduction with Random Features: Diagnostics and Computational Trade-offs",
+      "published": "2026-09-17T14:19:29Z",
+      "updated": "2026-09-17T14:19:29Z",
+      "summary": "Accurate optimization of a supervised spectral objective need not produce an accurate population subspace or a better predictive representation. We investigate these distinctions for Online Kernel Supervised Principal Component Analysis (OKSPCA), which combines a centered cross-moment in finite random-feature coordinates with an Adam-style orthonormal basis update for an established objective. Fixed-map consistency, concentration and perturbation results describe the estimator and its exact subspace; same-target comparisons then assess the practical iterate separately. Across six predictive benchmarks, performance depends on the declared pipeline: replacing the tracker with the exact empirical target leaves the two regression deficits largely unchanged. Direct classification-rank models capture nearly all terminal objective energy on average, but a saved intermediate state exhibits substantial geometric deviation; a controlled sample-size study further separates empirical accuracy from population recovery. In distinct numerical-service workloads, exact on-request computation is faster in the tested classification settings, whereas Adam saves time relative to the tested full thin-SVD service for some dense wider-regression requests, alongside persistent geometric error. These diagnostics limit explanations based solely on terminal optimization accuracy and distinguish numerical cost from quality, rank coverage and freshness; they establish neither practical-tracker convergence nor predictive or deployment benefits from basis availability.",
+      "authors": [
+        "Zhenlin Yao",
+        "Wei Xiong"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.CO"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20451v1",
+      "title": "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics",
+      "published": "2026-09-17T14:18:05Z",
+      "updated": "2026-09-17T14:18:05Z",
+      "summary": "Numerical site-response predictions often deviate from observations, yet correcting these discrepancies is difficult because records are limited in both sensor coverage and number of events. This study proposes the Transfer-Enabled Forced Latent Autoencoder for Response Equations (FLARE-T) to improve these predictions by learning and calibrating low-dimensional latent dynamics that connect the base acceleration input to acceleration outputs at multiple depths. FLARE-T learns a low-dimensional response manifold and input-driven dynamics from dense finite-element simulations. It then trains a sparse encoder to map simulated sensor responses into the learned coordinates and uses limited records to calibrate the dynamics within them. A short response window initializes each prediction, while the complete base motion drives the response. The framework was evaluated using a layered-soil centrifuge test and the Lotung field vertical array. Test-set results show that FLARE-T improved multi-depth acceleration histories and 5%-damped pseudoacceleration response spectra relative to the original finite-element models, reducing errors at every evaluated sensor for motions of different intensities and, at Lotung, for both horizontal components. Two Lotung source models with different constitutive parameters achieved comparable test-set accuracy, indicating reduced dependence on precise prior calibration. FLARE-T therefore provides a data-efficient means of combining dense numerical response information with limited field records to improve future site-response predictions.",
+      "authors": [
+        "Yi Zhu",
+        "Su Chen",
+        "Xiaojun Li"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20441v1",
+      "title": "Cross-Architecture Foundation-Model Distillation for Edge Flood Segmentation",
+      "published": "2026-09-17T14:15:01Z",
+      "updated": "2026-09-17T14:15:01Z",
+      "summary": "Geospatial foundation models can provide strong flood-segmentation performance, but their size limits deployment on memory-constrained edge hardware. We distill a 300-million-parameter Prithvi-EO-2.0 teacher, fine-tuned on the 252 manually labeled Sen1Floods11 training scenes, into a 0.7-million-parameter EfficientViT-B0 student. The teacher supervises additional unlabeled Sentinel-2 imagery, allowing the student training set to grow without new manual annotations. At the matched budget of 252 scenes, teacher-supervised training is competitive with direct training and improves STURM-Flood performance across tested configurations; a geometry-matched control shows that label source alone does not explain the difference. Scaling the teacher-supervised pool to 2,500 scenes narrows the remaining student--teacher gap: the float student reaches 0.787 water intersection over union on the Sen1Floods11 test split against 0.822 for the teacher, matches the teacher on STURM-Flood under our evaluation protocol, and remains below it on WorldFloods-v2. After activation replacement and quantization-aware training, the student runs as a 1.5-megabyte 8-bit integer (INT8) TensorRT engine on a Jetson Xavier NX at 5.57 milliseconds of graphics processing unit (GPU) compute per 512-by-512 image, with approximately 14 megabytes of runtime device memory. A fixed modified normalized difference water index (MNDWI) threshold is competitive with both models on the two clean external benchmarks, so we interpret those benchmarks as generalization tests rather than as evidence of learned-model superiority over a spectral rule. The results support the conclusion: foundation-model supervision can amplify a fixed manual annotation budget into a substantially larger training set and yield a compact, deployable edge model.",
+      "authors": [
+        "Fabian Schmalstieg",
+        "Karsten Mueller",
+        "Wojciech Samek"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20419v1",
+      "title": "SCGFM-ART: Amortized Relational Transport for Structure-Centric Graph Foundation Models",
+      "published": "2026-09-17T14:01:44Z",
+      "updated": "2026-09-17T14:01:44Z",
+      "summary": "Graph foundation models (GFMs) aim to learn transferable representations across severely heterogeneous graph domains. However, severe domain shifts in topology, graph scale, and feature semantics impede the construction of a unified, domain-agnostic representation space. To address this, we propose SCGFM-ART, a structure-centric GFM framework that aligns arbitrary graphs onto a shared relational atlas via Amortized Relational Transport (ART). The relational atlas serves as a universal coordinate system defined by a finite set of relational landmarks (bases), while ART directly predicts reusable, end-to-end graph-to-base transport plans, bypassing costly runtime Gromov-Wasserstein optimizations. Under this formulation, SCGFM-ART decomposes a graph into a unified representation: globally via its relational response coordinates relative to the atlas, and locally via its node-to-role structural correspondences. These correspondences project disparate node attributes into a canonical role space, resolving structural and semantic heterogeneity within a singular alignment interface. Rigorously modeling graphs and atlas bases as finite measured relational spaces, we establish coordinate fidelity bounds, prove stability under predicted transport plans, and derive an amortized coverage bound that guarantees our learning objective tightly surrogates ideal relational coverage. Benchmarked across 14 cross-domain graph- and node-level classification tasks, SCGFM-ART achieves state-of-the-art transferability, securing superior average ranks of 2.29 and 1.14, respectively. Topological perturbation analyses demonstrate that node-role transport retains fine-grained structural nuances beyond global coordinates. On real-world benchmarks, the amortized formulation yields 44.2 to 85.1 times faster frozen target-domain inference by avoiding iterative alignment at test time.",
+      "authors": [
+        "Xiaodong He",
+        "Xincheng Wang",
+        "Zhao Kang"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20409v1",
+      "title": "The Bias of Nonlinear Two-Time-scale Stochastic Approximation under Constant Step-Sizes",
+      "published": "2026-09-17T13:54:20Z",
+      "updated": "2026-09-17T13:54:20Z",
+      "summary": "Two-timescale stochastic approximation (TTSA) is a fundamental tool for analyzing coupled iterative algorithms in reinforcement learning, optimization, and stochastic control. However, finite-time guarantees for nonlinear two-timescale schemes remain difficult to obtain, especially under constant step-sizes. In this paper, we study nonlinear TTSA with step-sizes $\u03b1\\gg\u03b2$. Under standard stability, regularity, and Markovian noise assumptions, we upper bound the mean-squared error and the bias of both iterates around their limiting equilibria. Our bounds scale as $O(\u03b1+\u03b2^2/\u03b1^2)$, which we prove to be tight when $\u03b2\\le\u03b1^{3/2}$. The analysis separates the contributions of initial conditions, fast-timescale tracking error, Markovian dependence, and timescale coupling, thereby clarifying the origin of the $\u03b2^2/\u03b1^2$ term. Our results reveal qualitative differences from the linear TTSA setting previously studied, showing that nonlinear dynamics introduce additional finite-time effects that are absent in the linear case.",
+      "authors": [
+        "Djamel Rassem Lamouri",
+        "Dorian Baudry",
+        "Nicolas Gast"
+      ],
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20404v1",
+      "title": "Learning Principal-Agent Contracts for Equitable Smallholder Carbon Farming under Moral Hazard and Adverse Selection",
+      "published": "2026-09-17T13:53:00Z",
+      "updated": "2026-09-17T13:53:00Z",
+      "summary": "Agricultural soils are a major untapped carbon sink. Carbon farming is emerging as a promising practice for tapping this potential. Smallholder farmers, who dominate agriculture across South Asia and sub-Saharan Africa, are key to scaling climate mitigation via carbon farming. It is ironic that real-world carbon programs largely fail to reach them. We study this important gap through the lens of contract design. An aggregator offers a single pooled contract to a heterogeneous population of smallholder farmers who have private adoption costs (adverse selection) and exert unobserved effort (moral hazard), with agronomic outcomes evolving over multiple seasons. We formulate this evolving contracting problem as a POMDP and use reinforcement learning to learn a dynamic profit-maximising contract. We analyse the performance of the aggregator under various conditions. We find that a profit-maximising aggregator does not merely inherit the exclusion of smallholders, it amplifies it. On large farms the aggregator realises 87.7% of achievable adoption, against only 8.2% on smallholdings. Per-hectare Measurement, Reporting and Verification (MRV) costs fall as farm size rises, and the aggregator's pooling contract compounds this gradient rather than offsetting it. A counterfactual that makes MRV costs purely area-proportional eliminates this disparity. Our results and simulation can guide contract and policy design that opens carbon income to smallholders while enabling agricultural soils to contribute to climate mitigation at scale.",
+      "authors": [
+        "Rishi Bharadwaj",
+        "Yadati Narahari"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.GT"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20389v1",
+      "title": "Model-based Bootstrap for Offline Policy Evaluation in Tabular Reinforcement Learning",
+      "published": "2026-09-17T13:41:29Z",
+      "updated": "2026-09-17T13:41:29Z",
+      "summary": "Offline policy evaluation (OPE) is crucial in high-stakes reinforcement learning applications, where new policies must be assessed reliably before deployment. In such settings, point estimates alone are insufficient; principled uncertainty quantification, such as confidence intervals and variance estimates, is essential for safe and risk-aware decision-making. A comprehensive way to unify these tasks is to estimate the sampling distribution of the evaluation error. Existing approaches, however, often suffer from limited robustness, scalability, or finite-sample validity. In this paper, we propose a model-based bootstrap framework for uncertainty quantification of OPE in finite-horizon, time-inhomogeneous Markov decision processes (MDPs). Unlike classical bootstrap methods that rely on resampling complete episodes, the proposed method regenerates trajectories from an estimated MDP and can therefore accommodate a much broader range of offline data formats, including complete trajectories, transition-level observations, and trajectory fragments. This flexibility further improves finite-sample statistical efficiency. We establish bootstrap distributional consistency, asymptotically valid confidence intervals, and consistent variance estimation for the target policy value. Extensive simulations show that the proposed method accurately captures the sampling distribution of the OPE estimator, yielding tighter confidence intervals and more accurate variance estimates in most settings.",
+      "authors": [
+        "Weiwei Wang",
+        "Yuqiang Li",
+        "Xianyi Wu",
+        "Bingyi Jing"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20353v1",
+      "title": "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
+      "published": "2026-09-17T13:17:56Z",
+      "updated": "2026-09-17T13:17:56Z",
+      "summary": "We study repeated contract design when a principal observes outcomes but not the actions that generate them. The principal may use any bounded outcome-contingent payment vector, and the agent's best response can make expected profit discontinuous in those payments. For every fixed number $m\\ge2$ of outcomes, the minimax regret over $T$ rounds is of order $T^{m/(m+1)}$, up to logarithmic factors. The upper bound allows arbitrary action spaces and agent heterogeneity, without smoothness or monotone-surplus assumptions. Its key is an effective-dimension reduction that the benchmark can be normalized even when fixed tie-breaking is not shift invariant, after which revealed preference yields a monotone response map in payment-difference coordinates. A learning policy built on a Lipschitz parametrization of this map attains the rate using only observed outcome categories. The lower-bound construction accounts for how incentive losses accumulate across outcome dimensions. It shows that each additional contractible outcome creates a precise and unavoidable increase in the worst-case cost of learning.",
+      "authors": [
+        "Rui Ai",
+        "David Simchi-Levi",
+        "Han Zhong"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.20352v1",
+      "title": "COMPASS: Ordered Clustered Routing at 100K Scale",
+      "published": "2026-09-17T13:17:42Z",
+      "updated": "2026-09-17T13:17:42Z",
+      "summary": "Large-scale routing often requires visiting clusters of nodes in a prescribed order, giving rise to the Ordered Clustered Traveling Salesman Problem (OCTSP). Optimizing each cluster independently seems natural, but misses non-local dependencies. We introduce the COMPASS algorithm for OCTSP, which combines search with learning-accelerated routing by orchestrating parallel sub-solvers. COMPASS has no quality ceiling and its solutions keep improving with compute. It exploits the clustered structure, and can reach exact solutions in time exponential in cluster size rather than instance size. Empirically, COMPASS consistently outperforms alternative methods. Unlike common large-scale routing solvers, COMPASS consumes general distance matrices and is not limited to coordinate inputs. We demonstrate scaling to 100K synthetic nodes and to 28.5K real e-commerce nodes. To our knowledge, the latter is the largest reported routing solution over asymmetric distances, 9x beyond established ATSP benchmarks.",
+      "authors": [
+        "Ido Greenberg",
+        "Hugo Linsenmaier",
+        "Piotr Sielski",
+        "Shie Mannor",
+        "Alex Fender",
+        "Gal Chechik",
+        "Eli Meirom"
+      ],
+      "categories": [
+        "cs.LG"
+      ]
+    }
+  ]
+}
