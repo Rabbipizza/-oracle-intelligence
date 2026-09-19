@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-19T23:30:12.701940+00:00",
-  "independent_families": [
-    "company",
-    "industry_contracts",
-    "science"
-  ],
-  "family_count": 3,
-  "primary_snapshot_count": 14,
-  "coverage_gate_pass": true,
-  "economic_transmission": "REQUIRES_ANALYST_PROOF",
-  "company_capture": "REQUIRES_ANALYST_PROOF",
-  "trend_status": "PARTIAL",
-  "rule": "Coverage alone never makes a trend PROVEN or a company GREEN."
+  "generated_at": "2026-09-19T23:39:26.054209+00:00",
+  "discovery_quality": "INSUFFICIENT_BASELINE",
+  "global_source_inventory": {
+    "families": [
+      "company",
+      "industry_contracts",
+      "science"
+    ],
+    "family_count": 3,
+    "primary_snapshot_count": 18
+  },
+  "candidate_gates": [],
+  "rule": "A candidate passes coverage only on its own matched evidence. Global source diversity never proves a trend; economic transmission and company capture require separate proof."
 }
