@@ -1,0 +1,14 @@
+{
+  "version":"1.0",
+  "effective_date":"2026-09-20",
+  "gate":{"min_independent_families":3,"min_primary_sources":1,"require_economic_transmission":true,"require_company_capture_for_green":true},
+  "families":{
+    "science":{"sources":["arXiv","specialist conferences"],"status":"extend"},
+    "patents":{"sources":["EPO OPS","WIPO PATENTSCOPE"],"status":"credentials_or_connector_needed"},
+    "industry_contracts":{"sources":["USAspending","SAM.gov"],"status":"to_connect"},
+    "company":{"sources":["SEC EDGAR","issuer IR"],"status":"to_connect"},
+    "market":{"sources":["price","volume","expectation revisions"],"status":"reliable_feed_needed"}
+  },
+  "dedupe_rule":"Reposts of one originating disclosure count as one origin.",
+  "rule":"Trend PROVEN requires gate pass. Company GREEN additionally requires demonstrated economic capture."
+}
