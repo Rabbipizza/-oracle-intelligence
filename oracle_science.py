@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ORACLE arXiv collector with explicit date-window backfill."""
-import json,os,time,urllib.parse,urllib.request,xml.etree.ElementTree as ET
+import json,os,time,re,urllib.parse,urllib.request,xml.etree.ElementTree as ET
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 OUT=Path("data/source_snapshots"); OUT.mkdir(parents=True,exist_ok=True)
@@ -36,11 +36,15 @@ def main():
             windows.append({"category":cat,"start":start.isoformat(),"end":end.isoformat(),"count":len(rows),"error":err})
             failures+=bool(err)
             for d in rows:
-                key=(d.get("id") or "").split("v")[0]
+                raw=d.get("id") or ""
+                m=re.search(r"(\\d{4}\\.\\d{4,5})(?:v\\d+)?",raw)
+                key=m.group(1) if m else raw
                 if key: all_rows[key]=d
             end=start-timedelta(seconds=1); time.sleep(3)
     stamp=now.strftime("%Y%m%dT%H%M%SZ")
     obj={"meta":{"family":"science","source":"arXiv","primary":True,"peer_reviewed":"unknown","fetched_at":stamp,"lookback_days":LOOKBACK_DAYS,"window_days":WINDOW_DAYS,"categories":CATS,"failed_windows":failures},"windows":windows,"data":list(all_rows.values())}
     p=OUT/f"arxiv_backfill_{stamp}.json"; p.write_text(json.dumps(obj,indent=2),encoding="utf-8")
-    print(json.dumps({"path":str(p),"unique_papers":len(all_rows),"windows":len(windows),"failed_windows":failures}))\n    if failures == len(windows) or not all_rows:\n        raise SystemExit("FATAL: arXiv historical backfill returned no usable papers")
+    print(json.dumps({"path":str(p),"unique_papers":len(all_rows),"windows":len(windows),"failed_windows":failures}))
+    if failures == len(windows) or not all_rows:
+        raise SystemExit("FATAL: arXiv historical backfill returned no usable papers")
 if __name__=="__main__": main()
