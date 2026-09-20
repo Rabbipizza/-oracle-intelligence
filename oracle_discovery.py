@@ -27,10 +27,24 @@ def canonical_id(d):
 
 # Deduplicate papers across repeated snapshots/versions.
 unique={}
-for p in SRC.glob("arxiv_*.json"):
+for p in SRC.glob("*.json"):
     try:
         x=json.loads(p.read_text())
-        for d in x.get("data",[]):
+        source=x.get("meta",{}).get("source","")
+        data=x.get("data",[])
+        if not isinstance(data,list): continue
+        for d in data:
+            if not isinstance(d,dict): continue
+            if source=="Crossref":
+                title=" ".join(d.get("title") or [])
+                parts=((d.get("published") or d.get("created") or {}).get("date-parts") or [[]])[0]
+                if not parts: continue
+                y,m,day=(parts+[1,1])[:3]
+                d={"id":d.get("DOI",""),"title":title,"summary":"","published":f"{y:04d}-{m:02d}-{day:02d}T00:00:00+00:00"}
+            elif source=="OpenAlex":
+                d={"id":d.get("doi") or d.get("id",""),"title":d.get("title",""),"summary":"","published":(d.get("publication_date") or "")+"T00:00:00+00:00"}
+            elif source!="arXiv":
+                continue
             k=canonical_id(d)
             if k and k not in unique: unique[k]=d
     except Exception:
