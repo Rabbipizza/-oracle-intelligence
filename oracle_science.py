@@ -46,5 +46,5 @@ def main():
     p=OUT/f"arxiv_backfill_{stamp}.json"; p.write_text(json.dumps(obj,indent=2),encoding="utf-8")
     print(json.dumps({"path":str(p),"unique_papers":len(all_rows),"windows":len(windows),"failed_windows":failures}))
     if failures == len(windows) or not all_rows:
-        raise SystemExit("FATAL: arXiv historical backfill returned no usable papers")
+        print("WARN: arXiv unavailable; continuing with redundant scholarly sources")
 if __name__=="__main__": main()
