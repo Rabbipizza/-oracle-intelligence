@@ -21,7 +21,6 @@ jobs:
           python-version: "3.12"
       - name: Collect and analyze upstream sources
         env:
-          ORACLE_USER_AGENT: "ORACLE research pipeline"
           ORACLE_SEC_CIKS: "0001996810"
           ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"
           ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"
