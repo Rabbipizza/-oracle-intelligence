@@ -4,7 +4,7 @@ import json,os,time,urllib.parse,urllib.request,xml.etree.ElementTree as ET
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 OUT=Path("data/source_snapshots"); OUT.mkdir(parents=True,exist_ok=True)
-UA=os.environ.get("ORACLE_USER_AGENT","Mozilla/5.0 ORACLE-Research/1.0")
+UA="Mozilla/5.0 (compatible; ORACLE-Research/1.0; +https://github.com/Rabbipizza/-oracle-intelligence)"
 NS={"a":"http://www.w3.org/2005/Atom"}
 CATS=[q.strip() for q in os.environ.get("ORACLE_ARXIV_QUERIES","cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV").split(",") if q.strip()]
 WINDOW_DAYS=int(os.environ.get("ORACLE_ARXIV_WINDOW_DAYS","7"))
@@ -31,7 +31,7 @@ def main():
         while end>now-timedelta(days=LOOKBACK_DAYS):
             start=max(now-timedelta(days=LOOKBACK_DAYS),end-timedelta(days=WINDOW_DAYS))
             # arXiv submittedDate is UTC YYYYMMDDHHMMSS.
-            q=f"{cat} AND submittedDate:[{start.strftime('%Y%m%d%H%M%S')} TO {end.strftime('%Y%m%d%H%M%S')}]"
+            q=f"{cat} AND submittedDate:[{start.strftime('%Y%m%d%H%M')} TO {end.strftime('%Y%m%d%H%M')}]"
             rows,url,err=atom_fetch(q,MAX_PER_WINDOW)
             windows.append({"category":cat,"start":start.isoformat(),"end":end.isoformat(),"count":len(rows),"error":err})
             failures+=bool(err)
@@ -42,5 +42,5 @@ def main():
     stamp=now.strftime("%Y%m%dT%H%M%SZ")
     obj={"meta":{"family":"science","source":"arXiv","primary":True,"peer_reviewed":"unknown","fetched_at":stamp,"lookback_days":LOOKBACK_DAYS,"window_days":WINDOW_DAYS,"categories":CATS,"failed_windows":failures},"windows":windows,"data":list(all_rows.values())}
     p=OUT/f"arxiv_backfill_{stamp}.json"; p.write_text(json.dumps(obj,indent=2),encoding="utf-8")
-    print(json.dumps({"path":str(p),"unique_papers":len(all_rows),"windows":len(windows),"failed_windows":failures}))
+    print(json.dumps({"path":str(p),"unique_papers":len(all_rows),"windows":len(windows),"failed_windows":failures}))\n    if failures == len(windows) or not all_rows:\n        raise SystemExit("FATAL: arXiv historical backfill returned no usable papers")
 if __name__=="__main__": main()
