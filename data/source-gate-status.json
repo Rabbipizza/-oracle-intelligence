@@ -1,14 +1,15 @@
 {
-  "generated_at": "2026-09-19T23:39:26.054209+00:00",
+  "generated_at": "2026-09-20T08:24:37.286669+00:00",
   "discovery_quality": "INSUFFICIENT_BASELINE",
   "global_source_inventory": {
     "families": [
       "company",
       "industry_contracts",
+      "macro",
       "science"
     ],
-    "family_count": 3,
-    "primary_snapshot_count": 18
+    "family_count": 4,
+    "primary_snapshot_count": 24
   },
   "candidate_gates": [],
   "rule": "A candidate passes coverage only on its own matched evidence. Global source diversity never proves a trend; economic transmission and company capture require separate proof."
