@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "updated": "2026-09-20",
-  "principle": "ORACLE uses only sources with free/open access or a free tier requiring no paid subscription. Paid/licensed/credential-only sources are excluded from the active source universe and never satisfy a gate.",
+  "principle": "ORACLE uses sources that are open/free OR provide a usable free quota/free tier. Paid-only sources and licensed feeds with no free usable access are excluded and never satisfy a gate.",
   "categories": {
     "science": [
       {
@@ -148,9 +148,12 @@
     ]
   },
   "policy": {
-    "paid_sources": false,
-    "licensed_feeds": false,
-    "free_tier_allowed": true,
-    "open_public_sources_preferred": true
+    "paid_only_sources": false,
+    "licensed_paid_only_feeds": false,
+    "free_open_sources": true,
+    "free_tier_or_quota_sources": true,
+    "quota_guard_required": true,
+    "cache_and_deduplicate": true,
+    "never_count_unfetched_sources_in_gate": true
   }
 }
