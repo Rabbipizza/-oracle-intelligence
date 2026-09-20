@@ -1,6 +1,13 @@
 name: ORACLE Source Ingestion
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'oracle_*.py'
+      - 'source-gate.json'
+      - 'sources-registry.json'
+      - '.github/workflows/oracle-sources.yml'
   schedule:
     - cron: "15 7,15,21 * * 1-5"
 
