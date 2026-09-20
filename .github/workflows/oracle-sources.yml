@@ -30,6 +30,7 @@ jobs:
         run: |
           python oracle_sources.py
           python oracle_science.py
+          python oracle_scholarly.py
           python oracle_discovery.py
           python oracle_source_gate.py
           python oracle_audit.py
