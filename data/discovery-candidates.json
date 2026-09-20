@@ -1,9 +1,1410 @@
 {
-  "generated_at": "2026-09-20T08:24:37.131751+00:00",
+  "generated_at": "2026-09-20T16:57:55.698291+00:00",
   "method": "v2 deduplicated 2-3gram document-frequency acceleration; 14d recent vs preceding 90d baseline",
-  "quality": "INSUFFICIENT_BASELINE",
-  "unique_papers": 247,
-  "recent_docs": 247,
-  "baseline_docs": 0,
-  "candidates": []
+  "quality": "OK",
+  "unique_papers": 1443,
+  "recent_docs": 447,
+  "baseline_docs": 514,
+  "candidates": [
+    {
+      "term": "large language",
+      "recent_docs": 23,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 54.029,
+      "discovery_score": 91.3659,
+      "examples": [
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+        "Score Centering Stabilizes Off-policy Reinforcement Learning",
+        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation"
+      ]
+    },
+    {
+      "term": "github com",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 31.038,
+      "discovery_score": 49.3413,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+      ]
+    },
+    {
+      "term": "https github",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 31.038,
+      "discovery_score": 49.3413,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+      ]
+    },
+    {
+      "term": "https github com",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 31.038,
+      "discovery_score": 49.3413,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+      ]
+    },
+    {
+      "term": "available https",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 26.44,
+      "discovery_score": 40.8265,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "From \"Who Is This User?\" to \"What Does This Purchase Mean?\": A Deployed Pipeline for Semantic User Profiling at Bank Scale"
+      ]
+    },
+    {
+      "term": "available https github",
+      "recent_docs": 9,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 21.842,
+      "discovery_score": 32.3244,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "From \"Who Is This User?\" to \"What Does This Purchase Mean?\": A Deployed Pipeline for Semantic User Profiling at Bank Scale"
+      ]
+    },
+    {
+      "term": "percentage points",
+      "recent_docs": 8,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 19.542,
+      "discovery_score": 28.0951,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Deep Noir: Autonomous Steering Discovery via Architectural Chronometry in Transformer Models",
+        "Language-model groups overstate consensus when replaying human deliberation on a reasoning task"
+      ]
+    },
+    {
+      "term": "remains challenging",
+      "recent_docs": 8,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 19.542,
+      "discovery_score": 28.0951,
+      "examples": [
+        "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
+      ]
+    },
+    {
+      "term": "extensive experiments",
+      "recent_docs": 8,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 19.542,
+      "discovery_score": 28.0951,
+      "examples": [
+        "Fingerprinting Multimodal Large Language Models",
+        "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search"
+      ]
+    },
+    {
+      "term": "success rate",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning"
+      ]
+    },
+    {
+      "term": "neural network",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search"
+      ]
+    },
+    {
+      "term": "project page",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations"
+      ]
+    },
+    {
+      "term": "page https",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations"
+      ]
+    },
+    {
+      "term": "project page https",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations"
+      ]
+    },
+    {
+      "term": "language llms",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Large Language Models as Falsifiers for Cyber-Physical Systems",
+        "Local Sparsity Enables Unsupervised LLM Safety Detection",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "large language llms",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 17.243,
+      "discovery_score": 23.8951,
+      "examples": [
+        "Large Language Models as Falsifiers for Cyber-Physical Systems",
+        "Local Sparsity Enables Unsupervised LLM Safety Detection",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "among compared",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation",
+        "INSPECT: Learning Robot View Selection from Assistant Use"
+      ]
+    },
+    {
+      "term": "coding agents",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+        "An Empirical Study of Harness Design for Coding Agents",
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation"
+      ]
+    },
+    {
+      "term": "upper bound",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
+        "The Bias of Nonlinear Two-Time-scale Stochastic Approximation under Constant Step-Sizes"
+      ]
+    },
+    {
+      "term": "reduces mean",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "OmniMimic: Dynamics-completed Motion Augmentation for Multi-style Omnidirectional Quadruped Locomotion",
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention"
+      ]
+    },
+    {
+      "term": "robot manipulation",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation"
+      ]
+    },
+    {
+      "term": "code available",
+      "recent_docs": 6,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 14.944,
+      "discovery_score": 19.7416,
+      "examples": [
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "Can 4D Foundation Models Remember?",
+        "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos"
+      ]
+    },
+    {
+      "term": "neural networks",
+      "recent_docs": 7,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 5.748,
+      "discovery_score": 15.7107,
+      "examples": [
+        "Temporal graph neural networks for sports outcome prediction: modeling dynamic player interactions and evolving team structures",
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+        "Beyond PINNs: A Unified Gauss--Newton and Petrov--Galerkin Framework for Neural and Hybrid PDE Solvers"
+      ]
+    },
+    {
+      "term": "llm agents",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents"
+      ]
+    },
+    {
+      "term": "yet existing",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "An Empirical Study of Harness Design for Coding Agents",
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents"
+      ]
+    },
+    {
+      "term": "vision-language-action vla",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Uni-LaDiR: Latent Diffusion Unifies Multimodal Reasoning"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "STR-Agent: An LLM-Driven Agent for QoS-Aware Routing in LEO Satellite Networks"
+      ]
+    },
+    {
+      "term": "mean absolute",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
+        "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation"
+      ]
+    },
+    {
+      "term": "consistently outperforms",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "COMPASS: Ordered Clustered Routing at 100K Scale",
+        "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+        "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction"
+      ]
+    },
+    {
+      "term": "provide limited",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction",
+        "E-AVI: Evidence-Grounded Multimodal Assessment for Automated Video Interviews"
+      ]
+    },
+    {
+      "term": "publicly available",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+        "WiCleanData: Guaranteeing the Type Consistency of Wikidata by Taxonomy Refinement and Constraint Enforcement",
+        "From \"Who Is This User?\" to \"What Does This Purchase Mean?\": A Deployed Pipeline for Semantic User Profiling at Bank Scale"
+      ]
+    },
+    {
+      "term": "code available https",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
+        "INSPECT: Learning Robot View Selection from Assistant Use"
+      ]
+    },
+    {
+      "term": "gaussian splatting",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 12.645,
+      "discovery_score": 15.6608,
+      "examples": [
+        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
+        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance"
+      ]
+    },
+    {
+      "term": "autonomous driving",
+      "recent_docs": 6,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 4.981,
+      "discovery_score": 12.7518,
+      "examples": [
+        "A 28nm 44.15TFLOPS/W and 1.57TFLOPS/mm\n                    <sup>2</sup>\n                    Joint-Alignment Floating-Point CIM Macro with ISO26262 ASIL-D Safety Level for Autonomous Driving",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving"
+      ]
+    },
+    {
+      "term": "artificial intelligence",
+      "recent_docs": 10,
+      "baseline_docs": 6,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 1.857,
+      "discovery_score": 11.906,
+      "examples": [
+        "Feasibility Study of Automated Brackish Water Fish Pond Systems: Integrating IoT Sensor Networks and Generative Artificial Intelligence for Sustainable Aquaculture in Coastal Communities",
+        "Artificial Intelligence and Corporate Social Irresponsibility",
+        "An Exploratory Study on the Interaction Mechanism between Humanistic Imagination and Character Development in the Age of Artificial Intelligence"
+      ]
+    },
+    {
+      "term": "substantially improve",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Embedding Models Measure in Peculiar Ways",
+        "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain",
+        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG"
+      ]
+    },
+    {
+      "term": "achieves highest",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG",
+        "INSPECT: Learning Robot View Selection from Assistant Use"
+      ]
+    },
+    {
+      "term": "existing typically",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "An Empirical Study of Harness Design for Coding Agents",
+        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
+        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis"
+      ]
+    },
+    {
+      "term": "consistent improvements",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards"
+      ]
+    },
+    {
+      "term": "human demonstrations",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
+        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
+      ]
+    },
+    {
+      "term": "human intervention",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies"
+      ]
+    },
+    {
+      "term": "video generation",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+        "DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models"
+      ]
+    },
+    {
+      "term": "often struggle",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+        "CrystalMO-TuRBO: Multi-Objective Trust-Region Bayesian Optimization for High-precision Joint Crystal Structure Refinement",
+        "AURA: Adaptive Uncertainty-Routed Analysis for Email Threat Detection"
+      ]
+    },
+    {
+      "term": "mean absolute error",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation",
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention"
+      ]
+    },
+    {
+      "term": "absolute error",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation",
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention"
+      ]
+    },
+    {
+      "term": "parameter space",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "CrystalMO-TuRBO: Multi-Objective Trust-Region Bayesian Optimization for High-precision Joint Crystal Structure Refinement",
+        "Past, Future, All at Once: Mitigating Stability-Plasticity Dilemma via Post-hoc JANUS Rectification",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "manipulation requires",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation",
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
+      ]
+    },
+    {
+      "term": "policy optimization",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards",
+        "EPIG-Tree: Compute-Optimal Branching for Gradient-Efficient Reinforcement Learning"
+      ]
+    },
+    {
+      "term": "challenging because",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Radio Frequency Detection and Classification of Microplastics in Water",
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "Fast-varying Natural Frequencies and Damping Ratio Identification for Linear Time-Varying System"
+      ]
+    },
+    {
+      "term": "same time",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Resolution limits for process comparison from event data",
+        "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
+        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection"
+      ]
+    },
+    {
+      "term": "achieves state-of-the-art",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "SCGFM-ART: Amortized Relational Transport for Structure-Centric Graph Foundation Models",
+        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+        "Navi-Agent: Unlocalized Monocular Navigation Agent"
+      ]
+    },
+    {
+      "term": "natural language",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Large Language Models as Falsifiers for Cyber-Physical Systems",
+        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG",
+        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms"
+      ]
+    },
+    {
+      "term": "large language llm",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
+        "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
+        "Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks"
+      ]
+    },
+    {
+      "term": "language llm",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
+        "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
+        "Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks"
+      ]
+    },
+    {
+      "term": "existing often",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
+        "Uni-LaDiR: Latent Diffusion Unifies Multimodal Reasoning",
+        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation"
+      ]
+    },
+    {
+      "term": "ground truth",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Generating Heterogeneous 3D Geological Microstructures from 2D Images via a Stable Diffusion-Adversarial Model",
+        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search",
+        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+      ]
+    },
+    {
+      "term": "object detection",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation",
+        "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
+        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection"
+      ]
+    },
+    {
+      "term": "outperforms state-of-the-art",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction",
+        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search",
+        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos"
+      ]
+    },
+    {
+      "term": "question answering",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "E-AVI: Evidence-Grounded Multimodal Assessment for Automated Video Interviews",
+        "Not All AI Agents Are Equal: Characterizing Resource and Performance Dynamics",
+        "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering"
+      ]
+    },
+    {
+      "term": "source code",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Learning and Transferring Closed-Loop Robot Software",
+        "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
+        "INSPECT: Learning Robot View Selection from Assistant Use"
+      ]
+    },
+    {
+      "term": "however existing",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+        "Grounded Product Understanding in Livestream Videos",
+        "A Smaller Transformer in Your Transformer"
+      ]
+    },
+    {
+      "term": "maritime english",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Charting new waters: the role of artificial intelligence in Maritime English education",
+        "Applying authentic resources in online Maritime English education",
+        "Charting new waters: the role of artificial intelligence in Maritime English education"
+      ]
+    },
+    {
+      "term": "maritime english education",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Charting new waters: the role of artificial intelligence in Maritime English education",
+        "Applying authentic resources in online Maritime English education",
+        "Charting new waters: the role of artificial intelligence in Maritime English education"
+      ]
+    },
+    {
+      "term": "english education",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 10.346,
+      "discovery_score": 11.6937,
+      "examples": [
+        "Charting new waters: the role of artificial intelligence in Maritime English education",
+        "Applying authentic resources in online Maritime English education",
+        "Charting new waters: the role of artificial intelligence in Maritime English education"
+      ]
+    },
+    {
+      "term": "natural images",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
+        "A Smaller Transformer in Your Transformer"
+      ]
+    },
+    {
+      "term": "times times",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation"
+      ]
+    },
+    {
+      "term": "remains unclear",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+        "Designing Against Deskilling: Metacognitive Feedback Reduces Cognitive Offloading to LLM Assistants",
+        "Learning and Transferring Closed-Loop Robot Software"
+      ]
+    },
+    {
+      "term": "trained scratch",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
+        "Visual Sim-to-Real Learning for Robotic Insertion under Geometric Variations: Application to Rebar Installation"
+      ]
+    },
+    {
+      "term": "agents increasingly",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+        "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
+        "Learning and Transferring Closed-Loop Robot Software"
+      ]
+    },
+    {
+      "term": "inverse solvers",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "enabling direct",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG"
+      ]
+    },
+    {
+      "term": "monte carlo",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "Stable Movement for Nondual Lipschitz Convex Optimization: Efficiency and Nearly Optimal Oracle Rates",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "benchmark evaluating",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
+        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+      ]
+    },
+    {
+      "term": "flow matching",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Dynamic Generalized Gromov-Wasserstein Optimal Transport",
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants"
+      ]
+    },
+    {
+      "term": "real-world manipulation",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
+      ]
+    },
+    {
+      "term": "neural network cnn",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "real world",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Physical knowledge on historical data matters more than enforcing physical constraints on the forecast",
+        "Visual Sim-to-Real Learning for Robotic Insertion under Geometric Variations: Application to Rebar Installation"
+      ]
+    },
+    {
+      "term": "network cnn",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "convolutional neural network",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "convolutional neural",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "latent representations",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
+      ]
+    },
+    {
+      "term": "future visual",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models"
+      ]
+    },
+    {
+      "term": "real-world experiments",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "Underwater Visual Target Tracking with Target-Specific Depth Estimation and Adaptive Model-Fusion Predictive Control",
+        "Time-Efficient Iterative Learning Planning for Safety-Critical Dynamic Obstacle Avoidance"
+      ]
+    },
+    {
+      "term": "demonstrations however",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
+      ]
+    },
+    {
+      "term": "two different",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "Beyond PINNs: A Unified Gauss--Newton and Petrov--Galerkin Framework for Neural and Hybrid PDE Solvers",
+        "Perception, Layout, and Validation: Calibrated Confidence for Reliable Straight-Through Processing of Financial Documents"
+      ]
+    },
+    {
+      "term": "every evaluated",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics",
+        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation"
+      ]
+    },
+    {
+      "term": "fine-tuning sft",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning sft",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "adding parameters",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Relational Attention for Data-Efficient Language Modeling",
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
+      ]
+    },
+    {
+      "term": "achieves higher",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "logarithmic factors",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
+        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
+        "Near-Optimal Pure Single-Loop Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization"
+      ]
+    },
+    {
+      "term": "research directions",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "RISC-V and machine learning: a survey",
+        "Ownership in AI-Assisted Everyday Tasks",
+        "Neuro-Symbolic Agentic AI for Networked Low-Altitude UAVs"
+      ]
+    },
+    {
+      "term": "enables accurate",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
+        "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+        "Semantic SLAM in Precision Agriculture using Bayesian Inference"
+      ]
+    },
+    {
+      "term": "optimization behavior",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "Quantum Graph Convolutional Networks: Implementation and Trainability Analysis"
+      ]
+    },
+    {
+      "term": "bayesian optimization",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "CrystalMO-TuRBO: Multi-Objective Trust-Region Bayesian Optimization for High-precision Joint Crystal Structure Refinement",
+        "Large Language Models as Falsifiers for Cyber-Physical Systems",
+        "Online Adaptive Kernel Mixing for Gaussian Process Decision Making"
+      ]
+    },
+    {
+      "term": "inverse problem",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "CrystalMO-TuRBO: Multi-Objective Trust-Region Bayesian Optimization for High-precision Joint Crystal Structure Refinement",
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "language modeling",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Relational Attention for Data-Efficient Language Modeling",
+        "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition"
+      ]
+    },
+    {
+      "term": "error rate",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+        "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain",
+        "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation"
+      ]
+    },
+    {
+      "term": "achieves mean",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning",
+        "Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks",
+        "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs"
+      ]
+    },
+    {
+      "term": "message passing",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 447,
+      "baseline_corpus_docs": 514,
+      "acceleration": 8.047,
+      "discovery_score": 7.9097,
+      "examples": [
+        "Truncated automatic sparse differentiation for machine learning interatomic potentials",
+        "G^2RA-NET: Graph-based Cross-Slice Relation Modeling with Attention Gating for Medical Image Segmentation",
+        "HyperAMS-Net: Adaptive Multi-Scale Spatial Hypergraph Network for Brain Disorder Classification"
+      ]
+    }
+  ]
 }
