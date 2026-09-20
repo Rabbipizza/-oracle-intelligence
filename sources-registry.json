@@ -1,0 +1,61 @@
+{
+  "version":"2.0","updated":"2026-09-20",
+  "principle":"Sources are counted only when actually ingested; unavailable/credentialed sources remain declared but never satisfy a gate.",
+  "categories":{
+    "science":[
+      {"source":"arXiv","mode":"API","status":"active"},
+      {"source":"OpenAlex","mode":"API","status":"adapter_added_optional_key"},
+      {"source":"Crossref","mode":"REST API","status":"adapter_added"},
+      {"source":"NeurIPS/ICML/ICLR/CVPR/ICCV/ECCV/ICRA/IROS","mode":"via scholarly indexes/proceedings","status":"covered_via_indexes_then_direct_expand"}
+    ],
+    "patents":[
+      {"source":"EPO OPS","mode":"API","status":"credentials_required"},
+      {"source":"WIPO PATENTSCOPE","mode":"SOAP/data services","status":"service_access_required"},
+      {"source":"USPTO Open Data","mode":"API/data","status":"adapter_planned_after_endpoint_validation"}
+    ],
+    "industry_contracts":[
+      {"source":"USAspending","mode":"REST API","status":"active"},
+      {"source":"SAM.gov Contract Opportunities","mode":"API","status":"api_key_required"},
+      {"source":"EU TED procurement","mode":"API/data","status":"to_connect"},
+      {"source":"permits/capacity announcements","mode":"official sources","status":"to_connect"},
+      {"source":"trade/import-export","mode":"official statistical APIs","status":"to_connect"}
+    ],
+    "company":[
+      {"source":"SEC EDGAR Companyfacts","mode":"REST API","status":"active"},
+      {"source":"SEC submissions 10-K/10-Q/8-K/20-F/6-K","mode":"REST API","status":"adapter_expand"},
+      {"source":"Issuer Investor Relations","mode":"primary web/RSS","status":"to_connect"},
+      {"source":"earnings/guidance/backlog/orders/CAPEX","mode":"primary filings/IR","status":"extract_from_primary"}
+    ],
+    "market":[
+      {"source":"price/volume","mode":"licensed/reliable feed","status":"feed_required"},
+      {"source":"QQQ benchmark","mode":"market feed","status":"feed_required"},
+      {"source":"USD/CHF","mode":"official/reliable FX feed","status":"to_connect"},
+      {"source":"volatility/drawdown","mode":"derived","status":"compute_after_feed"}
+    ],
+    "expectations":[
+      {"source":"analyst consensus/revisions","mode":"licensed data","status":"provider_required"},
+      {"source":"earnings surprises","mode":"licensed/primary-derived","status":"provider_required"}
+    ],
+    "adoption":[
+      {"source":"GitHub public activity","mode":"API","status":"to_connect_when_relevant"},
+      {"source":"job postings","mode":"provider/company sources","status":"to_connect"},
+      {"source":"technical standards","mode":"standards bodies","status":"to_connect"}
+    ],
+    "macro":[
+      {"source":"Federal Reserve/FRED","mode":"official API","status":"api_key_or_official_feed"},
+      {"source":"ECB","mode":"official data API","status":"to_connect"},
+      {"source":"SNB","mode":"official data","status":"to_connect"},
+      {"source":"BLS/BEA","mode":"official APIs","status":"to_connect"},
+      {"source":"energy/commodities","mode":"EIA/official feeds","status":"to_connect"}
+    ],
+    "geopolitics_policy":[
+      {"source":"sanctions/export controls","mode":"OFAC/BIS/EU/SECO official","status":"to_connect"},
+      {"source":"industrial subsidies/policy","mode":"official government sources","status":"to_connect"},
+      {"source":"defense procurement","mode":"USAspending/SAM.gov","status":"partial_active"}
+    ],
+    "supply_chain":[
+      {"source":"production capacity/mines/refining/fabs/grid equipment","mode":"official/company/industry primary","status":"to_connect"},
+      {"source":"lead times/orders","mode":"company/industry primary","status":"extract_from_primary"}
+    ]
+  }
+}
