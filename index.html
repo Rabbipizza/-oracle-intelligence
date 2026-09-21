@@ -1,26 +1,172 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ORACLE-IA Cockpit</title><style>
-:root{--bg:#07110d;--p:#0d1813;--p2:#101d17;--line:#263c32;--t:#edf7f1;--m:#91a39a;--g:#72d69e;--o:#f2bd5c;--r:#ef7d7d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font-family:Inter,system-ui,sans-serif}.w{max-width:1500px;margin:auto;padding:18px}.p{background:var(--p);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}.m{color:var(--m)}.g{color:var(--g);font-weight:800}.o{color:var(--o);font-weight:800}.r{color:var(--r);font-weight:800}h1,h2{margin-top:0}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--m)}.scroll{overflow:auto}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:6px}.tab{background:var(--p2);color:var(--t);border:1px solid var(--line);border-radius:999px;padding:7px 10px;cursor:pointer;white-space:nowrap}.tab.active{border-color:var(--g);color:var(--g)}.hidden{display:none}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.kpi{background:var(--p2);border:1px solid var(--line);border-radius:11px;padding:12px}.kpi strong{font-size:22px;display:block;margin-top:4px}.foot{font-size:11px;color:var(--m)}@media(max-width:750px){.kpis{grid-template-columns:1fr 1fr}table{min-width:850px}}</style></head><body><main class="w">
-<section class="p"><h1>ORACLE-IA</h1><div class="m">Cockpit investissement · 21 septembre 2026</div></section>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORACLE-IA · Investment Cockpit</title>
+<style>
+:root{--bg:#07100c;--panel:#0d1813;--panel2:#111f18;--line:#243a30;--text:#eef7f2;--muted:#91a39a;--green:#68d391;--orange:#f2bd5c;--red:#ef7d7d;--blue:#7db7ff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07100c,#081510 55%,#07100c);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1560px;margin:auto;padding:18px}.panel{background:rgba(13,24,19,.96);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 8px 30px rgba(0,0,0,.13)}
+header{display:flex;justify-content:space-between;gap:16px;align-items:flex-end}.brand h1{margin:0;font-size:30px;letter-spacing:-.6px}.brand .sub{color:var(--muted);margin-top:4px}.stamp{text-align:right;color:var(--muted);font-size:12px}
+h2{font-size:18px;margin:0 0 12px}h3{margin:0 0 6px;font-size:15px}.muted{color:var(--muted)}.small{font-size:12px}.tiny{font-size:11px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:13px}.kpi span{color:var(--muted);font-size:12px}.kpi strong{display:block;font-size:24px;margin:4px 0 2px}.kpi em{font-style:normal;font-size:11px;color:var(--muted)}
+.pos{color:var(--green)!important}.neg{color:var(--red)!important}.neu{color:var(--muted)!important}.blue{color:var(--blue)!important}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;font-weight:800}.green{color:var(--green);border-color:#2d6b48}.orange{color:var(--orange);border-color:#6f592a}.red{color:var(--red);border-color:#704040}
+.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.action{background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:13px}.action.green-card{border-color:#2d6b48;box-shadow:inset 0 0 0 1px rgba(104,211,145,.08)}.ticker{font-size:20px;font-weight:900;letter-spacing:.2px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}.metric{background:#0b1711;border-radius:8px;padding:7px}.metric b{display:block;font-size:13px}.metric span{font-size:10px;color:var(--muted)}
+.trend-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.trend{background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:12px;cursor:pointer;transition:.15s}.trend:hover,.trend.active{transform:translateY(-1px);border-color:var(--green)}.trend-rank{font-size:12px;color:var(--muted)}.trend-name{font-weight:850;margin:5px 0;min-height:40px}.trend-market{display:flex;gap:8px;flex-wrap:wrap;font-size:11px}.state{font-size:10px;font-weight:900;letter-spacing:.5px}
+.detail-head{display:grid;grid-template-columns:1.8fr .7fr .7fr;gap:10px;margin-bottom:12px}.detail-box{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px}.detail-box strong{font-size:19px;display:block;margin-top:3px}
+.scroll{overflow:auto;border:1px solid var(--line);border-radius:11px}table{width:100%;border-collapse:collapse;font-size:12px;min-width:1050px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{position:sticky;top:0;background:#102018;color:var(--muted);z-index:1;font-size:11px}tr:hover td{background:#0f1d16}.role{max-width:250px;overflow:hidden;text-overflow:ellipsis}
+.port-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.compare .box{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:12px}.compare strong{display:block;font-size:21px;margin-top:4px}
+.footer{color:var(--muted);font-size:11px;text-align:center;padding:8px}.error{padding:14px;border:1px solid #704040;background:#231313;border-radius:10px;color:#ffc4c4}
+button{font:inherit}
+@media(max-width:1050px){.trend-grid{grid-template-columns:repeat(2,1fr)}.action-grid{grid-template-columns:1fr 1fr}.port-grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.wrap{padding:10px}header{display:block}.stamp{text-align:left;margin-top:8px}.kpis,.action-grid,.trend-grid,.metrics,.detail-head,.compare{grid-template-columns:1fr 1fr}.brand h1{font-size:25px}.kpi strong{font-size:20px}.trend-name{min-height:0}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="panel">
+<header>
+<div class="brand"><h1>ORACLE-IA · MARKET NOW</h1><div class="sub">Trend → sociétés → signal d'entrée → portefeuille → benchmark.</div></div>
+<div class="stamp" id="stamp">Chargement des données…</div>
+</header>
+</section>
 
-<section class="p"><h2>Vue d’ensemble</h2><div class="kpis"><div class="kpi"><span class="m">Trends validés</span><strong>5</strong><span class="foot">les autres restent hors classement</span></div><div class="kpi"><span class="m">Discovery</span><strong class="g">OK</strong><span class="foot">1’705 papiers · 663 récents · 515 baseline</span></div><div class="kpi"><span class="m">Positions simulation</span><strong>2</strong><span class="foot">AAON + GEV</span></div><div class="kpi"><span class="m">Capital initial</span><strong>1’000 CHF</strong><span class="foot">simulation ORACLE</span></div></div></section><section class="p"><h2>1 · Quels sont les trends ?</h2><div class="scroll"><table><tr><th>Rang</th><th>Δ</th><th>Trend</th><th>État</th></tr>
-<tr><td><b>#1</b></td><td class="g">▲ 2</td><td><b>AI Optical Interconnect / Photonics</b></td><td class="g">RISING</td></tr>
-<tr><td><b>#2</b></td><td class="r">▼ 1</td><td><b>AI Power / Grid</b></td><td>STABLE</td></tr>
-<tr><td><b>#3</b></td><td class="r">▼ 1</td><td><b>Critical Minerals Sovereignty</b></td><td>STABLE</td></tr>
-<tr><td><b>#4</b></td><td>→ 0</td><td><b>Counter-UAS / Directed Energy</b></td><td>STABLE</td></tr>
-<tr><td><b>#5</b></td><td>→ 0</td><td><b>Physical AI / Robotics</b></td><td class="r">FALLING</td></tr>
-<tr><td colspan="4" class="m">#6–#20 : non classés tant que les preuves sont insuffisantes.</td></tr></table></div></section>
+<section class="panel">
+<h2>Vue investisseur</h2>
+<div class="kpis" id="headline"></div>
+</section>
 
-<section class="p"><h2>2 · Sociétés composant chaque trend</h2><p class="m">Clique sur un trend. ORACLE affiche jusqu’à 20 sociétés uniquement lorsqu’elles ont été réellement qualifiées — aucune ligne de remplissage.</p><div class="tabs">
-<button class="tab active" onclick="show('t1',this)">#1 Optical</button><button class="tab" onclick="show('t2',this)">#2 Power/Grid</button><button class="tab" onclick="show('t3',this)">#3 Minerals</button><button class="tab" onclick="show('t4',this)">#4 Counter-UAS</button><button class="tab" onclick="show('t5',this)">#5 Physical AI</button></div>
-<div id="t1" class="board"><div class="scroll"><table><tr><th>Rang</th><th>Δ rang</th><th>Ticker</th><th>Société</th><th>Perf. bourse J-1</th><th>Signal ORACLE</th></tr>
-<tr><td><b>#1</b></td><td class="g">▲</td><td>TSEM</td><td>Tower Semiconductor</td><td>—</td><td class="o">WATCH</td></tr>
-<tr><td><b>#2</b></td><td class="g">NEW</td><td>SMTC</td><td>Semtech</td><td>—</td><td class="o">WATCH</td></tr>
-<tr><td><b>#3</b></td><td>→</td><td>COHR</td><td>Coherent</td><td>—</td><td class="o">WAIT FOR PULLBACK</td></tr><tr><td colspan="6" class="m">#4–#20 : données insuffisantes.</td></tr></table></div></div>
-<div id="t2" class="board hidden"><div class="scroll"><table><tr><th>Rang</th><th>Δ rang</th><th>Ticker</th><th>Société</th><th>Perf. bourse J-1</th><th>Signal ORACLE</th></tr><tr><td><b>#1</b></td><td>→</td><td>GEV</td><td>GE Vernova</td><td>—</td><td class="o">WATCH</td></tr><tr><td colspan="6" class="m">#2–#20 : données insuffisantes.</td></tr></table></div></div>
-<div id="t3" class="board hidden"><div class="scroll"><table><tr><th>Rang</th><th>Δ rang</th><th>Ticker</th><th>Société</th><th>Perf. bourse J-1</th><th>Signal ORACLE</th></tr><tr><td><b>#1</b></td><td>→</td><td>MP</td><td>MP Materials</td><td>—</td><td class="o">WATCH</td></tr><tr><td colspan="6" class="m">#2–#20 : données insuffisantes.</td></tr></table></div></div>
-<div id="t4" class="board hidden"><div class="scroll"><table><tr><th>Rang</th><th>Δ rang</th><th>Ticker</th><th>Société</th><th>Perf. bourse J-1</th><th>Signal ORACLE</th></tr><tr><td><b>#1</b></td><td>→</td><td>AVAV</td><td>AeroVironment</td><td>—</td><td class="o">WATCH</td></tr><tr><td colspan="6" class="m">#2–#20 : données insuffisantes.</td></tr></table></div></div>
-<div id="t5" class="board hidden"><div class="scroll"><table><tr><th>Rang</th><th>Δ rang</th><th>Ticker</th><th>Société</th><th>Perf. bourse J-1</th><th>Signal ORACLE</th></tr><tr><td><b>#1</b></td><td class="r">▼</td><td>AMBA</td><td>Ambarella</td><td>—</td><td class="r">TOO EARLY</td></tr><tr><td colspan="6" class="m">#2–#20 : données insuffisantes.</td></tr></table></div></div>
-<p class="foot">La performance J-1 est indépendante du mouvement dans le classement ORACLE. Les valeurs non validées restent vides.</p></section>
+<section class="panel">
+<h2>🎯 Action maintenant</h2>
+<div class="muted small" style="margin-bottom:10px">GREEN = critères ORACLE d'entrée validés. ORANGE = thèse crédible mais gate encore ouvert. RED = pas d'entrée.</div>
+<div class="action-grid" id="actions"></div>
+</section>
 
-<section class="p"><h2>3 · Où ORACLE investirait maintenant ?</h2><div class="scroll"><table><tr><th>Société</th><th>Trend</th><th>Feu ORACLE</th><th>Lecture</th></tr><tr><td><b>GEV</b></td><td>AI Power / Grid</td><td class="g">● GREEN</td><td>Critères ORACLE passés selon le dernier dossier validé</td></tr><tr><td>TSEM</td><td>AI Optical / Photonics</td><td class="o">● ORANGE</td><td>Thèse crédible, gate(s) encore ouvert(s)</td></tr><tr><td>MP</td><td>Critical Minerals</td><td class="o">● ORANGE</td><td>Thèse crédible, gate(s) encore ouvert(s)</td></tr><tr><td>AVAV</td><td>Counter-UAS</td><td class="o">● ORANGE</td><td>Thèse crédible, gate(s) encore ouvert(s)</td></tr><tr><td>AMBA</td><td>Physical AI</td><td class="r">● RED</td><td>Critères d’entrée non passés</td></tr></table></div><p class="foot">Le feu mesure les critères ORACLE, pas la taille du portefeuille. GREEN = entrée admissible; ORANGE = attendre une validation; RED = critères non passés.</p></section><section class="p"><h2>4 · Portefeuille ORACLE — simulation</h2><div class="kpis"><div class="kpi"><span class="m">AAON</span><strong>40 CHF</strong><span class="foot">4% · position simulée</span></div><div class="kpi"><span class="m">GEV</span><strong>60 CHF</strong><span class="foot">6% · position simulée</span></div><div class="kpi"><span class="m">Cash</span><strong>900 CHF</strong><span class="foot">90% · non investi</span></div><div class="kpi"><span class="m">Exposition</span><strong>10%</strong><span class="foot">100 CHF nominal investi</span></div></div><p class="foot">ACTUAL simulé : AAON 40 + GEV 60 + cash 900. Aucun ordre réel.</p></section><section class="p"><h2>5 · Performance ORACLE vs QQQ</h2><div class="kpis"><div class="kpi"><span class="m">Capital de référence</span><strong>1'000 CHF</strong></div><div class="kpi"><span class="m">ORACLE actuel</span><strong>À recalculer</strong><span class="foot">AAON + GEV + cash, valorisés en CHF</span></div><div class="kpi"><span class="m">QQQ benchmark</span><strong>À recalculer</strong><span class="foot">1’000 CHF depuis le 4 septembre</span></div><div class="kpi"><span class="m">Alpha ORACLE</span><strong>À recalculer</strong><span class="foot">ORACLE − QQQ, après conversion USD/CHF</span></div></div><p class="foot">Benchmark de contrôle : portefeuille ORACLE complet contre 1’000 CHF investis dans QQQ. Les chiffres restent volontairement vides tant que les cours et FX du jour ne sont pas validés.</p></section>
-</main><script>function show(id,b){document.querySelectorAll('.board').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active')}</script></body></html>
+<section class="panel">
+<h2>🔥 Billboard des trends</h2>
+<div class="muted small" style="margin-bottom:10px">Clique un trend pour comprendre la thèse et voir ses 20 sociétés. La largeur de marché mesure la part des sociétés en hausse sur 1 mois.</div>
+<div class="trend-grid" id="trends"></div>
+</section>
+
+<section class="panel" id="trendDetail">
+<h2 id="detailTitle">Trend</h2>
+<div class="detail-head">
+<div class="detail-box"><span class="muted small">Pourquoi ce trend compte</span><div id="detailSummary" style="margin-top:5px"></div></div>
+<div class="detail-box"><span class="muted small">Perf. médiane 1M</span><strong id="detailMedian">—</strong></div>
+<div class="detail-box"><span class="muted small">Largeur positive 1M</span><strong id="detailBreadth">—</strong></div>
+</div>
+<div class="scroll"><table>
+<thead><tr><th>#</th><th>Société</th><th>Rôle ORACLE</th><th>Signal</th><th>Cours</th><th>J-1</th><th>1 sem.</th><th>1 mois</th><th>vs QQQ 1M</th><th>Preuve</th></tr></thead>
+<tbody id="companies"></tbody>
+</table></div>
+</section>
+
+<section class="panel">
+<h2>💼 Simulation portefeuille ORACLE</h2>
+<div class="port-grid">
+<div class="scroll"><table style="min-width:700px"><thead><tr><th>Position</th><th>Investi</th><th>Entrée</th><th>Valeur</th><th>P&L CHF</th><th>P&L %</th><th>QQQ apparié</th></tr></thead><tbody id="portfolioRows"></tbody></table></div>
+<div>
+<div class="compare" id="portfolioCompare"></div>
+<div class="muted tiny" style="margin-top:9px">Comparaison officielle : chaque tranche réellement investie par ORACLE est comparée à la même somme investie dans QQQ à la même date. Le cash non investi est montré dans la valeur totale mais exclu de l'alpha officiel.</div>
+</div>
+</div>
+</section>
+
+<section class="panel">
+<h2>🔬 Discovery scout</h2>
+<div class="muted small" id="discovery"></div>
+</section>
+
+<div class="footer">ORACLE est un système de recherche et de simulation. Aucun ordre réel n'est exécuté depuis ce cockpit.</div>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const cls=v=>v==null?'neu':v>0?'pos':v<0?'neg':'neu';
+const pct=v=>v==null?'—':`${v>=0?'+':''}${v.toFixed(2)}%`;
+const chf=v=>v==null?'—':new Intl.NumberFormat('fr-CH',{style:'currency',currency:'CHF',maximumFractionDigits:2}).format(v);
+const usd=v=>v==null?'—':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(v);
+const signalBadge=s=>`<span class="badge ${(s||'').toLowerCase()}">● ${s||'—'}</span>`;
+let DATA=null, selected=null;
+
+function headline(){
+ const p=DATA.portfolio||{}, c=p.official_comparison||{};
+ const greens=(DATA.action_now||[]).filter(x=>x.signal==='GREEN').length;
+ $('headline').innerHTML=[
+   ['ORACLE investi',pct(c.oracle_return_pct),`${chf(c.oracle_value_chf)} sur ${chf(c.capital_compared_chf)}`,cls(c.oracle_return_pct)],
+   ['QQQ apparié',pct(c.qqq_return_pct),`${chf(c.qqq_matched_value_chf)}`,cls(c.qqq_return_pct)],
+   ['Alpha ORACLE',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,'vs QQQ, mêmes dates',cls(c.alpha_pct_points)],
+   ['Signaux GREEN',String(greens),'opportunités validées maintenant',greens?'pos':'neu']
+ ].map(x=>`<div class="kpi"><span>${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><em>${x[2]}</em></div>`).join('');
+}
+
+function actions(){
+ const a=(DATA.action_now||[]).slice(0,9);
+ $('actions').innerHTML=a.length?a.map(x=>`<div class="action ${x.signal==='GREEN'?'green-card':''}">
+   <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div><div class="ticker">${x.ticker}</div><div class="muted small">${x.company}</div></div>${signalBadge(x.signal)}</div>
+   <div class="small" style="margin-top:8px">${x.trend}</div>
+   <div class="muted tiny" style="margin-top:4px;white-space:normal">${x.signal_reason||''}</div>
+   <div class="metrics">
+    <div class="metric"><span>J-1</span><b class="${cls(x.d1)}">${pct(x.d1)}</b></div>
+    <div class="metric"><span>1 sem.</span><b class="${cls(x.w1)}">${pct(x.w1)}</b></div>
+    <div class="metric"><span>1 mois</span><b class="${cls(x.m1)}">${pct(x.m1)}</b></div>
+    <div class="metric"><span>vs QQQ</span><b class="${cls(x.rel_m1_qqq)}">${pct(x.rel_m1_qqq)}</b></div>
+   </div></div>`).join(''):'<div class="muted">Aucun signal investissable validé.</div>';
+}
+
+function trends(){
+ const ts=DATA.trends||[];
+ $('trends').innerHTML=ts.map(t=>{
+   const d=t.rank_delta;
+   const delta=d==null?'—':d>0?`▲ ${d}`:d<0?`▼ ${Math.abs(d)}`:'→';
+   return `<button class="trend ${selected===t.key?'active':''}" onclick="selectTrend('${t.key}')">
+    <div style="display:flex;justify-content:space-between"><span class="trend-rank">#${t.rank||'—'} · ${delta}</span><span class="state ${t.state==='RISING'?'pos':t.state==='FALLING'?'neg':'neu'}">${t.state}</span></div>
+    <div class="trend-name">${t.label}</div>
+    <div class="trend-market"><span>1M méd. <b class="${cls(t.market.median_1m_pct)}">${pct(t.market.median_1m_pct)}</b></span><span>largeur <b>${t.market.breadth_positive_1m_pct==null?'—':t.market.breadth_positive_1m_pct.toFixed(0)+'%'}</b></span></div>
+   </button>`;
+ }).join('');
+}
+
+window.selectTrend=function(key){
+ selected=key; trends();
+ const t=(DATA.trends||[]).find(x=>x.key===key); if(!t)return;
+ $('detailTitle').textContent=`#${t.rank} · ${t.label}`;
+ $('detailSummary').textContent=t.summary||'—';
+ $('detailMedian').textContent=pct(t.market.median_1m_pct); $('detailMedian').className=cls(t.market.median_1m_pct);
+ $('detailBreadth').textContent=t.market.breadth_positive_1m_pct==null?'—':t.market.breadth_positive_1m_pct.toFixed(0)+'%';
+ $('companies').innerHTML=(t.companies||[]).map(c=>`<tr>
+  <td><b>#${c.rank}</b></td><td><b>${c.ticker}</b><br><span class="muted tiny">${c.company}</span></td>
+  <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${usd(c.price)}</td>
+  <td class="${cls(c.d1)}">${pct(c.d1)}</td><td class="${cls(c.w1)}">${pct(c.w1)}</td><td class="${cls(c.m1)}">${pct(c.m1)}</td>
+  <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}</td></tr>`).join('');
+}
+
+function portfolio(){
+ const p=DATA.portfolio||{}, c=p.official_comparison||{};
+ $('portfolioRows').innerHTML=(p.positions||[]).map(x=>`<tr><td><b>${x.ticker}</b><br><span class="muted tiny">${x.trade_date}</span></td><td>${chf(x.allocated_chf)}</td><td>${usd(x.entry_price_usd)}</td><td>${chf(x.current_value_chf)}</td><td class="${cls(x.pnl_chf)}">${x.pnl_chf==null?'—':chf(x.pnl_chf)}</td><td class="${cls(x.pnl_pct)}">${pct(x.pnl_pct)}</td><td>${chf(x.matched_qqq_chf)}</td></tr>`).join('');
+ $('portfolioCompare').innerHTML=[
+  ['Valeur totale',chf(p.total_value_chf),`cash ${chf(p.cash_chf)}`,cls(p.total_return_pct)],
+  ['Perf. ORACLE',pct(c.oracle_return_pct),'capital investi',cls(c.oracle_return_pct)],
+  ['Perf. QQQ',pct(c.qqq_return_pct),'tranches appariées',cls(c.qqq_return_pct)],
+  ['Alpha',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,'ORACLE − QQQ',cls(c.alpha_pct_points)],
+  ['Cash',chf(p.cash_chf),'hors alpha officiel','neu'],
+  ['Capital comparé',chf(c.capital_compared_chf),'mêmes dates','neu']
+ ].map(x=>`<div class="box"><span class="muted tiny">${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><span class="muted tiny">${x[2]}</span></div>`).join('');
+}
+
+function discovery(){
+ const d=DATA.discovery||{}, scout=d.scout_candidates_passing_coverage||[];
+ $('discovery').innerHTML=`Qualité Discovery : <b class="${d.quality==='OK'?'pos':'neg'}">${d.quality||'—'}</b> · ${d.unique_papers??'—'} publications uniques · ${d.recent_docs??'—'} récentes · ${d.baseline_docs??'—'} baseline. `+
+ (scout.length?`Nouveaux candidats ayant franchi le coverage gate : ${scout.map(x=>'<b>'+x.term+'</b>').join(', ')}.`:'Aucun nouveau trend n’a encore franchi seul le Source Coverage Gate : il reste donc hors Billboard.');
+}
+
+fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
+ DATA=d; selected=(d.trends&&d.trends[0]&&d.trends[0].key)||null;
+ $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${d.market_generated_at?new Date(d.market_generated_at).toLocaleString('fr-CH'):'—'}`;
+ headline(); actions(); trends(); selectTrend(selected); portfolio(); discovery();
+}).catch(e=>{$('stamp').textContent='Données indisponibles';$('headline').innerHTML=`<div class="error">Le cockpit n’a pas pu charger data/cockpit.json : ${e.message}</div>`;});
+</script>
+</body>
+</html>
