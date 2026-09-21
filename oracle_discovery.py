@@ -10,7 +10,7 @@ from datetime import datetime,timezone,timedelta
 SRC=Path("data/source_snapshots"); OUT=Path("data/discovery-candidates.json")
 RECENT_DAYS=14; BASELINE_DAYS=90
 STOP=set("""the a an and or of to in for on with by from is are as at using based via towards toward new we our this that these those be can
-while which without but into over only across present show introduce than then also such have has had their its it they them were was been being
+while which without but into over only across present show introduce than then also such have has had their its it they them were was been being github https available page code project extensive experiments compared percentage points remains challenging success rate upper bound substantially improve achieves highest consistently outperforms provide limited publicly existing typically often struggle same time real world
 model models method methods framework approach approaches results result study studies paper work task tasks data system systems learning
 training performance proposed propose demonstrate shows use used through between under where when how what who why more most less each both
 all any some many may might could would should do does did done not no yes
@@ -67,6 +67,8 @@ for d in unique.values():
     for n in (2,3):
         grams.update(" ".join(ts[i:i+n]) for i in range(len(ts)-n+1))
     for g in grams:
+        if any(x in g.split() for x in ("github","https")): continue
+        if len(set(g.split())) < len(g.split()): continue
         bucket[g]+=1
         if len(examples[g])<3: examples[g].append(d.get("title",""))
 
