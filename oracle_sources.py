@@ -57,13 +57,16 @@ def discovery_keywords(limit=8):
     if not p.exists(): return []
     try: data=json.loads(p.read_text())
     except Exception: return []
-    bad={"large language","neural network","natural language","real world","same time","object detection"}
+    bad={"large language","neural network","natural language","real world","same time","object detection","about god","reduces mean","mean absolute","upper bound","publicly available"}
+    tech={"agent","agents","robot","robotics","llm","language","vision","action","autonomous","quantum","photonic","photonics","optical","energy","power","grid","battery","semiconductor","network","satellite","drone","uas","lidar","sensor","sensing","compute","chip","gpu","memory","cooling","nuclear","mineral","minerals","magnet","rare","copper","tungsten","laser","interconnect","wireless","cyber","manufacturing"}
     out=[]
-    for c in data.get("candidates",[]):
-        term=(c.get("term") or "").strip().lower()
+    for row in data.get("candidates",[]):
+        term=(row.get("term") or "").strip().lower()
+        toks=set(re.findall(r"[a-z0-9-]+",term))
         if not term or term in bad: continue
-        if c.get("recent_docs",0)<3: continue
-        if any(x in term for x in ("github","https","chapter ","percentage points")): continue
+        if row.get("recent_docs",0)<3: continue
+        if any(x in term for x in ("github","https","chapter ","percentage points","psalms","cancer","education")): continue
+        if not (toks & tech): continue
         out.append(term)
         if len(out)>=limit: break
     return out
