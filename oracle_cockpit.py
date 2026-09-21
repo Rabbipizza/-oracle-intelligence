@@ -30,7 +30,7 @@ def close_on_or_before(rows,date):
 
 def latest_metrics(rows, benchmark_rows=None):
     if not rows:
-        return {"date":None,"price":None,"d1":None,"w1":None,"m1":None,"rel_m1_qqq":None}
+        return {"date":None,"price":None,"d1":None,"w1":None,"m1":None,"rel_m1_qqq":None,"spark":[]}
     latest=rows[-1]
     price=latest["close"]
     d1=pct(price,rows[-2]["close"]) if len(rows)>=2 else None
@@ -40,7 +40,10 @@ def latest_metrics(rows, benchmark_rows=None):
     if benchmark_rows and len(benchmark_rows)>=22 and m1 is not None:
         q=pct(benchmark_rows[-1]["close"],benchmark_rows[-22]["close"])
         if q is not None: rel=m1-q
-    return {"date":latest["date"],"price":roundn(price,4),"d1":roundn(d1),"w1":roundn(w1),"m1":roundn(m1),"rel_m1_qqq":roundn(rel)}
+    tail=[r["close"] for r in rows[-22:]]
+    base=tail[0] if tail else None
+    spark=[roundn(v/base*100,2) for v in tail] if base else []
+    return {"date":latest["date"],"price":roundn(price,4),"d1":roundn(d1),"w1":roundn(w1),"m1":roundn(m1),"rel_m1_qqq":roundn(rel),"spark":spark}
 
 def fx_on_or_before(fx,date):
     vals=[r for r in fx if r.get("date","")<=date and isinstance(r.get("chf_per_usd"),(int,float))]
@@ -136,10 +139,12 @@ def main():
             if metrics["m1"] is not None:
                 available+=1; m1s.append(metrics["m1"])
                 if metrics["m1"]>0: positive+=1
+            md=market.get("prices",{}).get(ticker) or {}
             c={"rank":i,"ticker":ticker,"company":name,"role":role,"proof":proof,
-               "signal":sig,"signal_reason":reason,**metrics}
+               "signal":sig,"signal_reason":reason,
+               "currency":md.get("currency"),"exchange":md.get("exchange"),**metrics}
             companies.append(c)
-            all_companies.append({**c,"trend_key":key,"trend":tr.get("label")})
+            all_companies.append({**c,"trend_key":key,"trend":tr.get("label"),"trend_rank":ds.get("rank")})
         trends.append({
             "key":key,"label":tr.get("label"),"rank":ds.get("rank"),
             "previous_rank":ds.get("previous_rank"),"rank_delta":rank_delta(ds.get("rank"),ds.get("previous_rank")),
@@ -156,7 +161,9 @@ def main():
         if c["signal"] in ("GREEN","ORANGE"):
             action.append(c)
     order={"GREEN":0,"ORANGE":1,"RED":2}
-    action.sort(key=lambda c:(order.get(c["signal"],9),-(c["rel_m1_qqq"] if c["rel_m1_qqq"] is not None else -999)))
+    # Never turn short-term momentum into an implicit recommendation.
+    # GREEN comes first; ORANGE is a watchlist ordered by validated trend/company rank.
+    action.sort(key=lambda c:(order.get(c["signal"],9),c.get("trend_rank") or 999,c.get("rank") or 999))
     action=action[:12]
 
     discovery=load("data/discovery-candidates.json")
