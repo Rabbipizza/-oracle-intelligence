@@ -18,7 +18,7 @@ h2{font-size:18px;margin:0 0 12px}h3{margin:0 0 6px;font-size:15px}.muted{color:
 .detail-head{display:grid;grid-template-columns:1.8fr .7fr .7fr;gap:10px;margin-bottom:12px}.detail-box{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px}.detail-box strong{font-size:19px;display:block;margin-top:3px}
 .scroll{overflow:auto;border:1px solid var(--line);border-radius:11px}table{width:100%;border-collapse:collapse;font-size:12px;min-width:1050px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{position:sticky;top:0;background:#102018;color:var(--muted);z-index:1;font-size:11px}tr:hover td{background:#0f1d16}.role{max-width:250px;overflow:hidden;text-overflow:ellipsis}
 .port-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.compare .box{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:12px}.compare strong{display:block;font-size:21px;margin-top:4px}
-.footer{color:var(--muted);font-size:11px;text-align:center;padding:8px}.error{padding:14px;border:1px solid #704040;background:#231313;border-radius:10px;color:#ffc4c4}
+.spark{display:inline-block;width:84px;height:28px;vertical-align:middle}.decision-title{font-size:12px;font-weight:900;margin:10px 0 8px}.decision-title:first-child{margin-top:0}.footer{color:var(--muted);font-size:11px;text-align:center;padding:8px}.error{padding:14px;border:1px solid #704040;background:#231313;border-radius:10px;color:#ffc4c4}
 button{font:inherit}
 @media(max-width:1050px){.trend-grid{grid-template-columns:repeat(2,1fr)}.action-grid{grid-template-columns:1fr 1fr}.port-grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.wrap{padding:10px}header{display:block}.stamp{text-align:left;margin-top:8px}.kpis,.action-grid,.trend-grid,.metrics,.detail-head,.compare{grid-template-columns:1fr 1fr}.brand h1{font-size:25px}.kpi strong{font-size:20px}.trend-name{min-height:0}}
@@ -39,9 +39,9 @@ button{font:inherit}
 </section>
 
 <section class="panel">
-<h2>🎯 Action maintenant</h2>
-<div class="muted small" style="margin-bottom:10px">GREEN = critères ORACLE d'entrée validés. ORANGE = thèse crédible mais gate encore ouvert. RED = pas d'entrée.</div>
-<div class="action-grid" id="actions"></div>
+<h2>🎯 Décision ORACLE</h2>
+<div class="muted small" style="margin-bottom:10px">GREEN = entrée admissible selon la méthode ORACLE. ORANGE = watchlist : ne pas confondre avec une recommandation d’entrée. RED = critères non passés.</div>
+<div id="actions"></div>
 </section>
 
 <section class="panel">
@@ -58,7 +58,7 @@ button{font:inherit}
 <div class="detail-box"><span class="muted small">Largeur positive 1M</span><strong id="detailBreadth">—</strong></div>
 </div>
 <div class="scroll"><table>
-<thead><tr><th>#</th><th>Société</th><th>Rôle ORACLE</th><th>Signal</th><th>Cours</th><th>J-1</th><th>1 sem.</th><th>1 mois</th><th>vs QQQ 1M</th><th>Preuve</th></tr></thead>
+<thead><tr><th>#</th><th>Société</th><th>Rôle ORACLE</th><th>Signal</th><th>Cours</th><th>Courbe 1M</th><th>J-1</th><th>1 sem.</th><th>1 mois</th><th>vs QQQ 1M</th><th>Preuve</th></tr></thead>
 <tbody id="companies"></tbody>
 </table></div>
 </section>
@@ -88,6 +88,8 @@ const cls=v=>v==null?'neu':v>0?'pos':v<0?'neg':'neu';
 const pct=v=>v==null?'—':`${v>=0?'+':''}${v.toFixed(2)}%`;
 const chf=v=>v==null?'—':new Intl.NumberFormat('fr-CH',{style:'currency',currency:'CHF',maximumFractionDigits:2}).format(v);
 const usd=v=>v==null?'—':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(v);
+const money=(v,c='USD')=>{if(v==null)return '—';try{return new Intl.NumberFormat('fr-CH',{style:'currency',currency:c||'USD',maximumFractionDigits:2}).format(v)}catch(e){return v.toFixed(2)+' '+(c||'')}};
+const sparkline=a=>{if(!a||a.length<2)return '—';const mn=Math.min(...a),mx=Math.max(...a),span=(mx-mn)||1;const pts=a.map((v,i)=>`${(i/(a.length-1)*82+1).toFixed(1)},${(26-(v-mn)/span*24).toFixed(1)}`).join(' ');return `<span class="${cls(a[a.length-1]-a[0])}"><svg class="spark" viewBox="0 0 84 28" aria-label="évolution 1 mois"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></span>`};
 const signalBadge=s=>`<span class="badge ${(s||'').toLowerCase()}">● ${s||'—'}</span>`;
 let DATA=null, selected=null;
 
@@ -102,9 +104,8 @@ function headline(){
  ].map(x=>`<div class="kpi"><span>${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><em>${x[2]}</em></div>`).join('');
 }
 
-function actions(){
- const a=(DATA.action_now||[]).slice(0,9);
- $('actions').innerHTML=a.length?a.map(x=>`<div class="action ${x.signal==='GREEN'?'green-card':''}">
+function actionCard(x){
+ return `<div class="action ${x.signal==='GREEN'?'green-card':''}">
    <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div><div class="ticker">${x.ticker}</div><div class="muted small">${x.company}</div></div>${signalBadge(x.signal)}</div>
    <div class="small" style="margin-top:8px">${x.trend}</div>
    <div class="muted tiny" style="margin-top:4px;white-space:normal">${x.signal_reason||''}</div>
@@ -113,7 +114,17 @@ function actions(){
     <div class="metric"><span>1 sem.</span><b class="${cls(x.w1)}">${pct(x.w1)}</b></div>
     <div class="metric"><span>1 mois</span><b class="${cls(x.m1)}">${pct(x.m1)}</b></div>
     <div class="metric"><span>vs QQQ</span><b class="${cls(x.rel_m1_qqq)}">${pct(x.rel_m1_qqq)}</b></div>
-   </div></div>`).join(''):'<div class="muted">Aucun signal investissable validé.</div>';
+   </div></div>`;
+}
+function actions(){
+ const a=(DATA.action_now||[]);
+ const green=a.filter(x=>x.signal==='GREEN');
+ const orange=a.filter(x=>x.signal==='ORANGE').slice(0,8);
+ $('actions').innerHTML=
+   '<div class="decision-title pos">● INVESTISSABLE SELON ORACLE</div>'+
+   (green.length?'<div class="action-grid">'+green.map(actionCard).join('')+'</div>':'<div class="muted small">Aucune entrée GREEN actuellement.</div>')+
+   '<div class="decision-title orange">● WATCHLIST — ATTENDRE LES GATES</div>'+
+   (orange.length?'<div class="action-grid">'+orange.map(actionCard).join('')+'</div>':'<div class="muted small">Watchlist vide.</div>');
 }
 
 function trends(){
@@ -138,7 +149,7 @@ window.selectTrend=function(key){
  $('detailBreadth').textContent=t.market.breadth_positive_1m_pct==null?'—':t.market.breadth_positive_1m_pct.toFixed(0)+'%';
  $('companies').innerHTML=(t.companies||[]).map(c=>`<tr>
   <td><b>#${c.rank}</b></td><td><b>${c.ticker}</b><br><span class="muted tiny">${c.company}</span></td>
-  <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${usd(c.price)}</td>
+  <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${money(c.price,c.currency)}</td><td>${sparkline(c.spark)}</td>
   <td class="${cls(c.d1)}">${pct(c.d1)}</td><td class="${cls(c.w1)}">${pct(c.w1)}</td><td class="${cls(c.m1)}">${pct(c.m1)}</td>
   <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}</td></tr>`).join('');
 }
