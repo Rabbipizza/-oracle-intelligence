@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "family": "industry_contracts",
+    "source": "USAspending",
+    "primary": true,
+    "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+    "fetched_at": "20260921T215733Z"
+  },
+  "data": {
+    "spending_level": "awards",
+    "limit": 100,
+    "results": [
+      {
+        "internal_id": 349919453,
+        "Award ID": "W912HZ25C0019",
+        "Recipient Name": "SMI SOLUTIONS, INC.",
+        "Award Amount": 1597813.07,
+        "Description": "DEMONSTRATION OF IDENTIFICATION AND EXPLOITATION OF SOURCES OF EXHAUST FILTRATION MEDIA TO ADVANCE THE STATE-OF-THE-ART IN EXTRACTION AND RECOVERY OF RARE EARTH ELEMENTS FROM COMPLEX ENVIRONMENTAL MEDIA U433D30",
+        "generated_internal_id": "CONT_AWD_W912HZ25C0019_9700_-NONE-_-NONE-"
+      },
+      {
+        "internal_id": 358648412,
+        "Award ID": "SPE8EL26FH0MU",
+        "Recipient Name": "SUPPLYCORE LLC",
+        "Award Amount": 5816.12,
+        "Description": "4570935070!RARE EARTH MAGNET",
+        "generated_internal_id": "CONT_AWD_SPE8EL26FH0MU_9700_SPE8EJ21D0023_9700"
+      },
+      {
+        "internal_id": 361129493,
+        "Award ID": "SP470126C0071",
+        "Recipient Name": "THE CHEMOURS CO FC LLC",
+        "Award Amount": 4500000.0,
+        "Description": "RECOVERY OF SCANDIUM (SC), VANADIUM (V), AND MIXED RARE EARTH ELEMENTS (MREES) FROM THE METAL CHLORIDE CO-PRODUCT OF CHLORIDE PROCESS TITANIUM DIOXIDE (TIO2) PRODUCTION",
+        "generated_internal_id": "CONT_AWD_SP470126C0071_9700_-NONE-_-NONE-"
+      },
+      {
+        "internal_id": 312920415,
+        "Award ID": "SP470125C0073",
+        "Recipient Name": "TUSAAR CORP",
+        "Award Amount": 3996218.0,
+        "Description": "SCALE-UP AND COMMERCIALIZATION OF RARE EARTH SEPARATION FROM MINING WASTES USING CHROMATOGRAPHY - SMALL BUSINESS INNOVATIVE RESEARCH (SBIR) II",
+        "generated_internal_id": "CONT_AWD_SP470125C0073_9700_-NONE-_-NONE-"
+      },
+      {
+        "internal_id": 295475802,
+        "Award ID": "DEAC0207CH11358",
+        "Recipient Name": "IOWA STATE UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+        "Award Amount": 1133186331.26,
+        "Description": "MULTI-PROGRAM NATIONAL PHYSICAL RESEARCH INCLUDING RARE EARTHS AND USE OF AMES MPC.",
+        "generated_internal_id": "CONT_AWD_DEAC0207CH11358_8900_-NONE-_-NONE-"
+      },
+      {
+        "internal_id": 291848714,
+        "Award ID": "80NSSC25C0394",
+        "Recipient Name": "VESCENT TECHNOLOGIES INC.",
+        "Award Amount": 149931.0,
+        "Description": "STTR PHASE I 80NSSC25C0394 RARE EARTH AMPLIFIER CHIPS (REACH)",
+        "generated_internal_id": "CONT_AWD_80NSSC25C0394_8000_-NONE-_-NONE-"
+      },
+      {
+        "internal_id": 360817562,
+        "Award ID": "47QSCC26F5PA8",
+        "Recipient Name": "MSC INDUSTRIAL DIRECT CO., INC.",
+        "Award Amount": 1144.14,
+        "Description": "4X6'RARE EARTH WHT HARMONY GLASS BOARD",
+        "generated_internal_id": "CONT_AWD_47QSCC26F5PA8_4732_47QSCC21A0004_4732"
+      },
+      {
+        "internal_id": 357438581,
+        "Award ID": "47QSCC26F3VBP",
+        "Recipient Name": "THE LIGHTHOUSE FOR THE BLIND, INCORPORATED",
+        "Award Amount": 2138.94,
+        "Description": "PNL0250 RARE EARTH LIFT MAGNET",
+        "generated_internal_id": "CONT_AWD_47QSCC26F3VBP_4732_GS23FGA014_4732"
+      },
+      {
+        "internal_id": 278996181,
+        "Award ID": "2023H225P00324",
+        "Recipient Name": "RARE EARTH SCIENCE, LLC",
+        "Award Amount": 0.0,
+        "Description": "EXPERT WITNESS SERVICES BIOLOGIST/ENVIRONMENTAL SERVICES TRACS0003890",
+        "generated_internal_id": "CONT_AWD_2023H225P00324_2050_-NONE-_-NONE-"
+      }
+    ],
+    "page_metadata": {
+      "page": 1,
+      "hasNext": false,
+      "last_record_unique_id": null,
+      "last_record_sort_value": "None"
+    },
+    "messages": [
+      "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. "
+    ]
+  }
+}

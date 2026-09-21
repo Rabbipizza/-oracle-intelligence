@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T21:56:34.509793+00:00",
+  "generated_at": "2026-09-21T22:00:56.168437+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "primary_snapshot_count": 56
+    "primary_snapshot_count": 62
   },
   "candidate_gates": [
     {
@@ -253,7 +253,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "absolute error",
+      "term": "mean absolute error",
       "families": [
         "science"
       ],
@@ -265,7 +265,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "mean absolute error",
+      "term": "absolute error",
       "families": [
         "science"
       ],
@@ -368,7 +368,7 @@
         "science"
       ],
       "family_count": 3,
-      "primary_snapshots": 23,
+      "primary_snapshots": 25,
       "coverage_gate_pass": true,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -381,7 +381,7 @@
         "science"
       ],
       "family_count": 2,
-      "primary_snapshots": 9,
+      "primary_snapshots": 10,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -400,7 +400,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "maritime english",
+      "term": "maritime english education",
       "families": [
         "science"
       ],
@@ -412,7 +412,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "maritime english education",
+      "term": "maritime english",
       "families": [
         "science"
       ],
@@ -448,24 +448,12 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "difficulty psalms offer",
+      "term": "difficulty psalms",
       "families": [
         "science"
       ],
       "family_count": 1,
       "primary_snapshots": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "times difficulty",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 2,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -496,12 +484,24 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "difficulty psalms",
+      "term": "difficulty psalms offer",
       "families": [
         "science"
       ],
       "family_count": 1,
       "primary_snapshots": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "times difficulty",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 2,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -544,25 +544,25 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "state estimation",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 6,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "risk assessment",
       "families": [
         "company",
         "science"
       ],
       "family_count": 2,
-      "primary_snapshots": 14,
+      "primary_snapshots": 15,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "state estimation",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 6,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -629,6 +629,30 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "monte carlo",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 4,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "benchmark evaluating",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 6,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "enabling direct",
       "families": [
         "science"
@@ -653,42 +677,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "benchmark evaluating",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 6,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "monte carlo",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 4,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "real-world manipulation",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 6,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "flow matching",
       "families": [
         "science"
@@ -701,24 +689,12 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "convolutional neural network",
+      "term": "real-world manipulation",
       "families": [
         "science"
       ],
       "family_count": 1,
-      "primary_snapshots": 5,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "neural network cnn",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "primary_snapshots": 4,
+      "primary_snapshots": 6,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -749,7 +725,31 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "latent representations",
+      "term": "neural network cnn",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 4,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "convolutional neural network",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "primary_snapshots": 5,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "future visual",
       "families": [
         "science"
       ],
@@ -761,7 +761,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "future visual",
+      "term": "latent representations",
       "families": [
         "science"
       ],
@@ -797,24 +797,24 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "adding parameters",
+      "term": "supervised fine-tuning sft",
       "families": [
         "science"
       ],
       "family_count": 1,
-      "primary_snapshots": 6,
+      "primary_snapshots": 5,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "fine-tuning sft",
+      "term": "adding parameters",
       "families": [
         "science"
       ],
       "family_count": 1,
-      "primary_snapshots": 5,
+      "primary_snapshots": 6,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -833,7 +833,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "supervised fine-tuning sft",
+      "term": "fine-tuning sft",
       "families": [
         "science"
       ],
@@ -959,7 +959,7 @@
         "science"
       ],
       "family_count": 2,
-      "primary_snapshots": 15,
+      "primary_snapshots": 16,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1033,7 +1033,7 @@
         "science"
       ],
       "family_count": 3,
-      "primary_snapshots": 20,
+      "primary_snapshots": 21,
       "coverage_gate_pass": true,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",

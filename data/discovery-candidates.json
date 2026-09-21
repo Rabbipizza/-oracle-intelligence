@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T21:56:32.620078+00:00",
+  "generated_at": "2026-09-21T22:00:54.579180+00:00",
   "method": "v2 deduplicated 2-3gram document-frequency acceleration; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 1705,
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "term": "absolute error",
+      "term": "mean absolute error",
       "recent_docs": 4,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "term": "mean absolute error",
+      "term": "absolute error",
       "recent_docs": 4,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -455,7 +455,7 @@
       ]
     },
     {
-      "term": "maritime english",
+      "term": "maritime english education",
       "recent_docs": 4,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -469,7 +469,7 @@
       ]
     },
     {
-      "term": "maritime english education",
+      "term": "maritime english",
       "recent_docs": 4,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -511,21 +511,7 @@
       ]
     },
     {
-      "term": "difficulty psalms offer",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "times difficulty",
+      "term": "difficulty psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -567,7 +553,21 @@
       ]
     },
     {
-      "term": "difficulty psalms",
+      "term": "difficulty psalms offer",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
+        "In Times of Difficulty the Psalms Offer Images of Justice",
+        "In Times of Difficulty the Psalms Offer Permission to Grieve"
+      ]
+    },
+    {
+      "term": "times difficulty",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -623,20 +623,6 @@
       ]
     },
     {
-      "term": "state estimation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
-        "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
-        "Bayesian Continuum Robot Dynamics and State Estimation"
-      ]
-    },
-    {
       "term": "risk assessment",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -648,6 +634,20 @@
         "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
         "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV",
         "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV"
+      ]
+    },
+    {
+      "term": "state estimation",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
+        "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
+        "Bayesian Continuum Robot Dynamics and State Estimation"
       ]
     },
     {
@@ -721,6 +721,34 @@
       ]
     },
     {
+      "term": "monte carlo",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "Stable Movement for Nondual Lipschitz Convex Optimization: Efficiency and Nearly Optimal Oracle Rates",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "benchmark evaluating",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
+        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+      ]
+    },
+    {
       "term": "enabling direct",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -749,48 +777,6 @@
       ]
     },
     {
-      "term": "benchmark evaluating",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
-        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
-      ]
-    },
-    {
-      "term": "monte carlo",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "Stable Movement for Nondual Lipschitz Convex Optimization: Efficiency and Nearly Optimal Oracle Rates",
-        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
-      ]
-    },
-    {
-      "term": "real-world manipulation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
-      ]
-    },
-    {
       "term": "flow matching",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -805,7 +791,7 @@
       ]
     },
     {
-      "term": "convolutional neural network",
+      "term": "real-world manipulation",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -813,23 +799,9 @@
       "acceleration": 5.44,
       "discovery_score": 5.4923,
       "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
-      ]
-    },
-    {
-      "term": "neural network cnn",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
       ]
     },
     {
@@ -861,7 +833,7 @@
       ]
     },
     {
-      "term": "latent representations",
+      "term": "neural network cnn",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
@@ -869,9 +841,23 @@
       "acceleration": 5.44,
       "discovery_score": 5.4923,
       "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
-        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "convolutional neural network",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
       ]
     },
     {
@@ -886,6 +872,20 @@
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models"
+      ]
+    },
+    {
+      "term": "latent representations",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
+        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
       ]
     },
     {
@@ -917,6 +917,20 @@
       ]
     },
     {
+      "term": "supervised fine-tuning sft",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 663,
+      "baseline_corpus_docs": 515,
+      "acceleration": 5.44,
+      "discovery_score": 5.4923,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
       "term": "adding parameters",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -928,20 +942,6 @@
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
         "Relational Attention for Data-Efficient Language Modeling",
         "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
-      ]
-    },
-    {
-      "term": "fine-tuning sft",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 663,
-      "baseline_corpus_docs": 515,
-      "acceleration": 5.44,
-      "discovery_score": 5.4923,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
       ]
     },
     {
@@ -959,7 +959,7 @@
       ]
     },
     {
-      "term": "supervised fine-tuning sft",
+      "term": "fine-tuning sft",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 663,
