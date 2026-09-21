@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T22:12:52.291595+00:00",
+  "generated_at": "2026-09-21T22:17:24.392859+00:00",
   "method": "v2 deduplicated 2-3gram document-frequency acceleration; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 2407,
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "term": "large language llms",
+      "term": "language llms",
       "recent_docs": 7,
       "baseline_docs": 2,
       "recent_corpus_docs": 749,
@@ -147,7 +147,7 @@
       ]
     },
     {
-      "term": "language llms",
+      "term": "large language llms",
       "recent_docs": 7,
       "baseline_docs": 2,
       "recent_corpus_docs": 749,
@@ -413,20 +413,6 @@
       ]
     },
     {
-      "term": "difficulty psalms",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 749,
-      "baseline_corpus_docs": 1092,
-      "acceleration": 10.201,
-      "discovery_score": 6.7031,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
       "term": "times difficulty psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -455,7 +441,7 @@
       ]
     },
     {
-      "term": "times difficulty",
+      "term": "difficulty psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -483,6 +469,20 @@
       ]
     },
     {
+      "term": "times difficulty",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 749,
+      "baseline_corpus_docs": 1092,
+      "acceleration": 10.201,
+      "discovery_score": 6.7031,
+      "examples": [
+        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
+        "In Times of Difficulty the Psalms Offer Images of Justice",
+        "In Times of Difficulty the Psalms Offer Permission to Grieve"
+      ]
+    },
+    {
       "term": "worship psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -497,7 +497,7 @@
       ]
     },
     {
-      "term": "identity about",
+      "term": "identity about god",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -511,7 +511,7 @@
       ]
     },
     {
-      "term": "identity about god",
+      "term": "identity about",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -707,7 +707,7 @@
       ]
     },
     {
-      "term": "network cnn",
+      "term": "neural network cnn",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -721,7 +721,7 @@
       ]
     },
     {
-      "term": "neural network cnn",
+      "term": "network cnn",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -763,7 +763,21 @@
       ]
     },
     {
-      "term": "fine-tuning sft",
+      "term": "adding parameters",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 749,
+      "baseline_corpus_docs": 1092,
+      "acceleration": 10.201,
+      "discovery_score": 6.7031,
+      "examples": [
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Relational Attention for Data-Efficient Language Modeling",
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning sft",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -791,21 +805,7 @@
       ]
     },
     {
-      "term": "adding parameters",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 749,
-      "baseline_corpus_docs": 1092,
-      "acceleration": 10.201,
-      "discovery_score": 6.7031,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Relational Attention for Data-Efficient Language Modeling",
-        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
-      ]
-    },
-    {
-      "term": "supervised fine-tuning sft",
+      "term": "fine-tuning sft",
       "recent_docs": 3,
       "baseline_docs": 0,
       "recent_corpus_docs": 749,
@@ -1057,20 +1057,6 @@
       ]
     },
     {
-      "term": "planning execution",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 749,
-      "baseline_corpus_docs": 1092,
-      "acceleration": 10.201,
-      "discovery_score": 6.7031,
-      "examples": [
-        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
-        "Custom PX4 firmware for autonomous hybrid aerial-marine missions",
-        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
-      ]
-    },
-    {
       "term": "trajectory generation",
       "recent_docs": 3,
       "baseline_docs": 0,
@@ -1082,6 +1068,20 @@
         "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
         "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
         "Walking on the Slope: Stable Bipedal Gaits with Genetic-Algorithm-Optimized Trajectories"
+      ]
+    },
+    {
+      "term": "planning execution",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 749,
+      "baseline_corpus_docs": 1092,
+      "acceleration": 10.201,
+      "discovery_score": 6.7031,
+      "examples": [
+        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
+        "Custom PX4 firmware for autonomous hybrid aerial-marine missions",
+        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
       ]
     },
     {
@@ -1253,7 +1253,7 @@
       ]
     },
     {
-      "term": "large language llm",
+      "term": "language llm",
       "recent_docs": 4,
       "baseline_docs": 1,
       "recent_corpus_docs": 749,
@@ -1267,7 +1267,7 @@
       ]
     },
     {
-      "term": "language llm",
+      "term": "large language llm",
       "recent_docs": 4,
       "baseline_docs": 1,
       "recent_corpus_docs": 749,

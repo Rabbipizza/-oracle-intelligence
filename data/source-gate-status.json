@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T22:13:10.132402+00:00",
+  "generated_at": "2026-09-21T22:17:32.578511+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 12790,
+    "record_count": 14794,
     "primary_origin_count": 1227
   },
   "candidate_gates": [
@@ -161,7 +161,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "large language llms",
+      "term": "language llms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -173,7 +173,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language llms",
+      "term": "large language llms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -475,18 +475,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "difficulty psalms",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "times difficulty psalms",
       "families": [],
       "family_count": 0,
@@ -511,7 +499,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "times difficulty",
+      "term": "difficulty psalms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -539,6 +527,18 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "times difficulty",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "worship psalms",
       "families": [],
       "family_count": 0,
@@ -551,7 +551,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "identity about",
+      "term": "identity about god",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -563,7 +563,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "identity about god",
+      "term": "identity about",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -775,7 +775,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "network cnn",
+      "term": "neural network cnn",
       "families": [
         "science"
       ],
@@ -791,7 +791,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "neural network cnn",
+      "term": "network cnn",
       "families": [
         "science"
       ],
@@ -839,7 +839,19 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "fine-tuning sft",
+      "term": "adding parameters",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "supervised fine-tuning sft",
       "families": [
         "science"
       ],
@@ -871,19 +883,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "adding parameters",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "supervised fine-tuning sft",
+      "term": "fine-tuning sft",
       "families": [
         "science"
       ],
@@ -1168,22 +1168,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "planning execution",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 1,
-      "primary_origin_count": 1,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "trajectory generation",
       "families": [
         "science"
@@ -1194,6 +1178,22 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 3,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "planning execution",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 1,
+      "primary_origin_count": 1,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1382,7 +1382,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "large language llm",
+      "term": "language llm",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1394,7 +1394,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language llm",
+      "term": "large language llm",
       "families": [],
       "family_count": 0,
       "sources": [],

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T22:13:39.974092+00:00",
-  "market_generated_at": "2026-09-21T22:13:10.194417+00:00",
+  "generated_at": "2026-09-21T22:17:48.341760+00:00",
+  "market_generated_at": "2026-09-21T22:17:32.660467+00:00",
   "market_source": {
     "prices": "Yahoo Finance chart EOD",
     "fx": "ECB Data Portal"
@@ -23,9 +23,9 @@
       "state": "RISING",
       "summary": "AI clusters are pushing more bandwidth into optical links and photonic components as electrical interconnects hit power and distance limits.",
       "market": {
-        "median_1m_pct": 2.54,
-        "breadth_positive_1m_pct": 68.42,
-        "priced_companies": 19
+        "median_1m_pct": 3.5,
+        "breadth_positive_1m_pct": 70.0,
+        "priced_companies": 20
       },
       "companies": [
         {
@@ -210,18 +210,18 @@
         },
         {
           "rank": 13,
-          "ticker": "INFN",
-          "company": "Infinera legacy exposure",
-          "role": "UNPROVEN",
-          "proof": null,
-          "signal": "RED",
-          "signal_reason": "Evidence is insufficient for an ORACLE entry.",
-          "date": null,
-          "price": null,
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "rel_m1_qqq": null
+          "ticker": "GLW",
+          "company": "Corning",
+          "role": "Optical fiber / interconnect pick & shovel",
+          "proof": "PARTIAL",
+          "signal": "ORANGE",
+          "signal_reason": "Exposure is credible but at least one evidence or entry gate remains open.",
+          "date": "2026-09-21",
+          "price": 158.98,
+          "d1": 5.89,
+          "w1": 10.71,
+          "m1": 4.97,
+          "rel_m1_qqq": 0.68
         },
         {
           "rank": 14,
@@ -340,8 +340,8 @@
       "summary": "AI data-center demand is colliding with generation, grid, switchgear and cooling constraints.",
       "market": {
         "median_1m_pct": -2.54,
-        "breadth_positive_1m_pct": 33.33,
-        "priced_companies": 18
+        "breadth_positive_1m_pct": 35.0,
+        "priced_companies": 20
       },
       "companies": [
         {
@@ -586,18 +586,18 @@
         },
         {
           "rank": 17,
-          "ticker": "ABB",
+          "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Grid equipment candidate",
           "proof": "PARTIAL",
           "signal": "ORANGE",
           "signal_reason": "Exposure is credible but at least one evidence or entry gate remains open.",
-          "date": null,
-          "price": null,
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "rel_m1_qqq": null
+          "date": "2026-09-18",
+          "price": 80.02,
+          "d1": 0.63,
+          "w1": 1.73,
+          "m1": 0.53,
+          "rel_m1_qqq": -3.77
         },
         {
           "rank": 18,
@@ -616,18 +616,18 @@
         },
         {
           "rank": 19,
-          "ticker": "SMNEY",
+          "ticker": "ENR.DE",
           "company": "Siemens Energy",
           "role": "Generation/grid candidate",
           "proof": "PARTIAL",
           "signal": "ORANGE",
           "signal_reason": "Exposure is credible but at least one evidence or entry gate remains open.",
-          "date": null,
-          "price": null,
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "rel_m1_qqq": null
+          "date": "2026-09-18",
+          "price": 140.2,
+          "d1": -1.13,
+          "w1": -2.81,
+          "m1": -8.11,
+          "rel_m1_qqq": -12.41
         },
         {
           "rank": 20,
@@ -1287,9 +1287,9 @@
       "state": "FALLING",
       "summary": "AI is moving into robots and edge systems, but listed-company economic capture remains early and fragmented.",
       "market": {
-        "median_1m_pct": 0.45,
-        "breadth_positive_1m_pct": 52.63,
-        "priced_companies": 19
+        "median_1m_pct": 0.49,
+        "breadth_positive_1m_pct": 55.0,
+        "priced_companies": 20
       },
       "companies": [
         {
@@ -1579,18 +1579,18 @@
         },
         {
           "rank": 20,
-          "ticker": "ABB",
+          "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Industrial robotics leader candidate",
           "proof": "PARTIAL",
           "signal": "ORANGE",
           "signal_reason": "Exposure is credible but at least one evidence or entry gate remains open.",
-          "date": null,
-          "price": null,
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "rel_m1_qqq": null
+          "date": "2026-09-18",
+          "price": 80.02,
+          "d1": 0.63,
+          "w1": 1.73,
+          "m1": 0.53,
+          "rel_m1_qqq": -3.77
         }
       ]
     }
@@ -1845,18 +1845,5 @@
       }
     ]
   },
-  "market_errors": [
-    {
-      "ticker": "ABB",
-      "error": "<HTTPError 404: 'Not Found'>"
-    },
-    {
-      "ticker": "INFN",
-      "error": "<HTTPError 404: 'Not Found'>"
-    },
-    {
-      "ticker": "SMNEY",
-      "error": "<HTTPError 404: 'Not Found'>"
-    }
-  ]
+  "market_errors": []
 }
