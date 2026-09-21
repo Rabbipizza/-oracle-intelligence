@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "as_of": "2026-09-21",
+  "rule": "Trend ranking and entry signals are separate. A holding never makes a signal GREEN. GREEN means ORACLE entry criteria have been validated; ORANGE means thesis credible but at least one gate remains open; RED means entry criteria are not passed.",
+  "trends": {
+    "photonics": {
+      "rank": 1,
+      "previous_rank": 3,
+      "state": "RISING",
+      "summary": "AI clusters are pushing more bandwidth into optical links and photonic components as electrical interconnects hit power and distance limits."
+    },
+    "power": {
+      "rank": 2,
+      "previous_rank": 1,
+      "state": "STABLE",
+      "summary": "AI data-center demand is colliding with generation, grid, switchgear and cooling constraints."
+    },
+    "minerals": {
+      "rank": 3,
+      "previous_rank": 2,
+      "state": "STABLE",
+      "summary": "Supply-chain security is accelerating ex-China mining, separation, refining and magnet capacity."
+    },
+    "cuas": {
+      "rank": 4,
+      "previous_rank": 4,
+      "state": "STABLE",
+      "summary": "Drone proliferation is increasing demand for detection, autonomy, electronic warfare and counter-UAS effectors."
+    },
+    "physical": {
+      "rank": 5,
+      "previous_rank": 5,
+      "state": "FALLING",
+      "summary": "AI is moving into robots and edge systems, but listed-company economic capture remains early and fragmented."
+    }
+  },
+  "signals": {
+    "GEV": {
+      "signal": "GREEN",
+      "reason": "Validated AI power/grid beneficiary in the current ORACLE decision state."
+    },
+    "TSEM": {
+      "signal": "ORANGE",
+      "reason": "Optical/semiconductor exposure is credible; entry gate remains incomplete."
+    },
+    "MP": {
+      "signal": "ORANGE",
+      "reason": "Rare-earth sovereignty thesis is proven; timing/entry gate remains incomplete."
+    },
+    "AVAV": {
+      "signal": "ORANGE",
+      "reason": "Counter-UAS exposure is proven; timing/entry gate remains incomplete."
+    },
+    "AMBA": {
+      "signal": "RED",
+      "reason": "Physical-AI exposure is credible but current entry criteria are not validated."
+    }
+  }
+}
