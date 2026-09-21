@@ -1,22 +1,14 @@
-# ORACLE-IA Cockpit — LOCKED APPROVED FORMAT
-
+# ORACLE-IA Cockpit — LOCKED 3-LEVEL FORMAT
 STATUS: LOCKED
-REFERENCE_COMMIT: 9287074b4f1bb47e8e1ce528241f7b2fc546b0d2
-APPROVED_FORMAT_DATE: 2026-09-19
+REFERENCE_COMMIT: 018138f2fdc49fcab5f6b4faee663a7fa5d1d8ec
+LOCKED: 2026-09-21
 
-Daily UI reference:
-1. Top 5 trends.
-2. Billboard 20.
-   Columns: Rang | Delta rang | Société | Perf. cours J-1 | Trend | Feu | Leader | Gap.
-   Rank movement and market performance J-1 are independent.
-3. Performance indicative ORACLE vs QQQ — base 1,000 CHF.
-4. Scientific discipline — FACT / INFERENCE / HYPOTHESIS + invalidation.
+Immutable architecture:
+1. TREND BILLBOARD — TOP 20.
+2. PER-TREND COMPANY TOP 20: company, role (Leader/Bottleneck/Pick & Shovel/Direct Beneficiary/Early Compounder), economic capture, Fit, Timing/Entry, leader and gap.
+3. GLOBAL BILLBOARD — TOP 20: Rank | ORACLE rank delta | Company | market performance J-1 | Trend | Role | Light | Investment state | vs Leader.
+4. Causal transmission chain.
+5. ORACLE vs QQQ, theoretical CHF 1,000; matched invested tranches; cash excluded from official alpha.
+6. Scientific discipline and integrated longitudinal history.
 
-Approved additions do not replace the core cockpit:
-- Trend Billboard Top 20 and company rankings per trend.
-- ORACLE vs QQQ compares actually invested ORACLE capital with matched QQQ tranches; cash excluded from official alpha.
-- History stays integrated into Billboard/history; no separate replay.
-
-DAILY RUN = DATA ONLY.
-Never redesign, reorder, rename core sections/columns, or change visual semantics during a daily run.
-Structural changes require an explicit user request.
+Daily runs update DATA ONLY. They never change layout, section order, columns, visual semantics or navigation. Missing evidence stays blank/NULL. Structural changes require an explicit user request.
