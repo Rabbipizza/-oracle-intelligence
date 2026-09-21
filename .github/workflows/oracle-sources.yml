@@ -1,4 +1,4 @@
-name: ORACLE Source Ingestion
+name: ORACLE Autonomous Run
 on:
   workflow_dispatch:
   push:
@@ -7,47 +7,57 @@ on:
       - 'oracle_*.py'
       - 'source-gate.json'
       - 'sources-registry.json'
+      - 'research-universe.json'
+      - 'trend-families.json'
+      - 'decision-state.json'
+      - 'portfolio.json'
       - '.github/workflows/oracle-sources.yml'
   schedule:
-    - cron: "15 7,15,21 * * 1-5"
+    - cron: "15 6,11,19 * * 1-5"
 
 permissions:
   contents: write
 
 concurrency:
   group: oracle-source-ingestion
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  ingest:
+  oracle:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Collect and analyze upstream sources
+
+      - name: Discover upstream signals
         env:
-          ORACLE_SEC_CIKS: "0001996810"
-          ORACLE_USASPENDING_KEYWORDS: "counter-UAS,directed energy,tungsten,rare earth"
-          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV"
+          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV,cat:cs.NI,cat:cs.DC,cat:eess.SY,cat:physics.app-ph"
           ORACLE_ARXIV_LOOKBACK_DAYS: "110"
-          ORACLE_ARXIV_WINDOW_DAYS: "7"
+          ORACLE_ARXIV_WINDOW_DAYS: "14"
           ORACLE_ARXIV_MAX_PER_WINDOW: "200"
         run: |
-          python oracle_sources.py
           python oracle_science.py
           python oracle_scholarly.py
           python oracle_public_sources.py
           python oracle_discovery.py
+
+      - name: Enrich, gate and price
+        run: |
+          python oracle_sources.py
           python oracle_source_gate.py
+          python oracle_market.py
+          python oracle_cockpit.py
           python oracle_audit.py
-      - name: Persist snapshots
+          python oracle_validate.py
+
+      - name: Persist verified ORACLE state
         run: |
           git config user.name "oracle-bot"
           git config user.email "oracle-bot@users.noreply.github.com"
-          git add data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/audit
-          git diff --cached --quiet || git commit -m "ORACLE: source snapshots"
-          # Serialized ingestion plus push-triggered Pages can advance main. Prefer generated run outputs on rebase conflicts.
-          git pull --rebase -X theirs origin main
+          git add data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/market.json data/cockpit.json data/audit
+          git diff --cached --quiet || git commit -m "ORACLE: verified autonomous snapshot"
+          git pull --rebase origin main
           git push
