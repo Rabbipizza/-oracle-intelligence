@@ -31,7 +31,7 @@ def main():
         while end>now-timedelta(days=LOOKBACK_DAYS):
             start=max(now-timedelta(days=LOOKBACK_DAYS),end-timedelta(days=WINDOW_DAYS))
             # arXiv submittedDate is UTC YYYYMMDDHHMMSS.
-            q=f"{cat} AND submittedDate:[{start.strftime('%Y%m%d%H%M')} TO {end.strftime('%Y%m%d%H%M')}]"
+            q=f"{cat} AND submittedDate:[{start.strftime('%Y%m%d%H%M%S')} TO {end.strftime('%Y%m%d%H%M%S')}]"
             rows,url,err=atom_fetch(q,MAX_PER_WINDOW)
             windows.append({"category":cat,"start":start.isoformat(),"end":end.isoformat(),"count":len(rows),"error":err})
             failures+=bool(err)
