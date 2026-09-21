@@ -1,37 +1,28 @@
-# ORACLE-IA Cockpit UI Contract — v1.0
+# ORACLE-IA Cockpit — VALIDATED UI CONTRACT
 
 STATUS: LOCKED
-LOCKED_AT: 2026-09-21
-PURPOSE: Daily scientific runs update DATA ONLY. They must never redesign the cockpit.
+REFERENCE_COMMIT: 76073899b08719d1d80b867fb9ed17f0c8622ead
+RESTORED: 2026-09-21
 
-## Immutable section order
-01 Executive Pulse
-02 Billboard — Top 20 Companies
-03 ORACLE vs QQQ — 1,000 CHF
-04 Top 5 Trends
-05 Causal Chains & Bottlenecks
-06 Raw Materials Map
-07 Early Compounders — Fit != Timing
-08 Scientific Evidence — FACT / INFERENCE / HYPOTHESIS / INVALIDATION
-09 J-1 Change Log
-10 History
-11 Rejected / Noise
-12 Data Quality & Run Health
+The validated longitudinal cockpit presentation is the immutable UI reference.
 
-## Immutable Billboard columns
-Rank | Delta rank | Ticker | Company | Trend | Fit | Timing | Perf J-1 | Benchmark | Gap/progress
+Daily runs are DATA-ONLY updates. They may update rankings, trends, company rows, movements, performance, Fit/Timing values, causal-chain evidence, history and sources. They MUST NOT redesign the cockpit.
 
-## Immutable semantics
-Fit and Timing are separate.
-Timing labels: TOO_EARLY | WATCH | ATTRACTIVE_TIMING | WAIT_FOR_PULLBACK | TOO_EXPENSIVE | REJECT.
-Leader convergence: CLOSING | STABLE | WIDENING | UNDEFINED.
-Daily change: NEW | RISING | STABLE | FALLING | DROPPED.
-Unknown/unjustified numeric values MUST remain NULL.
-ORACLE vs QQQ uses the same time window and 1,000 CHF fully invested; do not introduce a cash benchmark unless methodology explicitly changes.
+Core validated presentation:
+- Investment Intelligence Cockpit header.
+- Longitudinal company Billboard/ranking with rank movement arrows.
+- Company trend, Fit, Timing/Entry, leader-relative progress and decision.
+- J-1 movements integrated into the ranking/history.
+- Top trends cards.
+- Long-term trend and company history.
+- Causal chains: Trend → economic need/bottleneck → picks & shovels → materials → companies.
+- Early Compounders.
+- Entry/timing logic separate from Fit.
+- Scientific walk-forward evaluation versus QQQ (and SPY where retained by methodology).
+- No hindsight reconstruction; missing data remain NULL/empty.
+- Historical snapshots are append-only.
 
-## Daily-run permissions
-Allowed: values, rows, dates, ranks, deltas, evidence, status, history, sources, health indicators.
-Forbidden: changing section order, adding/removing core sections, renaming columns, changing semantic labels, changing navigation, redesigning colors/layout, or changing benchmark methodology.
+Additional already-approved daily fields may be populated inside the existing logical sections without redesigning the page, including stock performance vs J-1 and ORACLE-vs-QQQ 1,000 CHF simulation.
 
-## Migration rule
-Any structural/UI change requires an explicit cockpit migration requested separately from a daily research run. Increment UI contract version and document the migration. Never silently change presentation during a daily run.
+STRUCTURAL CHANGE RULE:
+Any layout, navigation, section-order, visual-system or methodology-presentation change requires an explicit user-requested UI migration. A daily ORACLE run never changes presentation.
