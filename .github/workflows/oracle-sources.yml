@@ -36,8 +36,7 @@ jobs:
         env:
           ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV,cat:cs.NI,cat:cs.DC,cat:eess.SY,cat:physics.app-ph"
           ORACLE_ARXIV_LOOKBACK_DAYS: "110"
-          ORACLE_ARXIV_WINDOW_DAYS: "14"
-          ORACLE_ARXIV_MAX_PER_WINDOW: "200"
+          ORACLE_ARXIV_MAX_PER_CATEGORY: "1000"
         run: |
           python oracle_science.py
           python oracle_scholarly.py
