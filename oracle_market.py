@@ -39,7 +39,9 @@ def yahoo_prices(ticker, start, end):
         if c is None: continue
         rows.append({"date":datetime.fromtimestamp(t,timezone.utc).date().isoformat(),"close":float(c)})
     if not rows: raise RuntimeError("no_price_rows")
-    return rows,url
+    meta=r.get("meta") or {}
+    info={"currency":meta.get("currency"),"exchange":meta.get("exchangeName"),"symbol":meta.get("symbol")}
+    return rows,url,info
 
 def ecb_series(currency, start):
     key=f"D.{currency}.EUR.SP00.A"
@@ -79,8 +81,8 @@ def main():
         out["errors"].append({"kind":"fx","error":repr(e)})
     for ticker in universe_tickers():
         try:
-            rows,url=yahoo_prices(ticker,start,end)
-            out["prices"][ticker]={"url":url,"rows":rows}
+            rows,url,info=yahoo_prices(ticker,start,end)
+            out["prices"][ticker]={"url":url,**info,"rows":rows}
         except Exception as e:
             out["errors"].append({"ticker":ticker,"error":repr(e)})
         time.sleep(0.08)
