@@ -1,14 +1,12 @@
-# ORACLE-IA Cockpit — LOCKED 3-LEVEL FORMAT
+# ORACLE-IA COCKPIT — FINAL LOCKED FORMAT
+REFERENCE_COMMIT: cf449c2d43ff2d896a051e8593cd6bf957a2ca3b
 STATUS: LOCKED
-REFERENCE_COMMIT: 018138f2fdc49fcab5f6b4faee663a7fa5d1d8ec
-LOCKED: 2026-09-21
 
-Immutable architecture:
-1. TREND BILLBOARD — TOP 20.
-2. PER-TREND COMPANY TOP 20: company, role (Leader/Bottleneck/Pick & Shovel/Direct Beneficiary/Early Compounder), economic capture, Fit, Timing/Entry, leader and gap.
-3. GLOBAL BILLBOARD — TOP 20: Rank | ORACLE rank delta | Company | market performance J-1 | Trend | Role | Light | Investment state | vs Leader.
-4. Causal transmission chain.
-5. ORACLE vs QQQ, theoretical CHF 1,000; matched invested tranches; cash excluded from official alpha.
-6. Scientific discipline and integrated longitudinal history.
+The cockpit contains exactly three main blocks:
+1. BILLBOARD DES TRENDS — ranked trends with rank delta and state.
+2. TOP 20 PAR TREND — selectable trend, each with a billboard: Rank | rank delta | Ticker | Company | stock performance J-1 | ORACLE signal.
+3. PERFORMANCE ORACLE VS QQQ — CHF 1,000 reference capital, ORACLE invested capital versus matched QQQ tranches, alpha; uninvested cash excluded from official comparison.
 
-Daily runs update DATA ONLY. They never change layout, section order, columns, visual semantics or navigation. Missing evidence stays blank/NULL. Structural changes require an explicit user request.
+No causal-chain, bottleneck, picks-and-shovels, leader-gap, Fit, source or research-detail blocks in the MAIN cockpit. Those remain in the ORACLE engine/database.
+
+Daily runs are DATA ONLY. Never redesign, reorder, rename columns, add main blocks or change semantics during a run. Structural changes require explicit user request.
