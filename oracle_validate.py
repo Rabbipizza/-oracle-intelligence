@@ -34,8 +34,12 @@ trends=cockpit.get("trends",[])
 if len(trends)<5:
     errors.append("cockpit_has_fewer_than_5_trends")
 for tr in trends[:5]:
-    if len(tr.get("companies",[]))!=20:
-        errors.append(f"trend_not_top20:{tr.get('key')}:{len(tr.get('companies',[]))}")
+    companies=tr.get("companies",[])
+    if len(companies)!=20:
+        errors.append(f"trend_not_top20:{tr.get('key')}:{len(companies)}")
+    missing=[x.get("ticker") for x in companies if x.get("price") is None or not x.get("spark")]
+    if missing:
+        errors.append(f"trend_market_history_missing:{tr.get('key')}:{','.join(str(x) for x in missing)}")
 
 pf=cockpit.get("portfolio",{})
 if len(pf.get("positions",[]))<2:
