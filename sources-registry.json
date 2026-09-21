@@ -1,23 +1,23 @@
 {
-  "version": "2.0",
-  "updated": "2026-09-20",
+  "version": "3.0",
+  "updated": "2026-09-21",
   "principle": "ORACLE uses sources that are open/free OR provide a usable free quota/free tier. Paid-only sources and licensed feeds with no free usable access are excluded and never satisfy a gate.",
   "categories": {
     "science": [
       {
         "source": "arXiv",
         "mode": "API",
-        "status": "active"
+        "status": "active_degraded_redundant"
       },
       {
         "source": "OpenAlex",
         "mode": "API",
-        "status": "adapter_added_optional_key"
+        "status": "active"
       },
       {
         "source": "Crossref",
         "mode": "REST API",
-        "status": "adapter_added"
+        "status": "active"
       }
     ],
     "patents": [],
@@ -30,7 +30,7 @@
       {
         "source": "EU TED procurement",
         "mode": "API/data",
-        "status": "to_connect"
+        "status": "active"
       },
       {
         "source": "permits/capacity announcements",
@@ -67,9 +67,16 @@
     ],
     "market": [
       {
-        "source": "USD/CHF",
-        "mode": "official/reliable FX feed",
-        "status": "to_connect"
+        "source": "Yahoo Finance chart",
+        "mode": "free EOD chart endpoint",
+        "status": "active",
+        "purpose": "listed-company and QQQ daily price history"
+      },
+      {
+        "source": "ECB Data Portal",
+        "mode": "official data API",
+        "status": "active",
+        "purpose": "USD/CHF cross via USD/EUR and CHF/EUR"
       }
     ],
     "expectations": [],
@@ -92,29 +99,34 @@
     ],
     "macro": [
       {
-        "source": "Federal Reserve/FRED",
-        "mode": "official API",
-        "status": "api_key_or_official_feed"
-      },
-      {
         "source": "ECB",
         "mode": "official data API",
-        "status": "to_connect"
+        "status": "active"
+      },
+      {
+        "source": "BLS",
+        "mode": "official public API",
+        "status": "active"
+      },
+      {
+        "source": "Federal Reserve/FRED",
+        "mode": "official API",
+        "status": "optional_api_key"
       },
       {
         "source": "SNB",
         "mode": "official data",
-        "status": "to_connect"
+        "status": "future_enrichment"
       },
       {
-        "source": "BLS/BEA",
-        "mode": "official APIs",
-        "status": "to_connect"
+        "source": "BEA",
+        "mode": "official API",
+        "status": "future_enrichment"
       },
       {
         "source": "energy/commodities",
         "mode": "EIA/official feeds",
-        "status": "to_connect"
+        "status": "future_enrichment"
       }
     ],
     "geopolitics_policy": [
