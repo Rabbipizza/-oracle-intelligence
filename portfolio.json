@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "currency": "CHF",
+  "initial_capital_chf": 1000,
+  "official_benchmark_mode": "matched_tranches",
+  "benchmark_ticker": "QQQ",
+  "positions": [
+    {
+      "ticker": "AAON",
+      "trade_date": "2026-09-04",
+      "allocated_chf": 40,
+      "status": "OPEN",
+      "note": "ORACLE simulated position"
+    },
+    {
+      "ticker": "GEV",
+      "trade_date": "2026-09-17",
+      "allocated_chf": 60,
+      "status": "OPEN",
+      "note": "ORACLE simulated position"
+    }
+  ],
+  "cash_chf": 900,
+  "notes": [
+    "Simulation only; no real orders.",
+    "Official ORACLE-vs-QQQ comparison uses matched invested tranches and excludes uninvested cash.",
+    "Total portfolio value including cash is displayed separately."
+  ]
+}
