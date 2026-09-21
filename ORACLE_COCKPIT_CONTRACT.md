@@ -1,28 +1,23 @@
-# ORACLE-IA Cockpit — VALIDATED UI CONTRACT
-
+# ORACLE-IA Cockpit — LOCKED APPROVED FORMAT
 STATUS: LOCKED
-REFERENCE_COMMIT: 76073899b08719d1d80b867fb9ed17f0c8622ead
-RESTORED: 2026-09-21
+REFERENCE_COMMIT: 9287074b4f1bb47e8e1ce528241f7b2fc546b0d2
+APPROVED_FORMAT_DATE: 2026-09-19
 
-The validated longitudinal cockpit presentation is the immutable UI reference.
+This exact cockpit layout is the daily UI reference.
 
-Daily runs are DATA-ONLY updates. They may update rankings, trends, company rows, movements, performance, Fit/Timing values, causal-chain evidence, history and sources. They MUST NOT redesign the cockpit.
+Immutable presentation:
+1. Top 5 trends.
+2. Billboard 20.
+   Columns: Rang | Δ rang | Société | Perf. cours J-1 | Trend | Feu | Leader | Gap.
+   Δ rang and market performance J-1 are independent.
+3. Performance indicative ORACLE vs QQQ.
+   Base simulation: 1,000 CHF.
+4. Scientific discipline: FACT / INFERENCE / HYPOTHESIS + invalidation.
 
-Core validated presentation:
-- Investment Intelligence Cockpit header.
-- Longitudinal company Billboard/ranking with rank movement arrows.
-- Company trend, Fit, Timing/Entry, leader-relative progress and decision.
-- J-1 movements integrated into the ranking/history.
-- Top trends cards.
-- Long-term trend and company history.
-- Causal chains: Trend → economic need/bottleneck → picks & shovels → materials → companies.
-- Early Compounders.
-- Entry/timing logic separate from Fit.
-- Scientific walk-forward evaluation versus QQQ (and SPY where retained by methodology).
-- No hindsight reconstruction; missing data remain NULL/empty.
-- Historical snapshots are append-only.
+Approved extension already defined in conversation:
+- Trend Billboard Top 20 and company rankings per trend may be surfaced without replacing the core cockpit.
+- ORACLE vs QQQ methodology compares actually invested ORACLE capital with matched QQQ tranches; cash is excluded from official alpha.
+- Historical evolution is integrated into Billboard/history; no separate replay page.
 
-Additional already-approved daily fields may be populated inside the existing logical sections without redesigning the page, including stock performance vs J-1 and ORACLE-vs-QQQ 1,000 CHF simulation.
-
-STRUCTURAL CHANGE RULE:
-Any layout, navigation, section-order, visual-system or methodology-presentation change requires an explicit user-requested UI migration. A daily ORACLE run never changes presentation.
+DAILY RUN RULE: DATA ONLY. Update values, rankings, movements, prices, trends, evidence and history. Never redesign, reorder, rename core sections/columns, or change visual semantics during a daily run.
+Any structural change requires an explicit user request.
