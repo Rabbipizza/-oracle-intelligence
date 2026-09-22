@@ -54,9 +54,12 @@ def signal_for(ticker,proof,decisions):
     if explicit:
         return explicit.get("signal","ORANGE"), explicit.get("reason","")
     p=(proof or "").upper()
+    # IMPORTANT: UNPROVEN contains the substring "PROVEN"; test it first.
+    if p=="UNPROVEN" or not p:
+        return "RED","Evidence is insufficient for an ORACLE entry."
     if p=="PROVEN":
         return "ORANGE","Economic exposure is proven; full entry gate has not been validated."
-    if "PROVEN" in p or "PARTIAL" in p:
+    if p.startswith("PROVEN ") or "PARTIAL" in p:
         return "ORANGE","Exposure is credible but at least one evidence or entry gate remains open."
     return "RED","Evidence is insufficient for an ORACLE entry."
 
