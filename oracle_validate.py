@@ -17,6 +17,12 @@ disc=load("data/discovery-candidates.json")
 market=load("data/market.json")
 cockpit=load("data/cockpit.json")
 gate=load("data/source-gate-status.json")
+protocol=load("scientific-protocol.json")
+
+if protocol.get("objective") is None:
+    errors.append("scientific_protocol_missing")
+if protocol.get("overfitting_controls",{}).get("deflated_sharpe_ratio") is not True:
+    errors.append("scientific_overfitting_controls_missing")
 
 if disc.get("quality")!="OK":
     errors.append("discovery_quality_not_OK")
@@ -57,7 +63,14 @@ if gate.get("discovery_quality")!="OK":
 if len(market.get("errors",[]))>20:
     warnings.append(f"many_market_series_errors:{len(market.get('errors',[]))}")
 
-result={"status":"PASS" if not errors else "FAIL","errors":errors,"warnings":warnings}
+# Scientific honesty gate: benchmark underperformance must NEVER fail deployment.
+# A scientific system records negative alpha instead of optimizing it away.
+alpha=comp.get("alpha_pct_points")
+if alpha is not None and alpha < 0:
+    warnings.append(f"prospective_alpha_negative:{alpha}")
+
+result={"status":"PASS" if not errors else "FAIL","errors":errors,"warnings":warnings,
+        "scientific_protocol":"scientific-protocol.json","prospective_alpha_pct_points":alpha}
 print(json.dumps(result))
 if errors:
     sys.exit(1)
