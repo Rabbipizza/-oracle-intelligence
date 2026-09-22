@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "frozen_at": "2026-09-22",
+  "objective": "Test whether ORACLE generates persistent out-of-sample risk-adjusted excess return versus QQQ without optimizing to force a win.",
+  "benchmark": "QQQ",
+  "currency": "CHF",
+  "principles": [
+    "No parameter change may be justified solely by improving historical alpha.",
+    "All model changes are versioned and dated before subsequent performance is observed.",
+    "Discovery, company capture, entry timing and sizing are separate gates.",
+    "Every historical test must use point-in-time information and a survivorship-aware universe where available.",
+    "Transaction costs, FX and delistings must be included when the data permits.",
+    "Failed hypotheses and all tested variants must be logged, not silently discarded."
+  ],
+  "validation": {
+    "primary": "prospective_out_of_sample",
+    "secondary": "walk_forward",
+    "embargo": true,
+    "purged_splits": true,
+    "minimum_track_record_trading_days": 252,
+    "report_intervals": ["1w","1m","3m","6m","12m"]
+  },
+  "metrics": [
+    "CAGR",
+    "annualized_volatility",
+    "Sharpe",
+    "Sortino",
+    "max_drawdown",
+    "Calmar",
+    "hit_rate",
+    "turnover",
+    "alpha_vs_QQQ",
+    "information_ratio",
+    "tracking_error",
+    "beta_vs_QQQ"
+  ],
+  "overfitting_controls": {
+    "log_number_of_trials": true,
+    "deflated_sharpe_ratio": true,
+    "probability_of_backtest_overfitting": true,
+    "multiple_testing_adjustment": true,
+    "parameter_sensitivity": true
+  },
+  "promotion_rule": {
+    "label_before_minimum_track_record": "EXPERIMENTAL",
+    "label_if_oos_alpha_positive_but_not_statistically_robust": "PROMISING",
+    "label_if_robust_across_walk_forward_and_prospective": "VALIDATED",
+    "never_label": "GUARANTEED_TO_BEAT_QQQ"
+  }
+}
