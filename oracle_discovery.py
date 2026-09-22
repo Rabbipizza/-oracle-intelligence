@@ -14,7 +14,7 @@ while which without but into over only across present show introduce than then a
 model models method methods framework approach approaches results result study studies paper work task tasks data system systems learning
 training performance proposed propose demonstrate shows use used through between under where when how what who why more most less each both
 all any some many may might could would should do does did done not no yes
-""".split())
+international journal systematic review reproducibility package question answering english education maritime afi ticketed event psalms worship identity god walnut creek york state usa recording late devonian kellwasser crisis toc total nitrogen elemental pxrf xrf section chapter blood reduces mean address challenges consistent improvements manipulation requires single scalar steps working relationship three components trained scratch\n""".split())
 
 def tokens(s):
     return [w for w in re.findall(r"[a-z][a-z0-9-]{2,}",(s or "").lower()) if w not in STOP]
@@ -93,7 +93,7 @@ quality="OK" if baseline_docs>=50 and recent_docs>=20 else "INSUFFICIENT_BASELIN
 OUT.parent.mkdir(parents=True,exist_ok=True)
 OUT.write_text(json.dumps({
  "generated_at":now.isoformat(),
- "method":"v2 deduplicated 2-3gram document-frequency acceleration; 14d recent vs preceding 90d baseline",
+ "method":"v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
  "quality":quality,
  "unique_papers":len(unique),"recent_docs":recent_docs,"baseline_docs":baseline_docs,
  "candidates":cand if quality=="OK" else []
