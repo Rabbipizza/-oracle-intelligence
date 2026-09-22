@@ -11,6 +11,7 @@ on:
       - 'trend-families.json'
       - 'decision-state.json'
       - 'portfolio.json'
+      - 'scientific-protocol.json'
       - '.github/workflows/oracle-sources.yml'
   schedule:
     - cron: "15 6,11,19 * * 1-5"
