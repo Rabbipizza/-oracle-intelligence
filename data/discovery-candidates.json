@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-22T15:27:08.116251+00:00",
+  "generated_at": "2026-09-22T19:27:22.268051+00:00",
   "method": "v2 deduplicated 2-3gram document-frequency acceleration; 14d recent vs preceding 90d baseline",
   "quality": "OK",
-  "unique_papers": 2665,
-  "recent_docs": 943,
-  "baseline_docs": 1113,
+  "unique_papers": 2815,
+  "recent_docs": 1093,
+  "baseline_docs": 1112,
   "candidates": [
     {
       "term": "large language",
-      "recent_docs": 24,
+      "recent_docs": 26,
       "baseline_docs": 5,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 5.257,
-      "discovery_score": 29.7764,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 4.902,
+      "discovery_score": 28.5369,
       "examples": [
         "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
         "Score Centering Stabilizes Off-policy Reinforcement Learning",
@@ -21,13 +21,27 @@
       ]
     },
     {
+      "term": "robot manipulation",
+      "recent_docs": 7,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 15.261,
+      "discovery_score": 14.6755,
+      "examples": [
+        "Affordance-based robot manipulation with flow matching",
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface"
+      ]
+    },
+    {
       "term": "coding agents",
       "recent_docs": 6,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 15.341,
-      "discovery_score": 13.7126,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 13.226,
+      "discovery_score": 12.1049,
       "examples": [
         "Quantifying Overclaiming Propensity in Frontier LLM Agents",
         "An Empirical Study of Harness Design for Coding Agents",
@@ -38,10 +52,10 @@
       "term": "reduces mean",
       "recent_docs": 6,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 15.341,
-      "discovery_score": 13.7126,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 13.226,
+      "discovery_score": 12.1049,
       "examples": [
         "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
         "OmniMimic: Dynamics-completed Motion Augmentation for Multi-style Omnidirectional Quadruped Locomotion",
@@ -49,27 +63,27 @@
       ]
     },
     {
-      "term": "robot manipulation",
+      "term": "international journal",
       "recent_docs": 6,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 15.341,
-      "discovery_score": 13.7126,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 13.226,
+      "discovery_score": 12.1049,
       "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation"
+        "International Journal of Molecular Medicine",
+        "Revue Romane. Langue et litt\u00e9rature. International Journal of Romance Languages and Literatures",
+        "International Journal of Oral and Craniofacial Science"
       ]
     },
     {
       "term": "about god",
       "recent_docs": 5,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 12.981,
-      "discovery_score": 10.8826,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 11.191,
+      "discovery_score": 9.5833,
       "examples": [
         "Identity is about God\u2019s People",
         "Identity is about God\u2019s Purpose",
@@ -80,10 +94,10 @@
       "term": "vision-language-action vla",
       "recent_docs": 5,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 12.981,
-      "discovery_score": 10.8826,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 11.191,
+      "discovery_score": 9.5833,
       "examples": [
         "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
         "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
@@ -94,10 +108,10 @@
       "term": "supervised fine-tuning",
       "recent_docs": 5,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 12.981,
-      "discovery_score": 10.8826,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 11.191,
+      "discovery_score": 9.5833,
       "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
         "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
@@ -108,10 +122,10 @@
       "term": "gaussian splatting",
       "recent_docs": 5,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 12.981,
-      "discovery_score": 10.8826,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 11.191,
+      "discovery_score": 9.5833,
       "examples": [
         "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
         "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
@@ -122,10 +136,10 @@
       "term": "artificial intelligence",
       "recent_docs": 14,
       "baseline_docs": 10,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 1.63,
-      "discovery_score": 10.0884,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 1.405,
+      "discovery_score": 8.5049,
       "examples": [
         "Feasibility Study of Automated Brackish Water Fish Pond Systems: Integrating IoT Sensor Networks and Generative Artificial Intelligence for Sustainable Aquaculture in Coastal Communities",
         "Artificial Intelligence and Corporate Social Irresponsibility",
@@ -136,10 +150,10 @@
       "term": "autonomous driving",
       "recent_docs": 6,
       "baseline_docs": 1,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 5.114,
-      "discovery_score": 8.8869,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 4.409,
+      "discovery_score": 7.6959,
       "examples": [
         "A 28nm 44.15TFLOPS/W and 1.57TFLOPS/mm\n                    <sup>2</sup>\n                    Joint-Alignment Floating-Point CIM Macro with ISO26262 ASIL-D Safety Level for Autonomous Driving",
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
@@ -147,13 +161,13 @@
       ]
     },
     {
-      "term": "large language llms",
+      "term": "language llms",
       "recent_docs": 7,
       "baseline_docs": 2,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 3.54,
-      "discovery_score": 8.5718,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 3.052,
+      "discovery_score": 7.3634,
       "examples": [
         "Large Language Models as Falsifiers for Cyber-Physical Systems",
         "Local Sparsity Enables Unsupervised LLM Safety Detection",
@@ -161,13 +175,13 @@
       ]
     },
     {
-      "term": "language llms",
+      "term": "large language llms",
       "recent_docs": 7,
       "baseline_docs": 2,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 3.54,
-      "discovery_score": 8.5718,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 3.052,
+      "discovery_score": 7.3634,
       "examples": [
         "Large Language Models as Falsifiers for Cyber-Physical Systems",
         "Local Sparsity Enables Unsupervised LLM Safety Detection",
@@ -178,10 +192,10 @@
       "term": "chapter blood",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Chapter 8 \u2013 Blood and Immunity",
         "Chapter 8 \u2013 Blood and Immunity",
@@ -192,10 +206,10 @@
       "term": "reproducibility package",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Active Surface-Potential Measurement Design for Physics-Informed Reconstruction of Buried Grounding Electrodes: Reproducibility Package",
         "Reproducibility Package for Validation-Anchored Dynamic-Fidelity Assessment of a High-Temperature Heat Pump Coupled to Packed-Bed Thermal Storage",
@@ -206,10 +220,10 @@
       "term": "consistent improvements",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
         "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
@@ -220,10 +234,10 @@
       "term": "latent representations",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
@@ -234,10 +248,10 @@
       "term": "human demonstrations",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
         "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
@@ -248,10 +262,10 @@
       "term": "human intervention",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
         "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
@@ -262,10 +276,10 @@
       "term": "video generation",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
         "DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models",
@@ -273,27 +287,13 @@
       ]
     },
     {
-      "term": "manipulation requires",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
-      "examples": [
-        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation",
-        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
-      ]
-    },
-    {
       "term": "policy optimization",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
         "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards",
@@ -301,13 +301,27 @@
       ]
     },
     {
+      "term": "manipulation requires",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
+      "examples": [
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "MaskHarness-WAM: Instance-Grounded Harnessing for Long-Horizon Robot Manipulation",
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
+      ]
+    },
+    {
       "term": "single scalar",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
         "EPIG-Tree: Compute-Optimal Branching for Gradient-Efficient Reinforcement Learning",
@@ -318,10 +332,10 @@
       "term": "object detection",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation",
         "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
@@ -332,10 +346,10 @@
       "term": "address challenges",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "WiCleanData: Guaranteeing the Type Consistency of Wikidata by Taxonomy Refinement and Constraint Enforcement",
         "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction",
@@ -346,10 +360,10 @@
       "term": "question answering",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "E-AVI: Evidence-Grounded Multimodal Assessment for Automated Video Interviews",
         "Not All AI Agents Are Equal: Characterizing Resource and Performance Dynamics",
@@ -357,27 +371,13 @@
       ]
     },
     {
-      "term": "maritime english",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
-      "examples": [
-        "Charting new waters: the role of artificial intelligence in Maritime English education",
-        "Applying authentic resources in online Maritime English education",
-        "Charting new waters: the role of artificial intelligence in Maritime English education"
-      ]
-    },
-    {
       "term": "english education",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Charting new waters: the role of artificial intelligence in Maritime English education",
         "Applying authentic resources in online Maritime English education",
@@ -388,10 +388,24 @@
       "term": "maritime english education",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 10.621,
-      "discovery_score": 8.1304,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
+      "examples": [
+        "Charting new waters: the role of artificial intelligence in Maritime English education",
+        "Applying authentic resources in online Maritime English education",
+        "Charting new waters: the role of artificial intelligence in Maritime English education"
+      ]
+    },
+    {
+      "term": "maritime english",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 9.156,
+      "discovery_score": 7.1372,
       "examples": [
         "Charting new waters: the role of artificial intelligence in Maritime English education",
         "Applying authentic resources in online Maritime English education",
@@ -402,10 +416,10 @@
       "term": "llm agents",
       "recent_docs": 5,
       "baseline_docs": 1,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 4.327,
-      "discovery_score": 6.9016,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 3.73,
+      "discovery_score": 5.9553,
       "examples": [
         "Quantifying Overclaiming Propensity in Frontier LLM Agents",
         "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
@@ -416,10 +430,10 @@
       "term": "natural language",
       "recent_docs": 5,
       "baseline_docs": 1,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 4.327,
-      "discovery_score": 6.9016,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 3.73,
+      "discovery_score": 5.9553,
       "examples": [
         "Large Language Models as Falsifiers for Cyber-Physical Systems",
         "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG",
@@ -427,27 +441,27 @@
       ]
     },
     {
-      "term": "afi ticketed event",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "term": "systematic review",
+      "recent_docs": 6,
+      "baseline_docs": 3,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 1.889,
+      "discovery_score": 4.8375,
       "examples": [
-        "World Bible School Lunch, AFI, ticketed event",
-        "Herald of Truth Dinner, AFI, ticketed event",
-        "Harding School of Theology, Lunch, AFI, ticketed event"
+        "A Comprehensive Systematic Review of Cyber\u2010Physical Systems Security: Threats, Challenges, and Defense in ICS/OT Environments",
+        "Artificial Intelligence in Self-Management of Gestational Diabetes Mellitus: A Systematic Review",
+        "From Algorithmic Performance to Clinical Translation: Translational Readiness of Imaging-Based Artificial Intelligence in Dentistry\u2014A Systematic Review"
       ]
     },
     {
       "term": "afi ticketed",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "World Bible School Lunch, AFI, ticketed event",
         "Herald of Truth Dinner, AFI, ticketed event",
@@ -458,10 +472,10 @@
       "term": "ticketed event",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "World Bible School Lunch, AFI, ticketed event",
         "Herald of Truth Dinner, AFI, ticketed event",
@@ -469,13 +483,27 @@
       ]
     },
     {
-      "term": "psalms offer",
+      "term": "afi ticketed event",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "World Bible School Lunch, AFI, ticketed event",
+        "Herald of Truth Dinner, AFI, ticketed event",
+        "Harding School of Theology, Lunch, AFI, ticketed event"
+      ]
+    },
+    {
+      "term": "times difficulty psalms",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "In Times of Difficulty the Psalms Offer Encouragement to Remember",
         "In Times of Difficulty the Psalms Offer Images of Justice",
@@ -486,38 +514,10 @@
       "term": "difficulty psalms offer",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "times difficulty psalms",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "times difficulty",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "In Times of Difficulty the Psalms Offer Encouragement to Remember",
         "In Times of Difficulty the Psalms Offer Images of Justice",
@@ -528,10 +528,38 @@
       "term": "difficulty psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
+        "In Times of Difficulty the Psalms Offer Images of Justice",
+        "In Times of Difficulty the Psalms Offer Permission to Grieve"
+      ]
+    },
+    {
+      "term": "times difficulty",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
+        "In Times of Difficulty the Psalms Offer Images of Justice",
+        "In Times of Difficulty the Psalms Offer Permission to Grieve"
+      ]
+    },
+    {
+      "term": "psalms offer",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "In Times of Difficulty the Psalms Offer Encouragement to Remember",
         "In Times of Difficulty the Psalms Offer Images of Justice",
@@ -542,10 +570,10 @@
       "term": "worship psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Worship Through the Psalms (Preschool)",
         "Worship Through the Psalms (Lower Elementary)",
@@ -556,10 +584,10 @@
       "term": "identity about",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Identity is about God\u2019s People",
         "Identity is about God\u2019s Purpose",
@@ -570,10 +598,10 @@
       "term": "identity about god",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Identity is about God\u2019s People",
         "Identity is about God\u2019s Purpose",
@@ -581,27 +609,13 @@
       ]
     },
     {
-      "term": "risk assessment",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
-        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV",
-        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV"
-      ]
-    },
-    {
       "term": "state estimation",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
         "COIN-GP: Cooperative Online Learning in Networked Distributed Systems with Partial Measurements via Gaussian Process Regression",
@@ -609,13 +623,27 @@
       ]
     },
     {
+      "term": "risk assessment",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
+        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV",
+        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV"
+      ]
+    },
+    {
       "term": "logic human",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
         "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
@@ -626,10 +654,10 @@
       "term": "colorectal cancer",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
         "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
@@ -640,10 +668,10 @@
       "term": "emerging technologies",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA",
         "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA",
@@ -651,321 +679,13 @@
       ]
     },
     {
-      "term": "xrf toc",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "usa recording",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "creek section york",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
       "term": "walnut creek section",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "elemental pxrf",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "section york state",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "york state usa",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "state usa",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "total nitrogen",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "kellwasser crisis",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "late devonian",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "toc total nitrogen",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "york state",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "nitrogen walnut creek",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "creek section",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "pxrf xrf",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "recording late",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "walnut creek",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "devonian kellwasser",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "recording late devonian",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "toc total",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "late devonian kellwasser",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "section york",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
@@ -976,10 +696,10 @@
       "term": "pxrf xrf toc",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
@@ -987,13 +707,13 @@
       ]
     },
     {
-      "term": "xrf toc total",
+      "term": "state usa",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
@@ -1001,69 +721,13 @@
       ]
     },
     {
-      "term": "state usa recording",
+      "term": "elemental pxrf",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "total nitrogen walnut",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "usa recording late",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "devonian kellwasser crisis",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
-        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
-      ]
-    },
-    {
-      "term": "elemental pxrf xrf",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
@@ -1074,10 +738,10 @@
       "term": "nitrogen walnut",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
         "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
@@ -1085,27 +749,377 @@
       ]
     },
     {
-      "term": "working relationship",
+      "term": "devonian kellwasser",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
-        "Steps 8-12: Working through our relationship to others",
-        "Steps 4-7: Working through our relationship to self",
-        "Steps 1-3: Working through our relationship to God"
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "creek section",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "walnut creek",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "pxrf xrf",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "late devonian",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "creek section york",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "toc total nitrogen",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "xrf toc",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "section york state",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "state usa recording",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "toc total",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "york state",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "total nitrogen",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "devonian kellwasser crisis",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "kellwasser crisis",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "usa recording late",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "recording late devonian",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "total nitrogen walnut",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "recording late",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "late devonian kellwasser",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "york state usa",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "section york",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "elemental pxrf xrf",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "nitrogen walnut creek",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "xrf toc total",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
+      ]
+    },
+    {
+      "term": "usa recording",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis",
+        "Elemental pXRF, \u00b5XRF, TOC and total nitrogen data of the Walnut Creek section (New York State, USA) recording the Late Devonian Kellwasser Crisis"
       ]
     },
     {
       "term": "steps working",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Steps 8-12: Working through our relationship to others",
         "Steps 4-7: Working through our relationship to self",
@@ -1116,10 +1130,24 @@
       "term": "steps working relationship",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "Steps 8-12: Working through our relationship to others",
+        "Steps 4-7: Working through our relationship to self",
+        "Steps 1-3: Working through our relationship to God"
+      ]
+    },
+    {
+      "term": "working relationship",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Steps 8-12: Working through our relationship to others",
         "Steps 4-7: Working through our relationship to self",
@@ -1130,10 +1158,10 @@
       "term": "reading psalms",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Reading the Psalms in Joy",
         "Reading the Psalms in Anger",
@@ -1144,10 +1172,10 @@
       "term": "text recognition",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
         "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
@@ -1158,10 +1186,10 @@
       "term": "carbon capture",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Induced seismicity at the Quest Carbon Capture and Storage project, Alberta",
         "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
@@ -1172,10 +1200,10 @@
       "term": "natural images",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
         "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
@@ -1186,10 +1214,10 @@
       "term": "trained scratch",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
         "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
@@ -1200,10 +1228,10 @@
       "term": "agents increasingly",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Quantifying Overclaiming Propensity in Frontier LLM Agents",
         "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
@@ -1214,10 +1242,10 @@
       "term": "three components",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "An Empirical Study of Harness Design for Coding Agents",
         "CARE-VI: Conservative Adaptive Reliability Estimation for Value Improvement in Off-Policy Actor-Critic Learning",
@@ -1225,27 +1253,13 @@
       ]
     },
     {
-      "term": "benchmark evaluating",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
-        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
-      ]
-    },
-    {
       "term": "inverse solvers",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
         "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
@@ -1253,13 +1267,27 @@
       ]
     },
     {
+      "term": "benchmark evaluating",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
+        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+      ]
+    },
+    {
       "term": "real-world manipulation",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
@@ -1270,10 +1298,10 @@
       "term": "network cnn",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
         "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
@@ -1284,10 +1312,10 @@
       "term": "neural network cnn",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
         "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
@@ -1298,10 +1326,10 @@
       "term": "future visual",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
@@ -1312,10 +1340,10 @@
       "term": "demonstrations however",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
         "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
@@ -1326,10 +1354,10 @@
       "term": "adding parameters",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
         "Relational Attention for Data-Efficient Language Modeling",
@@ -1337,27 +1365,27 @@
       ]
     },
     {
-      "term": "every evaluated",
+      "term": "supervised fine-tuning sft",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics",
-        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation"
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
       ]
     },
     {
       "term": "fine-tuning sft",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
         "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
@@ -1365,45 +1393,17 @@
       ]
     },
     {
-      "term": "supervised fine-tuning sft",
+      "term": "every evaluated",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
+      "recent_corpus_docs": 1093,
+      "baseline_corpus_docs": 1112,
+      "acceleration": 7.122,
+      "discovery_score": 4.8105,
       "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "logarithmic factors",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
-        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
-        "Near-Optimal Pure Single-Loop Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization"
-      ]
-    },
-    {
-      "term": "optimization behavior",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 943,
-      "baseline_corpus_docs": 1113,
-      "acceleration": 8.261,
-      "discovery_score": 5.5035,
-      "examples": [
-        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
-        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "Quantum Graph Convolutional Networks: Implementation and Trainability Analysis"
+        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics",
+        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation"
       ]
     }
   ]

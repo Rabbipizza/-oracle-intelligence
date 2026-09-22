@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T15:27:15.125148+00:00",
+  "generated_at": "2026-09-22T19:27:31.510645+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 22005,
+    "record_count": 23307,
     "primary_origin_count": 1414
   },
   "candidate_gates": [
@@ -24,8 +24,25 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 31,
+      "matched_origin_count": 33,
       "primary_origin_count": 29,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "robot manipulation",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 8,
+      "primary_origin_count": 6,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -64,17 +81,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "robot manipulation",
+      "term": "international journal",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
-        "OpenAlex",
-        "arXiv"
+        "OpenAlex"
       ],
-      "matched_origin_count": 7,
-      "primary_origin_count": 6,
+      "matched_origin_count": 13,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -155,7 +171,7 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 98,
+      "matched_origin_count": 122,
       "primary_origin_count": 11,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -180,7 +196,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "large language llms",
+      "term": "language llms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -192,7 +208,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language llms",
+      "term": "large language llms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -316,7 +332,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "manipulation requires",
+      "term": "policy optimization",
       "families": [
         "science"
       ],
@@ -332,7 +348,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "policy optimization",
+      "term": "manipulation requires",
       "families": [
         "science"
       ],
@@ -410,22 +426,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "maritime english",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "english education",
       "families": [
         "science"
@@ -443,6 +443,22 @@
     },
     {
       "term": "maritime english education",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "maritime english",
       "families": [
         "science"
       ],
@@ -485,7 +501,7 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 16,
+      "matched_origin_count": 20,
       "primary_origin_count": 5,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -493,15 +509,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "afi ticketed event",
+      "term": "systematic review",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
+        "Crossref",
         "OpenAlex"
       ],
-      "matched_origin_count": 3,
+      "matched_origin_count": 21,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -541,7 +558,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "psalms offer",
+      "term": "afi ticketed event",
       "families": [
         "science"
       ],
@@ -550,6 +567,18 @@
         "OpenAlex"
       ],
       "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "times difficulty psalms",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -569,7 +598,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "times difficulty psalms",
+      "term": "difficulty psalms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -593,11 +622,15 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "difficulty psalms",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
+      "term": "psalms offer",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -641,22 +674,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "risk assessment",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 9,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "state estimation",
       "families": [
         "science"
@@ -668,6 +685,22 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 2,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "risk assessment",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 10,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -721,50 +754,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "xrf toc",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "usa recording",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "creek section york",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "walnut creek section",
       "families": [
         "science"
@@ -781,35 +770,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "elemental pxrf",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "section york state",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "york state usa",
+      "term": "pxrf xrf toc",
       "families": [
         "science"
       ],
@@ -841,7 +802,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "total nitrogen",
+      "term": "elemental pxrf",
       "families": [
         "science"
       ],
@@ -857,39 +818,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "kellwasser crisis",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "late devonian",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "toc total nitrogen",
+      "term": "nitrogen walnut",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -901,28 +830,15 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "york state",
+      "term": "devonian kellwasser",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
-        "Crossref",
         "OpenAlex"
       ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "nitrogen walnut creek",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
+      "matched_origin_count": 3,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -931,6 +847,22 @@
     },
     {
       "term": "creek section",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "walnut creek",
       "families": [
         "science"
       ],
@@ -962,19 +894,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "recording late",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "walnut creek",
+      "term": "late devonian",
       "families": [
         "science"
       ],
@@ -990,7 +910,31 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "devonian kellwasser",
+      "term": "creek section york",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "toc total nitrogen",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "xrf toc",
       "families": [
         "science"
       ],
@@ -1006,75 +950,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "recording late devonian",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "toc total",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "late devonian kellwasser",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "section york",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "pxrf xrf toc",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "xrf toc total",
+      "term": "section york state",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1102,7 +978,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "total nitrogen walnut",
+      "term": "toc total",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1114,11 +990,32 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "usa recording late",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
+      "term": "york state",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "total nitrogen",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -1142,6 +1039,114 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "kellwasser crisis",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "usa recording late",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "recording late devonian",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "total nitrogen walnut",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "recording late",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "late devonian kellwasser",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "york state usa",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "section york",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "elemental pxrf xrf",
       "families": [
         "science"
@@ -1158,7 +1163,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "nitrogen walnut",
+      "term": "nitrogen walnut creek",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1170,11 +1175,27 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "working relationship",
+      "term": "xrf toc total",
       "families": [],
       "family_count": 0,
       "sources": [],
       "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "usa recording",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -1195,6 +1216,18 @@
     },
     {
       "term": "steps working relationship",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "working relationship",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1312,18 +1345,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "benchmark evaluating",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "inverse solvers",
       "families": [
         "science"
@@ -1334,6 +1355,18 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 3,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "benchmark evaluating",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1432,7 +1465,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "every evaluated",
+      "term": "supervised fine-tuning sft",
       "families": [
         "science"
       ],
@@ -1464,39 +1497,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "supervised fine-tuning sft",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "logarithmic factors",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "optimization behavior",
+      "term": "every evaluated",
       "families": [
         "science"
       ],
