@@ -18,6 +18,7 @@ market=load("data/market.json")
 cockpit=load("data/cockpit.json")
 gate=load("data/source-gate-status.json")
 protocol=load("scientific-protocol.json")
+signal_perf=load("data/signal-performance.json")
 
 if protocol.get("objective") is None:
     errors.append("scientific_protocol_missing")
@@ -60,6 +61,10 @@ for k in ("oracle_return_pct","qqq_return_pct","alpha_pct_points"):
 
 if gate.get("discovery_quality")!="OK":
     errors.append("source_gate_discovery_not_OK")
+for cohort in ("ALL_DETECTED","TOP20","ORANGE","GREEN"):
+    if cohort not in signal_perf.get("cohorts",{}):
+        errors.append(f"signal_cohort_missing:{cohort}")
+
 if len(market.get("errors",[]))>20:
     warnings.append(f"many_market_series_errors:{len(market.get('errors',[]))}")
 
