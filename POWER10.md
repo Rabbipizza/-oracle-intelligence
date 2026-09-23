@@ -3,8 +3,8 @@
 Goal: test whether ORACLE's **pre-existing, timestamped structural discoveries** plus market ignition can improve forward returns and reach successive portfolio high-water marks.
 
 ## Capital experiment
-- Synthetic initial capital: CHF 50,000.
-- Portfolio milestone: +10% (first HWM CHF 55,000), then next +10% HWM compounds from the achieved capital.
+- Synthetic initial capital: CHF 1,000.
+- Portfolio milestone: +10% (first HWM CHF 1,100), then next +10% HWM compounds from the achieved capital.
 - Simulation/research only; no brokerage/order execution.
 - Maximum single simulated position: 15%.
 - Maximum deployed capital in V1: 60%.
