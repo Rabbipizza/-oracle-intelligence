@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 
 ROOT=pathlib.Path(__file__).parent
 DATA=ROOT/"data"
-CAPITAL=50000.0
+CAPITAL=1000.0
 MAX_POSITION=0.15
 MAX_DEPLOYED=0.60
 
@@ -62,7 +62,7 @@ for c in candidates:
     if remaining<=0: c["target_cap_chf"]=0
 
 out={"version":1,"generated_at":datetime.now(timezone.utc).isoformat(),"mode":"PROSPECTIVE_SIMULATION_ONLY",
- "initial_capital_chf":CAPITAL,"objective":{"milestone_pct":10,"next_high_water_mark_chf":55000},
+ "initial_capital_chf":CAPITAL,"objective":{"milestone_pct":10,"next_high_water_mark_chf":1100},
  "risk":{"max_position_pct":15,"max_deployed_pct":60,"forced_take_profit":False,
  "rule":"+10% is a portfolio milestone, not a guaranteed take-profit. Exit on invalidation/trailing/time-stop to be validated prospectively."},
  "method":{"frozen_v1":True,"note":"Scores are hypotheses to validate prospectively; no probability of +10% is claimed until enough forward observations exist."},
