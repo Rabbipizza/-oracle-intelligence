@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T11:44:19.293686+00:00",
+  "generated_at": "2026-09-23T21:25:35.268257+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,8 +9,8 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 27213,
-    "primary_origin_count": 1514
+    "record_count": 28515,
+    "primary_origin_count": 1516
   },
   "candidate_gates": [
     {
@@ -368,23 +368,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "natural language",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 21,
-      "primary_origin_count": 5,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "neural networks",
       "families": [
         "science"
@@ -403,7 +386,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "difficulty offer",
+      "term": "times difficulty offer",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -427,7 +410,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "times difficulty offer",
+      "term": "difficulty offer",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -618,7 +601,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "gnss observation",
+      "term": "divergence ccd",
       "families": [
         "science"
       ],
@@ -626,7 +609,79 @@
       "sources": [
         "OpenAlex"
       ],
-      "matched_origin_count": 5,
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "observation uncertainties carrier",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "propagation gnss observation",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "carrier divergence ccd",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "gnss observation uncertainties",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "carrier divergence",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 3,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -662,43 +717,27 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "ccd monitor",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "gnss observation uncertainties",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "uncertainties carrier",
       "families": [],
       "family_count": 0,
       "sources": [],
       "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "gnss observation",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 5,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -734,63 +773,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "observation uncertainties carrier",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "divergence ccd",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "carrier divergence",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "propagation gnss observation",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "carrier divergence ccd",
+      "term": "ccd monitor",
       "families": [
         "science"
       ],
@@ -948,7 +931,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "neural network cnn",
+      "term": "network cnn",
       "families": [
         "science"
       ],
@@ -964,7 +947,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "network cnn",
+      "term": "neural network cnn",
       "families": [
         "science"
       ],
@@ -1012,12 +995,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "adding parameters",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
+      "term": "fine-tuning sft",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 3,
+      "primary_origin_count": 3,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1040,23 +1027,19 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "supervised fine-tuning sft",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
+      "term": "adding parameters",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "fine-tuning sft",
+      "term": "supervised fine-tuning sft",
       "families": [
         "science"
       ],
@@ -1179,22 +1162,6 @@
       ],
       "matched_origin_count": 6,
       "primary_origin_count": 6,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "statistically significant",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1325,22 +1292,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "planning execution",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 1,
-      "primary_origin_count": 1,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "trajectory generation",
       "families": [
         "science"
@@ -1351,6 +1302,22 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 3,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "planning execution",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 1,
+      "primary_origin_count": 1,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1423,22 +1390,6 @@
       "sources": [],
       "matched_origin_count": 0,
       "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "analysis identifies",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 2,
-      "primary_origin_count": 2,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1530,7 +1481,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language llm",
+      "term": "large language llm",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1542,7 +1493,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "large language llm",
+      "term": "language llm",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1565,6 +1516,58 @@
       ],
       "matched_origin_count": 7,
       "primary_origin_count": 5,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "within one",
+      "families": [
+        "company",
+        "science"
+      ],
+      "family_count": 2,
+      "sources": [
+        "SEC EDGAR",
+        "arXiv"
+      ],
+      "matched_origin_count": 6,
+      "primary_origin_count": 6,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "neural network",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "Crossref",
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 60,
+      "primary_origin_count": 34,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "absolute error",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 9,
+      "primary_origin_count": 9,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
