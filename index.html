@@ -19,7 +19,7 @@ h2{font-size:18px;margin:0 0 12px}h3{margin:0 0 6px;font-size:15px}.muted{color:
 .scroll{overflow:auto;border:1px solid var(--line);border-radius:11px}table{width:100%;border-collapse:collapse;font-size:12px;min-width:1050px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{position:sticky;top:0;background:#102018;color:var(--muted);z-index:1;font-size:11px}tr:hover td{background:#0f1d16}.role{max-width:250px;overflow:hidden;text-overflow:ellipsis}
 .port-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.compare .box{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:12px}.compare strong{display:block;font-size:21px;margin-top:4px}
 .spark{display:inline-block;width:84px;height:28px;vertical-align:middle}.decision-title{font-size:12px;font-weight:900;margin:10px 0 8px}.decision-title:first-child{margin-top:0}.footer{color:var(--muted);font-size:11px;text-align:center;padding:8px}.error{padding:14px;border:1px solid #704040;background:#231313;border-radius:10px;color:#ffc4c4}
-button{font:inherit}
+button{font:inherit}.run-btn{margin-top:8px;background:#163525;color:var(--green);border:1px solid #2d6b48;border-radius:9px;padding:8px 12px;font-weight:850;cursor:pointer}.run-btn:hover{border-color:var(--green)}.run-btn:disabled{opacity:.55;cursor:wait}.run-status{margin-top:5px;font-size:10px;color:var(--muted)}
 @media(max-width:1050px){.trend-grid{grid-template-columns:repeat(2,1fr)}.action-grid{grid-template-columns:1fr 1fr}.port-grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.wrap{padding:10px}header{display:block}.stamp{text-align:left;margin-top:8px}.kpis,.action-grid,.trend-grid,.metrics,.detail-head,.compare{grid-template-columns:1fr 1fr}.brand h1{font-size:25px}.kpi strong{font-size:20px}.trend-name{min-height:0}}
 </style>
@@ -29,7 +29,7 @@ button{font:inherit}
 <section class="panel">
 <header>
 <div class="brand"><h1>ORACLE-IA · MARKET NOW</h1><div class="sub">Trend → sociétés → signal d'entrée → portefeuille → benchmark. Mode scientifique : les performances négatives sont conservées, jamais optimisées a posteriori.</div></div>
-<div class="stamp" id="stamp">Chargement des données…</div>
+<div class="stamp"><div id="stamp">Chargement des données…</div><button class="run-btn" id="runBtn" type="button" onclick="manualRun()">↻ Nouveau Run</button><div class="run-status" id="runStatus">Refresh manuel · données vérifiées avant affichage</div></div>
 </header>
 </section>
 
@@ -92,6 +92,44 @@ const money=(v,c='USD')=>{if(v==null)return '—';try{return new Intl.NumberForm
 const sparkline=a=>{if(!a||a.length<2)return '—';const mn=Math.min(...a),mx=Math.max(...a),span=(mx-mn)||1;const pts=a.map((v,i)=>`${(i/(a.length-1)*82+1).toFixed(1)},${(26-(v-mn)/span*24).toFixed(1)}`).join(' ');return `<span class="${cls(a[a.length-1]-a[0])}"><svg class="spark" viewBox="0 0 84 28" aria-label="évolution 1 mois"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></span>`};
 const signalBadge=s=>`<span class="badge ${(s||'').toLowerCase()}">● ${s||'—'}</span>`;
 let DATA=null, selected=null;
+const RUN_URL='https://github.com/Rabbipizza/-oracle-intelligence/actions/workflows/oracle-sources.yml';
+let runBaseline=null, pollTimer=null;
+window.manualRun=function(){
+  runBaseline=DATA&&DATA.generated_at?DATA.generated_at:null;
+  localStorage.setItem('oracle_run_baseline',runBaseline||'');
+  localStorage.setItem('oracle_run_requested_at',String(Date.now()));
+  $('runStatus').textContent='Ouvre GitHub Actions : clique “Run workflow”. Le cockpit détectera automatiquement le nouveau snapshot.';
+  window.open(RUN_URL,'_blank','noopener');
+  startRunPolling();
+};
+function startRunPolling(){
+ if(pollTimer)clearInterval(pollTimer);
+ $('runBtn').disabled=true;
+ const started=Number(localStorage.getItem('oracle_run_requested_at')||Date.now());
+ pollTimer=setInterval(async()=>{
+   try{
+     const r=await fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'});
+     if(!r.ok)throw new Error('HTTP '+r.status);
+     const d=await r.json();
+     const baseline=localStorage.getItem('oracle_run_baseline')||runBaseline;
+     if(d.generated_at && baseline && d.generated_at!==baseline){
+       clearInterval(pollTimer);pollTimer=null;
+       localStorage.removeItem('oracle_run_requested_at');localStorage.removeItem('oracle_run_baseline');
+       $('runStatus').textContent='✓ Nouveau Run chargé et vérifié';
+       $('runBtn').disabled=false;
+       renderData(d);
+     } else if(Date.now()-started>25*60*1000){
+       clearInterval(pollTimer);pollTimer=null;$('runBtn').disabled=false;
+       $('runStatus').textContent='Run non détecté après 25 min · vérifier GitHub Actions';
+     } else $('runStatus').textContent='Run en cours / attente du nouveau snapshot…';
+   }catch(e){$('runStatus').textContent='Attente des données vérifiées…';}
+ },15000);
+}
+function renderData(d){
+ DATA=d; selected=selected||(d.trends&&d.trends[0]&&d.trends[0].key)||null;
+ $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${d.market_generated_at?new Date(d.market_generated_at).toLocaleString('fr-CH'):'—'}`;
+ headline();actions();trends();selectTrend(selected);portfolio();discovery();
+}
 
 function headline(){
  const p=DATA.portfolio||{}, c=p.official_comparison||{};
@@ -173,11 +211,7 @@ function discovery(){
  (scout.length?`Nouveaux candidats ayant franchi le coverage gate : ${scout.map(x=>'<b>'+x.term+'</b>').join(', ')}.`:'Aucun nouveau trend n’a encore franchi seul le Source Coverage Gate : il reste donc hors Billboard.');
 }
 
-fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{
- DATA=d; selected=(d.trends&&d.trends[0]&&d.trends[0].key)||null;
- $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${d.market_generated_at?new Date(d.market_generated_at).toLocaleString('fr-CH'):'—'}`;
- headline(); actions(); trends(); selectTrend(selected); portfolio(); discovery();
-}).catch(e=>{$('stamp').textContent='Données indisponibles';$('headline').innerHTML=`<div class="error">Le cockpit n’a pas pu charger data/cockpit.json : ${e.message}</div>`;});
+fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{selected=(d.trends&&d.trends[0]&&d.trends[0].key)||null;renderData(d);const req=Number(localStorage.getItem('oracle_run_requested_at')||0);if(req&&Date.now()-req<25*60*1000)startRunPolling();}).catch(e=>{$('stamp').textContent='Données indisponibles';$('headline').innerHTML=`<div class="error">Le cockpit n’a pas pu charger data/cockpit.json : ${e.message}</div>`;});
 </script>
 </body>
 </html>
