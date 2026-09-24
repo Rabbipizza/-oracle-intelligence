@@ -1,103 +1,47 @@
 {
-  "generated_at": "2026-09-23T22:20:32.960671+00:00",
+  "generated_at": "2026-09-24T11:52:53.754852+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
-  "unique_papers": 3116,
-  "recent_docs": 1317,
-  "baseline_docs": 1135,
+  "unique_papers": 3323,
+  "recent_docs": 1510,
+  "baseline_docs": 1136,
   "candidates": [
     {
       "term": "large language",
       "recent_docs": 26,
       "baseline_docs": 5,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 4.153,
-      "discovery_score": 24.0096,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 3.626,
+      "discovery_score": 20.9465,
       "examples": [
-        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
-        "Score Centering Stabilizes Off-policy Reinforcement Learning",
-        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation"
+        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
+        "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform",
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition"
       ]
     },
     {
       "term": "coding agents",
       "recent_docs": 6,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 11.205,
-      "discovery_score": 10.3912,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 9.782,
+      "discovery_score": 9.2237,
       "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
         "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "An Empirical Study of Harness Design for Coding Agents",
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation"
-      ]
-    },
-    {
-      "term": "point clouds",
-      "recent_docs": 8,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 4.884,
-      "discovery_score": 9.5974,
-      "examples": [
-        "Geospatial analysis of vertical urban growth in the Vidigal Favela of Rio de Janeiro based on LiDAR and Photogrammetric point clouds",
-        "3D Power-Line Reconstruction from Low-Density Airborne LiDAR Point Clouds in Suburban Areas",
-        "Geospatial analysis of vertical urban growth in the Vidigal Favela of Rio de Janeiro based on LiDAR and Photogrammetric point clouds"
-      ]
-    },
-    {
-      "term": "vision-language-action vla",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 9.481,
-      "discovery_score": 8.2028,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Uni-LaDiR: Latent Diffusion Unifies Multimodal Reasoning"
-      ]
-    },
-    {
-      "term": "supervised fine-tuning",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 9.481,
-      "discovery_score": 8.2028,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "STR-Agent: An LLM-Driven Agent for QoS-Aware Routing in LEO Satellite Networks"
-      ]
-    },
-    {
-      "term": "gaussian splatting",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 9.481,
-      "discovery_score": 8.2028,
-      "examples": [
-        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
-        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
-        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance"
+        "An Empirical Study of Harness Design for Coding Agents"
       ]
     },
     {
       "term": "artificial intelligence",
-      "recent_docs": 15,
+      "recent_docs": 18,
       "baseline_docs": 10,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 1.272,
-      "discovery_score": 7.6804,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 1.326,
+      "discovery_score": 8.5808,
       "examples": [
         "Feasibility Study of Automated Brackish Water Fish Pond Systems: Integrating IoT Sensor Networks and Generative Artificial Intelligence for Sustainable Aquaculture in Coastal Communities",
         "Artificial Intelligence and Corporate Social Irresponsibility",
@@ -105,97 +49,111 @@
       ]
     },
     {
+      "term": "point clouds",
+      "recent_docs": 8,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 4.264,
+      "discovery_score": 8.3999,
+      "examples": [
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
+        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 8.277,
+      "discovery_score": 7.2629,
+      "examples": [
+        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL"
+      ]
+    },
+    {
+      "term": "vision-language-action vla",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 8.277,
+      "discovery_score": 7.2629,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
+      ]
+    },
+    {
+      "term": "gaussian splatting",
+      "recent_docs": 5,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 8.277,
+      "discovery_score": 7.2629,
+      "examples": [
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
+        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos"
+      ]
+    },
+    {
       "term": "autonomous driving",
       "recent_docs": 6,
       "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 3.735,
-      "discovery_score": 6.4584,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 3.261,
+      "discovery_score": 5.6223,
       "examples": [
-        "A 28nm 44.15TFLOPS/W and 1.57TFLOPS/mm\n                    <sup>2</sup>\n                    Joint-Alignment Floating-Point CIM Macro with ISO26262 ASIL-D Safety Level for Autonomous Driving",
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving"
-      ]
-    },
-    {
-      "term": "large language llms",
-      "recent_docs": 7,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 6.1218,
-      "examples": [
-        "Large Language Models as Falsifiers for Cyber-Physical Systems",
-        "Local Sparsity Enables Unsupervised LLM Safety Detection",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "language llms",
-      "recent_docs": 7,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 6.1218,
-      "examples": [
-        "Large Language Models as Falsifiers for Cyber-Physical Systems",
-        "Local Sparsity Enables Unsupervised LLM Safety Detection",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "brazilian geodetic",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
-      "examples": [
-        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
-        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
-        "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System"
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "Worst-Case Hidden-Vehicle Trajectory Search in Spatiotemporal Occlusion Regions"
       ]
     },
     {
       "term": "latent representations",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data",
-        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
+        "Can Deep Learning Achieve Cross-Physics Mapping?",
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data"
       ]
     },
     {
       "term": "human demonstrations",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
-        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
+        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction",
+        "Universal Navigation Interface: Robot-Free Data for Wheeled Robot Navigation"
       ]
     },
     {
       "term": "human intervention",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
         "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
@@ -206,66 +164,108 @@
       "term": "video generation",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
-        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
-        "DART: Distillation-Aware Reparameterization for Training-Free LoRA Reuse in Few-Step Video Diffusion Models",
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models"
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation"
       ]
     },
     {
       "term": "policy optimization",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
+        "RTK-Vision PPO for Autonomous Micro UAV Recovery on an Airborne Carrier",
         "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards",
-        "EPIG-Tree: Compute-Optimal Branching for Gradient-Efficient Reinforcement Learning"
-      ]
-    },
-    {
-      "term": "quality control",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
-      "examples": [
-        "Novel non-destructive machine learning-assisted spectroscopic method for quality control of bleached kraft pulps",
-        "Historical Cadastral Maps as Geospatial Policy Data: Workflow Management and Quality Control in the Incra Land Reform Archive",
-        "Historical Cadastral Maps as Geospatial Policy Data: Workflow Management and Quality Control in the Incra Land Reform Archive"
+        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards"
       ]
     },
     {
       "term": "object detection",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
-        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation",
+        "Semantic SLAM in Precision Agriculture using Bayesian Inference",
         "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
-        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection"
+        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+      ]
+    },
+    {
+      "term": "colorectal cancer",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
+      "examples": [
+        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
+        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
+        "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis"
+      ]
+    },
+    {
+      "term": "quality control",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
+      "examples": [
+        "Novel non-destructive machine learning-assisted spectroscopic method for quality control of bleached kraft pulps",
+        "Obesity Modulates Mitochondrial Quality Control in Peripheral Blood Mononuclear Cells After Periodontal Treatment",
+        "Historical Cadastral Maps as Geospatial Policy Data: Workflow Management and Quality Control in the Incra Land Reform Archive"
+      ]
+    },
+    {
+      "term": "south american",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
+      "examples": [
+        "First genomic evidence of inbreeding in South American pumas and the role of Andean climate history in shaping genetic diversity",
+        "First genomic evidence of inbreeding in South American pumas and the role of Andean climate history in shaping genetic diversity",
+        "Deformation Pattern of the South American Plate Using Robust GNSS Velocity Solutions"
+      ]
+    },
+    {
+      "term": "brazilian geodetic",
+      "recent_docs": 4,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
+      "examples": [
+        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
+        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
+        "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System"
       ]
     },
     {
       "term": "sea surface",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
         "Determining Sea Surface Variations Along the Brazilian Coast: the Importance of Harmonizing Altimetric Reference Frames",
         "Determining Sea Surface Variations Along the Brazilian Coast: the Importance of Harmonizing Altimetric Reference Frames",
@@ -273,27 +273,13 @@
       ]
     },
     {
-      "term": "south american",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
-      "examples": [
-        "Deformation Pattern of the South American Plate Using Robust GNSS Velocity Solutions",
-        "Deformation Pattern of the South American Plate Using Robust GNSS Velocity Solutions",
-        "First genomic evidence of inbreeding in South American pumas and the role of Andean climate history in shaping genetic diversity"
-      ]
-    },
-    {
       "term": "tide gauge",
       "recent_docs": 4,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 7.757,
-      "discovery_score": 6.0862,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 6.772,
+      "discovery_score": 5.3714,
       "examples": [
         "Tide Gauge Data Processing for Analysis of Mean Sea Surface Models",
         "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System",
@@ -301,41 +287,349 @@
       ]
     },
     {
+      "term": "language llms",
+      "recent_docs": 7,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 2.257,
+      "discovery_score": 5.2873,
+      "examples": [
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
+        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
+        "Local Sparsity Enables Unsupervised LLM Safety Detection"
+      ]
+    },
+    {
+      "term": "large language llms",
+      "recent_docs": 7,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 2.257,
+      "discovery_score": 5.2873,
+      "examples": [
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
+        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
+        "Local Sparsity Enables Unsupervised LLM Safety Detection"
+      ]
+    },
+    {
       "term": "llm agents",
       "recent_docs": 5,
       "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 3.16,
-      "discovery_score": 4.977,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 2.759,
+      "discovery_score": 4.3174,
       "examples": [
+        "Vibe-FDTR: An agent-oriented framework for reproducible frequency-domain thermoreflectance data analysis",
         "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
-        "How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents"
+        "DeliveryGym: An RL Environment for Long-Horizon Embodied Agent Planning with Adaptive Curriculum"
       ]
     },
     {
       "term": "neural networks",
       "recent_docs": 13,
       "baseline_docs": 16,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 0.705,
-      "discovery_score": 4.425,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 0.616,
+      "discovery_score": 3.7149,
       "examples": [
         "Temporal graph neural networks for sports outcome prediction: modeling dynamic player interactions and evolving team structures",
-        "Error Bounds for Physics Informed Neural Networks in Generalized KdV Equations Placed on Unbounded Domains",
-        "Neural Networks Applied to Geodetic Functionals Interpolation Aiming the IHRS Materialization"
+        "Radio-Frequency Convolutional Neural Networks",
+        "QiT: Quantum-Inspired Transformer for Visual Recognition Task"
+      ]
+    },
+    {
+      "term": "coding agent",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "The Missing Complement: State-Conditioned Minimal Sufficient Evidence for Coding Agents",
+        "Learning and Transferring Closed-Loop Robot Software"
+      ]
+    },
+    {
+      "term": "future visual",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "Astronex-World 1.0: Real-Time Interactive World Model Foundation"
+      ]
+    },
+    {
+      "term": "demonstrations however",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
+      ]
+    },
+    {
+      "term": "robot motion",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "Bayesian Continuum Robot Dynamics and State Estimation",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
+      ]
+    },
+    {
+      "term": "planning execution",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Custom PX4 firmware for autonomous hybrid aerial-marine missions",
+        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability",
+        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning"
+      ]
+    },
+    {
+      "term": "making large-scale",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Towards Scaling Marine Perception with Synthetic Data",
+        "Universal Navigation Interface: Robot-Free Data for Wheeled Robot Navigation",
+        "TouchSight: Bare-Handed Tactile Prediction from Egocentric Video via Generative Visual Augmentation"
+      ]
+    },
+    {
+      "term": "rgb-d observations",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute"
+      ]
+    },
+    {
+      "term": "adding parameters",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Relational Attention for Data-Efficient Language Modeling"
+      ]
+    },
+    {
+      "term": "fine-tuning sft",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning sft",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+      ]
+    },
+    {
+      "term": "robot policies",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
+        "Learning and Transferring Closed-Loop Robot Software"
+      ]
+    },
+    {
+      "term": "failed rollouts",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
+        "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
+        "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution"
+      ]
+    },
+    {
+      "term": "trajectory generation",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
+        "Walking on the Slope: Stable Bipedal Gaits with Genetic-Algorithm-Optimized Trajectories",
+        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning"
+      ]
+    },
+    {
+      "term": "among other",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Bayesian Continuum Robot Dynamics and State Estimation",
+        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection",
+        "Edustories: A Collection of Real-world Case Studies from Classroom Practices"
+      ]
+    },
+    {
+      "term": "motion planning",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
+        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
+      ]
+    },
+    {
+      "term": "optimization behavior",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
+        "Quantum Graph Convolutional Networks: Implementation and Trainability Analysis"
+      ]
+    },
+    {
+      "term": "every evaluated",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
+        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics"
+      ]
+    },
+    {
+      "term": "dynamic environments",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Time-Efficient Iterative Learning Planning for Safety-Critical Dynamic Obstacle Avoidance",
+        "Can 4D Foundation Models Remember?",
+        "Neuro-Symbolic Agentic AI for Networked Low-Altitude UAVs"
+      ]
+    },
+    {
+      "term": "pipeline combines",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
+        "Automated Goldsmith's Mark Retrieval in Silverware",
+        "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain"
+      ]
+    },
+    {
+      "term": "times difficulty offer",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
+        "In Times of Difficulty the Psalms Offer Images of Justice",
+        "In Times of Difficulty the Psalms Offer Permission to Grieve"
       ]
     },
     {
       "term": "times difficulty",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "In Times of Difficulty the Psalms Offer Encouragement to Remember",
         "In Times of Difficulty the Psalms Offer Images of Justice",
@@ -346,24 +640,10 @@
       "term": "difficulty offer",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "times difficulty offer",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "In Times of Difficulty the Psalms Offer Encouragement to Remember",
         "In Times of Difficulty the Psalms Offer Images of Justice",
@@ -374,10 +654,10 @@
       "term": "risk assessment",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
         "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV",
@@ -388,10 +668,10 @@
       "term": "onderzoek naar",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Eten in gedachten: onderzoek naar de rol van dopamine en het endocannabino\u00efde systeem bij voedingsbeloning, obesitas en bariatrische chirurgie",
         "In vitro en in silico onderzoek naar de farmacokinetiek van geneesmiddelen bij pasgeborenen met perinatale asfyxie tijdens therapeutische hypothermie",
@@ -402,10 +682,10 @@
       "term": "logic human",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
         "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
@@ -413,41 +693,293 @@
       ]
     },
     {
-      "term": "colorectal cancer",
+      "term": "urban environment",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
-        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
-        "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis"
+        "Tropospheric Ozone Formation Potential and Related Design Considerations for Radiative Coolers",
+        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment",
+        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment"
       ]
     },
     {
       "term": "emerging technologies",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
+        "High-performance orbital-torque magnetic memory on the 300-mm platform",
         "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA",
-        "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA",
-        "High-performance orbital-torque magnetic memory on the 300-mm platform"
+        "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA"
+      ]
+    },
+    {
+      "term": "high-performance computing",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "High-performance orbital-torque magnetic memory on the 300-mm platform",
+        "The Life of a Token: from Words to Bits on the Wire",
+        "Accelerating Sharded Data Parallelism at Scale with Federated Learning"
+      ]
+    },
+    {
+      "term": "every stage",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Block-modular grey-box identification of a short-stroke seawater-pump power take-off for wave energy: loss decomposition and multi-regime validation",
+        "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
+        "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents"
+      ]
+    },
+    {
+      "term": "natural images",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
+        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
+        "A Smaller Transformer in Your Transformer"
+      ]
+    },
+    {
+      "term": "inverse solvers",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+      ]
+    },
+    {
+      "term": "fixed number",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
+        "Evolution or Illusion? Rethinking Evaluation in LLM Evolutionary Search"
+      ]
+    },
+    {
+      "term": "will made",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling"
+      ]
+    },
+    {
+      "term": "language modeling",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
+        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
+        "Relational Attention for Data-Efficient Language Modeling"
+      ]
+    },
+    {
+      "term": "text recognition",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
+        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
+        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition"
+      ]
+    },
+    {
+      "term": "agents increasingly",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+        "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
+        "Learning and Transferring Closed-Loop Robot Software"
+      ]
+    },
+    {
+      "term": "benchmark evaluating",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
+        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+      ]
+    },
+    {
+      "term": "carbon capture",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
+        "The Absorption Ledger: deposited record for \"Who absorbs the shortfall? Performance conditions and cost recovery in North American carbon capture subsidies",
+        "Induced seismicity at the Quest Carbon Capture and Storage project, Alberta"
+      ]
+    },
+    {
+      "term": "network cnn",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "neural network cnn",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+      ]
+    },
+    {
+      "term": "logarithmic factors",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
+        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
+        "Near-Optimal Pure Single-Loop Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization"
+      ]
+    },
+    {
+      "term": "decision making",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Resolution limits for process comparison from event data",
+        "Online Adaptive Kernel Mixing for Gaussian Process Decision Making",
+        "MTVA-Bench: Evaluating the Language Model Inside Cascaded Voice Agents"
+      ]
+    },
+    {
+      "term": "resource constraints",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Detecting Deceptive Recruitment: A Signal-theoretic Machine Learning Framework for Early Identification of Labour Exploitation",
+        "The Organization of Inference: Information, Resource Constraints, and AI Production",
+        "A Mathematical Model of Motivated Emotional Mind - Cognitive Embodied System"
+      ]
+    },
+    {
+      "term": "therapeutic strategies",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling",
+        "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,",
+        "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,"
+      ]
+    },
+    {
+      "term": "real-world traffic",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "REARL: A Closed-loop Autonomous Driving Simulation Enhancement Framework with Real Traffic Data and Large Language Models",
+        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG",
+        "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction"
       ]
     },
     {
       "term": "disease detection",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "CELVRIJ DNA METHYLATIE VOOR NON-INVASIEVE DIAGNOSTIEK: ADVANCING DISEASE DETECTION THROUGH INTEGRATIVE ANALYSES",
         "Current State of the Art in Remote Sensing and Computational Approaches for Plant Viral Disease Detection",
@@ -455,69 +987,69 @@
       ]
     },
     {
+      "term": "pour les",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Informatique MPI/MPI*: Cours complet, exercices corrig\u00e9s et projets guid\u00e9s pour les classes pr\u00e9paratoires",
+        "Apr\u00e8s l\u2019arm\u00e9e : quelles nouvelles vies pour les espaces d\u00e9militaris\u00e9s ?",
+        "Du bois mort pour des for\u00eats vivantes ! Am\u00e9liorations m\u00e9thodologiques pour les mod\u00e8les statistiques de distribution (conjointe) d'esp\u00e8ce(s) appliqu\u00e9s \u00e0 l'\u00e9tude des relations entre biodiversit\u00e9 saproxylique et m\u00e9triques de bois mort en for\u00eat fran\u00e7aise"
+      ]
+    },
+    {
+      "term": "type diabetes",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "[Analysis of influencing factors and construction of a predictive model for cardiovascular autonomic neuropathy in type 2 diabetes mellitus].",
+        "Aberrant immune regulation and enrichment of stem-like CD8+ T cells in the pancreatic lymph node during type 1 diabetes",
+        "Post-diagnosis trajectories in treatment, adiposity, glycaemic control, and dietary behaviour among adults with type 2 diabetes in Mexico"
+      ]
+    },
+    {
+      "term": "artifacts anonymous",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Artifacts for Anonymous Review",
+        "Artifacts for Anonymous Review",
+        "Artifacts for Anonymous Review"
+      ]
+    },
+    {
       "term": "policy analysis",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "policyengine: A Microsimulation Tool for Tax-Benefit Policy Analysis",
-        "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,",
-        "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,"
-      ]
-    },
-    {
-      "term": "text recognition",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
-        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
-        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition"
-      ]
-    },
-    {
-      "term": "carbon capture",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Induced seismicity at the Quest Carbon Capture and Storage project, Alberta",
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "The Absorption Ledger: deposited record for \"Who absorbs the shortfall? Performance conditions and cost recovery in North American carbon capture subsidies"
-      ]
-    },
-    {
-      "term": "therapeutic strategies",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,",
         "Policy Analysis of Sustainable Pharmaceutical and Therapeutic Strategies in Namibia,",
-        "CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling"
+        "policyengine: A Microsimulation Tool for Tax-Benefit Policy Analysis"
       ]
     },
     {
       "term": "small church",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Instilling New Life in a Struggling Small Church",
         "Prioritizing the Many Tasks of a Small Church Minister",
@@ -525,167 +1057,13 @@
       ]
     },
     {
-      "term": "divergence ccd",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "divergence ccd monitor",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
       "term": "observation uncertainties",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "carrier divergence",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "observation uncertainties carrier",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "uncertainties carrier",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "gnss observation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "uncertainties carrier divergence",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "propagation gnss",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "propagation gnss observation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "gnss observation uncertainties",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
-        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
-      ]
-    },
-    {
-      "term": "ccd monitor",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
         "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
@@ -696,10 +1074,164 @@
       "term": "carrier divergence ccd",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "uncertainties carrier",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "gnss observation uncertainties",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "uncertainties carrier divergence",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "observation uncertainties carrier",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "divergence ccd monitor",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "carrier divergence",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "propagation gnss",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "propagation gnss observation",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "gnss observation",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "ccd monitor",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
+      "examples": [
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
+        "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor"
+      ]
+    },
+    {
+      "term": "divergence ccd",
+      "recent_docs": 3,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
         "Propagation of GNSS Observation Uncertainties in the Code Carrier Divergence (CCD) Monitor",
@@ -710,10 +1242,10 @@
       "term": "temporal dynamics",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Temporal Dynamics of Wildfire and Its Relationship to Weather Conditions in Ilha Grande National Park (2015\u20132025)",
         "Temporal Dynamics of Wildfire and Its Relationship to Weather Conditions in Ilha Grande National Park (2015\u20132025)",
@@ -724,10 +1256,10 @@
       "term": "radio occultation",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Comparative Analysis of Ionospheric Monitoring Techniques in Brazil: Radio Occultation Versus Ground-Based GNSS Measurements",
         "Comparative Analysis of Ionospheric Monitoring Techniques in Brazil: Radio Occultation Versus Ground-Based GNSS Measurements",
@@ -738,10 +1270,10 @@
       "term": "radiosonde observations",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Investigating GNSS ZTD Variability Under Different Atmospheric Conditions Using Radiosonde Observations in Brazilian Stations",
         "Investigating GNSS ZTD Variability Under Different Atmospheric Conditions Using Radiosonde Observations in Brazilian Stations",
@@ -752,10 +1284,10 @@
       "term": "networks applied",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
         "Neural Networks Applied to Geodetic Functionals Interpolation Aiming the IHRS Materialization",
         "Neural Networks Applied to Geodetic Functionals Interpolation Aiming the IHRS Materialization",
@@ -763,647 +1295,115 @@
       ]
     },
     {
-      "term": "urban environment",
+      "term": "cardiac rehabilitation",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment",
-        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment",
-        "Tropospheric Ozone Formation Potential and Related Design Considerations for Radiative Coolers"
+        "[A multicenter survey of pediatric cardiac rehabilitation in selected tertiary hospitals in China].",
+        "[AI-driven model change in cardiac rehabilitation: cutting-edge applications, clinical evidence, and future prospects].",
+        "[Effects of cardiac rehabilitation and predictive value of Humanin/CRP ratio in patients with acute exacerbation of chronic heart failure]."
       ]
     },
     {
-      "term": "natural images",
+      "term": "functional analysis complement",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
-        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
-        "A Smaller Transformer in Your Transformer"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "agents increasingly",
+      "term": "variants genotyped ipsc",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
-        "Learning and Transferring Closed-Loop Robot Software"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "inverse solvers",
+      "term": "functional analysis",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
-        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "benchmark evaluating",
+      "term": "ipsc epithelial cell",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
-        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "neural network cnn",
+      "term": "epithelial cell",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "network cnn",
+      "term": "ipsc epithelial",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     },
     {
-      "term": "future visual",
+      "term": "complement variants genotyped",
       "recent_docs": 3,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
+      "recent_corpus_docs": 1510,
+      "baseline_corpus_docs": 1136,
+      "acceleration": 5.267,
+      "discovery_score": 3.5863,
       "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models"
-      ]
-    },
-    {
-      "term": "demonstrations however",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
-      ]
-    },
-    {
-      "term": "every evaluated",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics",
-        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation"
-      ]
-    },
-    {
-      "term": "supervised fine-tuning sft",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "fine-tuning sft",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "adding parameters",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Relational Attention for Data-Efficient Language Modeling",
-        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies"
-      ]
-    },
-    {
-      "term": "logarithmic factors",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
-        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
-        "Near-Optimal Pure Single-Loop Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization"
-      ]
-    },
-    {
-      "term": "optimization behavior",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
-        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "Quantum Graph Convolutional Networks: Implementation and Trainability Analysis"
-      ]
-    },
-    {
-      "term": "every stage",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
-        "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
-        "Block-modular grey-box identification of a short-stroke seawater-pump power take-off for wave energy: loss decomposition and multi-regime validation"
-      ]
-    },
-    {
-      "term": "language modeling",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Relational Attention for Data-Efficient Language Modeling",
-        "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
-        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition"
-      ]
-    },
-    {
-      "term": "decision making",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Resolution limits for process comparison from event data",
-        "MTVA-Bench: Evaluating the Language Model Inside Cascaded Voice Agents",
-        "Online Adaptive Kernel Mixing for Gaussian Process Decision Making"
-      ]
-    },
-    {
-      "term": "fixed number",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
-        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
-        "Evolution or Illusion? Rethinking Evaluation in LLM Evolutionary Search"
-      ]
-    },
-    {
-      "term": "coding agent",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "The Missing Complement: State-Conditioned Minimal Sufficient Evidence for Coding Agents",
-        "Learning and Transferring Closed-Loop Robot Software"
-      ]
-    },
-    {
-      "term": "pipeline combines",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain",
-        "Automated Goldsmith's Mark Retrieval in Silverware",
-        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations"
-      ]
-    },
-    {
-      "term": "among other",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Edustories: A Collection of Real-world Case Studies from Classroom Practices",
-        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection",
-        "Bayesian Continuum Robot Dynamics and State Estimation"
-      ]
-    },
-    {
-      "term": "failed rollouts",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
-        "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution",
-        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces"
-      ]
-    },
-    {
-      "term": "resource constraints",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "The Organization of Inference: Information, Resource Constraints, and AI Production",
-        "A Mathematical Model of Motivated Emotional Mind - Cognitive Embodied System",
-        "Detecting Deceptive Recruitment: A Signal-theoretic Machine Learning Framework for Early Identification of Labour Exploitation"
-      ]
-    },
-    {
-      "term": "making large-scale",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "TouchSight: Bare-Handed Tactile Prediction from Egocentric Video via Generative Visual Augmentation",
-        "Towards Scaling Marine Perception with Synthetic Data",
-        "Universal Navigation Interface: Robot-Free Data for Wheeled Robot Navigation"
-      ]
-    },
-    {
-      "term": "however presence",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Stress-testing Alignment Midtraining",
-        "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting",
-        "Scattering-robust Imaging of Azimuthal Features with Enhanced Resolution"
-      ]
-    },
-    {
-      "term": "high-performance computing",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Accelerating Sharded Data Parallelism at Scale with Federated Learning",
-        "The Life of a Token: from Words to Bits on the Wire",
-        "High-performance orbital-torque magnetic memory on the 300-mm platform"
-      ]
-    },
-    {
-      "term": "real-world traffic",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG",
-        "FedeRICo: Federated Region-Influenced Coupling for Traffic Flow Prediction",
-        "REARL: A Closed-loop Autonomous Driving Simulation Enhancement Framework with Real Traffic Data and Large Language Models"
-      ]
-    },
-    {
-      "term": "planning execution",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
-        "Custom PX4 firmware for autonomous hybrid aerial-marine missions",
-        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
-      ]
-    },
-    {
-      "term": "trajectory generation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning",
-        "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
-        "Walking on the Slope: Stable Bipedal Gaits with Genetic-Algorithm-Optimized Trajectories"
-      ]
-    },
-    {
-      "term": "dynamic environments",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Neuro-Symbolic Agentic AI for Networked Low-Altitude UAVs",
-        "Can 4D Foundation Models Remember?",
-        "Time-Efficient Iterative Learning Planning for Safety-Critical Dynamic Obstacle Avoidance"
-      ]
-    },
-    {
-      "term": "robot policies",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Learning and Transferring Closed-Loop Robot Software",
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
-        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces"
-      ]
-    },
-    {
-      "term": "rgb-d observations",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
-        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
-      ]
-    },
-    {
-      "term": "will made",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling"
-      ]
-    },
-    {
-      "term": "artifacts anonymous",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "Artifacts for Anonymous Review",
-        "Artifacts for Anonymous Review",
-        "Artifacts for Anonymous Review"
-      ]
-    },
-    {
-      "term": "robot motion",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "Bayesian Continuum Robot Dynamics and State Estimation",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
-      ]
-    },
-    {
-      "term": "motion planning",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 6.033,
-      "discovery_score": 4.0814,
-      "examples": [
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
-        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
-      ]
-    },
-    {
-      "term": "remote sensing",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "A Wavelet-Feature Correlation-Based Greedy Clustering Framework for Unsupervised Hyperspectral and Multispectral Remote Sensing Classification",
-        "Current State of the Art in Remote Sensing and Computational Approaches for Plant Viral Disease Detection",
-        "Current State of the Art in Remote Sensing and Computational Approaches for Plant Viral Disease Detection"
-      ]
-    },
-    {
-      "term": "spatial analysis",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "Spatial Analysis of Infection Rates Caused by Acinetobacter Spp. and Carbapenem-Resistant Enterobacteriaceae in the State of S\u00e3o Paulo",
-        "Spatial Analysis of Infection Rates Caused by Acinetobacter Spp. and Carbapenem-Resistant Enterobacteriaceae in the State of S\u00e3o Paulo",
-        "Spatial Analysis of Ixodes Scapularis in Nova Scotia, Canada"
-      ]
-    },
-    {
-      "term": "flow matching",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "Affordance-based robot manipulation with flow matching",
-        "Dynamic Generalized Gromov-Wasserstein Optimal Transport"
-      ]
-    },
-    {
-      "term": "large language llm",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
-        "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
-        "Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks"
-      ]
-    },
-    {
-      "term": "language llm",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
-        "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
-        "Digital Twins for Opinion Dynamics: A Generative LLM Framework for Social Networks"
-      ]
-    },
-    {
-      "term": "ground truth",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "Generating Heterogeneous 3D Geological Microstructures from 2D Images via a Stable Diffusion-Adversarial Model",
-        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search",
-        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
-      ]
-    },
-    {
-      "term": "within one",
-      "recent_docs": 4,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 2.586,
-      "discovery_score": 3.5817,
-      "examples": [
-        "MTVA-Bench: Evaluating the Language Model Inside Cascaded Voice Agents",
-        "Astronex-World 1.0: Real-Time Interactive World Model Foundation",
-        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding"
-      ]
-    },
-    {
-      "term": "neural network",
-      "recent_docs": 8,
-      "baseline_docs": 8,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 0.862,
-      "discovery_score": 3.3662,
-      "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Customizable and Jointly Optimized Route Planning: A Deep Architecture Enabling Differentiable Shortest-Path Search"
-      ]
-    },
-    {
-      "term": "absolute error",
-      "recent_docs": 5,
-      "baseline_docs": 3,
-      "recent_corpus_docs": 1317,
-      "baseline_corpus_docs": 1135,
-      "acceleration": 1.354,
-      "discovery_score": 2.9895,
-      "examples": [
-        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
-        "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation",
-        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention"
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System",
+        "Functional Analysis of Complement Variants in a Genotyped iPSC Epithelial Cell Model System"
       ]
     }
   ]
