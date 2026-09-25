@@ -219,6 +219,7 @@ def main():
         "action_now":action,
         "target_allocation_pct":decisions.get("target_allocation_pct",{}),
         "actual_holdings_pct":decisions.get("actual_holdings_pct",{}),
+        "benchmark_competition":decisions.get("benchmark_competition",{}),
         "portfolio":portfolio_view,
         "market_errors":market.get("errors",[])
     }
