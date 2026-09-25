@@ -50,8 +50,11 @@ for tr in trends[:5]:
 
 fresh=cockpit.get("decision_freshness",{})
 if fresh.get("status")=="STALE":
-    warnings.append(f"decision_state_stale:{fresh.get('lag_days')}d:{cockpit.get('decision_as_of')}->{cockpit.get('data_as_of')}")
-
+    errors.append(f"decision_state_stale:{fresh.get('lag_days')}d:{cockpit.get('decision_as_of')}->{cockpit.get('data_as_of')}")
+if cockpit.get("decision_as_of") != cockpit.get("data_as_of"):
+    errors.append(f"decision_market_date_mismatch:{cockpit.get('decision_as_of')}!={cockpit.get('data_as_of')}")
+if not isinstance(cockpit.get("target_allocation_pct"),dict):
+    errors.append("target_allocation_missing")
 pf=cockpit.get("portfolio",{})
 if len(pf.get("positions",[]))<2:
     errors.append("portfolio_positions_missing")
