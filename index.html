@@ -159,7 +159,8 @@ function actionCard(x){
    <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div><div class="ticker">${x.ticker}</div><div class="muted small">${x.company}</div></div>${signalBadge(x.signal)}</div>
    <div class="small" style="margin-top:8px">${x.trend}</div>
    <div class="muted tiny" style="margin-top:4px;white-space:normal">${x.signal_reason||''}</div>
-   <div class="muted tiny" style="margin-top:6px">Structural: <b>${x.structural_early_bird==null?'—':x.structural_early_bird.toFixed(1)}</b> · Entry: <b>${x.entry_score==null?'—':x.entry_score.toFixed(1)}</b> · TARGET: <b>${x.target_weight_pct==null?'—':x.target_weight_pct.toFixed(1)+'%'}</b></div>
+   <div class="muted tiny" style="margin-top:6px">Structural: <b>${x.structural_early_bird==null?'—':x.structural_early_bird.toFixed(1)}</b> · Entry: <b>${x.entry_score==null?'—':x.entry_score.toFixed(1)}</b></div>
+   <div class="muted tiny" style="margin-top:5px">ACTUAL: <b>${x.actual_weight_pct==null?'0.0%':x.actual_weight_pct.toFixed(1)+'%'}</b> · TARGET: <b>${x.target_weight_pct==null?'0.0%':x.target_weight_pct.toFixed(1)+'%'}</b> · ACTION: <b>${x.portfolio_action||'WAIT'}</b></div>
    <div class="metrics">
     <div class="metric"><span>J-1</span><b class="${cls(x.d1)}">${pct(x.d1)}</b></div>
     <div class="metric"><span>1 sem.</span><b class="${cls(x.w1)}">${pct(x.w1)}</b></div>
