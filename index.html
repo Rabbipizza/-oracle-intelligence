@@ -134,7 +134,6 @@ function renderData(d){
    ? `Décision: ${decisionDate} · <span class="neg">EN RETARD ${df.lag_days??'?'} j</span>`
    : `Décision: ${decisionDate} · <span class="pos">à jour</span>`;
  $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${marketDate}<br>${decisionLine}`;
- const df=d.decision_freshness||{};
  const f=$('decisionFreshness');
  if(f){
    f.innerHTML=df.status==='STALE'
