@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T09:29:45.697746+00:00",
+  "generated_at": "2026-09-25T09:36:34.331727+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,8 +9,8 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 33723,
-    "primary_origin_count": 1817
+    "record_count": 35025,
+    "primary_origin_count": 1917
   },
   "candidate_gates": [
     {
@@ -74,7 +74,7 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 190,
+      "matched_origin_count": 191,
       "primary_origin_count": 11,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -178,7 +178,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "bog liq",
+      "term": "bilan bog liq",
       "families": [
         "science"
       ],
@@ -194,7 +194,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "bilan bog liq",
+      "term": "bog liq",
       "families": [
         "science"
       ],
@@ -533,55 +533,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "yurti talabalarida",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "quv yurti talabalarida",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "yurti talabalarida moliyaviy",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "talabalarida moliyaviy savodxonlikni",
       "families": [
         "science"
       ],
@@ -613,7 +565,55 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "quv yurti talabalarida",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "moliyaviy savodxonlikni",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "yurti talabalarida",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "talabalarida moliyaviy savodxonlikni",
       "families": [
         "science"
       ],
@@ -645,7 +645,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "haus rztlichen praxen",
+      "term": "haus rztlichen",
       "families": [
         "science"
       ],
@@ -661,7 +661,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "haus rztlichen",
+      "term": "haus rztlichen praxen",
       "families": [
         "science"
       ],
@@ -693,6 +693,22 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "turon xalqlari",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex"
+      ],
+      "matched_origin_count": 5,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "diniy tiqodlarida",
       "families": [
         "science"
@@ -709,7 +725,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "xalqlari diniy tiqodlarida",
+      "term": "qadimgi turon xalqlari",
       "families": [
         "science"
       ],
@@ -717,23 +733,7 @@
       "sources": [
         "OpenAlex"
       ],
-      "matched_origin_count": 6,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "turon xalqlari",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex"
-      ],
-      "matched_origin_count": 5,
+      "matched_origin_count": 4,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -757,7 +757,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "qadimgi turon xalqlari",
+      "term": "xalqlari diniy tiqodlarida",
       "families": [
         "science"
       ],
@@ -765,7 +765,7 @@
       "sources": [
         "OpenAlex"
       ],
-      "matched_origin_count": 4,
+      "matched_origin_count": 6,
       "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
@@ -1276,7 +1276,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "times difficulty",
+      "term": "times difficulty offer",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1300,7 +1300,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "times difficulty offer",
+      "term": "times difficulty",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1375,24 +1375,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "high-performance computing",
-      "families": [
-        "industry_contracts",
-        "science"
-      ],
-      "family_count": 2,
-      "sources": [
-        "TED EU procurement",
-        "arXiv"
-      ],
-      "matched_origin_count": 4,
-      "primary_origin_count": 4,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "emerging technologies",
       "families": [
         "science"
@@ -1405,6 +1387,24 @@
       ],
       "matched_origin_count": 9,
       "primary_origin_count": 1,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "high-performance computing",
+      "families": [
+        "industry_contracts",
+        "science"
+      ],
+      "family_count": 2,
+      "sources": [
+        "TED EU procurement",
+        "arXiv"
+      ],
+      "matched_origin_count": 4,
+      "primary_origin_count": 4,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1536,18 +1536,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "benchmark evaluating",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "carbon capture",
       "families": [
         "science"
@@ -1559,6 +1547,18 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 1,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "benchmark evaluating",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
