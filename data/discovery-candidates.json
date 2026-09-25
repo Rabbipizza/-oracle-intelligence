@@ -1,341 +1,33 @@
 {
-  "generated_at": "2026-09-25T10:01:53.420235+00:00",
+  "generated_at": "2026-09-25T11:55:53.633051+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
-  "unique_papers": 3534,
-  "recent_docs": 1708,
+  "unique_papers": 4512,
+  "recent_docs": 2686,
   "baseline_docs": 1137,
   "candidates": [
     {
-      "term": "large language",
-      "recent_docs": 26,
-      "baseline_docs": 5,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 3.208,
-      "discovery_score": 18.4794,
-      "examples": [
-        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
-        "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform",
-        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition"
-      ]
-    },
-    {
-      "term": "oliy quv",
-      "recent_docs": 8,
+      "term": "vision-language vlms",
+      "recent_docs": 48,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 11.32,
-      "discovery_score": 11.9416,
-      "examples": [
-        "MOLIYAVIY SAVODXONLIK TUSHUNCHASI VA UNING TARKIBIY KOMPONENTLARI (Oliy o'quv yurtida noiqtisodiy yo'nalish talabalari misolida)",
-        "MOLIYAVIY SAVODXONLIK TUSHUNCHASI VA UNING TARKIBIY KOMPONENTLARI (Oliy o'quv yurtida noiqtisodiy yo'nalish talabalari misolida)",
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)"
-      ]
-    },
-    {
-      "term": "qadimgi turon",
-      "recent_docs": 8,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 11.32,
-      "discovery_score": 11.9416,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Yangi O\u02bbzbekistonda qadimgi Turon sivilizatsiyasining diniy va mifologik merosini asrash hamda targ'ib qilish masalalari"
-      ]
-    },
-    {
-      "term": "artificial intelligence",
-      "recent_docs": 20,
-      "baseline_docs": 10,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 1.3,
-      "discovery_score": 8.6777,
-      "examples": [
-        "Feasibility Study of Automated Brackish Water Fish Pond Systems: Integrating IoT Sensor Networks and Generative Artificial Intelligence for Sustainable Aquaculture in Coastal Communities",
-        "Artificial Intelligence and Corporate Social Irresponsibility",
-        "An Exploratory Study on the Interaction Mechanism between Humanistic Imagination and Character Development in the Age of Artificial Intelligence"
-      ]
-    },
-    {
-      "term": "coding agents",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "An Empirical Study of Harness Design for Coding Agents"
-      ]
-    },
-    {
-      "term": "quv yurti",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI"
-      ]
-    },
-    {
-      "term": "oliy quv yurti",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI"
-      ]
-    },
-    {
-      "term": "markaziy osiyo",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Ilk zardushtiylik bronza va ilk temir davri Markaziy Osiyo xalqlari hayotida regulyativ hamda integrativ zarurat sifatida",
-        "\"Markaziy Osiyo mifologiyasi\"ni alohida ilmiy tadqiqot obyekti sifatida o'rganishning nazariy asoslari",
-        "Markaziy Osiyo mifologiyasida ajdodlarga sig\u02bbinish an'analari"
-      ]
-    },
-    {
-      "term": "xalqlari diniy",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Jizzax vohasi xalqlari diniy e'tiqodlaridagi olov topinchi haqida"
-      ]
-    },
-    {
-      "term": "bog liq",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Nikoh to\u02bbyi va u bilan bog\u02bbliq an'ana va marosimlarda tabiat kultlari va arxaik tasavvurlar",
-        "Abu Rayhon Beruniy ma'lumotlarida qadimgi xalqlarning Navro\u02bbz bilan bog'liq diniy-mifologik qarashlari",
-        "Surxon vohasi etnografiyasida Chiltanlar obrazi va ular bilan bog\u02bbliq e'tiqodlar (Boysun va Qumqo\u02bbrg\u02bbon tumanlari misolida)"
-      ]
-    },
-    {
-      "term": "bilan bog liq",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Nikoh to\u02bbyi va u bilan bog\u02bbliq an'ana va marosimlarda tabiat kultlari va arxaik tasavvurlar",
-        "Abu Rayhon Beruniy ma'lumotlarida qadimgi xalqlarning Navro\u02bbz bilan bog'liq diniy-mifologik qarashlari",
-        "Surxon vohasi etnografiyasida Chiltanlar obrazi va ular bilan bog\u02bbliq e'tiqodlar (Boysun va Qumqo\u02bbrg\u02bbon tumanlari misolida)"
-      ]
-    },
-    {
-      "term": "bilan bog",
-      "recent_docs": 6,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 8.657,
-      "discovery_score": 8.2704,
-      "examples": [
-        "Nikoh to\u02bbyi va u bilan bog\u02bbliq an'ana va marosimlarda tabiat kultlari va arxaik tasavvurlar",
-        "Abu Rayhon Beruniy ma'lumotlarida qadimgi xalqlarning Navro\u02bbz bilan bog'liq diniy-mifologik qarashlari",
-        "Surxon vohasi etnografiyasida Chiltanlar obrazi va ular bilan bog\u02bbliq e'tiqodlar (Boysun va Qumqo\u02bbrg\u02bbon tumanlari misolida)"
-      ]
-    },
-    {
-      "term": "point clouds",
-      "recent_docs": 8,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 3.773,
-      "discovery_score": 7.4327,
-      "examples": [
-        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
-        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
-        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna"
-      ]
-    },
-    {
-      "term": "supervised fine-tuning",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 7.325,
-      "discovery_score": 6.4968,
+      "acceleration": 41.082,
+      "discovery_score": 61.5243,
       "examples": [
         "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL"
-      ]
-    },
-    {
-      "term": "vision-language-action vla",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 7.325,
-      "discovery_score": 6.4968,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
-      ]
-    },
-    {
-      "term": "gaussian splatting",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 7.325,
-      "discovery_score": 6.4968,
-      "examples": [
-        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
-        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
-        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos"
-      ]
-    },
-    {
-      "term": "bronza davri",
-      "recent_docs": 5,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 7.325,
-      "discovery_score": 6.4968,
-      "examples": [
-        "Qadimgi Turonda uy sajdagohidan monumental ibodatxonagacha: bronza davri diniy qarashlarining taraqqiyoti",
-        "Bronza davri Turon xalqlarining diniy-mifologik tasavvurlarida hayvonlar timsoli: arxeologik manbalar tahlili",
-        "Qadimgi Turonning so'nggi bronza davri dafn marosimlarining diniy-mifologik talqini"
-      ]
-    },
-    {
-      "term": "autonomous driving",
-      "recent_docs": 6,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 2.886,
-      "discovery_score": 4.9501,
-      "examples": [
-        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
-        "Worst-Case Hidden-Vehicle Trajectory Search in Spatiotemporal Occlusion Regions"
-      ]
-    },
-    {
-      "term": "latent representations",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "Can Deep Learning Achieve Cross-Physics Mapping?",
-        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data"
-      ]
-    },
-    {
-      "term": "human demonstrations",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction",
-        "Universal Navigation Interface: Robot-Free Data for Wheeled Robot Navigation"
-      ]
-    },
-    {
-      "term": "human intervention",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies"
-      ]
-    },
-    {
-      "term": "video generation",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation"
-      ]
-    },
-    {
-      "term": "policy optimization",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "RTK-Vision PPO for Autonomous Micro UAV Recovery on an Airborne Carrier",
-        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards"
+        "Cross-Modal Attention Acts as a Frequency Filter: Why Verbose Prompts Improve Robustness in Vision-Language Models",
+        "Multimodal Thinking with Renderable Programs"
       ]
     },
     {
       "term": "object detection",
-      "recent_docs": 4,
+      "recent_docs": 48,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
+      "acceleration": 41.082,
+      "discovery_score": 61.5243,
       "examples": [
         "Semantic SLAM in Precision Agriculture using Bayesian Inference",
         "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
@@ -343,923 +35,951 @@
       ]
     },
     {
-      "term": "raqamli iqtisodiyot",
-      "recent_docs": 4,
+      "term": "gaussian splatting",
+      "recent_docs": 45,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
+      "acceleration": 38.54,
+      "discovery_score": 57.6275,
       "examples": [
-        "RAQAMLI IQTISODIYOT SHAROITIDA MASOFAVIY ISH BILAN BANDLIK VA GIBRID ISH SHAKLLARINING MEHNAT UNUMDORLIGIGA TA'SIRI",
-        "RAQAMLI IQTISODIYOT SHAROITIDA MASOFAVIY ISH BILAN BANDLIK VA GIBRID ISH SHAKLLARINING MEHNAT UNUMDORLIGIGA TA'SIRI",
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)"
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
+        "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos"
       ]
     },
     {
-      "term": "colorectal cancer",
-      "recent_docs": 4,
+      "term": "large language",
+      "recent_docs": 69,
+      "baseline_docs": 5,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 5.352,
+      "discovery_score": 39.8089,
+      "examples": [
+        "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
+        "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform",
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition"
+      ]
+    },
+    {
+      "term": "multimodal large",
+      "recent_docs": 31,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
+      "acceleration": 26.682,
+      "discovery_score": 39.0987,
       "examples": [
-        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
-        "Hybrid Loss-Based Deep Learning Framework Using EfficientNet-B3 for Multi-Class Colorectal Cancer Detection",
-        "ERCPMP-Gx: Endoscopic Image and Video Dataset for Morphological, Histopathological, and Genomic Characterization of Colorectal Polyposis"
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "Fingerprinting Multimodal Large Language Models",
+        "The Alignment Illusion in Multimodal Large Language Models"
       ]
     },
     {
-      "term": "south sudan",
-      "recent_docs": 4,
+      "term": "multimodal large language",
+      "recent_docs": 30,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
+      "acceleration": 25.835,
+      "discovery_score": 37.7539,
       "examples": [
-        "Official Development Assistance to South Sudan: Allocation, Effectiveness, and Political Economy: An Empirical Investigation",
-        "Official Development Assistance to South Sudan: Allocation, Effectiveness, and Political Economy: An Empirical Investigation",
-        "Fragmented Armed Opposition and Peace Process Complexity in South Sudan: Multi-Level Governance Perspectives"
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "Fingerprinting Multimodal Large Language Models",
+        "The Alignment Illusion in Multimodal Large Language Models"
       ]
     },
     {
-      "term": "quality control",
-      "recent_docs": 4,
+      "term": "video generation",
+      "recent_docs": 29,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
+      "acceleration": 24.988,
+      "discovery_score": 36.4065,
       "examples": [
-        "Novel non-destructive machine learning-assisted spectroscopic method for quality control of bleached kraft pulps",
-        "Obesity Modulates Mitochondrial Quality Control in Peripheral Blood Mononuclear Cells After Periodontal Treatment",
-        "Historical Cadastral Maps as Geospatial Policy Data: Workflow Management and Quality Control in the Incra Land Reform Archive"
-      ]
-    },
-    {
-      "term": "south american",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "First genomic evidence of inbreeding in South American pumas and the role of Andean climate history in shaping genetic diversity",
-        "First genomic evidence of inbreeding in South American pumas and the role of Andean climate history in shaping genetic diversity",
-        "Deformation Pattern of the South American Plate Using Robust GNSS Velocity Solutions"
-      ]
-    },
-    {
-      "term": "chez les",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Le cancer colorectal chez les jeunes : Caract\u00e9ristiques et enjeux.",
-        "Le cancer colorectal chez les jeunes : Caract\u00e9ristiques et enjeux.",
-        "M\u00e9thodologie de la s\u00e9lection chez les arbres forestiers - Application au pin maritime"
-      ]
-    },
-    {
-      "term": "talabalari misolida",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "MOLIYAVIY SAVODXONLIK TUSHUNCHASI VA UNING TARKIBIY KOMPONENTLARI (Oliy o'quv yurtida noiqtisodiy yo'nalish talabalari misolida)",
-        "MOLIYAVIY SAVODXONLIK TUSHUNCHASI VA UNING TARKIBIY KOMPONENTLARI (Oliy o'quv yurtida noiqtisodiy yo'nalish talabalari misolida)",
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)"
-      ]
-    },
-    {
-      "term": "aniqlash zonlari",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARINING SOLIQ VA RAQAMLI IQTISODIYOT BO 'YICHA MOLIYAVIY SAVODXONLIGINI ANIQLASH ME'ZONLARI (Noiqtisodiy yo'nalishi talabalari misolida)",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "talabalarida moliyaviy savodxonlikni",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "yurti talabalarida moliyaviy",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "talabalarida moliyaviy",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "moliyaviy savodxonlikni",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "quv yurti talabalarida",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "yurti talabalarida",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI KOGNITIV, PSIXOEMOSIONAL VA STEREOTIPLASHTIRISH MEZONLARI ASOSIDA O 'RGANISH NATIJALARI",
-        "OLIY O'QUV YURTI TALABALARIDA MOLIYAVIY SAVODXONLIKNI ANIQLASH ME'ZONLARI TAXLILI"
-      ]
-    },
-    {
-      "term": "operational technology",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "From Airgap to Zero Trust-A Systematic Review of Operational Technology Cybersecurity Technologies for Critical Infrastructure in the Era of ICS-Specific Malware",
-        "From Airgap to Zero Trust-A Systematic Review of Operational Technology Cybersecurity Technologies for Critical Infrastructure in the Era of ICS-Specific Malware",
-        "Ransomware Resilience in Operational Technology (OT) Environments- Threat Landscape, Defense Architectures, and Recovery Strategies for Critical Industrial Infrastructure"
-      ]
-    },
-    {
-      "term": "haus rztlichen praxen",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Versorgungsforschung vs. Versorgungsrealit\u00e4t? Eine partizipative Studiendesign-Anpassung zur Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen"
-      ]
-    },
-    {
-      "term": "rztlichen praxen",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Versorgungsforschung vs. Versorgungsrealit\u00e4t? Eine partizipative Studiendesign-Anpassung zur Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen"
-      ]
-    },
-    {
-      "term": "haus rztlichen",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Wirksamkeit einer Mind-Body-Intervention zur St\u00e4rkung der psychologischen Sicherheit, Lern- und Fehlerkultur sowie Resilienz bei Besch\u00e4ftigten in haus\u00e4rztlichen Praxen \u2013 eine randomisierte, kontrollierte Studie",
-        "Versorgungsforschung vs. Versorgungsrealit\u00e4t? Eine partizipative Studiendesign-Anpassung zur Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen Untersuchung eines Resilienz- und Stressbew\u00e4ltigungstrainings f\u00fcr Besch\u00e4ftigte in haus\u00e4rztlichen Praxen"
-      ]
-    },
-    {
-      "term": "diniy tiqodlarida",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida ot kulti"
-      ]
-    },
-    {
-      "term": "turon xalqlari",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida ot kulti"
-      ]
-    },
-    {
-      "term": "qadimgi turon xalqlari",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida ot kulti"
-      ]
-    },
-    {
-      "term": "turon xalqlari diniy",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida ot kulti"
-      ]
-    },
-    {
-      "term": "xalqlari diniy tiqodlarida",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida quyosh va olov timsollari: Mitra obrazi misolida",
-        "Qadimgi Turon xalqlari diniy e'tiqodlarida ot kulti"
-      ]
-    },
-    {
-      "term": "oid tiqodiy",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "\"Qutadg\u02bbu Bilig\"da nikohga oid e'tiqodiy va ijtimoiy-huquqiy mezonlar",
-        "Xorazm vohasining dafn marosimlari tizimida hayvonlar kultiga oid e'tiqodiy qoldiqlarning ahamiyati",
-        "Xorazm vohasining dafn marosimlari tizimida hayvonlar kultiga oid e'tiqodiy qoldiqlarning ahamiyati"
-      ]
-    },
-    {
-      "term": "qutadg bilig",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "\"Qutadg\u02bbu Bilig\"da nikohga oid e'tiqodiy va ijtimoiy-huquqiy mezonlar",
-        "\"Qutadg\u02bbu Bilig\"da saroy boshqaruv marosimlari va lavozimlarining muqaddas-etnik xususiyatlari",
-        "\"Qutadg\u02bbu Bilig\"da saroy boshqaruv marosimlari va lavozimlarining muqaddas-etnik xususiyatlari"
-      ]
-    },
-    {
-      "term": "surxon vohasi",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Shimoli-g'arbiy Toxaristonning V-VII asrlar me'morchiligi: qadimgi Surxon vohasi arxeologik manbalari va diniy-mifologik tasvirlar asosida",
-        "Shimoli-g'arbiy Toxaristonning V-VII asrlar me'morchiligi: qadimgi Surxon vohasi arxeologik manbalari va diniy-mifologik tasvirlar asosida",
-        "Surxon vohasi etnografiyasida Chiltanlar obrazi va ular bilan bog\u02bbliq e'tiqodlar (Boysun va Qumqo\u02bbrg\u02bbon tumanlari misolida)"
-      ]
-    },
-    {
-      "term": "yangi zbekistonda",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Yangi O\u02bbzbekistonda diniy tolerantlikning tarixiy ildizlari",
-        "Yangi O\u02bbzbekistonda qadimgi Turon sivilizatsiyasining diniy va mifologik merosini asrash hamda targ'ib qilish masalalari",
-        "Yangi O\u02bbzbekistonda diniy tolerantlikning tarixiy ildizlari"
-      ]
-    },
-    {
-      "term": "diniy-mifologik talqini",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Sopolli madaniyatida dafndan keyingi marosimlar va buzilgan qabrlarning diniy-mifologik talqini",
-        "Qadimgi Turonning so'nggi bronza davri dafn marosimlarining diniy-mifologik talqini",
-        "Sopolli madaniyatida dafndan keyingi marosimlar va buzilgan qabrlarning diniy-mifologik talqini"
-      ]
-    },
-    {
-      "term": "qadimgi turonning",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Qadimgi Turonning diniy-mifologik tasvirlarini matematik modellashtirish: Baqtriya\u2013Marg\u02bbiyona muhrlari misolida",
-        "Qadimgi Turonning so'nggi bronza davri dafn marosimlarining diniy-mifologik talqini",
-        "Qadimgi Turonning diniy-mifologik tasvirlarini matematik modellashtirish: Baqtriya\u2013Marg\u02bbiyona muhrlari misolida"
-      ]
-    },
-    {
-      "term": "oks sivilizatsiyasi",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Bronza davrida Elam va Oks sivilizatsiyasi o'rtasidagi madaniy aloqalar: gliptika materiallari asosida qiyosiy ikonografik tahlil",
-        "Bronza davrida Elam va Oks sivilizatsiyasi o'rtasidagi madaniy aloqalar: gliptika materiallari asosida qiyosiy ikonografik tahlil",
-        "Oks sivilizatsiyasi san'atida \"Etana\" afsonasining ikonografik talqini"
-      ]
-    },
-    {
-      "term": "brazilian geodetic",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
-        "Computation of a Hybrid Quasi-Geoid Model for the State of Paran\u00e1, Brazil, Referenced to the Brazilian Geodetic System",
-        "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System"
-      ]
-    },
-    {
-      "term": "sea surface",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Determining Sea Surface Variations Along the Brazilian Coast: the Importance of Harmonizing Altimetric Reference Frames",
-        "Determining Sea Surface Variations Along the Brazilian Coast: the Importance of Harmonizing Altimetric Reference Frames",
-        "Tide Gauge Data Processing for Analysis of Mean Sea Surface Models"
-      ]
-    },
-    {
-      "term": "tide gauge",
-      "recent_docs": 4,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 5.993,
-      "discovery_score": 4.7903,
-      "examples": [
-        "Tide Gauge Data Processing for Analysis of Mean Sea Surface Models",
-        "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System",
-        "Preliminary Procedures for the Vertical Connection of the Port of Recife Tide Gauge to the Brazilian Geodetic System"
-      ]
-    },
-    {
-      "term": "large language llms",
-      "recent_docs": 7,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 1.998,
-      "discovery_score": 4.6215,
-      "examples": [
-        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
-        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
-        "Local Sparsity Enables Unsupervised LLM Safety Detection"
-      ]
-    },
-    {
-      "term": "language llms",
-      "recent_docs": 7,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 1.998,
-      "discovery_score": 4.6215,
-      "examples": [
-        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
-        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
-        "Local Sparsity Enables Unsupervised LLM Safety Detection"
-      ]
-    },
-    {
-      "term": "llm agents",
-      "recent_docs": 5,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 2.442,
-      "discovery_score": 3.7889,
-      "examples": [
-        "Vibe-FDTR: An agent-oriented framework for reproducible frequency-domain thermoreflectance data analysis",
-        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "DeliveryGym: An RL Environment for Long-Horizon Embodied Agent Planning with Adaptive Curriculum"
-      ]
-    },
-    {
-      "term": "coding agent",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "The Missing Complement: State-Conditioned Minimal Sufficient Evidence for Coding Agents",
-        "Learning and Transferring Closed-Loop Robot Software"
-      ]
-    },
-    {
-      "term": "future visual",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "Astronex-World 1.0: Real-Time Interactive World Model Foundation"
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation"
       ]
     },
     {
-      "term": "demonstrations however",
-      "recent_docs": 3,
+      "term": "semantic segmentation",
+      "recent_docs": 29,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 24.988,
+      "discovery_score": 36.4065,
+      "examples": [
+        "Less is More: Encoder-only Audio-Visual Segmentation",
+        "RGBD20K: A Large-Scale Benchmark for RGB-D Semantic Segmentation",
+        "Privacy-Preserving Semantic Segmentation from High-Resolution Depth and Ultra-Low-Resolution RGB"
+      ]
+    },
+    {
+      "term": "visual evidence",
+      "recent_docs": 26,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 22.447,
+      "discovery_score": 32.349,
+      "examples": [
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
+        "Mind What Matters for Reasoning: Aligning Cross-Modal Attention via Selective Probability Mass Concentration",
+        "AnchorReasoning: A Visual Grounding and Causal Reasoning Dataset in Long-Tail Autonomous Driving Scenarios"
+      ]
+    },
+    {
+      "term": "point cloud",
+      "recent_docs": 26,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 22.447,
+      "discovery_score": 32.349,
+      "examples": [
+        "AstraLOD3: Zero-shot multimodal agentic reconstruction of LOD3 building models",
+        "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+        "Leveraging Vision-Based Point Cloud Map Priors for Camera-Based 3D Object Detection and Online Vectorized HD Mapping"
+      ]
+    },
+    {
+      "term": "autonomous driving",
+      "recent_docs": 35,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.023,
+      "discovery_score": 31.0459,
       "examples": [
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction"
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "Worst-Case Hidden-Vehicle Trajectory Search in Spatiotemporal Occlusion Regions"
       ]
     },
     {
-      "term": "robot motion",
-      "recent_docs": 3,
+      "term": "will released",
+      "recent_docs": 24,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 20.753,
+      "discovery_score": 29.6326,
       "examples": [
-        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "Bayesian Continuum Robot Dynamics and State Estimation",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos"
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding",
+        "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space"
       ]
     },
     {
-      "term": "planning execution",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "term": "point clouds",
+      "recent_docs": 33,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.459,
+      "discovery_score": 29.015,
       "examples": [
-        "Custom PX4 firmware for autonomous hybrid aerial-marine missions",
-        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability",
-        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning"
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
+        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna"
       ]
     },
     {
-      "term": "making large-scale",
-      "recent_docs": 3,
+      "term": "vision-language-action vla",
+      "recent_docs": 23,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 19.905,
+      "discovery_score": 28.2714,
       "examples": [
-        "Towards Scaling Marine Perception with Synthetic Data",
-        "Universal Navigation Interface: Robot-Free Data for Wheeled Robot Navigation",
-        "TouchSight: Bare-Handed Tactile Prediction from Egocentric Video via Generative Visual Augmentation"
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
       ]
     },
     {
-      "term": "rgb-d observations",
-      "recent_docs": 3,
+      "term": "large language mllms",
+      "recent_docs": 23,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 19.905,
+      "discovery_score": 28.2714,
       "examples": [
-        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute"
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "Fingerprinting Multimodal Large Language Models",
+        "The Alignment Illusion in Multimodal Large Language Models"
       ]
     },
     {
-      "term": "adding parameters",
-      "recent_docs": 3,
+      "term": "language mllms",
+      "recent_docs": 23,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 19.905,
+      "discovery_score": 28.2714,
       "examples": [
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "Fingerprinting Multimodal Large Language Models",
+        "The Alignment Illusion in Multimodal Large Language Models"
+      ]
+    },
+    {
+      "term": "splatting dgs",
+      "recent_docs": 22,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 19.058,
+      "discovery_score": 26.9085,
+      "examples": [
+        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+        "Towards Practical Compression of 3D Gaussian Splatting",
+        "OceanXL: Large-scale Underwater 3D Gaussian Splatting via Block Partitioning and Adaptive Pruning"
+      ]
+    },
+    {
+      "term": "gaussian splatting dgs",
+      "recent_docs": 22,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 19.058,
+      "discovery_score": 26.9085,
+      "examples": [
+        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+        "Towards Practical Compression of 3D Gaussian Splatting",
+        "OceanXL: Large-scale Underwater 3D Gaussian Splatting via Block Partitioning and Adaptive Pruning"
+      ]
+    },
+    {
+      "term": "visual observations",
+      "recent_docs": 20,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 17.364,
+      "discovery_score": 24.1788,
+      "examples": [
+        "Navi-Agent: Unlocalized Monocular Navigation Agent",
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
+        "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video"
+      ]
+    },
+    {
+      "term": "vision transformers",
+      "recent_docs": 18,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 15.67,
+      "discovery_score": 21.4463,
+      "examples": [
+        "A Smaller Transformer in Your Transformer",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI",
+        "ImCorr: Sub-pixel Semantic Correspondence via Implicit Feature Decoding"
+      ]
+    },
+    {
+      "term": "reconstruction quality",
+      "recent_docs": 18,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 15.67,
+      "discovery_score": 21.4463,
+      "examples": [
+        "OceanXL: Large-scale Underwater 3D Gaussian Splatting via Block Partitioning and Adaptive Pruning",
+        "ADATEX4D: adaptive texture capacity allocation for 4D gaussian splatting",
+        "Information Capacity of Generative Video Compression: Quantifying the Rate-Compute Exchange at Identical Quality"
+      ]
+    },
+    {
+      "term": "image quality",
+      "recent_docs": 17,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 14.823,
+      "discovery_score": 20.0801,
+      "examples": [
+        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
+        "Anatomy-Aware Synthesis of Post-Contrast Breast MRI from Pre-Contrast Images",
+        "Laryngeal Structure Segmentation in High-Speed Videoendoscopy Using Deep Learning"
+      ]
+    },
+    {
+      "term": "large vision-language",
+      "recent_docs": 17,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 14.823,
+      "discovery_score": 20.0801,
+      "examples": [
+        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
+        "CinematicVQA: Benchmarking Film-Grammar Reasoning in Large Vision-Language Models",
+        "Gender Bias in Vision-Language In-Context Learning"
+      ]
+    },
+    {
+      "term": "visual quality",
+      "recent_docs": 17,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 14.823,
+      "discovery_score": 20.0801,
+      "examples": [
+        "OREO: Fidelity Alignment in 3D Generation via On-the-fly Rendering-Editing Optimization",
+        "HelloWorld: Towards Practical Applications of Generative Driving World Models",
+        "When Visual Quality Misleads: Intent Recognition under Rendered Avatar Distortions"
+      ]
+    },
+    {
+      "term": "inference latency",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "GHOST-Q: Towards Studying Grounding Hallucinations Overlooked Under Same-score TradeOffs in Quantized VLMS",
+        "TOLA: Text-aware One-Step Latent Adaptation for Diffusion-based Text Image Super-Resolution"
+      ]
+    },
+    {
+      "term": "domain shift",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation",
+        "From Domain Shift to Domain Rheology: Heterogeneous Evolution Laws, Open-System Exchange, and Boundary-Load Accumulation in Co-Evolving Regimes",
+        "TAM-Chain: Multi-Scale Thyroid Cytology Classification via Absorbing Markov Chains and Shannon Entropy Uncertainty Quantification for False-Negative Suppression and Domain-Shift Adaptation"
+      ]
+    },
+    {
+      "term": "visual grounding",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "GHOST-Q: Towards Studying Grounding Hallucinations Overlooked Under Same-score TradeOffs in Quantized VLMS",
+        "Mind What Matters for Reasoning: Aligning Cross-Modal Attention via Selective Probability Mass Concentration"
+      ]
+    },
+    {
+      "term": "generation quality",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "Generating Heterogeneous 3D Geological Microstructures from 2D Images via a Stable Diffusion-Adversarial Model",
+        "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+        "ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios"
+      ]
+    },
+    {
+      "term": "test set",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "SARFusion: Scene-Aware Routing Fusion for Robust Camera-LiDAR 3D Object Detection",
+        "PBLH Estimation from Satellite Radiances via a Dual-Encoder Transformer",
+        "TAM-Chain: Multi-Scale Thyroid Cytology Classification via Absorbing Markov Chains and Shannon Entropy Uncertainty Quantification for False-Negative Suppression and Domain-Shift Adaptation"
+      ]
+    },
+    {
+      "term": "pose estimation",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.976,
+      "discovery_score": 18.7149,
+      "examples": [
+        "Pose-Aware Multimodal Automatic Tagging for Greek Traditional Music",
+        "GTR: Gated Token Recurrence for Efficient Dense Prediction",
+        "Vision Foundation Models with Synthetic-Only Training for Monocular Spacecraft Pose Estimation"
+      ]
+    },
+    {
+      "term": "medical image",
+      "recent_docs": 22,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 6.353,
+      "discovery_score": 17.903,
+      "examples": [
+        "Enhanced CNN-Transformer Models with\u00a0Hybrid Attention Mechanisms for\u00a0Medical Image Segmentation",
+        "G^2RA-NET: Graph-based Cross-Slice Relation Modeling with Attention Gating for Medical Image Segmentation",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI"
+      ]
+    },
+    {
+      "term": "bridge gap",
+      "recent_docs": 22,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 6.353,
+      "discovery_score": 17.903,
+      "examples": [
+        "A Langmuir-Like Adsorption Model for MoS2 Gas Sensors: Bridging Theory and Experiment",
+        "Fingerprinting Multimodal Large Language Models",
+        "STR-Agent: An LLM-Driven Agent for QoS-Aware Routing in LEO Satellite Networks"
+      ]
+    },
+    {
+      "term": "forward pass",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.129,
+      "discovery_score": 17.3514,
+      "examples": [
+        "Parallelism, critical windows, and separations among diffusion language models",
+        "WildHSR: Metric Feed-Forward 4D People-Scene Reconstruction from a 3D Foundation Model",
+        "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video"
+      ]
+    },
+    {
+      "term": "visual tokens",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.129,
+      "discovery_score": 17.3514,
+      "examples": [
+        "The Alignment Illusion in Multimodal Large Language Models",
+        "Mind What Matters for Reasoning: Aligning Cross-Modal Attention via Selective Probability Mass Concentration",
+        "Multimodal Routing and Region Refinement for Language-Guided Medical Image Segmentation"
+      ]
+    },
+    {
+      "term": "visual representations",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 13.129,
+      "discovery_score": 17.3514,
+      "examples": [
+        "Med-AR: Autoregressive Vision-Language Pretraining for Long-Tailed Chest X-Ray Classification and Uncertainty-Aware Evaluation",
+        "Depth-Guided Contrastive Learning for 2D Representations with 3D Spatial Awareness",
+        "Latent evolving World Action Model"
+      ]
+    },
+    {
+      "term": "remote sensing",
+      "recent_docs": 21,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 6.07,
+      "discovery_score": 16.905,
+      "examples": [
+        "A Wavelet-Feature Correlation-Based Greedy Clustering Framework for Unsupervised Hyperspectral and Multispectral Remote Sensing Classification",
+        "Earth Surface Immune System for Rapid Monitoring of Unknown Anomalies",
+        "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels"
+      ]
+    },
+    {
+      "term": "computer vision",
+      "recent_docs": 21,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 6.07,
+      "discovery_score": 16.905,
+      "examples": [
+        "Vision AI Agent for Continuous Material Monitoring of LEGEND-1000 LoFi Reentrant Tube",
+        "Detecting Deceptive Recruitment: A Signal-theoretic Machine Learning Framework for Early Identification of Labour Exploitation",
+        "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction"
+      ]
+    },
+    {
+      "term": "image classification",
+      "recent_docs": 21,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 6.07,
+      "discovery_score": 16.905,
+      "examples": [
+        "Edge-Enhanced Diffractive Neural Networks Based on Spin-Multiplexed Nonlocal Metasurfaces",
+        "Token Clustering and Semantic Sequence Mamba for Hyperspectral Image Classification",
+        "ODPure: Backdoor Purification for Object Detection via Ensemble Corruption Consensus"
+      ]
+    },
+    {
+      "term": "bounding boxes",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 12.282,
+      "discovery_score": 15.9907,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "SplatLabel: Pseudo-Labelling through 4D Gaussian Splatting"
+      ]
+    },
+    {
+      "term": "latent representations",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 12.282,
+      "discovery_score": 15.9907,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "Can Deep Learning Achieve Cross-Physics Mapping?",
+        "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data"
+      ]
+    },
+    {
+      "term": "scene understanding",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 12.282,
+      "discovery_score": 15.9907,
+      "examples": [
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
+        "VLMs Can Describe, But Not Measure: Object-Centric Scene Understanding for Robotic Manipulation"
+      ]
+    },
+    {
+      "term": "trainable parameters",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 12.282,
+      "discovery_score": 15.9907,
+      "examples": [
+        "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI",
+        "AgriCountDINO: Parameter-Efficient Exemplar-Guided Counting and Localization in Agriculture"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL"
+      ]
+    },
+    {
+      "term": "action generation",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
         "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Relational Attention for Data-Efficient Language Modeling"
+        "Rolling-WAM: World Action Models with Rolling Imagination"
       ]
     },
     {
-      "term": "fine-tuning sft",
-      "recent_docs": 3,
+      "term": "demonstrating effectiveness",
+      "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
       "examples": [
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
+        "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "RGBD20K: A Large-Scale Benchmark for RGB-D Semantic Segmentation",
+        "ICM: Intra-class Mixing for Domain Adaptation in Adverse Weather"
       ]
     },
     {
-      "term": "supervised fine-tuning sft",
-      "recent_docs": 3,
+      "term": "policy optimization",
+      "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
       "examples": [
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis"
-      ]
-    },
-    {
-      "term": "robot policies",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
-        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
-        "Learning and Transferring Closed-Loop Robot Software"
-      ]
-    },
-    {
-      "term": "failed rollouts",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
-        "SkillAA: Attribution-Guided Skill-Graph Updating with Targeted Validation and Rollback",
-        "MAGMA-GEN: Validated Recovery Supervision from Ambiguous Failures via Counterfactual Re-Execution"
-      ]
-    },
-    {
-      "term": "trajectory generation",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
-        "Walking on the Slope: Stable Bipedal Gaits with Genetic-Algorithm-Optimized Trajectories",
-        "UnifiedPlayers: Enhance Tool-Integrated Reasoning in Agentic Reinforcement Learning"
-      ]
-    },
-    {
-      "term": "among other",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Bayesian Continuum Robot Dynamics and State Estimation",
-        "Federated Learning Framework for Privacy-Preserving Kidney Stone Detection",
-        "Edustories: A Collection of Real-world Case Studies from Classroom Practices"
-      ]
-    },
-    {
-      "term": "motion planning",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
-        "Imagine-TAMP: Imagination-Guided Task and Motion Planning in Partial Observability"
-      ]
-    },
-    {
-      "term": "optimization behavior",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
+        "RTK-Vision PPO for Autonomous Micro UAV Recovery on an Airborne Carrier",
         "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
-        "Recursive Quantum Long Short-Term Memory for Stable Short-Horizon Temperature Forecasting",
-        "Quantum Graph Convolutional Networks: Implementation and Trainability Analysis"
+        "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards"
       ]
     },
     {
-      "term": "every evaluated",
-      "recent_docs": 3,
+      "term": "instance segmentation",
+      "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
       "examples": [
         "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
+        "From Alignment to Fusion in 3D Vision-Language",
+        "GTR: Gated Token Recurrence for Efficient Dense Prediction"
+      ]
+    },
+    {
+      "term": "visual features",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
+        "Multimodal Routing and Region Refinement for Language-Guided Medical Image Segmentation",
+        "Diverse by Design: Architectural Constraints for Prototype-Based Interpretability"
+      ]
+    },
+    {
+      "term": "distribution shift",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+        "AURA: Adaptive Uncertainty-Routed Analysis for Email Threat Detection",
+        "Domain Recentering and Confidence-Weighted Prior Calibration for Vision-Language Models"
+      ]
+    },
+    {
+      "term": "multimodal reasoning",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "Uni-LaDiR: Latent Diffusion Unifies Multimodal Reasoning",
+        "Mind What Matters for Reasoning: Aligning Cross-Modal Attention via Selective Probability Mass Concentration",
+        "Pistis Technical Report"
+      ]
+    },
+    {
+      "term": "view synthesis",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "NaCR: Visual Localization via NeRF-aided Camera Ray Regression",
+        "GARO: Geometry-Aware Redundancy Optimization for Real-Time and High-Fidelity Dynamic Gaussian Splatting"
+      ]
+    },
+    {
+      "term": "novel view",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "NaCR: Visual Localization via NeRF-aided Camera Ray Regression",
+        "GARO: Geometry-Aware Redundancy Optimization for Real-Time and High-Fidelity Dynamic Gaussian Splatting"
+      ]
+    },
+    {
+      "term": "novel view synthesis",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "NaCR: Visual Localization via NeRF-aided Camera Ray Regression",
+        "GARO: Geometry-Aware Redundancy Optimization for Real-Time and High-Fidelity Dynamic Gaussian Splatting"
+      ]
+    },
+    {
+      "term": "image generation",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 5.223,
+      "discovery_score": 13.936,
+      "examples": [
+        "Radio-Frequency Convolutional Neural Networks",
+        "Optical free space extreme learning machine for the implementation of emergent complex systems",
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing"
+      ]
+    },
+    {
+      "term": "among evaluated",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 5.223,
+      "discovery_score": 13.936,
+      "examples": [
+        "On the Fundamental Limits of Single-snapshot Compressive Ultrasound Imaging Using Random Aberrative Masks",
+        "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
+        "Refinement Is Inherently Editable: Training-Free Prompt-to-Prompt Image Editing with Generative Refinement Network"
+      ]
+    },
+    {
+      "term": "spatial reasoning",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
+        "A Qualitative Model for Reasoning about Path and Support",
+        "Beyond Spatial Benchmarks: From Spatial Reasoning to Navigation"
+      ]
+    },
+    {
+      "term": "vision transformer",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "QiT: Quantum-Inspired Transformer for Visual Recognition Task",
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI"
+      ]
+    },
+    {
+      "term": "best knowledge",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
+        "TrackEverything: Long Horizon Dense Tracking via De-Duplicating 3D Scene Representations",
+        "MorphoSHAP: Rethinking the Unit of Attribution in Explanation for Deep Visual Models"
+      ]
+    },
+    {
+      "term": "diffusion transformer",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "MM-Future: Multi-Mode Joint World-Action Modeling for Autonomous Driving",
+        "OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction",
+        "KwaiMind Technical Report"
+      ]
+    },
+    {
+      "term": "vision foundation",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
+        "SplatLabel: Pseudo-Labelling through 4D Gaussian Splatting",
+        "ComplexSync: High-Fidelity and Real-Time Lip Sync in Complex Scenarios"
+      ]
+    },
+    {
+      "term": "video diffusion",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation",
+        "Accelerating Video Diffusion via Training-Free Trajectory Routing",
+        "ViRDM: Taming Representation Distribution Matching for Few-Step Causal Video Generation"
+      ]
+    },
+    {
+      "term": "ask whether",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
         "Don't Mask the Environment: Observation Supervision Changes How Agents Explore Under RL",
-        "Seismic Site Response Prediction from Sparse Observations Using Finite-Element-Pretrained Latent Dynamics"
+        "WildHSR: Metric Feed-Forward 4D People-Scene Reconstruction from a 3D Foundation Model",
+        "ViRDM: Taming Representation Distribution Matching for Few-Step Causal Video Generation"
       ]
     },
     {
-      "term": "dynamic environments",
-      "recent_docs": 3,
+      "term": "further improves",
+      "recent_docs": 12,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
       "examples": [
-        "Time-Efficient Iterative Learning Planning for Safety-Critical Dynamic Obstacle Avoidance",
+        "Model-based Bootstrap for Offline Policy Evaluation in Tabular Reinforcement Learning",
+        "A Hybrid CNN--State-Space--Attention Backbone with Joint-Embedding Predictive Pretraining for 12-Lead ECG Classification",
+        "Frozen Flows Forget: Diagnosing and Restoring Lost Motion in a Latent-flow World Model"
+      ]
+    },
+    {
+      "term": "visual cues",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks",
+        "Diff-RF: Mutually Reinforced Image Registration and Fusion via Degradation-Aware Learning",
+        "Fysiverse-3D-Vision Technical Report: Generating Executable 3D Worlds from Images through Unified Spatial Reasoning"
+      ]
+    },
+    {
+      "term": "fine-grained visual",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks",
+        "On the Diffusibility of High-Dimensional Latents",
+        "Privacy-Preserving Semantic Segmentation from High-Resolution Depth and Ultra-Low-Resolution RGB"
+      ]
+    },
+    {
+      "term": "ground truth",
+      "recent_docs": 17,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 4.941,
+      "discovery_score": 12.957,
+      "examples": [
+        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna",
         "Can 4D Foundation Models Remember?",
-        "Neuro-Symbolic Agentic AI for Networked Low-Altitude UAVs"
+        "Generating Heterogeneous 3D Geological Microstructures from 2D Images via a Stable Diffusion-Adversarial Model"
       ]
     },
     {
-      "term": "pipeline combines",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "term": "recent advances",
+      "recent_docs": 20,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 3.473,
+      "discovery_score": 12.4452,
       "examples": [
-        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
-        "Automated Goldsmith's Mark Retrieval in Silverware",
-        "Model-Agnostic and Language-Agnostic Voice Pipeline Improvement for the Agriculture Domain"
+        "Electronic structure, band offset, and interface electron population of the LaInO$_3$/BaSnO$_3$ system",
+        "Determination of the intrinsic mechanical quality factor in high-stress silicon nitride resonators",
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images"
       ]
     },
     {
-      "term": "times difficulty",
-      "recent_docs": 3,
+      "term": "released com",
+      "recent_docs": 11,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
       "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space",
+        "M-plicits: Neural Implicit Surfaces via Nested Multiscale Residuals"
       ]
     },
     {
-      "term": "difficulty offer",
-      "recent_docs": 3,
+      "term": "failure modes",
+      "recent_docs": 11,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
       "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "times difficulty offer",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "In Times of Difficulty the Psalms Offer Encouragement to Remember",
-        "In Times of Difficulty the Psalms Offer Images of Justice",
-        "In Times of Difficulty the Psalms Offer Permission to Grieve"
-      ]
-    },
-    {
-      "term": "risk assessment",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Beyond GMDSS: Goal-Oriented Communication and Resilient State Estimation for Proactive Maritime Risk Assessment",
-        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV",
-        "Measurement-window analysis of vasoactive exposure and bedside risk assessment in ICU-acquired pressure injury: cohort-derivation queries and analysis code for MIMIC-IV"
-      ]
-    },
-    {
-      "term": "onderzoek naar",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Eten in gedachten: onderzoek naar de rol van dopamine en het endocannabino\u00efde systeem bij voedingsbeloning, obesitas en bariatrische chirurgie",
-        "In vitro en in silico onderzoek naar de farmacokinetiek van geneesmiddelen bij pasgeborenen met perinatale asfyxie tijdens therapeutische hypothermie",
-        "Onderzoek naar de huidige lacunes in de vertaalbaarheid van in vitro tijdsafhankelijke inhibitie (TDI) en inductiegegevens van geneesmiddelinteracties (DDI). Focus op CYP3A4, 2Cs en UGT1A1 geneesmiddelmetaboliserende enzymen (DMES)."
-      ]
-    },
-    {
-      "term": "logic human",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
-        "Core Elements of Physiology: An Instructor Guide Series for Mechanisms and Logic in Human Physiology",
-        "Structured Four-Stage Legal Translation: From Natural-Language Traffic Rules to PROLOG"
-      ]
-    },
-    {
-      "term": "urban environment",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Tropospheric Ozone Formation Potential and Related Design Considerations for Radiative Coolers",
-        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment",
-        "Application of the Asprs Positional Accuracy Standard to the Quality Assessment of a UAS Photogrammetric Survey in a Dense Urban Environment"
-      ]
-    },
-    {
-      "term": "high-performance computing",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "High-performance orbital-torque magnetic memory on the 300-mm platform",
-        "The Life of a Token: from Words to Bits on the Wire",
-        "Accelerating Sharded Data Parallelism at Scale with Federated Learning"
-      ]
-    },
-    {
-      "term": "emerging technologies",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "High-performance orbital-torque magnetic memory on the 300-mm platform",
-        "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA",
-        "EXTENT OF UTILIZATION OF EMERGING TECHNOLOGIES BY LIBRARIANS IN PUBLIC UNIVERSITY LIBRARIES IN SOUTH-SOUTH NIGERIA"
-      ]
-    },
-    {
-      "term": "every stage",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
-      "examples": [
-        "Block-modular grey-box identification of a short-stroke seawater-pump power take-off for wave energy: loss decomposition and multi-regime validation",
-        "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
-        "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents"
+        "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
+        "LiAM-SAM: Lifecycle-Aware Memory for Robust SAM2-Based MOT",
+        "DreamStream: Towards Policy-Oriented Generative Simulation for End-to-End Driving"
       ]
     },
     {
       "term": "natural images",
-      "recent_docs": 3,
+      "recent_docs": 11,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
       "examples": [
         "Paint-Anything: Unified Any-Color Control for Image Generation and Editing",
         "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
@@ -1267,143 +987,423 @@
       ]
     },
     {
-      "term": "inverse solvers",
-      "recent_docs": 3,
+      "term": "feature extraction",
+      "recent_docs": 11,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
       "examples": [
-        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants",
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "Learning-Based Reconstruction of Optical Properties in Bilayered Media from Single-distance Time-Resolved Reflectance Measurements"
+        "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
+        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI"
       ]
     },
     {
-      "term": "fixed number",
-      "recent_docs": 3,
+      "term": "benchmark datasets",
+      "recent_docs": 11,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
       "examples": [
-        "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
-        "Minimax-Optimal Online Contract Design with Unrestricted Bounded Contracts",
+        "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting",
+        "HyperAMS-Net: Adaptive Multi-Scale Spatial Hypergraph Network for Brain Disorder Classification",
+        "EndoFSA: Endoscopic Few-Shot Image Generation via Rank-Constrained Parameter Adaptation"
+      ]
+    },
+    {
+      "term": "datasets spanning",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "Beyond Flattened Tokens: Structure-Preserving EEG Decoding with Reusable TriDim Blocks",
+        "HyperAMS-Net: Adaptive Multi-Scale Spatial Hypergraph Network for Brain Disorder Classification",
+        "EndoFSA: Endoscopic Few-Shot Image Generation via Rank-Constrained Parameter Adaptation"
+      ]
+    },
+    {
+      "term": "improves average",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "STR-Agent: An LLM-Driven Agent for QoS-Aware Routing in LEO Satellite Networks",
+        "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies"
+      ]
+    },
+    {
+      "term": "dense prediction",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "IronViT: Toward Efficient Generalist Visual Representation Learning",
+        "Multimodal Routing and Region Refinement for Language-Guided Medical Image Segmentation",
+        "ODPure: Backdoor Purification for Object Detection via Ensemble Corruption Consensus"
+      ]
+    },
+    {
+      "term": "video understanding",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "Beneath the Scores: Rethinking Hallucination Evaluation for Video Understanding Models",
+        "CinematicVQA: Benchmarking Film-Grammar Reasoning in Large Vision-Language Models",
+        "Prompt, Probe, Train, or Annotate? Single-camera sports video understanding in amateur settings"
+      ]
+    },
+    {
+      "term": "scene reconstruction",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "PePESeg3D: Perception Prior Enhances Multi-Scale Segmentation for 3D Gaussian Splatting",
+        "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+        "Fysiverse-3D-Vision Technical Report: Generating Executable 3D Worlds from Images through Unified Spatial Reasoning"
+      ]
+    },
+    {
+      "term": "during inference",
+      "recent_docs": 11,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 9.741,
+      "discovery_score": 11.9384,
+      "examples": [
+        "Super-Resolution of Solar Magnetograms via Adaptive Stratified Ensemble Learning with Uncertainty Estimation",
+        "MirrorDistill: Illumination-Aware Latent Distillation for Efficient Low-Light Restoration",
+        "Accurate Motion Estimation with B\u00e9zier Control Point for Efficient Frame Interpolation"
+      ]
+    },
+    {
+      "term": "artificial intelligence",
+      "recent_docs": 35,
+      "baseline_docs": 10,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 1.432,
+      "discovery_score": 11.4956,
+      "examples": [
+        "Feasibility Study of Automated Brackish Water Fish Pond Systems: Integrating IoT Sensor Networks and Generative Artificial Intelligence for Sustainable Aquaculture in Coastal Communities",
+        "Artificial Intelligence and Corporate Social Irresponsibility",
+        "An Exploratory Study on the Interaction Mechanism between Humanistic Imagination and Character Development in the Age of Artificial Intelligence"
+      ]
+    },
+    {
+      "term": "findings suggest",
+      "recent_docs": 15,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 4.376,
+      "discovery_score": 11.0207,
+      "examples": [
+        "Graph-Based Design of Soft Grippers with Multi-Objective Quality-Diversity Optimisation",
+        "Imaging of ultrasound specularity at cortical bone interfaces to detect unbalanced remodeling: A preliminary study",
         "Evolution or Illusion? Rethinking Evaluation in LLM Evolutionary Search"
       ]
     },
     {
-      "term": "will made",
-      "recent_docs": 3,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "term": "image segmentation",
+      "recent_docs": 15,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 4.376,
+      "discovery_score": 11.0207,
       "examples": [
-        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "CellRFT: Reinforcement Fine-Tuning for Single-Cell Perturbation Modeling"
+        "Enhanced CNN-Transformer Models with\u00a0Hybrid Attention Mechanisms for\u00a0Medical Image Segmentation",
+        "G^2RA-NET: Graph-based Cross-Slice Relation Modeling with Attention Gating for Medical Image Segmentation",
+        "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI"
       ]
     },
     {
-      "term": "language modeling",
-      "recent_docs": 3,
+      "term": "strongest baseline",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "DocAttriBench: Benchmarking Answer Grounding in Document Visual Question Answering",
-        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
-        "Relational Attention for Data-Efficient Language Modeling"
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
+        "ConPro: Contrast Projection Pretraining for Label-Efficient Vessel Segmentation in DSA Sequences"
       ]
     },
     {
-      "term": "text recognition",
-      "recent_docs": 3,
+      "term": "human motion",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
-        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition",
-        "Transcribathon. Building a Sustainable Community of Practice around Historical Transcription and Handwritten Text Recognition"
+        "DexTouch-WM: Learning Action-Conditioned Tactile World Models from Human Touch for Dexterous Robot Manipulation",
+        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction",
+        "Ego-Exo4D Human Meshes Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures"
       ]
     },
     {
-      "term": "agents increasingly",
-      "recent_docs": 3,
+      "term": "will released com",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-        "Semantic Action Graph: A Shared Representation for Agent Grounding and Human Interpretation of Sports Highlights",
-        "Learning and Transferring Closed-Loop Robot Software"
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space",
+        "M-plicits: Neural Implicit Surfaces via Nested Multiscale Residuals"
       ]
     },
     {
-      "term": "carbon capture",
-      "recent_docs": 3,
+      "term": "visual representation",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
+        "IronViT: Toward Efficient Generalist Visual Representation Learning",
+        "Surgical Kinematics from Monocular Video with Learned Articulated Motion Constraints"
+      ]
+    },
+    {
+      "term": "reference image",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "Earth Surface Immune System for Rapid Monitoring of Unknown Anomalies",
+        "OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction",
+        "VGM-VS: Rethinking Visual Geometry Model for High-Precision Visual Servoing"
+      ]
+    },
+    {
+      "term": "strong baselines",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
+        "MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos",
+        "Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction"
+      ]
+    },
+    {
+      "term": "achieve strong",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
         "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "The Absorption Ledger: deposited record for \"Who absorbs the shortfall? Performance conditions and cost recovery in North American carbon capture subsidies",
-        "Induced seismicity at the Quest Carbon Capture and Storage project, Alberta"
+        "Mind What Matters for Reasoning: Aligning Cross-Modal Attention via Selective Probability Mass Concentration",
+        "Domain Recentering and Confidence-Weighted Prior Calibration for Vision-Language Models"
       ]
     },
     {
-      "term": "benchmark evaluating",
-      "recent_docs": 3,
+      "term": "multimodal fusion",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "PosteriorBench: From Point Estimates to Posterior Matching in Evaluating Generative Inverse Solvers",
-        "KoNeoBench: A Curated Evaluation Dataset for LLM Understanding of Korean Neologisms",
-        "PetriBench: Benchmarking LLM Reasoning over Dynamic State Spaces"
+        "QoS-Aware Federated Learning for Multimodal In-Cabin Interaction in Smart Vehicles",
+        "A Multimodal Dataset for Survival Prediction in Resected Pancreatic Ductal Adenocarcinoma",
+        "SARFusion: Scene-Aware Routing Fusion for Robust Camera-LiDAR 3D Object Detection"
       ]
     },
     {
-      "term": "neural network cnn",
-      "recent_docs": 3,
+      "term": "public datasets",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+        "Alliance Beats Isolation: Unifying Heterogeneous Allied Datasets Improves Classifier Performance",
+        "Med-AR: Autoregressive Vision-Language Pretraining for Long-Tailed Chest X-Ray Classification and Uncertainty-Aware Evaluation",
+        "nnFoundation: 3D Foundation Models for Radiology"
       ]
     },
     {
-      "term": "network cnn",
-      "recent_docs": 3,
+      "term": "visual appearance",
+      "recent_docs": 10,
       "baseline_docs": 0,
-      "recent_corpus_docs": 1708,
+      "recent_corpus_docs": 2686,
       "baseline_corpus_docs": 1137,
-      "acceleration": 4.661,
-      "discovery_score": 3.1852,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
       "examples": [
-        "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
-        "Deep Learning-Based Classification of Cognitive and Resting States Using Electroencephalography Signals",
-        "Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling"
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "Geometry-Conditioned Visual Place Recognition in Natural Environments",
+        "DreamStream: Towards Policy-Oriented Generative Simulation for End-to-End Driving"
+      ]
+    },
+    {
+      "term": "motion estimation",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video",
+        "FluidRain: Incompressible Rain Flow as an Attention Bias for Loop-in-Loop Video Deraining",
+        "GraphSVR: q-Space--Aware Graph-Based Slice-to-Volume Registration for Diffusion MRI"
+      ]
+    },
+    {
+      "term": "full fine-tuning",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
+        "A Hybrid CNN--State-Space--Attention Backbone with Joint-Embedding Predictive Pretraining for 12-Lead ECG Classification",
+        "Personalized Korean Lipreading as Visual Speech Recognition: Transfer, Census and Adaptation on OLKAVS"
+      ]
+    },
+    {
+      "term": "image regions",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space",
+        "Spatial Action Review: A Visual Analytics Dashboard for Auditing Language-to-Action Hand-offs in Electron Microscopy",
+        "SAFe: Segment-guided Aggregation of Feature Densities for Anomaly-aware Segmentation"
+      ]
+    },
+    {
+      "term": "video frames",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "Less is More: Encoder-only Audio-Visual Segmentation",
+        "HYDRO: Towards Non-Reversible Face De-Identification Using a High-Fidelity Hybrid Diffusion and Target-Oriented Approach",
+        "A 3D Pose-Based Ensemble Framework for Cricket Shot Classification and Automated Biomechanical Analysis"
+      ]
+    },
+    {
+      "term": "achieving state-of-the-art",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "PlenoCI: Plenoptic CharacterIstics for View Dependence Aware Change Classification",
+        "Code Plans, Diffusion Renders: Open-Ended Generative World Modeling",
+        "0.5%>100%: Bidirectional Reciprocal Learning for Referring Image Segmentation"
+      ]
+    },
+    {
+      "term": "weather conditions",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "PBLH Estimation from Satellite Radiances via a Dual-Encoder Transformer",
+        "ICM: Intra-class Mixing for Domain Adaptation in Adverse Weather",
+        "STAR: Scene- and Task-Aware 4D Radar Preprocessing Towards End-to-End Cognitive Radar"
+      ]
+    },
+    {
+      "term": "average precision",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "From Alignment to Fusion in 3D Vision-Language",
+        "Surgical Kinematics from Monocular Video with Learned Articulated Motion Constraints",
+        "PEARL: A Lightweight Prompt-based Feature Interpreter Framework for Real-Time, Anonymous, and Heterogeneous Collaborative Perception"
+      ]
+    },
+    {
+      "term": "adverse weather",
+      "recent_docs": 10,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 8.894,
+      "discovery_score": 10.6042,
+      "examples": [
+        "ICM: Intra-class Mixing for Domain Adaptation in Adverse Weather",
+        "Automotive mmWave Spinning Radar Place Recognition with Spatially Gated Feature-Correlation Representation",
+        "Breaking Weather-Content Coupling: Type-Severity Guided Progressive Disentanglement for All-in-One Infrared Restoration"
+      ]
+    },
+    {
+      "term": "flow matching",
+      "recent_docs": 14,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 4.094,
+      "discovery_score": 10.0656,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Uni-XAS: Alignment-Driven Bidirectional Multimodal Learning for X-ray Absorption Spectroscopy",
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants"
       ]
     }
   ]
