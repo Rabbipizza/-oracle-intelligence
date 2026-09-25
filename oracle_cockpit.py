@@ -178,17 +178,38 @@ def main():
         if g.get("coverage_gate_pass"):
             scout.append({"term":c.get("term"),"score":c.get("discovery_score"),"acceleration":c.get("acceleration"),"families":g.get("families",[]),"status":g.get("trend_status")})
 
+    portfolio_view=build_portfolio(market,portfolio)
+    data_as_of=portfolio_view.get("as_of")
+    decision_as_of=decisions.get("as_of")
+    decision_lag_days=None
+    if data_as_of and decision_as_of:
+        try:
+            decision_lag_days=(datetime.fromisoformat(data_as_of)-datetime.fromisoformat(decision_as_of)).days
+        except Exception:
+            decision_lag_days=None
+    decision_freshness={
+        "status":"STALE" if decision_lag_days is not None and decision_lag_days>1 else "CURRENT",
+        "lag_days":decision_lag_days,
+        "message":(
+            f"Decision state is {decision_lag_days} day(s) behind market data."
+            if decision_lag_days is not None and decision_lag_days>1
+            else "Decision state is aligned with the latest market snapshot."
+        )
+    }
+
     out={
         "generated_at":datetime.now(timezone.utc).isoformat(),
         "market_generated_at":market.get("generated_at"),
         "market_source":market.get("source"),
-        "decision_as_of":decisions.get("as_of"),
+        "data_as_of":data_as_of,
+        "decision_as_of":decision_as_of,
+        "decision_freshness":decision_freshness,
         "discovery":{"quality":discovery.get("quality"),"unique_papers":discovery.get("unique_papers"),
                      "recent_docs":discovery.get("recent_docs"),"baseline_docs":discovery.get("baseline_docs"),
                      "scout_candidates_passing_coverage":scout[:10]},
         "trends":trends,
         "action_now":action,
-        "portfolio":build_portfolio(market,portfolio),
+        "portfolio":portfolio_view,
         "market_errors":market.get("errors",[])
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
