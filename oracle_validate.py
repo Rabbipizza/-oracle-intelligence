@@ -48,6 +48,10 @@ for tr in trends[:5]:
     if missing:
         errors.append(f"trend_market_history_missing:{tr.get('key')}:{','.join(str(x) for x in missing)}")
 
+fresh=cockpit.get("decision_freshness",{})
+if fresh.get("status")=="STALE":
+    warnings.append(f"decision_state_stale:{fresh.get('lag_days')}d:{cockpit.get('decision_as_of')}->{cockpit.get('data_as_of')}")
+
 pf=cockpit.get("portfolio",{})
 if len(pf.get("positions",[]))<2:
     errors.append("portfolio_positions_missing")
