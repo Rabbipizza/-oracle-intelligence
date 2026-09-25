@@ -25,6 +25,25 @@ def rows(market,ticker):
 def metric(rs,n):
     return pct(rs[-1]["close"],rs[-1-n]["close"]) if len(rs)>n else None
 
+def realized_vol(rs, lookback=21):
+    xs=[r.get("close") for r in rs[-(lookback+1):] if isinstance(r.get("close"),(int,float)) and r.get("close")>0]
+    if len(xs)<3: return None
+    rets=[math.log(xs[i]/xs[i-1]) for i in range(1,len(xs))]
+    if len(rets)<2: return None
+    mu=sum(rets)/len(rets)
+    var=sum((x-mu)**2 for x in rets)/(len(rets)-1)
+    return math.sqrt(var)*math.sqrt(252)*100.0
+
+def max_drawdown(rs, lookback=63):
+    xs=[r.get("close") for r in rs[-lookback:] if isinstance(r.get("close"),(int,float)) and r.get("close")>0]
+    if len(xs)<2: return None
+    peak=xs[0]; worst=0.0
+    for x in xs:
+        peak=max(peak,x)
+        dd=(x/peak-1.0)*100.0
+        worst=min(worst,dd)
+    return worst
+
 market=load("data/market.json")
 research=load("research-universe.json")
 evidence=load("economic-evidence.json")
@@ -81,6 +100,7 @@ for ticker,meta in universe.items():
     ev=(evidence.get("companies",{}) or {}).get(ticker)
     r=rows(market,ticker)
     d1=metric(r,1); w1=metric(r,5); m1=metric(r,21)
+    vol21=realized_vol(r,21); dd63=max_drawdown(r,63)
     qm1=metric(q,21)
     rel=(m1-qm1) if m1 is not None and qm1 is not None else None
     tstats=trend_stats.get(meta.get("trend"),{})
@@ -139,6 +159,8 @@ for ticker,meta in universe.items():
         "w1_pct":None if w1 is None else round(w1,2),
         "m1_pct":None if m1 is None else round(m1,2),
         "rel_qqq_1m_pct_points":None if rel is None else round(rel,2),
+        "volatility_21d_ann_pct":None if vol21 is None else round(vol21,2),
+        "max_drawdown_63d_pct":None if dd63 is None else round(dd63,2),
         "actual_weight_pct":actual_weight,
         "allocation_score":round(0.55*structural+0.45*entry,2),
         "target_weight_pct":target,
@@ -146,55 +168,127 @@ for ticker,meta in universe.items():
         "invalidation":ev.get("invalidation",[]) if ev else []
     }
 
-# Global capital allocator.
-# Doctrine:
-# - one eligible GREEN => 100% target to that GREEN;
-# - multiple GREENs => 100% distributed by conviction score;
-# - existing ORANGE/RED holdings => 0% when at least one GREEN exists;
-# - if no GREEN exists, the best near-GREEN PROVEN candidate may be used as a tactical fallback;
-# - otherwise stay in cash. No leverage.
-eligible_greens=[]
+# ORACLE V3 — Capital Competition Engine.
+# Capital competes between eligible stocks, QQQ and cash.
+# The allocator rewards economic proof + entry quality + QQQ-relative strength,
+# penalizes volatility and drawdown, and gives incumbents a small hysteresis bonus.
+q_m1=metric(q,21)
+q_vol=realized_vol(q,21)
+q_dd=max_drawdown(q,63)
+
+def competition_score(sc, incumbent=False):
+    structural=float(sc.get("structural_early_bird") or 0)
+    entry=float(sc.get("entry_score") or 0)
+    rel=float(sc.get("rel_qqq_1m_pct_points") or 0)
+    vol=sc.get("volatility_21d_ann_pct")
+    dd=sc.get("max_drawdown_63d_pct")
+    # Conviction core: proof/structure + current entry quality.
+    base=.50*structural + .50*entry
+    # Relative edge: reward outperformance, penalize sustained underperformance.
+    relative=clamp(rel*1.5,-15,15)
+    # Risk penalty: only excess risk above a moderate equity baseline is punished.
+    vol_penalty=0 if vol is None else max(0.0,vol-30.0)*0.18
+    dd_penalty=0 if dd is None else max(0.0,abs(min(0.0,dd))-10.0)*0.45
+    hysteresis=3.0 if incumbent else 0.0
+    return round(clamp(base+relative-vol_penalty-dd_penalty+hysteresis),2)
+
+for ticker,sc in scores.items():
+    sc["capital_competition_score"]=competition_score(sc, float(sc.get("actual_weight_pct") or 0)>0)
+
+# QQQ baseline score: liquid diversified default deployment vehicle.
+# It gets no structural alpha premium, but avoids single-name concentration penalty.
+qqq_score=60.0
+if q_m1 is not None:
+    qqq_score += clamp(q_m1*.8,-8,8)
+if q_vol is not None:
+    qqq_score -= max(0.0,q_vol-25.0)*0.12
+if q_dd is not None:
+    qqq_score -= max(0.0,abs(min(0.0,q_dd))-10.0)*0.30
+qqq_score=round(clamp(qqq_score),2)
+
+# Hard safety gate: a stock cannot compete if evidence is not PROVEN,
+# drawdown is extreme, or relative weakness + weak Entry signals deterioration.
+eligible=[]
 for ticker,sc in scores.items():
     sig=(signals.get(ticker) or {}).get("signal")
     rel=sc.get("rel_qqq_1m_pct_points")
-    entry=sc.get("entry_score") or 0
-    # Hard risk exclusion for allocator eligibility.
-    risk_ok = not (rel is not None and rel <= -12 and entry < 45)
-    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and risk_ok:
-        eligible_greens.append(ticker)
+    entry=float(sc.get("entry_score") or 0)
+    dd=sc.get("max_drawdown_63d_pct")
+    hard_risk = (dd is not None and dd <= -35) or (rel is not None and rel <= -12 and entry < 45)
+    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not hard_risk:
+        eligible.append(ticker)
+
+# Near-GREEN incumbents may remain in the competition, but only with proven evidence,
+# Entry >=55, and no material relative weakness. This is the hysteresis / anti-churn rule.
+for ticker,sc in scores.items():
+    if ticker in eligible: continue
+    act=float(sc.get("actual_weight_pct") or 0)
+    if act<=0 or sc.get("evidence_status")!="PROVEN": continue
+    entry=float(sc.get("entry_score") or 0)
+    rel=sc.get("rel_qqq_1m_pct_points")
+    if entry>=55 and (rel is None or rel>=-5):
+        eligible.append(ticker)
+
+# Candidate set always includes QQQ. Cash is a defensive reserve only if the whole
+# opportunity set is weak or QQQ itself enters a severe risk regime.
+candidate_scores={t:scores[t]["capital_competition_score"] for t in eligible}
+candidate_scores["QQQ"]=qqq_score
+
+qqq_severe_risk = (
+    (q_m1 is not None and q_m1 <= -12) and
+    (q_dd is not None and q_dd <= -15)
+)
 
 targets={}
-if len(eligible_greens)==1:
-    targets[eligible_greens[0]]=100.0
-elif len(eligible_greens)>1:
-    raw={}
-    for ticker in eligible_greens:
-        q=max(1.0,(scores[ticker].get("allocation_score") or 0)-60.0)
-        raw[ticker]=q*q
-    den=sum(raw.values()) or 1.0
-    running=0.0
-    for i,ticker in enumerate(sorted(eligible_greens,key=lambda t:raw[t],reverse=True)):
-        if i==len(eligible_greens)-1:
-            w=round(100.0-running,1)
-        else:
-            w=round(100.0*raw[ticker]/den,1)
-            running+=w
-        targets[ticker]=w
-else:
-    # Opportunity-cost fallback: prefer the strongest nearly-GREEN PROVEN name to idle cash.
-    near=[]
-    for ticker,sc in scores.items():
-        if sc.get("evidence_status")!="PROVEN": continue
-        entry=sc.get("entry_score") or 0
-        structural=sc.get("structural_early_bird") or 0
-        rel=sc.get("rel_qqq_1m_pct_points")
-        if structural>=85 and entry>=55 and (rel is None or rel>=-5):
-            near.append(ticker)
-    if near:
-        best=max(near,key=lambda t:scores[t].get("allocation_score") or 0)
-        targets[best]=100.0
+cash_target=0.0
 
-# Final portfolio actions are derived from global TARGET vs ledger ACTUAL.
+if not candidate_scores:
+    cash_target=100.0
+else:
+    # Keep only candidates close enough to the best score to deserve capital.
+    best=max(candidate_scores.values())
+    active={k:v for k,v in candidate_scores.items() if v >= best-8.0}
+
+    # If no stock beats QQQ by at least 4 score points, QQQ becomes the default allocation.
+    stock_best=max([v for k,v in active.items() if k!="QQQ"], default=-1e9)
+    if stock_best < qqq_score + 4.0:
+        active={"QQQ":qqq_score}
+
+    if qqq_severe_risk and set(active)=={"QQQ"}:
+        cash_target=100.0
+        active={}
+
+    if active:
+        # Softmax-style allocation by score; avoids binary all-in switches.
+        exps={k:math.exp((v-best)/8.0) for k,v in active.items()}
+        den=sum(exps.values()) or 1.0
+        raw={k:100.0*exps[k]/den for k in active}
+
+        # Single-name concentration guardrail:
+        # 70% normal; up to 85% only for exceptional proven conviction.
+        stock_keys=[k for k in raw if k!="QQQ"]
+        for k in stock_keys:
+            sc=scores[k]
+            exceptional=(sc.get("structural_early_bird",0)>=95 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
+            cap=85.0 if exceptional else 70.0
+            if raw[k]>cap:
+                excess=raw[k]-cap
+                raw[k]=cap
+                raw["QQQ"]=raw.get("QQQ",0)+excess
+
+        # Round while preserving 100%.
+        items=sorted(raw.items(),key=lambda kv:kv[1],reverse=True)
+        running=0.0
+        for i,(k,v) in enumerate(items):
+            w=round(100.0-running,1) if i==len(items)-1 else round(v,1)
+            running+=w
+            targets[k]=w
+
+if cash_target>0:
+    targets["CASH_CHF"]=round(cash_target,1)
+
+# Final portfolio actions derive from global TARGET vs ledger ACTUAL.
+# QQQ/CASH may appear in TARGET even when not currently held.
 for ticker,sc in scores.items():
     tgt=float(targets.get(ticker,0.0))
     act=float(sc.get("actual_weight_pct") or 0.0)
@@ -210,7 +304,17 @@ for ticker,sc in scores.items():
     sc["portfolio_action"]=action
     if ticker in signals:
         signals[ticker]["portfolio_action"]=action
-        signals[ticker]["reason"] += f" Global allocator: ACTUAL {act:.1f}% -> TARGET {tgt:.1f}%."
+        signals[ticker]["reason"] += f" Capital Competition: score {sc.get('capital_competition_score'):.1f}; ACTUAL {act:.1f}% -> TARGET {tgt:.1f}%."
+
+benchmark_competition={
+    "QQQ":{
+        "score":qqq_score,
+        "m1_pct":None if q_m1 is None else round(q_m1,2),
+        "volatility_21d_ann_pct":None if q_vol is None else round(q_vol,2),
+        "max_drawdown_63d_pct":None if q_dd is None else round(q_dd,2)
+    },
+    "cash_target_pct":round(cash_target,1)
+}
 
 # Preserve the structural trend ranking, but stamp the state as freshly recalculated.
 trend_out={}
@@ -232,13 +336,14 @@ out={
     "version":2,
     "as_of":as_of,
     "generated_at":datetime.now(timezone.utc).isoformat(),
-    "method":"HYBRID_V2_FULL_CAPITAL_GREEN_ROTATION",
-    "rule":"100% of deployable capital targets eligible GREEN signals; if one GREEN exists it receives 100%. Multiple GREENs share capital by conviction. ORANGE/RED are exited when GREEN alternatives exist. Near-GREEN PROVEN fallback is allowed only when no GREEN exists. No leverage; no real orders are executed.",
+    "method":"ORACLE_V3_CAPITAL_COMPETITION_ENGINE",
+    "rule":"Capital competes among eligible PROVEN stocks, QQQ and cash. Allocation uses conviction, QQQ-relative strength, volatility, drawdown and incumbent hysteresis. Stocks must beat QQQ sufficiently to earn capital. No leverage; no real orders are executed.",
     "trends":trend_out,
     "signals":signals,
     "scores":scores,
     "target_allocation_pct":targets,
-    "actual_holdings_pct":actual
+    "actual_holdings_pct":actual,
+    "benchmark_competition":benchmark_competition
 }
 Path("decision-state.json").write_text(json.dumps(out,indent=2),encoding="utf-8")
 print(json.dumps({"as_of":as_of,"green":[k for k,v in signals.items() if v["signal"]=="GREEN"],"targets":targets},indent=2))
