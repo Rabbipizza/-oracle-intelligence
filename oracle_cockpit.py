@@ -148,7 +148,9 @@ def main():
                "signal":sig,"signal_reason":reason,
                "structural_early_bird":sc.get("structural_early_bird"),
                "entry_score":sc.get("entry_score"),
+               "actual_weight_pct":sc.get("actual_weight_pct"),
                "target_weight_pct":sc.get("target_weight_pct"),
+               "portfolio_action":sc.get("portfolio_action"),
                "evidence_status":sc.get("evidence_status"),
                "invalidation":sc.get("invalidation",[]),
                "currency":md.get("currency"),"exchange":md.get("exchange"),**metrics}
