@@ -40,7 +40,7 @@ button{font:inherit}.run-btn{margin-top:8px;background:#163525;color:var(--green
 
 <section class="panel">
 <h2>🎯 Décision ORACLE</h2>
-<div class="muted small" style="margin-bottom:10px">GREEN = entrée admissible selon la méthode ORACLE. ORANGE = watchlist : ne pas confondre avec une recommandation d’entrée. RED = critères non passés.</div>
+<div class="muted small" id="decisionFreshness" style="margin-bottom:8px"></div><div class="muted small" style="margin-bottom:10px">GREEN = entrée admissible selon la méthode ORACLE. ORANGE = watchlist : ne pas confondre avec une recommandation d’entrée. RED = critères non passés.</div>
 <div id="actions"></div>
 </section>
 
@@ -127,7 +127,20 @@ function startRunPolling(){
 }
 function renderData(d){
  DATA=d; selected=selected||(d.trends&&d.trends[0]&&d.trends[0].key)||null;
- $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${d.market_generated_at?new Date(d.market_generated_at).toLocaleString('fr-CH'):'—'}`;
+ const df=d.decision_freshness||{};
+ const decisionDate=d.decision_as_of||'—';
+ const marketDate=d.data_as_of||'—';
+ const decisionLine=df.status==='STALE'
+   ? `Décision: ${decisionDate} · <span class="neg">EN RETARD ${df.lag_days??'?'} j</span>`
+   : `Décision: ${decisionDate} · <span class="pos">à jour</span>`;
+ $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${marketDate}<br>${decisionLine}`;
+ const df=d.decision_freshness||{};
+ const f=$('decisionFreshness');
+ if(f){
+   f.innerHTML=df.status==='STALE'
+     ? `<span class="neg"><b>⚠ Décision ORACLE non synchronisée :</b> état du ${d.decision_as_of||'—'}, marché au ${d.data_as_of||'—'}.</span> Les performances/portefeuille sont fraîches; les signaux GREEN/ORANGE ne doivent pas être traités comme recalculés aujourd'hui.`
+     : `<span class="pos"><b>✓ Décision ORACLE synchronisée</b></span> · marché et couche décisionnelle alignés.`;
+ }
  headline();actions();trends();selectTrend(selected);portfolio();discovery();
 }
 
