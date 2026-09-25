@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-09-24",
-  "generated_at": "2026-09-25T09:36:49.154095+00:00",
+  "generated_at": "2026-09-25T10:00:33.618016+00:00",
   "method": "HYBRID_V1_EXPLICIT_EVIDENCE_PLUS_ENTRY",
   "rule": "GREEN requires explicit current economic evidence plus fresh entry confirmation. Holdings never create GREEN. No orders are executed.",
   "trends": {
@@ -43,7 +43,7 @@
       "state": "FALLING",
       "summary": "AI is moving into robots and edge systems, but listed-company economic capture remains early and fragmented.",
       "market_breadth_1m_pct": 65.0,
-      "market_median_1m_pct": 3.15
+      "market_median_1m_pct": 2.83
     }
   },
   "signals": {
@@ -663,40 +663,40 @@
     },
     "ABBN.SW": {
       "structural_early_bird": 65.2,
-      "entry_score": 56.8,
+      "entry_score": 55.4,
       "trend": "physical",
       "role": "Industrial robotics leader candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.59,
-      "w1_pct": 2.2,
-      "m1_pct": 3.15,
-      "rel_qqq_1m_pct_points": -1.12,
+      "d1_pct": 1.27,
+      "w1_pct": 1.87,
+      "m1_pct": 2.83,
+      "rel_qqq_1m_pct_points": -1.45,
       "target_weight_pct": 0.0,
       "invalidation": []
     },
     "SU.PA": {
       "structural_early_bird": 60.2,
-      "entry_score": 44.3,
+      "entry_score": 43.5,
       "trend": "power",
       "role": "Power management candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.88,
-      "w1_pct": 3.32,
-      "m1_pct": -0.77,
-      "rel_qqq_1m_pct_points": -5.05,
+      "d1_pct": 1.69,
+      "w1_pct": 3.13,
+      "m1_pct": -0.96,
+      "rel_qqq_1m_pct_points": -5.23,
       "target_weight_pct": 0.0,
       "invalidation": []
     },
     "ENR.DE": {
       "structural_early_bird": 60.2,
-      "entry_score": 43.3,
+      "entry_score": 43.6,
       "trend": "power",
       "role": "Generation/grid candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 3.05,
-      "w1_pct": 4.45,
-      "m1_pct": -2.53,
-      "rel_qqq_1m_pct_points": -6.8,
+      "d1_pct": 3.12,
+      "w1_pct": 4.52,
+      "m1_pct": -2.46,
+      "rel_qqq_1m_pct_points": -6.74,
       "target_weight_pct": 0.0,
       "invalidation": []
     },
@@ -1027,14 +1027,14 @@
     },
     "IQE.L": {
       "structural_early_bird": 60.2,
-      "entry_score": 47.3,
+      "entry_score": 45.4,
       "trend": "photonics",
       "role": "InP substrate/epi candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 3.18,
-      "w1_pct": 6.44,
-      "m1_pct": -3.3,
-      "rel_qqq_1m_pct_points": -7.57,
+      "d1_pct": 2.72,
+      "w1_pct": 5.97,
+      "m1_pct": -3.72,
+      "rel_qqq_1m_pct_points": -8.0,
       "target_weight_pct": 0.0,
       "invalidation": []
     },
@@ -1495,7 +1495,7 @@
     },
     "NVDA": {
       "structural_early_bird": 52.1,
-      "entry_score": 59.6,
+      "entry_score": 59.5,
       "trend": "physical",
       "role": "Leader / compute platform",
       "evidence_status": "UNREVALIDATED",
@@ -1508,7 +1508,7 @@
     },
     "AMBA": {
       "structural_early_bird": 54.2,
-      "entry_score": 61.2,
+      "entry_score": 61.1,
       "trend": "physical",
       "role": "Edge AI compute pick & shovel",
       "evidence_status": "UNREVALIDATED",
@@ -1521,7 +1521,7 @@
     },
     "HSAI": {
       "structural_early_bird": 54.2,
-      "entry_score": 33.1,
+      "entry_score": 32.9,
       "trend": "physical",
       "role": "Sensing / lidar pick & shovel",
       "evidence_status": "UNREVALIDATED",
@@ -1534,20 +1534,20 @@
     },
     "IOT.MI": {
       "structural_early_bird": 60.2,
-      "entry_score": 79.1,
+      "entry_score": 79.5,
       "trend": "physical",
       "role": "Edge compute candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 0.45,
-      "w1_pct": 3.14,
-      "m1_pct": 18.09,
-      "rel_qqq_1m_pct_points": 13.81,
+      "d1_pct": 0.68,
+      "w1_pct": 3.37,
+      "m1_pct": 18.35,
+      "rel_qqq_1m_pct_points": 14.08,
       "target_weight_pct": 0.0,
       "invalidation": []
     },
     "QCOM": {
       "structural_early_bird": 60.2,
-      "entry_score": 76.9,
+      "entry_score": 76.8,
       "trend": "physical",
       "role": "Edge AI compute candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1560,7 +1560,7 @@
     },
     "NXPI": {
       "structural_early_bird": 60.2,
-      "entry_score": 57.1,
+      "entry_score": 57.0,
       "trend": "physical",
       "role": "Edge/auto compute candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1573,7 +1573,7 @@
     },
     "ON": {
       "structural_early_bird": 47.2,
-      "entry_score": 60.2,
+      "entry_score": 60.1,
       "trend": "physical",
       "role": "Sensing/power candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1586,7 +1586,7 @@
     },
     "MBLY": {
       "structural_early_bird": 60.2,
-      "entry_score": 30.7,
+      "entry_score": 30.6,
       "trend": "physical",
       "role": "Perception/autonomy candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1599,7 +1599,7 @@
     },
     "OUST": {
       "structural_early_bird": 60.2,
-      "entry_score": 91.9,
+      "entry_score": 91.8,
       "trend": "physical",
       "role": "Lidar candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1612,7 +1612,7 @@
     },
     "LAZR": {
       "structural_early_bird": 47.2,
-      "entry_score": 61.9,
+      "entry_score": 61.8,
       "trend": "physical",
       "role": "Lidar candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1625,7 +1625,7 @@
     },
     "TER": {
       "structural_early_bird": 60.2,
-      "entry_score": 70.4,
+      "entry_score": 70.3,
       "trend": "physical",
       "role": "Robotics/automation candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1638,7 +1638,7 @@
     },
     "ROK": {
       "structural_early_bird": 60.2,
-      "entry_score": 53.0,
+      "entry_score": 52.9,
       "trend": "physical",
       "role": "Industrial automation candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1651,7 +1651,7 @@
     },
     "ISRG": {
       "structural_early_bird": 52.1,
-      "entry_score": 65.9,
+      "entry_score": 65.8,
       "trend": "physical",
       "role": "Robotics application leader",
       "evidence_status": "UNREVALIDATED",
@@ -1664,7 +1664,7 @@
     },
     "SYM": {
       "structural_early_bird": 60.2,
-      "entry_score": 69.7,
+      "entry_score": 69.6,
       "trend": "physical",
       "role": "Warehouse robotics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1677,7 +1677,7 @@
     },
     "SERV": {
       "structural_early_bird": 47.2,
-      "entry_score": 45.4,
+      "entry_score": 45.2,
       "trend": "physical",
       "role": "Autonomous robotics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1690,7 +1690,7 @@
     },
     "RR": {
       "structural_early_bird": 47.2,
-      "entry_score": 29.3,
+      "entry_score": 29.2,
       "trend": "physical",
       "role": "Service robotics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1703,7 +1703,7 @@
     },
     "PATH": {
       "structural_early_bird": 47.2,
-      "entry_score": 21.4,
+      "entry_score": 21.2,
       "trend": "physical",
       "role": "Automation software candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1716,7 +1716,7 @@
     },
     "CGNX": {
       "structural_early_bird": 67.2,
-      "entry_score": 37.8,
+      "entry_score": 37.7,
       "trend": "physical",
       "role": "Machine vision pick & shovel",
       "evidence_status": "UNREVALIDATED",
@@ -1729,7 +1729,7 @@
     },
     "ZBRA": {
       "structural_early_bird": 47.2,
-      "entry_score": 54.1,
+      "entry_score": 54.0,
       "trend": "physical",
       "role": "Machine vision/edge candidate",
       "evidence_status": "UNREVALIDATED",
