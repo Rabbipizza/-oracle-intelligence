@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "as_of": "2026-09-25",
+  "rule": "A fresh GREEN requires an explicit economic-evidence record plus fresh market entry confirmation. Historical labels alone are insufficient.",
+  "companies": {
+    "AAON": {
+      "status": "PROVEN",
+      "trend": "power",
+      "role": "Direct beneficiary / data-center cooling",
+      "evidence_date": "2026-08-10",
+      "primary_source": "AAON investor relations — Q2 2026 results",
+      "source_url": "https://investors.aaon.com/investor-news/aaon-reports-record-second-quarter-2026-results-driven-by-strong-demand-accelerating-throughput-and-improved-operating-execution",
+      "invalidation": [
+        "material BASX backlog deterioration",
+        "confirmed slowdown in data-center orders",
+        "persistent margin/cash-conversion deterioration"
+      ]
+    },
+    "GEV": {
+      "status": "PROVEN",
+      "trend": "power",
+      "role": "Bottleneck / generation and electrification",
+      "evidence_date": "2026-07-22",
+      "primary_source": "GE Vernova — Q2 2026 results",
+      "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-reports-second-quarter-2026-financial-results-raises-2026-financial",
+      "invalidation": [
+        "material reversal in Power/Electrification orders",
+        "data-center order slowdown",
+        "backlog contraction inconsistent with thesis"
+      ]
+    }
+  }
+}
