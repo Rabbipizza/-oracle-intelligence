@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:57:58.873232+00:00",
+  "generated_at": "2026-09-25T14:01:28.341473+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 5338,
@@ -143,7 +143,7 @@
       "examples": [
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
         "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "Beyond Future Prediction: Denoising as Generative Adaptation for Robot Control"
+        "SAW: Toward a Surgical Action World Model via Controllable and Scalable Video Generation"
       ]
     },
     {
@@ -343,7 +343,7 @@
       ]
     },
     {
-      "term": "language mllms",
+      "term": "large language mllms",
       "recent_docs": 25,
       "baseline_docs": 0,
       "recent_corpus_docs": 3512,
@@ -357,7 +357,7 @@
       ]
     },
     {
-      "term": "large language mllms",
+      "term": "language mllms",
       "recent_docs": 25,
       "baseline_docs": 0,
       "recent_corpus_docs": 3512,
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "term": "splatting dgs",
+      "term": "gaussian splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
       "recent_corpus_docs": 3512,
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "term": "gaussian splatting dgs",
+      "term": "splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
       "recent_corpus_docs": 3512,
@@ -1197,20 +1197,6 @@
       ]
     },
     {
-      "term": "collision avoidance",
-      "recent_docs": 15,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3512,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 10.042,
-      "discovery_score": 13.7618,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "Combining Evasive and Braking Reactions for Safety Reference Models in Automated Vehicles",
-        "Control Barrier Functions for Safe Free-Flying Robotic Spacecraft Operations in Tumbling Target Capture"
-      ]
-    },
-    {
       "term": "bounding boxes",
       "recent_docs": 15,
       "baseline_docs": 0,
@@ -1222,6 +1208,20 @@
         "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
         "SplatLabel: Pseudo-Labelling through 4D Gaussian Splatting"
+      ]
+    },
+    {
+      "term": "collision avoidance",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3512,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.042,
+      "discovery_score": 13.7618,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "Combining Evasive and Braking Reactions for Safety Reference Models in Automated Vehicles",
+        "Control Barrier Functions for Safe Free-Flying Robotic Spacecraft Operations in Tumbling Target Capture"
       ]
     },
     {
