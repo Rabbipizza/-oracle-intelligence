@@ -49,6 +49,7 @@ jobs:
           python oracle_sources.py
           python oracle_source_gate.py
           python oracle_market.py
+          python oracle_decision.py
           python oracle_cockpit.py
           python oracle_signal_ledger.py
           python oracle_signal_performance.py
@@ -59,7 +60,7 @@ jobs:
         run: |
           git config user.name "oracle-bot"
           git config user.email "oracle-bot@users.noreply.github.com"
-          git add data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/market.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
+          git add decision-state.json economic-evidence.json data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/market.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
           git diff --cached --quiet || git commit -m "ORACLE: verified autonomous snapshot"
           git pull --rebase origin main
           git push
