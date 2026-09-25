@@ -103,28 +103,14 @@ for ticker,meta in universe.items():
     entry=round(clamp(entry),1)
 
     actual_weight=float(open_weights.get(ticker,0) or 0)
-    # Position ceiling: base 10%, extendable to 15% only for exceptional conviction.
-    # Exceptional = explicit PROVEN + Structural >=95 + Entry >=80.
-    # This separates normal concentration control from a high-conviction override.
-    normal_ceiling=10.0
-    exceptional_ceiling=15.0 if (explicit_proven and structural>=95 and entry>=80) else normal_ceiling
-
     if explicit_proven and structural>=85 and entry>=60:
         signal="GREEN"
-        target=min(exceptional_ceiling,max(4.0,round(4+(entry-60)*.25,1)))
-        # A fresh-entry signal may raise the target, but never rewrites ACTUAL.
-        if actual_weight>target:
-            target=actual_weight
+        target=0.0
         reason=f"Fresh explicit economic proof; Structural {structural}/100; Entry {entry}/100."
     elif explicit_proven:
         signal="ORANGE"
-        # Hybrid doctrine: an already validated, still-PROVEN holding is HOLD,
-        # not an automatic liquidation merely because today's entry gate is weak.
-        target=actual_weight if actual_weight>0 else 0.0
-        if actual_weight>0:
-            reason=f"Economic chain remains PROVEN; Entry {entry}/100 does not justify adding. Existing holding: HOLD at {actual_weight:.1f}%."
-        else:
-            reason=f"Economic chain freshly PROVEN; entry confirmation incomplete (Entry {entry}/100)."
+        target=0.0
+        reason=f"Economic chain remains PROVEN; entry confirmation incomplete (Entry {entry}/100)."
     else:
         legacy=(str(meta.get("legacy_proof") or "")).upper().strip()
         if legacy=="UNPROVEN" or not legacy:
@@ -140,41 +126,7 @@ for ticker,meta in universe.items():
             target=0.0
             reason="Evidence insufficient for a fresh entry state."
 
-    if target > actual_weight + 0.25:
-        portfolio_action="INCREASE"
-    elif target < actual_weight - 0.25:
-        portfolio_action="REVIEW_REDUCE"
-    elif actual_weight>0:
-        portfolio_action="HOLD"
-    else:
-        portfolio_action="WAIT"
-
-    # Opportunity-cost doctrine:
-    # cash is not treated as neutral when a PROVEN holding is close to GREEN.
-    # A near-green existing holding can receive a modest tactical target uplift
-    # if Entry is within 5 points of GREEN and relative performance is not materially weak.
-    if explicit_proven and actual_weight>0 and signal=="ORANGE":
-        near_green = entry >= 55
-        rel_ok = (rel is None or rel >= -5)
-        if near_green and rel_ok:
-            tactical_target=min(normal_ceiling, max(actual_weight, round(actual_weight + min(2.0,(entry-55)*0.4),1)))
-            if tactical_target > target:
-                target=tactical_target
-                portfolio_action="INCREASE_TACTICAL"
-                reason += f" Cash opportunity cost applies: near-GREEN holding; tactical target {target:.1f}%."
-
-    # Risk/reduction gate: persistent relative weakness can override HOLD.
-    # This does not trigger on one weak day; it requires a materially weak 1M relative move
-    # or a broken explicit evidence state.
-    if actual_weight>0:
-        if not explicit_proven:
-            target=0.0
-            portfolio_action="REVIEW_EXIT"
-            reason += " Existing holding no longer has explicit PROVEN evidence."
-        elif rel is not None and rel <= -12 and entry < 45:
-            target=max(0.0, round(actual_weight*0.5,1))
-            portfolio_action="REVIEW_REDUCE"
-            reason += f" Risk gate: 1M relative performance {rel:.1f} pts vs QQQ with weak Entry {entry:.1f}."
+    portfolio_action="WAIT"
 
     signals[ticker]={"signal":signal,"reason":reason,"portfolio_action":portfolio_action}
     scores[ticker]={
@@ -188,11 +140,77 @@ for ticker,meta in universe.items():
         "m1_pct":None if m1 is None else round(m1,2),
         "rel_qqq_1m_pct_points":None if rel is None else round(rel,2),
         "actual_weight_pct":actual_weight,
+        "allocation_score":round(0.55*structural+0.45*entry,2),
         "target_weight_pct":target,
         "portfolio_action":portfolio_action,
         "invalidation":ev.get("invalidation",[]) if ev else []
     }
-    if target>0: targets[ticker]=target
+
+# Global capital allocator.
+# Doctrine:
+# - one eligible GREEN => 100% target to that GREEN;
+# - multiple GREENs => 100% distributed by conviction score;
+# - existing ORANGE/RED holdings => 0% when at least one GREEN exists;
+# - if no GREEN exists, the best near-GREEN PROVEN candidate may be used as a tactical fallback;
+# - otherwise stay in cash. No leverage.
+eligible_greens=[]
+for ticker,sc in scores.items():
+    sig=(signals.get(ticker) or {}).get("signal")
+    rel=sc.get("rel_qqq_1m_pct_points")
+    entry=sc.get("entry_score") or 0
+    # Hard risk exclusion for allocator eligibility.
+    risk_ok = not (rel is not None and rel <= -12 and entry < 45)
+    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and risk_ok:
+        eligible_greens.append(ticker)
+
+targets={}
+if len(eligible_greens)==1:
+    targets[eligible_greens[0]]=100.0
+elif len(eligible_greens)>1:
+    raw={}
+    for ticker in eligible_greens:
+        q=max(1.0,(scores[ticker].get("allocation_score") or 0)-60.0)
+        raw[ticker]=q*q
+    den=sum(raw.values()) or 1.0
+    running=0.0
+    for i,ticker in enumerate(sorted(eligible_greens,key=lambda t:raw[t],reverse=True)):
+        if i==len(eligible_greens)-1:
+            w=round(100.0-running,1)
+        else:
+            w=round(100.0*raw[ticker]/den,1)
+            running+=w
+        targets[ticker]=w
+else:
+    # Opportunity-cost fallback: prefer the strongest nearly-GREEN PROVEN name to idle cash.
+    near=[]
+    for ticker,sc in scores.items():
+        if sc.get("evidence_status")!="PROVEN": continue
+        entry=sc.get("entry_score") or 0
+        structural=sc.get("structural_early_bird") or 0
+        rel=sc.get("rel_qqq_1m_pct_points")
+        if structural>=85 and entry>=55 and (rel is None or rel>=-5):
+            near.append(ticker)
+    if near:
+        best=max(near,key=lambda t:scores[t].get("allocation_score") or 0)
+        targets[best]=100.0
+
+# Final portfolio actions are derived from global TARGET vs ledger ACTUAL.
+for ticker,sc in scores.items():
+    tgt=float(targets.get(ticker,0.0))
+    act=float(sc.get("actual_weight_pct") or 0.0)
+    sc["target_weight_pct"]=tgt
+    if tgt > act + 0.25:
+        action="INCREASE"
+    elif tgt < act - 0.25:
+        action="EXIT_OR_REDUCE"
+    elif act>0:
+        action="HOLD"
+    else:
+        action="WAIT"
+    sc["portfolio_action"]=action
+    if ticker in signals:
+        signals[ticker]["portfolio_action"]=action
+        signals[ticker]["reason"] += f" Global allocator: ACTUAL {act:.1f}% -> TARGET {tgt:.1f}%."
 
 # Preserve the structural trend ranking, but stamp the state as freshly recalculated.
 trend_out={}
@@ -214,8 +232,8 @@ out={
     "version":2,
     "as_of":as_of,
     "generated_at":datetime.now(timezone.utc).isoformat(),
-    "method":"HYBRID_V1_EXPLICIT_EVIDENCE_PLUS_ENTRY",
-    "rule":"GREEN requires explicit current economic evidence plus fresh entry confirmation. Holdings never create GREEN. No orders are executed.",
+    "method":"HYBRID_V2_FULL_CAPITAL_GREEN_ROTATION",
+    "rule":"100% of deployable capital targets eligible GREEN signals; if one GREEN exists it receives 100%. Multiple GREENs share capital by conviction. ORANGE/RED are exited when GREEN alternatives exist. Near-GREEN PROVEN fallback is allowed only when no GREEN exists. No leverage; no real orders are executed.",
     "trends":trend_out,
     "signals":signals,
     "scores":scores,
