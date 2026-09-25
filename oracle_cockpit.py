@@ -173,7 +173,7 @@ def main():
     # Never turn short-term momentum into an implicit recommendation.
     # GREEN comes first; ORANGE is a watchlist ordered by validated trend/company rank.
     action.sort(key=lambda c:(order.get(c["signal"],9),c.get("trend_rank") or 999,c.get("rank") or 999))
-    action=action[:12]
+    # Keep every GREEN visible. Limit only the ORANGE watchlist so a GREEN\n    # cannot disappear merely because its research-universe row is ranked after 12 ORANGEs.\n    greens=[c for c in action if c["signal"]=="GREEN"]\n    oranges=[c for c in action if c["signal"]=="ORANGE"][:12]\n    action=greens+oranges
 
     discovery=load("data/discovery-candidates.json")
     gate=load("data/source-gate-status.json")
