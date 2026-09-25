@@ -67,6 +67,13 @@ for trend_key,tr in research.get("trends",{}).items():
         "median_m1":sorted(vals)[len(vals)//2] if vals else None
     }
 
+# ACTUAL weights are ledger facts, not recommendations.
+capital=float(portfolio.get("initial_capital_chf",1000) or 1000)
+open_weights={}
+for p in portfolio.get("positions",[]):
+    if p.get("status")=="OPEN":
+        open_weights[p["ticker"]]=round(100*float(p.get("allocated_chf",0))/capital,2)
+
 signals={}
 scores={}
 targets={}
