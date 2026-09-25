@@ -119,14 +119,20 @@ for ticker,meta in universe.items():
             reason=f"Economic chain remains PROVEN; Entry {entry}/100 does not justify adding. Existing holding: HOLD at {actual_weight:.1f}%."
         else:
             reason=f"Economic chain freshly PROVEN; entry confirmation incomplete (Entry {entry}/100)."
-    elif "PROVEN" in str(meta.get("legacy_proof")) or "PARTIAL" in str(meta.get("legacy_proof")):
-        signal="ORANGE"
-        target=0.0
-        reason="Prior exposure label exists but has not been revalidated in the explicit evidence registry."
     else:
-        signal="RED"
-        target=0.0
-        reason="Evidence insufficient for a fresh entry state."
+        legacy=(str(meta.get("legacy_proof") or "")).upper().strip()
+        if legacy=="UNPROVEN" or not legacy:
+            signal="RED"
+            target=0.0
+            reason="Evidence insufficient for a fresh entry state."
+        elif legacy=="PROVEN" or legacy.startswith("PROVEN ") or "PARTIAL" in legacy:
+            signal="ORANGE"
+            target=0.0
+            reason="Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+        else:
+            signal="RED"
+            target=0.0
+            reason="Evidence insufficient for a fresh entry state."
 
     if target > actual_weight + 0.25:
         portfolio_action="INCREASE"
@@ -136,6 +142,33 @@ for ticker,meta in universe.items():
         portfolio_action="HOLD"
     else:
         portfolio_action="WAIT"
+
+    # Opportunity-cost doctrine:
+    # cash is not treated as neutral when a PROVEN holding is close to GREEN.
+    # A near-green existing holding can receive a modest tactical target uplift
+    # if Entry is within 5 points of GREEN and relative performance is not materially weak.
+    if explicit_proven and actual_weight>0 and signal=="ORANGE":
+        near_green = entry >= 55
+        rel_ok = (rel is None or rel >= -5)
+        if near_green and rel_ok:
+            tactical_target=min(10.0, max(actual_weight, round(actual_weight + min(2.0,(entry-55)*0.4),1)))
+            if tactical_target > target:
+                target=tactical_target
+                portfolio_action="INCREASE_TACTICAL"
+                reason += f" Cash opportunity cost applies: near-GREEN holding; tactical target {target:.1f}%."
+
+    # Risk/reduction gate: persistent relative weakness can override HOLD.
+    # This does not trigger on one weak day; it requires a materially weak 1M relative move
+    # or a broken explicit evidence state.
+    if actual_weight>0:
+        if not explicit_proven:
+            target=0.0
+            portfolio_action="REVIEW_EXIT"
+            reason += " Existing holding no longer has explicit PROVEN evidence."
+        elif rel is not None and rel <= -12 and entry < 45:
+            target=max(0.0, round(actual_weight*0.5,1))
+            portfolio_action="REVIEW_REDUCE"
+            reason += f" Risk gate: 1M relative performance {rel:.1f} pts vs QQQ with weak Entry {entry:.1f}."
 
     signals[ticker]={"signal":signal,"reason":reason,"portfolio_action":portfolio_action}
     scores[ticker]={
