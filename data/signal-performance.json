@@ -3,31 +3,31 @@
   "cohorts": {
     "ALL_DETECTED": {
       "n": 140,
-      "equal_weight_return_pct": -0.868,
-      "matched_qqq_return_pct": -0.59,
-      "alpha_pct_points": -0.278,
-      "hit_rate_vs_qqq_pct": 35.71
+      "equal_weight_return_pct": -0.875,
+      "matched_qqq_return_pct": -0.583,
+      "alpha_pct_points": -0.291,
+      "hit_rate_vs_qqq_pct": 35.0
     },
     "TOP20": {
       "n": 140,
-      "equal_weight_return_pct": -0.868,
-      "matched_qqq_return_pct": -0.59,
-      "alpha_pct_points": -0.278,
-      "hit_rate_vs_qqq_pct": 35.71
+      "equal_weight_return_pct": -0.875,
+      "matched_qqq_return_pct": -0.583,
+      "alpha_pct_points": -0.291,
+      "hit_rate_vs_qqq_pct": 35.0
     },
     "ORANGE": {
-      "n": 97,
-      "equal_weight_return_pct": -0.496,
-      "matched_qqq_return_pct": -0.474,
-      "alpha_pct_points": -0.022,
-      "hit_rate_vs_qqq_pct": 31.96
+      "n": 96,
+      "equal_weight_return_pct": -0.512,
+      "matched_qqq_return_pct": -0.47,
+      "alpha_pct_points": -0.042,
+      "hit_rate_vs_qqq_pct": 31.25
     },
     "GREEN": {
-      "n": 1,
-      "equal_weight_return_pct": 0.338,
-      "matched_qqq_return_pct": -0.851,
-      "alpha_pct_points": 1.189,
-      "hit_rate_vs_qqq_pct": 100.0
+      "n": 2,
+      "equal_weight_return_pct": 0.169,
+      "matched_qqq_return_pct": -0.425,
+      "alpha_pct_points": 0.595,
+      "hit_rate_vs_qqq_pct": 50.0
     }
   },
   "events": [
@@ -146,10 +146,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 45.45000076293945,
-      "current_price": 45.25,
-      "return_pct": -0.4400456756483373,
+      "current_price": 45.45000076293945,
+      "return_pct": 0.0,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.41084215778168787
+      "alpha_pct_points": 0.8508878334300252
     },
     {
       "event_id": "AVGO:ORANGE:2026-09-22",
@@ -914,10 +914,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 83.0999984741211,
-      "current_price": 81.5199966430664,
-      "return_pct": -1.901325944725174,
+      "current_price": 81.37999725341797,
+      "return_pct": -2.0697969341585076,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.0504381112951489
+      "alpha_pct_points": -1.2189091007284825
     },
     {
       "event_id": "SU.PA:ORANGE:2026-09-22",
@@ -962,10 +962,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 145.86000061035156,
-      "current_price": 146.5399932861328,
-      "return_pct": 0.466195442846451,
+      "current_price": 146.33999633789062,
+      "return_pct": 0.32907975149494284,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.3170832762764761
+      "alpha_pct_points": 1.179967584924968
     },
     {
       "event_id": "FPS:ORANGE:2026-09-22",
@@ -985,11 +985,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 38.52000045776367,
-      "current_price": 38.95000076293945,
-      "return_pct": 1.1163039980938372,
+      "entry_price_evaluated": null,
+      "current_price": null,
+      "return_pct": null,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.9671918315238623
+      "alpha_pct_points": null
     },
     {
       "event_id": "MP:ORANGE:2026-09-22",
@@ -3459,6 +3459,30 @@
       "forward_returns": {},
       "entry_price_evaluated": 365.1000061035156,
       "current_price": 365.1000061035156,
+      "return_pct": 0.0,
+      "qqq_return_pct": 0.0,
+      "alpha_pct_points": 0.0
+    },
+    {
+      "event_id": "AAON:GREEN:2026-09-24",
+      "observed_at": "2026-09-25T10:07:07.651185+00:00",
+      "market_date": "2026-09-24",
+      "ticker": "AAON",
+      "company": "AAON, Inc.",
+      "trend_key": "power",
+      "trend": "AI power / grid",
+      "trend_rank": 2,
+      "company_rank": 4,
+      "role": "Direct beneficiary / data-center cooling",
+      "proof": "PROVEN",
+      "signal": "GREEN",
+      "entry_price": 84.27,
+      "currency": "USD",
+      "exchange": "NMS",
+      "entry_qqq_price": null,
+      "forward_returns": {},
+      "entry_price_evaluated": 84.2699966430664,
+      "current_price": 84.2699966430664,
       "return_pct": 0.0,
       "qqq_return_pct": 0.0,
       "alpha_pct_points": 0.0

@@ -2717,8 +2717,27 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {}
+    },
+    {
+      "event_id": "AAON:GREEN:2026-09-24",
+      "observed_at": "2026-09-25T10:07:07.651185+00:00",
+      "market_date": "2026-09-24",
+      "ticker": "AAON",
+      "company": "AAON, Inc.",
+      "trend_key": "power",
+      "trend": "AI power / grid",
+      "trend_rank": 2,
+      "company_rank": 4,
+      "role": "Direct beneficiary / data-center cooling",
+      "proof": "PROVEN",
+      "signal": "GREEN",
+      "entry_price": 84.27,
+      "currency": "USD",
+      "exchange": "NMS",
+      "entry_qqq_price": null,
+      "forward_returns": {}
     }
   ],
-  "last_updated_at": "2026-09-25T10:00:33.747033+00:00",
+  "last_updated_at": "2026-09-25T10:07:07.676145+00:00",
   "method": "first-observed prospective state-transition ledger; immutable event dates"
 }
