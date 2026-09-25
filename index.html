@@ -160,6 +160,7 @@ function actionCard(x){
    <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div><div class="ticker">${x.ticker}</div><div class="muted small">${x.company}</div></div>${signalBadge(x.signal)}</div>
    <div class="small" style="margin-top:8px">${x.trend}</div>
    <div class="muted tiny" style="margin-top:4px;white-space:normal">${x.signal_reason||''}</div>
+   <div class="muted tiny" style="margin-top:6px">Structural: <b>${x.structural_early_bird==null?'—':x.structural_early_bird.toFixed(1)}</b> · Entry: <b>${x.entry_score==null?'—':x.entry_score.toFixed(1)}</b> · TARGET: <b>${x.target_weight_pct==null?'—':x.target_weight_pct.toFixed(1)+'%'}</b></div>
    <div class="metrics">
     <div class="metric"><span>J-1</span><b class="${cls(x.d1)}">${pct(x.d1)}</b></div>
     <div class="metric"><span>1 sem.</span><b class="${cls(x.w1)}">${pct(x.w1)}</b></div>
@@ -206,7 +207,7 @@ window.selectTrend=function(key){
 }
 
 function portfolio(){
- const p=DATA.portfolio||{}, c=p.official_comparison||{};
+ const p=DATA.portfolio||{}, c=p.official_comparison||{}, actual=DATA.actual_holdings_pct||{}, target=DATA.target_allocation_pct||{};
  $('portfolioRows').innerHTML=(p.positions||[]).map(x=>`<tr><td><b>${x.ticker}</b><br><span class="muted tiny">${x.trade_date}</span></td><td>${chf(x.allocated_chf)}</td><td>${usd(x.entry_price_usd)}</td><td>${chf(x.current_value_chf)}</td><td class="${cls(x.pnl_chf)}">${x.pnl_chf==null?'—':chf(x.pnl_chf)}</td><td class="${cls(x.pnl_pct)}">${pct(x.pnl_pct)}</td><td>${chf(x.matched_qqq_chf)}</td></tr>`).join('');
  $('portfolioCompare').innerHTML=[
   ['Valeur totale',chf(p.total_value_chf),`cash ${chf(p.cash_chf)}`,cls(p.total_return_pct)],
@@ -214,7 +215,9 @@ function portfolio(){
   ['Perf. QQQ',pct(c.qqq_return_pct),'tranches appariées',cls(c.qqq_return_pct)],
   ['Alpha',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,'ORACLE − QQQ',cls(c.alpha_pct_points)],
   ['Cash',chf(p.cash_chf),'hors alpha officiel','neu'],
-  ['Capital comparé',chf(c.capital_compared_chf),'mêmes dates','neu']
+  ['Capital comparé',chf(c.capital_compared_chf),'mêmes dates','neu'],
+  ['ACTUAL',Object.entries(actual).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'—','positions enregistrées','neu'],
+  ['TARGET',Object.entries(target).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'Cash / attente','allocation fraîche','blue']
  ].map(x=>`<div class="box"><span class="muted tiny">${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><span class="muted tiny">${x[2]}</span></div>`).join('');
 }
 
