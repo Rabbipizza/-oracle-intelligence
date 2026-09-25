@@ -143,8 +143,14 @@ def main():
                 available+=1; m1s.append(metrics["m1"])
                 if metrics["m1"]>0: positive+=1
             md=market.get("prices",{}).get(ticker) or {}
+            sc=(decisions.get("scores",{}) or {}).get(ticker,{})
             c={"rank":i,"ticker":ticker,"company":name,"role":role,"proof":proof,
                "signal":sig,"signal_reason":reason,
+               "structural_early_bird":sc.get("structural_early_bird"),
+               "entry_score":sc.get("entry_score"),
+               "target_weight_pct":sc.get("target_weight_pct"),
+               "evidence_status":sc.get("evidence_status"),
+               "invalidation":sc.get("invalidation",[]),
                "currency":md.get("currency"),"exchange":md.get("exchange"),**metrics}
             companies.append(c)
             all_companies.append({**c,"trend_key":key,"trend":tr.get("label"),"trend_rank":ds.get("rank")})
@@ -209,6 +215,8 @@ def main():
                      "scout_candidates_passing_coverage":scout[:10]},
         "trends":trends,
         "action_now":action,
+        "target_allocation_pct":decisions.get("target_allocation_pct",{}),
+        "actual_holdings_pct":decisions.get("actual_holdings_pct",{}),
         "portfolio":portfolio_view,
         "market_errors":market.get("errors",[])
     }
