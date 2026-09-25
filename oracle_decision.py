@@ -103,9 +103,15 @@ for ticker,meta in universe.items():
     entry=round(clamp(entry),1)
 
     actual_weight=float(open_weights.get(ticker,0) or 0)
+    # Position ceiling: base 10%, extendable to 15% only for exceptional conviction.
+    # Exceptional = explicit PROVEN + Structural >=95 + Entry >=80.
+    # This separates normal concentration control from a high-conviction override.
+    normal_ceiling=10.0
+    exceptional_ceiling=15.0 if (explicit_proven and structural>=95 and entry>=80) else normal_ceiling
+
     if explicit_proven and structural>=85 and entry>=60:
         signal="GREEN"
-        target=min(10.0,max(4.0,round(4+(entry-60)*.25,1)))
+        target=min(exceptional_ceiling,max(4.0,round(4+(entry-60)*.25,1)))
         # A fresh-entry signal may raise the target, but never rewrites ACTUAL.
         if actual_weight>target:
             target=actual_weight
@@ -151,7 +157,7 @@ for ticker,meta in universe.items():
         near_green = entry >= 55
         rel_ok = (rel is None or rel >= -5)
         if near_green and rel_ok:
-            tactical_target=min(10.0, max(actual_weight, round(actual_weight + min(2.0,(entry-55)*0.4),1)))
+            tactical_target=min(normal_ceiling, max(actual_weight, round(actual_weight + min(2.0,(entry-55)*0.4),1)))
             if tactical_target > target:
                 target=tactical_target
                 portfolio_action="INCREASE_TACTICAL"
