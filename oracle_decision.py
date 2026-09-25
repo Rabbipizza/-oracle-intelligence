@@ -95,14 +95,23 @@ for ticker,meta in universe.items():
     if m1 is not None and m1>30: entry-=8
     entry=round(clamp(entry),1)
 
+    actual_weight=float(open_weights.get(ticker,0) or 0)
     if explicit_proven and structural>=85 and entry>=60:
         signal="GREEN"
         target=min(10.0,max(4.0,round(4+(entry-60)*.25,1)))
+        # A fresh-entry signal may raise the target, but never rewrites ACTUAL.
+        if actual_weight>target:
+            target=actual_weight
         reason=f"Fresh explicit economic proof; Structural {structural}/100; Entry {entry}/100."
     elif explicit_proven:
         signal="ORANGE"
-        target=0.0
-        reason=f"Economic chain freshly PROVEN; entry confirmation incomplete (Entry {entry}/100)."
+        # Hybrid doctrine: an already validated, still-PROVEN holding is HOLD,
+        # not an automatic liquidation merely because today's entry gate is weak.
+        target=actual_weight if actual_weight>0 else 0.0
+        if actual_weight>0:
+            reason=f"Economic chain remains PROVEN; Entry {entry}/100 does not justify adding. Existing holding: HOLD at {actual_weight:.1f}%."
+        else:
+            reason=f"Economic chain freshly PROVEN; entry confirmation incomplete (Entry {entry}/100)."
     elif "PROVEN" in str(meta.get("legacy_proof")) or "PARTIAL" in str(meta.get("legacy_proof")):
         signal="ORANGE"
         target=0.0
@@ -112,7 +121,16 @@ for ticker,meta in universe.items():
         target=0.0
         reason="Evidence insufficient for a fresh entry state."
 
-    signals[ticker]={"signal":signal,"reason":reason}
+    if target > actual_weight + 0.25:
+        portfolio_action="INCREASE"
+    elif target < actual_weight - 0.25:
+        portfolio_action="REVIEW_REDUCE"
+    elif actual_weight>0:
+        portfolio_action="HOLD"
+    else:
+        portfolio_action="WAIT"
+
+    signals[ticker]={"signal":signal,"reason":reason,"portfolio_action":portfolio_action}
     scores[ticker]={
         "structural_early_bird":structural,
         "entry_score":entry,
@@ -123,7 +141,9 @@ for ticker,meta in universe.items():
         "w1_pct":None if w1 is None else round(w1,2),
         "m1_pct":None if m1 is None else round(m1,2),
         "rel_qqq_1m_pct_points":None if rel is None else round(rel,2),
+        "actual_weight_pct":actual_weight,
         "target_weight_pct":target,
+        "portfolio_action":portfolio_action,
         "invalidation":ev.get("invalidation",[]) if ev else []
     }
     if target>0: targets[ticker]=target
@@ -142,11 +162,7 @@ for key,tr in research.get("trends",{}).items():
         "market_median_1m_pct":None if ts.get("median_m1") is None else round(ts["median_m1"],2)
     }
 
-actual={}
-capital=float(portfolio.get("initial_capital_chf",1000) or 1000)
-for p in portfolio.get("positions",[]):
-    if p.get("status")=="OPEN":
-        actual[p["ticker"]]=round(100*float(p.get("allocated_chf",0))/capital,2)
+actual=open_weights
 
 out={
     "version":2,
