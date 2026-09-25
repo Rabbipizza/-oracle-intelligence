@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-09-24",
-  "generated_at": "2026-09-25T11:57:38.203366+00:00",
+  "generated_at": "2026-09-25T13:12:26.243146+00:00",
   "method": "HYBRID_V1_EXPLICIT_EVIDENCE_PLUS_ENTRY",
   "rule": "GREEN requires explicit current economic evidence plus fresh entry confirmation. Holdings never create GREEN. No orders are executed.",
   "trends": {
@@ -11,7 +11,7 @@
       "state": "STABLE",
       "summary": "AI data-center demand is colliding with generation, grid, switchgear and cooling constraints.",
       "market_breadth_1m_pct": 45.0,
-      "market_median_1m_pct": -0.71
+      "market_median_1m_pct": -0.74
     },
     "cuas": {
       "rank": 4,
@@ -19,7 +19,7 @@
       "state": "STABLE",
       "summary": "Drone proliferation is increasing demand for detection, autonomy, electronic warfare and counter-UAS effectors.",
       "market_breadth_1m_pct": 10.0,
-      "market_median_1m_pct": -7.34
+      "market_median_1m_pct": -6.77
     },
     "photonics": {
       "rank": 1,
@@ -35,7 +35,7 @@
       "state": "STABLE",
       "summary": "Supply-chain security is accelerating ex-China mining, separation, refining and magnet capacity.",
       "market_breadth_1m_pct": 10.5,
-      "market_median_1m_pct": -13.29
+      "market_median_1m_pct": -15.26
     },
     "physical": {
       "rank": 5,
@@ -43,419 +43,520 @@
       "state": "FALLING",
       "summary": "AI is moving into robots and edge systems, but listed-company economic capture remains early and fragmented.",
       "market_breadth_1m_pct": 65.0,
-      "market_median_1m_pct": 2.37
+      "market_median_1m_pct": 1.5
     }
   },
   "signals": {
     "GEV": {
       "signal": "ORANGE",
-      "reason": "Economic chain freshly PROVEN; entry confirmation incomplete (Entry 46.9/100)."
+      "reason": "Economic chain remains PROVEN; Entry 50.3/100 does not justify adding. Existing holding: HOLD at 6.0%.",
+      "portfolio_action": "HOLD"
     },
     "VRT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ETN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AAON": {
       "signal": "GREEN",
-      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 75.7/100."
+      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 75.5/100.",
+      "portfolio_action": "INCREASE"
     },
     "PWR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "POWL": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NVT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "HUBB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MTZ": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CAT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CEG": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "VST": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NRG": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "BWXT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CCJ": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "BE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "GNRC": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ABBN.SW": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "SU.PA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ENR.DE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AVAV": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LHX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "RTX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NOC": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LMT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "KTOS": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "RCAT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "UMAC": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ONDS": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LPTH": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MOB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "DUKR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "PLTR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LDOS": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "BAH": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "GD": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "BA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TXT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MRCY": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TDY": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "COHR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LITE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CRDO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "POET": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "IQE.L": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AVGO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MRVL": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CIEN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ANET": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ALAB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "FN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AAOI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "GLW": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NOK": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CSCO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ALMU": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MTSI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "IPGP": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "APH": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TEL": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MP": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LYC.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "USAR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "UUUU": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TMRC": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "UAMY": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CRML": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AVL.TO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ARA.TO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ILU.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "HAS.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ASM.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ARU.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "REEMF": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TMC": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ALB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "SQM": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "FCX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TECK": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NVDA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "AMBA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "HSAI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "IOT.MI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "QCOM": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "NXPI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ON": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "MBLY": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "OUST": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "LAZR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "TER": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ROK": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ISRG": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "SYM": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "SERV": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "RR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "PATH": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "CGNX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     },
     "ZBRA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry."
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry.",
+      "portfolio_action": "WAIT"
     }
   },
   "scores": {
     "GEV": {
       "structural_early_bird": 97.2,
-      "entry_score": 46.9,
+      "entry_score": 50.3,
       "trend": "power",
       "role": "Bottleneck / generation",
       "evidence_status": "PROVEN",
       "d1_pct": 0.34,
-      "w1_pct": 3.24,
-      "m1_pct": 1.37,
-      "rel_qqq_1m_pct_points": -2.9,
-      "target_weight_pct": 0.0,
+      "w1_pct": 3.26,
+      "m1_pct": 3.05,
+      "rel_qqq_1m_pct_points": -1.22,
+      "actual_weight_pct": 6.0,
+      "target_weight_pct": 6.0,
+      "portfolio_action": "HOLD",
       "invalidation": [
         "material reversal in Power/Electrification orders",
         "data-center order slowdown",
@@ -464,41 +565,47 @@
     },
     "VRT": {
       "structural_early_bird": 53.5,
-      "entry_score": 33.9,
+      "entry_score": 32.3,
       "trend": "power",
       "role": "Direct beneficiary / power & cooling",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.4,
-      "w1_pct": 2.46,
-      "m1_pct": -3.79,
-      "rel_qqq_1m_pct_points": -8.07,
+      "w1_pct": 1.58,
+      "m1_pct": -4.09,
+      "rel_qqq_1m_pct_points": -8.36,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ETN": {
       "structural_early_bird": 54.2,
-      "entry_score": 67.6,
+      "entry_score": 64.2,
       "trend": "power",
       "role": "Pick & shovel / electrical distribution",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.28,
-      "w1_pct": 10.61,
-      "m1_pct": 7.67,
-      "rel_qqq_1m_pct_points": 3.39,
+      "w1_pct": 7.46,
+      "m1_pct": 7.53,
+      "rel_qqq_1m_pct_points": 3.25,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AAON": {
       "structural_early_bird": 95.8,
-      "entry_score": 75.7,
+      "entry_score": 75.5,
       "trend": "power",
       "role": "Direct beneficiary / data-center cooling",
       "evidence_status": "PROVEN",
       "d1_pct": 2.32,
-      "w1_pct": 11.53,
-      "m1_pct": 10.74,
-      "rel_qqq_1m_pct_points": 6.46,
+      "w1_pct": 10.26,
+      "m1_pct": 10.61,
+      "rel_qqq_1m_pct_points": 6.33,
+      "actual_weight_pct": 4.0,
       "target_weight_pct": 7.9,
+      "portfolio_action": "INCREASE",
       "invalidation": [
         "material BASX backlog deterioration",
         "confirmed slowdown in data-center orders",
@@ -507,41 +614,47 @@
     },
     "PWR": {
       "structural_early_bird": 67.2,
-      "entry_score": 54.7,
+      "entry_score": 59.7,
       "trend": "power",
       "role": "Pick & shovel / grid construction",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 1.35,
-      "w1_pct": 3.91,
-      "m1_pct": 4.33,
-      "rel_qqq_1m_pct_points": 0.06,
+      "w1_pct": 4.37,
+      "m1_pct": 6.58,
+      "rel_qqq_1m_pct_points": 2.3,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "POWL": {
       "structural_early_bird": 67.9,
-      "entry_score": 51.6,
+      "entry_score": 51.0,
       "trend": "power",
       "role": "Bottleneck candidate / switchgear",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.52,
-      "w1_pct": 7.83,
-      "m1_pct": 1.4,
-      "rel_qqq_1m_pct_points": -2.88,
+      "w1_pct": 8.41,
+      "m1_pct": 0.75,
+      "rel_qqq_1m_pct_points": -3.52,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NVT": {
       "structural_early_bird": 67.2,
-      "entry_score": 64.4,
+      "entry_score": 64.2,
       "trend": "power",
       "role": "Pick & shovel / electrical connection",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.02,
-      "w1_pct": 10.31,
-      "m1_pct": 6.21,
-      "rel_qqq_1m_pct_points": 1.94,
+      "w1_pct": 7.63,
+      "m1_pct": 7.53,
+      "rel_qqq_1m_pct_points": 3.25,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "HUBB": {
@@ -554,46 +667,54 @@
       "w1_pct": 5.11,
       "m1_pct": 0.36,
       "rel_qqq_1m_pct_points": -3.91,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MTZ": {
       "structural_early_bird": 67.2,
-      "entry_score": 18.7,
+      "entry_score": 28.4,
       "trend": "power",
       "role": "Pick & shovel / grid construction",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.56,
-      "w1_pct": -6.06,
-      "m1_pct": -17.0,
-      "rel_qqq_1m_pct_points": -21.27,
+      "w1_pct": 2.02,
+      "m1_pct": -14.14,
+      "rel_qqq_1m_pct_points": -18.41,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CAT": {
       "structural_early_bird": 66.5,
-      "entry_score": 41.1,
+      "entry_score": 38.6,
       "trend": "power",
       "role": "Direct beneficiary / onsite generation",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.83,
-      "w1_pct": 2.88,
-      "m1_pct": -0.71,
-      "rel_qqq_1m_pct_points": -4.99,
+      "w1_pct": 0.84,
+      "m1_pct": -0.74,
+      "rel_qqq_1m_pct_points": -5.02,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CEG": {
       "structural_early_bird": 66.5,
-      "entry_score": 31.4,
+      "entry_score": 27.1,
       "trend": "power",
       "role": "Direct beneficiary / firm power",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.86,
-      "w1_pct": 0.81,
-      "m1_pct": -4.32,
-      "rel_qqq_1m_pct_points": -8.59,
+      "w1_pct": -0.45,
+      "m1_pct": -6.03,
+      "rel_qqq_1m_pct_points": -10.31,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "VST": {
@@ -606,46 +727,54 @@
       "w1_pct": -3.91,
       "m1_pct": -0.78,
       "rel_qqq_1m_pct_points": -5.06,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NRG": {
       "structural_early_bird": 53.5,
-      "entry_score": 15.0,
+      "entry_score": 16.2,
       "trend": "power",
       "role": "Direct beneficiary / power",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.85,
-      "w1_pct": -8.88,
-      "m1_pct": -12.46,
-      "rel_qqq_1m_pct_points": -16.74,
+      "w1_pct": -7.89,
+      "m1_pct": -13.87,
+      "rel_qqq_1m_pct_points": -18.15,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "BWXT": {
       "structural_early_bird": 54.2,
-      "entry_score": 20.5,
+      "entry_score": 20.0,
       "trend": "power",
       "role": "Nuclear pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.21,
-      "w1_pct": -4.79,
-      "m1_pct": -7.25,
-      "rel_qqq_1m_pct_points": -11.52,
+      "w1_pct": -5.24,
+      "m1_pct": -7.38,
+      "rel_qqq_1m_pct_points": -11.65,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CCJ": {
       "structural_early_bird": 54.9,
-      "entry_score": 21.9,
+      "entry_score": 19.5,
       "trend": "power",
       "role": "Fuel bottleneck candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.95,
-      "w1_pct": -3.06,
-      "m1_pct": -13.84,
-      "rel_qqq_1m_pct_points": -18.11,
+      "w1_pct": -5.04,
+      "m1_pct": -17.61,
+      "rel_qqq_1m_pct_points": -21.89,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "BE": {
@@ -658,111 +787,129 @@
       "w1_pct": -5.03,
       "m1_pct": 22.63,
       "rel_qqq_1m_pct_points": 18.35,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "GNRC": {
       "structural_early_bird": 47.2,
-      "entry_score": 45.9,
+      "entry_score": 30.2,
       "trend": "power",
       "role": "Distributed power candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.69,
-      "w1_pct": 13.1,
-      "m1_pct": -2.71,
-      "rel_qqq_1m_pct_points": -6.98,
+      "w1_pct": -4.43,
+      "m1_pct": -1.85,
+      "rel_qqq_1m_pct_points": -6.12,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ABBN.SW": {
       "structural_early_bird": 65.2,
-      "entry_score": 53.3,
+      "entry_score": 49.6,
       "trend": "physical",
       "role": "Industrial robotics leader candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 0.82,
-      "w1_pct": 1.42,
-      "m1_pct": 2.37,
-      "rel_qqq_1m_pct_points": -1.9,
+      "d1_pct": 0.02,
+      "w1_pct": 0.62,
+      "m1_pct": 1.56,
+      "rel_qqq_1m_pct_points": -2.71,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "SU.PA": {
       "structural_early_bird": 60.2,
-      "entry_score": 42.0,
+      "entry_score": 40.3,
       "trend": "power",
       "role": "Power management candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.35,
-      "w1_pct": 2.78,
-      "m1_pct": -1.29,
-      "rel_qqq_1m_pct_points": -5.57,
+      "d1_pct": 0.93,
+      "w1_pct": 2.36,
+      "m1_pct": -1.7,
+      "rel_qqq_1m_pct_points": -5.97,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ENR.DE": {
       "structural_early_bird": 60.2,
-      "entry_score": 39.3,
+      "entry_score": 38.8,
       "trend": "power",
       "role": "Generation/grid candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 2.08,
-      "w1_pct": 3.47,
-      "m1_pct": -3.45,
-      "rel_qqq_1m_pct_points": -7.72,
+      "d1_pct": 1.96,
+      "w1_pct": 3.34,
+      "m1_pct": -3.57,
+      "rel_qqq_1m_pct_points": -7.84,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AVAV": {
       "structural_early_bird": 53.5,
-      "entry_score": 46.1,
+      "entry_score": 42.3,
       "trend": "cuas",
       "role": "Leader / directed energy + autonomy",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 1.67,
-      "w1_pct": 1.34,
-      "m1_pct": 6.98,
-      "rel_qqq_1m_pct_points": 2.71,
+      "w1_pct": -2.96,
+      "m1_pct": 7.55,
+      "rel_qqq_1m_pct_points": 3.28,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LHX": {
       "structural_early_bird": 66.5,
-      "entry_score": 10.9,
+      "entry_score": 11.2,
       "trend": "cuas",
       "role": "Direct beneficiary / defense systems",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.49,
-      "w1_pct": -5.07,
-      "m1_pct": -9.43,
-      "rel_qqq_1m_pct_points": -13.71,
+      "w1_pct": -4.96,
+      "m1_pct": -9.2,
+      "rel_qqq_1m_pct_points": -13.48,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "RTX": {
       "structural_early_bird": 66.5,
-      "entry_score": 10.6,
+      "entry_score": 12.7,
       "trend": "cuas",
       "role": "Direct beneficiary / sensors & effectors",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.86,
-      "w1_pct": -4.18,
-      "m1_pct": -9.85,
-      "rel_qqq_1m_pct_points": -14.13,
+      "w1_pct": -2.55,
+      "m1_pct": -10.31,
+      "rel_qqq_1m_pct_points": -14.58,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NOC": {
       "structural_early_bird": 66.5,
-      "entry_score": 11.4,
+      "entry_score": 13.1,
       "trend": "cuas",
       "role": "Direct beneficiary / defense systems",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.06,
-      "w1_pct": -4.11,
-      "m1_pct": -7.34,
-      "rel_qqq_1m_pct_points": -11.61,
+      "w1_pct": -2.87,
+      "m1_pct": -6.18,
+      "rel_qqq_1m_pct_points": -10.46,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LMT": {
@@ -772,15 +919,17 @@
       "role": "Directed-energy candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.19,
-      "w1_pct": -2.52,
-      "m1_pct": -7.17,
-      "rel_qqq_1m_pct_points": -11.44,
+      "w1_pct": -2.67,
+      "m1_pct": -5.9,
+      "rel_qqq_1m_pct_points": -10.17,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "KTOS": {
       "structural_early_bird": 60.2,
-      "entry_score": 17.7,
+      "entry_score": 17.9,
       "trend": "cuas",
       "role": "Autonomy / drone systems candidate",
       "evidence_status": "UNREVALIDATED",
@@ -788,12 +937,14 @@
       "w1_pct": -1.34,
       "m1_pct": -10.68,
       "rel_qqq_1m_pct_points": -14.95,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "RCAT": {
       "structural_early_bird": 47.2,
-      "entry_score": 15.6,
+      "entry_score": 15.8,
       "trend": "cuas",
       "role": "Drone ecosystem candidate",
       "evidence_status": "UNREVALIDATED",
@@ -801,12 +952,14 @@
       "w1_pct": -4.16,
       "m1_pct": -25.27,
       "rel_qqq_1m_pct_points": -29.55,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "UMAC": {
       "structural_early_bird": 47.2,
-      "entry_score": 31.1,
+      "entry_score": 31.3,
       "trend": "cuas",
       "role": "Drone components candidate",
       "evidence_status": "UNREVALIDATED",
@@ -814,12 +967,14 @@
       "w1_pct": 0.21,
       "m1_pct": -1.72,
       "rel_qqq_1m_pct_points": -6.0,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ONDS": {
       "structural_early_bird": 60.2,
-      "entry_score": 23.5,
+      "entry_score": 23.7,
       "trend": "cuas",
       "role": "Autonomous systems candidate",
       "evidence_status": "UNREVALIDATED",
@@ -827,51 +982,59 @@
       "w1_pct": 2.84,
       "m1_pct": -7.77,
       "rel_qqq_1m_pct_points": -12.04,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LPTH": {
       "structural_early_bird": 67.2,
-      "entry_score": 28.5,
+      "entry_score": 19.6,
       "trend": "cuas",
       "role": "Sensing pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 2.55,
-      "w1_pct": 7.14,
-      "m1_pct": -23.96,
-      "rel_qqq_1m_pct_points": -28.24,
+      "w1_pct": -0.49,
+      "m1_pct": -27.05,
+      "rel_qqq_1m_pct_points": -31.32,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MOB": {
       "structural_early_bird": 67.2,
-      "entry_score": 21.6,
+      "entry_score": 17.0,
       "trend": "cuas",
       "role": "Communications pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.39,
-      "w1_pct": 4.62,
-      "m1_pct": -15.45,
-      "rel_qqq_1m_pct_points": -19.72,
+      "w1_pct": 0.61,
+      "m1_pct": -13.54,
+      "rel_qqq_1m_pct_points": -17.82,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "DUKR": {
       "structural_early_bird": 47.2,
-      "entry_score": 18.2,
+      "entry_score": 16.4,
       "trend": "cuas",
       "role": "Robotics candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.38,
-      "w1_pct": 0.95,
-      "m1_pct": -6.35,
-      "rel_qqq_1m_pct_points": -10.62,
+      "w1_pct": -0.75,
+      "m1_pct": -5.85,
+      "rel_qqq_1m_pct_points": -10.13,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "PLTR": {
       "structural_early_bird": 47.2,
-      "entry_score": 63.4,
+      "entry_score": 63.6,
       "trend": "cuas",
       "role": "Software/enabling layer candidate",
       "evidence_status": "UNREVALIDATED",
@@ -879,51 +1042,59 @@
       "w1_pct": 9.28,
       "m1_pct": 11.5,
       "rel_qqq_1m_pct_points": 7.22,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LDOS": {
       "structural_early_bird": 47.2,
-      "entry_score": 10.8,
+      "entry_score": 9.6,
       "trend": "cuas",
       "role": "Counter-UAS integrator candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.07,
-      "w1_pct": -4.64,
-      "m1_pct": -10.89,
-      "rel_qqq_1m_pct_points": -15.17,
+      "w1_pct": -5.81,
+      "m1_pct": -8.32,
+      "rel_qqq_1m_pct_points": -12.59,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "BAH": {
       "structural_early_bird": 47.2,
-      "entry_score": 15.7,
+      "entry_score": 18.9,
       "trend": "cuas",
       "role": "Defense integration candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.42,
-      "w1_pct": -5.85,
-      "m1_pct": -1.86,
-      "rel_qqq_1m_pct_points": -6.14,
+      "w1_pct": -6.43,
+      "m1_pct": -0.01,
+      "rel_qqq_1m_pct_points": -4.29,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "GD": {
       "structural_early_bird": 47.2,
-      "entry_score": 7.5,
+      "entry_score": 9.0,
       "trend": "cuas",
       "role": "Defense systems candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.05,
-      "w1_pct": -6.59,
-      "m1_pct": -12.37,
-      "rel_qqq_1m_pct_points": -16.65,
+      "w1_pct": -5.52,
+      "m1_pct": -10.7,
+      "rel_qqq_1m_pct_points": -14.97,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "BA": {
       "structural_early_bird": 47.2,
-      "entry_score": 15.7,
+      "entry_score": 15.9,
       "trend": "cuas",
       "role": "Defense systems candidate",
       "evidence_status": "UNREVALIDATED",
@@ -931,7 +1102,9 @@
       "w1_pct": -0.1,
       "m1_pct": -6.77,
       "rel_qqq_1m_pct_points": -11.04,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TXT": {
@@ -941,36 +1114,42 @@
       "role": "Uncrewed systems candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.03,
-      "w1_pct": -5.81,
-      "m1_pct": -7.44,
-      "rel_qqq_1m_pct_points": -11.71,
+      "w1_pct": -6.04,
+      "m1_pct": -7.07,
+      "rel_qqq_1m_pct_points": -11.34,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MRCY": {
       "structural_early_bird": 54.2,
-      "entry_score": 12.4,
+      "entry_score": 15.1,
       "trend": "cuas",
       "role": "Electronics pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.56,
-      "w1_pct": -4.66,
-      "m1_pct": -7.15,
-      "rel_qqq_1m_pct_points": -11.43,
+      "w1_pct": -3.48,
+      "m1_pct": -5.2,
+      "rel_qqq_1m_pct_points": -9.47,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TDY": {
       "structural_early_bird": 47.2,
-      "entry_score": 25.4,
+      "entry_score": 24.9,
       "trend": "cuas",
       "role": "Sensors candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.45,
-      "w1_pct": 1.82,
-      "m1_pct": -2.11,
-      "rel_qqq_1m_pct_points": -6.38,
+      "w1_pct": 1.67,
+      "m1_pct": -2.37,
+      "rel_qqq_1m_pct_points": -6.65,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "COHR": {
@@ -983,7 +1162,9 @@
       "w1_pct": -1.81,
       "m1_pct": 0.86,
       "rel_qqq_1m_pct_points": -3.42,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LITE": {
@@ -996,7 +1177,9 @@
       "w1_pct": 3.96,
       "m1_pct": 4.91,
       "rel_qqq_1m_pct_points": 0.63,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CRDO": {
@@ -1009,7 +1192,9 @@
       "w1_pct": 16.48,
       "m1_pct": -13.48,
       "rel_qqq_1m_pct_points": -17.76,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "POET": {
@@ -1022,20 +1207,24 @@
       "w1_pct": 3.2,
       "m1_pct": -4.08,
       "rel_qqq_1m_pct_points": -8.36,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "IQE.L": {
       "structural_early_bird": 60.2,
-      "entry_score": 56.0,
+      "entry_score": 54.3,
       "trend": "photonics",
       "role": "InP substrate/epi candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 5.29,
-      "w1_pct": 8.62,
-      "m1_pct": -1.31,
-      "rel_qqq_1m_pct_points": -5.59,
+      "d1_pct": 4.88,
+      "w1_pct": 8.2,
+      "m1_pct": -1.7,
+      "rel_qqq_1m_pct_points": -5.98,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AVGO": {
@@ -1048,7 +1237,9 @@
       "w1_pct": 0.88,
       "m1_pct": -1.79,
       "rel_qqq_1m_pct_points": -6.06,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MRVL": {
@@ -1061,33 +1252,39 @@
       "w1_pct": 7.56,
       "m1_pct": 7.73,
       "rel_qqq_1m_pct_points": 3.45,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CIEN": {
       "structural_early_bird": 66.5,
-      "entry_score": 42.8,
+      "entry_score": 37.2,
       "trend": "photonics",
       "role": "Direct beneficiary / optical networking",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.71,
-      "w1_pct": 5.27,
-      "m1_pct": -3.63,
-      "rel_qqq_1m_pct_points": -7.91,
+      "w1_pct": 4.12,
+      "m1_pct": -7.54,
+      "rel_qqq_1m_pct_points": -11.81,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ANET": {
       "structural_early_bird": 65.2,
-      "entry_score": 67.7,
+      "entry_score": 63.3,
       "trend": "photonics",
       "role": "Leader / AI networking",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 1.1,
-      "w1_pct": 4.13,
-      "m1_pct": 9.33,
-      "rel_qqq_1m_pct_points": 5.05,
+      "w1_pct": 3.09,
+      "m1_pct": 7.73,
+      "rel_qqq_1m_pct_points": 3.46,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ALAB": {
@@ -1100,20 +1297,24 @@
       "w1_pct": 22.81,
       "m1_pct": 27.55,
       "rel_qqq_1m_pct_points": 23.27,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "FN": {
       "structural_early_bird": 67.2,
-      "entry_score": 33.3,
+      "entry_score": 36.4,
       "trend": "photonics",
       "role": "Pick & shovel / optical manufacturing",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.62,
-      "w1_pct": 1.45,
-      "m1_pct": -5.41,
-      "rel_qqq_1m_pct_points": -9.68,
+      "w1_pct": 4.58,
+      "m1_pct": -7.69,
+      "rel_qqq_1m_pct_points": -11.96,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AAOI": {
@@ -1126,7 +1327,9 @@
       "w1_pct": 3.03,
       "m1_pct": -10.71,
       "rel_qqq_1m_pct_points": -14.99,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "GLW": {
@@ -1139,7 +1342,9 @@
       "w1_pct": 4.3,
       "m1_pct": 4.75,
       "rel_qqq_1m_pct_points": 0.48,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NOK": {
@@ -1152,7 +1357,9 @@
       "w1_pct": -1.6,
       "m1_pct": 0.77,
       "rel_qqq_1m_pct_points": -3.5,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CSCO": {
@@ -1165,77 +1372,89 @@
       "w1_pct": -2.97,
       "m1_pct": -3.73,
       "rel_qqq_1m_pct_points": -8.0,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ALMU": {
       "structural_early_bird": 47.2,
-      "entry_score": 39.5,
+      "entry_score": 44.9,
       "trend": "photonics",
       "role": "Compound semiconductor candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 1.37,
-      "w1_pct": -0.52,
-      "m1_pct": -2.12,
-      "rel_qqq_1m_pct_points": -6.4,
+      "w1_pct": 15.72,
+      "m1_pct": -6.05,
+      "rel_qqq_1m_pct_points": -10.32,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MTSI": {
       "structural_early_bird": 60.2,
-      "entry_score": 79.7,
+      "entry_score": 70.3,
       "trend": "photonics",
       "role": "Optical semiconductor candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 3.3,
-      "w1_pct": 13.18,
-      "m1_pct": 10.69,
-      "rel_qqq_1m_pct_points": 6.41,
+      "w1_pct": 8.28,
+      "m1_pct": 7.01,
+      "rel_qqq_1m_pct_points": 2.74,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "IPGP": {
       "structural_early_bird": 47.2,
-      "entry_score": 62.9,
+      "entry_score": 61.2,
       "trend": "photonics",
       "role": "Photonics candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.31,
-      "w1_pct": 0.6,
-      "m1_pct": 9.44,
-      "rel_qqq_1m_pct_points": 5.17,
+      "w1_pct": 1.71,
+      "m1_pct": 7.93,
+      "rel_qqq_1m_pct_points": 3.66,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "APH": {
       "structural_early_bird": 67.2,
-      "entry_score": 66.8,
-      "trend": "photonics",
-      "role": "Interconnect pick & shovel candidate",
-      "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.08,
-      "w1_pct": 7.53,
-      "m1_pct": 6.82,
-      "rel_qqq_1m_pct_points": 2.55,
-      "target_weight_pct": 0.0,
-      "invalidation": []
-    },
-    "TEL": {
-      "structural_early_bird": 54.2,
       "entry_score": 60.6,
       "trend": "photonics",
       "role": "Interconnect pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -0.34,
-      "w1_pct": 5.67,
-      "m1_pct": 5.56,
-      "rel_qqq_1m_pct_points": 1.29,
+      "d1_pct": 1.08,
+      "w1_pct": 6.01,
+      "m1_pct": 4.65,
+      "rel_qqq_1m_pct_points": 0.37,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
+      "invalidation": []
+    },
+    "TEL": {
+      "structural_early_bird": 54.2,
+      "entry_score": 58.9,
+      "trend": "photonics",
+      "role": "Interconnect pick & shovel candidate",
+      "evidence_status": "UNREVALIDATED",
+      "d1_pct": -0.34,
+      "w1_pct": 3.42,
+      "m1_pct": 6.09,
+      "rel_qqq_1m_pct_points": 1.81,
+      "actual_weight_pct": 0.0,
+      "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MP": {
       "structural_early_bird": 52.1,
-      "entry_score": 16.1,
+      "entry_score": 15.4,
       "trend": "minerals",
       "role": "Leader / mine-to-magnet",
       "evidence_status": "UNREVALIDATED",
@@ -1243,12 +1462,14 @@
       "w1_pct": -0.16,
       "m1_pct": -18.07,
       "rel_qqq_1m_pct_points": -22.34,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LYC.AX": {
       "structural_early_bird": 52.1,
-      "entry_score": 13.2,
+      "entry_score": 12.5,
       "trend": "minerals",
       "role": "Leader / ex-China separation",
       "evidence_status": "UNREVALIDATED",
@@ -1256,12 +1477,14 @@
       "w1_pct": -0.91,
       "m1_pct": -13.29,
       "rel_qqq_1m_pct_points": -17.57,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "USAR": {
       "structural_early_bird": 60.2,
-      "entry_score": 10.7,
+      "entry_score": 10.0,
       "trend": "minerals",
       "role": "Integrated magnet candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1269,12 +1492,14 @@
       "w1_pct": -1.6,
       "m1_pct": -20.76,
       "rel_qqq_1m_pct_points": -25.04,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "UUUU": {
       "structural_early_bird": 60.2,
-      "entry_score": 6.5,
+      "entry_score": 5.8,
       "trend": "minerals",
       "role": "Rare-earth processing candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1282,25 +1507,29 @@
       "w1_pct": -5.51,
       "m1_pct": -29.12,
       "rel_qqq_1m_pct_points": -33.39,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NB": {
       "structural_early_bird": 47.2,
-      "entry_score": 17.7,
+      "entry_score": 12.0,
       "trend": "minerals",
       "role": "Critical minerals development candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.85,
-      "w1_pct": 1.14,
-      "m1_pct": -16.71,
-      "rel_qqq_1m_pct_points": -20.98,
+      "w1_pct": -3.01,
+      "m1_pct": -20.81,
+      "rel_qqq_1m_pct_points": -25.08,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TMRC": {
       "structural_early_bird": 47.2,
-      "entry_score": 35.5,
+      "entry_score": 34.8,
       "trend": "minerals",
       "role": "Rare-earth development candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1308,12 +1537,14 @@
       "w1_pct": null,
       "m1_pct": null,
       "rel_qqq_1m_pct_points": null,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "UAMY": {
       "structural_early_bird": 47.2,
-      "entry_score": 13.8,
+      "entry_score": 13.1,
       "trend": "minerals",
       "role": "Strategic mineral candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1321,12 +1552,14 @@
       "w1_pct": -0.87,
       "m1_pct": -12.12,
       "rel_qqq_1m_pct_points": -16.39,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CRML": {
       "structural_early_bird": 47.2,
-      "entry_score": 46.5,
+      "entry_score": 45.8,
       "trend": "minerals",
       "role": "Rare-earth development candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1334,38 +1567,44 @@
       "w1_pct": 18.92,
       "m1_pct": 0.86,
       "rel_qqq_1m_pct_points": -3.41,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AVL.TO": {
       "structural_early_bird": 47.2,
-      "entry_score": 9.2,
+      "entry_score": 2.7,
       "trend": "minerals",
       "role": "Critical minerals candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -9.07,
-      "w1_pct": -5.78,
-      "m1_pct": -2.37,
-      "rel_qqq_1m_pct_points": -6.65,
+      "w1_pct": -5.1,
+      "m1_pct": -17.07,
+      "rel_qqq_1m_pct_points": -21.35,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ARA.TO": {
       "structural_early_bird": 60.2,
-      "entry_score": 25.1,
+      "entry_score": 11.5,
       "trend": "minerals",
       "role": "Heavy rare earth candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.33,
-      "w1_pct": 1.37,
-      "m1_pct": -1.07,
-      "rel_qqq_1m_pct_points": -5.34,
+      "w1_pct": -1.59,
+      "m1_pct": -6.55,
+      "rel_qqq_1m_pct_points": -10.82,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ILU.AX": {
       "structural_early_bird": 60.2,
-      "entry_score": 8.7,
+      "entry_score": 8.1,
       "trend": "minerals",
       "role": "Rare-earth refinery candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1373,12 +1612,14 @@
       "w1_pct": -3.14,
       "m1_pct": -16.14,
       "rel_qqq_1m_pct_points": -20.42,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "HAS.AX": {
       "structural_early_bird": 47.2,
-      "entry_score": 22.0,
+      "entry_score": 21.3,
       "trend": "minerals",
       "role": "NdPr candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1386,12 +1627,14 @@
       "w1_pct": 3.85,
       "m1_pct": -8.47,
       "rel_qqq_1m_pct_points": -12.75,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ASM.AX": {
       "structural_early_bird": 60.2,
-      "entry_score": 39.7,
+      "entry_score": 39.0,
       "trend": "minerals",
       "role": "Mine-to-metals candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1399,12 +1642,14 @@
       "w1_pct": 0.0,
       "m1_pct": 6.36,
       "rel_qqq_1m_pct_points": 2.09,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ARU.AX": {
       "structural_early_bird": 60.2,
-      "entry_score": 15.5,
+      "entry_score": 14.8,
       "trend": "minerals",
       "role": "NdPr project candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1412,25 +1657,29 @@
       "w1_pct": 0.0,
       "m1_pct": -7.32,
       "rel_qqq_1m_pct_points": -11.59,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "REEMF": {
       "structural_early_bird": 47.2,
-      "entry_score": 24.7,
+      "entry_score": 22.6,
       "trend": "minerals",
       "role": "Separation candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 1.08,
-      "w1_pct": 6.82,
-      "m1_pct": -29.32,
-      "rel_qqq_1m_pct_points": -33.6,
+      "w1_pct": 5.62,
+      "m1_pct": -24.19,
+      "rel_qqq_1m_pct_points": -28.47,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TMC": {
       "structural_early_bird": 47.2,
-      "entry_score": 22.2,
+      "entry_score": 21.5,
       "trend": "minerals",
       "role": "Critical minerals candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1438,64 +1687,74 @@
       "w1_pct": 6.95,
       "m1_pct": -19.35,
       "rel_qqq_1m_pct_points": -23.63,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ALB": {
       "structural_early_bird": 47.2,
-      "entry_score": 9.5,
+      "entry_score": 3.1,
       "trend": "minerals",
       "role": "Lithium strategic materials",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -4.6,
-      "w1_pct": -1.11,
-      "m1_pct": -23.5,
-      "rel_qqq_1m_pct_points": -27.78,
+      "w1_pct": -5.91,
+      "m1_pct": -18.72,
+      "rel_qqq_1m_pct_points": -22.99,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "SQM": {
       "structural_early_bird": 47.2,
-      "entry_score": 9.9,
+      "entry_score": 4.1,
       "trend": "minerals",
       "role": "Lithium strategic materials",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.84,
-      "w1_pct": -2.27,
-      "m1_pct": -18.47,
-      "rel_qqq_1m_pct_points": -22.75,
+      "w1_pct": -6.52,
+      "m1_pct": -15.26,
+      "rel_qqq_1m_pct_points": -19.54,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "FCX": {
       "structural_early_bird": 54.9,
-      "entry_score": 19.7,
+      "entry_score": 16.2,
       "trend": "minerals",
       "role": "Copper bottleneck candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.69,
-      "w1_pct": 4.1,
-      "m1_pct": -7.35,
-      "rel_qqq_1m_pct_points": -11.63,
+      "w1_pct": 1.74,
+      "m1_pct": -9.8,
+      "rel_qqq_1m_pct_points": -14.07,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TECK": {
       "structural_early_bird": 47.2,
-      "entry_score": 20.2,
+      "entry_score": 16.7,
       "trend": "minerals",
       "role": "Copper/zinc candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.43,
-      "w1_pct": 3.52,
-      "m1_pct": -5.26,
-      "rel_qqq_1m_pct_points": -9.53,
+      "w1_pct": 1.98,
+      "m1_pct": -7.13,
+      "rel_qqq_1m_pct_points": -11.41,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NVDA": {
       "structural_early_bird": 52.1,
-      "entry_score": 59.3,
+      "entry_score": 59.0,
       "trend": "physical",
       "role": "Leader / compute platform",
       "evidence_status": "UNREVALIDATED",
@@ -1503,51 +1762,59 @@
       "w1_pct": 2.39,
       "m1_pct": 5.41,
       "rel_qqq_1m_pct_points": 1.14,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "AMBA": {
       "structural_early_bird": 54.2,
-      "entry_score": 60.9,
+      "entry_score": 51.7,
       "trend": "physical",
       "role": "Edge AI compute pick & shovel",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 3.31,
-      "w1_pct": 11.3,
-      "m1_pct": -0.2,
-      "rel_qqq_1m_pct_points": -4.47,
+      "w1_pct": 4.41,
+      "m1_pct": -1.3,
+      "rel_qqq_1m_pct_points": -5.57,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "HSAI": {
       "structural_early_bird": 54.2,
-      "entry_score": 32.8,
+      "entry_score": 30.8,
       "trend": "physical",
       "role": "Sensing / lidar pick & shovel",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.37,
-      "w1_pct": -1.8,
-      "m1_pct": -9.81,
-      "rel_qqq_1m_pct_points": -14.08,
+      "w1_pct": -3.22,
+      "m1_pct": -10.55,
+      "rel_qqq_1m_pct_points": -14.82,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "IOT.MI": {
       "structural_early_bird": 60.2,
-      "entry_score": 78.8,
+      "entry_score": 79.8,
       "trend": "physical",
       "role": "Edge compute candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 0.45,
-      "w1_pct": 3.14,
-      "m1_pct": 18.09,
-      "rel_qqq_1m_pct_points": 13.81,
+      "d1_pct": 1.02,
+      "w1_pct": 3.72,
+      "m1_pct": 18.75,
+      "rel_qqq_1m_pct_points": 14.48,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "QCOM": {
       "structural_early_bird": 60.2,
-      "entry_score": 76.6,
+      "entry_score": 76.3,
       "trend": "physical",
       "role": "Edge AI compute candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1555,38 +1822,44 @@
       "w1_pct": 2.94,
       "m1_pct": 20.99,
       "rel_qqq_1m_pct_points": 16.71,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "NXPI": {
       "structural_early_bird": 60.2,
-      "entry_score": 56.9,
+      "entry_score": 49.5,
       "trend": "physical",
       "role": "Edge/auto compute candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -2.24,
-      "w1_pct": 5.11,
-      "m1_pct": 3.47,
-      "rel_qqq_1m_pct_points": -0.8,
+      "w1_pct": 0.97,
+      "m1_pct": 2.41,
+      "rel_qqq_1m_pct_points": -1.87,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ON": {
       "structural_early_bird": 47.2,
-      "entry_score": 59.9,
+      "entry_score": 54.7,
       "trend": "physical",
       "role": "Sensing/power candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.28,
-      "w1_pct": 9.83,
-      "m1_pct": 1.7,
-      "rel_qqq_1m_pct_points": -2.58,
+      "w1_pct": 7.1,
+      "m1_pct": 0.88,
+      "rel_qqq_1m_pct_points": -3.39,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "MBLY": {
       "structural_early_bird": 60.2,
-      "entry_score": 30.4,
+      "entry_score": 30.1,
       "trend": "physical",
       "role": "Perception/autonomy candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1594,90 +1867,104 @@
       "w1_pct": -4.35,
       "m1_pct": -11.41,
       "rel_qqq_1m_pct_points": -15.68,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "OUST": {
       "structural_early_bird": 60.2,
-      "entry_score": 91.6,
+      "entry_score": 91.2,
       "trend": "physical",
       "role": "Lidar candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 5.05,
-      "w1_pct": 21.71,
-      "m1_pct": 15.72,
-      "rel_qqq_1m_pct_points": 11.45,
+      "w1_pct": 18.37,
+      "m1_pct": 14.19,
+      "rel_qqq_1m_pct_points": 9.91,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "LAZR": {
       "structural_early_bird": 47.2,
-      "entry_score": 61.6,
+      "entry_score": 50.7,
       "trend": "physical",
       "role": "Lidar candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.47,
-      "w1_pct": 3.74,
-      "m1_pct": 5.78,
-      "rel_qqq_1m_pct_points": 1.51,
+      "w1_pct": 2.06,
+      "m1_pct": 1.5,
+      "rel_qqq_1m_pct_points": -2.78,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "TER": {
       "structural_early_bird": 60.2,
-      "entry_score": 70.2,
+      "entry_score": 68.7,
       "trend": "physical",
       "role": "Robotics/automation candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.37,
-      "w1_pct": 13.65,
-      "m1_pct": 6.25,
-      "rel_qqq_1m_pct_points": 1.97,
+      "w1_pct": 9.79,
+      "m1_pct": 5.8,
+      "rel_qqq_1m_pct_points": 1.53,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ROK": {
       "structural_early_bird": 60.2,
-      "entry_score": 52.8,
+      "entry_score": 54.1,
       "trend": "physical",
       "role": "Industrial automation candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.01,
-      "w1_pct": 4.34,
-      "m1_pct": 0.75,
-      "rel_qqq_1m_pct_points": -3.52,
+      "w1_pct": 5.58,
+      "m1_pct": 0.82,
+      "rel_qqq_1m_pct_points": -3.45,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ISRG": {
       "structural_early_bird": 52.1,
-      "entry_score": 65.6,
+      "entry_score": 65.9,
       "trend": "physical",
       "role": "Robotics application leader",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.31,
-      "w1_pct": 4.51,
-      "m1_pct": 6.95,
-      "rel_qqq_1m_pct_points": 2.67,
+      "w1_pct": 4.17,
+      "m1_pct": 7.44,
+      "rel_qqq_1m_pct_points": 3.17,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "SYM": {
       "structural_early_bird": 60.2,
-      "entry_score": 69.5,
+      "entry_score": 63.0,
       "trend": "physical",
       "role": "Warehouse robotics candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": 0.8,
-      "w1_pct": 2.16,
-      "m1_pct": 10.02,
-      "rel_qqq_1m_pct_points": 5.74,
+      "w1_pct": -1.28,
+      "m1_pct": 8.98,
+      "rel_qqq_1m_pct_points": 4.71,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "SERV": {
       "structural_early_bird": 47.2,
-      "entry_score": 45.1,
+      "entry_score": 44.8,
       "trend": "physical",
       "role": "Autonomous robotics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1685,12 +1972,14 @@
       "w1_pct": 4.88,
       "m1_pct": -7.58,
       "rel_qqq_1m_pct_points": -11.86,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "RR": {
       "structural_early_bird": 47.2,
-      "entry_score": 29.1,
+      "entry_score": 28.8,
       "trend": "physical",
       "role": "Service robotics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1698,12 +1987,14 @@
       "w1_pct": -4.09,
       "m1_pct": -16.75,
       "rel_qqq_1m_pct_points": -21.03,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "PATH": {
       "structural_early_bird": 47.2,
-      "entry_score": 21.1,
+      "entry_score": 20.8,
       "trend": "physical",
       "role": "Automation software candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1711,37 +2002,44 @@
       "w1_pct": -8.43,
       "m1_pct": -24.37,
       "rel_qqq_1m_pct_points": -28.64,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "CGNX": {
       "structural_early_bird": 67.2,
-      "entry_score": 37.5,
+      "entry_score": 31.6,
       "trend": "physical",
       "role": "Machine vision pick & shovel",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -0.84,
-      "w1_pct": -3.99,
-      "m1_pct": -1.43,
-      "rel_qqq_1m_pct_points": -5.71,
+      "w1_pct": -5.18,
+      "m1_pct": -3.54,
+      "rel_qqq_1m_pct_points": -7.82,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     },
     "ZBRA": {
       "structural_early_bird": 47.2,
-      "entry_score": 53.8,
+      "entry_score": 52.6,
       "trend": "physical",
       "role": "Machine vision/edge candidate",
       "evidence_status": "UNREVALIDATED",
       "d1_pct": -1.6,
-      "w1_pct": 7.01,
-      "m1_pct": 0.5,
-      "rel_qqq_1m_pct_points": -3.78,
+      "w1_pct": 4.97,
+      "m1_pct": 1.27,
+      "rel_qqq_1m_pct_points": -3.0,
+      "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
+      "portfolio_action": "WAIT",
       "invalidation": []
     }
   },
   "target_allocation_pct": {
+    "GEV": 6.0,
     "AAON": 7.9
   },
   "actual_holdings_pct": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:57:22.725063+00:00",
+  "generated_at": "2026-09-25T13:12:06.956534+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 39998,
+    "record_count": 41367,
     "primary_origin_count": 2938
   },
   "candidate_gates": [
@@ -263,7 +263,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "splatting dgs",
+      "term": "gaussian splatting dgs",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -275,7 +275,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "gaussian splatting dgs",
+      "term": "splatting dgs",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -807,6 +807,22 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "novel view synthesis",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 13,
+      "primary_origin_count": 13,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "view synthesis",
       "families": [
         "science"
@@ -824,22 +840,6 @@
     },
     {
       "term": "novel view",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 13,
-      "primary_origin_count": 13,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "novel view synthesis",
       "families": [
         "science"
       ],
@@ -1012,7 +1012,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "visual cues",
+      "term": "fine-grained visual",
       "families": [
         "science"
       ],
@@ -1028,7 +1028,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "fine-grained visual",
+      "term": "visual cues",
       "families": [
         "science"
       ],

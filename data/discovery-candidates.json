@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:55:53.633051+00:00",
+  "generated_at": "2026-09-25T13:11:50.186776+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 4512,
@@ -231,7 +231,7 @@
       ]
     },
     {
-      "term": "splatting dgs",
+      "term": "gaussian splatting dgs",
       "recent_docs": 22,
       "baseline_docs": 0,
       "recent_corpus_docs": 2686,
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "term": "gaussian splatting dgs",
+      "term": "splatting dgs",
       "recent_docs": 22,
       "baseline_docs": 0,
       "recent_corpus_docs": 2686,
@@ -707,6 +707,20 @@
       ]
     },
     {
+      "term": "novel view synthesis",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 11.435,
+      "discovery_score": 14.6338,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "NaCR: Visual Localization via NeRF-aided Camera Ray Regression",
+        "GARO: Geometry-Aware Redundancy Optimization for Real-Time and High-Fidelity Dynamic Gaussian Splatting"
+      ]
+    },
+    {
       "term": "view synthesis",
       "recent_docs": 13,
       "baseline_docs": 0,
@@ -722,20 +736,6 @@
     },
     {
       "term": "novel view",
-      "recent_docs": 13,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 2686,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 11.435,
-      "discovery_score": 14.6338,
-      "examples": [
-        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
-        "NaCR: Visual Localization via NeRF-aided Camera Ray Regression",
-        "GARO: Geometry-Aware Redundancy Optimization for Real-Time and High-Fidelity Dynamic Gaussian Splatting"
-      ]
-    },
-    {
-      "term": "novel view synthesis",
       "recent_docs": 13,
       "baseline_docs": 0,
       "recent_corpus_docs": 2686,
@@ -889,20 +889,6 @@
       ]
     },
     {
-      "term": "visual cues",
-      "recent_docs": 12,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 2686,
-      "baseline_corpus_docs": 1137,
-      "acceleration": 10.588,
-      "discovery_score": 13.2824,
-      "examples": [
-        "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks",
-        "Diff-RF: Mutually Reinforced Image Registration and Fusion via Degradation-Aware Learning",
-        "Fysiverse-3D-Vision Technical Report: Generating Executable 3D Worlds from Images through Unified Spatial Reasoning"
-      ]
-    },
-    {
       "term": "fine-grained visual",
       "recent_docs": 12,
       "baseline_docs": 0,
@@ -914,6 +900,20 @@
         "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks",
         "On the Diffusibility of High-Dimensional Latents",
         "Privacy-Preserving Semantic Segmentation from High-Resolution Depth and Ultra-Low-Resolution RGB"
+      ]
+    },
+    {
+      "term": "visual cues",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 2686,
+      "baseline_corpus_docs": 1137,
+      "acceleration": 10.588,
+      "discovery_score": 13.2824,
+      "examples": [
+        "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks",
+        "Diff-RF: Mutually Reinforced Image Registration and Fusion via Degradation-Aware Learning",
+        "Fysiverse-3D-Vision Technical Report: Generating Executable 3D Worlds from Images through Unified Spatial Reasoning"
       ]
     },
     {

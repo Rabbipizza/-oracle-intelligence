@@ -3,30 +3,30 @@
   "cohorts": {
     "ALL_DETECTED": {
       "n": 140,
-      "equal_weight_return_pct": -0.872,
+      "equal_weight_return_pct": -1.381,
       "matched_qqq_return_pct": -0.583,
-      "alpha_pct_points": -0.289,
-      "hit_rate_vs_qqq_pct": 35.0
+      "alpha_pct_points": -0.797,
+      "hit_rate_vs_qqq_pct": 28.57
     },
     "TOP20": {
       "n": 140,
-      "equal_weight_return_pct": -0.872,
+      "equal_weight_return_pct": -1.381,
       "matched_qqq_return_pct": -0.583,
-      "alpha_pct_points": -0.289,
-      "hit_rate_vs_qqq_pct": 35.0
+      "alpha_pct_points": -0.797,
+      "hit_rate_vs_qqq_pct": 28.57
     },
     "ORANGE": {
       "n": 96,
-      "equal_weight_return_pct": -0.508,
+      "equal_weight_return_pct": -0.899,
       "matched_qqq_return_pct": -0.47,
-      "alpha_pct_points": -0.038,
-      "hit_rate_vs_qqq_pct": 31.25
+      "alpha_pct_points": -0.429,
+      "hit_rate_vs_qqq_pct": 26.04
     },
     "GREEN": {
       "n": 2,
-      "equal_weight_return_pct": 0.169,
+      "equal_weight_return_pct": 0.25,
       "matched_qqq_return_pct": -0.425,
-      "alpha_pct_points": 0.595,
+      "alpha_pct_points": 0.676,
       "hit_rate_vs_qqq_pct": 50.0
     }
   },
@@ -146,10 +146,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 45.45000076293945,
-      "current_price": 46.38199996948242,
-      "return_pct": 2.0506032803038643,
+      "current_price": 46.20000076293945,
+      "return_pct": 1.650164988801417,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 2.9014911137338895
+      "alpha_pct_points": 2.501052822231442
     },
     {
       "event_id": "AVGO:ORANGE:2026-09-22",
@@ -217,11 +217,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 355.9100036621094,
+      "entry_price_evaluated": 368.55999755859375,
       "current_price": 358.42999267578125,
-      "return_pct": 0.7080410743566246,
+      "return_pct": -2.748536181331518,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.5589289077866497
+      "alpha_pct_points": -1.8976483479014927
     },
     {
       "event_id": "ANET:ORANGE:2026-09-22",
@@ -241,11 +241,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 203.47000122070312,
+      "entry_price_evaluated": 205.19000244140625,
       "current_price": 205.6999969482422,
-      "return_pct": 1.0959825596699169,
+      "return_pct": 0.24854744420677033,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.946870393099942
+      "alpha_pct_points": 1.0994352776367955
     },
     {
       "event_id": "ALAB:RED:2026-09-22",
@@ -289,11 +289,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 400.8500061035156,
+      "entry_price_evaluated": 403.79998779296875,
       "current_price": 398.3599853515625,
-      "return_pct": -0.6211851600446572,
+      "return_pct": -1.347202230277278,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.22970267338536798
+      "alpha_pct_points": -0.49631439684725276
     },
     {
       "event_id": "AAOI:RED:2026-09-22",
@@ -409,11 +409,11 @@
       "exchange": "NCM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 13.180000305175781,
+      "entry_price_evaluated": 13.899999618530273,
       "current_price": 13.359999656677246,
-      "return_pct": 1.3657006626227375,
+      "return_pct": -3.884891918508737,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 2.2165884960527626
+      "alpha_pct_points": -3.034004085078712
     },
     {
       "event_id": "MTSI:ORANGE:2026-09-22",
@@ -433,11 +433,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 275.8399963378906,
+      "entry_price_evaluated": 279.69000244140625,
       "current_price": 284.94000244140625,
-      "return_pct": 3.299016177613545,
+      "return_pct": 1.8770781773295164,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 4.149904011043571
+      "alpha_pct_points": 2.7279660107595416
     },
     {
       "event_id": "IPGP:RED:2026-09-22",
@@ -457,11 +457,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 77.18000030517578,
+      "entry_price_evaluated": 78.19999694824219,
       "current_price": 77.41999816894531,
-      "return_pct": 0.31095861987633366,
+      "return_pct": -0.9974409331666934,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.1618464533063588
+      "alpha_pct_points": -0.1465530997366682
     },
     {
       "event_id": "APH:ORANGE:2026-09-22",
@@ -481,11 +481,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 82.19000244140625,
+      "entry_price_evaluated": 82.83999633789062,
       "current_price": 83.08000183105469,
-      "return_pct": 1.082856020454459,
+      "return_pct": 0.2897217573321953,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.9337438538844842
+      "alpha_pct_points": 1.1406095907622205
     },
     {
       "event_id": "TEL:RED:2026-09-22",
@@ -505,11 +505,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 214.38999938964844,
+      "entry_price_evaluated": 213.47999572753906,
       "current_price": 213.6699981689453,
-      "return_pct": -0.33583712988148884,
+      "return_pct": 0.08900245700245168,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.5150507035485363
+      "alpha_pct_points": 0.9398902904324768
     },
     {
       "event_id": "GEV:GREEN:2026-09-22",
@@ -529,11 +529,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 951.8200073242188,
+      "entry_price_evaluated": 950.280029296875,
       "current_price": 955.0399780273438,
-      "return_pct": 0.33829617767513476,
+      "return_pct": 0.5008995857769039,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.18918401110516
+      "alpha_pct_points": 1.351787419206929
     },
     {
       "event_id": "VRT:ORANGE:2026-09-22",
@@ -553,11 +553,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 248.77999877929688,
+      "entry_price_evaluated": 253.4600067138672,
       "current_price": 245.3000030517578,
-      "return_pct": -1.3988245617069572,
+      "return_pct": -3.2194442696915293,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.5479367282769321
+      "alpha_pct_points": -2.368556436261504
     },
     {
       "event_id": "ETN:ORANGE:2026-09-22",
@@ -577,11 +577,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 438.760009765625,
+      "entry_price_evaluated": 442.489990234375,
       "current_price": 440.0,
-      "return_pct": 0.2826124092387916,
+      "return_pct": -0.5627223867948117,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.1335002426688168
+      "alpha_pct_points": 0.2881654466352135
     },
     {
       "event_id": "PWR:ORANGE:2026-09-22",
@@ -601,11 +601,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 634.9000244140625,
+      "entry_price_evaluated": 642.6300048828125,
       "current_price": 643.5,
-      "return_pct": 1.3545401252542444,
+      "return_pct": 0.13538040716698507,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 2.2054279586842696
+      "alpha_pct_points": 0.9862682405970102
     },
     {
       "event_id": "POWL:ORANGE:2026-09-22",
@@ -625,11 +625,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 192.6199951171875,
+      "entry_price_evaluated": 191.89999389648438,
       "current_price": 191.6199951171875,
-      "return_pct": -0.5191569023722642,
+      "return_pct": -0.14590869630142222,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.33173093105776097
+      "alpha_pct_points": 0.7049791371286029
     },
     {
       "event_id": "NVT:ORANGE:2026-09-22",
@@ -649,11 +649,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 162.85000610351562,
+      "entry_price_evaluated": 162.64999389648438,
       "current_price": 162.8800048828125,
-      "return_pct": 0.018421110330080204,
+      "return_pct": 0.14141469102944004,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.8693089437601054
+      "alpha_pct_points": 0.9923025244594652
     },
     {
       "event_id": "HUBB:ORANGE:2026-09-22",
@@ -697,11 +697,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 217.52000427246094,
+      "entry_price_evaluated": 221.69000244140625,
       "current_price": 211.9499969482422,
-      "return_pct": -2.5606873918786244,
+      "return_pct": -4.393524915828529,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.7097995584485992
+      "alpha_pct_points": -3.5426370823985036
     },
     {
       "event_id": "CAT:ORANGE:2026-09-22",
@@ -721,11 +721,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 812.02001953125,
+      "entry_price_evaluated": 808.010009765625,
       "current_price": 805.25,
-      "return_pct": -0.8337256925214809,
+      "return_pct": -0.34158113541509216,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.017162140908544288
+      "alpha_pct_points": 0.509306698014933
     },
     {
       "event_id": "CEG:ORANGE:2026-09-22",
@@ -745,11 +745,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 263.8800048828125,
+      "entry_price_evaluated": 263.4599914550781,
       "current_price": 261.6199951171875,
-      "return_pct": -0.8564535864051703,
+      "return_pct": -0.6983968714674327,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.005565752975145166
+      "alpha_pct_points": 0.1524909619625925
     },
     {
       "event_id": "VST:ORANGE:2026-09-22",
@@ -793,11 +793,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 100.72000122070312,
+      "entry_price_evaluated": 102.75,
       "current_price": 97.8499984741211,
-      "return_pct": -2.8494864096487937,
+      "return_pct": -4.768857932728865,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.9985985762187686
+      "alpha_pct_points": -3.91797009929884
     },
     {
       "event_id": "BWXT:RED:2026-09-22",
@@ -817,11 +817,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 141.80999755859375,
+      "entry_price_evaluated": 144.50999450683594,
       "current_price": 138.67999267578125,
-      "return_pct": -2.207182100485705,
+      "return_pct": -4.034324304661785,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.35629426705568
+      "alpha_pct_points": -3.18343647123176
     },
     {
       "event_id": "CCJ:RED:2026-09-22",
@@ -841,11 +841,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 90.80000305175781,
+      "entry_price_evaluated": 94.58999633789062,
       "current_price": 88.12000274658203,
-      "return_pct": -2.9515420871165876,
+      "return_pct": -6.840040006129966,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -2.1006542536865624
+      "alpha_pct_points": -5.98915217269994
     },
     {
       "event_id": "BE:RED:2026-09-22",
@@ -889,11 +889,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 199.4199981689453,
+      "entry_price_evaluated": 206.1699981689453,
       "current_price": 198.0500030517578,
-      "return_pct": -0.6869898354060044,
+      "return_pct": -3.93849502318645,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.16389799802402072
+      "alpha_pct_points": -3.087607189756425
     },
     {
       "event_id": "ABBN.SW:ORANGE:2026-09-22",
@@ -914,10 +914,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 83.0999984741211,
-      "current_price": 81.16000366210938,
-      "return_pct": -2.3345305025677776,
+      "current_price": 80.5199966430664,
+      "return_pct": -3.104695401237756,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.4836426691377524
+      "alpha_pct_points": -2.2538075678077307
     },
     {
       "event_id": "SU.PA:ORANGE:2026-09-22",
@@ -938,10 +938,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 295.0,
-      "current_price": 293.70001220703125,
-      "return_pct": -0.44067382812500444,
+      "current_price": 292.5,
+      "return_pct": -0.8474576271186418,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.4102140053050207
+      "alpha_pct_points": 0.0034302063113833547
     },
     {
       "event_id": "ENR.DE:ORANGE:2026-09-22",
@@ -962,10 +962,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 145.86000061035156,
-      "current_price": 145.05999755859375,
-      "return_pct": -0.5484732266626935,
+      "current_price": 144.8800048828125,
+      "return_pct": -0.6718742105020326,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.3024146067673317
+      "alpha_pct_points": 0.1790136229279926
     },
     {
       "event_id": "FPS:ORANGE:2026-09-22",
@@ -1105,11 +1105,11 @@
       "exchange": "NGM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 3.509999990463257,
+      "entry_price_evaluated": 3.7300000190734863,
       "current_price": 3.5399999618530273,
-      "return_pct": 0.8547000419168338,
+      "return_pct": -5.093835288173909,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.705587875346859
+      "alpha_pct_points": -4.242947454743884
     },
     {
       "event_id": "TMRC:RED:2026-09-22",
@@ -1201,11 +1201,11 @@
       "exchange": "TOR",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 8.600000381469727,
+      "entry_price_evaluated": 8.819999694824219,
       "current_price": 7.820000171661377,
-      "return_pct": -9.069769479185174,
+      "return_pct": -11.337863466703569,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -8.218881645755149
+      "alpha_pct_points": -10.486975633273543
     },
     {
       "event_id": "ARA.TO:ORANGE:2026-09-22",
@@ -1225,11 +1225,11 @@
       "exchange": "TOR",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 3.759999990463257,
+      "entry_price_evaluated": 3.859999895095825,
       "current_price": 3.7100000381469727,
-      "return_pct": -1.329785969231445,
+      "return_pct": -3.886006762316996,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.47889813580141993
+      "alpha_pct_points": -3.0351189288869707
     },
     {
       "event_id": "ILU.AX:ORANGE:2026-09-22",
@@ -1345,11 +1345,11 @@
       "exchange": "OQB",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 0.9300000071525574,
+      "entry_price_evaluated": 0.8999999761581421,
       "current_price": 0.9399999976158142,
-      "return_pct": 1.0752677834782398,
+      "return_pct": 4.444446946367875,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.926155616908265
+      "alpha_pct_points": 5.2953347797979
     },
     {
       "event_id": "TMC:RED:2026-09-22",
@@ -1393,11 +1393,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 113.47000122070312,
+      "entry_price_evaluated": 116.80000305175781,
       "current_price": 108.25,
-      "return_pct": -4.600335916582954,
+      "return_pct": -7.320207900995546,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -3.7494480831529287
+      "alpha_pct_points": -6.469320067565521
     },
     {
       "event_id": "SQM:RED:2026-09-22",
@@ -1417,11 +1417,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 69.08000183105469,
+      "entry_price_evaluated": 70.19000244140625,
       "current_price": 67.12000274658203,
-      "return_pct": -2.837288697915963,
+      "return_pct": -4.373841840776427,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.9864008644859377
+      "alpha_pct_points": -3.5229540073464016
     },
     {
       "event_id": "FCX:RED:2026-09-22",
@@ -1441,11 +1441,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 72.58000183105469,
+      "entry_price_evaluated": 74.3499984741211,
       "current_price": 72.08000183105469,
-      "return_pct": -0.6888949950206058,
+      "return_pct": -3.0531226491638974,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.16199283840941936
+      "alpha_pct_points": -2.2022348157338723
     },
     {
       "event_id": "TECK:RED:2026-09-22",
@@ -1465,11 +1465,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 66.80000305175781,
+      "entry_price_evaluated": 68.87999725341797,
       "current_price": 66.51000213623047,
-      "return_pct": -0.4341330872434934,
+      "return_pct": -3.440759598854215,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.41675474618653174
+      "alpha_pct_points": -2.58987176542419
     },
     {
       "event_id": "AVAV:ORANGE:2026-09-22",
@@ -1489,11 +1489,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 155.94000244140625,
+      "entry_price_evaluated": 156.14999389648438,
       "current_price": 158.5500030517578,
-      "return_pct": 1.67372102699066,
+      "return_pct": 1.536989592753013,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 2.524608860420685
+      "alpha_pct_points": 2.387877426183038
     },
     {
       "event_id": "LHX:ORANGE:2026-09-22",
@@ -1513,11 +1513,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 239.2100067138672,
+      "entry_price_evaluated": 239.88999938964844,
       "current_price": 238.0399932861328,
-      "return_pct": -0.4891155866794006,
+      "return_pct": -0.7711893402070125,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.3617722467506246
+      "alpha_pct_points": 0.0796984932230127
     },
     {
       "event_id": "RTX:ORANGE:2026-09-22",
@@ -1537,11 +1537,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 192.19000244140625,
+      "entry_price_evaluated": 190.99000549316406,
       "current_price": 188.61000061035156,
-      "return_pct": -1.8627409259470373,
+      "return_pct": -1.246141062024153,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.0118530925170122
+      "alpha_pct_points": -0.3952532285941279
     },
     {
       "event_id": "NOC:ORANGE:2026-09-22",
@@ -1561,11 +1561,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 514.4199829101562,
+      "entry_price_evaluated": 509.8599853515625,
       "current_price": 508.9800109863281,
-      "return_pct": -1.057496229647481,
+      "return_pct": -0.17259137616528752,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.20660839621745586
+      "alpha_pct_points": 0.6782964572647376
     },
     {
       "event_id": "LMT:ORANGE:2026-09-22",
@@ -1585,11 +1585,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 524.6799926757812,
+      "entry_price_evaluated": 522.3400268554688,
       "current_price": 523.7000122070312,
-      "return_pct": -0.1867767939372489,
+      "return_pct": 0.2603639931156865,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.6641110394927763
+      "alpha_pct_points": 1.1112518265457116
     },
     {
       "event_id": "KTOS:ORANGE:2026-09-22",
@@ -1705,11 +1705,11 @@
       "exchange": "NCM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 9.8100004196167,
+      "entry_price_evaluated": 10.149999618530273,
       "current_price": 10.0600004196167,
-      "return_pct": 2.548419870605545,
+      "return_pct": -0.8866916482367926,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 3.39930770403557
+      "alpha_pct_points": -0.03580381480676742
     },
     {
       "event_id": "MOB:ORANGE:2026-09-22",
@@ -1729,11 +1729,11 @@
       "exchange": "NCM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 5.050000190734863,
+      "entry_price_evaluated": 5.429999828338623,
       "current_price": 4.980000019073486,
-      "return_pct": -1.3861419607429926,
+      "return_pct": -8.28728956705731,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.5352541273129674
+      "alpha_pct_points": -7.436401733627285
     },
     {
       "event_id": "DUKR:RED:2026-09-22",
@@ -1753,11 +1753,11 @@
       "exchange": "NCM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 5.329999923706055,
+      "entry_price_evaluated": 5.389999866485596,
       "current_price": 5.309999942779541,
-      "return_pct": -0.37523416909558405,
+      "return_pct": -1.4842286769520152,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.4756536643344411
+      "alpha_pct_points": -0.63334084352199
     },
     {
       "event_id": "PLTR:RED:2026-09-22",
@@ -1801,11 +1801,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 124.69000244140625,
+      "entry_price_evaluated": 123.30999755859375,
       "current_price": 123.3499984741211,
-      "return_pct": -1.0746683302976456,
+      "return_pct": 0.03243931256129429,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.22378049686762047
+      "alpha_pct_points": 0.8833271459913195
     },
     {
       "event_id": "BAH:RED:2026-09-22",
@@ -1825,11 +1825,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 75.6500015258789,
+      "entry_price_evaluated": 76.27999877929688,
       "current_price": 73.81999969482422,
-      "return_pct": -2.419037401378854,
+      "return_pct": -3.2249595226007344,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.5681495679488289
+      "alpha_pct_points": -2.374071689170709
     },
     {
       "event_id": "GD:RED:2026-09-22",
@@ -1849,11 +1849,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 343.3299865722656,
+      "entry_price_evaluated": 343.3900146484375,
       "current_price": 336.2900085449219,
-      "return_pct": -2.0504990250427624,
+      "return_pct": -2.0676215966223155,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.1996111916127372
+      "alpha_pct_points": -1.2167337631922903
     },
     {
       "event_id": "BA:RED:2026-09-22",
@@ -1897,11 +1897,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 76.80999755859375,
+      "entry_price_evaluated": 77.87999725341797,
       "current_price": 76.0199966430664,
-      "return_pct": -1.0285131371403855,
+      "return_pct": -2.3882905443604496,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.17762530371036034
+      "alpha_pct_points": -1.5374027109304245
     },
     {
       "event_id": "MRCY:RED:2026-09-22",
@@ -1921,11 +1921,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 82.72000122070312,
+      "entry_price_evaluated": 83.87999725341797,
       "current_price": 83.18000030517578,
-      "return_pct": 0.5560917283419009,
+      "return_pct": -0.8345219017203309,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.406979561771926
+      "alpha_pct_points": 0.016365931709694248
     },
     {
       "event_id": "TDY:RED:2026-09-22",
@@ -1945,11 +1945,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 621.0499877929688,
+      "entry_price_evaluated": 612.739990234375,
       "current_price": 612.02001953125,
-      "return_pct": -1.4539841299745615,
+      "return_pct": -0.11750019822430735,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.6030962965445363
+      "alpha_pct_points": 0.7333876352057178
     },
     {
       "event_id": "NVDA:ORANGE:2026-09-22",
@@ -1993,11 +1993,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 67.62000274658203,
+      "entry_price_evaluated": 67.05999755859375,
       "current_price": 69.86000061035156,
-      "return_pct": 3.312626105864447,
+      "return_pct": 4.175370047264471,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 4.1635139392944716
+      "alpha_pct_points": 5.026257880694496
     },
     {
       "event_id": "HSAI:ORANGE:2026-09-22",
@@ -2017,11 +2017,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 16.309999465942383,
+      "entry_price_evaluated": 17.100000381469727,
       "current_price": 16.3700008392334,
-      "return_pct": 0.36788090285537756,
+      "return_pct": -4.269003075739031,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.2187687362854027
+      "alpha_pct_points": -3.4181152423090055
     },
     {
       "event_id": "IOT.MI:ORANGE:2026-09-22",
@@ -2042,10 +2042,10 @@
       "entry_qqq_price": null,
       "forward_returns": {},
       "entry_price_evaluated": 4.445000171661377,
-      "current_price": 4.440000057220459,
-      "return_pct": -0.11248850951223188,
+      "current_price": 4.465000152587891,
+      "return_pct": 0.44994331055421277,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.7383993239177933
+      "alpha_pct_points": 1.300831143984238
     },
     {
       "event_id": "QCOM:ORANGE:2026-09-22",
@@ -2089,11 +2089,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 235.44000244140625,
+      "entry_price_evaluated": 237.57000732421875,
       "current_price": 230.16000366210938,
-      "return_pct": -2.242609040326915,
+      "return_pct": -3.119082137332563,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -1.3917212068968898
+      "alpha_pct_points": -2.2681943039025376
     },
     {
       "event_id": "ON:RED:2026-09-22",
@@ -2113,11 +2113,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 74.0999984741211,
+      "entry_price_evaluated": 73.5999984741211,
       "current_price": 73.1500015258789,
-      "return_pct": -1.2820471900198083,
+      "return_pct": -0.611408909743949,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.4311593565897831
+      "alpha_pct_points": 0.23947892368607615
     },
     {
       "event_id": "MBLY:ORANGE:2026-09-22",
@@ -2161,11 +2161,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 39.380001068115234,
+      "entry_price_evaluated": 40.25,
       "current_price": 41.369998931884766,
-      "return_pct": 5.053320999985367,
+      "return_pct": 2.782606041949731,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 5.904208833415392
+      "alpha_pct_points": 3.6334938753797563
     },
     {
       "event_id": "LAZR:RED:2026-09-22",
@@ -2185,11 +2185,11 @@
       "exchange": "PCX",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 44.29999923706055,
+      "entry_price_evaluated": 45.75,
       "current_price": 44.09000015258789,
-      "return_pct": -0.47403857356497214,
+      "return_pct": -3.6284149670209986,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.376849259865053
+      "alpha_pct_points": -2.7775271335909735
     },
     {
       "event_id": "TER:ORANGE:2026-09-22",
@@ -2209,11 +2209,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 389.1400146484375,
+      "entry_price_evaluated": 398.69000244140625,
       "current_price": 387.70001220703125,
-      "return_pct": -0.37004738325541187,
+      "return_pct": -2.7565251616737396,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.4808404501746133
+      "alpha_pct_points": -1.9056373282437145
     },
     {
       "event_id": "ROK:ORANGE:2026-09-22",
@@ -2233,11 +2233,11 @@
       "exchange": "NYQ",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 432.8900146484375,
+      "entry_price_evaluated": 427.19000244140625,
       "current_price": 432.92999267578125,
-      "return_pct": 0.0092351465709406,
+      "return_pct": 1.343662117926625,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.8601229800009658
+      "alpha_pct_points": 2.19454995135665
     },
     {
       "event_id": "ISRG:RED:2026-09-22",
@@ -2257,11 +2257,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 398.29998779296875,
+      "entry_price_evaluated": 402.0899963378906,
       "current_price": 399.5199890136719,
-      "return_pct": 0.3063020984417575,
+      "return_pct": -0.6391622143364861,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.1571899318717827
+      "alpha_pct_points": 0.21172561909353904
     },
     {
       "event_id": "SYM:ORANGE:2026-09-22",
@@ -2281,11 +2281,11 @@
       "exchange": "NGM",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 43.689998626708984,
+      "entry_price_evaluated": 45.06999969482422,
       "current_price": 44.040000915527344,
-      "return_pct": 0.8011039135267684,
+      "return_pct": -2.2853312320194163,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 1.6519917469567935
+      "alpha_pct_points": -1.4344433985893912
     },
     {
       "event_id": "SERV:RED:2026-09-22",
@@ -2377,11 +2377,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 58.189998626708984,
+      "entry_price_evaluated": 58.970001220703125,
       "current_price": 57.70000076293945,
-      "return_pct": -0.8420654327780386,
+      "return_pct": -2.1536381744516553,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": 0.008822400651986584
+      "alpha_pct_points": -1.3027503410216301
     },
     {
       "event_id": "ZBRA:RED:2026-09-22",
@@ -2401,11 +2401,11 @@
       "exchange": "NMS",
       "entry_qqq_price": null,
       "forward_returns": {},
-      "entry_price_evaluated": 371.0199890136719,
+      "entry_price_evaluated": 361.6099853515625,
       "current_price": 365.1000061035156,
-      "return_pct": -1.59559675636185,
+      "return_pct": 0.9651339546279614,
       "qqq_return_pct": -0.8508878334300252,
-      "alpha_pct_points": -0.7447089229318249
+      "alpha_pct_points": 1.8160217880579865
     },
     {
       "event_id": "ALAB:ORANGE:2026-09-24",
