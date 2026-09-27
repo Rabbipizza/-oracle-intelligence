@@ -43,6 +43,10 @@ jobs:
           python oracle_public_sources.py
           python oracle_discovery.py
 
+      - name: Test capital allocation logic
+        run: |
+          python oracle_logic_tests.py
+
       - name: Enrich, gate and price
         run: |
           python oracle_sources.py
