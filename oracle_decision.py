@@ -375,6 +375,14 @@ if targets and abs(tot-100.0)>0.05:
     k=max(targets,key=targets.get)
     targets[k]=round(targets[k]+(100.0-tot),1)
 
+# If the resulting target is effectively identical to the current fully-deployed
+# portfolio, the semantic state is COMPOUND regardless of intermediate branches.
+all_keys=set(open_weights)|set(targets)
+same_allocation=all(abs(float(open_weights.get(k,0.0))-float(targets.get(k,0.0)))<=0.25 for k in all_keys)
+if same_allocation and sum(open_weights.values())>=99.5:
+    rotation_decision["mode"]="COMPOUND"
+    rotation_decision["reason"]="Portfolio fully deployed; no challenger clears the rotation hurdle and no incumbent requires exit."
+
 # Final portfolio actions.
 for ticker,sc in scores.items():
     tgt=float(targets.get(ticker,0.0))
