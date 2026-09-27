@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-09-25",
-  "generated_at": "2026-09-27T23:36:04.664506+00:00",
+  "generated_at": "2026-09-27T23:39:41.514940+00:00",
   "method": "ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
   "rule": "Deploy capital once into the best available opportunity set, then let incumbents compound. Rotate only when a challenger has a materially stronger acceleration edge than the incumbent HOLD state, or when the incumbent thesis/risk state is invalidated. No leverage; no real orders are executed.",
   "trends": {
@@ -49,8 +49,8 @@
   "signals": {
     "GEV": {
       "signal": "ORANGE",
-      "reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 0.0%.",
-      "portfolio_action": "EXIT_OR_REDUCE"
+      "reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 6.0%.",
+      "portfolio_action": "HOLD"
     },
     "VRT": {
       "signal": "ORANGE",
@@ -559,8 +559,8 @@
       "actual_weight_pct": 6.0,
       "allocation_score": 72.0,
       "hold_score": 70.71,
-      "target_weight_pct": 0.0,
-      "portfolio_action": "EXIT_OR_REDUCE",
+      "target_weight_pct": 6.0,
+      "portfolio_action": "HOLD",
       "invalidation": [
         "material reversal in Power/Electrification orders",
         "data-center order slowdown",
@@ -2535,7 +2535,8 @@
   },
   "target_allocation_pct": {
     "AAON": 70.0,
-    "QQQ": 30.0
+    "GEV": 6.0,
+    "QQQ": 24.0
   },
   "actual_holdings_pct": {
     "AAON": 4.0,
@@ -2555,7 +2556,7 @@
       "best_challenger": "AAON",
       "best_challenger_score": 87.23,
       "rotation_edge": null,
-      "reason": "Initial deployment: AAON materially beats QQQ on capital competition score."
+      "reason": "Initial deployment: preserve valid incumbents and allocate unused capital toward AAON; residual goes to QQQ."
     }
   }
 }

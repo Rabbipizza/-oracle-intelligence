@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-27T23:36:04.725575+00:00",
-  "market_generated_at": "2026-09-27T23:35:45.926419+00:00",
+  "generated_at": "2026-09-27T23:39:41.575195+00:00",
+  "market_generated_at": "2026-09-27T23:39:26.378392+00:00",
   "market_source": {
     "prices": "Yahoo Finance chart EOD",
     "fx": "ECB Data Portal"
@@ -1017,12 +1017,12 @@
           "role": "Bottleneck / generation",
           "proof": "PROVEN",
           "signal": "ORANGE",
-          "signal_reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 0.0%.",
+          "signal_reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 6.0%.",
           "structural_early_bird": 97.2,
           "entry_score": 41.2,
           "actual_weight_pct": 6.0,
-          "target_weight_pct": 0.0,
-          "portfolio_action": "EXIT_OR_REDUCE",
+          "target_weight_pct": 6.0,
+          "portfolio_action": "HOLD",
           "evidence_status": "PROVEN",
           "invalidation": [
             "material reversal in Power/Electrification orders",
@@ -5614,12 +5614,12 @@
       "role": "Bottleneck / generation",
       "proof": "PROVEN",
       "signal": "ORANGE",
-      "signal_reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 0.0%.",
+      "signal_reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.2/100). Deploy\u2192Compound\u2192Rotate: HOLD 70.7; acceleration 58.8; ACTUAL 6.0% -> TARGET 6.0%.",
       "structural_early_bird": 97.2,
       "entry_score": 41.2,
       "actual_weight_pct": 6.0,
-      "target_weight_pct": 0.0,
-      "portfolio_action": "EXIT_OR_REDUCE",
+      "target_weight_pct": 6.0,
+      "portfolio_action": "HOLD",
       "evidence_status": "PROVEN",
       "invalidation": [
         "material reversal in Power/Electrification orders",
@@ -7858,7 +7858,8 @@
   ],
   "target_allocation_pct": {
     "AAON": 70.0,
-    "QQQ": 30.0
+    "GEV": 6.0,
+    "QQQ": 24.0
   },
   "actual_holdings_pct": {
     "AAON": 4.0,
@@ -7878,7 +7879,7 @@
       "best_challenger": "AAON",
       "best_challenger_score": 87.23,
       "rotation_edge": null,
-      "reason": "Initial deployment: AAON materially beats QQQ on capital competition score."
+      "reason": "Initial deployment: preserve valid incumbents and allocate unused capital toward AAON; residual goes to QQQ."
     }
   },
   "portfolio": {
