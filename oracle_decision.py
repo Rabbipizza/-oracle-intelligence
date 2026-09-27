@@ -91,7 +91,8 @@ capital=float(portfolio.get("initial_capital_chf",1000) or 1000)
 open_weights={}
 for p in portfolio.get("positions",[]):
     if p.get("status")=="OPEN":
-        open_weights[p["ticker"]]=round(100*float(p.get("allocated_chf",0))/capital,2)
+        t=p["ticker"]
+        open_weights[t]=round(open_weights.get(t,0.0)+100*float(p.get("allocated_chf",0))/capital,2)
 prior_targets=(prior.get("target_allocation_pct") or {})
 
 signals={}
@@ -222,7 +223,8 @@ for ticker,sc in scores.items():
     severe_dd=(dd is not None and dd <= -35)
     severe_relative=(rel is not None and rel <= -12 and entry < 45 and prev_sig!="GREEN")
     if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not (severe_dd or severe_relative):
-        challengers.append(ticker)
+        if float(open_weights.get(ticker,0.0) or 0.0)==0.0:
+            challengers.append(ticker)
 
 # Incumbent positions are sticky: being ORANGE does not imply exit.
 incumbents=[t for t,w in open_weights.items() if w>0 and t in scores]
@@ -277,7 +279,9 @@ if initial_deployment:
     # Preserve valid incumbent positions. DEPLOY means allocate unused capital,
     # not reset the portfolio to zero.
     for t,w in open_weights.items():
-        if t in scores and t not in invalid_incumbents:
+        if t=="QQQ":
+            targets[t]=float(w)
+        elif t in scores and t not in invalid_incumbents:
             targets[t]=float(w)
 
     freed=sum(float(open_weights.get(t,0)) for t in invalid_incumbents)
@@ -311,12 +315,15 @@ if initial_deployment:
             rotation_decision["reason"]="Initial deployment: preserve valid incumbents; unused capital defaults to QQQ because no challenger clears required edge."
 
 else:
-    # Preserve incumbents by default.
+    # Preserve incumbents by default. QQQ is a valid portfolio holding even though
+    # it is the benchmark rather than a research-universe company.
     for t,w in open_weights.items():
-        if t in scores and t not in invalid_incumbents:
+        if t=="QQQ":
+            targets[t]=float(w)
+        elif t in scores and t not in invalid_incumbents:
             targets[t]=float(w)
 
-    # Exit invalid incumbents first.
+    # Exit invalid stock incumbents first. QQQ is governed by its own regime gate.
     freed=sum(float(open_weights.get(t,0)) for t in invalid_incumbents)
 
     # Rotation requires a challenger to beat incumbent HOLD by a material margin.
