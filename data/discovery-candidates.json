@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T18:15:38.933734+00:00",
+  "generated_at": "2026-09-27T18:19:41.676630+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 5540,
@@ -58,8 +58,8 @@
       "discovery_score": 51.73,
       "examples": [
         "Semantic SLAM in Precision Agriculture using Bayesian Inference",
-        "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels",
-        "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+        "A real-time object detection framework for multi-stream offshore platform videos based on an event-driven dual-loop mechanism",
+        "Task-Oriented Semantic Feature Transmission for Multi-Task Satellite Remote Sensing over Low-SNR Channels"
       ]
     },
     {
@@ -1183,20 +1183,6 @@
       ]
     },
     {
-      "term": "novel view",
-      "recent_docs": 14,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3669,
-      "baseline_corpus_docs": 1157,
-      "acceleration": 9.15,
-      "discovery_score": 12.2594,
-      "examples": [
-        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
-        "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
-        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting"
-      ]
-    },
-    {
       "term": "view synthesis",
       "recent_docs": 14,
       "baseline_docs": 0,
@@ -1208,6 +1194,20 @@
         "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
         "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
         "BRAVE-6D: Benchmark for Robotic Active Vision in 6DOF Pose Estimation"
+      ]
+    },
+    {
+      "term": "novel view",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3669,
+      "baseline_corpus_docs": 1157,
+      "acceleration": 9.15,
+      "discovery_score": 12.2594,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
+        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting"
       ]
     },
     {
