@@ -274,23 +274,41 @@ initial_deployment = invested_pct < 50.0
 
 if initial_deployment:
     rotation_decision["mode"]="DEPLOY"
-    # Prefer strongest GREEN challenger. If none clearly beats QQQ, use QQQ.
+    # Preserve valid incumbent positions. DEPLOY means allocate unused capital,
+    # not reset the portfolio to zero.
+    for t,w in open_weights.items():
+        if t in scores and t not in invalid_incumbents:
+            targets[t]=float(w)
+
+    freed=sum(float(open_weights.get(t,0)) for t in invalid_incumbents)
+    assigned=sum(targets.values())
+    free_capital=round(max(0.0,100.0-assigned),1)
+
+    # Prefer strongest GREEN challenger for the still-unallocated capital.
     if best_chal is not None and best_chal_score >= qqq_score + 4.0:
-        # Concentration guardrail for initial deployment.
         sc=scores[best_chal]
         exceptional=(sc.get("structural_early_bird",0)>=95 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
         stock_cap=85.0 if exceptional else 70.0
-        targets[best_chal]=stock_cap
-        targets["QQQ"]=round(100.0-stock_cap,1)
-        rotation_decision["reason"]=f"Initial deployment: {best_chal} materially beats QQQ on capital competition score."
+
+        # Cap applies to total target weight in that stock, not just the new money.
+        room=max(0.0, stock_cap-float(targets.get(best_chal,0.0)))
+        add_stock=min(free_capital,room)
+        if add_stock>0:
+            targets[best_chal]=round(float(targets.get(best_chal,0.0))+add_stock,1)
+        residual=round(free_capital-add_stock,1)
+
+        if residual>0:
+            targets["QQQ"]=round(float(targets.get("QQQ",0.0))+residual,1)
+
+        rotation_decision["reason"]=f"Initial deployment: preserve valid incumbents and allocate unused capital toward {best_chal}; residual goes to QQQ."
     else:
         qqq_severe=(q_m1 is not None and q_m1<=-13 and q_dd is not None and q_dd<=-17)
         if qqq_severe:
-            targets["CASH_CHF"]=100.0
-            rotation_decision["reason"]="Initial deployment deferred: no qualifying stock and QQQ severe-risk regime."
+            targets["CASH_CHF"]=round(float(targets.get("CASH_CHF",0.0))+free_capital,1)
+            rotation_decision["reason"]="Initial deployment: preserve valid incumbents; unused capital remains cash because QQQ is in severe-risk regime."
         else:
-            targets["QQQ"]=100.0
-            rotation_decision["reason"]="Initial deployment defaults to QQQ: no challenger clears required edge."
+            targets["QQQ"]=round(float(targets.get("QQQ",0.0))+free_capital,1)
+            rotation_decision["reason"]="Initial deployment: preserve valid incumbents; unused capital defaults to QQQ because no challenger clears required edge."
 
 else:
     # Preserve incumbents by default.
