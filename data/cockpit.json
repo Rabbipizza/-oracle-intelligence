@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-27T23:39:41.575195+00:00",
-  "market_generated_at": "2026-09-27T23:39:26.378392+00:00",
+  "generated_at": "2026-09-27T23:46:19.132424+00:00",
+  "market_generated_at": "2026-09-27T23:46:03.751315+00:00",
   "market_source": {
     "prices": "Yahoo Finance chart EOD",
     "fx": "ECB Data Portal"
@@ -1165,11 +1165,11 @@
           "role": "Direct beneficiary / data-center cooling",
           "proof": "PROVEN",
           "signal": "GREEN",
-          "signal_reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 4.0% -> TARGET 70.0%.",
+          "signal_reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 66.0% -> TARGET 94.0%.",
           "structural_early_bird": 95.8,
           "entry_score": 78.9,
-          "actual_weight_pct": 4.0,
-          "target_weight_pct": 70.0,
+          "actual_weight_pct": 66.0,
+          "target_weight_pct": 94.0,
           "portfolio_action": "INCREASE",
           "evidence_status": "PROVEN",
           "invalidation": [
@@ -4896,11 +4896,11 @@
       "role": "Direct beneficiary / data-center cooling",
       "proof": "PROVEN",
       "signal": "GREEN",
-      "signal_reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 4.0% -> TARGET 70.0%.",
+      "signal_reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 66.0% -> TARGET 94.0%.",
       "structural_early_bird": 95.8,
       "entry_score": 78.9,
-      "actual_weight_pct": 4.0,
-      "target_weight_pct": 70.0,
+      "actual_weight_pct": 66.0,
+      "target_weight_pct": 94.0,
       "portfolio_action": "INCREASE",
       "evidence_status": "PROVEN",
       "invalidation": [
@@ -7857,13 +7857,13 @@
     }
   ],
   "target_allocation_pct": {
-    "AAON": 70.0,
-    "GEV": 6.0,
-    "QQQ": 24.0
+    "AAON": 94.0,
+    "GEV": 6.0
   },
   "actual_holdings_pct": {
-    "AAON": 4.0,
-    "GEV": 6.0
+    "AAON": 66.0,
+    "GEV": 6.0,
+    "QQQ": 24.0
   },
   "benchmark_competition": {
     "QQQ": {
@@ -7873,31 +7873,31 @@
       "max_drawdown_63d_pct": -8.05
     },
     "rotation": {
-      "mode": "DEPLOY",
+      "mode": "COMPOUND",
       "best_incumbent": "AAON",
       "best_incumbent_hold_score": 78.45,
       "best_challenger": "AAON",
       "best_challenger_score": 87.23,
-      "rotation_edge": null,
-      "reason": "Initial deployment: preserve valid incumbents and allocate unused capital toward AAON; residual goes to QQQ."
+      "rotation_edge": 8.78,
+      "reason": "Compound incumbents: challenger edge 8.8 < 12.0 rotation hurdle."
     }
   },
   "portfolio": {
     "as_of": "2026-09-25",
     "initial_capital_chf": 1000,
-    "cash_chf": 900.0,
-    "invested_cost_chf": 100.0,
-    "current_invested_value_chf": 108.35,
+    "cash_chf": 0.0,
+    "invested_cost_chf": 1000.0,
+    "current_invested_value_chf": 1008.35,
     "total_value_chf": 1008.35,
     "total_return_pct": 0.84,
     "official_comparison": {
       "mode": "matched_tranches",
-      "oracle_return_pct": 8.35,
-      "qqq_return_pct": 4.99,
-      "alpha_pct_points": 3.36,
-      "oracle_value_chf": 108.35,
-      "qqq_matched_value_chf": 104.99,
-      "capital_compared_chf": 100.0
+      "oracle_return_pct": 0.84,
+      "qqq_return_pct": 0.5,
+      "alpha_pct_points": 0.34,
+      "oracle_value_chf": 1008.35,
+      "qqq_matched_value_chf": 1004.99,
+      "capital_compared_chf": 1000.0
     },
     "positions": [
       {
@@ -7923,6 +7923,30 @@
         "pnl_chf": 2.41,
         "pnl_pct": 4.01,
         "matched_qqq_chf": 62.6
+      },
+      {
+        "ticker": "AAON",
+        "trade_date": "2026-09-25",
+        "allocated_chf": 660.0,
+        "entry_price_usd": 89.1,
+        "entry_fx_chf_per_usd": 0.828291,
+        "current_price_usd": 89.1,
+        "current_value_chf": 660.0,
+        "pnl_chf": 0.0,
+        "pnl_pct": 0.0,
+        "matched_qqq_chf": 660.0
+      },
+      {
+        "ticker": "QQQ",
+        "trade_date": "2026-09-25",
+        "allocated_chf": 240.0,
+        "entry_price_usd": 744.5,
+        "entry_fx_chf_per_usd": 0.828291,
+        "current_price_usd": 744.5,
+        "current_value_chf": 240.0,
+        "pnl_chf": -0.0,
+        "pnl_pct": -0.0,
+        "matched_qqq_chf": 240.0
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T23:39:10.211072+00:00",
+  "generated_at": "2026-09-27T23:45:46.254604+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 5540,
@@ -231,7 +231,7 @@
       ]
     },
     {
-      "term": "language mllms",
+      "term": "large language mllms",
       "recent_docs": 25,
       "baseline_docs": 0,
       "recent_corpus_docs": 3662,
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "term": "large language mllms",
+      "term": "language mllms",
       "recent_docs": 25,
       "baseline_docs": 0,
       "recent_corpus_docs": 3662,
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "term": "splatting dgs",
+      "term": "gaussian splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
       "recent_corpus_docs": 3662,
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "term": "gaussian splatting dgs",
+      "term": "splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
       "recent_corpus_docs": 3662,
@@ -1141,20 +1141,6 @@
       ]
     },
     {
-      "term": "view synthesis",
-      "recent_docs": 14,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
-      "examples": [
-        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
-        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
-        "BRAVE-6D: Benchmark for Robotic Active Vision in 6DOF Pose Estimation"
-      ]
-    },
-    {
       "term": "novel view",
       "recent_docs": 14,
       "baseline_docs": 0,
@@ -1166,6 +1152,20 @@
         "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
         "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
         "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting"
+      ]
+    },
+    {
+      "term": "view synthesis",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3662,
+      "baseline_corpus_docs": 1161,
+      "acceleration": 9.2,
+      "discovery_score": 12.2967,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
+        "BRAVE-6D: Benchmark for Robotic Active Vision in 6DOF Pose Estimation"
       ]
     },
     {
@@ -1239,20 +1239,6 @@
       ]
     },
     {
-      "term": "coding agents",
-      "recent_docs": 13,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "RAPID: Robot Agentic Programming from Demonstrations",
-        "Coding Agents for Generalized Task and Motion Planning Problems"
-      ]
-    },
-    {
       "term": "robot must",
       "recent_docs": 13,
       "baseline_docs": 0,
@@ -1264,6 +1250,20 @@
         "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
         "Watch, Recall, Act: Always-On Robots in Concurrent Embodied Streams",
         "DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills"
+      ]
+    },
+    {
+      "term": "coding agents",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3662,
+      "baseline_corpus_docs": 1161,
+      "acceleration": 8.565,
+      "discovery_score": 11.2282,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "RAPID: Robot Agentic Programming from Demonstrations",
+        "Coding Agents for Generalized Task and Motion Planning Problems"
       ]
     },
     {

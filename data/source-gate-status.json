@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T23:39:26.297627+00:00",
+  "generated_at": "2026-09-27T23:46:03.659055+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 62394,
+    "record_count": 63708,
     "primary_origin_count": 4004
   },
   "candidate_gates": [
@@ -274,7 +274,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language mllms",
+      "term": "large language mllms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -286,7 +286,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "large language mllms",
+      "term": "language mllms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -334,7 +334,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "splatting dgs",
+      "term": "gaussian splatting dgs",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -346,7 +346,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "gaussian splatting dgs",
+      "term": "splatting dgs",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1297,22 +1297,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "view synthesis",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 19,
-      "primary_origin_count": 19,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "novel view",
       "families": [
         "science"
@@ -1323,6 +1307,22 @@
       ],
       "matched_origin_count": 14,
       "primary_origin_count": 14,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "view synthesis",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 19,
+      "primary_origin_count": 19,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1411,7 +1411,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "coding agents",
+      "term": "robot must",
       "families": [
         "science"
       ],
@@ -1427,7 +1427,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "robot must",
+      "term": "coding agents",
       "families": [
         "science"
       ],
