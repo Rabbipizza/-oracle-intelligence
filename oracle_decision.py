@@ -92,6 +92,7 @@ open_weights={}
 for p in portfolio.get("positions",[]):
     if p.get("status")=="OPEN":
         open_weights[p["ticker"]]=round(100*float(p.get("allocated_chf",0))/capital,2)
+prior_targets=(prior.get("target_allocation_pct") or {})
 
 signals={}
 scores={}
@@ -214,7 +215,12 @@ for ticker,sc in scores.items():
     rel=sc.get("rel_qqq_1m_pct_points")
     entry=float(sc.get("entry_score") or 0)
     dd=sc.get("max_drawdown_63d_pct")
-    hard_risk = (dd is not None and dd <= -35) or (rel is not None and rel <= -12 and entry < 45)
+    prev_sig=((prior.get("signals",{}) or {}).get(ticker) or {}).get("signal")
+    severe_dd = (dd is not None and dd <= -35)
+    severe_relative = (rel is not None and rel <= -12 and entry < 45)
+    # Avoid one-tick cliff effects: relative-risk exclusion requires confirmation
+    # from a non-GREEN prior state; an extreme drawdown remains immediate.
+    hard_risk = severe_dd or (severe_relative and prev_sig!="GREEN")
     if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not hard_risk:
         eligible.append(ticker)
 
@@ -235,8 +241,8 @@ candidate_scores={t:scores[t]["capital_competition_score"] for t in eligible}
 candidate_scores["QQQ"]=qqq_score
 
 qqq_severe_risk = (
-    (q_m1 is not None and q_m1 <= -12) and
-    (q_dd is not None and q_dd <= -15)
+    (q_m1 is not None and q_m1 <= -13) and
+    (q_dd is not None and q_dd <= -17)
 )
 
 targets={}
@@ -263,6 +269,20 @@ else:
         exps={k:math.exp((v-best)/8.0) for k,v in active.items()}
         den=sum(exps.values()) or 1.0
         raw={k:100.0*exps[k]/den for k in active}
+
+        # Anti-churn guardrail for ORANGE incumbents:
+        # they may stay invested while nearly GREEN, but cannot be aggressively
+        # increased merely because of the +3 hysteresis bonus. Until GREEN again,
+        # target is capped at current ACTUAL + 5 percentage points.
+        for k in list(raw):
+            if k=="QQQ": continue
+            if (signals.get(k) or {}).get("signal")=="ORANGE":
+                act=float(scores[k].get("actual_weight_pct") or 0.0)
+                cap=max(act, min(25.0, act+5.0))
+                if raw[k]>cap:
+                    excess=raw[k]-cap
+                    raw[k]=cap
+                    raw["QQQ"]=raw.get("QQQ",0)+excess
 
         # Single-name concentration guardrail:
         # 70% normal; up to 85% only for exceptional proven conviction.
