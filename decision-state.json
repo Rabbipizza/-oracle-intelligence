@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-09-25",
-  "generated_at": "2026-09-27T23:46:19.064289+00:00",
+  "generated_at": "2026-09-27T23:49:22.331485+00:00",
   "method": "ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
   "rule": "Deploy capital once into the best available opportunity set, then let incumbents compound. Rotate only when a challenger has a materially stronger acceleration edge than the incumbent HOLD state, or when the incumbent thesis/risk state is invalidated. No leverage; no real orders are executed.",
   "trends": {
@@ -64,8 +64,8 @@
     },
     "AAON": {
       "signal": "GREEN",
-      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 66.0% -> TARGET 94.0%.",
-      "portfolio_action": "INCREASE"
+      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 78.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 78.5; acceleration 87.2; ACTUAL 70.0% -> TARGET 70.0%.",
+      "portfolio_action": "HOLD"
     },
     "PWR": {
       "signal": "ORANGE",
@@ -544,8 +544,8 @@
     },
     "QQQ": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 49.5; acceleration 53.8; ACTUAL 24.0% -> TARGET 0.0%.",
-      "portfolio_action": "EXIT_OR_REDUCE"
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 49.5; acceleration 53.8; ACTUAL 24.0% -> TARGET 24.0%.",
+      "portfolio_action": "HOLD"
     }
   },
   "scores": {
@@ -625,11 +625,11 @@
       "rel_qqq_1m_pct_points": 7.02,
       "volatility_21d_ann_pct": 44.98,
       "max_drawdown_63d_pct": -34.35,
-      "actual_weight_pct": 66.0,
+      "actual_weight_pct": 70.0,
       "allocation_score": 88.2,
       "hold_score": 78.45,
-      "target_weight_pct": 94.0,
-      "portfolio_action": "INCREASE",
+      "target_weight_pct": 70.0,
+      "portfolio_action": "HOLD",
       "invalidation": [
         "material BASX backlog deterioration",
         "confirmed slowdown in data-center orders",
@@ -2552,18 +2552,19 @@
       "actual_weight_pct": 24.0,
       "allocation_score": 50.4,
       "hold_score": 49.54,
-      "target_weight_pct": 0.0,
-      "portfolio_action": "EXIT_OR_REDUCE",
+      "target_weight_pct": 24.0,
+      "portfolio_action": "HOLD",
       "invalidation": [],
       "capital_competition_score": 53.75
     }
   },
   "target_allocation_pct": {
-    "AAON": 94.0,
-    "GEV": 6.0
+    "AAON": 70.0,
+    "GEV": 6.0,
+    "QQQ": 24.0
   },
   "actual_holdings_pct": {
-    "AAON": 66.0,
+    "AAON": 70.0,
     "GEV": 6.0,
     "QQQ": 24.0
   },
@@ -2575,13 +2576,13 @@
       "max_drawdown_63d_pct": -8.05
     },
     "rotation": {
-      "mode": "COMPOUND",
+      "mode": "DEFENSIVE_REALLOCATE",
       "best_incumbent": "AAON",
       "best_incumbent_hold_score": 78.45,
-      "best_challenger": "AAON",
-      "best_challenger_score": 87.23,
-      "rotation_edge": 8.78,
-      "reason": "Compound incumbents: challenger edge 8.8 < 12.0 rotation hurdle."
+      "best_challenger": null,
+      "best_challenger_score": null,
+      "rotation_edge": null,
+      "reason": "Invalid incumbent capital reallocated defensively."
     }
   }
 }
