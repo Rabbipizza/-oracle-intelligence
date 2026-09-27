@@ -164,15 +164,24 @@ for ticker,meta in universe.items():
         "max_drawdown_63d_pct":None if dd63 is None else round(dd63,2),
         "actual_weight_pct":actual_weight,
         "allocation_score":round(0.55*structural+0.45*entry,2),
+        "hold_score":round(clamp(
+            0.55*structural +
+            0.25*entry +
+            0.20*clamp(50 + (rel or 0)*2,0,100) -
+            (0 if dd63 is None else max(0.0,abs(min(0.0,dd63))-15.0)*0.35),
+            0,100
+        ),2),
         "target_weight_pct":target,
         "portfolio_action":portfolio_action,
         "invalidation":ev.get("invalidation",[]) if ev else []
     }
 
-# ORACLE V3 — Capital Competition Engine.
-# Capital competes between eligible stocks, QQQ and cash.
-# The allocator rewards economic proof + entry quality + QQQ-relative strength,
-# penalizes volatility and drawdown, and gives incumbents a small hysteresis bonus.
+# ORACLE V4 — Deploy → Compound → Rotate.
+# Principle:
+# 1) deploy capital into the best available opportunity set,
+# 2) once invested, let positions compound,
+# 3) rotate only when a challenger has a materially stronger acceleration edge,
+#    or when the incumbent thesis/risk state is invalidated.
 q_m1=metric(q,21)
 q_vol=realized_vol(q,21)
 q_dd=max_drawdown(q,63)
@@ -183,11 +192,8 @@ def competition_score(sc, incumbent=False):
     rel=float(sc.get("rel_qqq_1m_pct_points") or 0)
     vol=sc.get("volatility_21d_ann_pct")
     dd=sc.get("max_drawdown_63d_pct")
-    # Conviction core: proof/structure + current entry quality.
     base=.50*structural + .50*entry
-    # Relative edge: reward outperformance, penalize sustained underperformance.
     relative=clamp(rel*1.5,-15,15)
-    # Risk penalty: only excess risk above a moderate equity baseline is punished.
     vol_penalty=0 if vol is None else max(0.0,vol-30.0)*0.18
     dd_penalty=0 if dd is None else max(0.0,abs(min(0.0,dd))-10.0)*0.45
     hysteresis=3.0 if incumbent else 0.0
@@ -196,8 +202,6 @@ def competition_score(sc, incumbent=False):
 for ticker,sc in scores.items():
     sc["capital_competition_score"]=competition_score(sc, float(sc.get("actual_weight_pct") or 0)>0)
 
-# QQQ baseline score: liquid diversified default deployment vehicle.
-# It gets no structural alpha premium, but avoids single-name concentration penalty.
 qqq_score=60.0
 if q_m1 is not None:
     qqq_score += clamp(q_m1*.8,-8,8)
@@ -207,108 +211,146 @@ if q_dd is not None:
     qqq_score -= max(0.0,abs(min(0.0,q_dd))-10.0)*0.30
 qqq_score=round(clamp(qqq_score),2)
 
-# Hard safety gate: a stock cannot compete if evidence is not PROVEN,
-# drawdown is extreme, or relative weakness + weak Entry signals deterioration.
-eligible=[]
+# Build eligible challenger set.
+challengers=[]
 for ticker,sc in scores.items():
     sig=(signals.get(ticker) or {}).get("signal")
     rel=sc.get("rel_qqq_1m_pct_points")
     entry=float(sc.get("entry_score") or 0)
     dd=sc.get("max_drawdown_63d_pct")
     prev_sig=((prior.get("signals",{}) or {}).get(ticker) or {}).get("signal")
-    severe_dd = (dd is not None and dd <= -35)
-    severe_relative = (rel is not None and rel <= -12 and entry < 45)
-    # Avoid one-tick cliff effects: relative-risk exclusion requires confirmation
-    # from a non-GREEN prior state; an extreme drawdown remains immediate.
-    hard_risk = severe_dd or (severe_relative and prev_sig!="GREEN")
-    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not hard_risk:
-        eligible.append(ticker)
+    severe_dd=(dd is not None and dd <= -35)
+    severe_relative=(rel is not None and rel <= -12 and entry < 45 and prev_sig!="GREEN")
+    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not (severe_dd or severe_relative):
+        challengers.append(ticker)
 
-# Near-GREEN incumbents may remain in the competition, but only with proven evidence,
-# Entry >=55, and no material relative weakness. This is the hysteresis / anti-churn rule.
-for ticker,sc in scores.items():
-    if ticker in eligible: continue
-    act=float(sc.get("actual_weight_pct") or 0)
-    if act<=0 or sc.get("evidence_status")!="PROVEN": continue
-    entry=float(sc.get("entry_score") or 0)
-    rel=sc.get("rel_qqq_1m_pct_points")
-    if entry>=55 and (rel is None or rel>=-5):
-        eligible.append(ticker)
+# Incumbent positions are sticky: being ORANGE does not imply exit.
+incumbents=[t for t,w in open_weights.items() if w>0 and t in scores]
 
-# Candidate set always includes QQQ. Cash is a defensive reserve only if the whole
-# opportunity set is weak or QQQ itself enters a severe risk regime.
-candidate_scores={t:scores[t]["capital_competition_score"] for t in eligible}
-candidate_scores["QQQ"]=qqq_score
+# Determine best incumbent hold state and best challenger acceleration state.
+best_inc=None
+best_inc_hold=-1e9
+for t in incumbents:
+    sc=scores[t]
+    if sc.get("evidence_status")!="PROVEN":
+        continue
+    hs=float(sc.get("hold_score") or 0)
+    if hs>best_inc_hold:
+        best_inc_hold=hs; best_inc=t
 
-qqq_severe_risk = (
-    (q_m1 is not None and q_m1 <= -13) and
-    (q_dd is not None and q_dd <= -17)
-)
+best_chal=None
+best_chal_score=-1e9
+for t in challengers:
+    cs=float(scores[t].get("capital_competition_score") or 0)
+    if cs>best_chal_score:
+        best_chal_score=cs; best_chal=t
 
 targets={}
-cash_target=0.0
+rotation_decision={
+    "mode":"COMPOUND",
+    "best_incumbent":best_inc,
+    "best_incumbent_hold_score":None if best_inc is None else round(best_inc_hold,2),
+    "best_challenger":best_chal,
+    "best_challenger_score":None if best_chal is None else round(best_chal_score,2),
+    "rotation_edge":None,
+    "reason":""
+}
 
-if not candidate_scores:
-    cash_target=100.0
+# Detect hard invalidations on incumbents.
+invalid_incumbents=[]
+for t in incumbents:
+    sc=scores[t]
+    rel=sc.get("rel_qqq_1m_pct_points")
+    entry=float(sc.get("entry_score") or 0)
+    dd=sc.get("max_drawdown_63d_pct")
+    evidence_broken=sc.get("evidence_status")!="PROVEN"
+    risk_broken=(dd is not None and dd<=-35) or (rel is not None and rel<=-15 and entry<40)
+    if evidence_broken or risk_broken:
+        invalid_incumbents.append(t)
+
+# If capital is not yet substantially deployed, allocate fresh capital.
+invested_pct=sum(open_weights.values())
+initial_deployment = invested_pct < 50.0
+
+if initial_deployment:
+    rotation_decision["mode"]="DEPLOY"
+    # Prefer strongest GREEN challenger. If none clearly beats QQQ, use QQQ.
+    if best_chal is not None and best_chal_score >= qqq_score + 4.0:
+        # Concentration guardrail for initial deployment.
+        sc=scores[best_chal]
+        exceptional=(sc.get("structural_early_bird",0)>=95 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
+        stock_cap=85.0 if exceptional else 70.0
+        targets[best_chal]=stock_cap
+        targets["QQQ"]=round(100.0-stock_cap,1)
+        rotation_decision["reason"]=f"Initial deployment: {best_chal} materially beats QQQ on capital competition score."
+    else:
+        qqq_severe=(q_m1 is not None and q_m1<=-13 and q_dd is not None and q_dd<=-17)
+        if qqq_severe:
+            targets["CASH_CHF"]=100.0
+            rotation_decision["reason"]="Initial deployment deferred: no qualifying stock and QQQ severe-risk regime."
+        else:
+            targets["QQQ"]=100.0
+            rotation_decision["reason"]="Initial deployment defaults to QQQ: no challenger clears required edge."
+
 else:
-    # Keep only candidates close enough to the best score to deserve capital.
-    best=max(candidate_scores.values())
-    active={k:v for k,v in candidate_scores.items() if v >= best-8.0}
+    # Preserve incumbents by default.
+    for t,w in open_weights.items():
+        if t in scores and t not in invalid_incumbents:
+            targets[t]=float(w)
 
-    # If no stock beats QQQ by at least 4 score points, QQQ becomes the default allocation.
-    stock_best=max([v for k,v in active.items() if k!="QQQ"], default=-1e9)
-    if stock_best < qqq_score + 4.0:
-        active={"QQQ":qqq_score}
+    # Exit invalid incumbents first.
+    freed=sum(float(open_weights.get(t,0)) for t in invalid_incumbents)
 
-    if qqq_severe_risk and set(active)=={"QQQ"}:
-        cash_target=100.0
-        active={}
+    # Rotation requires a challenger to beat incumbent HOLD by a material margin.
+    # 12 points = deliberate switching threshold to avoid churn.
+    rotation_threshold=12.0
+    if best_chal is not None and best_inc is not None:
+        rotation_edge=best_chal_score-best_inc_hold
+        rotation_decision["rotation_edge"]=round(rotation_edge,2)
+        if rotation_edge >= rotation_threshold:
+            rotation_decision["mode"]="ROTATE"
+            # Rotate only part of the incumbent first; preserve compounding if edge is modest.
+            rotate_pct=min(25.0, max(10.0, round((rotation_edge-rotation_threshold)*2.0+10.0,1)))
+            available=sum(targets.values())+freed
+            rotate_pct=min(rotate_pct,available)
+            # Reduce weakest incumbent holdings first.
+            ordered=sorted([t for t in incumbents if t in targets], key=lambda t:scores[t].get("hold_score") or 0)
+            remaining=rotate_pct
+            for t in ordered:
+                cut=min(targets[t],remaining)
+                targets[t]=round(targets[t]-cut,1)
+                remaining=round(remaining-cut,1)
+                if remaining<=0: break
+            targets[best_chal]=round(targets.get(best_chal,0)+rotate_pct,1)
+            rotation_decision["reason"]=f"Rotate {rotate_pct:.1f}% toward {best_chal}: acceleration edge exceeds {rotation_threshold:.1f}-point hurdle."
+        else:
+            rotation_decision["reason"]=f"Compound incumbents: challenger edge {rotation_edge:.1f} < {rotation_threshold:.1f} rotation hurdle."
+    elif best_chal is not None and best_inc is None:
+        targets[best_chal]=round(targets.get(best_chal,0)+freed,1)
+        rotation_decision["mode"]="ROTATE"
+        rotation_decision["reason"]="No valid incumbent remains; redeploy freed capital to strongest qualifying challenger."
+    elif freed>0:
+        qqq_severe=(q_m1 is not None and q_m1<=-13 and q_dd is not None and q_dd<=-17)
+        targets["CASH_CHF" if qqq_severe else "QQQ"]=round(freed,1)
+        rotation_decision["mode"]="DEFENSIVE_REALLOCATE"
+        rotation_decision["reason"]="Invalid incumbent capital reallocated defensively."
 
-    if active:
-        # Softmax-style allocation by score; avoids binary all-in switches.
-        exps={k:math.exp((v-best)/8.0) for k,v in active.items()}
-        den=sum(exps.values()) or 1.0
-        raw={k:100.0*exps[k]/den for k in active}
+    # Unallocated capital should not sit idle by accident.
+    assigned=sum(targets.values())
+    residual=round(max(0.0,100.0-assigned),1)
+    if residual>0:
+        if best_chal is not None and best_chal_score>=qqq_score+4.0:
+            targets[best_chal]=round(targets.get(best_chal,0)+residual,1)
+        else:
+            targets["QQQ"]=round(targets.get("QQQ",0)+residual,1)
 
-        # Anti-churn guardrail for ORANGE incumbents:
-        # they may stay invested while nearly GREEN, but cannot be aggressively
-        # increased merely because of the +3 hysteresis bonus. Until GREEN again,
-        # target is capped at current ACTUAL + 5 percentage points.
-        for k in list(raw):
-            if k=="QQQ": continue
-            if (signals.get(k) or {}).get("signal")=="ORANGE":
-                act=float(scores[k].get("actual_weight_pct") or 0.0)
-                cap=max(act, min(25.0, act+5.0))
-                if raw[k]>cap:
-                    excess=raw[k]-cap
-                    raw[k]=cap
-                    raw["QQQ"]=raw.get("QQQ",0)+excess
+# Normalize tiny rounding drift.
+tot=sum(targets.values())
+if targets and abs(tot-100.0)>0.05:
+    k=max(targets,key=targets.get)
+    targets[k]=round(targets[k]+(100.0-tot),1)
 
-        # Single-name concentration guardrail:
-        # 70% normal; up to 85% only for exceptional proven conviction.
-        stock_keys=[k for k in raw if k!="QQQ"]
-        for k in stock_keys:
-            sc=scores[k]
-            exceptional=(sc.get("structural_early_bird",0)>=95 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
-            cap=85.0 if exceptional else 70.0
-            if raw[k]>cap:
-                excess=raw[k]-cap
-                raw[k]=cap
-                raw["QQQ"]=raw.get("QQQ",0)+excess
-
-        # Round while preserving 100%.
-        items=sorted(raw.items(),key=lambda kv:kv[1],reverse=True)
-        running=0.0
-        for i,(k,v) in enumerate(items):
-            w=round(100.0-running,1) if i==len(items)-1 else round(v,1)
-            running+=w
-            targets[k]=w
-
-if cash_target>0:
-    targets["CASH_CHF"]=round(cash_target,1)
-
-# Final portfolio actions derive from global TARGET vs ledger ACTUAL.
-# QQQ/CASH may appear in TARGET even when not currently held.
+# Final portfolio actions.
 for ticker,sc in scores.items():
     tgt=float(targets.get(ticker,0.0))
     act=float(sc.get("actual_weight_pct") or 0.0)
@@ -324,7 +366,7 @@ for ticker,sc in scores.items():
     sc["portfolio_action"]=action
     if ticker in signals:
         signals[ticker]["portfolio_action"]=action
-        signals[ticker]["reason"] += f" Capital Competition: score {sc.get('capital_competition_score'):.1f}; ACTUAL {act:.1f}% -> TARGET {tgt:.1f}%."
+        signals[ticker]["reason"] += f" Deploy→Compound→Rotate: HOLD {sc.get('hold_score'):.1f}; acceleration {sc.get('capital_competition_score'):.1f}; ACTUAL {act:.1f}% -> TARGET {tgt:.1f}%."
 
 benchmark_competition={
     "QQQ":{
@@ -333,7 +375,7 @@ benchmark_competition={
         "volatility_21d_ann_pct":None if q_vol is None else round(q_vol,2),
         "max_drawdown_63d_pct":None if q_dd is None else round(q_dd,2)
     },
-    "cash_target_pct":round(cash_target,1)
+    "rotation":rotation_decision
 }
 
 # Preserve the structural trend ranking, but stamp the state as freshly recalculated.
@@ -356,8 +398,8 @@ out={
     "version":2,
     "as_of":as_of,
     "generated_at":datetime.now(timezone.utc).isoformat(),
-    "method":"ORACLE_V3_CAPITAL_COMPETITION_ENGINE",
-    "rule":"Capital competes among eligible PROVEN stocks, QQQ and cash. Allocation uses conviction, QQQ-relative strength, volatility, drawdown and incumbent hysteresis. Stocks must beat QQQ sufficiently to earn capital. No leverage; no real orders are executed.",
+    "method":"ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
+    "rule":"Deploy capital once into the best available opportunity set, then let incumbents compound. Rotate only when a challenger has a materially stronger acceleration edge than the incumbent HOLD state, or when the incumbent thesis/risk state is invalidated. No leverage; no real orders are executed.",
     "trends":trend_out,
     "signals":signals,
     "scores":scores,
