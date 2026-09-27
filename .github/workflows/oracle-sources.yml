@@ -65,5 +65,15 @@ jobs:
           git config user.email "oracle-bot@users.noreply.github.com"
           git add decision-state.json economic-evidence.json data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/market.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
           git diff --cached --quiet || git commit -m "ORACLE: verified autonomous snapshot"
-          git pull --rebase origin main
+          git fetch origin main
+          if ! git rebase origin/main; then
+            # Only generated state files are committed in this step. If a concurrent
+            # snapshot touched the same generated files, keep this run's freshly
+            # validated versions while preserving upstream source-code changes.
+            for f in $(git diff --name-only --diff-filter=U); do
+              git checkout --theirs -- "$f"
+              git add "$f"
+            done
+            GIT_EDITOR=true git rebase --continue
+          fi
           git push
