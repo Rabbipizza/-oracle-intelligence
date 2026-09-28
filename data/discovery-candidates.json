@@ -1,47 +1,19 @@
 {
-  "generated_at": "2026-09-27T23:51:11.167774+00:00",
+  "generated_at": "2026-09-28T13:44:36.696142+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
-  "unique_papers": 5540,
-  "recent_docs": 3662,
-  "baseline_docs": 1161,
+  "unique_papers": 5736,
+  "recent_docs": 3819,
+  "baseline_docs": 1192,
   "candidates": [
-    {
-      "term": "vision-language vlms",
-      "recent_docs": 63,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 40.288,
-      "discovery_score": 64.1796,
-      "examples": [
-        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
-        "Cross-Modal Attention Acts as a Frequency Filter: Why Verbose Prompts Improve Robustness in Vision-Language Models",
-        "World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal"
-      ]
-    },
-    {
-      "term": "vision-language-action vla",
-      "recent_docs": 91,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.61,
-      "discovery_score": 57.1306,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
-      ]
-    },
     {
       "term": "gaussian splatting",
       "recent_docs": 53,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 33.943,
-      "discovery_score": 53.9293,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 33.416,
+      "discovery_score": 52.5834,
       "examples": [
         "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
         "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
@@ -52,10 +24,10 @@
       "term": "object detection",
       "recent_docs": 51,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 32.674,
-      "discovery_score": 51.856,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 32.167,
+      "discovery_score": 50.5599,
       "examples": [
         "A real-time object detection framework for multi-stream offshore platform videos based on an event-driven dual-loop mechanism",
         "Semantic SLAM in Precision Agriculture using Bayesian Inference",
@@ -63,27 +35,55 @@
       ]
     },
     {
-      "term": "visual observations",
-      "recent_docs": 47,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 30.137,
-      "discovery_score": 47.6858,
+      "term": "vision-language-action vla",
+      "recent_docs": 89,
+      "baseline_docs": 4,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.211,
+      "discovery_score": 42.9167,
       "examples": [
-        "Navi-Agent: Unlocalized Monocular Navigation Agent",
-        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
-        "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video"
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
+      ]
+    },
+    {
+      "term": "vision-language vlms",
+      "recent_docs": 61,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.683,
+      "discovery_score": 35.65,
+      "examples": [
+        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+        "Cross-Modal Attention Acts as a Frequency Filter: Why Verbose Prompts Improve Robustness in Vision-Language Models",
+        "World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal"
+      ]
+    },
+    {
+      "term": "point cloud",
+      "recent_docs": 36,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 22.798,
+      "discovery_score": 35.1398,
+      "examples": [
+        "UCON: Uncertainty-aware Navigation with Historical Re-association in Dynamic Environments",
+        "Leveraging Vision-Based Point Cloud Map Priors for Camera-Based 3D Object Detection and Online Vectorized HD Mapping",
+        "ArborSplat: Online Semantic Gaussian Splatting SLAM for Orchards"
       ]
     },
     {
       "term": "large language",
-      "recent_docs": 92,
-      "baseline_docs": 6,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.514,
-      "discovery_score": 38.7888,
+      "recent_docs": 89,
+      "baseline_docs": 9,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 2.942,
+      "discovery_score": 29.7981,
       "examples": [
         "A Simulation Platform for AUV Fault Recovery: Exploring LLM-Based Diagnostic Strategies",
         "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform",
@@ -92,12 +92,12 @@
     },
     {
       "term": "autonomous driving",
-      "recent_docs": 51,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.891,
-      "discovery_score": 36.5072,
+      "recent_docs": 50,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.309,
+      "discovery_score": 28.2975,
       "examples": [
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
@@ -105,69 +105,13 @@
       ]
     },
     {
-      "term": "point cloud",
-      "recent_docs": 36,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 23.158,
-      "discovery_score": 36.0549,
-      "examples": [
-        "UCON: Uncertainty-aware Navigation with Historical Re-association in Dynamic Environments",
-        "Leveraging Vision-Based Point Cloud Map Priors for Camera-Based 3D Object Detection and Online Vectorized HD Mapping",
-        "ArborSplat: Online Semantic Gaussian Splatting SLAM for Orchards"
-      ]
-    },
-    {
-      "term": "multimodal large",
-      "recent_docs": 34,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 21.889,
-      "discovery_score": 33.9153,
-      "examples": [
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
-        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
-      ]
-    },
-    {
-      "term": "multimodal large language",
-      "recent_docs": 33,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 21.254,
-      "discovery_score": 32.8428,
-      "examples": [
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
-        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
-      ]
-    },
-    {
-      "term": "point clouds",
-      "recent_docs": 46,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 32.5136,
-      "examples": [
-        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
-        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
-        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna"
-      ]
-    },
-    {
       "term": "inference latency",
       "recent_docs": 29,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 18.716,
-      "discovery_score": 28.5364,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 18.426,
+      "discovery_score": 27.8046,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "Continuous Online Fault Detection for Mobile Robots via Adaptive Edge Models",
@@ -178,10 +122,10 @@
       "term": "semantic segmentation",
       "recent_docs": 29,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 18.716,
-      "discovery_score": 28.5364,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 18.426,
+      "discovery_score": 27.8046,
       "examples": [
         "Privacy-Preserving Semantic Segmentation from High-Resolution Depth and Ultra-Low-Resolution RGB",
         "Which Terrain Is Better? Preference Learning with VLM Prototypes for Off-Road Traversability Ranking",
@@ -192,10 +136,10 @@
       "term": "sim-to-real transfer",
       "recent_docs": 27,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 17.447,
-      "discovery_score": 26.3744,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 17.177,
+      "discovery_score": 25.6955,
       "examples": [
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
         "Visual Sim-to-Real Learning for Robotic Insertion under Geometric Variations: Application to Rebar Installation",
@@ -206,10 +150,10 @@
       "term": "visual evidence",
       "recent_docs": 27,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 17.447,
-      "discovery_score": 26.3744,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 17.177,
+      "discovery_score": 25.6955,
       "examples": [
         "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
         "LIBERO-VPro: Benchmarking Closed-Loop Visual Robustness of Robotic Foundation Models",
@@ -217,55 +161,27 @@
       ]
     },
     {
-      "term": "diffusion policy",
-      "recent_docs": 25,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 16.179,
-      "discovery_score": 24.2076,
+      "term": "point clouds",
+      "recent_docs": 45,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.684,
+      "discovery_score": 24.9668,
       "examples": [
-        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
-        "KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization",
-        "From Instrument-Mounted Demonstrations to In-Vivo Execution: Learning Bimanual Laparoscopic Appendectomy Without Robot-Collected Demonstrations"
-      ]
-    },
-    {
-      "term": "large language mllms",
-      "recent_docs": 25,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 16.179,
-      "discovery_score": 24.2076,
-      "examples": [
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
-        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
-      ]
-    },
-    {
-      "term": "language mllms",
-      "recent_docs": 25,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 16.179,
-      "discovery_score": 24.2076,
-      "examples": [
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
-        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
-        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
+        "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
+        "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna"
       ]
     },
     {
       "term": "computer vision",
       "recent_docs": 25,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 16.179,
-      "discovery_score": 24.2076,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 15.927,
+      "discovery_score": 23.5821,
       "examples": [
         "Generalizing Manipulation Skills with a Local Coding Agent",
         "Zephyron: Integrated Design and Analytical Evaluation of a Solar-Assisted Mobile Manipulator for Multimodal Environmental Reconnaissance and Distributed Visual Inference",
@@ -276,10 +192,10 @@
       "term": "motion planning",
       "recent_docs": 35,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 7.508,
-      "discovery_score": 23.7189,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.391,
+      "discovery_score": 23.0767,
       "examples": [
         "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
         "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
@@ -290,10 +206,10 @@
       "term": "gaussian splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 15.544,
-      "discovery_score": 23.1229,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 15.303,
+      "discovery_score": 22.5241,
       "examples": [
         "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
         "\u03c6-RIE: From Photorealistic Reconstruction to Interactive Environments",
@@ -304,10 +220,10 @@
       "term": "splatting dgs",
       "recent_docs": 24,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 15.544,
-      "discovery_score": 23.1229,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 15.303,
+      "discovery_score": 22.5241,
       "examples": [
         "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
         "\u03c6-RIE: From Photorealistic Reconstruction to Interactive Environments",
@@ -318,10 +234,10 @@
       "term": "vision-language vlm",
       "recent_docs": 24,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 15.544,
-      "discovery_score": 23.1229,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 15.303,
+      "discovery_score": 22.5241,
       "examples": [
         "Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs",
         "OCC4M: Object-Centric 4D Memory for Spatiotemporal Reasoning in Long-Horizon Manipulation",
@@ -332,10 +248,10 @@
       "term": "video generation",
       "recent_docs": 33,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 7.085,
-      "discovery_score": 22.1241,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.975,
+      "discovery_score": 21.5226,
       "examples": [
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
         "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
@@ -343,27 +259,27 @@
       ]
     },
     {
-      "term": "will released",
+      "term": "multimodal large",
       "recent_docs": 33,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 7.085,
-      "discovery_score": 22.1241,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.975,
+      "discovery_score": 21.5226,
       "examples": [
-        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
-        "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding",
-        "A Deployment Study of Identity-Gated Drone Gesture Control"
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
+        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
       ]
     },
     {
       "term": "strongest baseline",
       "recent_docs": 23,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 14.91,
-      "discovery_score": 22.0376,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 14.678,
+      "discovery_score": 21.4656,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "SlackDrive: Reclaiming Runtime Slack for Adaptive Driving Inference",
@@ -371,27 +287,41 @@
       ]
     },
     {
-      "term": "physical interaction",
-      "recent_docs": 23,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 14.91,
-      "discovery_score": 22.0376,
+      "term": "multimodal large language",
+      "recent_docs": 32,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.767,
+      "discovery_score": 20.7469,
       "examples": [
-        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
-        "PolyUMI: Accessible Visual-Tactile-Audio Data Collection for Object Inference and Manipulation",
-        "DA-GRD: Decision-Aware Grasp-Relevant Disambiguation for tactile recovery under perception-to-execution mismatches"
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
+        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
+      ]
+    },
+    {
+      "term": "visual observations",
+      "recent_docs": 44,
+      "baseline_docs": 3,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.971,
+      "discovery_score": 20.7196,
+      "examples": [
+        "Navi-Agent: Unlocalized Monocular Navigation Agent",
+        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
+        "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video"
       ]
     },
     {
       "term": "during execution",
       "recent_docs": 22,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 14.275,
-      "discovery_score": 20.9518,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 14.054,
+      "discovery_score": 20.4066,
       "examples": [
         "Body-Grounded Replanning for Physically Adaptive Manipulation",
         "Streaming-WAM: Action-Conditioned World-Action Model for Asynchronous Robot Manipulation",
@@ -399,55 +329,13 @@
       ]
     },
     {
-      "term": "robot actions",
-      "recent_docs": 21,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 13.641,
-      "discovery_score": 19.8658,
-      "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
-        "PolyUMI: Accessible Visual-Tactile-Audio Data Collection for Object Inference and Manipulation"
-      ]
-    },
-    {
-      "term": "visual features",
-      "recent_docs": 21,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 13.641,
-      "discovery_score": 19.8658,
-      "examples": [
-        "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
-        "Streaming-WAM: Action-Conditioned World-Action Model for Asynchronous Robot Manipulation",
-        "From LiDAR Maps to Visual Localization: Unified Visual Association for Robust Point-Line-Plane Pose Estimation"
-      ]
-    },
-    {
-      "term": "visual quality",
-      "recent_docs": 21,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 13.641,
-      "discovery_score": 19.8658,
-      "examples": [
-        "TriWorldBench: A Tri-View Consistency Perspective on Embodied World Models",
-        "Beyond Visual Quality: A Study of Test-Time Planning with World Action Models",
-        "QMSR: Query-Conditioned Mask-wise Expert Routing for Robust Open-Vocabulary Underwater Object Retrieval"
-      ]
-    },
-    {
       "term": "image classification",
-      "recent_docs": 21,
+      "recent_docs": 22,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 13.641,
-      "discovery_score": 19.8658,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 14.054,
+      "discovery_score": 20.4066,
       "examples": [
         "Token Clustering and Semantic Sequence Mamba for Hyperspectral Image Classification",
         "ODPure: Backdoor Purification for Object Detection via Ensemble Corruption Consensus",
@@ -455,27 +343,41 @@
       ]
     },
     {
-      "term": "action generation",
-      "recent_docs": 30,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 6.45,
-      "discovery_score": 19.7387,
+      "term": "robot actions",
+      "recent_docs": 21,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 13.429,
+      "discovery_score": 19.3476,
       "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
-        "Rolling-WAM: World Action Models with Rolling Imagination"
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+        "PolyUMI: Accessible Visual-Tactile-Audio Data Collection for Object Inference and Manipulation"
+      ]
+    },
+    {
+      "term": "visual quality",
+      "recent_docs": 21,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 13.429,
+      "discovery_score": 19.3476,
+      "examples": [
+        "TriWorldBench: A Tri-View Consistency Perspective on Embodied World Models",
+        "Beyond Visual Quality: A Study of Test-Time Planning with World Action Models",
+        "QMSR: Query-Conditioned Mask-wise Expert Routing for Robust Open-Vocabulary Underwater Object Retrieval"
       ]
     },
     {
       "term": "robot control",
       "recent_docs": 29,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 6.239,
-      "discovery_score": 18.946,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 6.142,
+      "discovery_score": 18.4263,
       "examples": [
         "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
@@ -486,10 +388,10 @@
       "term": "visual grounding",
       "recent_docs": 20,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 13.006,
-      "discovery_score": 18.7801,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 12.804,
+      "discovery_score": 18.2889,
       "examples": [
         "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
         "X2Real: an eXtensive simulation benchmark for real-world generalist policies",
@@ -497,27 +399,13 @@
       ]
     },
     {
-      "term": "vla policies",
-      "recent_docs": 28,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 6.027,
-      "discovery_score": 18.1548,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "ActGaze: Learning Action-Grounded Gaze through Counterfactual Visual Interventions for High-Precision Manipulation",
-        "Uncertainty-Gated Exploration Noise Suppresses Task Collapse in Online RL Fine-Tuning of a Flow-Matching Vision-Language-Action Policy"
-      ]
-    },
-    {
       "term": "bridge gap",
       "recent_docs": 28,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 6.027,
-      "discovery_score": 18.1548,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.934,
+      "discovery_score": 17.6556,
       "examples": [
         "A Langmuir-Like Adsorption Model for MoS2 Gas Sensors: Bridging Theory and Experiment",
         "From Passive Execution to Active Exploration: Agentic Embodied Manipulation in Realistic Environments",
@@ -525,97 +413,13 @@
       ]
     },
     {
-      "term": "supervised fine-tuning",
-      "recent_docs": 19,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 12.372,
-      "discovery_score": 17.6949,
-      "examples": [
-        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
-        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
-        "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention"
-      ]
-    },
-    {
-      "term": "action chunks",
-      "recent_docs": 19,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 12.372,
-      "discovery_score": 17.6949,
-      "examples": [
-        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
-        "Behavior-Aligned Action Tokenization for Robot Policy Learning"
-      ]
-    },
-    {
-      "term": "further improves",
-      "recent_docs": 19,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 12.372,
-      "discovery_score": 17.6949,
-      "examples": [
-        "Robo-Harness K1: Harnessing Robot-Use Agents via Perception Augmentation",
-        "Frozen Flows Forget: Diagnosing and Restoring Lost Motion in a Latent-flow World Model",
-        "MatchFusion: Explicit-Implicit Instance Matching for Spatio-Temporal Multimodal Autonomous Driving"
-      ]
-    },
-    {
-      "term": "robot policies",
-      "recent_docs": 32,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.124,
-      "discovery_score": 16.8882,
-      "examples": [
-        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
-        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
-        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies"
-      ]
-    },
-    {
-      "term": "robot demonstrations",
-      "recent_docs": 18,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.737,
-      "discovery_score": 16.6107,
-      "examples": [
-        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
-        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies",
-        "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy"
-      ]
-    },
-    {
-      "term": "best knowledge",
-      "recent_docs": 18,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.737,
-      "discovery_score": 16.6107,
-      "examples": [
-        "RawSLAM: Online HDR Gaussian SLAM from Linear Radiance",
-        "TrackEverything: Long Horizon Dense Tracking via De-Duplicating 3D Scene Representations",
-        "CDKF-Track: Cluster-aware Data-Driven Kalman Filtering for Cooperative 3D Multi-Object Tracking"
-      ]
-    },
-    {
       "term": "vision transformers",
-      "recent_docs": 18,
+      "recent_docs": 19,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.737,
-      "discovery_score": 16.6107,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 12.18,
+      "discovery_score": 17.2307,
       "examples": [
         "A Smaller Transformer in Your Transformer",
         "Lightweight Vision Transformer-Based U-Net for Brain Tumor Segmentation from MRI",
@@ -623,13 +427,55 @@
       ]
     },
     {
+      "term": "further improves",
+      "recent_docs": 19,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 12.18,
+      "discovery_score": 17.2307,
+      "examples": [
+        "Robo-Harness K1: Harnessing Robot-Use Agents via Perception Augmentation",
+        "Frozen Flows Forget: Diagnosing and Restoring Lost Motion in a Latent-flow World Model",
+        "MatchFusion: Explicit-Implicit Instance Matching for Spatio-Temporal Multimodal Autonomous Driving"
+      ]
+    },
+    {
+      "term": "will released",
+      "recent_docs": 32,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.06,
+      "discovery_score": 16.4102,
+      "examples": [
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding",
+        "A Deployment Study of Identity-Gated Drone Gesture Control"
+      ]
+    },
+    {
+      "term": "robot demonstrations",
+      "recent_docs": 18,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 11.555,
+      "discovery_score": 16.1737,
+      "examples": [
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies",
+        "Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy"
+      ]
+    },
+    {
       "term": "reconstruction quality",
       "recent_docs": 18,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.737,
-      "discovery_score": 16.6107,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 11.555,
+      "discovery_score": 16.1737,
       "examples": [
         "OpenFlyScan: A Quality-Guided Aerial Reconstruction System for Consumer Drones",
         "2D GauSS-MI: Efficient Active Scene Reconstruction with Balanced Visual and Geometric Quality",
@@ -640,10 +486,10 @@
       "term": "forward pass",
       "recent_docs": 18,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.737,
-      "discovery_score": 16.6107,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 11.555,
+      "discovery_score": 16.1737,
       "examples": [
         "Decoupling Vision, Language, and Action for Efficient Multi-Task Robot Policies",
         "OmniRisk: Omnidirectional Trajectory-Risk Learning for Agile Quadrotor Dynamic Avoidance",
@@ -651,27 +497,13 @@
       ]
     },
     {
-      "term": "failure modes",
-      "recent_docs": 17,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
-      "examples": [
-        "Resilient Motion Planning for Free-Flying Space Robots under Actuator Failures",
-        "DreamStream: Towards Policy-Oriented Generative Simulation for End-to-End Driving",
-        "Learning Beyond What Humans Can Demonstrate"
-      ]
-    },
-    {
       "term": "image quality",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.931,
+      "discovery_score": 15.1182,
       "examples": [
         "PhGS: Post-Hoc Pruning and Refinement of Single-View Feed-Forward 3D Gaussian Reconstructions",
         "Anatomy-Aware Synthesis of Post-Contrast Breast MRI from Pre-Contrast Images",
@@ -682,10 +514,10 @@
       "term": "evaluation protocol",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.931,
+      "discovery_score": 15.1182,
       "examples": [
         "Cross-Architecture Foundation-Model Distillation for Edge Flood Segmentation",
         "Memory That Changes Action Is Not Memory That Guides It: Counterfactual Auditing of History-Conditioned Robot Policies",
@@ -696,10 +528,10 @@
       "term": "domain shift",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.931,
+      "discovery_score": 15.1182,
       "examples": [
         "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation",
         "Norm2Tex: Augmenting Visuo-Tactile Simulations with Texture",
@@ -710,10 +542,10 @@
       "term": "large vision-language",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.931,
+      "discovery_score": 15.1182,
       "examples": [
         "A Free Lunch? Adapting PP-OCRv6 for Historical Text Recognition",
         "What do VLM-Based Vision-Language Navigation Models Rely on: Interpreting and Steering Policy Behavior",
@@ -724,10 +556,10 @@
       "term": "visual tokens",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 11.103,
-      "discovery_score": 15.5281,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.931,
+      "discovery_score": 15.1182,
       "examples": [
         "Beyond Future Prediction: Denoising as Generative Adaptation for Robot Control",
         "Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D",
@@ -735,13 +567,27 @@
       ]
     },
     {
+      "term": "diffusion policy",
+      "recent_docs": 24,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.101,
+      "discovery_score": 14.5929,
+      "examples": [
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+        "KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization",
+        "From Instrument-Mounted Demonstrations to In-Vivo Execution: Learning Bimanual Laparoscopic Appendectomy Without Robot-Collected Demonstrations"
+      ]
+    },
+    {
       "term": "humanoid robots",
       "recent_docs": 24,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 5.181,
-      "discovery_score": 15.0103,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.101,
+      "discovery_score": 14.5929,
       "examples": [
         "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction",
         "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video",
@@ -749,13 +595,55 @@
       ]
     },
     {
+      "term": "large language mllms",
+      "recent_docs": 24,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.101,
+      "discovery_score": 14.5929,
+      "examples": [
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
+        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
+      ]
+    },
+    {
+      "term": "language mllms",
+      "recent_docs": 24,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 5.101,
+      "discovery_score": 14.5929,
+      "examples": [
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images",
+        "PackLab: A Comprehensive Framework for Developing, Training, and Evaluating MLLMs in Robotic Bin Packing",
+        "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations"
+      ]
+    },
+    {
+      "term": "action generation",
+      "recent_docs": 29,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.685,
+      "discovery_score": 14.475,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Learning Foresight without Explicit Trajectories for 3D Diffusion Policies",
+        "Rolling-WAM: World Action Models with Rolling Imagination"
+      ]
+    },
+    {
       "term": "latent representations",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "Can Deep Learning Achieve Cross-Physics Mapping?",
@@ -766,10 +654,10 @@
       "term": "demonstrating effectiveness",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
         "From Passive Execution to Active Exploration: Agentic Embodied Manipulation in Realistic Environments",
@@ -780,10 +668,10 @@
       "term": "robot motion",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
         "Bayesian Continuum Robot Dynamics and State Estimation",
@@ -791,27 +679,13 @@
       ]
     },
     {
-      "term": "human motion",
-      "recent_docs": 16,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
-      "examples": [
-        "DexTouch-WM: Learning Action-Conditioned Tactile World Models from Human Touch for Dexterous Robot Manipulation",
-        "Learning Slope-Adaptive Whole-Body Locomotion for Humanoid Robots in Roofing Construction",
-        "Ego-Exo4D Human Meshes Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures"
-      ]
-    },
-    {
       "term": "during inference",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "Streaming-WAM: Action-Conditioned World-Action Model for Asynchronous Robot Manipulation",
         "DEAL-Grasp: Decoupled Alignment Representation for Geometry-Aware Dexterous Grasp Generation",
@@ -822,10 +696,10 @@
       "term": "distribution shift",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "An Empirical Study and Open Testbed for Federated Fine-Tuning of Vision-Language-Action Models",
         "Reinforcement Learning for Real-Time Vision-Language-Action Policies",
@@ -836,10 +710,10 @@
       "term": "test set",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "2nd Place Solution to the HANDS 2026 Workshop Challenge-Dexterous Grasp Motion Track: Single-Shot Trajectory Warping for Grasp Motion Generation",
         "SARFusion: Scene-Aware Routing Fusion for Robust Camera-LiDAR 3D Object Detection",
@@ -850,10 +724,10 @@
       "term": "generation quality",
       "recent_docs": 16,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 10.468,
-      "discovery_score": 14.4477,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 10.306,
+      "discovery_score": 14.0649,
       "examples": [
         "SlotDiT: Object-Centric Representations for Diffusion Transformers",
         "AV-GRPO: Modality-Anchored Decoupling Diffusion Reinforcement Learning for Joint Audio-Video Generation",
@@ -864,10 +738,10 @@
       "term": "remote sensing",
       "recent_docs": 23,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.97,
-      "discovery_score": 14.2306,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.893,
+      "discovery_score": 13.8336,
       "examples": [
         "A Wavelet-Feature Correlation-Based Greedy Clustering Framework for Unsupervised Hyperspectral and Multispectral Remote Sensing Classification",
         "Earth Surface Immune System for Rapid Monitoring of Unknown Anomalies",
@@ -878,10 +752,10 @@
       "term": "among evaluated",
       "recent_docs": 23,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.97,
-      "discovery_score": 14.2306,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.893,
+      "discovery_score": 13.8336,
       "examples": [
         "On the Fundamental Limits of Single-snapshot Compressive Ultrasound Imaging Using Random Aberrative Masks",
         "PROVIA: Procedure State Tracking for Online Mistake Detection in Egocentric Videos",
@@ -889,27 +763,13 @@
       ]
     },
     {
-      "term": "flow matching",
-      "recent_docs": 27,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 3.489,
-      "discovery_score": 13.5878,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "Uni-XAS: Alignment-Driven Bidirectional Multimodal Learning for X-ray Absorption Spectroscopy",
-        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants"
-      ]
-    },
-    {
       "term": "medical image",
-      "recent_docs": 22,
+      "recent_docs": 23,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.758,
-      "discovery_score": 13.4543,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.893,
+      "discovery_score": 13.8336,
       "examples": [
         "Enhanced CNN-Transformer Models with\u00a0Hybrid Attention Mechanisms for\u00a0Medical Image Segmentation",
         "G^2RA-NET: Graph-based Cross-Slice Relation Modeling with Attention Gating for Medical Image Segmentation",
@@ -917,13 +777,69 @@
       ]
     },
     {
+      "term": "robot policies",
+      "recent_docs": 31,
+      "baseline_docs": 3,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 2.811,
+      "discovery_score": 13.2099,
+      "examples": [
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+        "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
+        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies"
+      ]
+    },
+    {
+      "term": "flow matching",
+      "recent_docs": 27,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.435,
+      "discovery_score": 13.198,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "Uni-XAS: Alignment-Driven Bidirectional Multimodal Learning for X-ray Absorption Spectroscopy",
+        "FlowSGS: Improving Flow Matching Priors for Inverse Imaging with Stochastic Interpolants"
+      ]
+    },
+    {
+      "term": "vla policies",
+      "recent_docs": 27,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.435,
+      "discovery_score": 13.198,
+      "examples": [
+        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "ActGaze: Learning Action-Grounded Gaze through Counterfactual Visual Interventions for High-Precision Manipulation",
+        "Uncertainty-Gated Exploration Noise Suppresses Task Collapse in Online RL Fine-Tuning of a Flow-Matching Vision-Language-Action Policy"
+      ]
+    },
+    {
+      "term": "physical interaction",
+      "recent_docs": 22,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.685,
+      "discovery_score": 13.0777,
+      "examples": [
+        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+        "PolyUMI: Accessible Visual-Tactile-Audio Data Collection for Object Inference and Manipulation",
+        "DA-GRD: Decision-Aware Grasp-Relevant Disambiguation for tactile recovery under perception-to-execution mismatches"
+      ]
+    },
+    {
       "term": "pose estimation",
       "recent_docs": 22,
       "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.758,
-      "discovery_score": 13.4543,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 4.685,
+      "discovery_score": 13.0777,
       "examples": [
         "Singularity Analysis for the Perspective-Four and Five-Line Problems",
         "From LiDAR Maps to Visual Localization: Unified Visual Association for Robust Point-Line-Plane Pose Estimation",
@@ -934,10 +850,10 @@
       "term": "bounding boxes",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
         "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
@@ -948,10 +864,10 @@
       "term": "future visual",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
@@ -962,10 +878,10 @@
       "term": "action expert",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "TraceFlow: Guiding Frozen Flow-Matching Robot Policies with Success and Failure Traces",
         "Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs",
@@ -976,10 +892,10 @@
       "term": "sensor noise",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "RTK-Vision PPO for Autonomous Micro UAV Recovery on an Airborne Carrier",
         "AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations",
@@ -987,41 +903,13 @@
       ]
     },
     {
-      "term": "tactile sensing",
-      "recent_docs": 15,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
-      "examples": [
-        "TouchSight: Bare-Handed Tactile Prediction from Egocentric Video via Generative Visual Augmentation",
-        "Real-Time Force Regulation for Whole-Hand Dexterous Grasping",
-        "Self-Supervised Anchoring of Fingertip Sensing to Proprioception and Proactive Actions for Robot Imitation Learning"
-      ]
-    },
-    {
-      "term": "trainable parameters",
-      "recent_docs": 15,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
-      "examples": [
-        "Compact Vision Models for Iris Presentation Attack Detection under Presentation Attack Instrument Shift and Environmental Degradation",
-        "Latent evolving World Action Model",
-        "SmoLSTM: A Compact Vision-Language-Action Model with Recurrent Memory that Persists"
-      ]
-    },
-    {
       "term": "learned policies",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "Training-free Behavior Cloning",
         "From Target Selection to Digging: A Learning-Based Framework for Continuous Autonomous Excavation",
@@ -1032,10 +920,10 @@
       "term": "visual appearance",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
         "Large-Scale Geometric Map-Based Localization of UAVs in GNSS-Denied Urban Environments",
@@ -1046,10 +934,10 @@
       "term": "multimodal reasoning",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "SlackDrive: Reclaiming Runtime Slack for Adaptive Driving Inference",
         "MedVLA: A Hierarchical Vision-Language-Action Framework for Closed-Loop Precision Medical Robot Manipulation",
@@ -1060,10 +948,10 @@
       "term": "ask whether",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics",
         "The Gaussian Is Enough: Flow-Matching Priors Do Not Help When Fine-Tuning Large Behavior Models",
@@ -1074,10 +962,10 @@
       "term": "vision language",
       "recent_docs": 15,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.834,
-      "discovery_score": 13.3703,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.681,
+      "discovery_score": 13.0146,
       "examples": [
         "Topology-Informed Visual Prompting For Vision Language Action Policies",
         "SCULPT-VLA: Learning Structured Control through Staged Action Grounding",
@@ -1085,41 +973,13 @@
       ]
     },
     {
-      "term": "recent advances",
-      "recent_docs": 33,
-      "baseline_docs": 4,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 2.362,
-      "discovery_score": 12.8343,
-      "examples": [
-        "Electronic structure, band offset, and interface electron population of the LaInO$_3$/BaSnO$_3$ system",
-        "Determination of the intrinsic mechanical quality factor in high-stress silicon nitride resonators",
-        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images"
-      ]
-    },
-    {
-      "term": "visual representations",
-      "recent_docs": 21,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.547,
-      "discovery_score": 12.6816,
-      "examples": [
-        "Latent evolving World Action Model",
-        "Geometry-Conditioned Visual Place Recognition in Natural Environments",
-        "An Action Is Worth One Patch: Unified World-Action Modeling with PatchWAM"
-      ]
-    },
-    {
       "term": "scene graph",
       "recent_docs": 14,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.057,
+      "discovery_score": 11.9682,
       "examples": [
         "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
         "Kairos: Grounded Forecasting of Presence and Directional Flow in 4D Scene Graphs",
@@ -1130,10 +990,10 @@
       "term": "spatial reasoning",
       "recent_docs": 14,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.057,
+      "discovery_score": 11.9682,
       "examples": [
         "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
         "World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal",
@@ -1141,27 +1001,13 @@
       ]
     },
     {
-      "term": "novel view",
-      "recent_docs": 14,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
-      "examples": [
-        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
-        "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
-        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting"
-      ]
-    },
-    {
       "term": "view synthesis",
       "recent_docs": 14,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.057,
+      "discovery_score": 11.9682,
       "examples": [
         "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
         "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
@@ -1169,13 +1015,27 @@
       ]
     },
     {
+      "term": "novel view",
+      "recent_docs": 14,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.057,
+      "discovery_score": 11.9682,
+      "examples": [
+        "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
+        "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
+        "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting"
+      ]
+    },
+    {
       "term": "inference cost",
       "recent_docs": 14,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 9.057,
+      "discovery_score": 11.9682,
       "examples": [
         "DAWN: Noise-Robust Quadruped Parkour via Depth-Denoising World Models",
         "SlackDrive: Reclaiming Runtime Slack for Adaptive Driving Inference",
@@ -1183,27 +1043,13 @@
       ]
     },
     {
-      "term": "semantic reasoning",
-      "recent_docs": 14,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 9.2,
-      "discovery_score": 12.2967,
-      "examples": [
-        "Spatial and Semantic Reasoning for LLM-Driven Robot Navigation via MCP",
-        "From Semantic Decisions to Feasible Trajectories: Self-Evolving LLM-Guided Optimal Control for Narrow-Space Parking",
-        "A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation"
-      ]
-    },
-    {
       "term": "natural language",
       "recent_docs": 25,
       "baseline_docs": 2,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 3.236,
-      "discovery_score": 12.2887,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.185,
+      "discovery_score": 11.9341,
       "examples": [
         "Zero-shot rib design: merging training-free generative prior with topology optimization",
         "Vibe-FDTR: An agent-oriented framework for reproducible frequency-domain thermoreflectance data analysis",
@@ -1211,27 +1057,13 @@
       ]
     },
     {
-      "term": "vision-language-action vla policies",
-      "recent_docs": 20,
-      "baseline_docs": 1,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 4.335,
-      "discovery_score": 11.9131,
-      "examples": [
-        "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
-        "Uncertainty-Gated Exploration Noise Suppresses Task Collapse in Online RL Fine-Tuning of a Flow-Matching Vision-Language-Action Policy",
-        "Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies"
-      ]
-    },
-    {
       "term": "ground truth",
       "recent_docs": 24,
       "baseline_docs": 2,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 3.109,
-      "discovery_score": 11.6449,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.061,
+      "discovery_score": 11.3077,
       "examples": [
         "Watershed vs. Region Growing for Individual Tree Segmentation from Airborne LiDAR: An Urban Case Study in Bologna",
         "Can 4D Foundation Models Remember?",
@@ -1239,27 +1071,13 @@
       ]
     },
     {
-      "term": "robot must",
-      "recent_docs": 13,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
-      "examples": [
-        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-        "Watch, Recall, Act: Always-On Robots in Concurrent Embodied Streams",
-        "DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills"
-      ]
-    },
-    {
       "term": "coding agents",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
         "RAPID: Robot Agentic Programming from Demonstrations",
@@ -1267,13 +1085,27 @@
       ]
     },
     {
+      "term": "robot must",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
+      "examples": [
+        "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+        "Watch, Recall, Act: Always-On Robots in Concurrent Embodied Streams",
+        "DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills"
+      ]
+    },
+    {
       "term": "bird s-eye-view",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
         "Reflection-Aware Reasoning for Non-Line-of-Sight Pedestrian Localization",
@@ -1284,10 +1116,10 @@
       "term": "safety filter",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "Integrated Guidance and Control of a Mother-Child UAV-UGV System for Cooperative Missions",
         "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials",
@@ -1298,10 +1130,10 @@
       "term": "instance segmentation",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "SenseFuse: Label-Free Fusion of Image and Shape Encoders for Open-Vocabulary 3D Instance Segmentation",
         "Toward a foundation model for forest point clouds",
@@ -1312,10 +1144,10 @@
       "term": "vision foundation",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "FreqDINO++: A Frequency-Guided Multi-Task Routing Vision Foundation Model for Universal Ultrasound Analysis",
         "SplatLabel: Pseudo-Labelling through 4D Gaussian Splatting",
@@ -1326,10 +1158,10 @@
       "term": "feature extraction",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "Bridging Modalities on the Cortex: Surface-based MRI to PET Translation with a Diffusion Bridge",
         "Automotive mmWave Spinning Radar Place Recognition with Spatially Gated Feature-Correlation Representation",
@@ -1340,10 +1172,10 @@
       "term": "novel view synthesis",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "M3GD: Multi-Modal Multi-View Geometric Diffusion for Camera--LiDAR Novel View Synthesis",
         "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
@@ -1351,41 +1183,13 @@
       ]
     },
     {
-      "term": "motion generation",
-      "recent_docs": 13,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
-      "examples": [
-        "CAMP: Cooperative Arm-Hand Motion Planning in Constrained Spaces",
-        "PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning",
-        "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control"
-      ]
-    },
-    {
-      "term": "policies vision-language-action",
-      "recent_docs": 13,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
-      "examples": [
-        "InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies",
-        "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies",
-        "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies"
-      ]
-    },
-    {
       "term": "visual fidelity",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "PhyVisGen: Physically and Visually High-Fidelity Robotic Manipulation Data Generation",
         "Demonstration Synthesis from a Single Scan via Gaussian Splatting for Visuomotor Policy Learning",
@@ -1396,14 +1200,210 @@
       "term": "datasets spanning",
       "recent_docs": 13,
       "baseline_docs": 0,
-      "recent_corpus_docs": 3662,
-      "baseline_corpus_docs": 1161,
-      "acceleration": 8.565,
-      "discovery_score": 11.2282,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
       "examples": [
         "Tactile-JEPA: Topology-Aware Self-Supervised Representation Learning for Distributed Tactile Sensors",
         "Probabilistic Scene Graphs: Hierarchical Representation and Real-time System",
         "EndoFSA: Endoscopic Few-Shot Image Generation via Rank-Constrained Parameter Adaptation"
+      ]
+    },
+    {
+      "term": "achieve strong",
+      "recent_docs": 13,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 8.432,
+      "discovery_score": 10.9268,
+      "examples": [
+        "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+        "Vehicle Trajectory Prediction via Neural Fusion of Multiple EKF-Based Trajectory Candidates",
+        "FASA: Feedback-Aware Sampling Adaptation for Efficient Diffusion-Based VLA Models"
+      ]
+    },
+    {
+      "term": "recent advances",
+      "recent_docs": 32,
+      "baseline_docs": 5,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 1.845,
+      "discovery_score": 10.5839,
+      "examples": [
+        "Electronic structure, band offset, and interface electron population of the LaInO$_3$/BaSnO$_3$ system",
+        "Determination of the intrinsic mechanical quality factor in high-stress silicon nitride resonators",
+        "AgriScope: Pixel-Grounded Multimodal Understanding for Agricultural Images"
+      ]
+    },
+    {
+      "term": "latent space",
+      "recent_docs": 26,
+      "baseline_docs": 3,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 2.365,
+      "discovery_score": 10.4339,
+      "examples": [
+        "A Multi-Model Non-Intrusive Reduced-Order Framework for Parametric Erosion Prediction via Kinematic Cross-Moment Compression",
+        "Uni-XAS: Alignment-Driven Bidirectional Multimodal Learning for X-ray Absorption Spectroscopy",
+        "Rapid FinFET Modelling Using an Autoencoder"
+      ]
+    },
+    {
+      "term": "supervised fine-tuning",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.852,
+      "discovery_score": 10.0958,
+      "examples": [
+        "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+        "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+        "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention"
+      ]
+    },
+    {
+      "term": "action chunks",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.852,
+      "discovery_score": 10.0958,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation",
+        "Behavior-Aligned Action Tokenization for Robot Policy Learning"
+      ]
+    },
+    {
+      "term": "image generation",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.852,
+      "discovery_score": 10.0958,
+      "examples": [
+        "Radio-Frequency Convolutional Neural Networks",
+        "Optical free space extreme learning machine for the implementation of emergent complex systems",
+        "Paint-Anything: Unified Any-Color Control for Image Generation and Editing"
+      ]
+    },
+    {
+      "term": "improves average",
+      "recent_docs": 18,
+      "baseline_docs": 1,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 3.852,
+      "discovery_score": 10.0958,
+      "examples": [
+        "Self-Supervised Anchoring of Fingertip Sensing to Proprioception and Proactive Actions for Robot Imitation Learning",
+        "EgoSpeedUp: Transferring Human Manipulation Tempo to Robot Policies",
+        "Direction-Scale Decomposition in Action Representation: Rethinking What to Tokenize for Vision-Language-Action Models"
+      ]
+    },
+    {
+      "term": "language llms",
+      "recent_docs": 22,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 2.811,
+      "discovery_score": 10.0679,
+      "examples": [
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
+        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
+        "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding"
+      ]
+    },
+    {
+      "term": "large language llms",
+      "recent_docs": 22,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 2.811,
+      "discovery_score": 10.0679,
+      "examples": [
+        "Evaluating LLM-based AI agents integrated with materials synthesis tools: the case of atomic layer deposition",
+        "Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States",
+        "Retrieve-to-Localize: Bridging Large Language Models and LiDAR Geometry for Spatial Grounding"
+      ]
+    },
+    {
+      "term": "action wams",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.808,
+      "discovery_score": 9.8918,
+      "examples": [
+        "Agile-WAM: An Agile Tactile World Action Model for Contact-Rich Robot Control",
+        "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
+        "Rolling-WAM: World Action Models with Rolling Imagination"
+      ]
+    },
+    {
+      "term": "scene graphs",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.808,
+      "discovery_score": 9.8918,
+      "examples": [
+        "FunArt: Decoding Functional Structure and Articulation from Generative 3D Latents",
+        "SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs",
+        "Kairos: Grounded Forecasting of Presence and Directional Flow in 4D Scene Graphs"
+      ]
+    },
+    {
+      "term": "released com",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.808,
+      "discovery_score": 9.8918,
+      "examples": [
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding",
+        "Do LiDAR Language Models Really Understand Spatio-temporal Relationships?",
+        "FIERCE: From Generalist Robot Policies to Fast Specialists via Progress-Failure Feedback"
+      ]
+    },
+    {
+      "term": "human videos",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.808,
+      "discovery_score": 9.8918,
+      "examples": [
+        "V2-STRep: VLM-Grounded Structured Task Representations for Reusable Robot Skills Acquired from Generated Videos",
+        "BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video",
+        "GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments"
+      ]
+    },
+    {
+      "term": "gpu memory",
+      "recent_docs": 12,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 3819,
+      "baseline_corpus_docs": 1192,
+      "acceleration": 7.808,
+      "discovery_score": 9.8918,
+      "examples": [
+        "Accelerating Visual Policy Learning with Sampling-Based Model Predictive Control",
+        "GRF-Recon: Global Ray-Field Optimization for Long-Sequence Feed-forward Reconstruction",
+        "TrackEverything: Long Horizon Dense Tracking via De-Duplicating 3D Scene Representations"
       ]
     }
   ]
