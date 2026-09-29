@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T10:01:48.553508+00:00",
+  "generated_at": "2026-09-29T13:03:50.803915+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,7 +9,7 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 84972,
+    "record_count": 87275,
     "primary_origin_count": 10853
   },
   "candidate_gates": [
@@ -26,22 +26,6 @@
       ],
       "matched_origin_count": 823,
       "primary_origin_count": 819,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "vision-language-action vla",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 151,
-      "primary_origin_count": 151,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -92,7 +76,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "gaussian splatting",
+      "term": "vision-language-action vla",
       "families": [
         "science"
       ],
@@ -100,20 +84,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 82,
-      "primary_origin_count": 82,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "vision-language vlms",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
+      "matched_origin_count": 151,
+      "primary_origin_count": 151,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -132,7 +104,35 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "gaussian splatting",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 82,
+      "primary_origin_count": 82,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "large language llms",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "vision-language vlms",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -210,17 +210,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "flow matching",
+      "term": "strongest baseline",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
-        "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 90,
-      "primary_origin_count": 89,
+      "matched_origin_count": 98,
+      "primary_origin_count": 98,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -245,16 +244,17 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "strongest baseline",
+      "term": "flow matching",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
+        "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 98,
-      "primary_origin_count": 98,
+      "matched_origin_count": 90,
+      "primary_origin_count": 89,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -326,22 +326,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "during inference",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 48,
-      "primary_origin_count": 48,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "novel view",
       "families": [
         "science"
@@ -352,38 +336,6 @@
       ],
       "matched_origin_count": 27,
       "primary_origin_count": 27,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "view synthesis",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 33,
-      "primary_origin_count": 33,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "reconstruction quality",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 36,
-      "primary_origin_count": 36,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -505,22 +457,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "latent space",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 94,
-      "primary_origin_count": 94,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "multimodal large language",
       "families": [
         "science"
@@ -553,7 +489,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "ask whether",
+      "term": "on-policy self-distillation",
       "families": [
         "science"
       ],
@@ -561,8 +497,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 74,
-      "primary_origin_count": 74,
+      "matched_origin_count": 24,
+      "primary_origin_count": 24,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -585,7 +521,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "on-policy self-distillation",
+      "term": "during inference",
       "families": [
         "science"
       ],
@@ -593,8 +529,24 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 24,
-      "primary_origin_count": 24,
+      "matched_origin_count": 48,
+      "primary_origin_count": 48,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "latent space",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 94,
+      "primary_origin_count": 94,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -633,22 +585,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "robot actions",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 35,
-      "primary_origin_count": 35,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "fine-tuning sft",
       "families": [
         "science"
@@ -659,6 +595,22 @@
       ],
       "matched_origin_count": 34,
       "primary_origin_count": 34,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "robot actions",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 35,
+      "primary_origin_count": 35,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -724,6 +676,22 @@
       ],
       "matched_origin_count": 127,
       "primary_origin_count": 94,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "ask whether",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 74,
+      "primary_origin_count": 74,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -846,23 +814,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "ground truth",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 87,
-      "primary_origin_count": 80,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "speech recognition",
       "families": [
         "science"
@@ -880,6 +831,22 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "reconstruction quality",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 36,
+      "primary_origin_count": 36,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "robot control",
       "families": [
         "science"
@@ -890,30 +857,6 @@
       ],
       "matched_origin_count": 44,
       "primary_origin_count": 44,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "splatting dgs",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "gaussian splatting dgs",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -968,18 +911,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "making difficult",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "diffusion transformer",
       "families": [
         "science"
@@ -1012,50 +943,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "vision-language vlm",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "test split",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 27,
-      "primary_origin_count": 27,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "learned representation",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 37,
-      "primary_origin_count": 37,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "policy updates",
       "families": [
         "science"
@@ -1072,7 +959,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "sample complexity",
+      "term": "test split",
       "families": [
         "science"
       ],
@@ -1080,41 +967,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 21,
-      "primary_origin_count": 21,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "point cloud",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 89,
-      "primary_origin_count": 83,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "action expert",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 34,
-      "primary_origin_count": 34,
+      "matched_origin_count": 27,
+      "primary_origin_count": 27,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1218,23 +1072,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "best overall",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 27,
-      "primary_origin_count": 27,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "failure mode",
+      "term": "visual information",
       "families": [
         "science"
       ],
@@ -1243,8 +1081,8 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 130,
-      "primary_origin_count": 125,
+      "matched_origin_count": 21,
+      "primary_origin_count": 19,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1267,17 +1105,12 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "visual information",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 21,
-      "primary_origin_count": 19,
+      "term": "together findings",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1300,18 +1133,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "together findings",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "language agents",
       "families": [
         "science"
@@ -1322,6 +1143,22 @@
       ],
       "matched_origin_count": 10,
       "primary_origin_count": 10,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "multimodal reasoning",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 39,
+      "primary_origin_count": 39,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1346,22 +1183,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "multimodal reasoning",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 39,
-      "primary_origin_count": 39,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "forward pass",
       "families": [
         "science"
@@ -1372,6 +1193,22 @@
       ],
       "matched_origin_count": 96,
       "primary_origin_count": 96,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "post-training quantization",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 27,
+      "primary_origin_count": 27,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1411,22 +1248,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "post-training quantization",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 27,
-      "primary_origin_count": 27,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "benchmark evaluating",
       "families": [
         "science"
@@ -1437,22 +1258,6 @@
       ],
       "matched_origin_count": 3,
       "primary_origin_count": 3,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "verifiable rewards",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 35,
-      "primary_origin_count": 35,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1483,6 +1288,34 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "verifiable rewards",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 35,
+      "primary_origin_count": 35,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "making difficult",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "gpt-6 astra",
       "families": [
         "science"
@@ -1493,54 +1326,6 @@
       ],
       "matched_origin_count": 20,
       "primary_origin_count": 20,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "conditional flow",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 22,
-      "primary_origin_count": 22,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "improves downstream",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 16,
-      "primary_origin_count": 16,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "token pruning",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 19,
-      "primary_origin_count": 19,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1563,6 +1348,22 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "token pruning",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 19,
+      "primary_origin_count": 19,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "correct answer",
       "families": [
         "science"
@@ -1579,6 +1380,38 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "improves downstream",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 16,
+      "primary_origin_count": 16,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "conditional flow",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 22,
+      "primary_origin_count": 22,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
       "term": "failure modes",
       "families": [
         "science"
@@ -1589,6 +1422,170 @@
       ],
       "matched_origin_count": 68,
       "primary_origin_count": 68,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "ground truth",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 87,
+      "primary_origin_count": 80,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "point cloud",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 89,
+      "primary_origin_count": 83,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "view synthesis",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 33,
+      "primary_origin_count": 33,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "public datasets",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 25,
+      "primary_origin_count": 25,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "failure mode",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 130,
+      "primary_origin_count": 125,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "gaussian splatting dgs",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "splatting dgs",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "large language llm",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "language llm",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "motion planning",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 55,
+      "primary_origin_count": 54,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "inference cost",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 76,
+      "primary_origin_count": 76,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
