@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-09-28",
-  "generated_at": "2026-09-28T23:51:58.042133+00:00",
+  "generated_at": "2026-09-29T10:02:04.014228+00:00",
   "method": "ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
   "rule": "Deploy capital once into the best available opportunity set, then let incumbents compound. Rotate only when a challenger has a materially stronger acceleration edge than the incumbent HOLD state, or when the incumbent thesis/risk state is invalidated. No leverage; no real orders are executed.",
   "trends": {
@@ -10,8 +10,8 @@
       "previous_rank": 1,
       "state": "STABLE",
       "summary": "AI data-center demand is colliding with generation, grid, switchgear and cooling constraints.",
-      "market_breadth_1m_pct": 40.0,
-      "market_median_1m_pct": -0.97
+      "market_breadth_1m_pct": 50.0,
+      "market_median_1m_pct": 0.36
     },
     "cuas": {
       "rank": 4,
@@ -27,7 +27,7 @@
       "state": "RISING",
       "summary": "AI clusters are pushing more bandwidth into optical links and photonic components as electrical interconnects hit power and distance limits.",
       "market_breadth_1m_pct": 30.0,
-      "market_median_1m_pct": -3.64
+      "market_median_1m_pct": -4.38
     },
     "minerals": {
       "rank": 3,
@@ -49,102 +49,102 @@
   "signals": {
     "GEV": {
       "signal": "ORANGE",
-      "reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 41.7/100). Deploy\u2192Compound\u2192Rotate: HOLD 71.5; acceleration 61.5; ACTUAL 6.0% -> TARGET 6.0%.",
+      "reason": "Economic chain remains PROVEN; entry confirmation incomplete (Entry 44.6/100). Deploy\u2192Compound\u2192Rotate: HOLD 72.2; acceleration 63.0; ACTUAL 6.0% -> TARGET 6.0%.",
       "portfolio_action": "HOLD"
     },
     "VRT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 35.8; acceleration 8.2; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 36.5; acceleration 9.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ETN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 52.2; acceleration 48.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 53.0; acceleration 49.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AAON": {
       "signal": "GREEN",
-      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 69.1/100. Deploy\u2192Compound\u2192Rotate: HOLD 76.0; acceleration 82.0; ACTUAL 70.0% -> TARGET 70.0%.",
+      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 72.0/100. Deploy\u2192Compound\u2192Rotate: HOLD 76.7; acceleration 83.4; ACTUAL 70.0% -> TARGET 70.0%.",
       "portfolio_action": "HOLD"
     },
     "PWR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 59.4; acceleration 57.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 60.2; acceleration 58.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "POWL": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 48.8; acceleration 32.2; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 49.8; acceleration 34.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "NVT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 58.5; acceleration 51.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 59.2; acceleration 52.9; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "HUBB": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 56.2; acceleration 47.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 57.0; acceleration 49.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "MTZ": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 32.0; acceleration 6.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 32.7; acceleration 7.9; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CAT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 56.8; acceleration 50.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 57.6; acceleration 52.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CEG": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 49.0; acceleration 27.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 49.7; acceleration 28.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "VST": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 53.0; acceleration 42.2; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 53.7; acceleration 43.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "NRG": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 30.6; acceleration 8.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 31.4; acceleration 9.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "BWXT": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 33.6; acceleration 11.6; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 34.4; acceleration 13.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CCJ": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 35.2; acceleration 16.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 36.0; acceleration 17.5; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "BE": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 51.8; acceleration 47.5; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 53.9; acceleration 50.8; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "GNRC": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 46.4; acceleration 37.5; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 47.7; acceleration 39.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ABBN.SW": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 57.8; acceleration 55.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 59.0; acceleration 59.3; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "SU.PA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 51.6; acceleration 41.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 56.4; acceleration 54.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ENR.DE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 47.8; acceleration 30.3; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 54.2; acceleration 48.3; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AVAV": {
@@ -249,77 +249,77 @@
     },
     "COHR": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 43.0; acceleration 13.2; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 42.9; acceleration 13.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "LITE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 46.9; acceleration 21.6; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 46.9; acceleration 21.5; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CRDO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 24.8; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 24.7; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "POET": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 36.4; acceleration 3.5; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 36.3; acceleration 3.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "IQE.L": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 52.7; acceleration 40.5; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 46.3; acceleration 25.5; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AVGO": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 39.0; acceleration 20.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 39.0; acceleration 20.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "MRVL": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 55.2; acceleration 44.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 55.2; acceleration 44.8; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CIEN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 38.6; acceleration 9.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 38.6; acceleration 8.9; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ANET": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 56.3; acceleration 50.3; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 56.2; acceleration 50.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ALAB": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 52.0; acceleration 49.5; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 51.9; acceleration 49.3; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "FN": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 43.6; acceleration 21.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 43.5; acceleration 21.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AAOI": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 22.9; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 22.8; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "GLW": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 48.2; acceleration 27.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 50.0; acceleration 30.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "NOK": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 34.5; acceleration 9.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 35.9; acceleration 11.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "CSCO": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 39.4; acceleration 23.7; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 39.3; acceleration 23.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ALMU": {
@@ -329,32 +329,32 @@
     },
     "MTSI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 47.8; acceleration 32.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 47.7; acceleration 32.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "IPGP": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 37.7; acceleration 27.7; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 38.4; acceleration 28.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "APH": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 62.0; acceleration 63.3; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 61.9; acceleration 63.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "TEL": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 54.2; acceleration 58.3; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 54.2; acceleration 58.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "MP": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 26.6; acceleration 2.6; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 26.7; acceleration 2.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "LYC.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 32.4; acceleration 10.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 31.9; acceleration 8.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "USAR": {
@@ -384,12 +384,12 @@
     },
     "CRML": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 28.9; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 31.6; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AVL.TO": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 16.8; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 17.9; acceleration 0.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ARA.TO": {
@@ -399,12 +399,12 @@
     },
     "ILU.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 37.5; acceleration 17.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 39.4; acceleration 17.5; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "HAS.AX": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 32.5; acceleration 9.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 30.8; acceleration 4.8; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ASM.AX": {
@@ -414,7 +414,7 @@
     },
     "ARU.AX": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 34.5; acceleration 1.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 35.8; acceleration 4.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "REEMF": {
@@ -464,12 +464,12 @@
     },
     "IOT.MI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 72.9; acceleration 76.7; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 70.2; acceleration 72.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "QCOM": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 62.4; acceleration 67.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 62.8; acceleration 68.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "NXPI": {
@@ -479,12 +479,12 @@
     },
     "ON": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 44.5; acceleration 35.4; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 44.6; acceleration 35.5; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "MBLY": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 42.9; acceleration 21.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 43.6; acceleration 22.8; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "OUST": {
@@ -519,7 +519,7 @@
     },
     "SERV": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 35.5; acceleration 14.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 35.8; acceleration 14.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "RR": {
@@ -551,7 +551,7 @@
   "scores": {
     "GEV": {
       "structural_early_bird": 97.2,
-      "entry_score": 41.7,
+      "entry_score": 44.6,
       "trend": "power",
       "role": "Bottleneck / generation",
       "evidence_status": "PROVEN",
@@ -562,8 +562,8 @@
       "volatility_21d_ann_pct": 47.16,
       "max_drawdown_63d_pct": -18.94,
       "actual_weight_pct": 6.0,
-      "allocation_score": 72.23,
-      "hold_score": 71.48,
+      "allocation_score": 73.53,
+      "hold_score": 72.2,
       "target_weight_pct": 6.0,
       "portfolio_action": "HOLD",
       "invalidation": [
@@ -571,11 +571,11 @@
         "data-center order slowdown",
         "backlog contraction inconsistent with thesis"
       ],
-      "capital_competition_score": 61.5
+      "capital_competition_score": 62.95
     },
     "VRT": {
       "structural_early_bird": 53.5,
-      "entry_score": 20.3,
+      "entry_score": 23.2,
       "trend": "power",
       "role": "Direct beneficiary / power & cooling",
       "evidence_status": "UNREVALIDATED",
@@ -584,18 +584,18 @@
       "m1_pct": -9.37,
       "rel_qqq_1m_pct_points": -11.51,
       "volatility_21d_ann_pct": 64.46,
-      "max_drawdown_63d_pct": -26.77,
+      "max_drawdown_63d_pct": -26.75,
       "actual_weight_pct": 0.0,
-      "allocation_score": 38.56,
-      "hold_score": 35.78,
+      "allocation_score": 39.87,
+      "hold_score": 36.51,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 8.15
+      "capital_competition_score": 9.61
     },
     "ETN": {
       "structural_early_bird": 54.2,
-      "entry_score": 47.2,
+      "entry_score": 50.2,
       "trend": "power",
       "role": "Pick & shovel / electrical distribution",
       "evidence_status": "UNREVALIDATED",
@@ -606,16 +606,16 @@
       "volatility_21d_ann_pct": 44.68,
       "max_drawdown_63d_pct": -15.06,
       "actual_weight_pct": 0.0,
-      "allocation_score": 51.05,
-      "hold_score": 52.21,
+      "allocation_score": 52.4,
+      "hold_score": 52.96,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 48.12
+      "capital_competition_score": 49.62
     },
     "AAON": {
       "structural_early_bird": 95.8,
-      "entry_score": 69.1,
+      "entry_score": 72.0,
       "trend": "power",
       "role": "Direct beneficiary / data-center cooling",
       "evidence_status": "PROVEN",
@@ -626,8 +626,8 @@
       "volatility_21d_ann_pct": 47.23,
       "max_drawdown_63d_pct": -34.35,
       "actual_weight_pct": 70.0,
-      "allocation_score": 83.78,
-      "hold_score": 76.02,
+      "allocation_score": 85.09,
+      "hold_score": 76.74,
       "target_weight_pct": 70.0,
       "portfolio_action": "HOLD",
       "invalidation": [
@@ -635,11 +635,11 @@
         "confirmed slowdown in data-center orders",
         "persistent margin/cash-conversion deterioration"
       ],
-      "capital_competition_score": 81.98
+      "capital_competition_score": 83.43
     },
     "PWR": {
       "structural_early_bird": 67.2,
-      "entry_score": 49.7,
+      "entry_score": 52.7,
       "trend": "power",
       "role": "Pick & shovel / grid construction",
       "evidence_status": "UNREVALIDATED",
@@ -650,16 +650,16 @@
       "volatility_21d_ann_pct": 33.29,
       "max_drawdown_63d_pct": -16.56,
       "actual_weight_pct": 0.0,
-      "allocation_score": 59.33,
-      "hold_score": 59.43,
+      "allocation_score": 60.68,
+      "hold_score": 60.18,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 57.13
+      "capital_competition_score": 58.63
     },
     "POWL": {
       "structural_early_bird": 67.9,
-      "entry_score": 35.9,
+      "entry_score": 38.9,
       "trend": "power",
       "role": "Bottleneck candidate / switchgear",
       "evidence_status": "UNREVALIDATED",
@@ -668,18 +668,18 @@
       "m1_pct": -2.76,
       "rel_qqq_1m_pct_points": -4.9,
       "volatility_21d_ann_pct": 46.25,
-      "max_drawdown_63d_pct": -30.97,
+      "max_drawdown_63d_pct": -30.23,
       "actual_weight_pct": 0.0,
-      "allocation_score": 53.5,
-      "hold_score": 48.77,
+      "allocation_score": 54.85,
+      "hold_score": 49.78,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 32.19
+      "capital_competition_score": 34.02
     },
     "NVT": {
       "structural_early_bird": 67.2,
-      "entry_score": 47.7,
+      "entry_score": 50.6,
       "trend": "power",
       "role": "Pick & shovel / electrical connection",
       "evidence_status": "UNREVALIDATED",
@@ -690,16 +690,16 @@
       "volatility_21d_ann_pct": 53.94,
       "max_drawdown_63d_pct": -17.25,
       "actual_weight_pct": 0.0,
-      "allocation_score": 58.43,
-      "hold_score": 58.51,
+      "allocation_score": 59.73,
+      "hold_score": 59.24,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 51.44
+      "capital_competition_score": 52.89
     },
     "HUBB": {
       "structural_early_bird": 67.2,
-      "entry_score": 42.9,
+      "entry_score": 45.9,
       "trend": "power",
       "role": "Pick & shovel / grid equipment",
       "evidence_status": "UNREVALIDATED",
@@ -710,16 +710,16 @@
       "volatility_21d_ann_pct": 25.86,
       "max_drawdown_63d_pct": -15.61,
       "actual_weight_pct": 0.0,
-      "allocation_score": 56.27,
-      "hold_score": 56.23,
+      "allocation_score": 57.62,
+      "hold_score": 56.98,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 47.86
+      "capital_competition_score": 49.36
     },
     "MTZ": {
       "structural_early_bird": 67.2,
-      "entry_score": 12.9,
+      "entry_score": 15.9,
       "trend": "power",
       "role": "Pick & shovel / grid construction",
       "evidence_status": "UNREVALIDATED",
@@ -730,16 +730,16 @@
       "volatility_21d_ann_pct": 50.97,
       "max_drawdown_63d_pct": -43.13,
       "actual_weight_pct": 0.0,
-      "allocation_score": 42.77,
-      "hold_score": 31.99,
+      "allocation_score": 44.12,
+      "hold_score": 32.74,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 6.37
+      "capital_competition_score": 7.87
     },
     "CAT": {
       "structural_early_bird": 66.5,
-      "entry_score": 43.9,
+      "entry_score": 46.9,
       "trend": "power",
       "role": "Direct beneficiary / onsite generation",
       "evidence_status": "UNREVALIDATED",
@@ -748,18 +748,18 @@
       "m1_pct": 0.36,
       "rel_qqq_1m_pct_points": -1.78,
       "volatility_21d_ann_pct": 26.1,
-      "max_drawdown_63d_pct": -14.78,
+      "max_drawdown_63d_pct": -12.9,
       "actual_weight_pct": 0.0,
-      "allocation_score": 56.33,
-      "hold_score": 56.84,
+      "allocation_score": 57.68,
+      "hold_score": 57.59,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 50.38
+      "capital_competition_score": 52.73
     },
     "CEG": {
       "structural_early_bird": 66.5,
-      "entry_score": 25.5,
+      "entry_score": 28.4,
       "trend": "power",
       "role": "Direct beneficiary / firm power",
       "evidence_status": "UNREVALIDATED",
@@ -770,16 +770,16 @@
       "volatility_21d_ann_pct": 40.92,
       "max_drawdown_63d_pct": -14.83,
       "actual_weight_pct": 0.0,
-      "allocation_score": 48.05,
-      "hold_score": 48.98,
+      "allocation_score": 49.36,
+      "hold_score": 49.71,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 26.98
+      "capital_competition_score": 28.43
     },
     "VST": {
       "structural_early_bird": 66.5,
-      "entry_score": 37.7,
+      "entry_score": 40.6,
       "trend": "power",
       "role": "Direct beneficiary / firm power",
       "evidence_status": "UNREVALIDATED",
@@ -790,16 +790,16 @@
       "volatility_21d_ann_pct": 32.42,
       "max_drawdown_63d_pct": -19.72,
       "actual_weight_pct": 0.0,
-      "allocation_score": 53.54,
-      "hold_score": 52.98,
+      "allocation_score": 54.84,
+      "hold_score": 53.71,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 42.16
+      "capital_competition_score": 43.61
     },
     "NRG": {
       "structural_early_bird": 53.5,
-      "entry_score": 16.5,
+      "entry_score": 19.5,
       "trend": "power",
       "role": "Direct beneficiary / power",
       "evidence_status": "UNREVALIDATED",
@@ -810,16 +810,16 @@
       "volatility_21d_ann_pct": 40.47,
       "max_drawdown_63d_pct": -32.16,
       "actual_weight_pct": 0.0,
-      "allocation_score": 36.85,
-      "hold_score": 30.6,
+      "allocation_score": 38.2,
+      "hold_score": 31.35,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 8.14
+      "capital_competition_score": 9.64
     },
     "BWXT": {
       "structural_early_bird": 54.2,
-      "entry_score": 13.5,
+      "entry_score": 16.5,
       "trend": "power",
       "role": "Nuclear pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
@@ -828,18 +828,18 @@
       "m1_pct": -13.8,
       "rel_qqq_1m_pct_points": -15.93,
       "volatility_21d_ann_pct": 35.04,
-      "max_drawdown_63d_pct": -24.06,
+      "max_drawdown_63d_pct": -23.95,
       "actual_weight_pct": 0.0,
-      "allocation_score": 35.89,
-      "hold_score": 33.64,
+      "allocation_score": 37.23,
+      "hold_score": 34.43,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 11.62
+      "capital_competition_score": 13.17
     },
     "CCJ": {
       "structural_early_bird": 54.9,
-      "entry_score": 18.0,
+      "entry_score": 21.0,
       "trend": "power",
       "role": "Fuel bottleneck candidate",
       "evidence_status": "UNREVALIDATED",
@@ -850,16 +850,16 @@
       "volatility_21d_ann_pct": 38.05,
       "max_drawdown_63d_pct": -18.93,
       "actual_weight_pct": 0.0,
-      "allocation_score": 38.3,
-      "hold_score": 35.21,
+      "allocation_score": 39.65,
+      "hold_score": 35.96,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 15.98
+      "capital_competition_score": 17.48
     },
     "BE": {
       "structural_early_bird": 47.2,
-      "entry_score": 56.8,
+      "entry_score": 59.7,
       "trend": "power",
       "role": "Onsite power candidate",
       "evidence_status": "UNREVALIDATED",
@@ -868,18 +868,18 @@
       "m1_pct": 20.68,
       "rel_qqq_1m_pct_points": 18.54,
       "volatility_21d_ann_pct": 84.23,
-      "max_drawdown_63d_pct": -31.59,
+      "max_drawdown_63d_pct": -27.63,
       "actual_weight_pct": 0.0,
-      "allocation_score": 51.52,
-      "hold_score": 51.77,
+      "allocation_score": 52.83,
+      "hold_score": 53.88,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 47.52
+      "capital_competition_score": 50.76
     },
     "GNRC": {
       "structural_early_bird": 47.2,
-      "entry_score": 49.7,
+      "entry_score": 52.6,
       "trend": "power",
       "role": "Distributed power candidate",
       "evidence_status": "UNREVALIDATED",
@@ -888,74 +888,74 @@
       "m1_pct": 4.01,
       "rel_qqq_1m_pct_points": 1.88,
       "volatility_21d_ann_pct": 74.33,
-      "max_drawdown_63d_pct": -22.75,
+      "max_drawdown_63d_pct": -21.12,
       "actual_weight_pct": 0.0,
-      "allocation_score": 48.33,
-      "hold_score": 46.42,
+      "allocation_score": 49.63,
+      "hold_score": 47.72,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 37.55
+      "capital_competition_score": 39.74
     },
     "ABBN.SW": {
       "structural_early_bird": 65.2,
-      "entry_score": 49.5,
+      "entry_score": 51.7,
       "trend": "physical",
       "role": "Industrial robotics leader candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -0.4,
-      "w1_pct": 0.2,
-      "m1_pct": 1.14,
-      "rel_qqq_1m_pct_points": -1.0,
-      "volatility_21d_ann_pct": 29.45,
+      "d1_pct": 1.7,
+      "w1_pct": -2.36,
+      "m1_pct": 2.71,
+      "rel_qqq_1m_pct_points": 0.57,
+      "volatility_21d_ann_pct": 29.41,
       "max_drawdown_63d_pct": -9.63,
       "actual_weight_pct": 0.0,
-      "allocation_score": 58.14,
-      "hold_score": 57.83,
+      "allocation_score": 59.13,
+      "hold_score": 59.01,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 55.85
+      "capital_competition_score": 59.3
     },
     "SU.PA": {
       "structural_early_bird": 60.2,
-      "entry_score": 41.1,
+      "entry_score": 54.0,
       "trend": "power",
       "role": "Power management candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 0.41,
-      "w1_pct": 1.84,
-      "m1_pct": -2.2,
-      "rel_qqq_1m_pct_points": -4.34,
-      "volatility_21d_ann_pct": 36.17,
+      "d1_pct": 3.08,
+      "w1_pct": 1.51,
+      "m1_pct": 1.65,
+      "rel_qqq_1m_pct_points": -0.49,
+      "volatility_21d_ann_pct": 36.46,
       "max_drawdown_63d_pct": -12.52,
       "actual_weight_pct": 0.0,
-      "allocation_score": 51.61,
-      "hold_score": 51.65,
+      "allocation_score": 57.41,
+      "hold_score": 56.41,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 41.9
+      "capital_competition_score": 54.07
     },
     "ENR.DE": {
       "structural_early_bird": 60.2,
-      "entry_score": 35.1,
+      "entry_score": 50.2,
       "trend": "power",
       "role": "Generation/grid candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 0.35,
-      "w1_pct": 1.71,
-      "m1_pct": -5.09,
-      "rel_qqq_1m_pct_points": -7.22,
-      "volatility_21d_ann_pct": 44.78,
+      "d1_pct": 2.48,
+      "w1_pct": -1.01,
+      "m1_pct": 1.55,
+      "rel_qqq_1m_pct_points": -0.59,
+      "volatility_21d_ann_pct": 42.17,
       "max_drawdown_63d_pct": -18.51,
       "actual_weight_pct": 0.0,
-      "allocation_score": 48.91,
-      "hold_score": 47.77,
+      "allocation_score": 55.7,
+      "hold_score": 54.19,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 30.33
+      "capital_competition_score": 48.29
     },
     "AVAV": {
       "structural_early_bird": 53.5,
@@ -1359,7 +1359,7 @@
     },
     "COHR": {
       "structural_early_bird": 67.9,
-      "entry_score": 14.2,
+      "entry_score": 13.9,
       "trend": "photonics",
       "role": "Bottleneck / optical components",
       "evidence_status": "UNREVALIDATED",
@@ -1370,16 +1370,16 @@
       "volatility_21d_ann_pct": 79.6,
       "max_drawdown_63d_pct": -30.26,
       "actual_weight_pct": 0.0,
-      "allocation_score": 43.74,
-      "hold_score": 42.95,
+      "allocation_score": 43.6,
+      "hold_score": 42.87,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 13.23
+      "capital_competition_score": 13.08
     },
     "LITE": {
       "structural_early_bird": 67.9,
-      "entry_score": 25.8,
+      "entry_score": 25.6,
       "trend": "photonics",
       "role": "Bottleneck / lasers & optics",
       "evidence_status": "UNREVALIDATED",
@@ -1390,16 +1390,16 @@
       "volatility_21d_ann_pct": 77.16,
       "max_drawdown_63d_pct": -28.08,
       "actual_weight_pct": 0.0,
-      "allocation_score": 48.96,
-      "hold_score": 46.9,
+      "allocation_score": 48.87,
+      "hold_score": 46.85,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 21.56
+      "capital_competition_score": 21.46
     },
     "CRDO": {
       "structural_early_bird": 53.5,
-      "entry_score": 21.2,
+      "entry_score": 20.9,
       "trend": "photonics",
       "role": "Direct beneficiary / connectivity",
       "evidence_status": "UNREVALIDATED",
@@ -1410,8 +1410,8 @@
       "volatility_21d_ann_pct": 109.94,
       "max_drawdown_63d_pct": -46.93,
       "actual_weight_pct": 0.0,
-      "allocation_score": 38.97,
-      "hold_score": 24.77,
+      "allocation_score": 38.83,
+      "hold_score": 24.7,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
@@ -1419,7 +1419,7 @@
     },
     "POET": {
       "structural_early_bird": 60.2,
-      "entry_score": 7.1,
+      "entry_score": 6.8,
       "trend": "photonics",
       "role": "Photonic integration candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1430,36 +1430,36 @@
       "volatility_21d_ann_pct": 74.15,
       "max_drawdown_63d_pct": -25.89,
       "actual_weight_pct": 0.0,
-      "allocation_score": 36.31,
-      "hold_score": 36.41,
+      "allocation_score": 36.17,
+      "hold_score": 36.33,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 3.55
+      "capital_competition_score": 3.4
     },
     "IQE.L": {
       "structural_early_bird": 60.2,
-      "entry_score": 52.6,
+      "entry_score": 32.8,
       "trend": "photonics",
       "role": "InP substrate/epi candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 5.33,
-      "w1_pct": 8.67,
-      "m1_pct": -1.28,
-      "rel_qqq_1m_pct_points": -3.41,
-      "volatility_21d_ann_pct": 61.19,
+      "d1_pct": 2.0,
+      "w1_pct": 0.99,
+      "m1_pct": -4.77,
+      "rel_qqq_1m_pct_points": -6.91,
+      "volatility_21d_ann_pct": 60.84,
       "max_drawdown_63d_pct": -21.39,
       "actual_weight_pct": 0.0,
-      "allocation_score": 56.78,
-      "hold_score": 52.66,
+      "allocation_score": 47.87,
+      "hold_score": 46.31,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 40.55
+      "capital_competition_score": 25.46
     },
     "AVGO": {
       "structural_early_bird": 52.1,
-      "entry_score": 22.4,
+      "entry_score": 22.1,
       "trend": "photonics",
       "role": "Leader / networking silicon",
       "evidence_status": "UNREVALIDATED",
@@ -1470,16 +1470,16 @@
       "volatility_21d_ann_pct": 29.84,
       "max_drawdown_63d_pct": -20.69,
       "actual_weight_pct": 0.0,
-      "allocation_score": 38.74,
-      "hold_score": 39.04,
+      "allocation_score": 38.6,
+      "hold_score": 38.97,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 20.36
+      "capital_competition_score": 20.21
     },
     "MRVL": {
       "structural_early_bird": 66.5,
-      "entry_score": 41.7,
+      "entry_score": 41.5,
       "trend": "photonics",
       "role": "Direct beneficiary / optical DSP",
       "evidence_status": "UNREVALIDATED",
@@ -1490,16 +1490,16 @@
       "volatility_21d_ann_pct": 67.76,
       "max_drawdown_63d_pct": -22.56,
       "actual_weight_pct": 0.0,
-      "allocation_score": 55.34,
-      "hold_score": 55.23,
+      "allocation_score": 55.25,
+      "hold_score": 55.18,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 44.94
+      "capital_competition_score": 44.84
     },
     "CIEN": {
       "structural_early_bird": 66.5,
-      "entry_score": 13.0,
+      "entry_score": 12.8,
       "trend": "photonics",
       "role": "Direct beneficiary / optical networking",
       "evidence_status": "UNREVALIDATED",
@@ -1510,16 +1510,16 @@
       "volatility_21d_ann_pct": 70.65,
       "max_drawdown_63d_pct": -28.69,
       "actual_weight_pct": 0.0,
-      "allocation_score": 42.43,
-      "hold_score": 38.61,
+      "allocation_score": 42.34,
+      "hold_score": 38.56,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 9.02
+      "capital_competition_score": 8.92
     },
     "ANET": {
       "structural_early_bird": 65.2,
-      "entry_score": 42.2,
+      "entry_score": 41.9,
       "trend": "photonics",
       "role": "Leader / AI networking",
       "evidence_status": "UNREVALIDATED",
@@ -1530,16 +1530,16 @@
       "volatility_21d_ann_pct": 40.4,
       "max_drawdown_63d_pct": -12.71,
       "actual_weight_pct": 0.0,
-      "allocation_score": 54.85,
-      "hold_score": 56.32,
+      "allocation_score": 54.72,
+      "hold_score": 56.24,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 50.26
+      "capital_competition_score": 50.11
     },
     "ALAB": {
       "structural_early_bird": 47.2,
-      "entry_score": 63.8,
+      "entry_score": 63.5,
       "trend": "photonics",
       "role": "Connectivity candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1550,16 +1550,16 @@
       "volatility_21d_ann_pct": 96.45,
       "max_drawdown_63d_pct": -30.17,
       "actual_weight_pct": 0.0,
-      "allocation_score": 54.67,
-      "hold_score": 51.96,
+      "allocation_score": 54.54,
+      "hold_score": 51.88,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 49.46
+      "capital_competition_score": 49.31
     },
     "FN": {
       "structural_early_bird": 67.2,
-      "entry_score": 29.7,
+      "entry_score": 29.4,
       "trend": "photonics",
       "role": "Pick & shovel / optical manufacturing",
       "evidence_status": "UNREVALIDATED",
@@ -1570,16 +1570,16 @@
       "volatility_21d_ann_pct": 50.36,
       "max_drawdown_63d_pct": -37.37,
       "actual_weight_pct": 0.0,
-      "allocation_score": 50.33,
-      "hold_score": 43.6,
+      "allocation_score": 50.19,
+      "hold_score": 43.52,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 21.37
+      "capital_competition_score": 21.22
     },
     "AAOI": {
       "structural_early_bird": 47.2,
-      "entry_score": 7.2,
+      "entry_score": 7.0,
       "trend": "photonics",
       "role": "Optical modules candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1590,8 +1590,8 @@
       "volatility_21d_ann_pct": 67.09,
       "max_drawdown_63d_pct": -38.48,
       "actual_weight_pct": 0.0,
-      "allocation_score": 29.2,
-      "hold_score": 22.87,
+      "allocation_score": 29.11,
+      "hold_score": 22.82,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
@@ -1599,7 +1599,7 @@
     },
     "GLW": {
       "structural_early_bird": 67.2,
-      "entry_score": 29.0,
+      "entry_score": 28.7,
       "trend": "photonics",
       "role": "Optical fiber / interconnect pick & shovel",
       "evidence_status": "UNREVALIDATED",
@@ -1608,18 +1608,18 @@
       "m1_pct": -0.79,
       "rel_qqq_1m_pct_points": -2.93,
       "volatility_21d_ann_pct": 70.8,
-      "max_drawdown_63d_pct": -28.87,
+      "max_drawdown_63d_pct": -23.62,
       "actual_weight_pct": 0.0,
-      "allocation_score": 50.01,
-      "hold_score": 48.18,
+      "allocation_score": 49.88,
+      "hold_score": 49.95,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 27.87
+      "capital_competition_score": 30.08
     },
     "NOK": {
       "structural_early_bird": 47.2,
-      "entry_score": 19.0,
+      "entry_score": 18.7,
       "trend": "photonics",
       "role": "Optical networking candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1628,18 +1628,18 @@
       "m1_pct": -4.44,
       "rel_qqq_1m_pct_points": -6.58,
       "volatility_21d_ann_pct": 65.81,
-      "max_drawdown_63d_pct": -25.24,
+      "max_drawdown_63d_pct": -20.88,
       "actual_weight_pct": 0.0,
-      "allocation_score": 34.51,
-      "hold_score": 34.49,
+      "allocation_score": 34.38,
+      "hold_score": 35.94,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 9.93
+      "capital_competition_score": 11.74
     },
     "CSCO": {
       "structural_early_bird": 47.2,
-      "entry_score": 24.8,
+      "entry_score": 24.5,
       "trend": "photonics",
       "role": "Networking/optics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1650,16 +1650,16 @@
       "volatility_21d_ann_pct": 28.54,
       "max_drawdown_63d_pct": -14.09,
       "actual_weight_pct": 0.0,
-      "allocation_score": 37.12,
-      "hold_score": 39.38,
+      "allocation_score": 36.99,
+      "hold_score": 39.3,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 23.72
+      "capital_competition_score": 23.57
     },
     "ALMU": {
       "structural_early_bird": 47.2,
-      "entry_score": 12.2,
+      "entry_score": 12.0,
       "trend": "photonics",
       "role": "Compound semiconductor candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1670,8 +1670,8 @@
       "volatility_21d_ann_pct": 84.46,
       "max_drawdown_63d_pct": -37.32,
       "actual_weight_pct": 0.0,
-      "allocation_score": 31.45,
-      "hold_score": 27.01,
+      "allocation_score": 31.36,
+      "hold_score": 26.96,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
@@ -1679,7 +1679,7 @@
     },
     "MTSI": {
       "structural_early_bird": 60.2,
-      "entry_score": 37.8,
+      "entry_score": 37.5,
       "trend": "photonics",
       "role": "Optical semiconductor candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1690,16 +1690,16 @@
       "volatility_21d_ann_pct": 66.84,
       "max_drawdown_63d_pct": -26.84,
       "actual_weight_pct": 0.0,
-      "allocation_score": 50.12,
-      "hold_score": 47.76,
+      "allocation_score": 49.99,
+      "hold_score": 47.69,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 32.35
+      "capital_competition_score": 32.2
     },
     "IPGP": {
       "structural_early_bird": 47.2,
-      "entry_score": 37.5,
+      "entry_score": 37.2,
       "trend": "photonics",
       "role": "Photonics candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1708,18 +1708,18 @@
       "m1_pct": -0.03,
       "rel_qqq_1m_pct_points": -2.16,
       "volatility_21d_ann_pct": 32.13,
-      "max_drawdown_63d_pct": -34.45,
+      "max_drawdown_63d_pct": -32.2,
       "actual_weight_pct": 0.0,
-      "allocation_score": 42.84,
-      "hold_score": 37.66,
+      "allocation_score": 42.7,
+      "hold_score": 38.38,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 27.72
+      "capital_competition_score": 28.59
     },
     "APH": {
       "structural_early_bird": 67.2,
-      "entry_score": 55.6,
+      "entry_score": 55.4,
       "trend": "photonics",
       "role": "Interconnect pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1730,16 +1730,16 @@
       "volatility_21d_ann_pct": 39.18,
       "max_drawdown_63d_pct": -11.11,
       "actual_weight_pct": 0.0,
-      "allocation_score": 61.98,
-      "hold_score": 61.95,
+      "allocation_score": 61.89,
+      "hold_score": 61.9,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 63.34
+      "capital_competition_score": 63.24
     },
     "TEL": {
       "structural_early_bird": 54.2,
-      "entry_score": 51.9,
+      "entry_score": 51.6,
       "trend": "photonics",
       "role": "Interconnect pick & shovel candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1750,12 +1750,12 @@
       "volatility_21d_ann_pct": 31.19,
       "max_drawdown_63d_pct": -8.3,
       "actual_weight_pct": 0.0,
-      "allocation_score": 53.17,
-      "hold_score": 54.24,
+      "allocation_score": 53.03,
+      "hold_score": 54.16,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 58.28
+      "capital_competition_score": 58.13
     },
     "MP": {
       "structural_early_bird": 52.1,
@@ -1768,34 +1768,34 @@
       "m1_pct": -21.31,
       "rel_qqq_1m_pct_points": -23.45,
       "volatility_21d_ann_pct": 45.81,
-      "max_drawdown_63d_pct": -22.97,
+      "max_drawdown_63d_pct": -22.8,
       "actual_weight_pct": 0.0,
       "allocation_score": 28.88,
-      "hold_score": 26.61,
+      "hold_score": 26.67,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 2.62
+      "capital_competition_score": 2.69
     },
     "LYC.AX": {
       "structural_early_bird": 52.1,
-      "entry_score": 8.9,
+      "entry_score": 5.8,
       "trend": "minerals",
       "role": "Leader / ex-China separation",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -3.16,
-      "w1_pct": -1.5,
-      "m1_pct": -15.31,
-      "rel_qqq_1m_pct_points": -17.45,
-      "volatility_21d_ann_pct": 37.33,
-      "max_drawdown_63d_pct": -19.21,
+      "d1_pct": -0.94,
+      "w1_pct": -6.0,
+      "m1_pct": -14.43,
+      "rel_qqq_1m_pct_points": -16.57,
+      "volatility_21d_ann_pct": 37.09,
+      "max_drawdown_63d_pct": -19.39,
       "actual_weight_pct": 0.0,
-      "allocation_score": 32.66,
-      "hold_score": 32.43,
+      "allocation_score": 31.27,
+      "hold_score": 31.94,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 10.04
+      "capital_competition_score": 8.45
     },
     "USAR": {
       "structural_early_bird": 60.2,
@@ -1908,10 +1908,10 @@
       "m1_pct": -4.85,
       "rel_qqq_1m_pct_points": -6.99,
       "volatility_21d_ann_pct": 142.05,
-      "max_drawdown_63d_pct": -31.33,
+      "max_drawdown_63d_pct": -23.55,
       "actual_weight_pct": 0.0,
       "allocation_score": 28.48,
-      "hold_score": 28.85,
+      "hold_score": 31.57,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
@@ -1928,10 +1928,10 @@
       "m1_pct": -30.08,
       "rel_qqq_1m_pct_points": -32.21,
       "volatility_21d_ann_pct": 68.23,
-      "max_drawdown_63d_pct": -41.18,
+      "max_drawdown_63d_pct": -38.14,
       "actual_weight_pct": 0.0,
       "allocation_score": 25.96,
-      "hold_score": 16.8,
+      "hold_score": 17.86,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
@@ -1959,43 +1959,43 @@
     },
     "ILU.AX": {
       "structural_early_bird": 60.2,
-      "entry_score": 14.1,
+      "entry_score": 15.1,
       "trend": "minerals",
       "role": "Rare-earth refinery candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.19,
-      "w1_pct": -0.83,
-      "m1_pct": -15.74,
-      "rel_qqq_1m_pct_points": -17.88,
-      "volatility_21d_ann_pct": 31.19,
+      "d1_pct": 2.02,
+      "w1_pct": -0.66,
+      "m1_pct": -11.66,
+      "rel_qqq_1m_pct_points": -13.8,
+      "volatility_21d_ann_pct": 31.83,
       "max_drawdown_63d_pct": -20.68,
       "actual_weight_pct": 0.0,
-      "allocation_score": 39.46,
-      "hold_score": 37.5,
+      "allocation_score": 39.91,
+      "hold_score": 39.38,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 17.13
+      "capital_competition_score": 17.51
     },
     "HAS.AX": {
       "structural_early_bird": 47.2,
-      "entry_score": 14.4,
+      "entry_score": 5.5,
       "trend": "minerals",
       "role": "NdPr candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -1.85,
-      "w1_pct": 1.92,
-      "m1_pct": -10.17,
-      "rel_qqq_1m_pct_points": -12.31,
-      "volatility_21d_ann_pct": 39.49,
+      "d1_pct": -1.89,
+      "w1_pct": -5.45,
+      "m1_pct": -8.77,
+      "rel_qqq_1m_pct_points": -10.91,
+      "volatility_21d_ann_pct": 38.39,
       "max_drawdown_63d_pct": -21.21,
       "actual_weight_pct": 0.0,
-      "allocation_score": 32.44,
-      "hold_score": 32.46,
+      "allocation_score": 28.44,
+      "hold_score": 30.8,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 9.05
+      "capital_competition_score": 4.8
     },
     "ASM.AX": {
       "structural_early_bird": 60.2,
@@ -2019,23 +2019,23 @@
     },
     "ARU.AX": {
       "structural_early_bird": 60.2,
-      "entry_score": 2.3,
+      "entry_score": 7.6,
       "trend": "minerals",
       "role": "NdPr project candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -5.26,
+      "d1_pct": 0.0,
       "w1_pct": -5.26,
       "m1_pct": -12.2,
       "rel_qqq_1m_pct_points": -14.33,
       "volatility_21d_ann_pct": 74.99,
       "max_drawdown_63d_pct": -25.0,
       "actual_weight_pct": 0.0,
-      "allocation_score": 34.15,
-      "hold_score": 34.45,
+      "allocation_score": 36.53,
+      "hold_score": 35.78,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 1.4
+      "capital_competition_score": 4.05
     },
     "REEMF": {
       "structural_early_bird": 47.2,
@@ -2168,14 +2168,14 @@
       "m1_pct": 0.39,
       "rel_qqq_1m_pct_points": -1.75,
       "volatility_21d_ann_pct": 32.24,
-      "max_drawdown_63d_pct": -10.58,
+      "max_drawdown_63d_pct": -10.4,
       "actual_weight_pct": 0.0,
       "allocation_score": 51.43,
       "hold_score": 50.6,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 48.06
+      "capital_competition_score": 48.14
     },
     "AMBA": {
       "structural_early_bird": 54.2,
@@ -2219,23 +2219,23 @@
     },
     "IOT.MI": {
       "structural_early_bird": 60.2,
-      "entry_score": 86.0,
+      "entry_score": 78.6,
       "trend": "physical",
       "role": "Edge compute candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 4.98,
-      "w1_pct": 7.78,
-      "m1_pct": 23.4,
-      "rel_qqq_1m_pct_points": 21.27,
-      "volatility_21d_ann_pct": 78.98,
+      "d1_pct": 2.68,
+      "w1_pct": 3.6,
+      "m1_pct": 21.18,
+      "rel_qqq_1m_pct_points": 19.05,
+      "volatility_21d_ann_pct": 80.65,
       "max_drawdown_63d_pct": -15.66,
       "actual_weight_pct": 0.0,
-      "allocation_score": 71.81,
-      "hold_score": 72.89,
+      "allocation_score": 68.48,
+      "hold_score": 70.15,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 76.74
+      "capital_competition_score": 72.74
     },
     "QCOM": {
       "structural_early_bird": 60.2,
@@ -2248,14 +2248,14 @@
       "m1_pct": 13.78,
       "rel_qqq_1m_pct_points": 11.64,
       "volatility_21d_ann_pct": 56.49,
-      "max_drawdown_63d_pct": -17.06,
+      "max_drawdown_63d_pct": -15.95,
       "actual_weight_pct": 0.0,
       "allocation_score": 60.79,
-      "hold_score": 62.42,
+      "hold_score": 62.81,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 67.9
+      "capital_competition_score": 68.4
     },
     "NXPI": {
       "structural_early_bird": 60.2,
@@ -2268,14 +2268,14 @@
       "m1_pct": 4.63,
       "rel_qqq_1m_pct_points": 2.49,
       "volatility_21d_ann_pct": 38.93,
-      "max_drawdown_63d_pct": -21.52,
+      "max_drawdown_63d_pct": -21.46,
       "actual_weight_pct": 0.0,
       "allocation_score": 59.17,
-      "hold_score": 56.3,
+      "hold_score": 56.32,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 55.99
+      "capital_competition_score": 56.02
     },
     "ON": {
       "structural_early_bird": 47.2,
@@ -2288,34 +2288,34 @@
       "m1_pct": 1.14,
       "rel_qqq_1m_pct_points": -1.0,
       "volatility_21d_ann_pct": 61.56,
-      "max_drawdown_63d_pct": -28.03,
+      "max_drawdown_63d_pct": -27.87,
       "actual_weight_pct": 0.0,
       "allocation_score": 50.35,
-      "hold_score": 44.55,
+      "hold_score": 44.61,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 35.41
+      "capital_competition_score": 35.48
     },
     "MBLY": {
       "structural_early_bird": 60.2,
-      "entry_score": 25.8,
+      "entry_score": 25.9,
       "trend": "physical",
       "role": "Perception/autonomy candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -2.93,
-      "w1_pct": -2.44,
-      "m1_pct": -9.47,
-      "rel_qqq_1m_pct_points": -11.6,
-      "volatility_21d_ann_pct": 36.86,
-      "max_drawdown_63d_pct": -20.78,
+      "d1_pct": -2.86,
+      "w1_pct": -2.38,
+      "m1_pct": -9.41,
+      "rel_qqq_1m_pct_points": -11.55,
+      "volatility_21d_ann_pct": 36.8,
+      "max_drawdown_63d_pct": -18.98,
       "actual_weight_pct": 0.0,
-      "allocation_score": 44.72,
-      "hold_score": 42.89,
+      "allocation_score": 44.77,
+      "hold_score": 43.57,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 21.91
+      "capital_competition_score": 22.78
     },
     "OUST": {
       "structural_early_bird": 60.2,
@@ -2448,14 +2448,14 @@
       "m1_pct": -9.22,
       "rel_qqq_1m_pct_points": -11.36,
       "volatility_21d_ann_pct": 47.32,
-      "max_drawdown_63d_pct": -25.39,
+      "max_drawdown_63d_pct": -24.6,
       "actual_weight_pct": 0.0,
       "allocation_score": 39.87,
-      "hold_score": 35.5,
+      "hold_score": 35.78,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 14.01
+      "capital_competition_score": 14.36
     },
     "RR": {
       "structural_early_bird": 47.2,
@@ -2548,7 +2548,7 @@
       "m1_pct": 2.14,
       "rel_qqq_1m_pct_points": 0.0,
       "volatility_21d_ann_pct": 15.85,
-      "max_drawdown_63d_pct": -7.8,
+      "max_drawdown_63d_pct": -6.66,
       "actual_weight_pct": 24.0,
       "allocation_score": 47.61,
       "hold_score": 47.99,
@@ -2573,12 +2573,12 @@
       "score": 61.71,
       "m1_pct": 2.14,
       "volatility_21d_ann_pct": 15.85,
-      "max_drawdown_63d_pct": -7.8
+      "max_drawdown_63d_pct": -6.66
     },
     "rotation": {
       "mode": "COMPOUND",
       "best_incumbent": "AAON",
-      "best_incumbent_hold_score": 76.02,
+      "best_incumbent_hold_score": 76.74,
       "best_challenger": null,
       "best_challenger_score": null,
       "rotation_edge": null,
