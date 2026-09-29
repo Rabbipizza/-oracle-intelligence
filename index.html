@@ -159,7 +159,17 @@ function actionCard(x){
    <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div><div class="ticker">${x.ticker}</div><div class="muted small">${x.company}</div></div>${signalBadge(x.signal)}</div>
    <div class="small" style="margin-top:8px">${x.trend}</div>
    <div class="muted tiny" style="margin-top:4px;white-space:normal">${x.signal_reason||''}</div>
-   <div class="muted tiny" style="margin-top:6px">Structural: <b>${x.structural_early_bird==null?'—':x.structural_early_bird.toFixed(1)}</b> · Entry: <b>${x.entry_score==null?'—':x.entry_score.toFixed(1)}</b></div>
+   <div class="muted tiny" style="margin-top:6px">Structural: <b>${x.structural_early_bird==null?'—':x.structural_early_bird.toFixed(1)}</b> · Entry: <b>${x.entry_score==null?'—':x.entry_score.toFixed(1)}</b> · Hold: <b>${x.hold_score==null?'—':x.hold_score.toFixed(1)}</b></div>
+   <div style="margin-top:8px;padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:rgba(255,255,255,.03)">
+     <div class="tiny muted">ALLOCATION INDICATIVE SI ENTRÉE AUJOURD'HUI</div>
+     <div style="display:flex;justify-content:space-between;align-items:end;margin-top:4px">
+       <b style="font-size:18px">${x.indicative_entry_sizing?.band||'—'}</b>
+       <span class="tiny">${x.indicative_entry_sizing?.label||''}</span>
+     </div>
+     <div style="height:7px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:6px">
+       <div style="height:100%;width:${Math.max(0,Math.min(100,(x.indicative_entry_sizing?.max_pct||0)/70*100))}%;background:currentColor;border-radius:99px"></div>
+     </div>
+   </div>
    <div class="muted tiny" style="margin-top:5px">ACTUAL: <b>${x.actual_weight_pct==null?'0.0%':x.actual_weight_pct.toFixed(1)+'%'}</b> · TARGET: <b>${x.target_weight_pct==null?'0.0%':x.target_weight_pct.toFixed(1)+'%'}</b> · ACTION: <b>${x.portfolio_action||'WAIT'}</b></div>
    <div class="metrics">
     <div class="metric"><span>J-1</span><b class="${cls(x.d1)}">${pct(x.d1)}</b></div>
