@@ -203,6 +203,83 @@ def competition_score(sc, incumbent=False):
 for ticker,sc in scores.items():
     sc["capital_competition_score"]=competition_score(sc, float(sc.get("actual_weight_pct") or 0)>0)
 
+def indicative_entry_sizing(sc):
+    """Indicative fresh-entry sizing, separate from portfolio TARGET.
+    Returns a suggested max allocation band for NEW capital based on
+    proof/structure, entry quality, relative strength and current risk.
+    This is intentionally conservative near risk cliffs.
+    """
+    if sc.get("evidence_status")!="PROVEN":
+        return {"band":"0%","min_pct":0.0,"max_pct":0.0,"label":"NO ENTRY","reason":"Economic chain not freshly PROVEN."}
+
+    structural=float(sc.get("structural_early_bird") or 0)
+    entry=float(sc.get("entry_score") or 0)
+    rel=float(sc.get("rel_qqq_1m_pct_points") or 0)
+    vol=sc.get("volatility_21d_ann_pct")
+    dd=sc.get("max_drawdown_63d_pct")
+
+    # Hard exclusion.
+    if (dd is not None and dd<=-35) or (entry<50 and rel<0):
+        return {"band":"0-5%","min_pct":0.0,"max_pct":5.0,"label":"WATCH / TINY","reason":"Risk or timing too weak for meaningful fresh sizing."}
+
+    # Base band from entry quality.
+    if entry>=85:
+        lo,hi=50.0,70.0
+    elif entry>=75:
+        lo,hi=35.0,50.0
+    elif entry>=65:
+        lo,hi=20.0,35.0
+    elif entry>=55:
+        lo,hi=10.0,20.0
+    else:
+        lo,hi=5.0,10.0
+
+    # Structural conviction can slightly widen the ceiling.
+    if structural>=95 and entry>=80:
+        hi=min(70.0,hi+5.0)
+
+    # Relative strength adjustment.
+    if rel>=10:
+        hi=min(70.0,hi+5.0)
+    elif rel<0:
+        lo=max(0.0,lo-5.0)
+        hi=max(lo+5.0,hi-10.0)
+
+    # Risk haircut near the drawdown cliff and at very high vol.
+    if dd is not None:
+        if dd<=-32:
+            lo=min(lo,25.0)
+            hi=min(hi,40.0)
+        elif dd<=-25:
+            hi=min(hi,50.0)
+    if vol is not None and vol>=45:
+        hi=min(hi,45.0)
+    if vol is not None and vol>=55:
+        hi=min(hi,35.0)
+
+    lo=round(max(0.0,min(lo,hi)),1)
+    hi=round(max(lo,min(hi,70.0)),1)
+    if hi<=5:
+        label="WATCH / TINY"
+    elif hi<=20:
+        label="SMALL"
+    elif hi<=35:
+        label="MODERATE"
+    elif hi<=50:
+        label="STRONG"
+    else:
+        label="VERY STRONG"
+    return {
+        "band":f"{lo:g}-{hi:g}%",
+        "min_pct":lo,
+        "max_pct":hi,
+        "label":label,
+        "reason":"Fresh-entry sizing from Structural + Entry + relative strength, with volatility/drawdown haircuts."
+    }
+
+for ticker,sc in scores.items():
+    sc["indicative_entry_sizing"]=indicative_entry_sizing(sc)
+
 qqq_score=60.0
 if q_m1 is not None:
     qqq_score += clamp(q_m1*.8,-8,8)
