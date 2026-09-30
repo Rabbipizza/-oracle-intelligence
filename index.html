@@ -214,7 +214,7 @@ window.selectTrend=function(key){
   <td><b>${c.ticker}</b> ${c.radar_origin==='DYNAMIC_CHALLENGER'?'<span class="tiny orange">CHALLENGER</span>':''}<br><span class="muted tiny">${c.company}</span></td>
   <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${money(c.price,c.currency)}</td><td>${sparkline(c.spark)}</td>
   <td class="${cls(c.d1)}">${pct(c.d1)}</td><td class="${cls(c.w1)}">${pct(c.w1)}</td><td class="${cls(c.m1)}">${pct(c.m1)}</td>
-  <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}</td></tr>`).join('');
+  <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}<br><span class="muted">${c.evidence_maturity||''}${c.company_capture_score!=null?' · capture '+c.company_capture_score.toFixed(0):''}</span></td></tr>`).join('');
 }
 
 function portfolio(){
