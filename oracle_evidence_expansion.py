@@ -99,6 +99,7 @@ explicit=load("economic-evidence.json")
 companies=company_catalog()
 
 concepts={}
+concept_record_cache={}
 for key,cfg in (ontology.get("concepts",{}) or {}).items():
     aliases=[norm(x) for x in cfg.get("aliases",[]) if norm(x)]
     econ=[norm(x) for x in cfg.get("economic_terms",[]) if norm(x)]
@@ -109,6 +110,7 @@ for key,cfg in (ontology.get("concepts",{}) or {}).items():
             matched.append((r,ah,any_phrase(r["text"],econ)))
     uniq={r["origin"]:(r,ah,eh) for r,ah,eh in matched}
     vals=list(uniq.values())
+    concept_record_cache[key]=vals
     fam=sorted({r["family"] for r,_,_ in vals if r.get("family")})
     src=sorted({r["source"] for r,_,_ in vals if r.get("source")})
     primary=[r for r,_,_ in vals if r.get("primary")]
@@ -154,13 +156,13 @@ for ticker,meta in companies.items():
         names.append(ticker_norm)
 
     matches=[]
-    for r in rows:
+    # Only inspect records already semantically linked to this concept.
+    # This changes complexity from companies × all records to
+    # companies × concept-relevant records.
+    for r,ah,eh in concept_record_cache.get(trend,[]):
         name_hit=any(re.search(r"(?<![a-z0-9])"+re.escape(n)+r"(?![a-z0-9])",r["text"]) for n in names)
         if not name_hit: continue
-        ah=any_phrase(r["text"],aliases)
-        eh=any_phrase(r["text"],econ)
-        if ah or eh:
-            matches.append((r,ah,eh))
+        matches.append((r,ah,eh))
     uniq={r["origin"]:(r,ah,eh) for r,ah,eh in matches}
     vals=list(uniq.values())
     fam=sorted({r["family"] for r,_,_ in vals if r.get("family")})
