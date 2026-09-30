@@ -20,6 +20,9 @@ def pct(a,b):
 def roundn(x,n=2):
     return None if x is None or not math.isfinite(x) else round(x,n)
 
+def clamp(x,a=0,b=100):
+    return max(a,min(b,x))
+
 def series_rows(market,ticker):
     p=(market.get("prices",{}).get(ticker) or {}).get("rows",[])
     return sorted([r for r in p if isinstance(r,dict) and r.get("date") and isinstance(r.get("close"),(int,float))],key=lambda r:r["date"])
@@ -127,6 +130,8 @@ def main():
     market=load("data/market.json")
     decisions=load("decision-state.json")
     portfolio=load("portfolio.json")
+    challengers=load("data/company-challengers.json")
+    prior_cockpit=load("data/cockpit.json")
     qrows=series_rows(market,"QQQ")
 
     trends=[]
@@ -135,8 +140,42 @@ def main():
         ds=decisions.get("trends",{}).get(key,{})
         companies=[]
         m1s=[]; positive=0; available=0
-        for i,row in enumerate(tr.get("companies",[])[:20],1):
+
+        # Static research universe = validated/incumbent layer.
+        base_rows=[]
+        for i,row in enumerate(tr.get("companies",[]),1):
             ticker,name,role,proof=(row+[None,None,None,None])[:4]
+            base_rows.append({
+                "ticker":ticker,"company":name,"role":role,"proof":proof,
+                "research_rank":i,"radar_origin":"RESEARCH_UNIVERSE",
+                "radar_discovery_score":0.0
+            })
+
+        # Dynamic challengers = radar-only until explicit economic proof exists.
+        known={x["ticker"] for x in base_rows}
+        for ch in (challengers.get("trends",{}) or {}).get(key,[]) or []:
+            ticker=ch.get("ticker")
+            if not ticker or ticker in known:
+                continue
+            base_rows.append({
+                "ticker":ticker,
+                "company":ch.get("name") or ticker,
+                "role":"Dynamic challenger — economic capture unproven",
+                "proof":"UNPROVEN",
+                "research_rank":None,
+                "radar_origin":"DYNAMIC_CHALLENGER",
+                "radar_discovery_score":float(ch.get("radar_discovery_score") or 0),
+                "challenger_queries":ch.get("queries",[])
+            })
+
+        previous={}
+        for pt in prior_cockpit.get("trends",[]) or []:
+            if pt.get("key")==key:
+                previous={x.get("ticker"):x.get("rank") for x in pt.get("companies",[]) or []}
+                break
+
+        for row in base_rows:
+            ticker=row["ticker"]; proof=row.get("proof")
             metrics=latest_metrics(series_rows(market,ticker),qrows)
             sig,reason=signal_for(ticker,proof,decisions)
             if metrics["m1"] is not None:
@@ -144,21 +183,57 @@ def main():
                 if metrics["m1"]>0: positive+=1
             md=market.get("prices",{}).get(ticker) or {}
             sc=(decisions.get("scores",{}) or {}).get(ticker,{})
-            c={"rank":i,"ticker":ticker,"company":name,"role":role,"proof":proof,
+            structural=sc.get("structural_early_bird")
+            entry=sc.get("entry_score")
+            proof_u=str(proof or "").upper()
+            evidence_base=100.0 if sc.get("evidence_status")=="PROVEN" else 70.0 if "PROVEN" in proof_u else 55.0 if "PARTIAL" in proof_u else 20.0
+            structural_for_rank=float(structural if structural is not None else evidence_base)
+            entry_for_rank=float(entry if entry is not None else 50.0)
+            rel=float(metrics.get("rel_m1_qqq") or 0.0)
+            momentum=clamp(50.0+2.0*rel)
+            discovery_boost=min(10.0,float(row.get("radar_discovery_score") or 0.0)*0.20)
+            radar_score=roundn(
+                0.45*structural_for_rank+
+                0.30*entry_for_rank+
+                0.15*momentum+
+                0.10*evidence_base+
+                discovery_boost,
+                2
+            )
+            c={"rank":None,"previous_rank":previous.get(ticker),
+               "ticker":ticker,"company":row.get("company"),"role":row.get("role"),"proof":proof,
+               "research_rank":row.get("research_rank"),"radar_origin":row.get("radar_origin"),
+               "radar_discovery_score":row.get("radar_discovery_score",0.0),
+               "radar_rank_score":radar_score,
+               "challenger_queries":row.get("challenger_queries",[]),
                "signal":sig,"signal_reason":reason,
-               "structural_early_bird":sc.get("structural_early_bird"),
-               "entry_score":sc.get("entry_score"),
+               "structural_early_bird":structural,
+               "entry_score":entry,
                "indicative_entry_sizing":sc.get("indicative_entry_sizing"),
                "hold_score":sc.get("hold_score"),
                "capital_competition_score":sc.get("capital_competition_score"),
                "actual_weight_pct":sc.get("actual_weight_pct"),
                "target_weight_pct":sc.get("target_weight_pct"),
                "portfolio_action":sc.get("portfolio_action"),
-               "evidence_status":sc.get("evidence_status"),
+               "evidence_status":sc.get("evidence_status") or ("UNPROVEN" if row.get("radar_origin")=="DYNAMIC_CHALLENGER" else None),
                "invalidation":sc.get("invalidation",[]),
                "currency":md.get("currency"),"exchange":md.get("exchange"),**metrics}
             companies.append(c)
+
+        # Dynamic Top 20: proof/structure dominates, then entry + QQQ-relative acceleration.
+        # Unproven challengers can enter the radar but never become GREEN here.
+        companies.sort(key=lambda x:(
+            x.get("radar_rank_score") is None,
+            -(x.get("radar_rank_score") or -1e9),
+            x.get("research_rank") or 999
+        ))
+        companies=companies[:20]
+        for i,c in enumerate(companies,1):
+            c["rank"]=i
+            pr=c.get("previous_rank")
+            c["rank_delta"]=None if pr is None else pr-i
             all_companies.append({**c,"trend_key":key,"trend":tr.get("label"),"trend_rank":ds.get("rank")})
+
         trends.append({
             "key":key,"label":tr.get("label"),"rank":ds.get("rank"),
             "previous_rank":ds.get("previous_rank"),"rank_delta":rank_delta(ds.get("rank"),ds.get("previous_rank")),
