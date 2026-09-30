@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "rule": "Concept aliases are retrieval vocabulary only. They may expand evidence coverage but never prove economic capture by themselves.",
+  "concepts": {
+    "power": {
+      "label": "AI power / grid",
+      "aliases": ["data center power","data centre power","grid equipment","electrical distribution","switchgear","transformer","backup power","onsite generation","data center cooling","data centre cooling","liquid cooling","thermal management","power demand","generation capacity","electrification"],
+      "economic_terms": ["orders","backlog","revenue","capacity","capex","contract","award","demand","shipment","bookings","guidance"]
+    },
+    "photonics": {
+      "label": "AI optical interconnect / photonics",
+      "aliases": ["optical interconnect","silicon photonics","co-packaged optics","co packaged optics","800g","1.6t","1 6t","optical dsp","transceiver","inp laser","indium phosphide","optical networking","datacenter optics","data center optics"],
+      "economic_terms": ["orders","backlog","revenue","capacity","capex","contract","award","demand","shipment","bookings","guidance"]
+    },
+    "physical": {
+      "label": "Physical AI / robotics infrastructure",
+      "aliases": ["physical ai","robotics","humanoid robot","vision language action","vision-language-action","vla","machine vision","lidar","autonomous systems","industrial automation","warehouse automation","edge ai"],
+      "economic_terms": ["orders","backlog","revenue","capacity","capex","contract","award","deployment","shipments","customers","guidance"]
+    },
+    "cuas": {
+      "label": "Counter-UAS / directed energy",
+      "aliases": ["counter uas","counter-uas","counter drone","counter-drone","directed energy","drone defense","anti drone","anti-drone","uas defense","autonomous drone","drone systems"],
+      "economic_terms": ["contract","award","procurement","program","orders","backlog","revenue","production","delivery","guidance"]
+    },
+    "minerals": {
+      "label": "Critical minerals / strategic materials",
+      "aliases": ["rare earth","rare-earth","critical minerals","copper supply","uranium","magnet materials","permanent magnet","refining capacity","mining capacity","strategic minerals"],
+      "economic_terms": ["contract","award","offtake","production","capacity","revenue","capex","shipment","orders","guidance"]
+    }
+  }
+}
