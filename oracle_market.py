@@ -70,6 +70,13 @@ def universe_tickers():
             for row in tr.get("companies",[]):
                 if row: tickers.add(str(row[0]))
     except Exception: pass
+    try:
+        x=json.loads(Path("data/company-challengers.json").read_text())
+        for rows in (x.get("trends",{}) or {}).values():
+            for row in rows or []:
+                t=row.get("ticker")
+                if t: tickers.add(str(t))
+    except Exception: pass
     return sorted(tickers)
 
 def main():
