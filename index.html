@@ -210,7 +210,8 @@ window.selectTrend=function(key){
  $('detailMedian').textContent=pct(t.market.median_1m_pct); $('detailMedian').className=cls(t.market.median_1m_pct);
  $('detailBreadth').textContent=t.market.breadth_positive_1m_pct==null?'—':t.market.breadth_positive_1m_pct.toFixed(0)+'%';
  $('companies').innerHTML=(t.companies||[]).map(c=>`<tr>
-  <td><b>#${c.rank}</b></td><td><b>${c.ticker}</b><br><span class="muted tiny">${c.company}</span></td>
+  <td><b>#${c.rank}</b><br><span class="tiny ${c.rank_delta>0?'pos':c.rank_delta<0?'neg':'muted'}">${c.previous_rank==null?'NEW':c.rank_delta>0?'▲ '+c.rank_delta:c.rank_delta<0?'▼ '+Math.abs(c.rank_delta):'→'}</span></td>
+  <td><b>${c.ticker}</b> ${c.radar_origin==='DYNAMIC_CHALLENGER'?'<span class="tiny orange">CHALLENGER</span>':''}<br><span class="muted tiny">${c.company}</span></td>
   <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${money(c.price,c.currency)}</td><td>${sparkline(c.spark)}</td>
   <td class="${cls(c.d1)}">${pct(c.d1)}</td><td class="${cls(c.w1)}">${pct(c.w1)}</td><td class="${cls(c.m1)}">${pct(c.m1)}</td>
   <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}</td></tr>`).join('');
