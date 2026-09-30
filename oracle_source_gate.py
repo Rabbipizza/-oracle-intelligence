@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 CFG=json.loads(Path("source-gate.json").read_text())
 SNAP=Path("data/source_snapshots")
 DISC=Path("data/discovery-candidates.json")
+DOSSIERS=Path("data/evidence-dossiers.json")
 OUT=Path("data/source-gate-status.json")
 
 def norm(s):
@@ -72,28 +73,60 @@ def load_records():
 rows=load_records()
 g=CFG["gate"]
 disc=json.loads(DISC.read_text()) if DISC.exists() else {"candidates":[]}
+dossiers=json.loads(DOSSIERS.read_text()) if DOSSIERS.exists() else {}
+mapping={x.get("term"):x for x in dossiers.get("discovery_to_concepts",[]) or []}
+concepts=dossiers.get("concepts",{}) or {}
 candidate_status=[]
 for c in disc.get("candidates",[]):
     phrase=norm(c.get("term",""))
     if not phrase:
         continue
+
+    # Exact phrase evidence remains useful, but mapped canonical concepts may
+    # aggregate semantically-equivalent vocabulary across independent sources.
     matched=[r for r in rows if phrase in r["text"]]
-    origins={}
-    for r in matched:
-        origins[r["origin"]]=r
-    uniq=list(origins.values())
-    fam=sorted({r["family"] for r in uniq if r["family"]})
-    primary_origins=sorted({r["origin"] for r in uniq if r["primary"]})
-    sources=sorted({r["source"] for r in uniq if r["source"]})
-    coverage=len(fam)>=g["min_independent_families"] and len(primary_origins)>=g["min_primary_sources"]
+    origins={r["origin"]:r for r in matched}
+    exact=list(origins.values())
+    exact_fam={r["family"] for r in exact if r["family"]}
+    exact_primary={r["origin"] for r in exact if r["primary"]}
+    exact_sources={r["source"] for r in exact if r["source"]}
+
+    mp=mapping.get(c.get("term")) or {}
+    concept_key=mp.get("concept")
+    cd=concepts.get(concept_key,{}) if concept_key else {}
+
+    fam=sorted(set(exact_fam)|set(cd.get("families",[]) or []))
+    sources=sorted(set(exact_sources)|set(cd.get("sources",[]) or []))
+    primary_count=max(len(exact_primary),int(cd.get("primary_origin_count") or 0))
+    economic_count=int(cd.get("economic_origin_count") or 0)
+    matched_count=max(len(exact),int(cd.get("matched_origin_count") or 0))
+
+    coverage=(
+        len(fam)>=g["min_independent_families"] and
+        primary_count>=g["min_primary_sources"] and
+        economic_count>=1
+    )
+
+    maturity=cd.get("maturity") if concept_key else None
+    if coverage:
+        trend_status="ECONOMIC_LINK"
+    elif maturity in {"ECONOMIC_LINK","CORROBORATED","DISCOVERED"}:
+        trend_status=maturity
+    else:
+        trend_status="DISCOVERED" if matched_count else "UNPROVEN"
+
     candidate_status.append({
-        "term":c.get("term"),"families":fam,"family_count":len(fam),
-        "sources":sources,"matched_origin_count":len(uniq),
-        "primary_origin_count":len(primary_origins),
+        "term":c.get("term"),
+        "concept":concept_key,
+        "concept_mapping_confidence":mp.get("mapping_confidence"),
+        "families":fam,"family_count":len(fam),
+        "sources":sources,"matched_origin_count":matched_count,
+        "primary_origin_count":primary_count,
+        "economic_origin_count":economic_count,
         "coverage_gate_pass":coverage,
-        "economic_transmission":"REQUIRES_ANALYST_PROOF",
-        "company_capture":"REQUIRES_ANALYST_PROOF",
-        "trend_status":"PARTIAL" if coverage else "UNPROVEN"
+        "economic_transmission":"EVIDENCE_PRESENT" if economic_count else "REQUIRES_EVIDENCE_EXPANSION",
+        "company_capture":"REQUIRES_COMPANY_DOSSIER",
+        "trend_status":trend_status
     })
 
 families=sorted({r["family"] for r in rows if r["family"]})
@@ -107,7 +140,7 @@ status={
         "primary_origin_count":len({r["origin"] for r in rows if r["primary"]})
     },
     "candidate_gates":candidate_status,
-    "rule":"Coverage is record-level and origin-deduplicated. A trend needs evidence in at least three independent families and one primary origin; economic transmission and company capture remain separate gates."
+    "rule":"Coverage is concept-level and origin-deduplicated. Semantic aliases may combine equivalent vocabulary across sources. Full coverage still requires at least three independent families, one primary origin, and non-science economic evidence; company capture is a separate gate."
 }
 OUT.write_text(json.dumps(status,indent=2),encoding="utf-8")
 print(json.dumps({"discovery_quality":status["discovery_quality"],"records":len(rows),"candidate_gates":len(candidate_status),"passing":sum(1 for x in candidate_status if x["coverage_gate_pass"])}))
