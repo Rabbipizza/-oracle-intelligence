@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-30T23:04:49.690794+00:00",
-  "market_generated_at": "2026-09-30T23:04:24.806769+00:00",
+  "generated_at": "2026-09-30T23:11:04.451194+00:00",
+  "market_generated_at": "2026-09-30T23:10:40.012670+00:00",
   "market_source": {
     "prices": "Yahoo Finance chart EOD",
     "fx": "ECB Data Portal"
@@ -17,7 +17,193 @@
     "unique_papers": 13816,
     "recent_docs": 9094,
     "baseline_docs": 3878,
-    "scout_candidates_passing_coverage": []
+    "scout_candidates_passing_coverage": [],
+    "evidence_maturity_scale": [
+      "DISCOVERED",
+      "CORROBORATED",
+      "ECONOMIC_LINK",
+      "COMPANY_CAPTURE",
+      "PROVEN"
+    ],
+    "concept_evidence": {
+      "power": {
+        "label": "AI power / grid",
+        "aliases": [
+          "data center power",
+          "data centre power",
+          "grid equipment",
+          "electrical distribution",
+          "switchgear",
+          "transformer",
+          "backup power",
+          "onsite generation",
+          "data center cooling",
+          "data centre cooling",
+          "liquid cooling",
+          "thermal management",
+          "power demand",
+          "generation capacity",
+          "electrification"
+        ],
+        "evidence_score": 84.0,
+        "maturity": "CORROBORATED",
+        "family_count": 2,
+        "families": [
+          "industry_contracts",
+          "science"
+        ],
+        "source_count": 5,
+        "sources": [
+          "Crossref",
+          "OpenAlex",
+          "TED EU procurement",
+          "USAspending",
+          "arXiv"
+        ],
+        "matched_origin_count": 645,
+        "primary_origin_count": 636,
+        "economic_origin_count": 0,
+        "science_origin_count": 637
+      },
+      "photonics": {
+        "label": "AI optical interconnect / photonics",
+        "aliases": [
+          "optical interconnect",
+          "silicon photonics",
+          "co-packaged optics",
+          "co packaged optics",
+          "800g",
+          "6t",
+          "6t",
+          "optical dsp",
+          "transceiver",
+          "inp laser",
+          "indium phosphide",
+          "optical networking",
+          "datacenter optics",
+          "data center optics"
+        ],
+        "evidence_score": 84.0,
+        "maturity": "CORROBORATED",
+        "family_count": 2,
+        "families": [
+          "industry_contracts",
+          "science"
+        ],
+        "source_count": 4,
+        "sources": [
+          "Crossref",
+          "OpenAlex",
+          "USAspending",
+          "arXiv"
+        ],
+        "matched_origin_count": 1432,
+        "primary_origin_count": 1136,
+        "economic_origin_count": 0,
+        "science_origin_count": 1431
+      },
+      "physical": {
+        "label": "Physical AI / robotics infrastructure",
+        "aliases": [
+          "physical ai",
+          "robotics",
+          "humanoid robot",
+          "vision language action",
+          "vision-language-action",
+          "vla",
+          "machine vision",
+          "lidar",
+          "autonomous systems",
+          "industrial automation",
+          "warehouse automation",
+          "edge ai"
+        ],
+        "evidence_score": 84.0,
+        "maturity": "CORROBORATED",
+        "family_count": 2,
+        "families": [
+          "industry_contracts",
+          "science"
+        ],
+        "source_count": 5,
+        "sources": [
+          "Crossref",
+          "OpenAlex",
+          "TED EU procurement",
+          "USAspending",
+          "arXiv"
+        ],
+        "matched_origin_count": 760,
+        "primary_origin_count": 657,
+        "economic_origin_count": 0,
+        "science_origin_count": 732
+      },
+      "cuas": {
+        "label": "Counter-UAS / directed energy",
+        "aliases": [
+          "counter uas",
+          "counter-uas",
+          "counter drone",
+          "counter-drone",
+          "directed energy",
+          "drone defense",
+          "anti drone",
+          "anti-drone",
+          "uas defense",
+          "autonomous drone",
+          "drone systems"
+        ],
+        "evidence_score": 80.0,
+        "maturity": "ECONOMIC_LINK",
+        "family_count": 2,
+        "families": [
+          "industry_contracts",
+          "science"
+        ],
+        "source_count": 2,
+        "sources": [
+          "USAspending",
+          "arXiv"
+        ],
+        "matched_origin_count": 70,
+        "primary_origin_count": 70,
+        "economic_origin_count": 9,
+        "science_origin_count": 7
+      },
+      "minerals": {
+        "label": "Critical minerals / strategic materials",
+        "aliases": [
+          "rare earth",
+          "rare-earth",
+          "critical minerals",
+          "copper supply",
+          "uranium",
+          "magnet materials",
+          "permanent magnet",
+          "refining capacity",
+          "mining capacity",
+          "strategic minerals"
+        ],
+        "evidence_score": 96.0,
+        "maturity": "ECONOMIC_LINK",
+        "family_count": 2,
+        "families": [
+          "industry_contracts",
+          "science"
+        ],
+        "source_count": 4,
+        "sources": [
+          "Crossref",
+          "OpenAlex",
+          "USAspending",
+          "arXiv"
+        ],
+        "matched_origin_count": 21,
+        "primary_origin_count": 19,
+        "economic_origin_count": 1,
+        "science_origin_count": 12
+      }
+    }
   },
   "trends": [
     {
@@ -41,6 +227,9 @@
           "company": "Marvell",
           "role": "Direct beneficiary / optical DSP",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 7,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -105,6 +294,9 @@
           "company": "Semtech",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -158,11 +350,14 @@
         },
         {
           "rank": 3,
-          "previous_rank": 5,
+          "previous_rank": 3,
           "ticker": "RMBS",
           "company": "Rambus",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -212,15 +407,18 @@
             118.95,
             123.15
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 4,
-          "previous_rank": 3,
+          "previous_rank": 4,
           "ticker": "CLS",
           "company": "Celestica",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -270,15 +468,18 @@
             122.4,
             120.72
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 5,
-          "previous_rank": 4,
+          "previous_rank": 5,
           "ticker": "LITE",
           "company": "Lumentum",
           "role": "Bottleneck / lasers & optics",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 2,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -334,15 +535,18 @@
             106.42,
             106.18
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 6,
-          "previous_rank": 8,
+          "previous_rank": 6,
           "ticker": "MCHP",
           "company": "Microchip Technology",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -392,15 +596,18 @@
             107.26,
             105.88
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 7,
-          "previous_rank": 9,
+          "previous_rank": 7,
           "ticker": "APH",
           "company": "Amphenol",
           "role": "Interconnect pick & shovel candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 19,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -456,15 +663,18 @@
             106.39,
             106.34
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 8,
-          "previous_rank": 6,
+          "previous_rank": 8,
           "ticker": "ALAB",
           "company": "Astera Labs",
           "role": "Connectivity candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -520,15 +730,18 @@
             120.49,
             119.86
           ],
-          "rank_delta": -2
+          "rank_delta": 0
         },
         {
           "rank": 9,
-          "previous_rank": 10,
+          "previous_rank": 9,
           "ticker": "FLEX",
           "company": "Flex",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -578,15 +791,18 @@
             104.19,
             100.68
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 10,
-          "previous_rank": 12,
+          "previous_rank": 10,
           "ticker": "MTSI",
           "company": "MACOM",
           "role": "Optical semiconductor candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 17,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -642,7 +858,7 @@
             107.75,
             107.96
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 11,
@@ -651,6 +867,9 @@
           "company": "Fabrinet",
           "role": "Pick & shovel / optical manufacturing",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 11,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -710,11 +929,14 @@
         },
         {
           "rank": 12,
-          "previous_rank": 14,
+          "previous_rank": 12,
           "ticker": "ANET",
           "company": "Arista Networks",
           "role": "Leader / AI networking",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 9,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -770,15 +992,18 @@
             103.66,
             104.04
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 13,
-          "previous_rank": 7,
+          "previous_rank": 13,
           "ticker": "GLW",
           "company": "Corning",
           "role": "Optical fiber / interconnect pick & shovel",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 13,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -834,15 +1059,18 @@
             106.71,
             103.38
           ],
-          "rank_delta": -6
+          "rank_delta": 0
         },
         {
           "rank": 14,
-          "previous_rank": 13,
+          "previous_rank": 14,
           "ticker": "COHR",
           "company": "Coherent",
           "role": "Bottleneck / optical components",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 1,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -898,15 +1126,18 @@
             105.18,
             103.59
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 17,
+          "previous_rank": 15,
           "ticker": "IQE.L",
           "company": "IQE",
           "role": "InP substrate/epi candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 5,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -962,15 +1193,18 @@
             93.36,
             98.13
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": 15,
+          "previous_rank": 16,
           "ticker": "TEL",
           "company": "TE Connectivity",
           "role": "Interconnect pick & shovel candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 20,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1026,15 +1260,18 @@
             103.58,
             102.84
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 17,
-          "previous_rank": 16,
+          "previous_rank": 17,
           "ticker": "POET",
           "company": "POET Technologies",
           "role": "Photonic integration candidate",
           "proof": "PROVEN TECH / PARTIAL CAPTURE",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 25.0,
           "research_rank": 4,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1090,7 +1327,7 @@
             102.82,
             100.27
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 18,
@@ -1099,6 +1336,9 @@
           "company": "IPG Photonics",
           "role": "Photonics candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 18,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1163,6 +1403,9 @@
           "company": "Ciena",
           "role": "Direct beneficiary / optical networking",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 8,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1222,11 +1465,14 @@
         },
         {
           "rank": 20,
-          "previous_rank": null,
+          "previous_rank": 20,
           "ticker": "CSCO",
           "company": "Cisco",
           "role": "Networking/optics candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": 15,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1282,7 +1528,7 @@
             96.79,
             97.41
           ],
-          "rank_delta": null
+          "rank_delta": 0
         }
       ]
     },
@@ -1307,6 +1553,9 @@
           "company": "AAON, Inc.",
           "role": "Direct beneficiary / data-center cooling",
           "proof": "PROVEN",
+          "evidence_maturity": "PROVEN",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 35.0,
           "research_rank": 4,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1375,6 +1624,9 @@
           "company": "GE Vernova",
           "role": "Bottleneck / generation",
           "proof": "PROVEN",
+          "evidence_maturity": "PROVEN",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 1,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1438,11 +1690,14 @@
         },
         {
           "rank": 3,
-          "previous_rank": 6,
+          "previous_rank": 3,
           "ticker": "SMCI",
           "company": "Super Micro Computer",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -1492,15 +1747,18 @@
             110.03,
             110.17
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 4,
-          "previous_rank": 7,
+          "previous_rank": 4,
           "ticker": "FIX",
           "company": "Comfort Systems USA",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -1550,15 +1808,18 @@
             107.73,
             107.02
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 5,
-          "previous_rank": 9,
+          "previous_rank": 5,
           "ticker": "MOD",
           "company": "Modine Manufacturing",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -1608,15 +1869,18 @@
             102.96,
             104.92
           ],
-          "rank_delta": 4
+          "rank_delta": 0
         },
         {
           "rank": 6,
-          "previous_rank": 10,
+          "previous_rank": 6,
           "ticker": "EME",
           "company": "EMCOR Group",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -1666,15 +1930,18 @@
             103.74,
             102.72
           ],
-          "rank_delta": 4
+          "rank_delta": 0
         },
         {
           "rank": 7,
-          "previous_rank": 4,
+          "previous_rank": 7,
           "ticker": "PWR",
           "company": "Quanta Services",
           "role": "Pick & shovel / grid construction",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 5,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1730,15 +1997,18 @@
             107.36,
             105.83
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 8,
-          "previous_rank": 3,
+          "previous_rank": 8,
           "ticker": "BE",
           "company": "Bloom Energy",
           "role": "Onsite power candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 16,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1794,15 +2064,18 @@
             141.18,
             134.26
           ],
-          "rank_delta": -5
+          "rank_delta": 0
         },
         {
           "rank": 9,
-          "previous_rank": 11,
+          "previous_rank": 9,
           "ticker": "AMSC",
           "company": "American Superconductor",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -1852,15 +2125,18 @@
             101.6,
             101.39
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 10,
-          "previous_rank": 5,
+          "previous_rank": 10,
           "ticker": "NVT",
           "company": "nVent",
           "role": "Pick & shovel / electrical connection",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 7,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1916,15 +2192,18 @@
             107.25,
             106.38
           ],
-          "rank_delta": -5
+          "rank_delta": 0
         },
         {
           "rank": 11,
-          "previous_rank": 8,
+          "previous_rank": 11,
           "ticker": "GNRC",
           "company": "Generac",
           "role": "Distributed power candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": 17,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1980,15 +2259,18 @@
             114.48,
             111.64
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 12,
-          "previous_rank": 15,
+          "previous_rank": 12,
           "ticker": "OKLO",
           "company": "Oklo",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2038,15 +2320,18 @@
             91.47,
             91.25
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 13,
-          "previous_rank": 16,
+          "previous_rank": 13,
           "ticker": "ETN",
           "company": "Eaton",
           "role": "Pick & shovel / electrical distribution",
           "proof": "PROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 3,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2102,15 +2387,18 @@
             107.81,
             106.92
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 14,
-          "previous_rank": 18,
+          "previous_rank": 14,
           "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Grid equipment candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 18,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2166,15 +2454,18 @@
             100.99,
             102.25
           ],
-          "rank_delta": 4
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 12,
+          "previous_rank": 15,
           "ticker": "CAT",
           "company": "Caterpillar",
           "role": "Direct beneficiary / onsite generation",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2230,15 +2521,18 @@
             103.66,
             101.67
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": 17,
+          "previous_rank": 16,
           "ticker": "NNE",
           "company": "Nano Nuclear Energy",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2288,15 +2582,18 @@
             86.33,
             86.66
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 17,
-          "previous_rank": 14,
+          "previous_rank": 17,
           "ticker": "POWL",
           "company": "Powell Industries",
           "role": "Bottleneck candidate / switchgear",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 6,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2352,15 +2649,18 @@
             104.86,
             102.64
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 18,
-          "previous_rank": null,
+          "previous_rank": 18,
           "ticker": "ENR.DE",
           "company": "Siemens Energy",
           "role": "Generation/grid candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 20,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2416,7 +2716,7 @@
             99.09,
             102.56
           ],
-          "rank_delta": null
+          "rank_delta": 0
         },
         {
           "rank": 19,
@@ -2425,6 +2725,9 @@
           "company": "NuScale Power",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2478,11 +2781,14 @@
         },
         {
           "rank": 20,
-          "previous_rank": 13,
+          "previous_rank": 20,
           "ticker": "VST",
           "company": "Vistra",
           "role": "Direct beneficiary / firm power",
           "proof": "PARTIAL",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 12,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2538,7 +2844,7 @@
             102.52,
             100.71
           ],
-          "rank_delta": -7
+          "rank_delta": 0
         }
       ]
     },
@@ -2563,6 +2869,9 @@
           "company": "Southern Copper",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2616,11 +2925,14 @@
         },
         {
           "rank": 2,
-          "previous_rank": 3,
+          "previous_rank": 2,
           "ticker": "RIO",
           "company": "Rio Tinto",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 100.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2670,15 +2982,18 @@
             91.86,
             91.87
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 3,
-          "previous_rank": 2,
+          "previous_rank": 3,
           "ticker": "NEM",
           "company": "Newmont",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 90.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2728,7 +3043,7 @@
             92.88,
             91.5
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 4,
@@ -2737,6 +3052,9 @@
           "company": "BHP",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2795,6 +3113,9 @@
           "company": "Vale",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 90.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2853,6 +3174,9 @@
           "company": "NexGen Energy",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2911,6 +3235,9 @@
           "company": "Coeur Mining",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -2969,6 +3296,9 @@
           "company": "Denison Mines",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -3027,6 +3357,9 @@
           "company": "Australian Strategic Materials",
           "role": "Mine-to-metals candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 13,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3091,6 +3424,9 @@
           "company": "Texas Mineral Resources",
           "role": "Rare-earth development candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 6,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3134,6 +3470,9 @@
           "company": "Critical Metals Corp",
           "role": "Rare-earth development candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 8,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3193,11 +3532,14 @@
         },
         {
           "rank": 12,
-          "previous_rank": 14,
+          "previous_rank": 12,
           "ticker": "ARA.TO",
           "company": "Aclara Resources",
           "role": "Heavy rare earth candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 40.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3253,15 +3595,18 @@
             90.75,
             92.8
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 13,
-          "previous_rank": 17,
+          "previous_rank": 13,
           "ticker": "TECK",
           "company": "Teck Resources",
           "role": "Copper/zinc candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 20,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3317,15 +3662,18 @@
             95.2,
             96.58
           ],
-          "rank_delta": 4
+          "rank_delta": 0
         },
         {
           "rank": 14,
-          "previous_rank": 13,
+          "previous_rank": 14,
           "ticker": "FCX",
           "company": "Freeport-McMoRan",
           "role": "Copper bottleneck candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 19,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3381,15 +3729,18 @@
             93.46,
             92.42
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 12,
+          "previous_rank": 15,
           "ticker": "ILU.AX",
           "company": "Iluka Resources",
           "role": "Rare-earth refinery candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 11,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3445,15 +3796,18 @@
             87.19,
             86.76
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": null,
+          "previous_rank": 16,
           "ticker": "MP",
           "company": "MP Materials",
           "role": "Leader / mine-to-magnet",
           "proof": "PROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 100.0,
           "research_rank": 1,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3509,15 +3863,18 @@
             82.98,
             86.37
           ],
-          "rank_delta": null
+          "rank_delta": 0
         },
         {
           "rank": 17,
-          "previous_rank": null,
+          "previous_rank": 17,
           "ticker": "NB",
           "company": "NioCorp",
           "role": "Critical minerals development candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 90.0,
           "research_rank": 5,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3573,15 +3930,18 @@
             83.29,
             85.92
           ],
-          "rank_delta": null
+          "rank_delta": 0
         },
         {
           "rank": 18,
-          "previous_rank": 15,
+          "previous_rank": 18,
           "ticker": "LYC.AX",
           "company": "Lynas Rare Earths",
           "role": "Leader / ex-China separation",
           "proof": "PROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 2,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3637,15 +3997,18 @@
             88.06,
             89.28
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 19,
-          "previous_rank": 16,
+          "previous_rank": 19,
           "ticker": "ARU.AX",
           "company": "Arafura Rare Earths",
           "role": "NdPr project candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 14,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3701,15 +4064,18 @@
             87.8,
             85.37
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 20,
-          "previous_rank": 19,
+          "previous_rank": 20,
           "ticker": "UUUU",
           "company": "Energy Fuels",
           "role": "Rare-earth processing candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 96.0,
+          "company_capture_score": 0.0,
           "research_rank": 4,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3765,7 +4131,7 @@
             74.51,
             74.78
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         }
       ]
     },
@@ -3790,6 +4156,9 @@
           "company": "CACI International",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 65.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -3848,6 +4217,9 @@
           "company": "Leonardo DRS",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -3906,6 +4278,9 @@
           "company": "OSI Systems",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -3964,6 +4339,9 @@
           "company": "Curtiss-Wright",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -4022,6 +4400,9 @@
           "company": "Huntington Ingalls",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 90.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -4075,11 +4456,14 @@
         },
         {
           "rank": 6,
-          "previous_rank": 10,
+          "previous_rank": 6,
           "ticker": "LPTH",
           "company": "LightPath Technologies",
           "role": "Sensing pick & shovel candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4135,15 +4519,18 @@
             99.6,
             102.49
           ],
-          "rank_delta": 4
+          "rank_delta": 0
         },
         {
           "rank": 7,
-          "previous_rank": 6,
+          "previous_rank": 7,
           "ticker": "KRMN",
           "company": "Karman Holdings",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -4193,15 +4580,18 @@
             79.28,
             78.21
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 8,
-          "previous_rank": 7,
+          "previous_rank": 8,
           "ticker": "UMAC",
           "company": "Unusual Machines",
           "role": "Drone components candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 65.0,
           "research_rank": 8,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4257,15 +4647,18 @@
             105.37,
             103.42
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 9,
-          "previous_rank": 14,
+          "previous_rank": 9,
           "ticker": "ONDS",
           "company": "Ondas",
           "role": "Autonomous systems candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": 9,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4321,15 +4714,18 @@
             97.71,
             95.75
           ],
-          "rank_delta": 5
+          "rank_delta": 0
         },
         {
           "rank": 10,
-          "previous_rank": 11,
+          "previous_rank": 10,
           "ticker": "LHX",
           "company": "L3Harris",
           "role": "Direct beneficiary / defense systems",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 2,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4385,15 +4781,18 @@
             88.82,
             88.93
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 11,
-          "previous_rank": 8,
+          "previous_rank": 11,
           "ticker": "PLTR",
           "company": "Palantir",
           "role": "Software/enabling layer candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 13,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4449,7 +4848,7 @@
             100.32,
             100.36
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 12,
@@ -4458,6 +4857,9 @@
           "company": "Lockheed Martin",
           "role": "Directed-energy candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 5,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4517,11 +4919,14 @@
         },
         {
           "rank": 13,
-          "previous_rank": 15,
+          "previous_rank": 13,
           "ticker": "MRCY",
           "company": "Mercury Systems",
           "role": "Electronics pick & shovel candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 19,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4577,15 +4982,18 @@
             94.63,
             95.04
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 14,
-          "previous_rank": 13,
+          "previous_rank": 14,
           "ticker": "RTX",
           "company": "RTX",
           "role": "Direct beneficiary / sensors & effectors",
           "proof": "PARTIAL",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": 3,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4641,15 +5049,18 @@
             89.99,
             89.37
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 17,
+          "previous_rank": 15,
           "ticker": "TDY",
           "company": "Teledyne",
           "role": "Sensors candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 20,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4705,15 +5116,18 @@
             98.8,
             99.0
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": 9,
+          "previous_rank": 16,
           "ticker": "NOC",
           "company": "Northrop Grumman",
           "role": "Direct beneficiary / defense systems",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 90.0,
           "research_rank": 4,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4769,15 +5183,18 @@
             93.5,
             89.58
           ],
-          "rank_delta": -7
+          "rank_delta": 0
         },
         {
           "rank": 17,
-          "previous_rank": 18,
+          "previous_rank": 17,
           "ticker": "AVAV",
           "company": "AeroVironment",
           "role": "Leader / directed energy + autonomy",
           "proof": "PROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 0.0,
           "research_rank": 1,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4833,15 +5250,18 @@
             96.56,
             95.87
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 18,
-          "previous_rank": 20,
+          "previous_rank": 18,
           "ticker": "TXT",
           "company": "Textron",
           "role": "Uncrewed systems candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": 18,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4897,7 +5317,7 @@
             96.36,
             94.59
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 19,
@@ -4906,6 +5326,9 @@
           "company": "Mobilicom",
           "role": "Communications pick & shovel candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 90.0,
           "research_rank": 11,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -4965,11 +5388,14 @@
         },
         {
           "rank": 20,
-          "previous_rank": null,
+          "previous_rank": 20,
           "ticker": "KTOS",
           "company": "Kratos",
           "role": "Autonomy / drone systems candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 80.0,
+          "company_capture_score": 40.0,
           "research_rank": 6,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5025,7 +5451,7 @@
             84.44,
             83.74
           ],
-          "rank_delta": null
+          "rank_delta": 0
         }
       ]
     },
@@ -5050,6 +5476,9 @@
           "company": "SECO",
           "role": "Edge compute candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 4,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5114,6 +5543,9 @@
           "company": "Advanced Micro Devices",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -5167,11 +5599,14 @@
         },
         {
           "rank": 3,
-          "previous_rank": 4,
+          "previous_rank": 3,
           "ticker": "OUST",
           "company": "Ouster",
           "role": "Lidar candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 9,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5227,15 +5662,18 @@
             116.14,
             117.13
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 4,
-          "previous_rank": 3,
+          "previous_rank": 4,
           "ticker": "TER",
           "company": "Teradyne",
           "role": "Robotics/automation candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 11,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5291,7 +5729,7 @@
             115.2,
             114.6
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 5,
@@ -5300,6 +5738,9 @@
           "company": "Taiwan Semiconductor",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 40.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -5353,11 +5794,14 @@
         },
         {
           "rank": 6,
-          "previous_rank": 9,
+          "previous_rank": 6,
           "ticker": "ROBO",
           "company": "ROBO Global Robotics ETF",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -5407,15 +5851,18 @@
             99.94,
             100.02
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 7,
-          "previous_rank": 10,
+          "previous_rank": 7,
           "ticker": "BOTZ",
           "company": "Global X Robotics & AI ETF",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 25.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -5465,15 +5912,18 @@
             98.19,
             98.16
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 8,
-          "previous_rank": 7,
+          "previous_rank": 8,
           "ticker": "TSLA",
           "company": "Tesla",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
+          "evidence_maturity": "ECONOMIC_LINK",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -5523,15 +5973,18 @@
             95.89,
             96.43
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 9,
-          "previous_rank": 11,
+          "previous_rank": 9,
           "ticker": "NXPI",
           "company": "NXP Semiconductors",
           "role": "Edge/auto compute candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 6,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5587,15 +6040,18 @@
             105.27,
             105.74
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 10,
-          "previous_rank": 6,
+          "previous_rank": 10,
           "ticker": "ISRG",
           "company": "Intuitive Surgical",
           "role": "Robotics application leader",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 13,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5651,15 +6107,18 @@
             109.37,
             107.9
           ],
-          "rank_delta": -4
+          "rank_delta": 0
         },
         {
           "rank": 11,
-          "previous_rank": 8,
+          "previous_rank": 11,
           "ticker": "QCOM",
           "company": "Qualcomm",
           "role": "Edge AI compute candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 5,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5715,15 +6174,18 @@
             107.99,
             107.95
           ],
-          "rank_delta": -3
+          "rank_delta": 0
         },
         {
           "rank": 12,
-          "previous_rank": 13,
+          "previous_rank": 12,
           "ticker": "CGNX",
           "company": "Cognex",
           "role": "Machine vision pick & shovel",
           "proof": "PARTIAL",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 18,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5779,15 +6241,18 @@
             97.88,
             99.49
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 13,
-          "previous_rank": 19,
+          "previous_rank": 13,
           "ticker": "SYM",
           "company": "Symbotic",
           "role": "Warehouse robotics candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 14,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5843,15 +6308,18 @@
             104.64,
             106.05
           ],
-          "rank_delta": 6
+          "rank_delta": 0
         },
         {
           "rank": 14,
-          "previous_rank": 12,
+          "previous_rank": 14,
           "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Industrial robotics leader candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 90.0,
           "research_rank": 20,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5907,15 +6375,18 @@
             100.99,
             102.25
           ],
-          "rank_delta": -2
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 18,
+          "previous_rank": 15,
           "ticker": "ROK",
           "company": "Rockwell Automation",
           "role": "Industrial automation candidate",
           "proof": "PARTIAL",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 12,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -5971,15 +6442,18 @@
             101.67,
             102.57
           ],
-          "rank_delta": 3
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": 15,
+          "previous_rank": 16,
           "ticker": "NVDA",
           "company": "NVIDIA",
           "role": "Leader / compute platform",
           "proof": "PROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 1,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -6035,7 +6509,7 @@
             102.91,
             103.44
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 17,
@@ -6044,6 +6518,9 @@
           "company": "onsemi",
           "role": "Sensing/power candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 100.0,
           "research_rank": 7,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -6103,11 +6580,14 @@
         },
         {
           "rank": 18,
-          "previous_rank": 14,
+          "previous_rank": 18,
           "ticker": "ZBRA",
           "company": "Zebra Technologies",
           "role": "Machine vision/edge candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 19,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -6163,15 +6643,18 @@
             106.34,
             105.59
           ],
-          "rank_delta": -4
+          "rank_delta": 0
         },
         {
           "rank": 19,
-          "previous_rank": 20,
+          "previous_rank": 19,
           "ticker": "AMBA",
           "company": "Ambarella",
           "role": "Edge AI compute pick & shovel",
           "proof": "PROVEN",
+          "evidence_maturity": "COMPANY_CAPTURE",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 65.0,
           "research_rank": 2,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -6227,15 +6710,18 @@
             99.06,
             100.19
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 20,
-          "previous_rank": 16,
+          "previous_rank": 20,
           "ticker": "LAZR",
           "company": "Luminar",
           "role": "Lidar candidate",
           "proof": "UNPROVEN",
+          "evidence_maturity": "CORROBORATED",
+          "trend_evidence_score": 84.0,
+          "company_capture_score": 0.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -6291,7 +6777,7 @@
             104.3,
             103.85
           ],
-          "rank_delta": -4
+          "rank_delta": 0
         }
       ]
     }
@@ -6304,6 +6790,9 @@
       "company": "AAON, Inc.",
       "role": "Direct beneficiary / data-center cooling",
       "proof": "PROVEN",
+      "evidence_maturity": "PROVEN",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 35.0,
       "research_rank": 4,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6375,6 +6864,9 @@
       "company": "Marvell",
       "role": "Direct beneficiary / optical DSP",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 7,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6437,11 +6929,14 @@
     },
     {
       "rank": 5,
-      "previous_rank": 4,
+      "previous_rank": 5,
       "ticker": "LITE",
       "company": "Lumentum",
       "role": "Bottleneck / lasers & optics",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 2,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6497,18 +6992,21 @@
         106.42,
         106.18
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 7,
-      "previous_rank": 9,
+      "previous_rank": 7,
       "ticker": "APH",
       "company": "Amphenol",
       "role": "Interconnect pick & shovel candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 19,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6564,18 +7062,21 @@
         106.39,
         106.34
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 10,
-      "previous_rank": 12,
+      "previous_rank": 10,
       "ticker": "MTSI",
       "company": "MACOM",
       "role": "Optical semiconductor candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 17,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6631,7 +7132,7 @@
         107.75,
         107.96
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
@@ -6643,6 +7144,9 @@
       "company": "Fabrinet",
       "role": "Pick & shovel / optical manufacturing",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 11,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6705,11 +7209,14 @@
     },
     {
       "rank": 12,
-      "previous_rank": 14,
+      "previous_rank": 12,
       "ticker": "ANET",
       "company": "Arista Networks",
       "role": "Leader / AI networking",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 9,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6765,18 +7272,21 @@
         103.66,
         104.04
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 13,
-      "previous_rank": 7,
+      "previous_rank": 13,
       "ticker": "GLW",
       "company": "Corning",
       "role": "Optical fiber / interconnect pick & shovel",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 13,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6832,18 +7342,21 @@
         106.71,
         103.38
       ],
-      "rank_delta": -6,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 14,
-      "previous_rank": 13,
+      "previous_rank": 14,
       "ticker": "COHR",
       "company": "Coherent",
       "role": "Bottleneck / optical components",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 1,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6899,18 +7412,21 @@
         105.18,
         103.59
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 15,
-      "previous_rank": 17,
+      "previous_rank": 15,
       "ticker": "IQE.L",
       "company": "IQE",
       "role": "InP substrate/epi candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 5,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -6966,18 +7482,21 @@
         93.36,
         98.13
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
     },
     {
       "rank": 17,
-      "previous_rank": 16,
+      "previous_rank": 17,
       "ticker": "POET",
       "company": "POET Technologies",
       "role": "Photonic integration candidate",
       "proof": "PROVEN TECH / PARTIAL CAPTURE",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 25.0,
       "research_rank": 4,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7033,7 +7552,7 @@
         102.82,
         100.27
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "photonics",
       "trend": "AI optical interconnect / InP photonics",
       "trend_rank": 1
@@ -7045,6 +7564,9 @@
       "company": "Ciena",
       "role": "Direct beneficiary / optical networking",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 8,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7112,6 +7634,9 @@
       "company": "GE Vernova",
       "role": "Bottleneck / generation",
       "proof": "PROVEN",
+      "evidence_maturity": "PROVEN",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 100.0,
       "research_rank": 1,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7178,11 +7703,14 @@
     },
     {
       "rank": 7,
-      "previous_rank": 4,
+      "previous_rank": 7,
       "ticker": "PWR",
       "company": "Quanta Services",
       "role": "Pick & shovel / grid construction",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 5,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7238,18 +7766,21 @@
         107.36,
         105.83
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 10,
-      "previous_rank": 5,
+      "previous_rank": 10,
       "ticker": "NVT",
       "company": "nVent",
       "role": "Pick & shovel / electrical connection",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 7,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7305,18 +7836,21 @@
         107.25,
         106.38
       ],
-      "rank_delta": -5,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 13,
-      "previous_rank": 16,
+      "previous_rank": 13,
       "ticker": "ETN",
       "company": "Eaton",
       "role": "Pick & shovel / electrical distribution",
       "proof": "PROVEN",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 3,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7372,18 +7906,21 @@
         107.81,
         106.92
       ],
-      "rank_delta": 3,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 14,
-      "previous_rank": 18,
+      "previous_rank": 14,
       "ticker": "ABBN.SW",
       "company": "ABB",
       "role": "Grid equipment candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 18,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7439,18 +7976,21 @@
         100.99,
         102.25
       ],
-      "rank_delta": 4,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 15,
-      "previous_rank": 12,
+      "previous_rank": 15,
       "ticker": "CAT",
       "company": "Caterpillar",
       "role": "Direct beneficiary / onsite generation",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 100.0,
       "research_rank": 10,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7506,18 +8046,21 @@
         103.66,
         101.67
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 17,
-      "previous_rank": 14,
+      "previous_rank": 17,
       "ticker": "POWL",
       "company": "Powell Industries",
       "role": "Bottleneck candidate / switchgear",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 6,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7573,18 +8116,21 @@
         104.86,
         102.64
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 18,
-      "previous_rank": null,
+      "previous_rank": 18,
       "ticker": "ENR.DE",
       "company": "Siemens Energy",
       "role": "Generation/grid candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 20,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7640,18 +8186,21 @@
         99.09,
         102.56
       ],
-      "rank_delta": null,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 20,
-      "previous_rank": 13,
+      "previous_rank": 20,
       "ticker": "VST",
       "company": "Vistra",
       "role": "Direct beneficiary / firm power",
       "proof": "PARTIAL",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 12,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7707,7 +8256,7 @@
         102.52,
         100.71
       ],
-      "rank_delta": -7,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
@@ -7719,6 +8268,9 @@
       "company": "Australian Strategic Materials",
       "role": "Mine-to-metals candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 0.0,
       "research_rank": 13,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7781,11 +8333,14 @@
     },
     {
       "rank": 12,
-      "previous_rank": 14,
+      "previous_rank": 12,
       "ticker": "ARA.TO",
       "company": "Aclara Resources",
       "role": "Heavy rare earth candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 40.0,
       "research_rank": 10,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7841,18 +8396,21 @@
         90.75,
         92.8
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 15,
-      "previous_rank": 12,
+      "previous_rank": 15,
       "ticker": "ILU.AX",
       "company": "Iluka Resources",
       "role": "Rare-earth refinery candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 0.0,
       "research_rank": 11,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7908,18 +8466,21 @@
         87.19,
         86.76
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 16,
-      "previous_rank": null,
+      "previous_rank": 16,
       "ticker": "MP",
       "company": "MP Materials",
       "role": "Leader / mine-to-magnet",
       "proof": "PROVEN",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 100.0,
       "research_rank": 1,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7975,18 +8536,21 @@
         82.98,
         86.37
       ],
-      "rank_delta": null,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 18,
-      "previous_rank": 15,
+      "previous_rank": 18,
       "ticker": "LYC.AX",
       "company": "Lynas Rare Earths",
       "role": "Leader / ex-China separation",
       "proof": "PROVEN",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 0.0,
       "research_rank": 2,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8042,18 +8606,21 @@
         88.06,
         89.28
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 19,
-      "previous_rank": 16,
+      "previous_rank": 19,
       "ticker": "ARU.AX",
       "company": "Arafura Rare Earths",
       "role": "NdPr project candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 0.0,
       "research_rank": 14,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8109,18 +8676,21 @@
         87.8,
         85.37
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 20,
-      "previous_rank": 19,
+      "previous_rank": 20,
       "ticker": "UUUU",
       "company": "Energy Fuels",
       "role": "Rare-earth processing candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 96.0,
+      "company_capture_score": 0.0,
       "research_rank": 4,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8176,18 +8746,21 @@
         74.51,
         74.78
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 6,
-      "previous_rank": 10,
+      "previous_rank": 6,
       "ticker": "LPTH",
       "company": "LightPath Technologies",
       "role": "Sensing pick & shovel candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 0.0,
       "research_rank": 10,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8243,18 +8816,21 @@
         99.6,
         102.49
       ],
-      "rank_delta": 4,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
     },
     {
       "rank": 9,
-      "previous_rank": 14,
+      "previous_rank": 9,
       "ticker": "ONDS",
       "company": "Ondas",
       "role": "Autonomous systems candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 40.0,
       "research_rank": 9,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8310,18 +8886,21 @@
         97.71,
         95.75
       ],
-      "rank_delta": 5,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
     },
     {
       "rank": 10,
-      "previous_rank": 11,
+      "previous_rank": 10,
       "ticker": "LHX",
       "company": "L3Harris",
       "role": "Direct beneficiary / defense systems",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 0.0,
       "research_rank": 2,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8377,7 +8956,7 @@
         88.82,
         88.93
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
@@ -8389,6 +8968,9 @@
       "company": "Lockheed Martin",
       "role": "Directed-energy candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 0.0,
       "research_rank": 5,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8451,11 +9033,14 @@
     },
     {
       "rank": 14,
-      "previous_rank": 13,
+      "previous_rank": 14,
       "ticker": "RTX",
       "company": "RTX",
       "role": "Direct beneficiary / sensors & effectors",
       "proof": "PARTIAL",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 40.0,
       "research_rank": 3,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8511,18 +9096,21 @@
         89.99,
         89.37
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
     },
     {
       "rank": 16,
-      "previous_rank": 9,
+      "previous_rank": 16,
       "ticker": "NOC",
       "company": "Northrop Grumman",
       "role": "Direct beneficiary / defense systems",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 90.0,
       "research_rank": 4,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8578,18 +9166,21 @@
         93.5,
         89.58
       ],
-      "rank_delta": -7,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
     },
     {
       "rank": 17,
-      "previous_rank": 18,
+      "previous_rank": 17,
       "ticker": "AVAV",
       "company": "AeroVironment",
       "role": "Leader / directed energy + autonomy",
       "proof": "PROVEN",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 0.0,
       "research_rank": 1,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8645,7 +9236,7 @@
         96.56,
         95.87
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
@@ -8657,6 +9248,9 @@
       "company": "Mobilicom",
       "role": "Communications pick & shovel candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 90.0,
       "research_rank": 11,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8719,11 +9313,14 @@
     },
     {
       "rank": 20,
-      "previous_rank": null,
+      "previous_rank": 20,
       "ticker": "KTOS",
       "company": "Kratos",
       "role": "Autonomy / drone systems candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "ECONOMIC_LINK",
+      "trend_evidence_score": 80.0,
+      "company_capture_score": 40.0,
       "research_rank": 6,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8779,7 +9376,7 @@
         84.44,
         83.74
       ],
-      "rank_delta": null,
+      "rank_delta": 0,
       "trend_key": "cuas",
       "trend": "Counter-UAS / directed energy",
       "trend_rank": 4
@@ -8791,6 +9388,9 @@
       "company": "SECO",
       "role": "Edge compute candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 4,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8853,11 +9453,14 @@
     },
     {
       "rank": 3,
-      "previous_rank": 4,
+      "previous_rank": 3,
       "ticker": "OUST",
       "company": "Ouster",
       "role": "Lidar candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 9,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8913,18 +9516,21 @@
         116.14,
         117.13
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 4,
-      "previous_rank": 3,
+      "previous_rank": 4,
       "ticker": "TER",
       "company": "Teradyne",
       "role": "Robotics/automation candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 100.0,
       "research_rank": 11,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8980,18 +9586,21 @@
         115.2,
         114.6
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 9,
-      "previous_rank": 11,
+      "previous_rank": 9,
       "ticker": "NXPI",
       "company": "NXP Semiconductors",
       "role": "Edge/auto compute candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 6,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9047,18 +9656,21 @@
         105.27,
         105.74
       ],
-      "rank_delta": 2,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 11,
-      "previous_rank": 8,
+      "previous_rank": 11,
       "ticker": "QCOM",
       "company": "Qualcomm",
       "role": "Edge AI compute candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 5,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9114,18 +9726,21 @@
         107.99,
         107.95
       ],
-      "rank_delta": -3,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 12,
-      "previous_rank": 13,
+      "previous_rank": 12,
       "ticker": "CGNX",
       "company": "Cognex",
       "role": "Machine vision pick & shovel",
       "proof": "PARTIAL",
+      "evidence_maturity": "CORROBORATED",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 0.0,
       "research_rank": 18,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9181,18 +9796,21 @@
         97.88,
         99.49
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 13,
-      "previous_rank": 19,
+      "previous_rank": 13,
       "ticker": "SYM",
       "company": "Symbotic",
       "role": "Warehouse robotics candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 14,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9248,18 +9866,21 @@
         104.64,
         106.05
       ],
-      "rank_delta": 6,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 14,
-      "previous_rank": 12,
+      "previous_rank": 14,
       "ticker": "ABBN.SW",
       "company": "ABB",
       "role": "Industrial robotics leader candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 90.0,
       "research_rank": 20,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9315,18 +9936,21 @@
         100.99,
         102.25
       ],
-      "rank_delta": -2,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 15,
-      "previous_rank": 18,
+      "previous_rank": 15,
       "ticker": "ROK",
       "company": "Rockwell Automation",
       "role": "Industrial automation candidate",
       "proof": "PARTIAL",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 12,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9382,18 +10006,21 @@
         101.67,
         102.57
       ],
-      "rank_delta": 3,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 16,
-      "previous_rank": 15,
+      "previous_rank": 16,
       "ticker": "NVDA",
       "company": "NVIDIA",
       "role": "Leader / compute platform",
       "proof": "PROVEN",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 1,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9449,18 +10076,21 @@
         102.91,
         103.44
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 19,
-      "previous_rank": 20,
+      "previous_rank": 19,
       "ticker": "AMBA",
       "company": "Ambarella",
       "role": "Edge AI compute pick & shovel",
       "proof": "PROVEN",
+      "evidence_maturity": "COMPANY_CAPTURE",
+      "trend_evidence_score": 84.0,
+      "company_capture_score": 65.0,
       "research_rank": 2,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -9516,7 +10146,7 @@
         99.06,
         100.19
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
