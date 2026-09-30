@@ -14,6 +14,39 @@ from pathlib import Path
 OUT=Path("data/company-challengers.json")
 UA="Mozilla/5.0 (compatible; ORACLE-Research/4.0; +https://github.com/Rabbipizza/-oracle-intelligence)"
 
+
+# Broad radar seeds are discovery candidates only, never proof.
+# They ensure ORACLE can test names outside the original research-universe even
+# when a public search endpoint cannot map an economic phrase to a ticker.
+SEED_CHALLENGERS={
+    "power":[
+        ("SMCI","Super Micro Computer"),("FIX","Comfort Systems USA"),
+        ("EME","EMCOR Group"),("MOD","Modine Manufacturing"),
+        ("AMSC","American Superconductor"),("NNE","Nano Nuclear Energy"),
+        ("OKLO","Oklo"),("SMR","NuScale Power"),("LEU","Centrus Energy")
+    ],
+    "cuas":[
+        ("DRS","Leonardo DRS"),("CW","Curtiss-Wright"),
+        ("HII","Huntington Ingalls"),("OSIS","OSI Systems"),
+        ("CACI","CACI International"),("KRMN","Karman Holdings")
+    ],
+    "photonics":[
+        ("RMBS","Rambus"),("CLS","Celestica"),("FLEX","Flex"),
+        ("MCHP","Microchip Technology"),("ON","ON Semiconductor"),
+        ("SMTC","Semtech")
+    ],
+    "minerals":[
+        ("SCCO","Southern Copper"),("RIO","Rio Tinto"),("BHP","BHP"),
+        ("VALE","Vale"),("NEM","Newmont"),("CDE","Coeur Mining"),
+        ("NXE","NexGen Energy"),("DNN","Denison Mines")
+    ],
+    "physical":[
+        ("TSLA","Tesla"),("AMD","Advanced Micro Devices"),
+        ("TSM","Taiwan Semiconductor"),("ISRG","Intuitive Surgical"),
+        ("ROBO","ROBO Global Robotics ETF"),("BOTZ","Global X Robotics & AI ETF")
+    ]
+}
+
 TREND_QUERIES={
     "power":[
         "data center cooling company stock",
@@ -138,14 +171,33 @@ def main():
             except Exception as e:
                 errors.append({"trend":trend,"query":query,"error":repr(e)})
             time.sleep(0.25)
+        # Add broad out-of-universe seeds if search did not discover them.
+        # Seed status is explicitly UNPROVEN and cannot satisfy an investment gate.
+        for ticker,name in SEED_CHALLENGERS.get(trend,[]):
+            if ticker in known or ticker in seen:
+                continue
+            seen[ticker]={
+                "ticker":ticker,
+                "name":name,
+                "trend":trend,
+                "status":"UNPROVEN",
+                "economic_transmission":"REQUIRES_ANALYST_PROOF",
+                "company_capture":"REQUIRES_ANALYST_PROOF",
+                "queries":[],
+                "search_hits":0,
+                "search_rank_points":0.0,
+                "source":"RADAR_SEED"
+            }
+
         rows=list(seen.values())
         for x in rows:
             # Discovery relevance only. This is NOT evidence of economic capture.
             x["radar_discovery_score"]=round(
-                10.0*x["search_hits"] + 0.5*x["search_rank_points"],2
+                10.0*x["search_hits"] + 0.5*x["search_rank_points"] +
+                (8.0 if x.get("source")=="RADAR_SEED" else 0.0),2
             )
         rows.sort(key=lambda x:(x["search_hits"],x["radar_discovery_score"]),reverse=True)
-        by_trend[trend]=rows[:20]
+        by_trend[trend]=rows[:30]
 
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps({
