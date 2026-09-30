@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T06:42:47.695988+00:00",
+  "generated_at": "2026-09-30T06:46:05.811839+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,8 +9,8 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 111374,
-    "primary_origin_count": 12135
+    "record_count": 119421,
+    "primary_origin_count": 12235
   },
   "candidate_gates": [
     {
@@ -60,16 +60,12 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "on-policy distillation opd",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 50,
-      "primary_origin_count": 50,
+      "term": "language llms",
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -92,12 +88,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language llms",
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
+      "term": "on-policy distillation opd",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 50,
+      "primary_origin_count": 50,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -438,22 +438,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "visual tokens",
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 53,
-      "primary_origin_count": 53,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_ANALYST_PROOF",
-      "company_capture": "REQUIRES_ANALYST_PROOF",
-      "trend_status": "UNPROVEN"
-    },
-    {
       "term": "test set",
       "families": [
         "science"
@@ -471,17 +455,16 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "visual information",
+      "term": "visual tokens",
       "families": [
         "science"
       ],
       "family_count": 1,
       "sources": [
-        "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 30,
-      "primary_origin_count": 28,
+      "matched_origin_count": 53,
+      "primary_origin_count": 53,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -498,6 +481,23 @@
       ],
       "matched_origin_count": 59,
       "primary_origin_count": 59,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_ANALYST_PROOF",
+      "company_capture": "REQUIRES_ANALYST_PROOF",
+      "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "visual information",
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 30,
+      "primary_origin_count": 28,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_ANALYST_PROOF",
       "company_capture": "REQUIRES_ANALYST_PROOF",
@@ -1378,7 +1378,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "reinforcement verifiable",
+      "term": "reinforcement verifiable rewards",
       "families": [],
       "family_count": 0,
       "sources": [],
@@ -1390,7 +1390,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "reinforcement verifiable rewards",
+      "term": "reinforcement verifiable",
       "families": [],
       "family_count": 0,
       "sources": [],
