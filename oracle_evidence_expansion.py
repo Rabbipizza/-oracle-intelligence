@@ -142,11 +142,20 @@ for ticker,meta in companies.items():
     cc=(ontology.get("concepts",{}) or {}).get(trend,{})
     aliases=[norm(x) for x in cc.get("aliases",[]) if norm(x)]
     econ=[norm(x) for x in cc.get("economic_terms",[]) if norm(x)]
-    names={norm(ticker),norm(meta.get("name") or "")}
-    names={x for x in names if x and len(x)>=2}
+    company_name=norm(meta.get("name") or "")
+    ticker_norm=norm(ticker)
+    # Avoid false positives from short ticker symbols that are ordinary words
+    # (BE, BA, CAT, ON, etc.). Prefer the full issuer name; only use ticker
+    # matching when it is at least 4 characters long.
+    names=[]
+    if company_name and len(company_name)>=4:
+        names.append(company_name)
+    if ticker_norm and len(ticker_norm)>=4:
+        names.append(ticker_norm)
+
     matches=[]
     for r in rows:
-        name_hit=any(n in r["text"] for n in names)
+        name_hit=any(re.search(r"(?<![a-z0-9])"+re.escape(n)+r"(?![a-z0-9])",r["text"]) for n in names)
         if not name_hit: continue
         ah=any_phrase(r["text"],aliases)
         eh=any_phrase(r["text"],econ)
@@ -156,14 +165,23 @@ for ticker,meta in companies.items():
     vals=list(uniq.values())
     fam=sorted({r["family"] for r,_,_ in vals if r.get("family")})
     prim=[r for r,_,_ in vals if r.get("primary")]
-    econprim=[r for r,ah,eh in vals if r.get("primary") and eh and (ah or r.get("family") in {"company","industry_contracts"})]
+    # A company-capture record must link issuer + trend concept + economic
+    # activity in a non-science primary source. Science-only co-mentions do not
+    # constitute economic capture.
+    econprim=[
+        r for r,ah,eh in vals
+        if r.get("primary")
+        and r.get("family") in {"company","industry_contracts"}
+        and ah and eh
+    ]
     explicit_ev=(explicit.get("companies",{}) or {}).get(ticker)
     trend_score=(concepts.get(trend) or {}).get("evidence_score",0)
+    non_science_fam={r["family"] for r,_,_ in vals if r.get("family") in {"company","industry_contracts"}}
     capture_score=min(100.0,
-        25.0*min(len(fam),3) +
-        15.0*(1 if prim else 0) +
-        25.0*(1 if econprim else 0) +
-        35.0*(1 if explicit_ev and explicit_ev.get("status")=="PROVEN" else 0)
+        15.0*min(len(fam),3) +
+        15.0*min(len(non_science_fam),2) +
+        30.0*(1 if econprim else 0) +
+        40.0*(1 if explicit_ev and explicit_ev.get("status")=="PROVEN" else 0)
     )
     if explicit_ev and explicit_ev.get("status")=="PROVEN":
         maturity="PROVEN"
