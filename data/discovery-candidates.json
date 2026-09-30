@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T23:07:52.018754+00:00",
+  "generated_at": "2026-09-30T23:20:45.332851+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
   "unique_papers": 13816,
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "term": "on-policy distillation opd",
+      "term": "distillation opd",
       "recent_docs": 48,
       "baseline_docs": 0,
       "recent_corpus_docs": 9094,
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "term": "distillation opd",
+      "term": "on-policy distillation opd",
       "recent_docs": 48,
       "baseline_docs": 0,
       "recent_corpus_docs": 9094,
@@ -259,6 +259,34 @@
       ]
     },
     {
+      "term": "vision-language-action vla",
+      "recent_docs": 134,
+      "baseline_docs": 30,
+      "recent_corpus_docs": 9094,
+      "baseline_corpus_docs": 3878,
+      "acceleration": 1.881,
+      "discovery_score": 19.9228,
+      "examples": [
+        "Rethinking Causal Action Tokenization with Conditional Annealing in Flow Matching",
+        "Learning to Act under Visual Interruptions with Vision-Language-Action Models",
+        "Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse"
+      ]
+    },
+    {
+      "term": "visual tokens",
+      "recent_docs": 48,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 9094,
+      "baseline_corpus_docs": 3878,
+      "acceleration": 8.274,
+      "discovery_score": 19.914,
+      "examples": [
+        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+        "Summarize Before Grounding: Query-Guided Chunk Condensation for Long-Video Temporal Grounding"
+      ]
+    },
+    {
       "term": "target distribution",
       "recent_docs": 29,
       "baseline_docs": 0,
@@ -287,20 +315,6 @@
       ]
     },
     {
-      "term": "vision-language-action vla",
-      "recent_docs": 133,
-      "baseline_docs": 30,
-      "recent_corpus_docs": 9094,
-      "baseline_corpus_docs": 3878,
-      "acceleration": 1.867,
-      "discovery_score": 19.7271,
-      "examples": [
-        "Rethinking Causal Action Tokenization with Conditional Annealing in Flow Matching",
-        "Learning to Act under Visual Interruptions with Vision-Language-Action Models",
-        "Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse"
-      ]
-    },
-    {
       "term": "fine-tuning sft",
       "recent_docs": 40,
       "baseline_docs": 1,
@@ -312,20 +326,6 @@
         "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
         "From Normative Frameworks to Alignment Data: Constructing and Evaluating SFT and Preference Data",
         "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models"
-      ]
-    },
-    {
-      "term": "visual tokens",
-      "recent_docs": 47,
-      "baseline_docs": 2,
-      "recent_corpus_docs": 9094,
-      "baseline_corpus_docs": 3878,
-      "acceleration": 8.103,
-      "discovery_score": 19.4377,
-      "examples": [
-        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-        "Summarize Before Grounding: Query-Guided Chunk Condensation for Long-Video Temporal Grounding"
       ]
     },
     {
@@ -441,20 +441,6 @@
       ]
     },
     {
-      "term": "interaction history",
-      "recent_docs": 25,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 9094,
-      "baseline_corpus_docs": 3878,
-      "acceleration": 21.751,
-      "discovery_score": 16.8793,
-      "examples": [
-        "Continuous Context Management",
-        "Graph-Guided Repository Environment Construction",
-        "Vision-Language Agents for Active Perception in Optics Laboratories"
-      ]
-    },
-    {
       "term": "multimodal large language",
       "recent_docs": 80,
       "baseline_docs": 13,
@@ -497,6 +483,20 @@
       ]
     },
     {
+      "term": "interaction history",
+      "recent_docs": 24,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 9094,
+      "baseline_corpus_docs": 3878,
+      "acceleration": 20.898,
+      "discovery_score": 16.1394,
+      "examples": [
+        "Continuous Context Management",
+        "Graph-Guided Repository Environment Construction",
+        "Vision-Language Agents for Active Perception in Optics Laboratories"
+      ]
+    },
+    {
       "term": "verifiable rewards",
       "recent_docs": 40,
       "baseline_docs": 2,
@@ -536,20 +536,6 @@
         "EviSplat: Preserving Multi-View Evidence in 3D Gaussian Splatting for Open-Vocabulary Segmentation",
         "GenNVS: Geometry-enhanced Novel View Synthesis via Disentangled 3D Prior",
         "Robot-GST: geometry-aware spatial-temporal robot policy representation and evaluation"
-      ]
-    },
-    {
-      "term": "spatial relations",
-      "recent_docs": 23,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 9094,
-      "baseline_corpus_docs": 3878,
-      "acceleration": 20.045,
-      "discovery_score": 15.3984,
-      "examples": [
-        "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
-        "From Scene Graphs to Answers: Selective Neuro-Symbolic Reasoning for Autonomous Driving",
-        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding"
       ]
     },
     {
@@ -679,6 +665,20 @@
       ]
     },
     {
+      "term": "spatial relations",
+      "recent_docs": 22,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 9094,
+      "baseline_corpus_docs": 3878,
+      "acceleration": 19.192,
+      "discovery_score": 14.6564,
+      "examples": [
+        "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
+        "From Scene Graphs to Answers: Selective Neuro-Symbolic Reasoning for Autonomous Driving",
+        "CoRef-GS: Cooperative Referring Gaussian Splatting for Multi-Agent Scene Understanding"
+      ]
+    },
+    {
       "term": "speech recognition",
       "recent_docs": 22,
       "baseline_docs": 0,
@@ -703,7 +703,7 @@
       "examples": [
         "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
         "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-        "Task-Induced Riemannian Metrics for Vision Transformer Feature Spaces"
+        "TReVS: Integrating Textual Relevance and Visual Saliency for Efficient Vision-Language Model Token Pruning"
       ]
     },
     {
@@ -744,8 +744,8 @@
       "discovery_score": 14.6564,
       "examples": [
         "When Less Compute Is More: Adaptive Early Exit Improves Pretrained Outlier Detection",
-        "M$^2$PFN: End-to-End Disentangled Alignment for Generalizable Multimodal In-Context Learning in Alzheimer's Disease",
-        "MMAP: Multimodal Missing-Aware Pretraining for Longitudinal Alzheimer's Prediction"
+        "LoopICL: Looping a single transformer block to solve tabular tasks",
+        "TabFM-Auto: Self-Evolving Pipelines for Tabular Foundation Models"
       ]
     },
     {
@@ -1067,7 +1067,7 @@
       "examples": [
         "Robot-GST: geometry-aware spatial-temporal robot policy representation and evaluation",
         "MoWAM: Explicit Future Motion Prediction for Efficient World Action Models",
-        "RoboRecover: Benchmarking Robot Policy Recovery under Execution Deviations"
+        "Skill-Space Shooting for Autonomous Robot Policy Improvement"
       ]
     },
     {
@@ -1178,8 +1178,8 @@
       "discovery_score": 11.6827,
       "examples": [
         "Social Circuits behind Multi-agent Echo Chambers",
-        "Ischemic Stroke Segmentation and Net Water Uptake Quantification on Multicenter Non-Contrast CT Using Supervised Target-Domain Adaptation",
-        "BiCC: Bidirectional Connected-Component Loss for Instance-Aware Segmentation"
+        "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+        "Selecting The Most Informative Tokens in Natural Language Autoencoders"
       ]
     },
     {
@@ -1207,7 +1207,7 @@
       "examples": [
         "WhiteCon: Semi-Supervised Domain Adaptation Regression Through Whitening Transform and Dual Consistency",
         "Function Over Form: Distributional Orthogonalization in Mixture-of-Experts with Replica Expert Mechanism",
-        "EMERGE: Resolution-Agnostic Point Cloud Generation with Equivariant Graph-Based Diffusion"
+        "Physics-Informed Multi-Agent Coordination for Hospital Patient Flow Optimization"
       ]
     },
     {
@@ -1323,7 +1323,7 @@
       ]
     },
     {
-      "term": "language llm",
+      "term": "large language llm",
       "recent_docs": 142,
       "baseline_docs": 78,
       "recent_corpus_docs": 9094,
@@ -1337,7 +1337,7 @@
       ]
     },
     {
-      "term": "large language llm",
+      "term": "language llm",
       "recent_docs": 142,
       "baseline_docs": 78,
       "recent_corpus_docs": 9094,
