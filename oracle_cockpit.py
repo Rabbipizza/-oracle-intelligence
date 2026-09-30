@@ -131,6 +131,7 @@ def main():
     decisions=load("decision-state.json")
     portfolio=load("portfolio.json")
     challengers=load("data/company-challengers.json")
+    dossiers=load("data/evidence-dossiers.json")
     prior_cockpit=load("data/cockpit.json")
     qrows=series_rows(market,"QQQ")
 
@@ -200,8 +201,12 @@ def main():
                 discovery_boost,
                 2
             )
+            dossier=(dossiers.get("companies",{}) or {}).get(ticker,{})
             c={"rank":None,"previous_rank":previous.get(ticker),
                "ticker":ticker,"company":row.get("company"),"role":row.get("role"),"proof":proof,
+               "evidence_maturity":dossier.get("maturity"),
+               "trend_evidence_score":dossier.get("trend_evidence_score"),
+               "company_capture_score":dossier.get("company_capture_score"),
                "research_rank":row.get("research_rank"),"radar_origin":row.get("radar_origin"),
                "radar_discovery_score":row.get("radar_discovery_score",0.0),
                "radar_rank_score":radar_score,
@@ -292,7 +297,9 @@ def main():
         "decision_freshness":decision_freshness,
         "discovery":{"quality":discovery.get("quality"),"unique_papers":discovery.get("unique_papers"),
                      "recent_docs":discovery.get("recent_docs"),"baseline_docs":discovery.get("baseline_docs"),
-                     "scout_candidates_passing_coverage":scout[:10]},
+                     "scout_candidates_passing_coverage":scout[:10],
+                     "evidence_maturity_scale":dossiers.get("maturity_scale",[]),
+                     "concept_evidence":dossiers.get("concepts",{})},
         "trends":trends,
         "action_now":action,
         "target_allocation_pct":decisions.get("target_allocation_pct",{}),
