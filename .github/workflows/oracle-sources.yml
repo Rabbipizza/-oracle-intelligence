@@ -54,6 +54,8 @@ jobs:
           python oracle_company_primary.py
           python oracle_evidence_expansion.py
           python oracle_source_gate.py
+          python oracle_company_revalidate.py
+          python oracle_evidence_expansion.py
           python oracle_market.py
           python oracle_decision.py
           python oracle_cockpit.py
@@ -66,7 +68,7 @@ jobs:
         run: |
           git config user.name "oracle-bot"
           git config user.email "oracle-bot@users.noreply.github.com"
-          git add decision-state.json economic-evidence.json data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/company-challengers.json data/evidence-dossiers.json data/market.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
+          git add decision-state.json economic-evidence.json data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/company-challengers.json data/evidence-dossiers.json data/company-revalidation.json data/market.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
           git diff --cached --quiet || git commit -m "ORACLE: verified autonomous snapshot"
           git fetch origin main
           if ! git rebase origin/main; then
