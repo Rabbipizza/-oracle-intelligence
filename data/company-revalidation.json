@@ -1,0 +1,795 @@
+{
+  "generated_at": "2026-10-01T06:20:32.068170+00:00",
+  "method": "ORACLE_STRICT_PRIMARY_REVALIDATION_V1",
+  "passed_concepts": [
+    "physical"
+  ],
+  "promoted": [],
+  "results": [
+    {
+      "ticker": "COHR",
+      "trend": "photonics",
+      "company_capture_score": 75.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "award",
+        "capacity",
+        "contract",
+        "demand",
+        "revenue"
+      ],
+      "status": "VALIDATION_READY",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0000820318-26-000020",
+          "filingDate": "2026-08-14",
+          "form": "10-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+          "matched_aliases": [
+            "indium phosphide",
+            "optical interconnect",
+            "optical networking",
+            "silicon photonics",
+            "transceiver"
+          ],
+          "economic_terms": [
+            "award",
+            "capacity",
+            "contract",
+            "demand",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "trend": "photonics",
+      "company_capture_score": 75.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "capacity",
+        "demand",
+        "revenue"
+      ],
+      "status": "VALIDATION_READY",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001628280-26-057358",
+          "filingDate": "2026-08-17",
+          "form": "10-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+          "matched_aliases": [
+            "co-packaged optics",
+            "optical networking",
+            "transceiver"
+          ],
+          "economic_terms": [
+            "capacity",
+            "demand",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "trend": "physical",
+      "company_capture_score": 75.0,
+      "trend_gate_pass": true,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "revenue"
+      ],
+      "status": "VALIDATION_READY",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0000804328-26-000086",
+          "filingDate": "2026-07-29",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000086/qcom-20260628.htm",
+          "matched_aliases": [
+            "robotics"
+          ],
+          "economic_terms": [
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "trend": "physical",
+      "company_capture_score": 75.0,
+      "trend_gate_pass": true,
+      "recent_primary_filing_hits": 0,
+      "distinct_economic_terms": [],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": []
+    },
+    {
+      "ticker": "USAR",
+      "trend": "minerals",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 3,
+      "distinct_economic_terms": [
+        "capacity",
+        "contract",
+        "offtake"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001213900-26-097399",
+          "filingDate": "2026-09-04",
+          "form": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1970622/000121390026097399/ea0304001-8k_usarare.htm",
+          "matched_aliases": [
+            "rare earth"
+          ],
+          "economic_terms": [
+            "capacity"
+          ]
+        },
+        {
+          "accessionNumber": "0001970622-26-000061",
+          "filingDate": "2026-08-31",
+          "form": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1970622/000197062226000061/usar-20260828.htm",
+          "matched_aliases": [
+            "rare earth"
+          ],
+          "economic_terms": [
+            "capacity"
+          ]
+        },
+        {
+          "accessionNumber": "0001213900-26-092810",
+          "filingDate": "2026-08-24",
+          "form": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1970622/000121390026092810/ea0302924-8k_usarare.htm",
+          "matched_aliases": [
+            "rare earth"
+          ],
+          "economic_terms": [
+            "capacity",
+            "contract",
+            "offtake"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "ETN",
+      "trend": "power",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001551182-26-000030",
+          "filingDate": "2026-07-31",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm",
+          "matched_aliases": [
+            "transformer"
+          ],
+          "economic_terms": [
+            "revenue"
+          ]
+        },
+        {
+          "accessionNumber": "0001551182-26-000013",
+          "filingDate": "2026-05-05",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/etn-20260331.htm",
+          "matched_aliases": [
+            "transformer"
+          ],
+          "economic_terms": [
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "POWL",
+      "trend": "power",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "award",
+        "bookings",
+        "capacity",
+        "contract",
+        "demand",
+        "orders",
+        "revenue",
+        "shipment"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0000080420-26-000107",
+          "filingDate": "2026-08-04",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm",
+          "matched_aliases": [
+            "electrical distribution",
+            "generation capacity",
+            "switchgear"
+          ],
+          "economic_terms": [
+            "award",
+            "bookings",
+            "capacity",
+            "contract",
+            "demand",
+            "orders",
+            "revenue",
+            "shipment"
+          ]
+        },
+        {
+          "accessionNumber": "0000080420-26-000070",
+          "filingDate": "2026-05-05",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000070/powl-20260331.htm",
+          "matched_aliases": [
+            "electrical distribution",
+            "generation capacity",
+            "switchgear"
+          ],
+          "economic_terms": [
+            "award",
+            "capacity",
+            "contract",
+            "demand",
+            "orders",
+            "revenue",
+            "shipment"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "CRDO",
+      "trend": "photonics",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "award",
+        "capacity",
+        "contract",
+        "demand",
+        "revenue",
+        "shipment"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001628280-26-060111",
+          "filingDate": "2026-09-02",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+          "matched_aliases": [
+            "optical interconnect",
+            "silicon photonics",
+            "transceiver"
+          ],
+          "economic_terms": [
+            "award",
+            "contract",
+            "demand",
+            "revenue"
+          ]
+        },
+        {
+          "accessionNumber": "0001628280-26-043303",
+          "filingDate": "2026-06-15",
+          "form": "10-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "matched_aliases": [
+            "800g",
+            "optical interconnect",
+            "transceiver"
+          ],
+          "economic_terms": [
+            "capacity",
+            "demand",
+            "shipment"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "MP",
+      "trend": "minerals",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "award",
+        "capacity",
+        "contract",
+        "offtake",
+        "orders",
+        "production",
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001801368-26-000048",
+          "filingDate": "2026-08-07",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000048/mp-20260630.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "permanent magnet",
+            "rare earth"
+          ],
+          "economic_terms": [
+            "capacity",
+            "contract",
+            "offtake",
+            "orders",
+            "production",
+            "revenue"
+          ]
+        },
+        {
+          "accessionNumber": "0001801368-26-000029",
+          "filingDate": "2026-05-08",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000029/mp-20260331.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "permanent magnet",
+            "rare earth"
+          ],
+          "economic_terms": [
+            "award",
+            "capacity",
+            "contract",
+            "offtake",
+            "orders",
+            "production",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "NB",
+      "trend": "minerals",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "award",
+        "contract",
+        "offtake",
+        "production",
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001193125-26-402806",
+          "filingDate": "2026-09-25",
+          "form": "10-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1512228/000119312526402806/nb-20260630.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "permanent magnet",
+            "rare earth",
+            "strategic minerals"
+          ],
+          "economic_terms": [
+            "award",
+            "offtake",
+            "production",
+            "revenue"
+          ]
+        },
+        {
+          "accessionNumber": "0001193125-26-223959",
+          "filingDate": "2026-05-14",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1512228/000119312526223959/nb-20260331.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "permanent magnet",
+            "rare earth",
+            "strategic minerals"
+          ],
+          "economic_terms": [
+            "contract",
+            "offtake",
+            "production",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "AMBA",
+      "trend": "physical",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": true,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "customers",
+        "revenue",
+        "shipments"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001193125-26-383365",
+          "filingDate": "2026-09-04",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1280263/000119312526383365/amba-20260731.htm",
+          "matched_aliases": [
+            "lidar",
+            "robotics"
+          ],
+          "economic_terms": [
+            "customers",
+            "revenue",
+            "shipments"
+          ]
+        },
+        {
+          "accessionNumber": "0001193125-26-253198",
+          "filingDate": "2026-06-02",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1280263/000119312526253198/amba-20260430.htm",
+          "matched_aliases": [
+            "edge ai",
+            "lidar",
+            "robotics"
+          ],
+          "economic_terms": [
+            "customers",
+            "revenue",
+            "shipments"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "trend": "power",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "capacity"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001628280-26-050609",
+          "filingDate": "2026-07-29",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050609/vrt-20260630.htm",
+          "matched_aliases": [
+            "liquid cooling"
+          ],
+          "economic_terms": [
+            "capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "PWR",
+      "trend": "power",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "demand"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001050915-26-000025",
+          "filingDate": "2026-07-30",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1050915/000105091526000025/pwr-20260630.htm",
+          "matched_aliases": [
+            "electrification"
+          ],
+          "economic_terms": [
+            "demand"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "AVAV",
+      "trend": "cuas",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "contract",
+        "delivery",
+        "production",
+        "program",
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001104659-26-106423",
+          "filingDate": "2026-09-10",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1368622/000110465926106423/avav-20260801x10q.htm",
+          "matched_aliases": [
+            "directed energy"
+          ],
+          "economic_terms": [
+            "contract",
+            "delivery",
+            "production",
+            "program",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "trend": "photonics",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001730168-26-000080",
+          "filingDate": "2026-09-10",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+          "matched_aliases": [
+            "indium phosphide"
+          ],
+          "economic_terms": [
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "trend": "photonics",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "capacity",
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001628280-26-060361",
+          "filingDate": "2026-09-03",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/936395/000162828026060361/cien-20260801.htm",
+          "matched_aliases": [
+            "optical networking",
+            "transceiver"
+          ],
+          "economic_terms": [
+            "capacity",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "UUUU",
+      "trend": "minerals",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 1,
+      "distinct_economic_terms": [
+        "capacity",
+        "contract",
+        "offtake",
+        "production",
+        "revenue"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001385849-26-000029",
+          "filingDate": "2026-08-05",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1385849/000138584926000029/efr-20260630.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "magnet materials",
+            "permanent magnet",
+            "rare earth",
+            "uranium"
+          ],
+          "economic_terms": [
+            "capacity",
+            "contract",
+            "offtake",
+            "production",
+            "revenue"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "KTOS",
+      "trend": "cuas",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 0,
+      "distinct_economic_terms": [],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": []
+    },
+    {
+      "ticker": "BAH",
+      "trend": "cuas",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 0,
+      "distinct_economic_terms": [],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": []
+    },
+    {
+      "ticker": "ON",
+      "trend": "physical",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": true,
+      "recent_primary_filing_hits": 0,
+      "distinct_economic_terms": [],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": []
+    }
+  ]
+}
