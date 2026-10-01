@@ -63,6 +63,8 @@ def load_snapshot_rows():
                     "primary":bool(m.get("primary")),
                     "origin":origin(m.get("source"),r,text),
                     "text":text,
+                    "record_ticker":str(r.get("ticker") or "").upper() if isinstance(r,dict) else "",
+                    "record_company":norm(r.get("company") or "") if isinstance(r,dict) else "",
                     "file":str(p)
                 })
         except Exception:
@@ -160,7 +162,11 @@ for ticker,meta in companies.items():
     # This changes complexity from companies × all records to
     # companies × concept-relevant records.
     for r,ah,eh in concept_record_cache.get(trend,[]):
-        name_hit=any(re.search(r"(?<![a-z0-9])"+re.escape(n)+r"(?![a-z0-9])",r["text"]) for n in names)
+        # SEC evidence carries an explicit ticker: use it as the strongest identity key.
+        if r.get("record_ticker"):
+            name_hit=(r.get("record_ticker")==str(ticker).upper())
+        else:
+            name_hit=any(re.search(r"(?<![a-z0-9])"+re.escape(n)+r"(?![a-z0-9])",r["text"]) for n in names)
         if not name_hit: continue
         matches.append((r,ah,eh))
     uniq={r["origin"]:(r,ah,eh) for r,ah,eh in matches}
@@ -209,19 +215,32 @@ for ticker,meta in companies.items():
 
 # Map discovery phrases to concepts by semantic vocabulary overlap.
 mapped=[]
+GENERIC={"ai","data","center","language","generation","distribution","action","system","systems","model","models","network","networks","power"}
 for c in discovery.get("candidates",[]) or []:
     term=norm(c.get("term",""))
     toks=set(term.split())
+    meaningful=toks-GENERIC
     best=None; best_score=0
     for key,cfg in (ontology.get("concepts",{}) or {}).items():
         for alias in cfg.get("aliases",[]):
-            a=set(norm(alias).split())
+            alias_n=norm(alias)
+            a=set(alias_n.split())
             if not a: continue
-            score=len(toks&a)/max(1,min(len(toks),len(a)))
-            if term in norm(alias) or norm(alias) in term: score=max(score,0.9)
+            am=a-GENERIC
+            exact=(alias_n in term or term in alias_n) and min(len(term),len(alias_n))>=4
+            overlap=len(meaningful & am)
+            # Require either a genuine phrase match, or at least two meaningful
+            # shared tokens. Single generic words such as "generation" or
+            # "distribution" must never map a discovery term to a concept.
+            if exact:
+                score=1.0 if term==alias_n else 0.92
+            elif overlap>=2:
+                score=overlap/max(1,len(meaningful|am))
+            else:
+                score=0.0
             if score>best_score:
                 best_score=score; best=key
-    if best and best_score>=0.5:
+    if best and best_score>=0.55:
         mapped.append({
             "term":c.get("term"),"concept":best,
             "mapping_confidence":round(best_score,2),
