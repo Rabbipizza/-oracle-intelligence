@@ -157,13 +157,14 @@ def main():
                     errors.append({"ticker":ticker,"accession":row.get("accessionNumber"),"error":repr(e)})
                 time.sleep(0.15)
             if docs:
-                records.append({
-                    "ticker":ticker,
-                    "company":issuer or info.get("title"),
-                    "cik":cik,
-                    "submissions_url":sub_url,
-                    "filings":docs
-                })
+                for d in docs:
+                    records.append({
+                        "ticker":ticker,
+                        "company":issuer or info.get("title"),
+                        "cik":cik,
+                        "submissions_url":sub_url,
+                        **d
+                    })
                 covered.append(ticker)
         except Exception as e:
             errors.append({"ticker":ticker,"cik":cik,"error":repr(e)})
@@ -173,7 +174,7 @@ def main():
         made.append(save("sec_primary_filings",records,{"ticker_map_url":map_url,"tickers":covered}))
     print(json.dumps({
         "requested":len(tickers),"covered":len(covered),"tickers":covered,
-        "filing_documents":sum(len(x["filings"]) for x in records),
+        "filing_documents":len(records),
         "created":made,"errors":errors[:12]
     }))
 
