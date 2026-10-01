@@ -51,6 +51,7 @@ jobs:
         run: |
           python oracle_sources.py
           python oracle_company_discovery.py
+          python oracle_company_primary.py
           python oracle_evidence_expansion.py
           python oracle_source_gate.py
           python oracle_market.py
