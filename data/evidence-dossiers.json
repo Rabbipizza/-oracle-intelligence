@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T05:47:58.762133+00:00",
+  "generated_at": "2026-10-01T05:53:31.954508+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -200,95 +200,11 @@
   },
   "discovery_to_concepts": [
     {
-      "term": "large language",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 59.7977,
-      "acceleration": 1.619
-    },
-    {
-      "term": "language llms",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 33.7915,
-      "acceleration": 1.862
-    },
-    {
-      "term": "target distribution",
-      "concept": "power",
-      "mapping_confidence": 0.5,
-      "discovery_score": 21.5216,
-      "acceleration": 26.51
-    },
-    {
       "term": "vision-language-action vla",
       "concept": "physical",
-      "mapping_confidence": 1.0,
+      "mapping_confidence": 0.92,
       "discovery_score": 20.3676,
       "acceleration": 1.826
-    },
-    {
-      "term": "video generation",
-      "concept": "power",
-      "mapping_confidence": 0.5,
-      "discovery_score": 18.8365,
-      "acceleration": 2.905
-    },
-    {
-      "term": "natural language",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 16.2943,
-      "acceleration": 2.087
-    },
-    {
-      "term": "language agents",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 16.2845,
-      "acceleration": 6.839
-    },
-    {
-      "term": "diffusion language",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 15.8575,
-      "acceleration": 9.349
-    },
-    {
-      "term": "language modeling",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 13.8311,
-      "acceleration": 8.325
-    },
-    {
-      "term": "language mllms",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 13.7078,
-      "acceleration": 2.825
-    },
-    {
-      "term": "language llm",
-      "concept": "physical",
-      "mapping_confidence": 0.5,
-      "discovery_score": 12.7402,
-      "acceleration": 0.834
-    },
-    {
-      "term": "action generation",
-      "concept": "power",
-      "mapping_confidence": 0.5,
-      "discovery_score": 12.4174,
-      "acceleration": 2.324
-    },
-    {
-      "term": "distribution matching",
-      "concept": "power",
-      "mapping_confidence": 0.5,
-      "discovery_score": 11.8101,
-      "acceleration": 7.3
     }
   ],
   "companies": {
@@ -348,9 +264,9 @@
       "families": [
         "company"
       ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
-      "economic_primary_origin_count": 3,
+      "matched_origin_count": 2,
+      "primary_origin_count": 2,
+      "economic_primary_origin_count": 2,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -482,16 +398,14 @@
       "role": "Direct beneficiary / onsite generation",
       "legacy_proof": "PARTIAL",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 2,
-      "primary_origin_count": 2,
-      "economic_primary_origin_count": 2,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1095,9 +1009,9 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 20,
-      "primary_origin_count": 18,
-      "economic_primary_origin_count": 3,
+      "matched_origin_count": 18,
+      "primary_origin_count": 16,
+      "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1197,9 +1111,9 @@
       "families": [
         "company"
       ],
-      "matched_origin_count": 3,
-      "primary_origin_count": 3,
-      "economic_primary_origin_count": 3,
+      "matched_origin_count": 1,
+      "primary_origin_count": 1,
+      "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1211,16 +1125,14 @@
       "role": "Direct beneficiary / optical DSP",
       "legacy_proof": "PARTIAL",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 1,
-      "primary_origin_count": 1,
-      "economic_primary_origin_count": 1,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1274,16 +1186,14 @@
       "role": "Connectivity candidate",
       "legacy_proof": "UNPROVEN",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 1,
-      "primary_origin_count": 1,
-      "economic_primary_origin_count": 1,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1428,16 +1338,14 @@
       "role": "Photonics candidate",
       "legacy_proof": "UNPROVEN",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 1,
-      "primary_origin_count": 1,
-      "economic_primary_origin_count": 1,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1723,16 +1631,14 @@
       "role": "Mine-to-metals candidate",
       "legacy_proof": "PARTIAL",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 2,
-      "primary_origin_count": 2,
-      "economic_primary_origin_count": 1,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1885,9 +1791,9 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 19,
-      "primary_origin_count": 19,
-      "economic_primary_origin_count": 4,
+      "matched_origin_count": 16,
+      "primary_origin_count": 16,
+      "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -1968,9 +1874,9 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 5,
-      "primary_origin_count": 5,
-      "economic_primary_origin_count": 3,
+      "matched_origin_count": 3,
+      "primary_origin_count": 3,
+      "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -2022,16 +1928,14 @@
       "role": "Perception/autonomy candidate",
       "legacy_proof": "PARTIAL",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 2,
-      "primary_origin_count": 2,
-      "economic_primary_origin_count": 2,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -2197,17 +2101,16 @@
       "role": "Automation software candidate",
       "legacy_proof": "UNPROVEN",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "ECONOMIC_LINK",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 75.0,
-      "family_count": 2,
+      "company_capture_score": 15.0,
+      "family_count": 1,
       "families": [
-        "company",
         "science"
       ],
-      "matched_origin_count": 42,
-      "primary_origin_count": 39,
-      "economic_primary_origin_count": 2,
+      "matched_origin_count": 40,
+      "primary_origin_count": 37,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."
@@ -2829,16 +2732,14 @@
       "role": "Dynamic challenger",
       "legacy_proof": "UNPROVEN",
       "origin": "DYNAMIC_CHALLENGER",
-      "maturity": "COMPANY_CAPTURE",
+      "maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
-      "family_count": 1,
-      "families": [
-        "company"
-      ],
-      "matched_origin_count": 2,
-      "primary_origin_count": 2,
-      "economic_primary_origin_count": 2,
+      "company_capture_score": 0.0,
+      "family_count": 0,
+      "families": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
       "proof_requirement": "Explicit primary economic capture evidence remains required before PROVEN/GREEN."

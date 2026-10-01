@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-01T05:48:42.723243+00:00",
-  "market_generated_at": "2026-10-01T05:48:23.580195+00:00",
+  "generated_at": "2026-10-01T05:54:16.563727+00:00",
+  "market_generated_at": "2026-10-01T05:53:58.027889+00:00",
   "market_source": {
     "prices": "Yahoo Finance chart EOD",
     "fx": "ECB Data Portal"
@@ -19,53 +19,9 @@
     "baseline_docs": 3916,
     "scout_candidates_passing_coverage": [
       {
-        "term": "large language",
-        "score": 59.7977,
-        "acceleration": 1.619,
-        "families": [
-          "company",
-          "industry_contracts",
-          "science"
-        ],
-        "status": "ECONOMIC_LINK"
-      },
-      {
-        "term": "language llms",
-        "score": 33.7915,
-        "acceleration": 1.862,
-        "families": [
-          "company",
-          "industry_contracts",
-          "science"
-        ],
-        "status": "ECONOMIC_LINK"
-      },
-      {
-        "term": "target distribution",
-        "score": 21.5216,
-        "acceleration": 26.51,
-        "families": [
-          "company",
-          "industry_contracts",
-          "science"
-        ],
-        "status": "ECONOMIC_LINK"
-      },
-      {
         "term": "vision-language-action vla",
         "score": 20.3676,
         "acceleration": 1.826,
-        "families": [
-          "company",
-          "industry_contracts",
-          "science"
-        ],
-        "status": "ECONOMIC_LINK"
-      },
-      {
-        "term": "video generation",
-        "score": 18.8365,
-        "acceleration": 2.905,
         "families": [
           "company",
           "industry_contracts",
@@ -293,9 +249,9 @@
           "company": "Marvell",
           "role": "Direct beneficiary / optical DSP",
           "proof": "PARTIAL",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": 7,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -738,9 +694,9 @@
           "company": "Astera Labs",
           "role": "Connectivity candidate",
           "proof": "UNPROVEN",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -1402,9 +1358,9 @@
           "company": "IPG Photonics",
           "role": "Photonics candidate",
           "proof": "UNPROVEN",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": 18,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2457,7 +2413,7 @@
         },
         {
           "rank": 14,
-          "previous_rank": 16,
+          "previous_rank": 14,
           "ticker": "NNE",
           "company": "Nano Nuclear Energy",
           "role": "Dynamic challenger \u2014 economic capture unproven",
@@ -2514,7 +2470,7 @@
             86.33,
             86.66
           ],
-          "rank_delta": 2
+          "rank_delta": 0
         },
         {
           "rank": 15,
@@ -2523,9 +2479,9 @@
           "company": "Caterpillar",
           "role": "Direct beneficiary / onsite generation",
           "proof": "PARTIAL",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": 10,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -2585,7 +2541,7 @@
         },
         {
           "rank": 16,
-          "previous_rank": 17,
+          "previous_rank": 16,
           "ticker": "POWL",
           "company": "Powell Industries",
           "role": "Bottleneck candidate / switchgear",
@@ -2648,11 +2604,11 @@
             104.86,
             102.64
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 17,
-          "previous_rank": 18,
+          "previous_rank": 17,
           "ticker": "ENR.DE",
           "company": "Siemens Energy",
           "role": "Generation/grid candidate",
@@ -2715,11 +2671,11 @@
             99.09,
             102.56
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 18,
-          "previous_rank": 19,
+          "previous_rank": 18,
           "ticker": "SMR",
           "company": "NuScale Power",
           "role": "Dynamic challenger \u2014 economic capture unproven",
@@ -2776,11 +2732,11 @@
             83.71,
             85.22
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 19,
-          "previous_rank": 20,
+          "previous_rank": 19,
           "ticker": "VST",
           "company": "Vistra",
           "role": "Direct beneficiary / firm power",
@@ -2843,11 +2799,11 @@
             102.52,
             100.71
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 20,
-          "previous_rank": 14,
+          "previous_rank": 20,
           "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Grid equipment candidate",
@@ -2910,7 +2866,7 @@
             103.72,
             101.98
           ],
-          "rank_delta": -6
+          "rank_delta": 0
         }
       ]
     },
@@ -2923,7 +2879,7 @@
       "state": "STABLE",
       "summary": "Supply-chain security is accelerating ex-China mining, separation, refining and magnet capacity.",
       "market": {
-        "median_1m_pct": -13.3,
+        "median_1m_pct": -13.15,
         "breadth_positive_1m_pct": 7.41,
         "priced_companies": 27
       },
@@ -3423,9 +3379,9 @@
           "company": "Australian Strategic Materials",
           "role": "Mine-to-metals candidate",
           "proof": "PARTIAL",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": 13,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
@@ -3799,7 +3755,7 @@
         },
         {
           "rank": 15,
-          "previous_rank": 16,
+          "previous_rank": 15,
           "ticker": "MP",
           "company": "MP Materials",
           "role": "Leader / mine-to-magnet",
@@ -3862,11 +3818,11 @@
             82.98,
             86.37
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 16,
-          "previous_rank": 15,
+          "previous_rank": 16,
           "ticker": "ILU.AX",
           "company": "Iluka Resources",
           "role": "Rare-earth refinery candidate",
@@ -3877,12 +3833,12 @@
           "research_rank": 11,
           "radar_origin": "RESEARCH_UNIVERSE",
           "radar_discovery_score": 0.0,
-          "radar_rank_score": 37.06,
+          "radar_rank_score": 37.22,
           "challenger_queries": [],
           "signal": "ORANGE",
-          "signal_reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 35.8; acceleration 12.9; ACTUAL 0.0% -> TARGET 0.0%.",
+          "signal_reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 36.0; acceleration 13.2; ACTUAL 0.0% -> TARGET 0.0%.",
           "structural_early_bird": 60.2,
-          "entry_score": 6.4,
+          "entry_score": 6.8,
           "indicative_entry_sizing": {
             "band": "0%",
             "min_pct": 0.0,
@@ -3890,8 +3846,8 @@
             "label": "NO ENTRY",
             "reason": "Economic chain not freshly PROVEN."
           },
-          "hold_score": 35.79,
-          "capital_competition_score": 12.86,
+          "hold_score": 35.99,
+          "capital_competition_score": 13.16,
           "actual_weight_pct": 0.0,
           "target_weight_pct": 0.0,
           "portfolio_action": "WAIT",
@@ -3900,11 +3856,11 @@
           "currency": "AUD",
           "exchange": "ASX",
           "date": "2026-10-01",
-          "price": 5.8,
-          "d1": -3.81,
-          "w1": -4.13,
-          "m1": -13.3,
-          "rel_m1_qqq": -16.51,
+          "price": 5.81,
+          "d1": -3.65,
+          "w1": -3.97,
+          "m1": -13.15,
+          "rel_m1_qqq": -16.36,
           "spark": [
             100.0,
             100.75,
@@ -3927,9 +3883,9 @@
             88.79,
             90.58,
             90.13,
-            86.7
+            86.85
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 17,
@@ -4000,7 +3956,7 @@
         },
         {
           "rank": 18,
-          "previous_rank": 19,
+          "previous_rank": 18,
           "ticker": "ARU.AX",
           "company": "Arafura Rare Earths",
           "role": "NdPr project candidate",
@@ -4063,11 +4019,11 @@
             92.11,
             90.53
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 19,
-          "previous_rank": 20,
+          "previous_rank": 19,
           "ticker": "UUUU",
           "company": "Energy Fuels",
           "role": "Rare-earth processing candidate",
@@ -4130,11 +4086,11 @@
             74.51,
             74.78
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 20,
-          "previous_rank": null,
+          "previous_rank": 20,
           "ticker": "HAS.AX",
           "company": "Hastings Technology Metals",
           "role": "NdPr candidate",
@@ -4197,7 +4153,7 @@
             91.07,
             91.07
           ],
-          "rank_delta": null
+          "rank_delta": 0
         }
       ]
     },
@@ -5804,9 +5760,9 @@
           "company": "Taiwan Semiconductor",
           "role": "Dynamic challenger \u2014 economic capture unproven",
           "proof": "UNPROVEN",
-          "evidence_maturity": "COMPANY_CAPTURE",
+          "evidence_maturity": "CORROBORATED",
           "trend_evidence_score": 100.0,
-          "company_capture_score": 60.0,
+          "company_capture_score": 0.0,
           "research_rank": null,
           "radar_origin": "DYNAMIC_CHALLENGER",
           "radar_discovery_score": 8.0,
@@ -6378,7 +6334,7 @@
         },
         {
           "rank": 14,
-          "previous_rank": 15,
+          "previous_rank": 14,
           "ticker": "ROK",
           "company": "Rockwell Automation",
           "role": "Industrial automation candidate",
@@ -6441,11 +6397,11 @@
             101.67,
             102.57
           ],
-          "rank_delta": 1
+          "rank_delta": 0
         },
         {
           "rank": 15,
-          "previous_rank": 14,
+          "previous_rank": 15,
           "ticker": "ABBN.SW",
           "company": "ABB",
           "role": "Industrial robotics leader candidate",
@@ -6508,7 +6464,7 @@
             103.72,
             101.98
           ],
-          "rank_delta": -1
+          "rank_delta": 0
         },
         {
           "rank": 16,
@@ -6930,9 +6886,9 @@
       "company": "Marvell",
       "role": "Direct beneficiary / optical DSP",
       "proof": "PARTIAL",
-      "evidence_maturity": "COMPANY_CAPTURE",
+      "evidence_maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
+      "company_capture_score": 0.0,
       "research_rank": 7,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -7984,9 +7940,9 @@
       "company": "Caterpillar",
       "role": "Direct beneficiary / onsite generation",
       "proof": "PARTIAL",
-      "evidence_maturity": "COMPANY_CAPTURE",
+      "evidence_maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
+      "company_capture_score": 0.0,
       "research_rank": 10,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8049,7 +8005,7 @@
     },
     {
       "rank": 16,
-      "previous_rank": 17,
+      "previous_rank": 16,
       "ticker": "POWL",
       "company": "Powell Industries",
       "role": "Bottleneck candidate / switchgear",
@@ -8112,14 +8068,14 @@
         104.86,
         102.64
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 17,
-      "previous_rank": 18,
+      "previous_rank": 17,
       "ticker": "ENR.DE",
       "company": "Siemens Energy",
       "role": "Generation/grid candidate",
@@ -8182,14 +8138,14 @@
         99.09,
         102.56
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 19,
-      "previous_rank": 20,
+      "previous_rank": 19,
       "ticker": "VST",
       "company": "Vistra",
       "role": "Direct beneficiary / firm power",
@@ -8252,14 +8208,14 @@
         102.52,
         100.71
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
     },
     {
       "rank": 20,
-      "previous_rank": 14,
+      "previous_rank": 20,
       "ticker": "ABBN.SW",
       "company": "ABB",
       "role": "Grid equipment candidate",
@@ -8322,7 +8278,7 @@
         103.72,
         101.98
       ],
-      "rank_delta": -6,
+      "rank_delta": 0,
       "trend_key": "power",
       "trend": "AI power / grid",
       "trend_rank": 2
@@ -8334,9 +8290,9 @@
       "company": "Australian Strategic Materials",
       "role": "Mine-to-metals candidate",
       "proof": "PARTIAL",
-      "evidence_maturity": "COMPANY_CAPTURE",
+      "evidence_maturity": "CORROBORATED",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 60.0,
+      "company_capture_score": 0.0,
       "research_rank": 13,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
@@ -8469,7 +8425,7 @@
     },
     {
       "rank": 15,
-      "previous_rank": 16,
+      "previous_rank": 15,
       "ticker": "MP",
       "company": "MP Materials",
       "role": "Leader / mine-to-magnet",
@@ -8532,14 +8488,14 @@
         82.98,
         86.37
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 16,
-      "previous_rank": 15,
+      "previous_rank": 16,
       "ticker": "ILU.AX",
       "company": "Iluka Resources",
       "role": "Rare-earth refinery candidate",
@@ -8550,12 +8506,12 @@
       "research_rank": 11,
       "radar_origin": "RESEARCH_UNIVERSE",
       "radar_discovery_score": 0.0,
-      "radar_rank_score": 37.06,
+      "radar_rank_score": 37.22,
       "challenger_queries": [],
       "signal": "ORANGE",
-      "signal_reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 35.8; acceleration 12.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "signal_reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 36.0; acceleration 13.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "structural_early_bird": 60.2,
-      "entry_score": 6.4,
+      "entry_score": 6.8,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -8563,8 +8519,8 @@
         "label": "NO ENTRY",
         "reason": "Economic chain not freshly PROVEN."
       },
-      "hold_score": 35.79,
-      "capital_competition_score": 12.86,
+      "hold_score": 35.99,
+      "capital_competition_score": 13.16,
       "actual_weight_pct": 0.0,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
@@ -8573,11 +8529,11 @@
       "currency": "AUD",
       "exchange": "ASX",
       "date": "2026-10-01",
-      "price": 5.8,
-      "d1": -3.81,
-      "w1": -4.13,
-      "m1": -13.3,
-      "rel_m1_qqq": -16.51,
+      "price": 5.81,
+      "d1": -3.65,
+      "w1": -3.97,
+      "m1": -13.15,
+      "rel_m1_qqq": -16.36,
       "spark": [
         100.0,
         100.75,
@@ -8600,16 +8556,16 @@
         88.79,
         90.58,
         90.13,
-        86.7
+        86.85
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 18,
-      "previous_rank": 19,
+      "previous_rank": 18,
       "ticker": "ARU.AX",
       "company": "Arafura Rare Earths",
       "role": "NdPr project candidate",
@@ -8672,14 +8628,14 @@
         92.11,
         90.53
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
     },
     {
       "rank": 19,
-      "previous_rank": 20,
+      "previous_rank": 19,
       "ticker": "UUUU",
       "company": "Energy Fuels",
       "role": "Rare-earth processing candidate",
@@ -8742,7 +8698,7 @@
         74.51,
         74.78
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "minerals",
       "trend": "Critical minerals sovereignty",
       "trend_rank": 3
@@ -9869,7 +9825,7 @@
     },
     {
       "rank": 14,
-      "previous_rank": 15,
+      "previous_rank": 14,
       "ticker": "ROK",
       "company": "Rockwell Automation",
       "role": "Industrial automation candidate",
@@ -9932,14 +9888,14 @@
         101.67,
         102.57
       ],
-      "rank_delta": 1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
     },
     {
       "rank": 15,
-      "previous_rank": 14,
+      "previous_rank": 15,
       "ticker": "ABBN.SW",
       "company": "ABB",
       "role": "Industrial robotics leader candidate",
@@ -10002,7 +9958,7 @@
         103.72,
         101.98
       ],
-      "rank_delta": -1,
+      "rank_delta": 0,
       "trend_key": "physical",
       "trend": "Physical AI / robotics infrastructure",
       "trend_rank": 5
