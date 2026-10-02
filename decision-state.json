@@ -1,7 +1,7 @@
 {
   "version": 2,
   "as_of": "2026-10-01",
-  "generated_at": "2026-10-02T07:23:11.297691+00:00",
+  "generated_at": "2026-10-02T12:47:49.115300+00:00",
   "method": "ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
   "rule": "Deploy capital once into the best available opportunity set, then let incumbents compound. Rotate only when a challenger has a materially stronger acceleration edge than the incumbent HOLD state, or when the incumbent thesis/risk state is invalidated. No leverage; no real orders are executed.",
   "trends": {
@@ -11,7 +11,7 @@
       "state": "STABLE",
       "summary": "AI data-center demand is colliding with generation, grid, switchgear and cooling constraints.",
       "market_breadth_1m_pct": 70.0,
-      "market_median_1m_pct": 5.34
+      "market_median_1m_pct": 5.52
     },
     "cuas": {
       "rank": 4,
@@ -49,12 +49,12 @@
   "signals": {
     "GEV": {
       "signal": "GREEN",
-      "reason": "Fresh explicit economic proof; Structural 97.2/100; Entry 74.9/100. Deploy\u2192Compound\u2192Rotate: HOLD 82.8; acceleration 89.7; ACTUAL 6.0% -> TARGET 6.0%.",
+      "reason": "Fresh explicit economic proof; Structural 97.2/100; Entry 75.0/100. Deploy\u2192Compound\u2192Rotate: HOLD 82.8; acceleration 89.8; ACTUAL 6.0% -> TARGET 6.0%.",
       "portfolio_action": "HOLD"
     },
     "VRT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 42.3; acceleration 20.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 42.3; acceleration 21.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ETN": {
@@ -64,7 +64,7 @@
     },
     "AAON": {
       "signal": "GREEN",
-      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 62.1/100. Deploy\u2192Compound\u2192Rotate: HOLD 74.4; acceleration 76.0; ACTUAL 70.0% -> TARGET 70.0%.",
+      "reason": "Fresh explicit economic proof; Structural 95.8/100; Entry 62.2/100. Deploy\u2192Compound\u2192Rotate: HOLD 74.4; acceleration 76.0; ACTUAL 70.0% -> TARGET 70.0%.",
       "portfolio_action": "HOLD"
     },
     "PWR": {
@@ -79,7 +79,7 @@
     },
     "NVT": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 68.7; acceleration 76.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 68.7; acceleration 77.0; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "HUBB": {
@@ -119,32 +119,32 @@
     },
     "CCJ": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 40.1; acceleration 23.6; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 40.2; acceleration 23.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "BE": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 62.0; acceleration 60.8; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 62.1; acceleration 60.8; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "GNRC": {
       "signal": "RED",
-      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 58.4; acceleration 67.3; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Evidence insufficient for a fresh entry state. Deploy\u2192Compound\u2192Rotate: HOLD 58.4; acceleration 67.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ABBN.SW": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 61.9; acceleration 64.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 62.5; acceleration 66.4; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "SU.PA": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 57.2; acceleration 55.2; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 58.8; acceleration 59.1; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "ENR.DE": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 53.6; acceleration 44.9; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 52.9; acceleration 42.6; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AVAV": {
@@ -269,7 +269,7 @@
     },
     "IQE.L": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 68.4; acceleration 81.1; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 70.6; acceleration 84.2; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "AVGO": {
@@ -464,7 +464,7 @@
     },
     "IOT.MI": {
       "signal": "ORANGE",
-      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 72.5; acceleration 74.0; ACTUAL 0.0% -> TARGET 0.0%.",
+      "reason": "Prior exposure label exists but has not been revalidated in the explicit evidence registry. Deploy\u2192Compound\u2192Rotate: HOLD 70.0; acceleration 69.7; ACTUAL 0.0% -> TARGET 0.0%.",
       "portfolio_action": "WAIT"
     },
     "QCOM": {
@@ -551,7 +551,7 @@
   "scores": {
     "GEV": {
       "structural_early_bird": 97.2,
-      "entry_score": 74.9,
+      "entry_score": 75.0,
       "trend": "power",
       "role": "Bottleneck / generation",
       "evidence_status": "PROVEN",
@@ -562,8 +562,8 @@
       "volatility_21d_ann_pct": 45.98,
       "max_drawdown_63d_pct": -18.94,
       "actual_weight_pct": 6.0,
-      "allocation_score": 87.17,
-      "hold_score": 82.82,
+      "allocation_score": 87.21,
+      "hold_score": 82.84,
       "target_weight_pct": 6.0,
       "portfolio_action": "HOLD",
       "invalidation": [
@@ -571,18 +571,18 @@
         "data-center order slowdown",
         "backlog contraction inconsistent with thesis"
       ],
-      "capital_competition_score": 89.71,
+      "capital_competition_score": 89.76,
       "indicative_entry_sizing": {
-        "band": "20-35%",
-        "min_pct": 20.0,
-        "max_pct": 35.0,
-        "label": "MODERATE",
+        "band": "35-45%",
+        "min_pct": 35.0,
+        "max_pct": 45.0,
+        "label": "STRONG",
         "reason": "Fresh-entry sizing from Structural + Entry + relative strength, with volatility/drawdown haircuts."
       }
     },
     "VRT": {
       "structural_early_bird": 53.5,
-      "entry_score": 41.8,
+      "entry_score": 41.9,
       "trend": "power",
       "role": "Direct beneficiary / power & cooling",
       "evidence_status": "UNREVALIDATED",
@@ -593,12 +593,12 @@
       "volatility_21d_ann_pct": 64.07,
       "max_drawdown_63d_pct": -26.75,
       "actual_weight_pct": 0.0,
-      "allocation_score": 48.23,
-      "hold_score": 42.28,
+      "allocation_score": 48.28,
+      "hold_score": 42.3,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 20.91,
+      "capital_competition_score": 20.96,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -609,7 +609,7 @@
     },
     "ETN": {
       "structural_early_bird": 54.2,
-      "entry_score": 72.0,
+      "entry_score": 72.1,
       "trend": "power",
       "role": "Pick & shovel / electrical distribution",
       "evidence_status": "UNREVALIDATED",
@@ -620,12 +620,12 @@
       "volatility_21d_ann_pct": 41.76,
       "max_drawdown_63d_pct": -15.06,
       "actual_weight_pct": 0.0,
-      "allocation_score": 62.21,
-      "hold_score": 60.61,
+      "allocation_score": 62.26,
+      "hold_score": 60.64,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 69.3,
+      "capital_competition_score": 69.35,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -636,7 +636,7 @@
     },
     "AAON": {
       "structural_early_bird": 95.8,
-      "entry_score": 62.1,
+      "entry_score": 62.2,
       "trend": "power",
       "role": "Direct beneficiary / data-center cooling",
       "evidence_status": "PROVEN",
@@ -647,8 +647,8 @@
       "volatility_21d_ann_pct": 47.07,
       "max_drawdown_63d_pct": -30.98,
       "actual_weight_pct": 70.0,
-      "allocation_score": 80.64,
-      "hold_score": 74.36,
+      "allocation_score": 80.68,
+      "hold_score": 74.38,
       "target_weight_pct": 70.0,
       "portfolio_action": "HOLD",
       "invalidation": [
@@ -656,7 +656,7 @@
         "confirmed slowdown in data-center orders",
         "persistent margin/cash-conversion deterioration"
       ],
-      "capital_competition_score": 75.95,
+      "capital_competition_score": 76.0,
       "indicative_entry_sizing": {
         "band": "10-20%",
         "min_pct": 10.0,
@@ -667,7 +667,7 @@
     },
     "PWR": {
       "structural_early_bird": 67.2,
-      "entry_score": 70.6,
+      "entry_score": 70.7,
       "trend": "power",
       "role": "Pick & shovel / grid construction",
       "evidence_status": "UNREVALIDATED",
@@ -678,12 +678,12 @@
       "volatility_21d_ann_pct": 33.21,
       "max_drawdown_63d_pct": -16.56,
       "actual_weight_pct": 0.0,
-      "allocation_score": 68.73,
-      "hold_score": 65.47,
+      "allocation_score": 68.78,
+      "hold_score": 65.5,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 70.65,
+      "capital_competition_score": 70.7,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -721,7 +721,7 @@
     },
     "NVT": {
       "structural_early_bird": 67.2,
-      "entry_score": 77.7,
+      "entry_score": 77.8,
       "trend": "power",
       "role": "Pick & shovel / electrical connection",
       "evidence_status": "UNREVALIDATED",
@@ -732,12 +732,12 @@
       "volatility_21d_ann_pct": 51.14,
       "max_drawdown_63d_pct": -17.25,
       "actual_weight_pct": 0.0,
-      "allocation_score": 71.93,
-      "hold_score": 68.67,
+      "allocation_score": 71.97,
+      "hold_score": 68.69,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 76.9,
+      "capital_competition_score": 76.95,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -802,7 +802,7 @@
     },
     "CAT": {
       "structural_early_bird": 66.5,
-      "entry_score": 64.3,
+      "entry_score": 64.4,
       "trend": "power",
       "role": "Direct beneficiary / onsite generation",
       "evidence_status": "UNREVALIDATED",
@@ -813,12 +813,12 @@
       "volatility_21d_ann_pct": 25.26,
       "max_drawdown_63d_pct": -12.9,
       "actual_weight_pct": 0.0,
-      "allocation_score": 65.51,
-      "hold_score": 63.13,
+      "allocation_score": 65.56,
+      "hold_score": 63.15,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 65.89,
+      "capital_competition_score": 65.94,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -937,7 +937,7 @@
     },
     "CCJ": {
       "structural_early_bird": 54.9,
-      "entry_score": 32.4,
+      "entry_score": 32.5,
       "trend": "power",
       "role": "Fuel bottleneck candidate",
       "evidence_status": "UNREVALIDATED",
@@ -948,12 +948,12 @@
       "volatility_21d_ann_pct": 32.39,
       "max_drawdown_63d_pct": -20.18,
       "actual_weight_pct": 0.0,
-      "allocation_score": 44.77,
-      "hold_score": 40.14,
+      "allocation_score": 44.82,
+      "hold_score": 40.17,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 23.64,
+      "capital_competition_score": 23.69,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -964,7 +964,7 @@
     },
     "BE": {
       "structural_early_bird": 47.2,
-      "entry_score": 82.0,
+      "entry_score": 82.1,
       "trend": "power",
       "role": "Onsite power candidate",
       "evidence_status": "UNREVALIDATED",
@@ -975,12 +975,12 @@
       "volatility_21d_ann_pct": 90.5,
       "max_drawdown_63d_pct": -27.63,
       "actual_weight_pct": 0.0,
-      "allocation_score": 62.86,
-      "hold_score": 62.04,
+      "allocation_score": 62.91,
+      "hold_score": 62.07,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 60.78,
+      "capital_competition_score": 60.83,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -991,7 +991,7 @@
     },
     "GNRC": {
       "structural_early_bird": 47.2,
-      "entry_score": 82.8,
+      "entry_score": 82.9,
       "trend": "power",
       "role": "Distributed power candidate",
       "evidence_status": "UNREVALIDATED",
@@ -1002,12 +1002,12 @@
       "volatility_21d_ann_pct": 70.34,
       "max_drawdown_63d_pct": -21.12,
       "actual_weight_pct": 0.0,
-      "allocation_score": 63.22,
-      "hold_score": 58.41,
+      "allocation_score": 63.27,
+      "hold_score": 58.44,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 67.34,
+      "capital_competition_score": 67.39,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -1018,23 +1018,23 @@
     },
     "ABBN.SW": {
       "structural_early_bird": 65.2,
-      "entry_score": 63.9,
+      "entry_score": 65.7,
       "trend": "physical",
       "role": "Industrial robotics leader candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.91,
-      "w1_pct": 1.2,
-      "m1_pct": 5.08,
-      "rel_qqq_1m_pct_points": 0.22,
-      "volatility_21d_ann_pct": 29.83,
+      "d1_pct": 2.34,
+      "w1_pct": 1.62,
+      "m1_pct": 5.52,
+      "rel_qqq_1m_pct_points": 0.66,
+      "volatility_21d_ann_pct": 30.16,
       "max_drawdown_63d_pct": -9.63,
       "actual_weight_pct": 0.0,
-      "allocation_score": 64.62,
-      "hold_score": 61.92,
+      "allocation_score": 65.43,
+      "hold_score": 62.55,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 64.88,
+      "capital_competition_score": 66.41,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -1045,23 +1045,23 @@
     },
     "SU.PA": {
       "structural_early_bird": 60.2,
-      "entry_score": 58.6,
+      "entry_score": 63.2,
       "trend": "power",
       "role": "Power management candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.63,
-      "w1_pct": 2.4,
-      "m1_pct": 3.49,
-      "rel_qqq_1m_pct_points": -1.37,
-      "volatility_21d_ann_pct": 35.41,
+      "d1_pct": 2.75,
+      "w1_pct": 3.32,
+      "m1_pct": 4.63,
+      "rel_qqq_1m_pct_points": -0.23,
+      "volatility_21d_ann_pct": 36.18,
       "max_drawdown_63d_pct": -12.52,
       "actual_weight_pct": 0.0,
-      "allocation_score": 59.48,
-      "hold_score": 57.21,
+      "allocation_score": 61.55,
+      "hold_score": 58.82,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 55.24,
+      "capital_competition_score": 59.11,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -1072,23 +1072,23 @@
     },
     "ENR.DE": {
       "structural_early_bird": 60.2,
-      "entry_score": 52.7,
+      "entry_score": 51.9,
       "trend": "power",
       "role": "Generation/grid candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 1.09,
-      "w1_pct": 1.45,
-      "m1_pct": 1.35,
-      "rel_qqq_1m_pct_points": -3.51,
-      "volatility_21d_ann_pct": 43.75,
+      "d1_pct": 2.09,
+      "w1_pct": 2.03,
+      "m1_pct": 0.07,
+      "rel_qqq_1m_pct_points": -4.79,
+      "volatility_21d_ann_pct": 43.52,
       "max_drawdown_63d_pct": -18.51,
       "actual_weight_pct": 0.0,
-      "allocation_score": 56.83,
-      "hold_score": 53.65,
+      "allocation_score": 56.47,
+      "hold_score": 52.94,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 44.88,
+      "capital_competition_score": 42.6,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -1747,23 +1747,23 @@
     },
     "IQE.L": {
       "structural_early_bird": 60.2,
-      "entry_score": 95.3,
+      "entry_score": 100,
       "trend": "photonics",
       "role": "InP substrate/epi candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": 2.09,
-      "w1_pct": 13.92,
-      "m1_pct": 14.04,
-      "rel_qqq_1m_pct_points": 9.18,
-      "volatility_21d_ann_pct": 59.52,
+      "d1_pct": 6.49,
+      "w1_pct": 13.15,
+      "m1_pct": 16.67,
+      "rel_qqq_1m_pct_points": 11.81,
+      "volatility_21d_ann_pct": 62.34,
       "max_drawdown_63d_pct": -21.39,
       "actual_weight_pct": 0.0,
-      "allocation_score": 76.0,
-      "hold_score": 68.37,
+      "allocation_score": 78.11,
+      "hold_score": 70.6,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 81.08,
+      "capital_competition_score": 84.15,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -2800,23 +2800,23 @@
     },
     "IOT.MI": {
       "structural_early_bird": 60.2,
-      "entry_score": 81.1,
+      "entry_score": 68.6,
       "trend": "physical",
       "role": "Edge compute candidate",
       "evidence_status": "UNREVALIDATED",
-      "d1_pct": -3.77,
-      "w1_pct": 3.96,
-      "m1_pct": 28.35,
-      "rel_qqq_1m_pct_points": 23.49,
-      "volatility_21d_ann_pct": 80.39,
+      "d1_pct": -1.19,
+      "w1_pct": -1.94,
+      "m1_pct": 40.65,
+      "rel_qqq_1m_pct_points": 35.79,
+      "volatility_21d_ann_pct": 69.59,
       "max_drawdown_63d_pct": -15.66,
       "actual_weight_pct": 0.0,
-      "allocation_score": 69.61,
-      "hold_score": 72.55,
+      "allocation_score": 63.98,
+      "hold_score": 70.03,
       "target_weight_pct": 0.0,
       "portfolio_action": "WAIT",
       "invalidation": [],
-      "capital_competition_score": 74.03,
+      "capital_competition_score": 69.73,
       "indicative_entry_sizing": {
         "band": "0%",
         "min_pct": 0.0,
@@ -3278,7 +3278,7 @@
     "rotation": {
       "mode": "COMPOUND",
       "best_incumbent": "GEV",
-      "best_incumbent_hold_score": 82.82,
+      "best_incumbent_hold_score": 82.84,
       "best_challenger": null,
       "best_challenger_score": null,
       "rotation_edge": null,
