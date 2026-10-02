@@ -315,9 +315,13 @@ def main():
     a = {name: aligned(name, 3 if name in ("MOVE", "VIX", "TNX", "OIL") else 1) for name in raw}
 
     move, vix, tnx, oil = a["MOVE"], a["VIX"], a["TNX"], a["OIL"]
-    # Yahoo ^TNX is typically 10x yield percentage (e.g. 52.4 == 5.24%).
-    # Scaling does not affect z-scores; /10 makes changes interpretable in pp.
-    tnx_yield = [x / 10.0 if x is not None else None for x in tnx]
+    # Yahoo ^TNX has used two quote conventions over time/providers:
+    # either 5.24 == 5.24% or 52.4 == 5.24%. Detect the convention from
+    # recent observations rather than hard-coding it. Scaling does not affect
+    # z-scores, but it matters for the strict +0.15 percentage-point threshold.
+    recent_tnx = [x for x in tnx[-60:] if x is not None]
+    tnx_scale = 10.0 if recent_tnx and statistics.median(recent_tnx) > 15.0 else 1.0
+    tnx_yield = [x / tnx_scale if x is not None else None for x in tnx]
 
     scores = [None] * len(dates)
     strict = [False] * len(dates)
