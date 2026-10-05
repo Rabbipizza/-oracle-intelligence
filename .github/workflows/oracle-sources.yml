@@ -17,6 +17,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: oracle-source-ingestion
@@ -83,3 +85,29 @@ jobs:
             GIT_EDITOR=true git rebase --continue
           fi
           git push
+
+  deploy:
+    name: Publish verified cockpit
+    needs: oracle
+    if: ${{ needs.oracle.result == 'success' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest verified main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload latest cockpit
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy latest cockpit
+        id: deployment
+        uses: actions/deploy-pages@v4
