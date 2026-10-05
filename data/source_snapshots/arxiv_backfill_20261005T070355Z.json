@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "family": "science",
+    "source": "arXiv",
+    "primary": true,
+    "peer_reviewed": "unknown",
+    "fetched_at": "20261005T070355Z",
+    "lookback_days": 110,
+    "categories": [
+      "cat:cs.AI",
+      "cat:cs.RO",
+      "cat:cs.LG",
+      "cat:cs.CV",
+      "cat:cs.NI",
+      "cat:cs.DC",
+      "cat:eess.SY",
+      "cat:physics.app-ph"
+    ],
+    "errors": [
+      {
+        "category": "cat:cs.AI",
+        "error": "<HTTPError 429: 'Too Many Requests'>"
+      },
+      {
+        "category": "cat:cs.RO",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      },
+      {
+        "category": "cat:cs.LG",
+        "error": "<HTTPError 429: 'Unknown Error'>"
+      },
+      {
+        "category": "cat:cs.CV",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      },
+      {
+        "category": "cat:cs.NI",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      },
+      {
+        "category": "cat:cs.DC",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      },
+      {
+        "category": "cat:eess.SY",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      },
+      {
+        "category": "cat:physics.app-ph",
+        "error": "<HTTPError 503: 'Service Unavailable'>"
+      }
+    ]
+  },
+  "queries": [],
+  "data": []
+}
