@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-10-05T07:12:57.405591+00:00",
+  "generated_at": "2026-10-05T14:51:43.004785+00:00",
   "method": "ORACLE_STRICT_PRIMARY_REVALIDATION_V1",
   "passed_concepts": [
-    "physical"
+    "physical",
+    "power"
   ],
   "promoted": [],
   "results": [
@@ -196,7 +197,7 @@
       "ticker": "ETN",
       "trend": "power",
       "company_capture_score": 60.0,
-      "trend_gate_pass": false,
+      "trend_gate_pass": true,
       "recent_primary_filing_hits": 2,
       "distinct_economic_terms": [
         "revenue"
@@ -239,7 +240,7 @@
       "ticker": "POWL",
       "trend": "power",
       "company_capture_score": 60.0,
-      "trend_gate_pass": false,
+      "trend_gate_pass": true,
       "recent_primary_filing_hits": 2,
       "distinct_economic_terms": [
         "award",
@@ -538,7 +539,7 @@
       "ticker": "VRT",
       "trend": "power",
       "company_capture_score": 60.0,
-      "trend_gate_pass": false,
+      "trend_gate_pass": true,
       "recent_primary_filing_hits": 1,
       "distinct_economic_terms": [
         "capacity"
@@ -569,7 +570,7 @@
       "ticker": "PWR",
       "trend": "power",
       "company_capture_score": 60.0,
-      "trend_gate_pass": false,
+      "trend_gate_pass": true,
       "recent_primary_filing_hits": 1,
       "distinct_economic_terms": [
         "demand"

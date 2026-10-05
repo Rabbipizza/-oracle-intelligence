@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T07:13:35.771786+00:00",
+  "generated_at": "2026-10-05T14:52:43.966879+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -46,10 +46,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 783,
-      "primary_origin_count": 768,
+      "matched_origin_count": 821,
+      "primary_origin_count": 804,
       "economic_origin_count": 16,
-      "science_origin_count": 759
+      "science_origin_count": 797
     },
     "photonics": {
       "label": "AI optical interconnect / photonics",
@@ -85,10 +85,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1596,
-      "primary_origin_count": 1156,
+      "matched_origin_count": 1602,
+      "primary_origin_count": 1160,
       "economic_origin_count": 8,
-      "science_origin_count": 1587
+      "science_origin_count": 1593
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -123,10 +123,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 882,
-      "primary_origin_count": 771,
+      "matched_origin_count": 911,
+      "primary_origin_count": 800,
       "economic_origin_count": 13,
-      "science_origin_count": 840
+      "science_origin_count": 869
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -203,8 +203,15 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 11.2601,
-      "acceleration": 0.929
+      "discovery_score": 11.6667,
+      "acceleration": 0.949
+    },
+    {
+      "term": "looped transformers",
+      "concept": "power",
+      "mapping_confidence": 0.92,
+      "discovery_score": 10.3969,
+      "acceleration": 18.087
     }
   ],
   "companies": {
@@ -1791,8 +1798,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 17,
-      "primary_origin_count": 17,
+      "matched_origin_count": 19,
+      "primary_origin_count": 19,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -2108,8 +2115,8 @@
       "families": [
         "science"
       ],
-      "matched_origin_count": 44,
-      "primary_origin_count": 41,
+      "matched_origin_count": 47,
+      "primary_origin_count": 44,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
