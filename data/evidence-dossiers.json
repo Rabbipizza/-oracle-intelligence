@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T00:55:37.513625+00:00",
+  "generated_at": "2026-10-06T13:27:11.276017+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -46,10 +46,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 821,
-      "primary_origin_count": 804,
+      "matched_origin_count": 903,
+      "primary_origin_count": 886,
       "economic_origin_count": 16,
-      "science_origin_count": 797
+      "science_origin_count": 879
     },
     "photonics": {
       "label": "AI optical interconnect / photonics",
@@ -85,10 +85,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1620,
-      "primary_origin_count": 1160,
+      "matched_origin_count": 1756,
+      "primary_origin_count": 1168,
       "economic_origin_count": 8,
-      "science_origin_count": 1611
+      "science_origin_count": 1747
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -123,10 +123,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 915,
-      "primary_origin_count": 802,
+      "matched_origin_count": 1002,
+      "primary_origin_count": 886,
       "economic_origin_count": 13,
-      "science_origin_count": 871
+      "science_origin_count": 957
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -192,10 +192,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 41,
-      "primary_origin_count": 39,
+      "matched_origin_count": 42,
+      "primary_origin_count": 40,
       "economic_origin_count": 16,
-      "science_origin_count": 14
+      "science_origin_count": 15
     }
   },
   "discovery_to_concepts": [
@@ -203,15 +203,15 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 12.1975,
+      "discovery_score": 12.5738,
       "acceleration": 1.007
     },
     {
       "term": "looped transformers",
       "concept": "power",
       "mapping_confidence": 0.92,
-      "discovery_score": 11.1269,
-      "acceleration": 20.81
+      "discovery_score": 10.9932,
+      "acceleration": 20.462
     }
   ],
   "companies": {
@@ -1798,8 +1798,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 19,
-      "primary_origin_count": 19,
+      "matched_origin_count": 20,
+      "primary_origin_count": 20,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -2117,8 +2117,8 @@
       "families": [
         "science"
       ],
-      "matched_origin_count": 47,
-      "primary_origin_count": 44,
+      "matched_origin_count": 56,
+      "primary_origin_count": 52,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
