@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T21:14:27.328840+00:00",
+  "generated_at": "2026-10-06T00:55:37.513625+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -85,10 +85,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1602,
+      "matched_origin_count": 1620,
       "primary_origin_count": 1160,
       "economic_origin_count": 8,
-      "science_origin_count": 1593
+      "science_origin_count": 1611
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -123,10 +123,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 911,
-      "primary_origin_count": 800,
+      "matched_origin_count": 915,
+      "primary_origin_count": 802,
       "economic_origin_count": 13,
-      "science_origin_count": 869
+      "science_origin_count": 871
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -203,15 +203,15 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 11.1904,
-      "acceleration": 0.914
+      "discovery_score": 12.1975,
+      "acceleration": 1.007
     },
     {
       "term": "looped transformers",
       "concept": "power",
       "mapping_confidence": 0.92,
-      "discovery_score": 10.6259,
-      "acceleration": 18.891
+      "discovery_score": 11.1269,
+      "acceleration": 20.81
     }
   ],
   "companies": {
@@ -2070,13 +2070,15 @@
       "role": "Autonomous robotics candidate",
       "legacy_proof": "UNPROVEN",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "CORROBORATED",
+      "maturity": "ECONOMIC_LINK",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 0.0,
-      "family_count": 0,
-      "families": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
+      "company_capture_score": 30.0,
+      "family_count": 1,
+      "families": [
+        "industry_contracts"
+      ],
+      "matched_origin_count": 1,
+      "primary_origin_count": 1,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
