@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T13:35:40.298366+00:00",
+  "generated_at": "2026-10-07T15:05:23.513577+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -77,18 +77,19 @@
         "industry_contracts",
         "science"
       ],
-      "source_count": 5,
+      "source_count": 6,
       "sources": [
         "Crossref",
         "OpenAlex",
         "SEC EDGAR filings",
+        "TED EU procurement",
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 2490,
-      "primary_origin_count": 1746,
+      "matched_origin_count": 2502,
+      "primary_origin_count": 1747,
       "economic_origin_count": 8,
-      "science_origin_count": 2481
+      "science_origin_count": 2492
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -123,10 +124,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1053,
-      "primary_origin_count": 933,
+      "matched_origin_count": 1056,
+      "primary_origin_count": 934,
       "economic_origin_count": 13,
-      "science_origin_count": 1004
+      "science_origin_count": 1006
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -203,15 +204,15 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 13.3232,
-      "acceleration": 1.06
+      "discovery_score": 13.0424,
+      "acceleration": 1.04
     },
     {
       "term": "looped transformers",
       "concept": "power",
       "mapping_confidence": 0.92,
-      "discovery_score": 11.1469,
-      "acceleration": 22.26
+      "discovery_score": 11.106,
+      "acceleration": 22.229
     }
   ],
   "companies": {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T13:34:41.557758+00:00",
+  "generated_at": "2026-10-07T15:04:04.810088+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,8 +9,8 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 262807,
-    "primary_origin_count": 18244
+    "record_count": 271002,
+    "primary_origin_count": 18329
   },
   "candidate_gates": [
     {
@@ -28,7 +28,7 @@
         "SEC EDGAR filings",
         "arXiv"
       ],
-      "matched_origin_count": 1563,
+      "matched_origin_count": 1565,
       "primary_origin_count": 1538,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
@@ -79,7 +79,7 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 323,
+      "matched_origin_count": 324,
       "primary_origin_count": 318,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
@@ -101,25 +101,6 @@
       ],
       "matched_origin_count": 193,
       "primary_origin_count": 192,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "on-policy distillation",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 134,
-      "primary_origin_count": 134,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -165,6 +146,25 @@
       "trend_status": "DISCOVERED"
     },
     {
+      "term": "on-policy distillation",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 134,
+      "primary_origin_count": 134,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
       "term": "neural networks",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -179,25 +179,6 @@
       ],
       "matched_origin_count": 444,
       "primary_origin_count": 410,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "supervised fine-tuning",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 180,
-      "primary_origin_count": 180,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -232,6 +213,25 @@
       ],
       "matched_origin_count": 206,
       "primary_origin_count": 206,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "supervised fine-tuning",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 180,
+      "primary_origin_count": 180,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -305,25 +305,6 @@
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "ask whether",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 163,
-      "primary_origin_count": 163,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
     },
     {
       "term": "large language llm",
@@ -412,6 +393,25 @@
       ],
       "matched_origin_count": 55,
       "primary_origin_count": 53,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "ask whether",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 163,
+      "primary_origin_count": 163,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -535,6 +535,45 @@
       "trend_status": "DISCOVERED"
     },
     {
+      "term": "on-policy self-distillation",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 58,
+      "primary_origin_count": 58,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "open science",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 84,
+      "primary_origin_count": 56,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
       "term": "distillation opd",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -566,45 +605,6 @@
       ],
       "matched_origin_count": 72,
       "primary_origin_count": 72,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "on-policy self-distillation",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 58,
-      "primary_origin_count": 58,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "open science",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 77,
-      "primary_origin_count": 56,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -838,33 +838,7 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "vision-language-action vla",
-      "concept": "physical",
-      "concept_mapping_confidence": 0.92,
-      "families": [
-        "company",
-        "industry_contracts",
-        "science"
-      ],
-      "family_count": 3,
-      "sources": [
-        "Crossref",
-        "OpenAlex",
-        "SEC EDGAR filings",
-        "TED EU procurement",
-        "USAspending",
-        "arXiv"
-      ],
-      "matched_origin_count": 1053,
-      "primary_origin_count": 933,
-      "economic_origin_count": 13,
-      "coverage_gate_pass": true,
-      "economic_transmission": "EVIDENCE_PRESENT",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "ECONOMIC_LINK"
-    },
-    {
-      "term": "anonymous open",
+      "term": "anonymous open science",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -879,7 +853,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "anonymous open science",
+      "term": "anonymous open",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -955,6 +929,32 @@
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "vision-language-action vla",
+      "concept": "physical",
+      "concept_mapping_confidence": 0.92,
+      "families": [
+        "company",
+        "industry_contracts",
+        "science"
+      ],
+      "family_count": 3,
+      "sources": [
+        "Crossref",
+        "OpenAlex",
+        "SEC EDGAR filings",
+        "TED EU procurement",
+        "USAspending",
+        "arXiv"
+      ],
+      "matched_origin_count": 1056,
+      "primary_origin_count": 934,
+      "economic_origin_count": 13,
+      "coverage_gate_pass": true,
+      "economic_transmission": "EVIDENCE_PRESENT",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "ECONOMIC_LINK"
     },
     {
       "term": "student own",
@@ -1078,28 +1078,13 @@
         "OpenAlex",
         "arXiv"
       ],
-      "matched_origin_count": 226,
+      "matched_origin_count": 228,
       "primary_origin_count": 166,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "together findings",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [],
-      "family_count": 0,
-      "sources": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "UNPROVEN"
     },
     {
       "term": "safety alignment",
@@ -1285,23 +1270,19 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "improves average",
+      "term": "together findings",
       "concept": null,
       "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 77,
-      "primary_origin_count": 77,
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
+      "trend_status": "UNPROVEN"
     },
     {
       "term": "llm post-training",
@@ -1464,7 +1445,7 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "parameter updates",
+      "term": "improves average",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [
@@ -1474,8 +1455,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 75,
-      "primary_origin_count": 75,
+      "matched_origin_count": 77,
+      "primary_origin_count": 77,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1552,48 +1533,6 @@
       ],
       "matched_origin_count": 28,
       "primary_origin_count": 28,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "monte carlo",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "company",
-        "science"
-      ],
-      "family_count": 2,
-      "sources": [
-        "OpenAlex",
-        "SEC EDGAR filings",
-        "arXiv"
-      ],
-      "matched_origin_count": 217,
-      "primary_origin_count": 197,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "test set",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 137,
-      "primary_origin_count": 132,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1768,7 +1707,29 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "computational depth",
+      "term": "monte carlo",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "company",
+        "science"
+      ],
+      "family_count": 2,
+      "sources": [
+        "OpenAlex",
+        "SEC EDGAR filings",
+        "arXiv"
+      ],
+      "matched_origin_count": 217,
+      "primary_origin_count": 197,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "parameter updates",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [
@@ -1778,8 +1739,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 16,
-      "primary_origin_count": 16,
+      "matched_origin_count": 75,
+      "primary_origin_count": 75,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1799,25 +1760,6 @@
       ],
       "matched_origin_count": 20,
       "primary_origin_count": 20,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
-      "term": "remain unclear",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 25,
-      "primary_origin_count": 25,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1902,6 +1844,59 @@
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "reasoning trajectories",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 28,
+      "primary_origin_count": 28,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "answer questions",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 20,
+      "primary_origin_count": 20,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "language mllms",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [],
+      "family_count": 0,
+      "sources": [],
+      "matched_origin_count": 0,
+      "primary_origin_count": 0,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "UNPROVEN"
     }
   ],
   "rule": "Coverage is concept-level and origin-deduplicated. Semantic aliases may combine equivalent vocabulary across sources. Full coverage still requires at least three independent families, one primary origin, and non-science economic evidence; company capture is a separate gate."
