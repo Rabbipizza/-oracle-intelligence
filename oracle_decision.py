@@ -19,8 +19,11 @@ def pct(a,b):
 def clamp(x,a=0,b=100):
     return max(a,min(b,x))
 
-def rows(market,ticker):
-    return sorted((market.get("prices",{}).get(ticker) or {}).get("rows",[]), key=lambda r:r.get("date",""))
+def rows(market,ticker,as_of=None):
+    out=sorted((market.get("prices",{}).get(ticker) or {}).get("rows",[]), key=lambda r:r.get("date",""))
+    if as_of:
+        out=[r for r in out if r.get("date","")<=as_of]
+    return out
 
 def metric(rs,n):
     return pct(rs[-1]["close"],rs[-1-n]["close"]) if len(rs)>n else None
@@ -49,10 +52,14 @@ research=load("research-universe.json")
 evidence=load("economic-evidence.json")
 prior=load("decision-state.json")
 portfolio=load("portfolio.json")
-q=rows(market,"QQQ")
 
-fx=market.get("fx_usd_chf") or []
-as_of=(fx[-1].get("date") if fx else None) or datetime.now(timezone.utc).date().isoformat()
+# QQQ is the official market/benchmark clock for the portfolio test.
+# Do not let a later ticker print or a lagging FX series create mixed-date decisions.
+q_all=rows(market,"QQQ")
+as_of=(q_all[-1].get("date") if q_all else None) or datetime.now(timezone.utc).date().isoformat()
+q=rows(market,"QQQ",as_of=as_of)
+
+fx=[r for r in (market.get("fx_usd_chf") or []) if r.get("date","")<=as_of]
 
 # Build a lookup from research-universe.
 universe={}
@@ -100,7 +107,7 @@ scores={}
 targets={}
 for ticker,meta in universe.items():
     ev=(evidence.get("companies",{}) or {}).get(ticker)
-    r=rows(market,ticker)
+    r=rows(market,ticker,as_of=as_of)
     d1=metric(r,1); w1=metric(r,5); m1=metric(r,21)
     vol21=realized_vol(r,21); dd63=max_drawdown(r,63)
     qm1=metric(q,21)
