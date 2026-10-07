@@ -31,7 +31,11 @@ def close_on_or_before(rows,date):
     vals=[r for r in rows if r["date"]<=date]
     return vals[-1]["close"] if vals else None
 
-def latest_metrics(rows, benchmark_rows=None):
+def latest_metrics(rows, benchmark_rows=None, as_of=None):
+    if as_of:
+        rows=[r for r in rows if r.get("date","")<=as_of]
+        if benchmark_rows:
+            benchmark_rows=[r for r in benchmark_rows if r.get("date","")<=as_of]
     if not rows:
         return {"date":None,"price":None,"d1":None,"w1":None,"m1":None,"rel_m1_qqq":None,"spark":[]}
     latest=rows[-1]
@@ -74,17 +78,17 @@ def build_portfolio(market, portfolio):
     fx=sorted(market.get("fx_usd_chf",[]),key=lambda r:r.get("date",""))
     benchmark=portfolio.get("benchmark_ticker","QQQ")
     qrows=series_rows(market,benchmark)
-    latest_fx=fx[-1]["chf_per_usd"] if fx else None
-    latest_date=fx[-1]["date"] if fx else None
+    latest_date=qrows[-1]["date"] if qrows else None
+    latest_fx=fx_on_or_before(fx,latest_date) if latest_date else None
     positions=[]
     invested=0.0; current_invested=0.0; matched_qqq=0.0
     for p in portfolio.get("positions",[]):
         if p.get("status")!="OPEN": continue
         ticker=p["ticker"]; allocated=float(p["allocated_chf"]); td=p["trade_date"]
         rows=series_rows(market,ticker)
-        entry_px=close_on_or_before(rows,td); current_px=rows[-1]["close"] if rows else None
+        entry_px=close_on_or_before(rows,td); current_px=close_on_or_before(rows,latest_date) if latest_date else None
         entry_fx=fx_on_or_before(fx,td)
-        q_entry=close_on_or_before(qrows,td); q_current=qrows[-1]["close"] if qrows else None
+        q_entry=close_on_or_before(qrows,td); q_current=close_on_or_before(qrows,latest_date) if latest_date else None
         current=None; qvalue=None; units=None
         if entry_px and current_px and entry_fx and latest_fx:
             units=allocated/(entry_px*entry_fx)
@@ -134,6 +138,7 @@ def main():
     dossiers=load("data/evidence-dossiers.json")
     prior_cockpit=load("data/cockpit.json")
     qrows=series_rows(market,"QQQ")
+    market_as_of=qrows[-1]["date"] if qrows else None
 
     trends=[]
     all_companies=[]
@@ -177,7 +182,7 @@ def main():
 
         for row in base_rows:
             ticker=row["ticker"]; proof=row.get("proof")
-            metrics=latest_metrics(series_rows(market,ticker),qrows)
+            metrics=latest_metrics(series_rows(market,ticker),qrows,as_of=market_as_of)
             sig,reason=signal_for(ticker,proof,decisions)
             if metrics["m1"] is not None:
                 available+=1; m1s.append(metrics["m1"])
