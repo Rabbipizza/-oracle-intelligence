@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T23:10:45.795006+00:00",
+  "generated_at": "2026-10-07T13:35:40.298366+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -46,10 +46,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 905,
-      "primary_origin_count": 888,
+      "matched_origin_count": 967,
+      "primary_origin_count": 950,
       "economic_origin_count": 16,
-      "science_origin_count": 879
+      "science_origin_count": 941
     },
     "photonics": {
       "label": "AI optical interconnect / photonics",
@@ -85,10 +85,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1756,
-      "primary_origin_count": 1168,
+      "matched_origin_count": 2490,
+      "primary_origin_count": 1746,
       "economic_origin_count": 8,
-      "science_origin_count": 1747
+      "science_origin_count": 2481
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -123,10 +123,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1003,
-      "primary_origin_count": 887,
+      "matched_origin_count": 1053,
+      "primary_origin_count": 933,
       "economic_origin_count": 13,
-      "science_origin_count": 957
+      "science_origin_count": 1004
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -203,15 +203,15 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 12.5086,
-      "acceleration": 1.005
+      "discovery_score": 13.3232,
+      "acceleration": 1.06
     },
     {
       "term": "looped transformers",
       "concept": "power",
       "mapping_confidence": 0.92,
-      "discovery_score": 11.2967,
-      "acceleration": 21.603
+      "discovery_score": 11.1469,
+      "acceleration": 22.26
     }
   ],
   "companies": {
@@ -405,13 +405,15 @@
       "role": "Direct beneficiary / onsite generation",
       "legacy_proof": "PARTIAL",
       "origin": "RESEARCH_UNIVERSE",
-      "maturity": "CORROBORATED",
+      "maturity": "ECONOMIC_LINK",
       "trend_evidence_score": 100.0,
-      "company_capture_score": 0.0,
-      "family_count": 0,
-      "families": [],
-      "matched_origin_count": 0,
-      "primary_origin_count": 0,
+      "company_capture_score": 15.0,
+      "family_count": 1,
+      "families": [
+        "science"
+      ],
+      "matched_origin_count": 1,
+      "primary_origin_count": 1,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -1016,8 +1018,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 18,
-      "primary_origin_count": 16,
+      "matched_origin_count": 30,
+      "primary_origin_count": 28,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -1038,8 +1040,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 7,
-      "primary_origin_count": 7,
+      "matched_origin_count": 8,
+      "primary_origin_count": 8,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -1798,8 +1800,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 20,
-      "primary_origin_count": 20,
+      "matched_origin_count": 21,
+      "primary_origin_count": 21,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -2117,8 +2119,8 @@
       "families": [
         "science"
       ],
-      "matched_origin_count": 56,
-      "primary_origin_count": 52,
+      "matched_origin_count": 60,
+      "primary_origin_count": 56,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
