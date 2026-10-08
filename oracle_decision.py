@@ -120,7 +120,25 @@ for ticker,meta in universe.items():
     role_score=92 if "bottleneck" in role_l else 90 if "pick" in role_l else 88 if "direct" in role_l else 84 if "leader" in role_l else 70
     explicit_proven=bool(ev and ev.get("status")=="PROVEN")
     proof_score=100 if explicit_proven else 55 if "PARTIAL" in str(meta.get("legacy_proof")) else 35
-    structural=round(.65*proof_score+.35*role_score,1)
+    structural_quality=round(.65*proof_score+.35*role_score,1)
+
+    # Structural Early Bird = quality of the causal exposure *and* how little the market
+    # appears to have recognized it yet. It is NOT a synonym for structural quality.
+    # Recognition is proxied only from observable market data already in ORACLE:
+    # company relative performance, absolute 1m move, trend breadth and trend 1m move.
+    company_rel_recognition=clamp(50.0 + float(rel or 0)*2.0)
+    company_abs_recognition=clamp(50.0 + float(m1 or 0)*1.2)
+    trend_breadth_recognition=clamp(float(breadth if breadth is not None else 50.0))
+    trend_price_recognition=clamp(50.0 + float(trend_m1 or 0)*1.5)
+    market_recognition=round(
+        .35*company_rel_recognition +
+        .25*company_abs_recognition +
+        .20*trend_breadth_recognition +
+        .20*trend_price_recognition,
+        1
+    )
+    unrecognized=100.0-market_recognition
+    structural_early_bird=round(clamp(.55*structural_quality + .45*unrecognized),1)
 
     entry=50.0
     entry += clamp((rel or 0)*2,-20,20)
@@ -132,10 +150,10 @@ for ticker,meta in universe.items():
     entry=round(clamp(entry),1)
 
     actual_weight=float(open_weights.get(ticker,0) or 0)
-    if explicit_proven and structural>=85 and entry>=60:
+    if explicit_proven and structural_quality>=85 and structural_early_bird>=55 and entry>=60:
         signal="GREEN"
         target=0.0
-        reason=f"Fresh explicit economic proof; Structural {structural}/100; Entry {entry}/100."
+        reason=f"Fresh explicit economic proof; Structural Quality {structural_quality}/100; Early Bird {structural_early_bird}/100; Entry {entry}/100."
     elif explicit_proven:
         signal="ORANGE"
         target=0.0
@@ -159,7 +177,10 @@ for ticker,meta in universe.items():
 
     signals[ticker]={"signal":signal,"reason":reason,"portfolio_action":portfolio_action}
     scores[ticker]={
-        "structural_early_bird":structural,
+        "structural_quality":structural_quality,
+        "structural_early_bird":structural_early_bird,
+        "market_recognition_score":market_recognition,
+        "unrecognized_market_score":round(unrecognized,1),
         "entry_score":entry,
         "trend":meta.get("trend"),
         "role":meta.get("role"),
@@ -171,10 +192,10 @@ for ticker,meta in universe.items():
         "volatility_21d_ann_pct":None if vol21 is None else round(vol21,2),
         "max_drawdown_63d_pct":None if dd63 is None else round(dd63,2),
         "actual_weight_pct":actual_weight,
-        "allocation_score":round(0.55*structural+0.45*entry,2),
+        "allocation_score":round(0.35*structural_quality+0.30*structural_early_bird+0.35*entry,2),
         "hold_score":round(clamp(
-            0.55*structural +
-            0.25*entry +
+            0.60*structural_quality +
+            0.20*entry +
             0.20*clamp(50 + (rel or 0)*2,0,100) -
             (0 if dd63 is None else max(0.0,abs(min(0.0,dd63))-15.0)*0.35),
             0,100
@@ -195,12 +216,13 @@ q_vol=realized_vol(q,21)
 q_dd=max_drawdown(q,63)
 
 def competition_score(sc, incumbent=False):
-    structural=float(sc.get("structural_early_bird") or 0)
+    structural_quality=float(sc.get("structural_quality") or 0)
+    early_bird=float(sc.get("structural_early_bird") or 0)
     entry=float(sc.get("entry_score") or 0)
     rel=float(sc.get("rel_qqq_1m_pct_points") or 0)
     vol=sc.get("volatility_21d_ann_pct")
     dd=sc.get("max_drawdown_63d_pct")
-    base=.50*structural + .50*entry
+    base=.35*structural_quality + .25*early_bird + .40*entry
     relative=clamp(rel*1.5,-15,15)
     vol_penalty=0 if vol is None else max(0.0,vol-30.0)*0.18
     dd_penalty=0 if dd is None else max(0.0,abs(min(0.0,dd))-10.0)*0.45
@@ -219,7 +241,8 @@ def indicative_entry_sizing(sc):
     if sc.get("evidence_status")!="PROVEN":
         return {"band":"0%","min_pct":0.0,"max_pct":0.0,"label":"NO ENTRY","reason":"Economic chain not freshly PROVEN."}
 
-    structural=float(sc.get("structural_early_bird") or 0)
+    structural_quality=float(sc.get("structural_quality") or 0)
+    early_bird=float(sc.get("structural_early_bird") or 0)
     entry=float(sc.get("entry_score") or 0)
     rel=float(sc.get("rel_qqq_1m_pct_points") or 0)
     vol=sc.get("volatility_21d_ann_pct")
@@ -242,7 +265,7 @@ def indicative_entry_sizing(sc):
         lo,hi=5.0,10.0
 
     # Structural conviction can slightly widen the ceiling.
-    if structural>=95 and entry>=80:
+    if structural_quality>=95 and early_bird>=70 and entry>=80:
         hi=min(70.0,hi+5.0)
 
     # Relative strength adjustment.
@@ -375,7 +398,7 @@ if initial_deployment:
     # Prefer strongest GREEN challenger for the still-unallocated capital.
     if best_chal is not None and best_chal_score >= qqq_score + 4.0:
         sc=scores[best_chal]
-        exceptional=(sc.get("structural_early_bird",0)>=95 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
+        exceptional=(sc.get("structural_quality",0)>=95 and sc.get("structural_early_bird",0)>=70 and sc.get("entry_score",0)>=80 and sc.get("capital_competition_score",0)>=80)
         stock_cap=85.0 if exceptional else 70.0
 
         # Cap applies to total target weight in that stock, not just the new money.
