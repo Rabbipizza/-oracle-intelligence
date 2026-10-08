@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-08T13:37:38.821474+00:00",
+  "generated_at": "2026-10-08T22:04:49.851625+00:00",
   "method": "v3 deduplicated semantic phrase acceleration; boilerplate/noise suppression; 14d recent vs preceding 90d baseline",
   "quality": "OK",
-  "unique_papers": 20494,
-  "recent_docs": 11604,
-  "baseline_docs": 7850,
+  "unique_papers": 20592,
+  "recent_docs": 11437,
+  "baseline_docs": 8110,
   "candidates": [
     {
       "term": "large language",
-      "recent_docs": 1102,
-      "baseline_docs": 453,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.645,
-      "discovery_score": 66.3981,
+      "recent_docs": 1064,
+      "baseline_docs": 491,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.536,
+      "discovery_score": 62.5635,
       "examples": [
         "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
         "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
@@ -22,12 +22,12 @@
     },
     {
       "term": "language llms",
-      "recent_docs": 402,
-      "baseline_docs": 160,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.697,
-      "discovery_score": 35.0256,
+      "recent_docs": 387,
+      "baseline_docs": 175,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.566,
+      "discovery_score": 32.6726,
       "examples": [
         "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
         "Signatures of semantic search in the activations of large language models",
@@ -36,12 +36,12 @@
     },
     {
       "term": "large language llms",
-      "recent_docs": 400,
-      "baseline_docs": 160,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.688,
-      "discovery_score": 34.7992,
+      "recent_docs": 385,
+      "baseline_docs": 175,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.558,
+      "discovery_score": 32.4508,
       "examples": [
         "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
         "Signatures of semantic search in the activations of large language models",
@@ -50,12 +50,12 @@
     },
     {
       "term": "llm agents",
-      "recent_docs": 257,
-      "baseline_docs": 77,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.248,
-      "discovery_score": 30.7839,
+      "recent_docs": 251,
+      "baseline_docs": 83,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.136,
+      "discovery_score": 29.6055,
       "examples": [
         "SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents",
         "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
@@ -64,12 +64,12 @@
     },
     {
       "term": "flow matching",
-      "recent_docs": 153,
-      "baseline_docs": 36,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.845,
-      "discovery_score": 24.6327,
+      "recent_docs": 150,
+      "baseline_docs": 39,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.702,
+      "discovery_score": 23.7817,
       "examples": [
         "Rethinking Causal Action Tokenization with Conditional Annealing in Flow Matching",
         "FLARE: Flow Matching with Local Axis-Angle Representations for Stochastic Micromagnetic Evolution",
@@ -77,13 +77,27 @@
       ]
     },
     {
+      "term": "on-policy distillation",
+      "recent_docs": 112,
+      "baseline_docs": 22,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.546,
+      "discovery_score": 22.4,
+      "examples": [
+        "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
+        "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
+        "TIDE: Teacher-Student Transition via Informative Distillation and Exploration for Agentic RL"
+      ]
+    },
+    {
       "term": "strongest baseline",
-      "recent_docs": 155,
-      "baseline_docs": 43,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.418,
-      "discovery_score": 22.6856,
+      "recent_docs": 150,
+      "baseline_docs": 48,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.2,
+      "discovery_score": 21.1374,
       "examples": [
         "AutoBCI: Forecast-Guided Agentic Neural Architecture Discovery for EEG-Based Brain--Computer Interfaces",
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
@@ -92,12 +106,12 @@
     },
     {
       "term": "neural networks",
-      "recent_docs": 273,
-      "baseline_docs": 146,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.263,
-      "discovery_score": 22.235,
+      "recent_docs": 264,
+      "baseline_docs": 156,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.198,
+      "discovery_score": 21.1183,
       "examples": [
         "Temporal graph neural networks for sports outcome prediction: modeling dynamic player interactions and evolving team structures",
         "Integrating component trees into neural networks as a learnable layer",
@@ -106,12 +120,12 @@
     },
     {
       "term": "mathematical reasoning",
-      "recent_docs": 99,
-      "baseline_docs": 16,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.08,
-      "discovery_score": 21.8613,
+      "recent_docs": 97,
+      "baseline_docs": 18,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.737,
+      "discovery_score": 20.7695,
       "examples": [
         "Reasoning with Continuous Latent Diffusion",
         "Imprint Reader: From Weight-Update Readout to Behavioral Intervention",
@@ -119,27 +133,13 @@
       ]
     },
     {
-      "term": "on-policy distillation",
-      "recent_docs": 112,
-      "baseline_docs": 22,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.383,
-      "discovery_score": 21.7018,
-      "examples": [
-        "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
-        "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
-        "TIDE: Teacher-Student Transition via Informative Distillation and Exploration for Agentic RL"
-      ]
-    },
-    {
       "term": "supervised fine-tuning",
-      "recent_docs": 139,
-      "baseline_docs": 39,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.389,
-      "discovery_score": 20.8761,
+      "recent_docs": 136,
+      "baseline_docs": 42,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.278,
+      "discovery_score": 20.1402,
       "examples": [
         "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
         "Less Sycophancy, Stronger Refusal? Lessons for AI Safety from Mechanistic Interpretability",
@@ -147,27 +147,13 @@
       ]
     },
     {
-      "term": "latent space",
-      "recent_docs": 148,
-      "baseline_docs": 48,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.071,
-      "discovery_score": 20.0532,
-      "examples": [
-        "Reasoning with Continuous Latent Diffusion",
-        "Not All Thinking is Created Equal: Latent Reasoning Discovers a Recurrent Search Algorithm for Depth Generalization",
-        "Behavioral Foundation Models for Quality Diversity"
-      ]
-    },
-    {
       "term": "video generation",
-      "recent_docs": 126,
-      "baseline_docs": 37,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.282,
-      "discovery_score": 18.9713,
+      "recent_docs": 125,
+      "baseline_docs": 38,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.312,
+      "discovery_score": 19.1451,
       "examples": [
         "From Scores to Samples: Elastic Forcing for Autoregressive Video Generation",
         "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
@@ -175,41 +161,27 @@
       ]
     },
     {
-      "term": "visual evidence",
-      "recent_docs": 112,
-      "baseline_docs": 31,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.416,
-      "discovery_score": 18.0429,
+      "term": "latent space",
+      "recent_docs": 143,
+      "baseline_docs": 53,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.902,
+      "discovery_score": 18.7229,
       "examples": [
-        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
-        "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
-      ]
-    },
-    {
-      "term": "policy optimization",
-      "recent_docs": 163,
-      "baseline_docs": 70,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.569,
-      "discovery_score": 18.0339,
-      "examples": [
-        "RareDx: Controlled Knowledge Integration and Graph-Grounded Policy Optimization for Rare-Disease Diagnosis",
-        "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
-        "Proactive Dialogue Policy Optimization via Cognitive-State Transition"
+        "Reasoning with Continuous Latent Diffusion",
+        "Not All Thinking is Created Equal: Latent Reasoning Discovers a Recurrent Search Algorithm for Depth Generalization",
+        "Behavioral Foundation Models for Quality Diversity"
       ]
     },
     {
       "term": "verifiable rewards",
       "recent_docs": 70,
       "baseline_docs": 10,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.542,
-      "discovery_score": 17.9282,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.761,
+      "discovery_score": 18.4672,
       "examples": [
         "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
         "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
@@ -220,10 +192,10 @@
       "term": "reinforcement verifiable",
       "recent_docs": 61,
       "baseline_docs": 7,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.547,
-      "discovery_score": 17.7809,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.815,
+      "discovery_score": 18.2918,
       "examples": [
         "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
         "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
@@ -231,44 +203,16 @@
       ]
     },
     {
-      "term": "language llm",
-      "recent_docs": 214,
-      "baseline_docs": 126,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.147,
-      "discovery_score": 17.6238,
+      "term": "visual evidence",
+      "recent_docs": 111,
+      "baseline_docs": 32,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.433,
+      "discovery_score": 18.1305,
       "examples": [
-        "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
-        "From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining"
-      ]
-    },
-    {
-      "term": "large language llm",
-      "recent_docs": 213,
-      "baseline_docs": 126,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.142,
-      "discovery_score": 17.51,
-      "examples": [
-        "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
-        "From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining"
-      ]
-    },
-    {
-      "term": "ask whether",
-      "recent_docs": 123,
-      "baseline_docs": 41,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.013,
-      "discovery_score": 17.3103,
-      "examples": [
-        "Improving Generative Model Self-Training with Geometrically Modified Outputs",
-        "Persona Following Is Not Selective Control: The Neutrality Gap in LLM User Simulation",
+        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
+        "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
         "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
       ]
     },
@@ -276,10 +220,10 @@
       "term": "diffusion language",
       "recent_docs": 53,
       "baseline_docs": 5,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 6.581,
-      "discovery_score": 17.2683,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 6.898,
+      "discovery_score": 17.746,
       "examples": [
         "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
         "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning",
@@ -290,10 +234,10 @@
       "term": "reinforcement verifiable rewards",
       "recent_docs": 59,
       "baseline_docs": 7,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.367,
-      "discovery_score": 17.0901,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.626,
+      "discovery_score": 17.5848,
       "examples": [
         "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
         "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
@@ -301,55 +245,69 @@
       ]
     },
     {
-      "term": "visual information",
-      "recent_docs": 47,
-      "baseline_docs": 4,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.141,
-      "discovery_score": 16.337,
+      "term": "language llm",
+      "recent_docs": 210,
+      "baseline_docs": 130,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.144,
+      "discovery_score": 17.4886,
       "examples": [
-        "Probe to Act: Elevating Browser-Use Agent via Active Visual Probing",
-        "CoViST: Visual Token Compression via Composable States",
-        "PhysAlign: A Benchmark for Evidence-Grounded Role Alignment in Multimodal Physics Reasoning"
+        "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
+        "From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining"
       ]
     },
     {
-      "term": "reasoning benchmarks",
-      "recent_docs": 78,
-      "baseline_docs": 16,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.219,
-      "discovery_score": 16.3073,
+      "term": "policy optimization",
+      "recent_docs": 159,
+      "baseline_docs": 74,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.518,
+      "discovery_score": 17.4764,
       "examples": [
-        "Self-Adapting Group of Experts for Multi-Agent Reasoning",
-        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
-        "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments"
+        "RareDx: Controlled Knowledge Integration and Graph-Grounded Policy Optimization for Rare-Disease Diagnosis",
+        "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
+        "Proactive Dialogue Policy Optimization via Cognitive-State Transition"
       ]
     },
     {
-      "term": "neural network",
-      "recent_docs": 206,
-      "baseline_docs": 132,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.054,
-      "discovery_score": 16.1766,
+      "term": "large language llm",
+      "recent_docs": 209,
+      "baseline_docs": 130,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.138,
+      "discovery_score": 17.3734,
       "examples": [
-        "Analog Computing revisited: A fully analog and minimalistic Damage Detector for Ultrasonic Testing enabling Material-Integrated Structural Health Monitoring",
-        "Reliability Engineering for AI Systems: Challenges, Methods, and Directions",
-        "Addressing Spatial Indistinguishability in Spatiotemporal Prediction via Optimal Transport-Guided Masking"
+        "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
+        "From Search to Research: Exploring Search Scaling in Autonomous Quantitative Factor Mining"
+      ]
+    },
+    {
+      "term": "ask whether",
+      "recent_docs": 120,
+      "baseline_docs": 44,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.92,
+      "discovery_score": 16.6476,
+      "examples": [
+        "Improving Generative Model Self-Training with Geometrically Modified Outputs",
+        "Persona Following Is Not Selective Control: The Neutrality Gap in LLM User Simulation",
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
       ]
     },
     {
       "term": "target distribution",
       "recent_docs": 44,
       "baseline_docs": 4,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 6.69,
-      "discovery_score": 15.121,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.012,
+      "discovery_score": 15.5377,
       "examples": [
         "From Soft Targets to Reward Signals: How Assignment and Reward Objectives Interact",
         "Naturalness-guided Manifold Flow Matching for Sign Language Production",
@@ -357,41 +315,41 @@
       ]
     },
     {
-      "term": "forward pass",
-      "recent_docs": 112,
-      "baseline_docs": 44,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.71,
-      "discovery_score": 14.6436,
+      "term": "neural network",
+      "recent_docs": 199,
+      "baseline_docs": 139,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.014,
+      "discovery_score": 15.4747,
       "examples": [
-        "From Data to Program: Fast & Direct Generative Program Inference from Empirical Data",
-        "Using Context Is Not Enough: Test-Time Training for Personalized Reward Modeling",
-        "Causal Routing for Unlearning"
+        "Analog Computing revisited: A fully analog and minimalistic Damage Detector for Ultrasonic Testing enabling Material-Integrated Structural Health Monitoring",
+        "Reliability Engineering for AI Systems: Challenges, Methods, and Directions",
+        "Addressing Spatial Indistinguishability in Spatiotemporal Prediction via Optimal Transport-Guided Masking"
       ]
     },
     {
-      "term": "on-policy self-distillation",
-      "recent_docs": 49,
-      "baseline_docs": 6,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.152,
-      "discovery_score": 14.6048,
+      "term": "reasoning benchmarks",
+      "recent_docs": 76,
+      "baseline_docs": 18,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.932,
+      "discovery_score": 15.332,
       "examples": [
-        "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning",
-        "Evidence-Aligned Multimodal On-Policy Self-Distillation for Fine-Grained Visual Understanding",
-        "EOPSA: Efficient On-Policy Self-Distilled Safety Alignment"
+        "Self-Adapting Group of Experts for Multi-Agent Reasoning",
+        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
+        "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments"
       ]
     },
     {
       "term": "during inference",
       "recent_docs": 92,
       "baseline_docs": 29,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.121,
-      "discovery_score": 14.5269,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.224,
+      "discovery_score": 15.047,
       "examples": [
         "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
         "Nudgeability: Reasoning Models Follow Confidence Signals Without Tracking Their Own Competence",
@@ -399,41 +357,41 @@
       ]
     },
     {
-      "term": "credit assignment",
-      "recent_docs": 69,
-      "baseline_docs": 15,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.033,
-      "discovery_score": 14.4481,
+      "term": "on-policy self-distillation",
+      "recent_docs": 49,
+      "baseline_docs": 6,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.4,
+      "discovery_score": 15.0315,
       "examples": [
-        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-        "ASCT: Attentive Search over Counterfactual Trees for Credit Assignment in Agentic Reinforcement Learning",
-        "Can We Trust the Teacher? Decoupled Credit Direction-Magnitude for Self-Distillation"
+        "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning",
+        "Evidence-Aligned Multimodal On-Policy Self-Distillation for Fine-Grained Visual Understanding",
+        "EOPSA: Efficient On-Policy Self-Distilled Safety Alignment"
       ]
     },
     {
-      "term": "two complementary",
-      "recent_docs": 115,
-      "baseline_docs": 48,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.611,
-      "discovery_score": 14.3626,
+      "term": "visual information",
+      "recent_docs": 46,
+      "baseline_docs": 5,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.995,
+      "discovery_score": 15.0202,
       "examples": [
-        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices",
-        "PEAR: Progressive Evidence-Based AutoResearch for Industrial Search Systems",
-        "Modeling Whole-Slide Images as Dynamic Tumor Microenvironment Fields"
+        "Probe to Act: Elevating Browser-Use Agent via Active Visual Probing",
+        "CoViST: Visual Token Compression via Composable States",
+        "PhysAlign: A Benchmark for Evidence-Grounded Role Alignment in Multimodal Physics Reasoning"
       ]
     },
     {
       "term": "open science",
       "recent_docs": 48,
       "baseline_docs": 6,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.048,
-      "discovery_score": 14.2453,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.291,
+      "discovery_score": 14.6634,
       "examples": [
         "RIDE: Reference-Anchored Inference-Time Diffusion Editing for Scaffold Hopping",
         "CLIMB: A Clinical Multimorbidity Benchmark for Diagnosing Co-occurring Conditions through Multiturn Conversations",
@@ -441,41 +399,13 @@
       ]
     },
     {
-      "term": "internal representations",
-      "recent_docs": 48,
-      "baseline_docs": 6,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.048,
-      "discovery_score": 14.2453,
-      "examples": [
-        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices",
-        "Toward a Graded Measure of Belief Stability in Large Language Models",
-        "Who Gets a Token, and What Does It Carry? Unequal Name Support and Concept Access in Large Language Models"
-      ]
-    },
-    {
-      "term": "multimodal large language",
-      "recent_docs": 107,
-      "baseline_docs": 42,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.711,
-      "discovery_score": 14.1807,
-      "examples": [
-        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
-        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
-      ]
-    },
-    {
       "term": "opd trains",
       "recent_docs": 21,
       "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 29.09,
-      "discovery_score": 14.1555,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 30.492,
+      "discovery_score": 14.4493,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents",
@@ -483,55 +413,27 @@
       ]
     },
     {
-      "term": "multimodal large",
-      "recent_docs": 108,
-      "baseline_docs": 43,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.687,
-      "discovery_score": 14.1487,
+      "term": "forward pass",
+      "recent_docs": 110,
+      "baseline_docs": 46,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.685,
+      "discovery_score": 14.4263,
       "examples": [
-        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
-        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
-      ]
-    },
-    {
-      "term": "inference cost",
-      "recent_docs": 93,
-      "baseline_docs": 33,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.888,
-      "discovery_score": 13.6418,
-      "examples": [
-        "DR-net-Mamba: Selective State-Space Modeling for Long-Range ECG Time-Series Denoising",
-        "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models",
-        "RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents"
-      ]
-    },
-    {
-      "term": "coding agents",
-      "recent_docs": 89,
-      "baseline_docs": 30,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.985,
-      "discovery_score": 13.6292,
-      "examples": [
-        "GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation",
-        "Do Coding Agents Reuse Existing Code or Reinvent the Wheel?",
-        "Hyper Algorithm Design Agent: Evolving Learnable Optimizer from Zero"
+        "From Data to Program: Fast & Direct Generative Program Inference from Empirical Data",
+        "Using Context Is Not Enough: Test-Time Training for Personalized Reward Modeling",
+        "Causal Routing for Unlearning"
       ]
     },
     {
       "term": "distillation opd",
       "recent_docs": 60,
       "baseline_docs": 12,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.274,
-      "discovery_score": 13.5788,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.432,
+      "discovery_score": 14.019,
       "examples": [
         "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
@@ -542,10 +444,10 @@
       "term": "on-policy distillation opd",
       "recent_docs": 60,
       "baseline_docs": 12,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.274,
-      "discovery_score": 13.5788,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.432,
+      "discovery_score": 14.019,
       "examples": [
         "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
@@ -553,41 +455,41 @@
       ]
     },
     {
-      "term": "among evaluated",
-      "recent_docs": 98,
-      "baseline_docs": 38,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.731,
-      "discovery_score": 13.4154,
+      "term": "multimodal large language",
+      "recent_docs": 105,
+      "baseline_docs": 44,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.681,
+      "discovery_score": 13.936,
       "examples": [
-        "CarveMix-RC: Addressing Rare-Class Imbalance Through Lesion-Aware Synthetic Augmentation for Brain Metastasis Segmentation",
-        "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
-        "MoSPR: Histology-to-Gene Expression Prediction with Morpho-Spatial Macrostates and Low-Rank Molecular Programs"
+        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
+        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
       ]
     },
     {
-      "term": "rewards rlvr",
-      "recent_docs": 48,
-      "baseline_docs": 7,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.375,
-      "discovery_score": 13.3114,
+      "term": "multimodal large",
+      "recent_docs": 106,
+      "baseline_docs": 45,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.66,
+      "discovery_score": 13.9165,
       "examples": [
-        "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
-        "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
-        "Beyond Verbalized Confidence: Calibrating Reasoners with Differentiable Readouts"
+        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
+        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
       ]
     },
     {
       "term": "verifiable rewards rlvr",
       "recent_docs": 48,
       "baseline_docs": 7,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.375,
-      "discovery_score": 13.3114,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.586,
+      "discovery_score": 13.7151,
       "examples": [
         "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
         "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
@@ -595,27 +497,41 @@
       ]
     },
     {
-      "term": "vision-language vlms",
-      "recent_docs": 130,
-      "baseline_docs": 71,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.235,
-      "discovery_score": 13.1217,
+      "term": "rewards rlvr",
+      "recent_docs": 48,
+      "baseline_docs": 7,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.586,
+      "discovery_score": 13.7151,
       "examples": [
-        "When VLMs Trust Context: Evaluating Scene Text Recognition under Misleading Context",
-        "See, Measure, and Reason: Learning Visually Grounded Reasoning in Pathology",
-        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings"
+        "Verifier Errors in RLVR: Reward Hacking, Limits of Feedback, and Selective Control",
+        "ReSPO: Reshaped Sequence Policy Optimization for Gradient Starvation in Off-Policy Learning",
+        "Beyond Verbalized Confidence: Calibrating Reasoners with Differentiable Readouts"
+      ]
+    },
+    {
+      "term": "two complementary",
+      "recent_docs": 111,
+      "baseline_docs": 52,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.506,
+      "discovery_score": 13.5048,
+      "examples": [
+        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices",
+        "PEAR: Progressive Evidence-Based AutoResearch for Industrial Search Systems",
+        "Modeling Whole-Slide Images as Dynamic Tumor Microenvironment Fields"
       ]
     },
     {
       "term": "preference optimization",
       "recent_docs": 39,
       "baseline_docs": 4,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.938,
-      "discovery_score": 13.0998,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 6.225,
+      "discovery_score": 13.4705,
       "examples": [
         "BA-DPO: Bias-Adjusted Direct Preference Optimization for Language Model Alignment",
         "Agentic Multi-Turn Reasoning: A Fairness Approach",
@@ -623,13 +539,41 @@
       ]
     },
     {
+      "term": "credit assignment",
+      "recent_docs": 67,
+      "baseline_docs": 17,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.735,
+      "discovery_score": 13.4584,
+      "examples": [
+        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+        "ASCT: Attentive Search over Counterfactual Trees for Credit Assignment in Agentic Reinforcement Learning",
+        "Can We Trust the Teacher? Decoupled Credit Direction-Magnitude for Self-Distillation"
+      ]
+    },
+    {
+      "term": "internal representations",
+      "recent_docs": 47,
+      "baseline_docs": 7,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.491,
+      "discovery_score": 13.3656,
+      "examples": [
+        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices",
+        "Toward a Graded Measure of Belief Stability in Large Language Models",
+        "Who Gets a Token, and What Does It Carry? Unequal Name Support and Concept Access in Large Language Models"
+      ]
+    },
+    {
       "term": "vision-language-action vla",
-      "recent_docs": 154,
-      "baseline_docs": 101,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.03,
-      "discovery_score": 13.0068,
+      "recent_docs": 153,
+      "baseline_docs": 102,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.062,
+      "discovery_score": 13.3319,
       "examples": [
         "Rethinking Causal Action Tokenization with Conditional Annealing in Flow Matching",
         "Learning to Act under Visual Interruptions with Vision-Language-Action Models",
@@ -637,41 +581,27 @@
       ]
     },
     {
-      "term": "generation quality",
-      "recent_docs": 70,
-      "baseline_docs": 19,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.446,
-      "discovery_score": 12.9527,
+      "term": "inference cost",
+      "recent_docs": 91,
+      "baseline_docs": 35,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.828,
+      "discovery_score": 13.2584,
       "examples": [
-        "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
-        "DraftAttention2: Fast Video Diffusion with Low-Resolution-Guided Mixed-Precision Attention",
-        "Carnator: Fast Text-to-Video Generation with Generation-Native Compatibility-Guided Cross-Request Reuse"
-      ]
-    },
-    {
-      "term": "image generation",
-      "recent_docs": 74,
-      "baseline_docs": 22,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.24,
-      "discovery_score": 12.8173,
-      "examples": [
-        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-        "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
-        "AutoRef: Harness Optimization for Agentic Multi-Reference Image Generation"
+        "DR-net-Mamba: Selective State-Space Modeling for Long-Range ECG Time-Series Denoising",
+        "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models",
+        "RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents"
       ]
     },
     {
       "term": "anonymous open science",
       "recent_docs": 44,
       "baseline_docs": 6,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.632,
-      "discovery_score": 12.8117,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.855,
+      "discovery_score": 13.1952,
       "examples": [
         "RIDE: Reference-Anchored Inference-Time Diffusion Editing for Scaffold Hopping",
         "CLIMB: A Clinical Multimorbidity Benchmark for Diagnosing Co-occurring Conditions through Multiturn Conversations",
@@ -682,10 +612,10 @@
       "term": "anonymous open",
       "recent_docs": 44,
       "baseline_docs": 6,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.632,
-      "discovery_score": 12.8117,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.855,
+      "discovery_score": 13.1952,
       "examples": [
         "RIDE: Reference-Anchored Inference-Time Diffusion Editing for Scaffold Hopping",
         "CLIMB: A Clinical Multimorbidity Benchmark for Diagnosing Co-occurring Conditions through Multiturn Conversations",
@@ -693,41 +623,13 @@
       ]
     },
     {
-      "term": "language agents",
-      "recent_docs": 61,
-      "baseline_docs": 14,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.869,
-      "discovery_score": 12.8037,
-      "examples": [
-        "Self-Adapting Group of Experts for Multi-Agent Reasoning",
-        "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
-        "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning"
-      ]
-    },
-    {
-      "term": "gradient descent",
-      "recent_docs": 69,
-      "baseline_docs": 19,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.411,
-      "discovery_score": 12.7122,
-      "examples": [
-        "GradLev: Token-Parallel Test-Time Training Via Costate Prediction",
-        "When Can First-Order Models of Fine-Tuning Bound Forgetting?",
-        "Why Subliminal Learning Needs So Much Data: A Noisy Inverse View through Steering Vector Recovery"
-      ]
-    },
-    {
       "term": "distillation opd trains",
       "recent_docs": 19,
       "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 26.384,
-      "discovery_score": 12.6882,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 27.656,
+      "discovery_score": 12.9558,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents",
@@ -735,27 +637,55 @@
       ]
     },
     {
-      "term": "visual tokens",
-      "recent_docs": 63,
-      "baseline_docs": 16,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.604,
-      "discovery_score": 12.4224,
+      "term": "coding agents",
+      "recent_docs": 86,
+      "baseline_docs": 33,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.831,
+      "discovery_score": 12.7439,
       "examples": [
-        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-        "Summarize Before Grounding: Query-Guided Chunk Condensation for Long-Video Temporal Grounding"
+        "GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation",
+        "Do Coding Agents Reuse Existing Code or Reinvent the Wheel?",
+        "Hyper Algorithm Design Agent: Evolving Learnable Optimizer from Zero"
+      ]
+    },
+    {
+      "term": "among evaluated",
+      "recent_docs": 95,
+      "baseline_docs": 41,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.632,
+      "discovery_score": 12.7297,
+      "examples": [
+        "CarveMix-RC: Addressing Rare-Class Imbalance Through Lesion-Aware Synthetic Augmentation for Brain Metastasis Segmentation",
+        "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
+        "MoSPR: Histology-to-Gene Expression Prediction with Morpho-Spatial Macrostates and Low-Rank Molecular Programs"
+      ]
+    },
+    {
+      "term": "vision-language vlms",
+      "recent_docs": 126,
+      "baseline_docs": 75,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.188,
+      "discovery_score": 12.5904,
+      "examples": [
+        "When VLMs Trust Context: Evaluating Scene Text Recognition under Misleading Context",
+        "See, Measure, and Reason: Learning Visually Grounded Reasoning in Pathology",
+        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings"
       ]
     },
     {
       "term": "average accuracy",
       "recent_docs": 62,
       "baseline_docs": 16,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.563,
-      "discovery_score": 12.1672,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.686,
+      "discovery_score": 12.5845,
       "examples": [
         "Self-Adapting Group of Experts for Multi-Agent Reasoning",
         "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
@@ -763,41 +693,13 @@
       ]
     },
     {
-      "term": "ground truth",
-      "recent_docs": 98,
-      "baseline_docs": 45,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.465,
-      "discovery_score": 12.0453,
-      "examples": [
-        "CLIMB: A Clinical Multimorbidity Benchmark for Diagnosing Co-occurring Conditions through Multiturn Conversations",
-        "Can Generative AI Automate Data Extraction for Meta-Analysis? A Case Study on Intercropping Research",
-        "ESTHER: Egocentric Stereo Hand Estimation and Reconstruction in the Wild"
-      ]
-    },
-    {
-      "term": "looped transformers",
-      "recent_docs": 18,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 25.031,
-      "discovery_score": 11.9525,
-      "examples": [
-        "How to Loop MoE: Flatten the Experts, Untie the Attention",
-        "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
-        "Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers"
-      ]
-    },
-    {
       "term": "together suggest",
       "recent_docs": 18,
       "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 25.031,
-      "discovery_score": 11.9525,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 26.238,
+      "discovery_score": 12.2068,
       "examples": [
         "The Hidden Ratio in Adam: Stable Structure, Compression, and Sign Dynamics",
         "LLM Alignment--Utility Asymmetry under Semantic-Preserving Transformations",
@@ -805,41 +707,41 @@
       ]
     },
     {
-      "term": "will released",
-      "recent_docs": 92,
-      "baseline_docs": 40,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.545,
-      "discovery_score": 11.9226,
+      "term": "generation quality",
+      "recent_docs": 68,
+      "baseline_docs": 21,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.259,
+      "discovery_score": 12.1983,
       "examples": [
-        "GLAD: Global-Local Adaptive Detector for Robust Speech Deepfake Detection",
-        "VD-DeepStack: Bridging Visual Comparison and Language Reasoning for Few-Shot Anomaly Detection",
-        "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents"
+        "One Latent, Many Tokens: Jointly Learning Compressed Embeddings for Efficient Language Diffusion",
+        "DraftAttention2: Fast Video Diffusion with Low-Resolution-Guided Mixed-Precision Attention",
+        "Carnator: Fast Text-to-Video Generation with Generation-Native Compatibility-Guided Cross-Request Reuse"
       ]
     },
     {
-      "term": "investigate whether",
-      "recent_docs": 70,
-      "baseline_docs": 22,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.12,
-      "discovery_score": 11.9118,
+      "term": "image generation",
+      "recent_docs": 72,
+      "baseline_docs": 24,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.098,
+      "discovery_score": 12.1741,
       "examples": [
-        "Behavioral Foundation Models for Quality Diversity",
-        "Large Language Models for Automated Cross-Domain Machine Learning Task Type Identification: A Benchmark Dataset and Evaluation",
-        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices"
+        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+        "Verifiable Visual Rewards Transfer from Synthetic Scenes to Natural Prompts",
+        "AutoRef: Harness Optimization for Agentic Multi-Reference Image Generation"
       ]
     },
     {
       "term": "language llm agents",
       "recent_docs": 70,
       "baseline_docs": 23,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.03,
-      "discovery_score": 11.6046,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.127,
+      "discovery_score": 12.0242,
       "examples": [
         "Continuous Context Management",
         "EP-Mem: Elastic Privacy Memory for Social Relationship-Aware LLM Agents",
@@ -847,83 +749,27 @@
       ]
     },
     {
-      "term": "hidden states",
-      "recent_docs": 70,
-      "baseline_docs": 23,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.03,
-      "discovery_score": 11.6046,
+      "term": "gradient descent",
+      "recent_docs": 67,
+      "baseline_docs": 21,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.226,
+      "discovery_score": 11.9627,
       "examples": [
-        "Spontaneous Context Restoration: How Language Models Recover from Corrupted Inputs",
-        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
-        "Dual-Stream Simultaneous Translation via 2D Grid Attention"
-      ]
-    },
-    {
-      "term": "agents increasingly",
-      "recent_docs": 88,
-      "baseline_docs": 38,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.555,
-      "discovery_score": 11.5958,
-      "examples": [
-        "Do Coding Agents Reuse Existing Code or Reinvent the Wheel?",
-        "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
-        "Timeline-Bench: Evaluating Agents on Realistic Video-Editing Tasks, from Raw Footage to Final Cut"
-      ]
-    },
-    {
-      "term": "failure mode",
-      "recent_docs": 80,
-      "baseline_docs": 31,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.729,
-      "discovery_score": 11.5833,
-      "examples": [
-        "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
-        "Let the Neurons Die: Exploiting ReLU-Induced Model Degradation",
-        "Research-Native by Construction: Minimal Nodes, Re-verifiable Workflows, and Compounding Memory for Long-Horizon Scientific Agents"
-      ]
-    },
-    {
-      "term": "together findings",
-      "recent_docs": 62,
-      "baseline_docs": 18,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.286,
-      "discovery_score": 11.3919,
-      "examples": [
-        "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
-        "Don't Inoculate Everything: Stratified Inoculation Prompting Narrows Backdoor Triggers and Preserves Desired Traits",
-        "Tool Mediation Alters Refusal Mechanisms in Large Language Models"
-      ]
-    },
-    {
-      "term": "central challenge",
-      "recent_docs": 54,
-      "baseline_docs": 13,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.731,
-      "discovery_score": 11.3825,
-      "examples": [
-        "A.D.A.M.O. (Agent for language-Driven Actions with Multimodal Observations): A Visual-Symbolic Framework for Virtual Humans",
-        "Addressing Spatial Indistinguishability in Spatiotemporal Prediction via Optimal Transport-Guided Masking",
-        "When World Models Lie: Adaptive Safety Analysis Under Wrong Imaginations"
+        "GradLev: Token-Parallel Test-Time Training Via Costate Prediction",
+        "When Can First-Order Models of Fine-Tuning Bound Forgetting?",
+        "Why Subliminal Learning Needs So Much Data: A Noisy Inverse View through Steering Vector Recovery"
       ]
     },
     {
       "term": "alfworld webshop",
       "recent_docs": 28,
       "baseline_docs": 2,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.712,
-      "discovery_score": 11.323,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 8.084,
+      "discovery_score": 11.6255,
       "examples": [
         "Learning Perturbation Robust Policies for LLM Agents with Stable Optimization",
         "UOPD: Uncertainty-Aware Intervention for On-Policy Distillation of Multi-Turn Agents",
@@ -931,83 +777,13 @@
       ]
     },
     {
-      "term": "small set",
-      "recent_docs": 66,
-      "baseline_docs": 21,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.092,
-      "discovery_score": 11.3211,
-      "examples": [
-        "ABC-Align: Prediction-Powered Alignment with Adaptive Bias Control",
-        "Maintaining Benchmarks Against Increasingly Capable Agents: Detection and Remediation of Unearned Passes",
-        "GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions"
-      ]
-    },
-    {
-      "term": "large language mllms",
-      "recent_docs": 76,
-      "baseline_docs": 29,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.754,
-      "discovery_score": 11.2632,
-      "examples": [
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings",
-        "PhysFieldBench: Can Multimodal Models Understand Physical Fields?"
-      ]
-    },
-    {
-      "term": "language mllms",
-      "recent_docs": 76,
-      "baseline_docs": 29,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.754,
-      "discovery_score": 11.2632,
-      "examples": [
-        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings",
-        "PhysFieldBench: Can Multimodal Models Understand Physical Fields?"
-      ]
-    },
-    {
-      "term": "natural language",
-      "recent_docs": 108,
-      "baseline_docs": 61,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.194,
-      "discovery_score": 11.2424,
-      "examples": [
-        "Behavioral Foundation Models for Quality Diversity",
-        "A.D.A.M.O. (Agent for language-Driven Actions with Multimodal Observations): A Visual-Symbolic Framework for Virtual Humans",
-        "WeaveData: A Multimodal Data Analysis System with Self-Critiquing and Self-Evolving LLM Plans"
-      ]
-    },
-    {
-      "term": "supervised fine-tuning sft",
-      "recent_docs": 48,
-      "baseline_docs": 10,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.125,
-      "discovery_score": 11.2163,
-      "examples": [
-        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-        "From Normative Frameworks to Alignment Data: Constructing and Evaluating SFT and Preference Data",
-        "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models"
-      ]
-    },
-    {
       "term": "sample complexity",
       "recent_docs": 48,
       "baseline_docs": 10,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.125,
-      "discovery_score": 11.2163,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.275,
+      "discovery_score": 11.5838,
       "examples": [
         "Nearly Optimal Fixed-Confidence Best-Arm Identification with 1-Bit Feedback",
         "Fold'EM: Direct atomic structure inference from Cryo-EM particles",
@@ -1015,27 +791,27 @@
       ]
     },
     {
-      "term": "promising way",
-      "recent_docs": 17,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 23.678,
-      "discovery_score": 11.2157,
+      "term": "visual tokens",
+      "recent_docs": 61,
+      "baseline_docs": 18,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.357,
+      "discovery_score": 11.5441,
       "examples": [
-        "FactorEngram: Factorized N-gram Memory with Basis-Level Gating for Language Models",
-        "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
-        "JustQuant: You Don't Need Smoothing, SVD, or Rotation for 4-Bit Activation Quantization"
+        "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+        "Summarize Before Grounding: Query-Guided Chunk Condensation for Long-Video Temporal Grounding"
       ]
     },
     {
       "term": "opd trains student",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 23.678,
-      "discovery_score": 11.2157,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 24.819,
+      "discovery_score": 11.4566,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents",
@@ -1046,10 +822,10 @@
       "term": "final answers",
       "recent_docs": 17,
       "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 23.678,
-      "discovery_score": 11.2157,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 24.819,
+      "discovery_score": 11.4566,
       "examples": [
         "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
         "Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents",
@@ -1057,27 +833,13 @@
       ]
     },
     {
-      "term": "failure modes",
-      "recent_docs": 91,
-      "baseline_docs": 43,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.423,
-      "discovery_score": 11.2067,
-      "examples": [
-        "A.D.A.M.O. (Agent for language-Driven Actions with Multimodal Observations): A Visual-Symbolic Framework for Virtual Humans",
-        "Structural Alignment for Reliable Industrial AI: Bridging Physical Reality, Data, Models, and Human Intent",
-        "ActionLens: Diagnosing Spatial-Temporal Binding Failures in Vision-Language Models"
-      ]
-    },
-    {
       "term": "denoising step",
       "recent_docs": 31,
       "baseline_docs": 3,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 6.089,
-      "discovery_score": 11.0942,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 6.382,
+      "discovery_score": 11.4064,
       "examples": [
         "Hesitation-Aware On-Policy Distillation for Diffusion Language Models",
         "Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models",
@@ -1085,27 +847,27 @@
       ]
     },
     {
-      "term": "monte carlo",
-      "recent_docs": 113,
-      "baseline_docs": 70,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.089,
-      "discovery_score": 10.889,
+      "term": "agents increasingly",
+      "recent_docs": 86,
+      "baseline_docs": 40,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.515,
+      "discovery_score": 11.2922,
       "examples": [
-        "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
-        "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning",
-        "Calibrated Uncertainty for Informative Path Planning in Aquatic Environmental Monitoring"
+        "Do Coding Agents Reuse Existing Code or Reinvent the Wheel?",
+        "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
+        "Timeline-Bench: Evaluating Agents on Realistic Video-Editing Tasks, from Raw Footage to Final Cut"
       ]
     },
     {
       "term": "benchmark evaluating",
       "recent_docs": 64,
       "baseline_docs": 21,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.03,
-      "discovery_score": 10.8663,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.127,
+      "discovery_score": 11.2592,
       "examples": [
         "QC-Stark: A Multi-Task Benchmark Revealing Capability Dissociations in LLMs Evaluated on Quantum Computing Tasks",
         "VEX-Bench: Benchmarking Verification Complexity of LLM-Generated Misinformation",
@@ -1113,13 +875,41 @@
       ]
     },
     {
+      "term": "language agents",
+      "recent_docs": 58,
+      "baseline_docs": 17,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.371,
+      "discovery_score": 11.1572,
+      "examples": [
+        "Self-Adapting Group of Experts for Multi-Agent Reasoning",
+        "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
+        "UniOPSD: Unifying Outcome and Hindsight Feedback for Agentic Reinforcement Learning"
+      ]
+    },
+    {
+      "term": "long-term memory",
+      "recent_docs": 36,
+      "baseline_docs": 5,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.706,
+      "discovery_score": 11.1569,
+      "examples": [
+        "Remember by Asking: Retrieval-Induced Memory Evolution for LLM Agents",
+        "Stashbird: Efficient Speaker-Indexed Memory for Conversational Agents",
+        "EMIR$^2$: Evolution-Aware Memory with Intent-Guided Multi-Round Retrieval"
+      ]
+    },
+    {
       "term": "distillation on-policy",
       "recent_docs": 27,
       "baseline_docs": 2,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.442,
-      "discovery_score": 10.8427,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.8,
+      "discovery_score": 11.1346,
       "examples": [
         "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
         "Beyond Token Alignment: Event Completion for Cross-Tokenizer On-Policy Distillation",
@@ -1130,10 +920,10 @@
       "term": "student own",
       "recent_docs": 27,
       "baseline_docs": 2,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.442,
-      "discovery_score": 10.8427,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.8,
+      "discovery_score": 11.1346,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "From Static to Dynamic: On-Policy Distillation from Image to Video Diffusion Models",
@@ -1144,10 +934,10 @@
       "term": "further analyses",
       "recent_docs": 27,
       "baseline_docs": 2,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.442,
-      "discovery_score": 10.8427,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.8,
+      "discovery_score": 11.1346,
       "examples": [
         "Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents",
         "Evolving Support Priorities in Empathetic Reinforcement Learning",
@@ -1155,209 +945,111 @@
       ]
     },
     {
-      "term": "long-term memory",
-      "recent_docs": 36,
-      "baseline_docs": 5,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.49,
-      "discovery_score": 10.8304,
+      "term": "monte carlo",
+      "recent_docs": 112,
+      "baseline_docs": 71,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.116,
+      "discovery_score": 11.0865,
       "examples": [
-        "Remember by Asking: Retrieval-Induced Memory Evolution for LLM Agents",
-        "Stashbird: Efficient Speaker-Indexed Memory for Conversational Agents",
-        "EMIR$^2$: Evolution-Aware Memory with Intent-Guided Multi-Round Retrieval"
-      ]
-    },
-    {
-      "term": "video diffusion",
-      "recent_docs": 50,
-      "baseline_docs": 12,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.733,
-      "discovery_score": 10.7509,
-      "examples": [
-        "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge",
-        "GenNVS: Geometry-enhanced Novel View Synthesis via Disentangled 3D Prior",
-        "From Static to Dynamic: On-Policy Distillation from Image to Video Diffusion Models"
-      ]
-    },
-    {
-      "term": "improves average",
-      "recent_docs": 72,
-      "baseline_docs": 28,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.721,
-      "discovery_score": 10.6978,
-      "examples": [
-        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
-        "FlowState: Execution State as Memory for Long-Horizon LLM Agents",
-        "LRC-JEPA: Disentangling Dynamics and Residual Context for Efficient World Models"
-      ]
-    },
-    {
-      "term": "fine-tuning sft",
-      "recent_docs": 48,
-      "baseline_docs": 11,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.853,
-      "discovery_score": 10.6769,
-      "examples": [
-        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-        "From Normative Frameworks to Alignment Data: Constructing and Evaluating SFT and Preference Data",
-        "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models"
-      ]
-    },
-    {
-      "term": "discrete diffusion",
-      "recent_docs": 30,
-      "baseline_docs": 3,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.895,
-      "discovery_score": 10.6612,
-      "examples": [
+        "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
         "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning",
-        "Learning to Re-Draft: A Variational Stackelberg Game for Discrete Diffusion",
-        "Bison: Cross-Dataset Learning for Unseen-Compound Perturbation Prediction"
+        "Calibrated Uncertainty for Informative Path Planning in Aquatic Environmental Monitoring"
       ]
     },
     {
-      "term": "held out",
-      "recent_docs": 30,
-      "baseline_docs": 3,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 5.895,
-      "discovery_score": 10.6612,
+      "term": "hidden states",
+      "recent_docs": 68,
+      "baseline_docs": 25,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.905,
+      "discovery_score": 11.0099,
       "examples": [
-        "Selecting Diverse SFT Traces Improves Post-RL Generalization",
-        "Agent Safety From Within: Detecting Harmful Trajectories from LLM Internal States",
-        "Phase Space Attention:A Hairer Lift Circumvents the Single-Layer Induction Obstruction"
+        "Spontaneous Context Restoration: How Language Models Recover from Corrupted Inputs",
+        "Token-Disentangled Latent Test-Time Scaling for Vision-Language Reasoning",
+        "Dual-Stream Simultaneous Translation via 2D Grid Attention"
       ]
     },
     {
-      "term": "llms increasingly",
-      "recent_docs": 63,
-      "baseline_docs": 21,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 1.998,
-      "discovery_score": 10.6399,
+      "term": "will released",
+      "recent_docs": 88,
+      "baseline_docs": 44,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.41,
+      "discovery_score": 10.9536,
       "examples": [
-        "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
-        "Toward a Graded Measure of Belief Stability in Large Language Models",
-        "Unknown is not normal: separating language-model extraction from rule-based decision logic for clinical risk scores"
+        "GLAD: Global-Local Adaptive Detector for Robust Speech Deepfake Detection",
+        "VD-DeepStack: Bridging Visual Comparison and Language Reasoning for Few-Shot Anomaly Detection",
+        "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents"
       ]
     },
     {
-      "term": "inductive bias",
-      "recent_docs": 42,
-      "baseline_docs": 8,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 3.383,
-      "discovery_score": 10.5734,
+      "term": "natural language",
+      "recent_docs": 105,
+      "baseline_docs": 64,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.16,
+      "discovery_score": 10.881,
       "examples": [
-        "Understanding Generalization Requires Universal Induction",
-        "Dynamic Kuramoto-Hodge Operators for PDEs on Complex Geometries and Topologies",
-        "From Shortcut Learning to Discrete Neural Insertion Sort"
+        "Behavioral Foundation Models for Quality Diversity",
+        "A.D.A.M.O. (Agent for language-Driven Actions with Multimodal Observations): A Visual-Symbolic Framework for Virtual Humans",
+        "WeaveData: A Multimodal Data Analysis System with Self-Critiquing and Self-Evolving LLM Plans"
       ]
     },
     {
-      "term": "parameter updates",
-      "recent_docs": 57,
-      "baseline_docs": 17,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.223,
-      "discovery_score": 10.5315,
+      "term": "large language mllms",
+      "recent_docs": 74,
+      "baseline_docs": 31,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.677,
+      "discovery_score": 10.8148,
       "examples": [
-        "Composable Decoding on the Probability Simplex: Theory and Implementation",
-        "SEmoEdit: Probing and Harnessing the Editability of Pre-trained Speech Flows",
-        "SPACE-LoRA: Allocating Activation-Subspace Protection for Continual Learning"
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings",
+        "PhysFieldBench: Can Multimodal Models Understand Physical Fields?"
       ]
     },
     {
-      "term": "necessarily translate",
-      "recent_docs": 16,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 22.325,
-      "discovery_score": 10.4781,
+      "term": "language mllms",
+      "recent_docs": 74,
+      "baseline_docs": 31,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.677,
+      "discovery_score": 10.8148,
       "examples": [
-        "AwarenessBench: Assessing Cognitive Capabilities of Language Models",
-        "The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions",
-        "PPG-LM: A Photoplethysmography-Language Model with Multi-Level Clinical Alignment"
+        "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+        "K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC Drawings",
+        "PhysFieldBench: Can Multimodal Models Understand Physical Fields?"
       ]
     },
     {
-      "term": "improves rates",
-      "recent_docs": 16,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 22.325,
-      "discovery_score": 10.4781,
+      "term": "investigate whether",
+      "recent_docs": 67,
+      "baseline_docs": 25,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.877,
+      "discovery_score": 10.7927,
       "examples": [
-        "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
-        "Improving Large Language Models for Code through Runtime Program-State Reasoning",
-        "AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models"
-      ]
-    },
-    {
-      "term": "pairwise comparisons",
-      "recent_docs": 16,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 22.325,
-      "discovery_score": 10.4781,
-      "examples": [
-        "Semantic Uncertainty Quantification Needs Factual Equivalence",
-        "What Can a Leaderboard Certify? Compositional Controllability for Fair Evaluation and Training of Biomedical Literature-Review Agents",
-        "A Multi-Agent LLM Framework for Personalized Health Checkup Interpretation and Guidance"
-      ]
-    },
-    {
-      "term": "reasoning effort",
-      "recent_docs": 16,
-      "baseline_docs": 0,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 22.325,
-      "discovery_score": 10.4781,
-      "examples": [
-        "GlyphBench: A Playground for Language-Model Reinforcement Learning",
-        "Curating Merchant-Matching Training Data with Two Confidence-Gated Local LLM Judges",
-        "Long-Horizon Analog Design Bench: Benchmarking Agents on Hours-Long Analog and Mixed-Signal Circuit Design Tasks"
-      ]
-    },
-    {
-      "term": "execution feedback",
-      "recent_docs": 49,
-      "baseline_docs": 12,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 2.679,
-      "discovery_score": 10.4718,
-      "examples": [
-        "Graph-Guided Repository Environment Construction",
-        "Recursive Harness Distillation across Agents for Robot Manipulation",
-        "CodeSkill: Latent Skill Abstraction for Long-Horizon Code Agents"
+        "Behavioral Foundation Models for Quality Diversity",
+        "Large Language Models for Automated Cross-Domain Machine Learning Task Type Identification: A Benchmark Dataset and Evaluation",
+        "Echoes of Deeds: Moral History Can Shape and Steer LLM Behavioral Choices"
       ]
     },
     {
       "term": "teacher supervision",
       "recent_docs": 35,
       "baseline_docs": 5,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 4.367,
-      "discovery_score": 10.4568,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.577,
+      "discovery_score": 10.7741,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "Can We Trust the Teacher? Decoupled Credit Direction-Magnitude for Self-Distillation",
@@ -1365,13 +1057,41 @@
       ]
     },
     {
+      "term": "supervised fine-tuning sft",
+      "recent_docs": 47,
+      "baseline_docs": 11,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.929,
+      "discovery_score": 10.7386,
+      "examples": [
+        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+        "From Normative Frameworks to Alignment Data: Constructing and Evaluating SFT and Preference Data",
+        "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models"
+      ]
+    },
+    {
+      "term": "improves rates",
+      "recent_docs": 16,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 23.401,
+      "discovery_score": 10.7054,
+      "examples": [
+        "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
+        "Improving Large Language Models for Code through Runtime Program-State Reasoning",
+        "AVL-JEPA: Preventing Causal Dynamics Information Collapse In Joint Embedding Predictive Architecture World Models"
+      ]
+    },
+    {
       "term": "trains student",
       "recent_docs": 22,
       "baseline_docs": 1,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 10.148,
-      "discovery_score": 10.4101,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 10.637,
+      "discovery_score": 10.6725,
       "examples": [
         "Teacher-Student Gaps Are Not Enough: Outcome-Guided On-Policy Distillation for Multi-Turn Autonomous Agents",
         "DivOPD: Spread Wide, Look Close for Asynchronous On-Policy Distillation of Multi-turn Agents",
@@ -1382,10 +1102,10 @@
       "term": "multi-agent mas",
       "recent_docs": 22,
       "baseline_docs": 1,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 10.148,
-      "discovery_score": 10.4101,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 10.637,
+      "discovery_score": 10.6725,
       "examples": [
         "ResonAct: Streaming Metrics for Runtime Diagnosis and Self-Healing in Multi-Agent Systems",
         "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
@@ -1393,17 +1113,297 @@
       ]
     },
     {
+      "term": "small set",
+      "recent_docs": 64,
+      "baseline_docs": 23,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.946,
+      "discovery_score": 10.6703,
+      "examples": [
+        "ABC-Align: Prediction-Powered Alignment with Adaptive Bias Control",
+        "Maintaining Benchmarks Against Increasingly Capable Agents: Detection and Remediation of Unearned Passes",
+        "GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions"
+      ]
+    },
+    {
       "term": "safety alignment",
       "recent_docs": 26,
       "baseline_docs": 2,
-      "recent_corpus_docs": 11604,
-      "baseline_corpus_docs": 7850,
-      "acceleration": 7.171,
-      "discovery_score": 10.3632,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.517,
+      "discovery_score": 10.6444,
       "examples": [
         "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models",
         "EOPSA: Efficient On-Policy Self-Distilled Safety Alignment",
         "AgentBoundary: Counterfactual Evaluation of Safety in Tool-Using LLM Agents"
+      ]
+    },
+    {
+      "term": "failure modes",
+      "recent_docs": 88,
+      "baseline_docs": 46,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.35,
+      "discovery_score": 10.6363,
+      "examples": [
+        "A.D.A.M.O. (Agent for language-Driven Actions with Multimodal Observations): A Visual-Symbolic Framework for Virtual Humans",
+        "Structural Alignment for Reliable Industrial AI: Bridging Physical Reality, Data, Models, and Human Intent",
+        "ActionLens: Diagnosing Spatial-Temporal Binding Failures in Vision-Language Models"
+      ]
+    },
+    {
+      "term": "together findings",
+      "recent_docs": 60,
+      "baseline_docs": 20,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.093,
+      "discovery_score": 10.631,
+      "examples": [
+        "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+        "Don't Inoculate Everything: Stratified Inoculation Prompting Narrows Backdoor Triggers and Preserves Desired Traits",
+        "Tool Mediation Alters Refusal Mechanisms in Large Language Models"
+      ]
+    },
+    {
+      "term": "ground truth",
+      "recent_docs": 92,
+      "baseline_docs": 51,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.274,
+      "discovery_score": 10.5594,
+      "examples": [
+        "CLIMB: A Clinical Multimorbidity Benchmark for Diagnosing Co-occurring Conditions through Multiturn Conversations",
+        "Can Generative AI Automate Data Extraction for Meta-Analysis? A Case Study on Intercropping Research",
+        "ESTHER: Egocentric Stereo Hand Estimation and Reconstruction in the Wild"
+      ]
+    },
+    {
+      "term": "video diffusion",
+      "recent_docs": 49,
+      "baseline_docs": 13,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.6,
+      "discovery_score": 10.3725,
+      "examples": [
+        "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge",
+        "GenNVS: Geometry-enhanced Novel View Synthesis via Disentangled 3D Prior",
+        "From Static to Dynamic: On-Policy Distillation from Image to Video Diffusion Models"
+      ]
+    },
+    {
+      "term": "parameter updates",
+      "recent_docs": 56,
+      "baseline_docs": 18,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.166,
+      "discovery_score": 10.3096,
+      "examples": [
+        "Composable Decoding on the Probability Simplex: Theory and Implementation",
+        "SEmoEdit: Probing and Harnessing the Editability of Pre-trained Speech Flows",
+        "SPACE-LoRA: Allocating Activation-Subspace Protection for Continual Learning"
+      ]
+    },
+    {
+      "term": "fine-tuning sft",
+      "recent_docs": 47,
+      "baseline_docs": 12,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.695,
+      "discovery_score": 10.256,
+      "examples": [
+        "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+        "From Normative Frameworks to Alignment Data: Constructing and Evaluating SFT and Preference Data",
+        "DeShortcut-Align: Decoupling Spurious Shortcuts for Robust Safety Alignment in Large Reasoning Models"
+      ]
+    },
+    {
+      "term": "improves average",
+      "recent_docs": 70,
+      "baseline_docs": 30,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.639,
+      "discovery_score": 10.2341,
+      "examples": [
+        "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
+        "FlowState: Execution State as Memory for Long-Horizon LLM Agents",
+        "LRC-JEPA: Disentangling Dynamics and Residual Context for Efficient World Models"
+      ]
+    },
+    {
+      "term": "fewer tokens",
+      "recent_docs": 31,
+      "baseline_docs": 4,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 4.964,
+      "discovery_score": 10.1891,
+      "examples": [
+        "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+        "Social Circuits behind Multi-agent Echo Chambers",
+        "SAGE: Structured Strategic Reasoning for Efficient LLM Game Playing"
+      ]
+    },
+    {
+      "term": "masked diffusion",
+      "recent_docs": 25,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.233,
+      "discovery_score": 10.155,
+      "examples": [
+        "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
+        "Learning to Re-Draft: A Variational Stackelberg Game for Discrete Diffusion",
+        "One Readout, Many Repairs: Diffusion-Guided Hierarchical Search for Tool-Agent Repair"
+      ]
+    },
+    {
+      "term": "near zero",
+      "recent_docs": 25,
+      "baseline_docs": 2,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 7.233,
+      "discovery_score": 10.155,
+      "examples": [
+        "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
+        "RISE: Red-teaming via Iterative Strategy Evolution for Modern Text-to-Image Models",
+        "TCMQA: A 38K-Question Traditional Chinese Medicine Benchmark with a Licensed-Practitioner Reference"
+      ]
+    },
+    {
+      "term": "poorly understood",
+      "recent_docs": 51,
+      "baseline_docs": 15,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.356,
+      "discovery_score": 10.1026,
+      "examples": [
+        "The Hidden Ratio in Adam: Stable Structure, Compression, and Sign Dynamics",
+        "Using LLMs to Detect LLM-Generated Texts: A Cross-Generation Analysis",
+        "The Marathon of Scientific Reasoning: Robustness of Scientific Agents to Perturbations in Multi-Turn Interactions"
+      ]
+    },
+    {
+      "term": "execution feedback",
+      "recent_docs": 48,
+      "baseline_docs": 13,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.548,
+      "discovery_score": 10.0959,
+      "examples": [
+        "Graph-Guided Repository Environment Construction",
+        "Recursive Harness Distillation across Agents for Robot Manipulation",
+        "CodeSkill: Latent Skill Abstraction for Long-Horizon Code Agents"
+      ]
+    },
+    {
+      "term": "language large",
+      "recent_docs": 28,
+      "baseline_docs": 3,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 5.774,
+      "discovery_score": 10.0798,
+      "examples": [
+        "d-OPD: Future-Aware On-Policy Distillation for Block Diffusion Language Models",
+        "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+        "Simulating Respondents, Not Single Questions: Coherent Survey Generation with Large Language Models"
+      ]
+    },
+    {
+      "term": "failure mode",
+      "recent_docs": 75,
+      "baseline_docs": 36,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.467,
+      "discovery_score": 10.0136,
+      "examples": [
+        "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
+        "Let the Neurons Die: Exploiting ReLU-Induced Model Degradation",
+        "Research-Native by Construction: Minimal Nodes, Re-verifiable Workflows, and Compounding Memory for Long-Horizon Scientific Agents"
+      ]
+    },
+    {
+      "term": "llms increasingly",
+      "recent_docs": 61,
+      "baseline_docs": 23,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 1.856,
+      "discovery_score": 10.0018,
+      "examples": [
+        "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+        "Toward a Graded Measure of Belief Stability in Large Language Models",
+        "Unknown is not normal: separating language-model extraction from rule-based decision logic for clinical risk scores"
+      ]
+    },
+    {
+      "term": "agents must",
+      "recent_docs": 49,
+      "baseline_docs": 14,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 2.421,
+      "discovery_score": 9.9588,
+      "examples": [
+        "EP-Mem: Elastic Privacy Memory for Social Relationship-Aware LLM Agents",
+        "CoSec: Benchmarking Agent Security in Communities",
+        "When Successful Strategies Fail: Adaptation to Environmental Novelty in Terminal Agents"
+      ]
+    },
+    {
+      "term": "sequential monte",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 21.983,
+      "discovery_score": 9.9536,
+      "examples": [
+        "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
+        "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning",
+        "Sharpen Without Search: On-Policy Distillation of Sequence-Level Power Distribution"
+      ]
+    },
+    {
+      "term": "sequential monte carlo",
+      "recent_docs": 15,
+      "baseline_docs": 0,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 21.983,
+      "discovery_score": 9.9536,
+      "examples": [
+        "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
+        "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning",
+        "Sharpen Without Search: On-Policy Distillation of Sequence-Level Power Distribution"
+      ]
+    },
+    {
+      "term": "five benchmarks",
+      "recent_docs": 35,
+      "baseline_docs": 6,
+      "recent_corpus_docs": 11437,
+      "baseline_corpus_docs": 8110,
+      "acceleration": 3.873,
+      "discovery_score": 9.9279,
+      "examples": [
+        "Diffusion Reward Models",
+        "ChronoFlow: Hierarchical Flow Matching for Irregular Time Series Generation",
+        "Beyond Prompt or Skill? Attribution-Guided Optimization of Modular LLM Programs"
       ]
     }
   ]
