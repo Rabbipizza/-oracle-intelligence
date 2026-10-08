@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T22:07:45.840685+00:00",
+  "generated_at": "2026-10-08T23:51:16.386872+00:00",
   "discovery_quality": "OK",
   "global_source_inventory": {
     "families": [
@@ -9,8 +9,8 @@
       "science"
     ],
     "family_count": 4,
-    "record_count": 303842,
-    "primary_origin_count": 19514
+    "record_count": 312053,
+    "primary_origin_count": 19614
   },
   "candidate_gates": [
     {
@@ -205,26 +205,6 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "video generation",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 197,
-      "primary_origin_count": 196,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
       "term": "latent space",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -276,6 +256,26 @@
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "UNPROVEN"
+    },
+    {
+      "term": "video generation",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 197,
+      "primary_origin_count": 196,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
     },
     {
       "term": "visual evidence",
@@ -574,25 +574,6 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "distillation opd",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 75,
-      "primary_origin_count": 75,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
       "term": "on-policy distillation opd",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -605,6 +586,25 @@
       ],
       "matched_origin_count": 74,
       "primary_origin_count": 74,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "distillation opd",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 75,
+      "primary_origin_count": 75,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -783,9 +783,9 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1101,
-      "primary_origin_count": 978,
-      "economic_origin_count": 13,
+      "matched_origin_count": 1104,
+      "primary_origin_count": 981,
+      "economic_origin_count": 14,
       "coverage_gate_pass": true,
       "economic_transmission": "EVIDENCE_PRESENT",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
@@ -814,7 +814,7 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "anonymous open science",
+      "term": "anonymous open",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -829,7 +829,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "anonymous open",
+      "term": "anonymous open science",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -951,25 +951,6 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "generation quality",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 100,
-      "primary_origin_count": 100,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
       "term": "image generation",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -1019,6 +1000,25 @@
       ],
       "matched_origin_count": 100,
       "primary_origin_count": 97,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "generation quality",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 100,
+      "primary_origin_count": 100,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1349,7 +1349,7 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "large language mllms",
+      "term": "language mllms",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -1364,7 +1364,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "language mllms",
+      "term": "large language mllms",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [],
@@ -1451,6 +1451,25 @@
       "trend_status": "UNPROVEN"
     },
     {
+      "term": "small set",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 95,
+      "primary_origin_count": 95,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
       "term": "trains student",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -1485,7 +1504,7 @@
       "trend_status": "UNPROVEN"
     },
     {
-      "term": "small set",
+      "term": "failure modes",
       "concept": null,
       "concept_mapping_confidence": null,
       "families": [
@@ -1495,8 +1514,8 @@
       "sources": [
         "arXiv"
       ],
-      "matched_origin_count": 95,
-      "primary_origin_count": 95,
+      "matched_origin_count": 140,
+      "primary_origin_count": 140,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1523,25 +1542,6 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "failure modes",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 140,
-      "primary_origin_count": 140,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
       "term": "together findings",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -1555,26 +1555,6 @@
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
       "company_capture": "REQUIRES_COMPANY_DOSSIER",
       "trend_status": "UNPROVEN"
-    },
-    {
-      "term": "ground truth",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "OpenAlex",
-        "arXiv"
-      ],
-      "matched_origin_count": 162,
-      "primary_origin_count": 155,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
     },
     {
       "term": "video diffusion",
@@ -1608,6 +1588,26 @@
       ],
       "matched_origin_count": 77,
       "primary_origin_count": 77,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "ground truth",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "OpenAlex",
+        "arXiv"
+      ],
+      "matched_origin_count": 162,
+      "primary_origin_count": 155,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
@@ -1821,25 +1821,6 @@
       "trend_status": "DISCOVERED"
     },
     {
-      "term": "sequential monte",
-      "concept": null,
-      "concept_mapping_confidence": null,
-      "families": [
-        "science"
-      ],
-      "family_count": 1,
-      "sources": [
-        "arXiv"
-      ],
-      "matched_origin_count": 16,
-      "primary_origin_count": 16,
-      "economic_origin_count": 0,
-      "coverage_gate_pass": false,
-      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
-      "company_capture": "REQUIRES_COMPANY_DOSSIER",
-      "trend_status": "DISCOVERED"
-    },
-    {
       "term": "sequential monte carlo",
       "concept": null,
       "concept_mapping_confidence": null,
@@ -1852,6 +1833,25 @@
       ],
       "matched_origin_count": 15,
       "primary_origin_count": 15,
+      "economic_origin_count": 0,
+      "coverage_gate_pass": false,
+      "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
+      "company_capture": "REQUIRES_COMPANY_DOSSIER",
+      "trend_status": "DISCOVERED"
+    },
+    {
+      "term": "sequential monte",
+      "concept": null,
+      "concept_mapping_confidence": null,
+      "families": [
+        "science"
+      ],
+      "family_count": 1,
+      "sources": [
+        "arXiv"
+      ],
+      "matched_origin_count": 16,
+      "primary_origin_count": 16,
       "economic_origin_count": 0,
       "coverage_gate_pass": false,
       "economic_transmission": "REQUIRES_EVIDENCE_EXPANSION",
