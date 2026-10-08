@@ -189,18 +189,23 @@ def main():
                 if metrics["m1"]>0: positive+=1
             md=market.get("prices",{}).get(ticker) or {}
             sc=(decisions.get("scores",{}) or {}).get(ticker,{})
+            structural_quality=sc.get("structural_quality")
             structural=sc.get("structural_early_bird")
+            market_recognition=sc.get("market_recognition_score")
+            unrecognized_market=sc.get("unrecognized_market_score")
             entry=sc.get("entry_score")
             proof_u=str(proof or "").upper()
             evidence_base=100.0 if sc.get("evidence_status")=="PROVEN" else 70.0 if "PROVEN" in proof_u else 55.0 if "PARTIAL" in proof_u else 20.0
-            structural_for_rank=float(structural if structural is not None else evidence_base)
+            quality_for_rank=float(structural_quality if structural_quality is not None else evidence_base)
+            structural_for_rank=float(structural if structural is not None else max(0.0,evidence_base-20.0))
             entry_for_rank=float(entry if entry is not None else 50.0)
             rel=float(metrics.get("rel_m1_qqq") or 0.0)
             momentum=clamp(50.0+2.0*rel)
             discovery_boost=min(10.0,float(row.get("radar_discovery_score") or 0.0)*0.20)
             radar_score=roundn(
-                0.45*structural_for_rank+
-                0.30*entry_for_rank+
+                0.25*quality_for_rank+
+                0.25*structural_for_rank+
+                0.25*entry_for_rank+
                 0.15*momentum+
                 0.10*evidence_base+
                 discovery_boost,
@@ -217,7 +222,10 @@ def main():
                "radar_rank_score":radar_score,
                "challenger_queries":row.get("challenger_queries",[]),
                "signal":sig,"signal_reason":reason,
+               "structural_quality":structural_quality,
                "structural_early_bird":structural,
+               "market_recognition_score":market_recognition,
+               "unrecognized_market_score":unrecognized_market,
                "entry_score":entry,
                "indicative_entry_sizing":sc.get("indicative_entry_sizing"),
                "hold_score":sc.get("hold_score"),
