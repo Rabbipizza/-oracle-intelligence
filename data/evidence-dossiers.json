@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T23:52:27.318074+00:00",
+  "generated_at": "2026-10-09T13:29:02.863673+00:00",
   "method": "semantic concept expansion + record-level origin dedupe + company-capture dossier",
   "maturity_scale": [
     "DISCOVERED",
@@ -46,10 +46,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1027,
-      "primary_origin_count": 1009,
+      "matched_origin_count": 1077,
+      "primary_origin_count": 1058,
       "economic_origin_count": 16,
-      "science_origin_count": 1000
+      "science_origin_count": 1050
     },
     "photonics": {
       "label": "AI optical interconnect / photonics",
@@ -86,10 +86,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 2722,
-      "primary_origin_count": 1948,
+      "matched_origin_count": 2762,
+      "primary_origin_count": 1977,
       "economic_origin_count": 8,
-      "science_origin_count": 2712
+      "science_origin_count": 2752
     },
     "physical": {
       "label": "Physical AI / robotics infrastructure",
@@ -124,10 +124,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 1104,
-      "primary_origin_count": 981,
+      "matched_origin_count": 1168,
+      "primary_origin_count": 1038,
       "economic_origin_count": 14,
-      "science_origin_count": 1045
+      "science_origin_count": 1109
     },
     "cuas": {
       "label": "Counter-UAS / directed energy",
@@ -193,10 +193,10 @@
         "USAspending",
         "arXiv"
       ],
-      "matched_origin_count": 42,
-      "primary_origin_count": 40,
+      "matched_origin_count": 43,
+      "primary_origin_count": 41,
       "economic_origin_count": 16,
-      "science_origin_count": 15
+      "science_origin_count": 16
     }
   },
   "discovery_to_concepts": [
@@ -204,8 +204,8 @@
       "term": "vision-language-action vla",
       "concept": "physical",
       "mapping_confidence": 0.92,
-      "discovery_score": 13.381,
-      "acceleration": 1.066
+      "discovery_score": 13.5866,
+      "acceleration": 1.079
     }
   ],
   "companies": {
@@ -1794,8 +1794,8 @@
         "company",
         "science"
       ],
-      "matched_origin_count": 21,
-      "primary_origin_count": 21,
+      "matched_origin_count": 24,
+      "primary_origin_count": 24,
       "economic_primary_origin_count": 1,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
@@ -2113,8 +2113,8 @@
       "families": [
         "science"
       ],
-      "matched_origin_count": 61,
-      "primary_origin_count": 57,
+      "matched_origin_count": 66,
+      "primary_origin_count": 62,
       "economic_primary_origin_count": 0,
       "explicit_proven": false,
       "eligible_for_auto_promotion": false,
