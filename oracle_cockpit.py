@@ -136,6 +136,7 @@ def main():
     portfolio=load("portfolio.json")
     challengers=load("data/company-challengers.json")
     dossiers=load("data/evidence-dossiers.json")
+    chains=load("data/economic-chains.json")
     prior_cockpit=load("data/cockpit.json")
     qrows=series_rows(market,"QQQ")
     market_as_of=qrows[-1]["date"] if qrows else None
@@ -283,7 +284,6 @@ def main():
 
     discovery=load("data/discovery-candidates.json")
     gate=load("data/source-gate-status.json")
-    chains=load("data/economic-chains.json")
     scout=[]
     gates={g.get("term"):g for g in gate.get("candidate_gates",[])}
     for c in discovery.get("candidates",[])[:30]:
