@@ -212,11 +212,19 @@ def main():
                 2
             )
             dossier=(dossiers.get("companies",{}) or {}).get(ticker,{})
+            chain=(chains.get("companies",{}) or {}).get(ticker,{})
             c={"rank":None,"previous_rank":previous.get(ticker),
                "ticker":ticker,"company":row.get("company"),"role":row.get("role"),"proof":proof,
                "evidence_maturity":dossier.get("maturity"),
                "trend_evidence_score":dossier.get("trend_evidence_score"),
                "company_capture_score":dossier.get("company_capture_score"),
+               "chain_state":chain.get("state"),
+               "pre_green":chain.get("pre_green",False),
+               "discovery_edge_score":chain.get("discovery_edge_score"),
+               "economic_proof_score":chain.get("economic_proof_score"),
+               "research_priority_score":chain.get("research_priority_score"),
+               "chain_blockers":chain.get("blockers",[]),
+               "economic_chain":chain.get("chain",[]),
                "research_rank":row.get("research_rank"),"radar_origin":row.get("radar_origin"),
                "radar_discovery_score":row.get("radar_discovery_score",0.0),
                "radar_rank_score":radar_score,
@@ -275,6 +283,7 @@ def main():
 
     discovery=load("data/discovery-candidates.json")
     gate=load("data/source-gate-status.json")
+    chains=load("data/economic-chains.json")
     scout=[]
     gates={g.get("term"):g for g in gate.get("candidate_gates",[])}
     for c in discovery.get("candidates",[])[:30]:
@@ -312,7 +321,10 @@ def main():
                      "recent_docs":discovery.get("recent_docs"),"baseline_docs":discovery.get("baseline_docs"),
                      "scout_candidates_passing_coverage":scout[:10],
                      "evidence_maturity_scale":dossiers.get("maturity_scale",[]),
-                     "concept_evidence":dossiers.get("concepts",{})},
+                     "concept_evidence":dossiers.get("concepts",{}),
+                     "pre_green_watchlist":chains.get("pre_green_watchlist",[]),
+                     "candidate_chain_diagnostics":chains.get("candidate_chains",[])[:20],
+                     "chain_pipeline":chains.get("pipeline",[])},
         "trends":trends,
         "action_now":action,
         "target_allocation_pct":decisions.get("target_allocation_pct",{}),
