@@ -233,9 +233,13 @@ function portfolio(){
 }
 
 function discovery(){
- const d=DATA.discovery||{}, scout=d.scout_candidates_passing_coverage||[];
+ const d=DATA.discovery||{}, scout=d.scout_candidates_passing_coverage||[], pg=d.pre_green_watchlist||[];
+ const pgLine=pg.length
+   ? `<div style="margin-top:8px"><b>PRE-GREEN recherche :</b> ${pg.slice(0,8).map(x=>`<b>${x.ticker}</b> (priority ${(x.research_priority_score??0).toFixed(1)}; blockers: ${(x.blockers||[]).join(', ')||'—'})`).join(' · ')}</div>`
+   : `<div style="margin-top:8px"><b>PRE-GREEN recherche :</b> aucun candidat ne remplit encore les critères.</div>`;
  $('discovery').innerHTML=`Qualité Discovery : <b class="${d.quality==='OK'?'pos':'neg'}">${d.quality||'—'}</b> · ${d.unique_papers??'—'} publications uniques · ${d.recent_docs??'—'} récentes · ${d.baseline_docs??'—'} baseline. `+
- (scout.length?`Nouveaux candidats ayant franchi le coverage gate : ${scout.map(x=>'<b>'+x.term+'</b>').join(', ')}.`:'Aucun nouveau trend n’a encore franchi seul le Source Coverage Gate : il reste donc hors Billboard.');
+ (scout.length?`Nouveaux candidats ayant franchi le coverage gate : ${scout.map(x=>'<b>'+x.term+'</b>').join(', ')}.`:'Aucun nouveau trend n’a encore franchi seul le Source Coverage Gate : il reste donc hors Billboard.')+
+ pgLine;
 }
 
 fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{selected=(d.trends&&d.trends[0]&&d.trends[0].key)||null;renderData(d);const req=Number(localStorage.getItem('oracle_run_requested_at')||0);if(req&&Date.now()-req<25*60*1000)startRunPolling();}).catch(e=>{$('stamp').textContent='Données indisponibles';$('headline').innerHTML=`<div class="error">Le cockpit n’a pas pu charger data/cockpit.json : ${e.message}</div>`;});
