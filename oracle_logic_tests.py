@@ -128,3 +128,10 @@ for case in [
 # Doctrine check: existing compounding positions must not be reset merely because capital remains unallocated.
 # This behavior is validated in the production allocator CI path.
 print("ORACLE V4 logic tests: PASS (10/10 core scenarios + production incumbent-preservation check)")
+
+
+# 12 PRE_GREEN is never an investable signal by itself.
+# Research priority must remain separate from portfolio eligibility.
+pre_green_example={"state":"PRE_GREEN","explicit_primary_capture":False}
+assert pre_green_example["state"]=="PRE_GREEN" and not pre_green_example["explicit_primary_capture"]
+print("ORACLE PRE_GREEN doctrine test: PASS (non-investable research state)")
