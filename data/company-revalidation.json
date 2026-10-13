@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T14:22:58.703850+00:00",
+  "generated_at": "2026-10-13T23:23:16.111158+00:00",
   "method": "ORACLE_STRICT_PRIMARY_REVALIDATION_V1",
   "passed_concepts": [
     "physical"
@@ -424,6 +424,69 @@
       ]
     },
     {
+      "ticker": "UUUU",
+      "trend": "minerals",
+      "company_capture_score": 60.0,
+      "trend_gate_pass": false,
+      "recent_primary_filing_hits": 2,
+      "distinct_economic_terms": [
+        "capacity",
+        "contract",
+        "offtake",
+        "production",
+        "revenue",
+        "shipment"
+      ],
+      "status": "NEEDS_MORE_EVIDENCE",
+      "promotion_rule": {
+        "min_capture_score": 75,
+        "min_filings": 2,
+        "min_economic_terms": 2,
+        "max_age_days": 450
+      },
+      "filings": [
+        {
+          "accessionNumber": "0001385849-26-000029",
+          "filingDate": "2026-08-05",
+          "form": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1385849/000138584926000029/efr-20260630.htm",
+          "matched_aliases": [
+            "critical minerals",
+            "magnet materials",
+            "permanent magnet",
+            "rare earth",
+            "uranium"
+          ],
+          "economic_terms": [
+            "capacity",
+            "contract",
+            "offtake",
+            "production",
+            "revenue"
+          ]
+        },
+        {
+          "accessionNumber": "0001062993-26-005306",
+          "filingDate": "2026-10-13",
+          "form": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1385849/000106299326005306/form8k.htm",
+          "matched_aliases": [
+            "permanent magnet",
+            "rare earth",
+            "uranium"
+          ],
+          "economic_terms": [
+            "capacity",
+            "contract",
+            "offtake",
+            "production",
+            "revenue",
+            "shipment"
+          ]
+        }
+      ]
+    },
+    {
       "ticker": "NB",
       "trend": "minerals",
       "company_capture_score": 60.0,
@@ -695,49 +758,6 @@
           ],
           "economic_terms": [
             "capacity",
-            "revenue"
-          ]
-        }
-      ]
-    },
-    {
-      "ticker": "UUUU",
-      "trend": "minerals",
-      "company_capture_score": 60.0,
-      "trend_gate_pass": false,
-      "recent_primary_filing_hits": 1,
-      "distinct_economic_terms": [
-        "capacity",
-        "contract",
-        "offtake",
-        "production",
-        "revenue"
-      ],
-      "status": "NEEDS_MORE_EVIDENCE",
-      "promotion_rule": {
-        "min_capture_score": 75,
-        "min_filings": 2,
-        "min_economic_terms": 2,
-        "max_age_days": 450
-      },
-      "filings": [
-        {
-          "accessionNumber": "0001385849-26-000029",
-          "filingDate": "2026-08-05",
-          "form": "10-Q",
-          "url": "https://www.sec.gov/Archives/edgar/data/1385849/000138584926000029/efr-20260630.htm",
-          "matched_aliases": [
-            "critical minerals",
-            "magnet materials",
-            "permanent magnet",
-            "rare earth",
-            "uranium"
-          ],
-          "economic_terms": [
-            "capacity",
-            "contract",
-            "offtake",
-            "production",
             "revenue"
           ]
         }
