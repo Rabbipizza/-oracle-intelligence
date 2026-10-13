@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T15:41:56.629907+00:00",
+  "generated_at": "2026-10-13T01:31:15.615190+00:00",
   "status": "NO_VALIDATED_EDGE",
   "research_only": true,
   "do_not_trade_from_this_file": true,
@@ -25,20 +25,20 @@
   },
   "latest": {
     "date": "2026-10-12",
-    "score": 3.444408806028317,
+    "score": 3.322050543752935,
     "score_prior_3y_q90": 2.3665488103295074,
     "score_event_now": true,
     "strict_pattern_now": false,
     "move": 98.47000122070312,
-    "vix": 15.1899995803833,
+    "vix": 15.210000038146973,
     "tnx_yield_pct": 5.240000247955322,
     "tnx_20d_change_pp": 0.27900028228759766,
-    "oil_20d_return": -0.07535259330939947,
+    "oil_20d_return": -0.0940921291345953,
     "components": {
       "z_move": 2.078605004739756,
-      "z_vix": -0.8758521087188194,
+      "z_vix": -0.8698338470185126,
       "z_tnx_20d": 1.232717736262921,
-      "z_oil_20d": -0.7427660436931796
+      "z_oil_20d": -0.8591060442682547
     }
   },
   "qualifying_tests": [],
@@ -1656,15 +1656,15 @@
     ]
   },
   "sources": {
-    "MOVE": "https://query1.finance.yahoo.com/v8/finance/chart/%5EMOVE?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "OIL": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "SPY": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "QQQ": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "TLT": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "GLD": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true",
-    "XLE": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1167609600&period2=1791849600&interval=1d&events=history&includeAdjustedClose=true"
+    "MOVE": "https://query1.finance.yahoo.com/v8/finance/chart/%5EMOVE?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "VIX": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "TNX": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "OIL": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "SPY": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "QQQ": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "TLT": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "GLD": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true",
+    "XLE": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1167609600&period2=1791936000&interval=1d&events=history&includeAdjustedClose=true"
   },
   "errors": []
 }
