@@ -46,7 +46,14 @@ for tr in trends[:5]:
         errors.append(f"trend_not_top20:{tr.get('key')}:{len(companies)}")
     missing=[x.get("ticker") for x in companies if x.get("price") is None or not x.get("spark")]
     if missing:
-        errors.append(f"trend_market_history_missing:{tr.get('key')}:{','.join(str(x) for x in missing)}")
+        investable = set(cockpit.get("target_allocation_pct", {}))
+        investable.update(p.get("ticker") for p in cockpit.get("portfolio", {}).get("positions", []))
+        critical = [t for t in missing if t in investable]
+        research = [t for t in missing if t not in investable]
+        if critical:
+            errors.append("investable_market_history_missing:" + str(tr.get("key")) + ":" + ",".join(map(str,critical)))
+        if research:
+            warnings.append("research_market_history_missing:" + str(tr.get("key")) + ":" + ",".join(map(str,research)))
 
 fresh=cockpit.get("decision_freshness",{})
 if fresh.get("status")=="STALE":
