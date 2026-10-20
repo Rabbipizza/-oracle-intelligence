@@ -86,7 +86,9 @@ results=[]
 promoted=[]
 
 for ticker,d in (dossiers.get("companies",{}) or {}).items():
-    if d.get("maturity")!="COMPANY_CAPTURE":
+    previous=economic["companies"].get(ticker,{})
+    previously_auto=previous.get("validation_method")=="ORACLE_STRICT_PRIMARY_REVALIDATION_V1"
+    if d.get("maturity")!="COMPANY_CAPTURE" and not previously_auto:
         continue
     trend=d.get("trend")
     score=float(d.get("company_capture_score") or 0)
@@ -148,6 +150,10 @@ for ticker,d in (dossiers.get("companies",{}) or {}).items():
         status="VALIDATION_READY"
     else:
         status="NEEDS_MORE_EVIDENCE"
+
+    if status!="PROVEN" and previously_auto:
+        # An automatic proof cannot survive loss of its own qualifying sources.
+        economic["companies"][ticker]={**previous,"status":status,"revalidation_status":status}
 
     results.append({
         "ticker":ticker,

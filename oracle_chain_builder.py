@@ -11,6 +11,7 @@ GREEN and NEVER changes portfolio allocation by itself.
 import json
 from pathlib import Path
 from datetime import datetime, timezone
+from oracle_data_quality import explicit_evidence
 
 OUT=Path("data/economic-chains.json")
 
@@ -28,6 +29,7 @@ dossiers=load("data/evidence-dossiers.json")
 gate=load("data/source-gate-status.json")
 decision=load("decision-state.json")
 research=load("research-universe.json")
+registry=load("economic-evidence.json").get("companies",{})
 
 # Discovery term lookup and concept mapping.
 disc_by_term={x.get("term"):x for x in discovery.get("candidates",[]) if x.get("term")}
@@ -94,7 +96,8 @@ for ticker,cd in (dossiers.get("companies",{}) or {}).items():
     concept=(dossiers.get("concepts",{}) or {}).get(trend,{})
     sc=(decision.get("scores",{}) or {}).get(ticker,{})
     sig=(decision.get("signals",{}) or {}).get(ticker,{})
-    explicit=bool(cd.get("explicit_proven"))
+    explicit=explicit_evidence(registry.get(ticker),decision.get("as_of"))
+    investable=sig.get("signal")=="GREEN" and explicit and sc.get("data_status")=="AVAILABLE"
     capture=float(cd.get("company_capture_score") or 0)
     trend_ev=float(cd.get("trend_evidence_score") or concept.get("evidence_score") or 0)
     early=sc.get("structural_early_bird")
@@ -120,6 +123,7 @@ for ticker,cd in (dossiers.get("companies",{}) or {}).items():
     if capture_status!="PROVEN": blockers.append("explicit_company_capture")
     if early is None: blockers.append("early_bird_not_scored")
     if entry is None: blockers.append("entry_not_scored")
+    if sc.get("data_status")!="AVAILABLE": blockers.append("market_data_unavailable")
 
     # PRE_GREEN means "almost investable, investigate now". It cannot be GREEN
     # without explicit primary company-capture proof.
@@ -157,9 +161,9 @@ for ticker,cd in (dossiers.get("companies",{}) or {}).items():
         "company":cd.get("name"),
         "trend":trend,
         "role":cd.get("role"),
-        "state":"GREEN" if sig.get("signal")=="GREEN" else "PRE_GREEN" if pre_green else sig.get("signal","RED"),
+        "state":"GREEN" if investable else "PRE_GREEN" if pre_green else "ORANGE" if sig.get("signal")=="GREEN" else sig.get("signal","RED"),
         "pre_green":pre_green,
-        "investable":sig.get("signal")=="GREEN",
+        "investable":investable,
         "research_priority_score":round(priority,1),
         "discovery_edge_score":round(discovery_edge,1),
         "economic_proof_score":round(econ_proof,1),

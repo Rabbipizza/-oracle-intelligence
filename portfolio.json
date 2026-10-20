@@ -1,8 +1,11 @@
 {
-  "version": 2,
+  "version": 3,
+  "kind": "ACTUAL",
+  "authority": "User-authoritative baseline in issue #3; changes require explicit confirmation.",
   "currency": "CHF",
   "initial_capital_chf": 1000,
-  "official_benchmark_mode": "matched_tranches",
+  "baseline_date": "2026-09-04",
+  "official_benchmark_mode": "full_initial_capital_chf",
   "benchmark_ticker": "QQQ",
   "positions": [
     {
@@ -10,35 +13,13 @@
       "trade_date": "2026-09-04",
       "allocated_chf": 40,
       "status": "OPEN",
-      "note": "ORACLE simulated position — original baseline"
-    },
-    {
-      "ticker": "GEV",
-      "trade_date": "2026-09-17",
-      "allocated_chf": 60,
-      "status": "OPEN",
-      "note": "ORACLE simulated position — validated incumbent"
-    },
-    {
-      "ticker": "AAON",
-      "trade_date": "2026-09-25",
-      "allocated_chf": 660,
-      "status": "OPEN",
-      "note": "ORACLE V4 simulated deployment tranche — increase AAON from 4% to 70%"
-    },
-    {
-      "ticker": "QQQ",
-      "trade_date": "2026-09-25",
-      "allocated_chf": 240,
-      "status": "OPEN",
-      "note": "ORACLE V4 simulated deployment tranche — residual allocation"
+      "note": "User-confirmed baseline cost. No later execution is inferred from TARGET."
     }
   ],
-  "cash_chf": 0,
+  "cash_chf": 960,
   "notes": [
-    "Simulation only; no real orders.",
-    "ACTUAL after this simulated portfolio update: AAON CHF 700 (70%), GEV CHF 60 (6%), QQQ CHF 240 (24%), cash CHF 0.",
-    "Historical entry tranches are preserved; new capital is added on 2026-09-25 rather than rewriting prior entries.",
-    "Official ORACLE-vs-QQQ comparison uses matched invested tranches and includes USD/CHF effects."
+    "No GEV or QQQ purchase has been confirmed.",
+    "Valuation uses the verified baseline close and FX as the cost-to-units convention; it is not a broker execution confirmation.",
+    "TARGET is a recommendation. The separate SIMULATED ledger contains hypothetical tranches."
   ]
 }

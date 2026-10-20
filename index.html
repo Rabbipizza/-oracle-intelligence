@@ -64,16 +64,23 @@ button{font:inherit}.run-btn{margin-top:8px;background:#163525;color:var(--green
 </section>
 
 <section class="panel">
-<h2>💼 Simulation portefeuille ORACLE</h2>
+<h2>💼 ACTUAL — portefeuille confirmé</h2>
 <div class="port-grid">
-<div class="scroll"><table style="min-width:700px"><thead><tr><th>Position</th><th>Investi</th><th>Entrée</th><th>Valeur</th><th>P&L CHF</th><th>P&L %</th><th>QQQ apparié</th></tr></thead><tbody id="portfolioRows"></tbody></table></div>
+<div class="scroll"><table style="min-width:700px"><thead><tr><th>Position</th><th>Investi</th><th>Entrée</th><th>Valeur</th><th>P&L CHF</th><th>P&L %</th></tr></thead><tbody id="portfolioRows"></tbody></table></div>
 <div>
 <div class="compare" id="portfolioCompare"></div>
-<div class="muted tiny" style="margin-top:9px">Comparaison officielle : chaque tranche réellement investie par ORACLE est comparée à la même somme investie dans QQQ à la même date. Le cash non investi est montré dans la valeur totale mais exclu de l'alpha officiel.</div>
+<div class="muted tiny" style="margin-top:9px">Comparaison ACTUAL : tout le capital initial de 1’000 CHF, cash compris, face à 1’000 CHF de QQQ synthétique depuis le 4 septembre 2026, avec conversion USD/CHF. Les quantités de valorisation utilisent le cours de clôture et le change de la date de base ; elles ne constituent pas une confirmation d’exécution.</div>
 </div>
 </div>
 </section>
 
+<section class="panel">
+<h2>🧪 SIMULATION — modèle hypothétique</h2>
+<div class="muted small">Ces tranches sont hypothétiques et n’ajoutent aucun achat à ACTUAL. TARGET reste une allocation proposée, sans ordre exécuté.</div>
+<div class="compare" id="simulatedCompare" style="margin-top:12px"></div>
+<div class="scroll"><table><thead><tr><th>Tranche simulée</th><th>Coût CHF</th><th>Valeur CHF</th><th>P&amp;L CHF</th></tr></thead><tbody id="simulatedRows"></tbody></table></div>
+</section>
+<section class="panel"><h2>⚠ Disponibilité des données</h2><div class="muted small" id="dataWarnings"></div></section>
 <section class="panel">
 <h2>🔬 Discovery scout & protocole scientifique</h2>
 <div class="muted small" id="discovery"></div>
@@ -91,7 +98,7 @@ const usd=v=>v==null?'—':new Intl.NumberFormat('en-US',{style:'currency',curre
 const money=(v,c='USD')=>{if(v==null)return '—';try{return new Intl.NumberFormat('fr-CH',{style:'currency',currency:c||'USD',maximumFractionDigits:2}).format(v)}catch(e){return v.toFixed(2)+' '+(c||'')}};
 const sparkline=a=>{if(!a||a.length<2)return '—';const mn=Math.min(...a),mx=Math.max(...a),span=(mx-mn)||1;const pts=a.map((v,i)=>`${(i/(a.length-1)*82+1).toFixed(1)},${(26-(v-mn)/span*24).toFixed(1)}`).join(' ');return `<span class="${cls(a[a.length-1]-a[0])}"><svg class="spark" viewBox="0 0 84 28" aria-label="évolution 1 mois"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></span>`};
 const signalBadge=s=>`<span class="badge ${(s||'').toLowerCase()}">● ${s||'—'}</span>`;
-let DATA=null, selected=null;
+let DATA=null, selected=null, DATA_UNUSABLE=true;
 const RUN_URL='https://github.com/Rabbipizza/-oracle-intelligence/actions/workflows/oracle-sources.yml';
 let runBaseline=null, pollTimer=null;
 window.manualRun=function(){
@@ -126,30 +133,36 @@ function startRunPolling(){
  },15000);
 }
 function renderData(d){
- DATA=d; selected=selected||(d.trends&&d.trends[0]&&d.trends[0].key)||null;
+ DATA=d;
+ const valuationTime=Date.parse((d.data_as_of||'')+'T00:00:00Z');
+ DATA_UNUSABLE=!Number.isFinite(valuationTime) || valuationTime>Date.now() || Date.now()-valuationTime>4*86400000 || d.decision_status!=='READY';
+ selected=selected||(d.trends&&d.trends[0]&&d.trends[0].key)||null;
  const df=d.decision_freshness||{};
  const decisionDate=d.decision_as_of||'—';
  const marketDate=d.data_as_of||'—';
- const decisionLine=df.status==='STALE'
+ const decisionLine=DATA_UNUSABLE || df.status==='STALE'
    ? `Décision: ${decisionDate} · <span class="neg">EN RETARD ${df.lag_days??'?'} j</span>`
    : `Décision: ${decisionDate} · <span class="pos">à jour</span>`;
  $('stamp').innerHTML=`Cockpit: ${new Date(d.generated_at).toLocaleString('fr-CH')}<br>Marché: ${marketDate}<br>${decisionLine}`;
  const f=$('decisionFreshness');
  if(f){
-   f.innerHTML=df.status==='STALE'
-     ? `<span class="neg"><b>⚠ Décision ORACLE non synchronisée :</b> état du ${d.decision_as_of||'—'}, marché au ${d.data_as_of||'—'}.</span> Les performances/portefeuille sont fraîches; les signaux GREEN/ORANGE ne doivent pas être traités comme recalculés aujourd'hui.`
+   f.innerHTML=DATA_UNUSABLE || df.status==='STALE'
+     ? `<span class="neg"><b>⚠ Décision ORACLE non synchronisée :</b> état du ${d.decision_as_of||'—'}, marché au ${d.data_as_of||'—'}.</span> Les valeurs sont historiques à cette date. Les entrées sont suspendues jusqu’à un snapshot récent validé.`
      : `<span class="pos"><b>✓ Décision ORACLE synchronisée</b></span> · marché et couche décisionnelle alignés.`;
  }
  headline();actions();trends();selectTrend(selected);portfolio();discovery();
+ $('dataWarnings').textContent=(d.data_warnings||[]).length
+   ? (d.data_warnings||[]).map(x=>x.ticker+' : DATA_UNAVAILABLE — entrée interdite ('+(x.reasons||[]).join(', ')+')').join(' · ')
+   : 'Aucune donnée radar indisponible dans ce snapshot.';
 }
 
 function headline(){
  const p=DATA.portfolio||{}, c=p.official_comparison||{};
- const greens=(DATA.action_now||[]).filter(x=>x.signal==='GREEN').length;
+ const greens=DATA_UNUSABLE?0:(DATA.action_now||[]).filter(x=>x.signal==='GREEN').length;
  $('headline').innerHTML=[
-   ['ORACLE investi',pct(c.oracle_return_pct),`${chf(c.oracle_value_chf)} sur ${chf(c.capital_compared_chf)}`,cls(c.oracle_return_pct)],
-   ['QQQ apparié',pct(c.qqq_return_pct),`${chf(c.qqq_matched_value_chf)}`,cls(c.qqq_return_pct)],
-   ['Alpha ORACLE',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,'vs QQQ, mêmes dates',cls(c.alpha_pct_points)],
+   ['ACTUAL, cash compris',pct(c.oracle_return_pct),`${chf(c.oracle_value_chf)} sur ${chf(c.capital_compared_chf)}`,cls(c.oracle_return_pct)],
+   ['QQQ synthétique',pct(c.qqq_return_pct),`${chf(c.qqq_value_chf)}`,cls(c.qqq_return_pct)],
+   ['Alpha ORACLE',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,chf(c.alpha_chf)+' vs QQQ',cls(c.alpha_pct_points)],
    ['Signaux GREEN',String(greens),'opportunités validées maintenant',greens?'pos':'neu']
  ].map(x=>`<div class="kpi"><span>${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><em>${x[2]}</em></div>`).join('');
 }
@@ -171,6 +184,7 @@ function actionCard(x){
      </div>
    </div>
    <div class="muted tiny" style="margin-top:5px">ACTUAL: <b>${x.actual_weight_pct==null?'0.0%':x.actual_weight_pct.toFixed(1)+'%'}</b> · TARGET: <b>${x.target_weight_pct==null?'0.0%':x.target_weight_pct.toFixed(1)+'%'}</b> · ACTION: <b>${x.portfolio_action||'WAIT'}</b></div>
+   <div class="muted tiny" style="margin-top:6px">Invalidations : ${(x.invalidation||[]).join(' · ')||'non renseignées'}</div>
    <div class="metrics">
     <div class="metric"><span>J-1</span><b class="${cls(x.d1)}">${pct(x.d1)}</b></div>
     <div class="metric"><span>1 sem.</span><b class="${cls(x.w1)}">${pct(x.w1)}</b></div>
@@ -179,6 +193,7 @@ function actionCard(x){
    </div></div>`;
 }
 function actions(){
+ if(DATA_UNUSABLE){$('actions').innerHTML='<div class="muted">Snapshot historique ou bloqué : aucune entrée admissible aujourd’hui.</div>';return;}
  const a=(DATA.action_now||[]);
  const green=a.filter(x=>x.signal==='GREEN');
  const orange=a.filter(x=>x.signal==='ORANGE').slice(0,8);
@@ -212,24 +227,28 @@ window.selectTrend=function(key){
  $('companies').innerHTML=(t.companies||[]).map(c=>`<tr>
   <td><b>#${c.rank}</b><br><span class="tiny ${c.rank_delta>0?'pos':c.rank_delta<0?'neg':'muted'}">${c.previous_rank==null?'NEW':c.rank_delta>0?'▲ '+c.rank_delta:c.rank_delta<0?'▼ '+Math.abs(c.rank_delta):'→'}</span></td>
   <td><b>${c.ticker}</b> ${c.radar_origin==='DYNAMIC_CHALLENGER'?'<span class="tiny orange">CHALLENGER</span>':''}<br><span class="muted tiny">${c.company}</span></td>
-  <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}</td><td>${money(c.price,c.currency)}</td><td>${sparkline(c.spark)}</td>
+  <td class="role" title="${c.role||''}">${c.role||'—'}</td><td>${signalBadge(c.signal)}${c.data_status==='DATA_UNAVAILABLE'?'<br><span class="tiny neg">DATA_UNAVAILABLE · entrée interdite</span>':''}</td><td>${money(c.price,c.currency)}</td><td>${sparkline(c.spark)}</td>
   <td class="${cls(c.d1)}">${pct(c.d1)}</td><td class="${cls(c.w1)}">${pct(c.w1)}</td><td class="${cls(c.m1)}">${pct(c.m1)}</td>
   <td class="${cls(c.rel_m1_qqq)}">${pct(c.rel_m1_qqq)}</td><td class="tiny">${c.proof||'—'}<br><span class="muted">${c.evidence_maturity||''}${c.company_capture_score!=null?' · capture '+c.company_capture_score.toFixed(0):''}</span></td></tr>`).join('');
 }
 
 function portfolio(){
  const p=DATA.portfolio||{}, c=p.official_comparison||{}, actual=DATA.actual_holdings_pct||{}, target=DATA.target_allocation_pct||{};
- $('portfolioRows').innerHTML=(p.positions||[]).map(x=>`<tr><td><b>${x.ticker}</b><br><span class="muted tiny">${x.trade_date}</span></td><td>${chf(x.allocated_chf)}</td><td>${usd(x.entry_price_usd)}</td><td>${chf(x.current_value_chf)}</td><td class="${cls(x.pnl_chf)}">${x.pnl_chf==null?'—':chf(x.pnl_chf)}</td><td class="${cls(x.pnl_pct)}">${pct(x.pnl_pct)}</td><td>${chf(x.matched_qqq_chf)}</td></tr>`).join('');
+ $('portfolioRows').innerHTML=(p.positions||[]).map(x=>`<tr><td><b>${x.ticker}</b><br><span class="muted tiny">${x.trade_date}</span></td><td>${chf(x.allocated_chf)}</td><td>${usd(x.entry_price_usd)}</td><td>${chf(x.current_value_chf)}</td><td class="${cls(x.pnl_chf)}">${x.pnl_chf==null?'—':chf(x.pnl_chf)}</td><td class="${cls(x.pnl_pct)}">${pct(x.pnl_pct)}</td></tr>`).join('');
  $('portfolioCompare').innerHTML=[
   ['Valeur totale',chf(p.total_value_chf),`cash ${chf(p.cash_chf)}`,cls(p.total_return_pct)],
-  ['Perf. ORACLE',pct(c.oracle_return_pct),'capital investi',cls(c.oracle_return_pct)],
-  ['Perf. QQQ',pct(c.qqq_return_pct),'tranches appariées',cls(c.qqq_return_pct)],
+  ['Perf. ORACLE',pct(c.oracle_return_pct),'cash compris',cls(c.oracle_return_pct)],
+  ['Perf. QQQ',pct(c.qqq_return_pct),'capital initial complet',cls(c.qqq_return_pct)],
+  ['Alpha CHF',chf(c.alpha_chf),'ACTUAL − QQQ',cls(c.alpha_chf)],
   ['Alpha',c.alpha_pct_points==null?'—':`${c.alpha_pct_points>=0?'+':''}${c.alpha_pct_points.toFixed(2)} pts`,'ORACLE − QQQ',cls(c.alpha_pct_points)],
-  ['Cash',chf(p.cash_chf),'hors alpha officiel','neu'],
+  ['Cash',chf(p.cash_chf),'inclus dans ACTUAL','neu'],
   ['Capital comparé',chf(c.capital_compared_chf),'mêmes dates','neu'],
-  ['ACTUAL',Object.entries(actual).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'—','positions enregistrées','neu'],
-  ['TARGET',Object.entries(target).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'Cash / attente','allocation fraîche','blue']
+  ['ACTUAL',Object.entries(actual).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'—','coût initial confirmé','neu'],
+  ['TARGET',Object.entries(target).map(([k,v])=>k+' '+Number(v).toFixed(1)+'%').join(' · ')||'Cash / attente','proposition sans exécution','blue']
  ].map(x=>`<div class="box"><span class="muted tiny">${x[0]}</span><strong class="${x[3]}">${x[1]}</strong><span class="muted tiny">${x[2]}</span></div>`).join('');
+ const sim=DATA.simulated_portfolio||{};
+ $('simulatedRows').innerHTML=(sim.positions||[]).map(x=>`<tr><td>${x.ticker} · ${x.trade_date}</td><td>${chf(x.allocated_chf)}</td><td>${chf(x.current_value_chf)}</td><td>${chf(x.pnl_chf)}</td></tr>`).join('');
+ $('simulatedCompare').textContent='Valeur hypothétique : '+chf(sim.total_value_chf)+' · Cash simulé : '+chf(sim.cash_chf)+' · Rendement simulé : '+pct(sim.total_return_pct);
 }
 
 function discovery(){
@@ -240,6 +259,10 @@ function discovery(){
  $('discovery').innerHTML=`Qualité Discovery : <b class="${d.quality==='OK'?'pos':'neg'}">${d.quality||'—'}</b> · ${d.unique_papers??'—'} publications uniques · ${d.recent_docs??'—'} récentes · ${d.baseline_docs??'—'} baseline. `+
  (scout.length?`Nouveaux candidats ayant franchi le coverage gate : ${scout.map(x=>'<b>'+x.term+'</b>').join(', ')}.`:'Aucun nouveau trend n’a encore franchi seul le Source Coverage Gate : il reste donc hors Billboard.')+
  pgLine;
+ const audit=d.funnel_audit||{};
+ const summary=document.createElement('p');
+ summary.textContent='Funnel : '+(audit.company_count??'—')+' sociétés · '+(audit.capture_review_count??'—')+' revues de capture · preuves explicites préexistantes : '+(audit.preexisting_explicit_proven||[]).join(', ')+' · nouvelles promotions : '+(audit.newly_promoted||[]).length+'. Motifs de rejet (cumulables) : '+Object.entries(audit.rejection_counts||{}).map(([k,v])=>k+' '+v).join(' · ');
+ $('discovery').appendChild(summary);
 }
 
 fetch('data/cockpit.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(d=>{selected=(d.trends&&d.trends[0]&&d.trends[0].key)||null;renderData(d);const req=Number(localStorage.getItem('oracle_run_requested_at')||0);if(req&&Date.now()-req<25*60*1000)startRunPolling();}).catch(e=>{$('stamp').textContent='Données indisponibles';$('headline').innerHTML=`<div class="error">Le cockpit n’a pas pu charger data/cockpit.json : ${e.message}</div>`;});

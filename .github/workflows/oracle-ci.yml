@@ -1,0 +1,35 @@
+name: ORACLE safety checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  safety:
+    name: Data, ledger and publication regression tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test production code with offline fixtures
+        run: |
+          python -m unittest discover -v -p 'test_oracle_*.py'
+          python oracle_logic_tests.py
+          node test_oracle_ui.cjs
+      - name: Replay the checked-in snapshot without ingestion or publication
+        run: |
+          REPLAY_DATE=$(python -c 'from oracle_data_quality import market_date; import json; print(market_date(json.load(open("data/market.json"))))')
+          python oracle_build.py --replay-date "$REPLAY_DATE" --output .preview-site
+          git diff --exit-code -- portfolio.json portfolio-simulated.json
+      - name: Retain historical preview for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: oracle-historical-preview
+          path: .preview-site
+          include-hidden-files: true
