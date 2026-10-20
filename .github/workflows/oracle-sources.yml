@@ -5,51 +5,53 @@ on:
     branches: [main]
     paths:
       - 'oracle_*.py'
+      - '*portfolio*.json'
+      - 'research-universe.json'
       - 'source-gate.json'
       - 'sources-registry.json'
-      - 'research-universe.json'
-      - 'trend-families.json'
-      - 'portfolio.json'
       - 'scientific-protocol.json'
       - '.github/workflows/oracle-sources.yml'
   schedule:
-    - cron: "15 6,11,19 * * 1-5"
+    - cron: '15 6,11,19 * * 1-5'
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: oracle-source-ingestion
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   oracle:
+    # Explicit opt-in after the correction and its CI have been reviewed.
+    if: ${{ vars.ORACLE_PRODUCTION_ENABLED == 'true' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-
+          python-version: '3.12'
+      - name: Test the exact source revision before ingestion
+        run: |
+          python -m unittest discover -v -p 'test_oracle_*.py'
+          python oracle_logic_tests.py
+          node test_oracle_ui.cjs
       - name: Discover upstream signals
         env:
-          ORACLE_ARXIV_QUERIES: "cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV,cat:cs.NI,cat:cs.DC,cat:eess.SY,cat:physics.app-ph"
-          ORACLE_ARXIV_LOOKBACK_DAYS: "110"
-          ORACLE_ARXIV_MAX_PER_CATEGORY: "1000"
+          ORACLE_ARXIV_QUERIES: 'cat:cs.AI,cat:cs.RO,cat:cs.LG,cat:cs.CV,cat:cs.NI,cat:cs.DC,cat:eess.SY,cat:physics.app-ph'
+          ORACLE_ARXIV_LOOKBACK_DAYS: '110'
+          ORACLE_ARXIV_MAX_PER_CATEGORY: '1000'
         run: |
           python oracle_science.py
           python oracle_scholarly.py
           python oracle_public_sources.py
           python oracle_discovery.py
-
-      - name: Test capital allocation logic
-        run: |
-          python oracle_logic_tests.py
-
-      - name: Enrich, gate and price
+      - name: Enrich and collect observed market data
         run: |
           python oracle_sources.py
           python oracle_company_discovery.py
@@ -60,55 +62,64 @@ jobs:
           python oracle_evidence_expansion.py
           python oracle_market.py
           python oracle_macro_stress.py
-          python oracle_decision.py
-          python oracle_chain_builder.py
-          python oracle_cockpit.py
-          python oracle_signal_ledger.py
-          python oracle_signal_performance.py
-          python oracle_audit.py
-          python oracle_validate.py
-
-      - name: Persist verified ORACLE state
+      - name: Validate and package the exact cockpit
+        run: python oracle_build.py --output .verified-site
+      - name: Persist verified derived state without rebasing it onto untested code
         run: |
-          git config user.name "oracle-bot"
-          git config user.email "oracle-bot@users.noreply.github.com"
-          git add decision-state.json economic-evidence.json data/source_snapshots data/source-gate-status.json data/discovery-candidates.json data/company-challengers.json data/evidence-dossiers.json data/company-revalidation.json data/economic-chains.json data/market.json data/macro-stress-backtest.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/audit
-          git diff --cached --quiet || git commit -m "ORACLE: verified autonomous snapshot"
           git fetch origin main
-          if ! git rebase origin/main; then
-            # Only generated state files are committed in this step. If a concurrent
-            # snapshot touched the same generated files, keep this run's freshly
-            # validated versions while preserving upstream source-code changes.
-            for f in $(git diff --name-only --diff-filter=U); do
-              git checkout --theirs -- "$f"
-              git add "$f"
-            done
-            GIT_EDITOR=true git rebase --continue
-          fi
-          git push
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git diff --exit-code -- portfolio.json portfolio-simulated.json
+          git config user.name 'oracle-bot'
+          git config user.email 'oracle-bot@users.noreply.github.com'
+          git add decision-state.json economic-evidence.json data/source_snapshots/*.json data/source-gate-status.json data/discovery-candidates.json data/company-challengers.json data/evidence-dossiers.json data/company-revalidation.json data/economic-chains.json data/funnel-audit.json data/market.json data/macro-stress-backtest.json data/cockpit.json data/signal-ledger.json data/signal-performance.json data/validation.json data/audit/*.json
+          git diff --cached --quiet || git commit -m 'ORACLE: verified autonomous snapshot'
+          git push origin HEAD:main
+      - name: Preserve immutable verified payload
+        uses: actions/upload-artifact@v4
+        with:
+          name: oracle-verified-${{ github.sha }}
+          path: .verified-site
+          include-hidden-files: true
+      - name: Retain failure diagnostics without publishing a site
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: oracle-failure-${{ github.run_id }}
+          path: |
+            data/validation.json
+            data/market.json
+            data/funnel-audit.json
 
   deploy:
     name: Publish verified cockpit
     needs: oracle
-    if: ${{ needs.oracle.result == 'success' }}
+    if: ${{ needs.oracle.result == 'success' && vars.ORACLE_PRODUCTION_ENABLED == 'true' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout latest verified main
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: main
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload latest cockpit
-        uses: actions/upload-pages-artifact@v3
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
         with:
-          path: .
-
-      - name: Deploy latest cockpit
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: oracle-verified-${{ github.sha }}
+          path: .verified-site
+      - name: Verify immutable hashes and production validation
+        run: python oracle_release.py .verified-site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .verified-site
+      - name: Deploy the verified artifact
         id: deployment
         uses: actions/deploy-pages@v4

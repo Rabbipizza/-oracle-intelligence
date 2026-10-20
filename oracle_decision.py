@@ -5,6 +5,7 @@ Simulation/research only. Never sends orders.
 import json, math
 from pathlib import Path
 from datetime import datetime, timezone
+from oracle_data_quality import clean_rows, market_date, series_quality, fx_errors, explicit_evidence, cost_weights
 
 def load(path, default=None):
     try:
@@ -20,7 +21,7 @@ def clamp(x,a=0,b=100):
     return max(a,min(b,x))
 
 def rows(market,ticker,as_of=None):
-    out=sorted((market.get("prices",{}).get(ticker) or {}).get("rows",[]), key=lambda r:r.get("date",""))
+    out=clean_rows(market,ticker)
     if as_of:
         out=[r for r in out if r.get("date","")<=as_of]
     return out
@@ -56,10 +57,11 @@ portfolio=load("portfolio.json")
 # QQQ is the official market/benchmark clock for the portfolio test.
 # Do not let a later ticker print or a lagging FX series create mixed-date decisions.
 q_all=rows(market,"QQQ")
-as_of=(q_all[-1].get("date") if q_all else None) or datetime.now(timezone.utc).date().isoformat()
+as_of=market_date(market)
 q=rows(market,"QQQ",as_of=as_of)
+benchmark_ready = series_quality(market,"QQQ",as_of)["status"] == "AVAILABLE" and not fx_errors(market,as_of)
 
-fx=[r for r in (market.get("fx_usd_chf") or []) if r.get("date","")<=as_of]
+fx=[r for r in (market.get("fx_usd_chf") or []) if as_of and r.get("date","")<=as_of]
 
 # Build a lookup from research-universe.
 universe={}
@@ -85,8 +87,8 @@ trend_stats={}
 for trend_key,tr in research.get("trends",{}).items():
     vals=[]
     for row in tr.get("companies",[])[:20]:
-        r=rows(market,row[0])
-        x=metric(r,21)
+        r=rows(market,row[0],as_of=as_of)
+        x=metric(r,21) if series_quality(market,row[0],as_of)["status"]=="AVAILABLE" else None
         if x is not None: vals.append(x)
     trend_stats[trend_key]={
         "breadth":(100*sum(1 for x in vals if x>0)/len(vals)) if vals else None,
@@ -118,7 +120,9 @@ for ticker,meta in universe.items():
 
     role_l=(meta.get("role") or "").lower()
     role_score=92 if "bottleneck" in role_l else 90 if "pick" in role_l else 88 if "direct" in role_l else 84 if "leader" in role_l else 70
-    explicit_proven=bool(ev and ev.get("status")=="PROVEN")
+    explicit_proven=explicit_evidence(ev,as_of)
+    quality=series_quality(market,ticker,as_of)
+    data_ready=quality["status"]=="AVAILABLE" and benchmark_ready
     proof_score=100 if explicit_proven else 55 if "PARTIAL" in str(meta.get("legacy_proof")) else 35
     structural_quality=round(.65*proof_score+.35*role_score,1)
 
@@ -150,7 +154,11 @@ for ticker,meta in universe.items():
     entry=round(clamp(entry),1)
 
     actual_weight=float(open_weights.get(ticker,0) or 0)
-    if explicit_proven and structural_quality>=85 and structural_early_bird>=55 and entry>=60:
+    if not data_ready:
+        signal="ORANGE"
+        target=0.0
+        reason="DATA_UNAVAILABLE: no entry or sizing until verified market history and benchmark/FX are available."
+    elif explicit_proven and structural_quality>=85 and structural_early_bird>=55 and entry>=60:
         signal="GREEN"
         target=0.0
         reason=f"Fresh explicit economic proof; Structural Quality {structural_quality}/100; Early Bird {structural_early_bird}/100; Entry {entry}/100."
@@ -177,6 +185,8 @@ for ticker,meta in universe.items():
 
     signals[ticker]={"signal":signal,"reason":reason,"portfolio_action":portfolio_action}
     scores[ticker]={
+        "data_status":"AVAILABLE" if data_ready else "DATA_UNAVAILABLE",
+        "data_quality":quality,
         "structural_quality":structural_quality,
         "structural_early_bird":structural_early_bird,
         "market_recognition_score":market_recognition,
@@ -184,7 +194,7 @@ for ticker,meta in universe.items():
         "entry_score":entry,
         "trend":meta.get("trend"),
         "role":meta.get("role"),
-        "evidence_status":ev.get("status") if ev else "UNREVALIDATED",
+        "evidence_status":"PROVEN" if explicit_proven else "UNREVALIDATED",
         "d1_pct":None if d1 is None else round(d1,2),
         "w1_pct":None if w1 is None else round(w1,2),
         "m1_pct":None if m1 is None else round(m1,2),
@@ -238,6 +248,8 @@ def indicative_entry_sizing(sc):
     proof/structure, entry quality, relative strength and current risk.
     This is intentionally conservative near risk cliffs.
     """
+    if sc.get("data_status")!="AVAILABLE":
+        return {"band":"0%","min_pct":0.0,"max_pct":0.0,"label":"NO ENTRY","reason":"DATA_UNAVAILABLE."}
     if sc.get("evidence_status")!="PROVEN":
         return {"band":"0%","min_pct":0.0,"max_pct":0.0,"label":"NO ENTRY","reason":"Economic chain not freshly PROVEN."}
 
@@ -329,7 +341,7 @@ for ticker,sc in scores.items():
     prev_sig=((prior.get("signals",{}) or {}).get(ticker) or {}).get("signal")
     severe_dd=(dd is not None and dd <= -35)
     severe_relative=(rel is not None and rel <= -12 and entry < 45 and prev_sig!="GREEN")
-    if sig=="GREEN" and sc.get("evidence_status")=="PROVEN" and not (severe_dd or severe_relative):
+    if sig=="GREEN" and sc.get("data_status")=="AVAILABLE" and sc.get("evidence_status")=="PROVEN" and not (severe_dd or severe_relative):
         if float(open_weights.get(ticker,0.0) or 0.0)==0.0:
             challengers.append(ticker)
 
@@ -491,11 +503,18 @@ if same_allocation and sum(open_weights.values())>=99.5:
     rotation_decision["reason"]="Portfolio fully deployed; no challenger clears the rotation hurdle and no incumbent requires exit."
 
 # Final portfolio actions.
+blocked_holdings=[t for t in open_weights if scores.get(t,{}).get("data_status")!="AVAILABLE"]
+if not benchmark_ready or blocked_holdings:
+    # Missing observations never become inferred sells, replacements or executions.
+    targets={}
+    rotation_decision.update(mode="BLOCKED",reason="Critical market data unavailable; ACTUAL ledger preserved and all recommendations suspended.")
 for ticker,sc in scores.items():
     tgt=float(targets.get(ticker,0.0))
     act=float(sc.get("actual_weight_pct") or 0.0)
     sc["target_weight_pct"]=tgt
-    if tgt > act + 0.25:
+    if not benchmark_ready or blocked_holdings or sc.get("data_status")!="AVAILABLE":
+        action="BLOCKED" if act>0 else "WAIT"
+    elif tgt > act + 0.25:
         action="INCREASE"
     elif tgt < act - 0.25:
         action="EXIT_OR_REDUCE"
@@ -532,10 +551,10 @@ for key,tr in research.get("trends",{}).items():
         "market_median_1m_pct":None if ts.get("median_m1") is None else round(ts["median_m1"],2)
     }
 
-actual=open_weights
+actual=cost_weights(portfolio)
 
 out={
-    "version":2,
+    "version":3,
     "as_of":as_of,
     "generated_at":datetime.now(timezone.utc).isoformat(),
     "method":"ORACLE_V4_DEPLOY_COMPOUND_ROTATE",
@@ -545,6 +564,8 @@ out={
     "scores":scores,
     "target_allocation_pct":targets,
     "actual_holdings_pct":actual,
+    "actual_allocation_basis":"INITIAL_COST_PLUS_CONFIRMED_CASH",
+    "decision_status":"BLOCKED" if not benchmark_ready or blocked_holdings else "READY",
     "benchmark_competition":benchmark_competition
 }
 Path("decision-state.json").write_text(json.dumps(out,indent=2),encoding="utf-8")

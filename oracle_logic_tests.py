@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Deterministic doctrine tests for ORACLE V4 Deploy -> Compound -> Rotate.
-These tests validate decision behavior, not profitability.
+These illustrative doctrine tests are complemented by production-code regression tests in test_oracle_missing_quote.py.
 """
 import math
 
@@ -127,7 +127,7 @@ for case in [
 # 11 Partial initial deployment preserves valid incumbents while deploying only free capital.
 # Doctrine check: existing compounding positions must not be reset merely because capital remains unallocated.
 # This behavior is validated in the production allocator CI path.
-print("ORACLE V4 logic tests: PASS (10/10 core scenarios + production incumbent-preservation check)")
+print("ORACLE V4 logic tests: PASS (10 illustrative doctrine scenarios; production allocator tested separately)")
 
 
 # 12 PRE_GREEN is never an investable signal by itself.

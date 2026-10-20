@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T23:25:29.549806+00:00",
+  "generated_at": "2026-10-20T22:29:10.178036+00:00",
   "method": "ORACLE V5 explicit economic chain diagnostics",
   "pipeline": [
     "DISCOVERY",
@@ -1650,9 +1650,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 100.0,
       "structural_quality": 97.2,
-      "early_bird_score": 68.5,
-      "market_recognition_score": 66.5,
-      "entry_score": 73.9,
+      "early_bird_score": 68.4,
+      "market_recognition_score": 66.7,
+      "entry_score": 74.1,
       "blockers": [],
       "chain": [
         {
@@ -1681,17 +1681,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 66.5
+          "score": 66.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 68.5
+          "score": 68.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 73.9
+          "score": 74.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -1709,9 +1709,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 53.5,
-      "early_bird_score": 51.2,
-      "market_recognition_score": 51.7,
-      "entry_score": 38.1,
+      "early_bird_score": 51.1,
+      "market_recognition_score": 51.9,
+      "entry_score": 38.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -1742,17 +1742,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 51.7
+          "score": 51.9
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 51.2
+          "score": 51.1
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 38.1
+          "score": 38.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -1770,9 +1770,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 54.2,
-      "early_bird_score": 47.5,
-      "market_recognition_score": 60.7,
-      "entry_score": 60.3,
+      "early_bird_score": 47.4,
+      "market_recognition_score": 60.9,
+      "entry_score": 60.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -1803,17 +1803,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 60.7
+          "score": 60.9
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 47.5
+          "score": 47.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 60.3
+          "score": 60.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -1831,9 +1831,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 100.0,
       "structural_quality": 95.8,
-      "early_bird_score": 68.1,
-      "market_recognition_score": 65.8,
-      "entry_score": 73.8,
+      "early_bird_score": 67.9,
+      "market_recognition_score": 66.1,
+      "entry_score": 74.1,
       "blockers": [],
       "chain": [
         {
@@ -1862,17 +1862,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 65.8
+          "score": 66.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 68.1
+          "score": 67.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 73.8
+          "score": 74.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -1890,9 +1890,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 67.2,
-      "early_bird_score": 53.8,
-      "market_recognition_score": 62.5,
-      "entry_score": 62.1,
+      "early_bird_score": 53.7,
+      "market_recognition_score": 62.7,
+      "entry_score": 62.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -1923,17 +1923,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 62.5
+          "score": 62.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.8
+          "score": 53.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 62.1
+          "score": 62.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -1946,14 +1946,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 53.7,
+      "research_priority_score": 53.8,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 67.9,
-      "early_bird_score": 55.9,
-      "market_recognition_score": 58.8,
-      "entry_score": 47.3,
+      "early_bird_score": 55.8,
+      "market_recognition_score": 59.0,
+      "entry_score": 47.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -1984,17 +1984,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 58.8
+          "score": 59.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 55.9
+          "score": 55.8
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 47.3
+          "score": 47.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2012,9 +2012,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
-      "early_bird_score": 54.2,
-      "market_recognition_score": 61.8,
-      "entry_score": 57.4,
+      "early_bird_score": 54.0,
+      "market_recognition_score": 62.1,
+      "entry_score": 57.7,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2045,17 +2045,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 61.8
+          "score": 62.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 54.2
+          "score": 54.0
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 57.4
+          "score": 57.7
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2073,9 +2073,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
-      "early_bird_score": 55.1,
-      "market_recognition_score": 59.8,
-      "entry_score": 61.6,
+      "early_bird_score": 55.0,
+      "market_recognition_score": 60.0,
+      "entry_score": 61.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2106,17 +2106,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 59.8
+          "score": 60.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 55.1
+          "score": 55.0
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 61.6
+          "score": 61.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2134,9 +2134,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
-      "early_bird_score": 62.9,
-      "market_recognition_score": 42.3,
-      "entry_score": 24.2,
+      "early_bird_score": 62.8,
+      "market_recognition_score": 42.5,
+      "entry_score": 24.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2167,17 +2167,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 42.3
+          "score": 42.5
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 62.9
+          "score": 62.8
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 24.2
+          "score": 24.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2196,8 +2196,8 @@
       "company_capture_score": 15.0,
       "structural_quality": 66.5,
       "early_bird_score": 58.9,
-      "market_recognition_score": 50.3,
-      "entry_score": 28.3,
+      "market_recognition_score": 50.5,
+      "entry_score": 28.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2228,7 +2228,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 50.3
+          "score": 50.5
         },
         {
           "step": "EARLY_BIRD",
@@ -2238,7 +2238,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 28.3
+          "score": 28.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2256,9 +2256,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 66.5,
-      "early_bird_score": 53.0,
-      "market_recognition_score": 63.5,
-      "entry_score": 68.9,
+      "early_bird_score": 52.9,
+      "market_recognition_score": 63.8,
+      "entry_score": 69.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2289,17 +2289,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 63.5
+          "score": 63.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.0
+          "score": 52.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 68.9
+          "score": 69.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2317,9 +2317,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 66.5,
-      "early_bird_score": 51.4,
-      "market_recognition_score": 67.1,
-      "entry_score": 80.3,
+      "early_bird_score": 51.3,
+      "market_recognition_score": 67.3,
+      "entry_score": 80.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2350,17 +2350,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 67.1
+          "score": 67.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 51.4
+          "score": 51.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 80.3
+          "score": 80.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2378,9 +2378,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 53.5,
-      "early_bird_score": 51.7,
-      "market_recognition_score": 50.5,
-      "entry_score": 49.1,
+      "early_bird_score": 51.6,
+      "market_recognition_score": 50.8,
+      "entry_score": 49.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2411,17 +2411,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 50.5
+          "score": 50.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 51.7
+          "score": 51.6
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 49.1
+          "score": 49.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2439,9 +2439,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 54.2,
-      "early_bird_score": 54.5,
-      "market_recognition_score": 45.2,
-      "entry_score": 29.8,
+      "early_bird_score": 54.4,
+      "market_recognition_score": 45.4,
+      "entry_score": 30.1,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2472,17 +2472,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 45.2
+          "score": 45.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 54.5
+          "score": 54.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 29.8
+          "score": 30.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2500,9 +2500,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 54.9,
-      "early_bird_score": 55.4,
-      "market_recognition_score": 44.1,
-      "entry_score": 27.4,
+      "early_bird_score": 55.3,
+      "market_recognition_score": 44.3,
+      "entry_score": 27.7,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2533,17 +2533,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 44.1
+          "score": 44.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 55.4
+          "score": 55.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 27.4
+          "score": 27.7
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2561,9 +2561,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 46.6,
-      "market_recognition_score": 54.2,
-      "entry_score": 40.0,
+      "early_bird_score": 46.5,
+      "market_recognition_score": 54.4,
+      "entry_score": 40.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2594,17 +2594,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 54.2
+          "score": 54.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 46.6
+          "score": 46.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 40.0
+          "score": 40.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2622,9 +2622,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 38.2,
-      "market_recognition_score": 72.8,
-      "entry_score": 69.4,
+      "early_bird_score": 38.1,
+      "market_recognition_score": 73.0,
+      "entry_score": 69.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -2655,17 +2655,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 72.8
+          "score": 73.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 38.2
+          "score": 38.1
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 69.4
+          "score": 69.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2678,16 +2678,17 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 54.5,
+      "research_priority_score": 54.6,
       "discovery_edge_score": 37.4,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 65.2,
-      "early_bird_score": 58.1,
-      "market_recognition_score": 50.6,
-      "entry_score": 44.6,
+      "early_bird_score": 58.0,
+      "market_recognition_score": 50.8,
+      "entry_score": 44.9,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -2721,17 +2722,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 50.6
+          "score": 50.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 58.1
+          "score": 58.0
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 44.6
+          "score": 44.9
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2749,11 +2750,12 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 58.8,
-      "market_recognition_score": 42.9,
-      "entry_score": 32.6,
+      "early_bird_score": 58.7,
+      "market_recognition_score": 43.1,
+      "entry_score": 32.8,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -2782,17 +2784,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 42.9
+          "score": 43.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 58.8
+          "score": 58.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 32.6
+          "score": 32.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -2810,11 +2812,12 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 54.0,
-      "market_recognition_score": 53.5,
-      "entry_score": 52.1,
+      "early_bird_score": 53.9,
+      "market_recognition_score": 53.7,
+      "entry_score": 52.4,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -2843,17 +2846,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 53.5
+          "score": 53.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 54.0
+          "score": 53.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 52.1
+          "score": 52.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4092,8 +4095,8 @@
       "company_capture_score": 75.0,
       "structural_quality": 67.9,
       "early_bird_score": 52.6,
-      "market_recognition_score": 66.1,
-      "entry_score": 59.7,
+      "market_recognition_score": 66.0,
+      "entry_score": 59.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4124,7 +4127,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 66.1
+          "score": 66.0
         },
         {
           "step": "EARLY_BIRD",
@@ -4134,7 +4137,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 59.7
+          "score": 59.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4152,374 +4155,8 @@
       "economic_proof_score": 100,
       "company_capture_score": 75.0,
       "structural_quality": 67.9,
-      "early_bird_score": 48.3,
-      "market_recognition_score": 75.6,
-      "entry_score": 70.3,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "PARTIAL",
-          "score": 75.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 75.6
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 48.3
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "READY",
-          "score": 70.3
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "CRDO": {
-      "ticker": "CRDO",
-      "company": "Credo Technology",
-      "trend": "photonics",
-      "role": "Direct beneficiary / connectivity",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 51.7,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 60.0,
-      "structural_quality": 53.5,
-      "early_bird_score": 34.9,
-      "market_recognition_score": 87.8,
-      "entry_score": 61.8,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "PARTIAL",
-          "score": 60.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 87.8
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 34.9
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "READY",
-          "score": 61.8
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "POET": {
-      "ticker": "POET",
-      "company": "POET Technologies",
-      "trend": "photonics",
-      "role": "Photonic integration candidate",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 46.2,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 0.0,
-      "structural_quality": 60.2,
-      "early_bird_score": 59.1,
-      "market_recognition_score": 42.3,
-      "entry_score": 29.7,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 42.3
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 59.1
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 29.7
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "IQE.L": {
-      "ticker": "IQE.L",
-      "company": "IQE",
-      "trend": "photonics",
-      "role": "InP substrate/epi candidate",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 46.3,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 0.0,
-      "structural_quality": 60.2,
-      "early_bird_score": 50.6,
-      "market_recognition_score": 61.2,
-      "entry_score": 43.3,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 61.2
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 50.6
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 43.3
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "AVGO": {
-      "ticker": "AVGO",
-      "company": "Broadcom",
-      "trend": "photonics",
-      "role": "Leader / networking silicon",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 53.0,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 60.0,
-      "structural_quality": 52.1,
-      "early_bird_score": 46.3,
-      "market_recognition_score": 60.9,
-      "entry_score": 55.5,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "PARTIAL",
-          "score": 60.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 60.9
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 46.3
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 55.5
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "MRVL": {
-      "ticker": "MRVL",
-      "company": "Marvell",
-      "trend": "photonics",
-      "role": "Direct beneficiary / optical DSP",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 49.4,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 0.0,
-      "structural_quality": 66.5,
-      "early_bird_score": 45.5,
-      "market_recognition_score": 80.1,
-      "entry_score": 76.5,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "evidence": null
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 8
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 80.1
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 45.5
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "READY",
-          "score": 76.5
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "CIEN": {
-      "ticker": "CIEN",
-      "company": "Ciena",
-      "trend": "photonics",
-      "role": "Direct beneficiary / optical networking",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 54.4,
-      "discovery_edge_score": 0.0,
-      "economic_proof_score": 100,
-      "company_capture_score": 60.0,
-      "structural_quality": 66.5,
-      "early_bird_score": 44.5,
-      "market_recognition_score": 82.5,
+      "early_bird_score": 48.4,
+      "market_recognition_score": 75.5,
       "entry_score": 70.2,
       "blockers": [
         "explicit_company_capture"
@@ -4545,13 +4182,380 @@
         {
           "step": "COMPANY_CAPTURE",
           "status": "PARTIAL",
+          "score": 75.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 75.5
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 48.4
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "READY",
+          "score": 70.2
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "CRDO": {
+      "ticker": "CRDO",
+      "company": "Credo Technology",
+      "trend": "photonics",
+      "role": "Direct beneficiary / connectivity",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 51.7,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 60.0,
+      "structural_quality": 53.5,
+      "early_bird_score": 35.0,
+      "market_recognition_score": 87.7,
+      "entry_score": 61.7,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "PARTIAL",
           "score": 60.0,
           "explicit_primary_proof": false
         },
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 82.5
+          "score": 87.7
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 35.0
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "READY",
+          "score": 61.7
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "POET": {
+      "ticker": "POET",
+      "company": "POET Technologies",
+      "trend": "photonics",
+      "role": "Photonic integration candidate",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 46.2,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 0.0,
+      "structural_quality": 60.2,
+      "early_bird_score": 59.1,
+      "market_recognition_score": 42.2,
+      "entry_score": 29.5,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 42.2
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 59.1
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 29.5
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "IQE.L": {
+      "ticker": "IQE.L",
+      "company": "IQE",
+      "trend": "photonics",
+      "role": "InP substrate/epi candidate",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 46.3,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 0.0,
+      "structural_quality": 60.2,
+      "early_bird_score": 50.6,
+      "market_recognition_score": 61.1,
+      "entry_score": 43.1,
+      "blockers": [
+        "explicit_company_capture",
+        "market_data_unavailable"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 61.1
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 50.6
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 43.1
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "AVGO": {
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "trend": "photonics",
+      "role": "Leader / networking silicon",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 53.0,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 60.0,
+      "structural_quality": 52.1,
+      "early_bird_score": 46.3,
+      "market_recognition_score": 60.8,
+      "entry_score": 55.4,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "PARTIAL",
+          "score": 60.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 60.8
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 46.3
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 55.4
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "MRVL": {
+      "ticker": "MRVL",
+      "company": "Marvell",
+      "trend": "photonics",
+      "role": "Direct beneficiary / optical DSP",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 49.4,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 0.0,
+      "structural_quality": 66.5,
+      "early_bird_score": 45.6,
+      "market_recognition_score": 79.9,
+      "entry_score": 76.4,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 79.9
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 45.6
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "READY",
+          "score": 76.4
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "CIEN": {
+      "ticker": "CIEN",
+      "company": "Ciena",
+      "trend": "photonics",
+      "role": "Direct beneficiary / optical networking",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 54.4,
+      "discovery_edge_score": 0.0,
+      "economic_proof_score": 100,
+      "company_capture_score": 60.0,
+      "structural_quality": 66.5,
+      "early_bird_score": 44.5,
+      "market_recognition_score": 82.4,
+      "entry_score": 70.1,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "evidence": null
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 8
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "PARTIAL",
+          "score": 60.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 82.4
         },
         {
           "step": "EARLY_BIRD",
@@ -4561,7 +4565,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 70.2
+          "score": 70.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4574,14 +4578,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 50.1,
+      "research_priority_score": 50.2,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 15.0,
       "structural_quality": 65.2,
-      "early_bird_score": 51.1,
-      "market_recognition_score": 66.1,
-      "entry_score": 62.1,
+      "early_bird_score": 51.2,
+      "market_recognition_score": 66.0,
+      "entry_score": 62.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4612,17 +4616,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 66.1
+          "score": 66.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 51.1
+          "score": 51.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 62.1
+          "score": 62.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4641,8 +4645,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
       "early_bird_score": 33.3,
-      "market_recognition_score": 83.8,
-      "entry_score": 71.5,
+      "market_recognition_score": 83.7,
+      "entry_score": 71.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4673,7 +4677,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 83.8
+          "score": 83.7
         },
         {
           "step": "EARLY_BIRD",
@@ -4683,7 +4687,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 71.5
+          "score": 71.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4696,14 +4700,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 48.3,
+      "research_priority_score": 48.2,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
       "early_bird_score": 50.9,
-      "market_recognition_score": 69.1,
-      "entry_score": 59.1,
+      "market_recognition_score": 69.0,
+      "entry_score": 58.9,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4734,7 +4738,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 69.1
+          "score": 69.0
         },
         {
           "step": "EARLY_BIRD",
@@ -4744,7 +4748,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 59.1
+          "score": 58.9
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4762,9 +4766,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 44.2,
-      "market_recognition_score": 59.4,
-      "entry_score": 42.7,
+      "early_bird_score": 44.3,
+      "market_recognition_score": 59.3,
+      "entry_score": 42.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4795,17 +4799,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 59.4
+          "score": 59.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 44.2
+          "score": 44.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 42.7
+          "score": 42.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4823,9 +4827,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
-      "early_bird_score": 54.6,
-      "market_recognition_score": 60.7,
-      "entry_score": 49.1,
+      "early_bird_score": 54.7,
+      "market_recognition_score": 60.6,
+      "entry_score": 49.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4856,17 +4860,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 60.7
+          "score": 60.6
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 54.6
+          "score": 54.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 49.1
+          "score": 49.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4884,9 +4888,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 44.2,
-      "market_recognition_score": 59.4,
-      "entry_score": 45.3,
+      "early_bird_score": 44.3,
+      "market_recognition_score": 59.3,
+      "entry_score": 45.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4917,17 +4921,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 59.4
+          "score": 59.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 44.2
+          "score": 44.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 45.3
+          "score": 45.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -4946,8 +4950,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
       "early_bird_score": 43.2,
-      "market_recognition_score": 61.8,
-      "entry_score": 59.3,
+      "market_recognition_score": 61.7,
+      "entry_score": 59.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -4978,7 +4982,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 61.8
+          "score": 61.7
         },
         {
           "step": "EARLY_BIRD",
@@ -4988,7 +4992,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 59.3
+          "score": 59.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5007,8 +5011,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
       "early_bird_score": 54.5,
-      "market_recognition_score": 36.6,
-      "entry_score": 25.2,
+      "market_recognition_score": 36.5,
+      "entry_score": 25.1,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5039,7 +5043,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 36.6
+          "score": 36.5
         },
         {
           "step": "EARLY_BIRD",
@@ -5049,7 +5053,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 25.2
+          "score": 25.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5068,8 +5072,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
       "early_bird_score": 39.4,
-      "market_recognition_score": 86.1,
-      "entry_score": 71.9,
+      "market_recognition_score": 86.0,
+      "entry_score": 71.7,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5100,7 +5104,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 86.1
+          "score": 86.0
         },
         {
           "step": "EARLY_BIRD",
@@ -5110,7 +5114,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 71.9
+          "score": 71.7
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5128,9 +5132,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 44.6,
-      "market_recognition_score": 58.5,
-      "entry_score": 44.4,
+      "early_bird_score": 44.7,
+      "market_recognition_score": 58.4,
+      "entry_score": 44.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5161,17 +5165,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 58.5
+          "score": 58.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 44.6
+          "score": 44.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 44.4
+          "score": 44.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5190,8 +5194,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
       "early_bird_score": 52.0,
-      "market_recognition_score": 66.6,
-      "entry_score": 68.0,
+      "market_recognition_score": 66.5,
+      "entry_score": 67.9,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5222,7 +5226,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 66.6
+          "score": 66.5
         },
         {
           "step": "EARLY_BIRD",
@@ -5232,7 +5236,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 68.0
+          "score": 67.9
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5251,8 +5255,8 @@
       "company_capture_score": 0.0,
       "structural_quality": 54.2,
       "early_bird_score": 46.3,
-      "market_recognition_score": 63.4,
-      "entry_score": 63.1,
+      "market_recognition_score": 63.3,
+      "entry_score": 63.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5283,7 +5287,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 63.4
+          "score": 63.3
         },
         {
           "step": "EARLY_BIRD",
@@ -5293,7 +5297,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 63.1
+          "score": 63.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5306,14 +5310,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 50.1,
+      "research_priority_score": 50.0,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 52.1,
-      "early_bird_score": 64.3,
-      "market_recognition_score": 20.7,
-      "entry_score": 4.2,
+      "early_bird_score": 64.7,
+      "market_recognition_score": 20.0,
+      "entry_score": 3.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5344,17 +5348,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 20.7
+          "score": 20.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 64.3
+          "score": 64.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 4.2
+          "score": 3.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5372,9 +5376,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 52.1,
-      "early_bird_score": 63.9,
-      "market_recognition_score": 21.7,
-      "entry_score": 6.7,
+      "early_bird_score": 64.2,
+      "market_recognition_score": 21.0,
+      "entry_score": 5.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5405,17 +5409,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 21.7
+          "score": 21.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 63.9
+          "score": 64.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 6.7
+          "score": 5.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5428,14 +5432,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 51.1,
+      "research_priority_score": 51.0,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 60.2,
-      "early_bird_score": 71.6,
-      "market_recognition_score": 14.4,
-      "entry_score": 1.8,
+      "early_bird_score": 71.9,
+      "market_recognition_score": 13.7,
+      "entry_score": 0.9,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5466,17 +5470,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 14.4
+          "score": 13.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 71.6
+          "score": 71.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 1.8
+          "score": 0.9
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5489,14 +5493,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 51.1,
+      "research_priority_score": 51.0,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 60.2,
-      "early_bird_score": 71.2,
-      "market_recognition_score": 15.4,
-      "entry_score": 2.3,
+      "early_bird_score": 71.5,
+      "market_recognition_score": 14.7,
+      "entry_score": 1.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5527,17 +5531,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 15.4
+          "score": 14.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 71.2
+          "score": 71.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 2.3
+          "score": 1.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5550,14 +5554,14 @@
       "state": "RED",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 50.1,
+      "research_priority_score": 50.0,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 47.2,
-      "early_bird_score": 57.9,
-      "market_recognition_score": 29.0,
-      "entry_score": 14.0,
+      "early_bird_score": 58.2,
+      "market_recognition_score": 28.3,
+      "entry_score": 13.1,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5588,17 +5592,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 29.0
+          "score": 28.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 57.9
+          "score": 58.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 14.0
+          "score": 13.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5608,7 +5612,7 @@
       "company": "Texas Mineral Resources",
       "trend": "minerals",
       "role": "Rare-earth development candidate",
-      "state": "RED",
+      "state": "ORANGE",
       "pre_green": false,
       "investable": false,
       "research_priority_score": 46.1,
@@ -5616,11 +5620,12 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 52.8,
-      "market_recognition_score": 40.4,
-      "entry_score": 38.3,
+      "early_bird_score": 53.1,
+      "market_recognition_score": 39.7,
+      "entry_score": 37.5,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -5649,17 +5654,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 40.4
+          "score": 39.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 52.8
+          "score": 53.1
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 38.3
+          "score": 37.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5677,9 +5682,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 65.2,
-      "market_recognition_score": 12.8,
-      "entry_score": 0.3,
+      "early_bird_score": 65.5,
+      "market_recognition_score": 12.1,
+      "entry_score": 0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5710,17 +5715,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 12.8
+          "score": 12.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 65.2
+          "score": 65.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 0.3
+          "score": 0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5733,14 +5738,14 @@
       "state": "RED",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 43.5,
+      "research_priority_score": 43.4,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 53.8,
-      "market_recognition_score": 38.2,
-      "entry_score": 15.0,
+      "early_bird_score": 54.1,
+      "market_recognition_score": 37.5,
+      "entry_score": 14.1,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5771,17 +5776,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 38.2
+          "score": 37.5
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.8
+          "score": 54.1
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 15.0
+          "score": 14.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5794,14 +5799,14 @@
       "state": "RED",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 45.6,
+      "research_priority_score": 45.5,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 62.0,
-      "market_recognition_score": 19.9,
-      "entry_score": 20.2,
+      "early_bird_score": 62.3,
+      "market_recognition_score": 19.2,
+      "entry_score": 19.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5832,17 +5837,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 19.9
+          "score": 19.2
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 62.0
+          "score": 62.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 20.2
+          "score": 19.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5860,9 +5865,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 62.1,
-      "market_recognition_score": 35.5,
-      "entry_score": 15.6,
+      "early_bird_score": 62.5,
+      "market_recognition_score": 34.8,
+      "entry_score": 14.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5893,17 +5898,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 35.5
+          "score": 34.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 62.1
+          "score": 62.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 15.6
+          "score": 14.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5916,14 +5921,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 45.0,
+      "research_priority_score": 44.9,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 66.2,
-      "market_recognition_score": 26.5,
-      "entry_score": 8.7,
+      "early_bird_score": 66.5,
+      "market_recognition_score": 25.8,
+      "entry_score": 7.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -5954,17 +5959,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 26.5
+          "score": 25.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 66.2
+          "score": 66.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 8.7
+          "score": 7.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -5974,19 +5979,20 @@
       "company": "Hastings Technology Metals",
       "trend": "minerals",
       "role": "NdPr candidate",
-      "state": "RED",
+      "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 43.5,
+      "research_priority_score": 43.6,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 63.9,
-      "market_recognition_score": 15.7,
-      "entry_score": 0.3,
+      "early_bird_score": 64.2,
+      "market_recognition_score": 15.0,
+      "entry_score": 0,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -6015,17 +6021,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 15.7
+          "score": 15.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 63.9
+          "score": 64.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 0.3
+          "score": 0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6038,16 +6044,17 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 47.4,
+      "research_priority_score": 47.3,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 59.9,
-      "market_recognition_score": 40.4,
-      "entry_score": 38.3,
+      "early_bird_score": 60.2,
+      "market_recognition_score": 39.7,
+      "entry_score": 37.5,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -6076,17 +6083,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 40.4
+          "score": 39.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 59.9
+          "score": 60.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 38.3
+          "score": 37.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6099,14 +6106,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 44.7,
+      "research_priority_score": 44.6,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 67.5,
-      "market_recognition_score": 23.5,
-      "entry_score": 4.3,
+      "early_bird_score": 67.9,
+      "market_recognition_score": 22.8,
+      "entry_score": 3.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6137,17 +6144,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 23.5
+          "score": 22.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 67.5
+          "score": 67.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 4.3
+          "score": 3.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6157,19 +6164,20 @@
       "company": "Rare Element Resources",
       "trend": "minerals",
       "role": "Separation candidate",
-      "state": "RED",
+      "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 47.9,
+      "research_priority_score": 47.8,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 50.9,
-      "market_recognition_score": 44.6,
-      "entry_score": 55.8,
+      "early_bird_score": 51.2,
+      "market_recognition_score": 43.9,
+      "entry_score": 55.0,
       "blockers": [
-        "explicit_company_capture"
+        "explicit_company_capture",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -6198,17 +6206,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 44.6
+          "score": 43.9
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 50.9
+          "score": 51.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 55.8
+          "score": 55.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6221,14 +6229,14 @@
       "state": "RED",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 44.1,
+      "research_priority_score": 44.0,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 64.3,
-      "market_recognition_score": 14.9,
-      "entry_score": 4.1,
+      "early_bird_score": 64.6,
+      "market_recognition_score": 14.2,
+      "entry_score": 3.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6259,17 +6267,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 14.9
+          "score": 14.2
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 64.3
+          "score": 64.6
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 4.1
+          "score": 3.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6287,9 +6295,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 61.1,
-      "market_recognition_score": 21.9,
-      "entry_score": 7.6,
+      "early_bird_score": 61.4,
+      "market_recognition_score": 21.2,
+      "entry_score": 6.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6320,17 +6328,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 21.9
+          "score": 21.2
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 61.1
+          "score": 61.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 7.6
+          "score": 6.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6348,9 +6356,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 58.8,
-      "market_recognition_score": 27.1,
-      "entry_score": 12.8,
+      "early_bird_score": 59.1,
+      "market_recognition_score": 26.4,
+      "entry_score": 12.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6381,17 +6389,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 27.1
+          "score": 26.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 58.8
+          "score": 59.1
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 12.8
+          "score": 12.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6409,9 +6417,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 54.9,
-      "early_bird_score": 56.6,
-      "market_recognition_score": 41.4,
-      "entry_score": 36.1,
+      "early_bird_score": 56.9,
+      "market_recognition_score": 40.7,
+      "entry_score": 35.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6442,17 +6450,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 41.4
+          "score": 40.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 56.6
+          "score": 56.9
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 36.1
+          "score": 35.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6465,14 +6473,14 @@
       "state": "RED",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 45.4,
+      "research_priority_score": 45.3,
       "discovery_edge_score": 0.0,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 53.7,
-      "market_recognition_score": 38.4,
-      "entry_score": 31.0,
+      "early_bird_score": 54.0,
+      "market_recognition_score": 37.7,
+      "entry_score": 30.1,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6503,17 +6511,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 38.4
+          "score": 37.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.7
+          "score": 54.0
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 31.0
+          "score": 30.1
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6531,9 +6539,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 75.0,
       "structural_quality": 52.1,
-      "early_bird_score": 47.9,
-      "market_recognition_score": 57.2,
-      "entry_score": 55.4,
+      "early_bird_score": 47.8,
+      "market_recognition_score": 57.4,
+      "entry_score": 55.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6569,17 +6577,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 57.2
+          "score": 57.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 47.9
+          "score": 47.8
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 55.4
+          "score": 55.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6597,8 +6605,273 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 54.2,
-      "early_bird_score": 52.6,
-      "market_recognition_score": 49.4,
+      "early_bird_score": 52.5,
+      "market_recognition_score": 49.6,
+      "entry_score": 37.2,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "PROVEN",
+          "score": 37.4,
+          "evidence": {
+            "term": "vision-language-action vla",
+            "score": 37.4,
+            "acceleration": 0.908,
+            "mapping_confidence": 0.92
+          }
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 15
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "PARTIAL",
+          "score": 60.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 49.6
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 52.5
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 37.2
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "HSAI": {
+      "ticker": "HSAI",
+      "company": "Hesai",
+      "trend": "physical",
+      "role": "Sensing / lidar pick & shovel",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 51.5,
+      "discovery_edge_score": 37.4,
+      "economic_proof_score": 100,
+      "company_capture_score": 0.0,
+      "structural_quality": 54.2,
+      "early_bird_score": 59.6,
+      "market_recognition_score": 33.9,
+      "entry_score": 16.7,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "PROVEN",
+          "score": 37.4,
+          "evidence": {
+            "term": "vision-language-action vla",
+            "score": 37.4,
+            "acceleration": 0.908,
+            "mapping_confidence": 0.92
+          }
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 15
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "UNPROVEN",
+          "score": 0.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 33.9
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 59.6
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 16.7
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "IOT.MI": {
+      "ticker": "IOT.MI",
+      "company": "SECO",
+      "trend": "physical",
+      "role": "Edge compute candidate",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 54.5,
+      "discovery_edge_score": 37.4,
+      "economic_proof_score": 100,
+      "company_capture_score": 15.0,
+      "structural_quality": 60.2,
+      "early_bird_score": 57.0,
+      "market_recognition_score": 46.9,
+      "entry_score": 33.1,
+      "blockers": [
+        "explicit_company_capture",
+        "market_data_unavailable"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "PROVEN",
+          "score": 37.4,
+          "evidence": {
+            "term": "vision-language-action vla",
+            "score": 37.4,
+            "acceleration": 0.908,
+            "mapping_confidence": 0.92
+          }
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 15
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "UNPROVEN",
+          "score": 15.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 46.9
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 57.0
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 33.1
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "QCOM": {
+      "ticker": "QCOM",
+      "company": "Qualcomm",
+      "trend": "physical",
+      "role": "Edge AI compute candidate",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 61.1,
+      "discovery_edge_score": 37.4,
+      "economic_proof_score": 100,
+      "company_capture_score": 75.0,
+      "structural_quality": 60.2,
+      "early_bird_score": 56.8,
+      "market_recognition_score": 47.3,
+      "entry_score": 38.4,
+      "blockers": [
+        "explicit_company_capture"
+      ],
+      "chain": [
+        {
+          "step": "DISCOVERY",
+          "status": "PROVEN",
+          "score": 37.4,
+          "evidence": {
+            "term": "vision-language-action vla",
+            "score": 37.4,
+            "acceleration": 0.908,
+            "mapping_confidence": 0.92
+          }
+        },
+        {
+          "step": "TREND_CORROBORATION",
+          "status": "PROVEN",
+          "score": 100.0
+        },
+        {
+          "step": "ECONOMIC_TRANSMISSION",
+          "status": "PROVEN",
+          "score": 100,
+          "economic_origins": 15
+        },
+        {
+          "step": "COMPANY_CAPTURE",
+          "status": "PARTIAL",
+          "score": 75.0,
+          "explicit_primary_proof": false
+        },
+        {
+          "step": "MARKET_RECOGNITION",
+          "status": "MEASURED",
+          "score": 47.3
+        },
+        {
+          "step": "EARLY_BIRD",
+          "status": "MEASURED",
+          "score": 56.8
+        },
+        {
+          "step": "ENTRY_READINESS",
+          "status": "WAIT",
+          "score": 38.4
+        }
+      ],
+      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
+    },
+    "NXPI": {
+      "ticker": "NXPI",
+      "company": "NXP Semiconductors",
+      "trend": "physical",
+      "role": "Edge/auto compute candidate",
+      "state": "ORANGE",
+      "pre_green": false,
+      "investable": false,
+      "research_priority_score": 53.2,
+      "discovery_edge_score": 37.4,
+      "economic_proof_score": 100,
+      "company_capture_score": 0.0,
+      "structural_quality": 60.2,
+      "early_bird_score": 55.6,
+      "market_recognition_score": 50.0,
       "entry_score": 36.9,
       "blockers": [
         "explicit_company_capture"
@@ -6628,288 +6901,24 @@
         },
         {
           "step": "COMPANY_CAPTURE",
-          "status": "PARTIAL",
-          "score": 60.0,
+          "status": "UNPROVEN",
+          "score": 0.0,
           "explicit_primary_proof": false
         },
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 49.4
+          "score": 50.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 52.6
+          "score": 55.6
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
           "score": 36.9
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "HSAI": {
-      "ticker": "HSAI",
-      "company": "Hesai",
-      "trend": "physical",
-      "role": "Sensing / lidar pick & shovel",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 51.5,
-      "discovery_edge_score": 37.4,
-      "economic_proof_score": 100,
-      "company_capture_score": 0.0,
-      "structural_quality": 54.2,
-      "early_bird_score": 59.7,
-      "market_recognition_score": 33.6,
-      "entry_score": 16.5,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "PROVEN",
-          "score": 37.4,
-          "evidence": {
-            "term": "vision-language-action vla",
-            "score": 37.4,
-            "acceleration": 0.908,
-            "mapping_confidence": 0.92
-          }
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 15
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 33.6
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 59.7
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 16.5
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "IOT.MI": {
-      "ticker": "IOT.MI",
-      "company": "SECO",
-      "trend": "physical",
-      "role": "Edge compute candidate",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 54.5,
-      "discovery_edge_score": 37.4,
-      "economic_proof_score": 100,
-      "company_capture_score": 15.0,
-      "structural_quality": 60.2,
-      "early_bird_score": 57.1,
-      "market_recognition_score": 46.6,
-      "entry_score": 32.9,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "PROVEN",
-          "score": 37.4,
-          "evidence": {
-            "term": "vision-language-action vla",
-            "score": 37.4,
-            "acceleration": 0.908,
-            "mapping_confidence": 0.92
-          }
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 15
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 15.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 46.6
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 57.1
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 32.9
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "QCOM": {
-      "ticker": "QCOM",
-      "company": "Qualcomm",
-      "trend": "physical",
-      "role": "Edge AI compute candidate",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 61.0,
-      "discovery_edge_score": 37.4,
-      "economic_proof_score": 100,
-      "company_capture_score": 75.0,
-      "structural_quality": 60.2,
-      "early_bird_score": 56.9,
-      "market_recognition_score": 47.1,
-      "entry_score": 38.1,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "PROVEN",
-          "score": 37.4,
-          "evidence": {
-            "term": "vision-language-action vla",
-            "score": 37.4,
-            "acceleration": 0.908,
-            "mapping_confidence": 0.92
-          }
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 15
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "PARTIAL",
-          "score": 75.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 47.1
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 56.9
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 38.1
-        }
-      ],
-      "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
-    },
-    "NXPI": {
-      "ticker": "NXPI",
-      "company": "NXP Semiconductors",
-      "trend": "physical",
-      "role": "Edge/auto compute candidate",
-      "state": "ORANGE",
-      "pre_green": false,
-      "investable": false,
-      "research_priority_score": 53.1,
-      "discovery_edge_score": 37.4,
-      "economic_proof_score": 100,
-      "company_capture_score": 0.0,
-      "structural_quality": 60.2,
-      "early_bird_score": 55.7,
-      "market_recognition_score": 49.8,
-      "entry_score": 36.6,
-      "blockers": [
-        "explicit_company_capture"
-      ],
-      "chain": [
-        {
-          "step": "DISCOVERY",
-          "status": "PROVEN",
-          "score": 37.4,
-          "evidence": {
-            "term": "vision-language-action vla",
-            "score": 37.4,
-            "acceleration": 0.908,
-            "mapping_confidence": 0.92
-          }
-        },
-        {
-          "step": "TREND_CORROBORATION",
-          "status": "PROVEN",
-          "score": 100.0
-        },
-        {
-          "step": "ECONOMIC_TRANSMISSION",
-          "status": "PROVEN",
-          "score": 100,
-          "economic_origins": 15
-        },
-        {
-          "step": "COMPANY_CAPTURE",
-          "status": "UNPROVEN",
-          "score": 0.0,
-          "explicit_primary_proof": false
-        },
-        {
-          "step": "MARKET_RECOGNITION",
-          "status": "MEASURED",
-          "score": 49.8
-        },
-        {
-          "step": "EARLY_BIRD",
-          "status": "MEASURED",
-          "score": 55.7
-        },
-        {
-          "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 36.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6927,9 +6936,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 47.2,
-      "early_bird_score": 45.8,
-      "market_recognition_score": 55.9,
-      "entry_score": 46.1,
+      "early_bird_score": 45.7,
+      "market_recognition_score": 56.1,
+      "entry_score": 46.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -6965,17 +6974,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 55.9
+          "score": 56.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 45.8
+          "score": 45.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 46.1
+          "score": 46.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -6988,14 +6997,14 @@
       "state": "ORANGE",
       "pre_green": false,
       "investable": false,
-      "research_priority_score": 53.3,
+      "research_priority_score": 53.4,
       "discovery_edge_score": 37.4,
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 62.4,
-      "market_recognition_score": 34.9,
-      "entry_score": 28.2,
+      "early_bird_score": 62.3,
+      "market_recognition_score": 35.1,
+      "entry_score": 28.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7031,17 +7040,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 34.9
+          "score": 35.1
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 62.4
+          "score": 62.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 28.2
+          "score": 28.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7059,9 +7068,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 15.0,
       "structural_quality": 60.2,
-      "early_bird_score": 53.6,
-      "market_recognition_score": 54.5,
-      "entry_score": 37.1,
+      "early_bird_score": 53.5,
+      "market_recognition_score": 54.7,
+      "entry_score": 37.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7097,17 +7106,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 54.5
+          "score": 54.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.6
+          "score": 53.5
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 37.1
+          "score": 37.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7125,9 +7134,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 47.3,
-      "market_recognition_score": 52.5,
-      "entry_score": 37.9,
+      "early_bird_score": 47.2,
+      "market_recognition_score": 52.7,
+      "entry_score": 38.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7163,17 +7172,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 52.5
+          "score": 52.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 47.3
+          "score": 47.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 37.9
+          "score": 38.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7191,9 +7200,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 49.1,
-      "market_recognition_score": 64.4,
-      "entry_score": 59.9,
+      "early_bird_score": 49.0,
+      "market_recognition_score": 64.6,
+      "entry_score": 60.2,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7229,17 +7238,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 64.4
+          "score": 64.6
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 49.1
+          "score": 49.0
         },
         {
           "step": "ENTRY_READINESS",
-          "status": "WAIT",
-          "score": 59.9
+          "status": "READY",
+          "score": 60.2
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7257,9 +7266,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 54.7,
-      "market_recognition_score": 52.1,
-      "entry_score": 44.2,
+      "early_bird_score": 54.6,
+      "market_recognition_score": 52.3,
+      "entry_score": 44.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7295,17 +7304,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 52.1
+          "score": 52.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 54.7
+          "score": 54.6
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 44.2
+          "score": 44.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7323,9 +7332,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 52.1,
-      "early_bird_score": 46.4,
-      "market_recognition_score": 60.6,
-      "entry_score": 70.3,
+      "early_bird_score": 46.3,
+      "market_recognition_score": 60.8,
+      "entry_score": 70.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7361,17 +7370,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 60.6
+          "score": 60.8
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 46.4
+          "score": 46.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 70.3
+          "score": 70.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7389,9 +7398,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 60.2,
-      "early_bird_score": 56.9,
-      "market_recognition_score": 47.2,
-      "entry_score": 31.1,
+      "early_bird_score": 56.8,
+      "market_recognition_score": 47.4,
+      "entry_score": 31.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7427,17 +7436,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 47.2
+          "score": 47.4
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 56.9
+          "score": 56.8
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 31.1
+          "score": 31.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7455,9 +7464,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 30.0,
       "structural_quality": 47.2,
-      "early_bird_score": 55.5,
-      "market_recognition_score": 34.3,
-      "entry_score": 17.5,
+      "early_bird_score": 55.4,
+      "market_recognition_score": 34.5,
+      "entry_score": 17.8,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7493,17 +7502,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 34.3
+          "score": 34.5
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 55.5
+          "score": 55.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 17.5
+          "score": 17.8
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7521,9 +7530,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 53.4,
-      "market_recognition_score": 39.1,
-      "entry_score": 18.2,
+      "early_bird_score": 53.3,
+      "market_recognition_score": 39.3,
+      "entry_score": 18.5,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7559,17 +7568,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 39.1
+          "score": 39.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.4
+          "score": 53.3
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 18.2
+          "score": 18.5
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7587,9 +7596,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 15.0,
       "structural_quality": 47.2,
-      "early_bird_score": 53.3,
-      "market_recognition_score": 39.3,
-      "entry_score": 33.7,
+      "early_bird_score": 53.2,
+      "market_recognition_score": 39.5,
+      "entry_score": 34.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7625,17 +7634,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 39.3
+          "score": 39.5
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.3
+          "score": 53.2
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 33.7
+          "score": 34.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7653,9 +7662,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 67.2,
-      "early_bird_score": 59.9,
-      "market_recognition_score": 49.1,
-      "entry_score": 29.1,
+      "early_bird_score": 59.8,
+      "market_recognition_score": 49.3,
+      "entry_score": 29.4,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7691,17 +7700,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 49.1
+          "score": 49.3
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 59.9
+          "score": 59.8
         },
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 29.1
+          "score": 29.4
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7719,9 +7728,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 0.0,
       "structural_quality": 47.2,
-      "early_bird_score": 44.5,
-      "market_recognition_score": 58.8,
-      "entry_score": 62.7,
+      "early_bird_score": 44.4,
+      "market_recognition_score": 59.0,
+      "entry_score": 63.0,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -7757,17 +7766,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 58.8
+          "score": 59.0
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 44.5
+          "score": 44.4
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 62.7
+          "score": 63.0
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -7791,7 +7800,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -7854,7 +7864,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -7917,7 +7928,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -7980,7 +7992,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8043,7 +8056,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8106,7 +8120,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8169,7 +8184,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8232,7 +8248,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8295,7 +8312,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8358,7 +8376,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8421,7 +8440,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8484,7 +8504,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8547,7 +8568,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8610,7 +8632,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8673,7 +8696,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8736,7 +8760,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8799,7 +8824,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8862,7 +8888,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8925,7 +8952,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -8988,7 +9016,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9051,7 +9080,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9114,7 +9144,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9177,7 +9208,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9240,7 +9272,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9303,7 +9336,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9366,7 +9400,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9429,7 +9464,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9492,7 +9528,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9555,7 +9592,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9623,7 +9661,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9691,7 +9730,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9759,7 +9799,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9827,7 +9868,8 @@
       "blockers": [
         "explicit_company_capture",
         "early_bird_not_scored",
-        "entry_not_scored"
+        "entry_not_scored",
+        "market_data_unavailable"
       ],
       "chain": [
         {
@@ -9892,8 +9934,8 @@
       "company_capture_score": 75.0,
       "structural_quality": 67.9,
       "early_bird_score": 52.6,
-      "market_recognition_score": 66.1,
-      "entry_score": 59.7,
+      "market_recognition_score": 66.0,
+      "entry_score": 59.6,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -9924,7 +9966,7 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 66.1
+          "score": 66.0
         },
         {
           "step": "EARLY_BIRD",
@@ -9934,7 +9976,7 @@
         {
           "step": "ENTRY_READINESS",
           "status": "WAIT",
-          "score": 59.7
+          "score": 59.6
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."
@@ -9952,9 +9994,9 @@
       "economic_proof_score": 100,
       "company_capture_score": 60.0,
       "structural_quality": 67.2,
-      "early_bird_score": 53.8,
-      "market_recognition_score": 62.5,
-      "entry_score": 62.1,
+      "early_bird_score": 53.7,
+      "market_recognition_score": 62.7,
+      "entry_score": 62.3,
       "blockers": [
         "explicit_company_capture"
       ],
@@ -9985,17 +10027,17 @@
         {
           "step": "MARKET_RECOGNITION",
           "status": "MEASURED",
-          "score": 62.5
+          "score": 62.7
         },
         {
           "step": "EARLY_BIRD",
           "status": "MEASURED",
-          "score": 53.8
+          "score": 53.7
         },
         {
           "step": "ENTRY_READINESS",
           "status": "READY",
-          "score": 62.1
+          "score": 62.3
         }
       ],
       "rule": "PRE_GREEN is research priority only; GREEN still requires explicit primary economic company-capture proof."

@@ -3,6 +3,7 @@
 import json, math, statistics
 from datetime import datetime, timezone
 from pathlib import Path
+from oracle_data_quality import clean_rows, market_date, series_quality, dated_value, cost_weights, positive
 
 ROOT=Path(".")
 OUT=ROOT/"data/cockpit.json"
@@ -24,12 +25,10 @@ def clamp(x,a=0,b=100):
     return max(a,min(b,x))
 
 def series_rows(market,ticker):
-    p=(market.get("prices",{}).get(ticker) or {}).get("rows",[])
-    return sorted([r for r in p if isinstance(r,dict) and r.get("date") and isinstance(r.get("close"),(int,float))],key=lambda r:r["date"])
+    return clean_rows(market,ticker)
 
 def close_on_or_before(rows,date):
-    vals=[r for r in rows if r["date"]<=date]
-    return vals[-1]["close"] if vals else None
+    return dated_value(rows,date,"close")
 
 def latest_metrics(rows, benchmark_rows=None, as_of=None):
     if as_of:
@@ -53,8 +52,7 @@ def latest_metrics(rows, benchmark_rows=None, as_of=None):
     return {"date":latest["date"],"price":roundn(price,4),"d1":roundn(d1),"w1":roundn(w1),"m1":roundn(m1),"rel_m1_qqq":roundn(rel),"spark":spark}
 
 def fx_on_or_before(fx,date):
-    vals=[r for r in fx if r.get("date","")<=date and isinstance(r.get("chf_per_usd"),(int,float))]
-    return vals[-1]["chf_per_usd"] if vals else None
+    return dated_value(fx,date,"chf_per_usd")
 
 def signal_for(ticker,proof,decisions):
     explicit=(decisions.get("signals",{}).get(ticker) or {})
@@ -75,68 +73,75 @@ def rank_delta(cur,prev):
     return prev-cur
 
 def build_portfolio(market, portfolio):
-    fx=sorted(market.get("fx_usd_chf",[]),key=lambda r:r.get("date",""))
-    benchmark=portfolio.get("benchmark_ticker","QQQ")
-    qrows=series_rows(market,benchmark)
-    latest_date=qrows[-1]["date"] if qrows else None
-    latest_fx=fx_on_or_before(fx,latest_date) if latest_date else None
+    """Value ledgers independently. Any unpriced leg makes the total unavailable."""
+    fx=market.get("fx_usd_chf",[])
+    latest_date=market_date(market)
+    qrows=series_rows(market,"QQQ")
+    latest_fx=fx_on_or_before(fx,latest_date)
+    q_ready=series_quality(market,"QQQ",latest_date)["status"]=="AVAILABLE"
     positions=[]
-    invested=0.0; current_invested=0.0; matched_qqq=0.0
+    invested=0.0
     for p in portfolio.get("positions",[]):
         if p.get("status")!="OPEN": continue
         ticker=p["ticker"]; allocated=float(p["allocated_chf"]); td=p["trade_date"]
-        rows=series_rows(market,ticker)
-        entry_px=close_on_or_before(rows,td); current_px=close_on_or_before(rows,latest_date) if latest_date else None
+        rs=series_rows(market,ticker)
+        quality=series_quality(market,ticker,latest_date)
+        entry_px=close_on_or_before(rs,td)
+        current_px=close_on_or_before(rs,latest_date) if quality["status"]=="AVAILABLE" else None
         entry_fx=fx_on_or_before(fx,td)
-        q_entry=close_on_or_before(qrows,td); q_current=close_on_or_before(qrows,latest_date) if latest_date else None
-        current=None; qvalue=None; units=None
-        if entry_px and current_px and entry_fx and latest_fx:
-            units=allocated/(entry_px*entry_fx)
-            current=units*current_px*latest_fx
-        if q_entry and q_current and entry_fx and latest_fx:
-            qunits=allocated/(q_entry*entry_fx)
-            qvalue=qunits*q_current*latest_fx
+        q_entry=close_on_or_before(qrows,td)
+        q_current=close_on_or_before(qrows,latest_date) if q_ready else None
+        current=allocated*current_px*latest_fx/(entry_px*entry_fx) if all(positive(v) for v in (entry_px,current_px,entry_fx,latest_fx)) else None
+        qvalue=allocated*q_current*latest_fx/(q_entry*entry_fx) if all(positive(v) for v in (q_entry,q_current,entry_fx,latest_fx)) else None
         invested+=allocated
-        if current is not None: current_invested+=current
-        if qvalue is not None: matched_qqq+=qvalue
-        positions.append({
-            "ticker":ticker,"trade_date":td,"allocated_chf":allocated,
+        positions.append({"ticker":ticker,"trade_date":td,"allocated_chf":allocated,
             "entry_price_usd":roundn(entry_px,4),"entry_fx_chf_per_usd":roundn(entry_fx,6),
             "current_price_usd":roundn(current_px,4),"current_value_chf":roundn(current),
             "pnl_chf":roundn(current-allocated) if current is not None else None,
-            "pnl_pct":roundn(pct(current,allocated)) if current is not None else None,
-            "matched_qqq_chf":roundn(qvalue)
-        })
+            "pnl_pct":roundn(pct(current,allocated)),"matched_qqq_chf":roundn(qvalue),
+            "data_status":quality["status"]})
+    complete=all(p["current_value_chf"] is not None for p in positions)
+    current_invested=sum(p["current_value_chf"] for p in positions) if complete else None
     cash=float(portfolio.get("cash_chf",0))
-    total=(current_invested+cash) if current_invested or cash else None
-    official_oracle_ret=pct(current_invested,invested) if invested and current_invested else None
-    official_qqq_ret=pct(matched_qqq,invested) if invested and matched_qqq else None
-    alpha=(official_oracle_ret-official_qqq_ret) if official_oracle_ret is not None and official_qqq_ret is not None else None
-    return {
-        "as_of":latest_date,"initial_capital_chf":portfolio.get("initial_capital_chf"),
+    total=current_invested+cash if complete else None
+    capital=portfolio.get("initial_capital_chf")
+    baseline=portfolio.get("baseline_date") or min((p["trade_date"] for p in positions),default=None)
+    q0=close_on_or_before(qrows,baseline)
+    fx0=fx_on_or_before(fx,baseline)
+    q1=close_on_or_before(qrows,latest_date) if q_ready else None
+    q_full=capital*q1*latest_fx/(q0*fx0) if all(positive(v) for v in (capital,q0,q1,fx0,latest_fx)) else None
+    kind=portfolio.get("kind","ACTUAL")
+    if kind=="ACTUAL":
+        oracle_value=total; q_value=q_full; compared=capital
+        mode="full_initial_capital_chf"
+    else:
+        oracle_value=current_invested
+        q_value=sum(p["matched_qqq_chf"] for p in positions) if all(p["matched_qqq_chf"] is not None for p in positions) else None
+        compared=invested; mode="matched_simulated_tranches"
+    oracle_ret=pct(oracle_value,compared); qqq_ret=pct(q_value,compared)
+    alpha=oracle_ret-qqq_ret if oracle_ret is not None and qqq_ret is not None else None
+    return {"kind":kind,"as_of":latest_date,"baseline_date":baseline,"initial_capital_chf":capital,
+        "valuation_method":"Verified baseline/entry close and FX convention; no inferred executions.",
         "cash_chf":roundn(cash),"invested_cost_chf":roundn(invested),
-        "current_invested_value_chf":roundn(current_invested) if current_invested else None,
-        "total_value_chf":roundn(total),"total_return_pct":roundn(pct(total,float(portfolio.get("initial_capital_chf",1000)))) if total else None,
-        "official_comparison":{
-            "mode":portfolio.get("official_benchmark_mode"),
-            "oracle_return_pct":roundn(official_oracle_ret),
-            "qqq_return_pct":roundn(official_qqq_ret),
-            "alpha_pct_points":roundn(alpha),
-            "oracle_value_chf":roundn(current_invested) if current_invested else None,
-            "qqq_matched_value_chf":roundn(matched_qqq) if matched_qqq else None,
-            "capital_compared_chf":roundn(invested)
-        },
-        "positions":positions
-    }
+        "current_invested_value_chf":roundn(current_invested),"total_value_chf":roundn(total),
+        "total_return_pct":roundn(pct(total,capital)),
+        "official_comparison":{"mode":mode,"baseline_date":baseline,
+            "oracle_return_pct":roundn(oracle_ret),"qqq_return_pct":roundn(qqq_ret),
+            "alpha_pct_points":roundn(alpha),"alpha_chf":roundn(oracle_value-q_value) if oracle_value is not None and q_value is not None else None,
+            "oracle_value_chf":roundn(oracle_value),"qqq_value_chf":roundn(q_value),
+            "capital_compared_chf":roundn(compared),"initial_fx_chf_per_usd":roundn(fx0,6),"current_fx_chf_per_usd":roundn(latest_fx,6)},
+        "positions":positions}
 
 def main():
     research=load("research-universe.json")
     market=load("data/market.json")
     decisions=load("decision-state.json")
     portfolio=load("portfolio.json")
+    simulated=load("portfolio-simulated.json")
     challengers=load("data/company-challengers.json")
     dossiers=load("data/evidence-dossiers.json")
     chains=load("data/economic-chains.json")
+    funnel=load("data/funnel-audit.json")
     prior_cockpit=load("data/cockpit.json")
     qrows=series_rows(market,"QQQ")
     market_as_of=qrows[-1]["date"] if qrows else None
@@ -185,6 +190,11 @@ def main():
             ticker=row["ticker"]; proof=row.get("proof")
             metrics=latest_metrics(series_rows(market,ticker),qrows,as_of=market_as_of)
             sig,reason=signal_for(ticker,proof,decisions)
+            quality=series_quality(market,ticker,market_as_of)
+            if quality["status"]!="AVAILABLE":
+                metrics=latest_metrics([])
+                sig="ORANGE"
+                reason="DATA_UNAVAILABLE: entry prohibited; provider errors retained in the audit."
             if metrics["m1"] is not None:
                 available+=1; m1s.append(metrics["m1"])
                 if metrics["m1"]>0: positive+=1
@@ -196,7 +206,7 @@ def main():
             unrecognized_market=sc.get("unrecognized_market_score")
             entry=sc.get("entry_score")
             proof_u=str(proof or "").upper()
-            evidence_base=100.0 if sc.get("evidence_status")=="PROVEN" else 70.0 if "PROVEN" in proof_u else 55.0 if "PARTIAL" in proof_u else 20.0
+            evidence_base=100.0 if sc.get("evidence_status")=="PROVEN" else 70.0 if proof_u=="PROVEN" or proof_u.startswith("PROVEN ") else 55.0 if "PARTIAL" in proof_u else 20.0
             quality_for_rank=float(structural_quality if structural_quality is not None else evidence_base)
             structural_for_rank=float(structural if structural is not None else max(0.0,evidence_base-20.0))
             entry_for_rank=float(entry if entry is not None else 50.0)
@@ -231,17 +241,18 @@ def main():
                "radar_rank_score":radar_score,
                "challenger_queries":row.get("challenger_queries",[]),
                "signal":sig,"signal_reason":reason,
+               "data_status":quality["status"],"data_quality":quality,
                "structural_quality":structural_quality,
                "structural_early_bird":structural,
                "market_recognition_score":market_recognition,
                "unrecognized_market_score":unrecognized_market,
                "entry_score":entry,
-               "indicative_entry_sizing":sc.get("indicative_entry_sizing"),
+               "indicative_entry_sizing":sc.get("indicative_entry_sizing") if quality["status"]=="AVAILABLE" else {"band":"0%","max_pct":0,"min_pct":0,"label":"NO ENTRY"},
                "hold_score":sc.get("hold_score"),
                "capital_competition_score":sc.get("capital_competition_score"),
                "actual_weight_pct":sc.get("actual_weight_pct"),
-               "target_weight_pct":sc.get("target_weight_pct"),
-               "portfolio_action":sc.get("portfolio_action"),
+               "target_weight_pct":sc.get("target_weight_pct",0) if quality["status"]=="AVAILABLE" else 0,
+               "portfolio_action":sc.get("portfolio_action","WAIT") if quality["status"]=="AVAILABLE" else "BLOCKED",
                "evidence_status":sc.get("evidence_status") or ("UNPROVEN" if row.get("radar_origin")=="DYNAMIC_CHALLENGER" else None),
                "invalidation":sc.get("invalidation",[]),
                "currency":md.get("currency"),"exchange":md.get("exchange"),**metrics}
@@ -254,12 +265,13 @@ def main():
             -(x.get("radar_rank_score") or -1e9),
             x.get("research_rank") or 999
         ))
+        all_rows=companies
         companies=companies[:20]
         for i,c in enumerate(companies,1):
             c["rank"]=i
             pr=c.get("previous_rank")
             c["rank_delta"]=None if pr is None else pr-i
-            all_companies.append({**c,"trend_key":key,"trend":tr.get("label"),"trend_rank":ds.get("rank")})
+        all_companies.extend({**c,"trend_key":key,"trend":tr.get("label"),"trend_rank":ds.get("rank")} for c in all_rows)
 
         trends.append({
             "key":key,"label":tr.get("label"),"rank":ds.get("rank"),
@@ -280,7 +292,9 @@ def main():
     # Never turn short-term momentum into an implicit recommendation.
     # GREEN comes first; ORANGE is a watchlist ordered by validated trend/company rank.
     action.sort(key=lambda c:(order.get(c["signal"],9),c.get("trend_rank") or 999,c.get("rank") or 999))
-    # Keep every GREEN visible. Limit only the ORANGE watchlist so a GREEN\n    # cannot disappear merely because its research-universe row is ranked after 12 ORANGEs.\n    greens=[c for c in action if c["signal"]=="GREEN"]\n    oranges=[c for c in action if c["signal"]=="ORANGE"][:12]\n    action=greens+oranges
+    # Eligibility and action visibility are independent of the displayed Top 20.
+    action=[c for c in action if c["data_status"]=="AVAILABLE"]
+    action=[c for c in action if c["signal"]=="GREEN"]+[c for c in action if c["signal"]=="ORANGE"][:12]
 
     discovery=load("data/discovery-candidates.json")
     gate=load("data/source-gate-status.json")
@@ -292,6 +306,7 @@ def main():
             scout.append({"term":c.get("term"),"score":c.get("discovery_score"),"acceleration":c.get("acceleration"),"families":g.get("families",[]),"status":g.get("trend_status")})
 
     portfolio_view=build_portfolio(market,portfolio)
+    simulated_view=build_portfolio(market,simulated)
     data_as_of=portfolio_view.get("as_of")
     decision_as_of=decisions.get("as_of")
     decision_lag_days=None
@@ -301,7 +316,7 @@ def main():
         except Exception:
             decision_lag_days=None
     decision_freshness={
-        "status":"STALE" if decision_lag_days is not None and decision_lag_days>1 else "CURRENT",
+        "status":"CURRENT" if data_as_of and decision_as_of==data_as_of else "STALE",
         "lag_days":decision_lag_days,
         "message":(
             f"Decision state is {decision_lag_days} day(s) behind market data."
@@ -324,13 +339,18 @@ def main():
                      "concept_evidence":dossiers.get("concepts",{}),
                      "pre_green_watchlist":chains.get("pre_green_watchlist",[]),
                      "candidate_chain_diagnostics":chains.get("candidate_chains",[])[:20],
-                     "chain_pipeline":chains.get("pipeline",[])},
+                     "chain_pipeline":chains.get("pipeline",[]),"funnel_audit":funnel},
         "trends":trends,
         "action_now":action,
         "target_allocation_pct":decisions.get("target_allocation_pct",{}),
-        "actual_holdings_pct":decisions.get("actual_holdings_pct",{}),
+        "actual_holdings_pct":cost_weights(portfolio),
+        "actual_allocation_basis":"INITIAL_COST_PLUS_CONFIRMED_CASH",
+        "decision_status":decisions.get("decision_status"),
+        "data_warnings":[{"ticker":t,**series_quality(market,t,market_as_of)} for t in sorted({c["ticker"] for c in all_companies}) if series_quality(market,t,market_as_of)["status"]!="AVAILABLE"],
         "benchmark_competition":decisions.get("benchmark_competition",{}),
         "portfolio":portfolio_view,
+        "actual_portfolio":portfolio_view,
+        "simulated_portfolio":simulated_view,
         "market_errors":market.get("errors",[])
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)

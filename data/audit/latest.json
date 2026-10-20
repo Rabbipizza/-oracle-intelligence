@@ -1,11 +1,11 @@
 {
-  "run_id": "20261013T232530Z",
-  "created_at": "2026-10-13T23:25:30.617605+00:00",
+  "run_id": "20261020T222911Z",
+  "created_at": "2026-10-20T22:29:11.300697+00:00",
   "files": [
     {
       "path": "data/cockpit.json",
-      "sha256": "5431b8220ea4110c8770c28095b986ce0c09950cff86dbc5b50ca827cf55a9d3",
-      "bytes": 516188
+      "sha256": "b60984e16ffd208641b0dcd0b6453d576f97be345a5e7d1ab4b394fbd02d863a",
+      "bytes": 457182
     },
     {
       "path": "data/company-challengers.json",
@@ -24,13 +24,18 @@
     },
     {
       "path": "data/economic-chains.json",
-      "sha256": "f6caace6a98faeffa77deb4e550637989f03e5aef3311923a89f2ebd059c9947",
-      "bytes": 265302
+      "sha256": "72e4e30283c6fbe80cff32d995cf3e29316f8b4fd746c91960ea99b4bbf2e6a4",
+      "bytes": 266774
     },
     {
       "path": "data/evidence-dossiers.json",
       "sha256": "0bddccb6e50a4da00b2e0bc120ee71335a3c6255212c9e05ab874a3084c7af78",
       "bytes": 93905
+    },
+    {
+      "path": "data/funnel-audit.json",
+      "sha256": "d8b5fad6a58ffc9df4e20e62935d3f82944db701df40a44615d128e31f9a9657",
+      "bytes": 4782
     },
     {
       "path": "data/macro-stress-backtest.json",
@@ -44,7 +49,7 @@
     },
     {
       "path": "data/signal-ledger.json",
-      "sha256": "55a00226094554e37cf6c318006e2736113aa3c80b177ca5c135455679534394",
+      "sha256": "1c78a10f8f94141cc07b3236a812098f061ea1ddbcf7e13c1d6bbb3bf24df988",
       "bytes": 101595
     },
     {
@@ -5921,6 +5926,11 @@
       "path": "data/source_snapshots/usaspending_vision_transformers_20260928T140321Z.json",
       "sha256": "0ed66be4eeb150ac0723d4c6fa94f80df75a47b761e8b2c81da2c7e748bf1ca7",
       "bytes": 267
+    },
+    {
+      "path": "data/validation.json",
+      "sha256": "23255b2898b1ae7f71bcd5f76988ad847745b5ddeaa37c58cbc0b67858d25713",
+      "bytes": 656
     }
   ]
 }
