@@ -1,0 +1,207 @@
+{
+  "as_of": "2026-10-13",
+  "company_count": 132,
+  "maturity_counts": {
+    "PROVEN": 2,
+    "COMPANY_CAPTURE": 20,
+    "CORROBORATED": 98,
+    "ECONOMIC_LINK": 12
+  },
+  "capture_review_count": 20,
+  "review_status_counts": {
+    "VALIDATION_READY": 3,
+    "NEEDS_MORE_EVIDENCE": 17
+  },
+  "rejection_counts": {
+    "trend_gate_failed": 16,
+    "insufficient_primary_filings": 12,
+    "insufficient_economic_terms": 9,
+    "capture_score_below_minimum": 16
+  },
+  "explicit_proven": [
+    "AAON",
+    "GEV"
+  ],
+  "newly_promoted": [],
+  "preexisting_explicit_proven": [
+    "AAON",
+    "GEV"
+  ],
+  "unproven_inheritance_violations": [],
+  "reviews": [
+    {
+      "ticker": "COHR",
+      "status": "VALIDATION_READY",
+      "blockers": [
+        "trend_gate_failed",
+        "insufficient_primary_filings"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "status": "VALIDATION_READY",
+      "blockers": [
+        "trend_gate_failed",
+        "insufficient_primary_filings"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "status": "VALIDATION_READY",
+      "blockers": [
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "USAR",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "ETN",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "POWL",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "CRDO",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "MP",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "UUUU",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "NB",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "AMBA",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "capture_score_below_minimum"
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "PWR",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "AVAV",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings"
+      ]
+    },
+    {
+      "ticker": "KTOS",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "BAH",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "trend_gate_failed",
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    },
+    {
+      "ticker": "ON",
+      "status": "NEEDS_MORE_EVIDENCE",
+      "blockers": [
+        "capture_score_below_minimum",
+        "insufficient_primary_filings",
+        "insufficient_economic_terms"
+      ]
+    }
+  ],
+  "rule": "Rejection reasons overlap. Trend proof alone never establishes company capture; existing explicit primary proofs are distinct from new promotions."
+}
