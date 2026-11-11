@@ -1,0 +1,40 @@
+name: ORACLE daily observation
+on:
+  schedule:
+    - cron: "17 05 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "oracle.py"
+      - "tests/**"
+      - ".github/workflows/daily.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oracle-daily-data
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Sample public sources
+        run: python oracle.py
+      - name: Save daily observation and billboard
+        run: |
+          git config user.name "oracle-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: daily ORACLE public-source sample"
+            git push
+          fi
