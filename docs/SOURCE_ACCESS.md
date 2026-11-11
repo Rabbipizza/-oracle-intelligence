@@ -44,3 +44,9 @@ Le catalogue \`sources/registry.csv\` répertorie 111 sources **candidates** et 
 - Conditions et droits par jeu de données avant exploitation et diffusion.
 - Suivi des budgets réels et Retry-After de chaque fournisseur, au besoin backoff persistant entre runs.
 - Éligibilité de la source au Billboard selon mode de mesure et historique, et qualité d'une éventuelle stratégie de repli.
+
+## Adaptateur API et cadences (implémentés)
+
+Les futures clés `FREE_KEY` exigent un nom de variable d'environnement `required_env` et un en-tête `auth_header` explicite (ex. `X-API-Key`). Aucun secret n'est inclus dans les journaux, fichiers ni commits. Les fournisseurs qui exigent une clé dans l'URL nécessitent un connecteur spécifique ; on ne génère pas de paramètre sans validation.
+
+Le planificateur prend désormais en charge `DAILY`, `EVENT_DRIVEN`, `WEEKLY`, `MONTHLY`, `QUARTERLY`, `ANNUAL`. Un jour non planifié est `SKIPPED_CADENCE`, non `EMPTY` et non zéro dans les tendances. Une requête HTTP 429 ne déclenche pas de tentative agressive.

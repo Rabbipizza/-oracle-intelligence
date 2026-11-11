@@ -1,9 +1,12 @@
 import io
 import unittest
+import os
+from datetime import date
+from unittest.mock import patch
 import urllib.error
 from oracle_access import (
     AccessBlocked, BoundedFetcher, OversizedPayload,
-    access_decision, classify_error, policy_for, source_health_meta
+    access_decision, classify_error, policy_for, source_health_meta, should_poll
 )
 
 BASE = {
@@ -18,7 +21,8 @@ BASE = {
     "families": {"rss": {"max_items": 10}},
     "sources": {
         "open": {"approved": True},
-        "key": {"access": "FREE_KEY", "approved": True, "required_env": "SECRET_TOKEN"},
+        "key": {"access": "FREE_KEY", "approved": True, "required_env": "SECRET_TOKEN",
+                "auth_header": "X-Api-Key"},
         "limited": {"access": "LIMITED", "approved": True},
         "paid": {"access": "LICENSED", "approved": True},
         "manual": {"access": "MANUAL", "approved": True},
@@ -44,6 +48,31 @@ class SourceAccessTests(unittest.TestCase):
         p = policy_for(source("key"), BASE)
         self.assertEqual(access_decision(p, {}), "AUTH_REQUIRED")
         self.assertIsNone(access_decision(p, {"SECRET_TOKEN": "provided"}))
+
+    def test_free_key_is_passed_only_to_configured_header(self):
+        p = policy_for(source("key"), BASE)
+        calls = []
+        def reader(url, **kwargs):
+            calls.append(kwargs)
+            return b"ok"
+        with patch.dict(os.environ, {"SECRET_TOKEN": "sample-secret"}, clear=False):
+            self.assertEqual(BoundedFetcher(p, reader)("https://example.org"), b"ok")
+        self.assertEqual(calls[0]["headers"]["X-Api-Key"], "sample-secret")
+
+    def test_weekly_and_monthly_polls_not_misreported(self):
+        p = policy_for(source("open"), BASE)
+        p["poll_cadence"] = "WEEKLY"
+        self.assertTrue(should_poll(p, date(2026, 11, 9)))
+        self.assertFalse(should_poll(p, date(2026, 11, 10)))
+        p["poll_cadence"] = "MONTHLY"
+        self.assertTrue(should_poll(p, date(2026, 12, 1)))
+        self.assertFalse(should_poll(p, date(2026, 12, 2)))
+        p["poll_cadence"] = "QUARTERLY"
+        self.assertTrue(should_poll(p, date(2027, 1, 1)))
+        self.assertFalse(should_poll(p, date(2027, 2, 1)))
+        p["poll_cadence"] = "ANNUAL"
+        self.assertTrue(should_poll(p, date(2027, 1, 1)))
+        self.assertFalse(should_poll(p, date(2027, 4, 1)))
 
     def test_limited_requires_explicit_review(self):
         p = policy_for(source("limited"), BASE)

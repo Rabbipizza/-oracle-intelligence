@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import os
 import socket
+from datetime import date
 from functools import lru_cache
 from pathlib import Path
 from threading import Lock
@@ -48,7 +49,9 @@ def policy_for(source, config=None):
     policy.update(explicit)
     if policy.get("access") not in ACCESS_TYPES:
         raise AccessBlocked("NOT_CONFIGURED")
-    if policy.get("access") == "FREE_KEY" and not policy.get("required_env"):
+    if policy.get("access") == "FREE_KEY" and not (
+        policy.get("required_env") and policy.get("auth_header")
+    ):
         raise AccessBlocked("NOT_CONFIGURED")
     for field in ("max_items", "timeout_seconds", "max_payload_bytes", "max_requests_per_run"):
         if not isinstance(policy.get(field), int) or not 1 <= policy[field] <= (5_000_000 if field=="max_payload_bytes" else 1000):
@@ -74,6 +77,21 @@ def access_decision(policy, env=None):
     if access == "FREE_KEY" and not env.get(secret, ""):
         return "AUTH_REQUIRED"
     return None
+
+def should_poll(policy, today: date):
+    """Poll at each source's own cadence; never synthesize zero observations."""
+    cadence = policy.get("poll_cadence", "DAILY")
+    if cadence in ("DAILY", "EVENT_DRIVEN"):
+        return True
+    if cadence == "WEEKLY":
+        return today.weekday() == policy.get("poll_weekday", 0)
+    if cadence == "MONTHLY":
+        return today.day == policy.get("poll_day", 1)
+    if cadence == "QUARTERLY":
+        return today.month in (1, 4, 7, 10) and today.day == 1
+    if cadence == "ANNUAL":
+        return today.month == 1 and today.day == 1
+    raise AccessBlocked("NOT_CONFIGURED")
 
 def classify_error(exc):
     if isinstance(exc, AccessBlocked):
@@ -112,11 +130,18 @@ class BoundedFetcher:
             if self.requests >= self.policy["max_requests_per_run"]:
                 raise RequestBudgetExceeded("Source request budget exceeded")
             self.requests += 1
-        return self.reader(
-            url,
-            timeout=self.policy["timeout_seconds"],
-            max_bytes=self.policy["max_payload_bytes"],
-        )
+        kwargs = {
+            "timeout": self.policy["timeout_seconds"],
+            "max_bytes": self.policy["max_payload_bytes"],
+        }
+        if self.policy["access"] == "FREE_KEY":
+            key = os.environ.get(self.policy["required_env"], "")
+            if not key:
+                raise AccessBlocked("AUTH_REQUIRED")
+            kwargs["headers"] = {
+                self.policy["auth_header"]: self.policy.get("auth_prefix", "") + key
+            }
+        return self.reader(url, **kwargs)
 
 def source_health_meta(policy):
     return {"access": policy["access"],

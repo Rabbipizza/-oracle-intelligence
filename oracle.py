@@ -23,7 +23,7 @@ from oracle_billboard import source_snapshots, source_billboards
 from oracle_pipeline import create_research_queue
 from oracle_access import (
     AccessBlocked, BoundedFetcher, OversizedPayload, access_decision,
-    classify_error, policy_for, source_health_meta,
+    classify_error, policy_for, should_poll, source_health_meta,
 )
 
 UTC = dt.timezone.utc
@@ -67,10 +67,12 @@ DOMAINS = [
     "commodities", "supply_chain", "health", "markets",
 ]
 
-def get_bytes(url: str, *, timeout=16, max_bytes=3_000_000) -> bytes:
-    req = urllib.request.Request(url, headers={
+def get_bytes(url: str, *, timeout=16, max_bytes=3_000_000, headers=None) -> bytes:
+    request_headers = {
         "User-Agent": USER_AGENT, "Accept": "application/json, application/rss+xml, application/xml",
-    })
+    }
+    request_headers.update(headers or {})
+    req = urllib.request.Request(url, headers=request_headers)
     with urllib.request.urlopen(req, timeout=timeout) as response:
         data = response.read(max_bytes + 1)
     if len(data) > max_bytes:
@@ -153,6 +155,8 @@ def collect(source, now):
     decision = access_decision(policy)
     if decision:
         raise AccessBlocked(decision)
+    if not should_poll(policy, now.date()):
+        raise AccessBlocked("SKIPPED_CADENCE")
     fetch = BoundedFetcher(policy, get_bytes)
     limit = policy["max_items"]
     if kind == "rss":
