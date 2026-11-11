@@ -152,10 +152,12 @@ def terms(title: str):
     tokens = [x.casefold() for x in TOKEN.findall(title)]
     tokens = [x for x in tokens if not x.isnumeric()]
     phrases = set()
-    for n in (1, 2, 3):
+    # Single words inflate boilerplate ("notice", "show", "model").
+    # Multiword phrases are a cautious bootstrap, not semantic clustering.
+    for n in (2, 3):
         for i in range(len(tokens) - n + 1):
             seq = tokens[i:i+n]
-            if seq[0] in STOP or seq[-1] in STOP:
+            if any(word in STOP for word in seq):
                 continue
             if any(any(ch.isdigit() for ch in word) for word in seq):
                 continue
@@ -166,6 +168,8 @@ def aggregate(documents):
     counters = {domain: {"documents": 0, "terms": {}} for domain in DOMAINS}
     seen = set()
     for doc in documents:
+        if not doc["url"].startswith(("https://", "http://")):
+            continue
         identifier = (doc["source"], doc["url"])
         if identifier in seen:
             continue

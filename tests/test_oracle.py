@@ -7,6 +7,7 @@ class TestOracle(unittest.TestCase):
         result = terms("The quantum chips for data centers")
         self.assertIn("quantum chips", result)
         self.assertNotIn("the", result)
+        self.assertNotIn("quantum", result)
         self.assertNotIn("for data", result)
 
     def test_deduplicate_by_source_and_link(self):
@@ -14,7 +15,7 @@ class TestOracle(unittest.TestCase):
                "source": "s1", "family": "f1", "domain": "science"}
         data = aggregate([doc, doc])["science"]
         self.assertEqual(data["documents"], 1)
-        self.assertEqual(data["terms"]["quantum"]["count"], 1)
+        self.assertEqual(data["terms"]["quantum chips"]["count"], 1)
 
     def test_no_claim_without_history(self):
         current = {"documents": 10, "terms": {"photonics": {"count": 5, "families": ["one", "two"], "links": []}}}
