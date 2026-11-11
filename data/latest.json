@@ -1,8 +1,8 @@
 {
   "date": "2026-11-11",
-  "collected_at_utc": "2026-11-11T16:48:36.875202+00:00",
+  "collected_at_utc": "2026-11-11T16:52:48.203667+00:00",
   "schema_version": 2,
-  "status": "OK",
+  "status": "PARTIAL",
   "source_health": [
     {
       "source": "arxiv_ai",
@@ -30,6 +30,16 @@
       "documents": 111
     },
     {
+      "source": "eurlex_law",
+      "status": "OK",
+      "documents": 42
+    },
+    {
+      "source": "fed_press",
+      "status": "OK",
+      "documents": 1
+    },
+    {
       "source": "federal_register",
       "status": "OK",
       "documents": 100
@@ -50,6 +60,21 @@
       "documents": 10
     },
     {
+      "source": "google_news_fr",
+      "status": "OK",
+      "documents": 34
+    },
+    {
+      "source": "google_news_health",
+      "status": "OK",
+      "documents": 62
+    },
+    {
+      "source": "google_news_us",
+      "status": "OK",
+      "documents": 38
+    },
+    {
       "source": "google_us",
       "status": "OK",
       "documents": 10
@@ -57,7 +82,13 @@
     {
       "source": "hackernews",
       "status": "OK",
-      "documents": 57
+      "documents": 56
+    },
+    {
+      "source": "nasa_earth",
+      "status": "ERROR",
+      "documents": 0,
+      "error": "ParseError"
     },
     {
       "source": "wikipedia_en",
@@ -177,7 +208,7 @@
       "state": "INSUFFICIENT_HISTORY",
       "observed_days": 1,
       "required_days": 21,
-      "documents_today": 57,
+      "documents_today": 56,
       "top5": [],
       "preview_unranked": []
     },
@@ -200,6 +231,72 @@
       "observed_days": 1,
       "required_days": 21,
       "documents_today": 500,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_news_us": {
+      "source_id": "google_news_us",
+      "source_name": "Google News US",
+      "domain": "news",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 38,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_news_fr": {
+      "source_id": "google_news_fr",
+      "source_name": "Google News France",
+      "domain": "news",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 34,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_news_health": {
+      "source_id": "google_news_health",
+      "source_name": "Google News Santé",
+      "domain": "health",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 62,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "nasa_earth": {
+      "source_id": "nasa_earth",
+      "source_name": "NASA Earth Observatory",
+      "domain": "geography",
+      "state": "NO_DATA",
+      "observed_days": 0,
+      "required_days": 21,
+      "documents_today": 0,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "fed_press": {
+      "source_id": "fed_press",
+      "source_name": "Federal Reserve Press",
+      "domain": "macroeconomics",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 1,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "eurlex_law": {
+      "source_id": "eurlex_law",
+      "source_name": "EUR-Lex Acts",
+      "domain": "geopolitics",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 42,
       "top5": [],
       "preview_unranked": []
     },
@@ -314,9 +411,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda"
           ]
         },
         {
@@ -398,9 +495,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Godzilla_Minus_Zero",
             "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
-            "https://en.wikipedia.org/wiki/Godzilla_Minus_One"
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_One",
+            "https://fr.wikipedia.org/wiki/Godzilla_Minus_Zero"
           ]
         },
         {
@@ -412,9 +509,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
             "https://fr.wikipedia.org/wiki/Hunger_Games_%28s%C3%A9rie_de_films%29",
-            "https://fr.wikipedia.org/wiki/Hunger_Games_%3A_Lever_de_soleil_sur_la_moisson_%28film%29",
-            "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping"
+            "https://fr.wikipedia.org/wiki/Hunger_Games_%3A_Lever_de_soleil_sur_la_moisson_%28film%29"
           ]
         },
         {
@@ -426,9 +523,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
             "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
           ]
         },
         {
@@ -454,9 +551,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
             "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
           ]
         },
         {
@@ -468,9 +565,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Russell_Brand",
             "https://en.wikipedia.org/wiki/Russell_Brand",
-            "https://en.wikipedia.org/wiki/The_Russell_Brand_Show_prank_calls"
+            "https://en.wikipedia.org/wiki/The_Russell_Brand_Show_prank_calls",
+            "https://fr.wikipedia.org/wiki/Russell_Brand"
           ]
         },
         {
@@ -504,15 +601,15 @@
       ]
     },
     "social": {
-      "documents": 57,
+      "documents": 56,
       "historical_days": 0,
       "state": "EXPLORATORY",
       "top20": [
         {
           "term": "coding agent",
-          "score": 6.113,
+          "score": 6.131,
           "mentions": 2,
-          "rate_per_10k": 350.88,
+          "rate_per_10k": 357.14,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -523,9 +620,9 @@
         },
         {
           "term": "your coding",
-          "score": 6.113,
+          "score": 6.131,
           "mentions": 2,
-          "rate_per_10k": 350.88,
+          "rate_per_10k": 357.14,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -536,9 +633,9 @@
         },
         {
           "term": "your coding agent",
-          "score": 6.113,
+          "score": 6.131,
           "mentions": 2,
-          "rate_per_10k": 350.88,
+          "rate_per_10k": 357.14,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -550,10 +647,131 @@
       ]
     },
     "news": {
-      "documents": 0,
+      "documents": 72,
       "historical_days": 0,
-      "state": "NO_DATA",
-      "top20": []
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "york times",
+          "score": 6.977,
+          "mentions": 6,
+          "rate_per_10k": 833.33,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcWFLTDF5cU9QNlRYMjdaeTI3aVhUNE9xS2Z5c2M0ZGcwdjJscnZMZjN5ak9rLXlvRnBHSV93bFhsVUg4Znp5c1F6aW5RNklCRUdBWFV5OHpYMkM5OUQ3SXZkZS1zTDJIcFgzSjk4U0x3eGUtS2ZYSV9HVTVMb3Z5OQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOHg4SG1YVGVmd216dVkydUxNRERxZjZTOHdORS16MldQUzBrXzl0Z3RmZ0VJeVplWFBZdlZUbExVSHBlSGt3VUtmUll4TzZoaGhRY3p6RzJocXVZVU1iSzk2R2VaY3NoUzBPQTVsTGtjemRLUFcwbmQ1S1hlRWlVMHNhQmtSaDAwQXlETjZrNmFLWVJjUHJXN202cDU3ZE5ZS0ww?oc=5"
+          ]
+        },
+        {
+          "term": "cbs news",
+          "score": 6.285,
+          "mentions": 3,
+          "rate_per_10k": 416.67,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMie0FVX3lxTE51eTQ5MU1ubjg3bmZUVTZzeWEybXBuNEVWZkY2U2pmR2JmbXl4TGhlaGRSN3hjOVdIM045Um1QR1U0bGplMFZyQ0w0cy03d18tTDRIRnU2SkRsSGExRlNMWjhTcnMwblVLLTduVFVFX253Z3ZXYkFQTm5Yaw?oc=5",
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
+            "https://news.google.com/rss/articles/CBMif0FVX3lxTE80TE5qSEk1OUxBdXR4NFRIakNuN2NlTm1qSXBXZGNlekl6R3gzaFpHbkJZWmlRdGszZ3JJR0l6STQ3MEJ6TnF3cjZZNWo3ZUdqMTktTm8tbXVmMEFoTTV1a2RjZHpXa3RlM1pXLU5mOHZCWE9iNmZKNENzQl9JMjg?oc=5"
+          ]
+        },
+        {
+          "term": "nbc news",
+          "score": 6.285,
+          "mentions": 3,
+          "rate_per_10k": 416.67,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS0dUSlVUZVJOSEpEOWVaeFQyWTZiMU5GdnhXM1dGb0pFc3RCcmJYU1RJcFFWMGZRcE9EY3ZhV0Nid3dsODFIZkVPM2pCTFBnSHg4b2ZWRVh3b2N2TE5ta2psYXp6R2w4aXF6R1ZPdzBvVDd6a1NYNDF2ZTlVdTVJUVhpZmNyaUh1TEF6bGVGb2lJRk5qMGZmU0ZOSDY0RkpTZzJpVHFHVlIxdDNFc0dTTFF0QWRiUQ?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxObUg1MUdUTG4wV2hURXN2OXN5aWp0cHNUMTEycXN3a3BBejZraTBGd1dyS2tjdFR4a2JZbkVGVjVMNXo2VUhwZjJlQnpsTFhJR0R6bjh5WENRMzdZVmRlUHpwLVUzdzRZMEdhUmg0Ymw0bFNYbkViNmk5R1RpNExid1R5a2RBQ2xjSVl5NGdQMy1pT0w3WXBMTWtRc2VHN2RZMjNkb1JxYw?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVF9tVWd5YlFSaS1lYlpydWIzRzlIbHNkRHExVlNvNXZqbjJVZHNyMGpnb0dEVmhHM08zbFBHblI2OWNRMlkxLW56dGhlamRsWVUtN243a0t1eUQ2QVh4UlV1d0NUSS1KOEUtOGFfVEtNaUtUWXF6REFMSHhrZVpaNWMwT1gxbzVJUVBia1RyaGdoVDV1R3EyMVVITEwwdXVsYlVfQQ?oc=5"
+          ]
+        },
+        {
+          "term": "commémoration novembre",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSG53OS05aTl0akFKTGZNMWo2ZFNVYmVicm9CZVhUVC1wb2lRcHhWdXRXbHc5UV9iX2dNQWZMTTRVdzMtb3hrX210VmxVbkNFeEJPcmM5UU9KaFR0NEduS0E5TWloa1FoV3Nxc2hicGtYaUt5X180MF9xSkl4dTFNWmNqWUstQXlUazVqdVQwejVaTXgzT2dXNElmaWxoNFF0cUVNdzRmck1saXEtSFNMVHFCWUg2dTh3RF9UcWpRWGVPNUlhSXBVNjRmV1JnRTl1QUNN?oc=5",
+            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5"
+          ]
+        },
+        {
+          "term": "hegseth impeachment",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRGhlVThwT2hMM1VuY2FNM21GbFloXzRZYWNYeDRJVG5ZTkRuLTVfRW9pMElCNzVpOXQzOWtETXN3ck9xZWVZaWRSQ0JQWXBiblRnNlJNb2pnbWdCOGphYUhsb3RzOHF1aXZFODZ2WFJLZldEaVItUktER3FCdEdnTUV3ZG9RczIyUUljQWxuV05iQ0dTR2w0QXFkLTFLeHI2bzQ0ajlXZkNGelhkamRtUHln?oc=5",
+            "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GWDRUZGRSX05ZVmdtMTAxeHYzZmpZMXcwek51d3pJal9KTldSb2FjUkhGM3hnbTJselJSdzI4VjlVVWZzNkE3X0d2MER5aExTREZmSy1Qblp0SHpxaVdZZTF2SlZqbnY3c3Fz?oc=5"
+          ]
+        },
+        {
+          "term": "mike hammer",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
+            "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPUEhRNDNISEVESjQ3THBJWU55RVhadXZleHFUajNVNjUtTnFOdEFyeVZ6clJ5YjR1ME5pWTVUdWJnWnZBQjFXTDZNTGQ4c1NqaWFaZGptSDFSV0NqNW5YM2tXelZZdlJSVnVicEVNcVV5TlkwTU1kVXJBT0h2bE1oaFdVRks5YV9Xd1RQN2JscktDZ3ozeVJnMm5BQlhFOXJrMHRzcjNJQmxQN2cwVUtKMlFDTXlXWXN4U2hUeWozMXVfSlpnYXF2RVJ0WlZHZmtjSEpqTjdxNkRyVk9xT1lCc202TU5WX3VveElv?oc=5"
+          ]
+        },
+        {
+          "term": "santé mentale",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQTzIwTE01VnVJZDFYaUw0SnA2ZnkyamFWbG1lWGltalR5LVdrT1k4d1g5Q3F4TWJVNktyaWpSUXZuTmJlUzRUUUU2ZUR5eWRBTWJaak9Vck1vSkpncGhsM2lYdFNrX2llekRtaFpERW1RRHZ5UHlha0o5T3VvclVzN0NpVXR4WlZvbjN1cDlNLWRrMmxJZ2QtVGpIYjIxQjF0MkhEakdUZXJya2NGbVllaExSanRya2trNzFuZWtta0pqc1lScVZfaWRVeGRlNi1INFM4MzZqODBEeG5xdEpjR2s5alFHVi1SOGc?oc=5",
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxQV3o5OFV2UWhZSUgydFNuMXRZUThSY1R3NDItNldmLUdLNEhtbHBrYW91M1R6bVIxNDZNWEU1YWpwWVp4NkN0QkJfbkZnMktfTVlmb2lYUFJEY0FoR2VFN2djNmdWellGRlRWYkVxRExxcjNqMWlHUUNBTlREc0MtMmhwNWphZDRGN00wU28teXJHZzd5TW5seFBRNEoxUk9qZHVKcEw2X2EtSHR5V1lFVDU2VjJ5Zw?oc=5"
+          ]
+        },
+        {
+          "term": "stacy keach",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
+            "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPUEhRNDNISEVESjQ3THBJWU55RVhadXZleHFUajNVNjUtTnFOdEFyeVZ6clJ5YjR1ME5pWTVUdWJnWnZBQjFXTDZNTGQ4c1NqaWFaZGptSDFSV0NqNW5YM2tXelZZdlJSVnVicEVNcVV5TlkwTU1kVXJBT0h2bE1oaFdVRks5YV9Xd1RQN2JscktDZ3ozeVJnMm5BQlhFOXJrMHRzcjNJQmxQN2cwVUtKMlFDTXlXWXN4U2hUeWozMXVfSlpnYXF2RVJ0WlZHZmtjSEpqTjdxNkRyVk9xT1lCc202TU5WX3VveElv?oc=5"
+          ]
+        },
+        {
+          "term": "veterans day",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
+            "https://news.google.com/rss/articles/CBMie0FVX3lxTE51eTQ5MU1ubjg3bmZUVTZzeWEybXBuNEVWZkY2U2pmR2JmbXl4TGhlaGRSN3hjOVdIM045Um1QR1U0bGplMFZyQ0w0cy03d18tTDRIRnU2SkRsSGExRlNMWjhTcnMwblVLLTduVFVFX253Z3ZXYkFQTm5Yaw?oc=5"
+          ]
+        }
+      ]
     },
     "technology": {
       "documents": 492,
@@ -583,9 +801,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.12937",
-            "https://arxiv.org/abs/2611.12954",
-            "https://arxiv.org/abs/2611.14285"
+            "https://arxiv.org/abs/2611.12954"
           ]
         },
         {
@@ -625,9 +843,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.12940",
-            "https://arxiv.org/abs/2611.13161",
-            "https://arxiv.org/abs/2611.13712"
+            "https://arxiv.org/abs/2611.14186",
+            "https://arxiv.org/abs/2509.19573",
+            "https://arxiv.org/abs/2611.12940"
           ]
         },
         {
@@ -639,9 +857,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.06817",
             "https://arxiv.org/abs/2611.12942",
-            "https://arxiv.org/abs/2611.13402",
-            "https://arxiv.org/abs/2611.13849"
+            "https://arxiv.org/abs/2611.13402"
           ]
         },
         {
@@ -667,9 +885,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.08577",
             "https://arxiv.org/abs/2611.12936",
-            "https://arxiv.org/abs/2611.13512",
-            "https://arxiv.org/abs/2611.14519"
+            "https://arxiv.org/abs/2611.13512"
           ]
         },
         {
@@ -681,9 +899,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.13127",
-            "https://arxiv.org/abs/2611.14285",
-            "https://arxiv.org/abs/2611.10285"
+            "https://arxiv.org/abs/2611.14285"
           ]
         },
         {
@@ -695,9 +913,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.13113",
-            "https://arxiv.org/abs/2611.14419",
-            "https://arxiv.org/abs/2606.26969"
+            "https://arxiv.org/abs/2611.13229",
+            "https://arxiv.org/abs/2611.13592",
+            "https://arxiv.org/abs/2611.13113"
           ]
         },
         {
@@ -1118,21 +1336,35 @@
       "top20": []
     },
     "macroeconomics": {
-      "documents": 0,
+      "documents": 1,
       "historical_days": 0,
-      "state": "NO_DATA",
+      "state": "EXPLORATORY",
       "top20": []
     },
     "geopolitics": {
-      "documents": 100,
+      "documents": 142,
       "historical_days": 0,
       "state": "EXPLORATORY",
       "top20": [
         {
+          "term": "commission implementing",
+          "score": 7.278,
+          "mentions": 16,
+          "rate_per_10k": 1126.76,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
           "term": "inventory completion",
-          "score": 7.495,
+          "score": 7.145,
           "mentions": 14,
-          "rate_per_10k": 1400.0,
+          "rate_per_10k": 985.92,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1144,9 +1376,9 @@
         },
         {
           "term": "notice inventory",
-          "score": 7.495,
+          "score": 7.145,
           "mentions": 14,
-          "rate_per_10k": 1400.0,
+          "rate_per_10k": 985.92,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1158,9 +1390,9 @@
         },
         {
           "term": "notice inventory completion",
-          "score": 7.495,
+          "score": 7.145,
           "mentions": 14,
-          "rate_per_10k": 1400.0,
+          "rate_per_10k": 985.92,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1171,10 +1403,66 @@
           ]
         },
         {
-          "term": "intended repatriation",
-          "score": 7.159,
+          "term": "european parliament",
+          "score": 6.904,
+          "mentions": 11,
+          "rate_per_10k": 774.65,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2486"
+          ]
+        },
+        {
+          "term": "commission implementing regulation",
+          "score": 6.809,
           "mentions": 10,
-          "rate_per_10k": 1000.0,
+          "rate_per_10k": 704.23,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "implementing regulation",
+          "score": 6.809,
+          "mentions": 10,
+          "rate_per_10k": 704.23,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "implementing regulation november",
+          "score": 6.809,
+          "mentions": 10,
+          "rate_per_10k": 704.23,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "intended repatriation",
+          "score": 6.809,
+          "mentions": 10,
+          "rate_per_10k": 704.23,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1186,9 +1474,9 @@
         },
         {
           "term": "notice intended",
-          "score": 7.159,
+          "score": 6.809,
           "mentions": 10,
-          "rate_per_10k": 1000.0,
+          "rate_per_10k": 704.23,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1200,9 +1488,9 @@
         },
         {
           "term": "notice intended repatriation",
-          "score": 7.159,
+          "score": 6.809,
           "mentions": 10,
-          "rate_per_10k": 1000.0,
+          "rate_per_10k": 704.23,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1213,10 +1501,24 @@
           ]
         },
         {
+          "term": "regulation november",
+          "score": 6.809,
+          "mentions": 10,
+          "rate_per_10k": 704.23,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
           "term": "information collection",
-          "score": 7.054,
+          "score": 6.703,
           "mentions": 9,
-          "rate_per_10k": 900.0,
+          "rate_per_10k": 633.8,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1224,13 +1526,27 @@
             "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "united states",
+          "score": 6.367,
+          "mentions": 5,
+          "rate_per_10k": 352.11,
+          "growth_vs_28d": null,
+          "independent_source_families": 2,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23056/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-sv-bella",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23055/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-mv",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23011/inventory-of-mercury-supply-use-and-trade-in-the-united-states-2026-report-notice-of-availability"
           ]
         },
         {
           "term": "collection activities",
-          "score": 6.649,
+          "score": 6.299,
           "mentions": 6,
-          "rate_per_10k": 600.0,
+          "rate_per_10k": 422.54,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1238,13 +1554,69 @@
             "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "commission implementing decision",
+          "score": 6.299,
+          "mentions": 6,
+          "rate_per_10k": 422.54,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2488",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2478"
+          ]
+        },
+        {
+          "term": "decision november",
+          "score": 6.299,
+          "mentions": 6,
+          "rate_per_10k": 422.54,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2488",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2478"
+          ]
+        },
+        {
+          "term": "implementing decision",
+          "score": 6.299,
+          "mentions": 6,
+          "rate_per_10k": 422.54,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2488",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2478"
+          ]
+        },
+        {
+          "term": "implementing decision november",
+          "score": 6.299,
+          "mentions": 6,
+          "rate_per_10k": 422.54,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2488",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2478"
           ]
         },
         {
           "term": "information collection activities",
-          "score": 6.649,
+          "score": 6.299,
           "mentions": 6,
-          "rate_per_10k": 600.0,
+          "rate_per_10k": 422.54,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -1252,160 +1624,6 @@
             "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
-          ]
-        },
-        {
-          "term": "agency information",
-          "score": 6.467,
-          "mentions": 5,
-          "rate_per_10k": 500.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23044/agency-information-collection-activities-proposals-submissions-and-approvals-questionnaire-for"
-          ]
-        },
-        {
-          "term": "agency information collection",
-          "score": 6.467,
-          "mentions": 5,
-          "rate_per_10k": 500.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23044/agency-information-collection-activities-proposals-submissions-and-approvals-questionnaire-for"
-          ]
-        },
-        {
-          "term": "museum anthropology",
-          "score": 6.244,
-          "mentions": 4,
-          "rate_per_10k": 400.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky"
-          ]
-        },
-        {
-          "term": "airworthiness directives",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23074/airworthiness-directives-dassault-aviation-airplanes",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23068/airworthiness-directives-diamond-aircraft-industries-gmbh-airplanes",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23007/airworthiness-directives-bell-textron-canada-limited-helicopters"
-          ]
-        },
-        {
-          "term": "anthropology university",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky"
-          ]
-        },
-        {
-          "term": "anthropology university kentucky",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky"
-          ]
-        },
-        {
-          "term": "auburn university",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22995/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22991/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al"
-          ]
-        },
-        {
-          "term": "auburn university montgomery",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22995/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22991/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al"
-          ]
-        },
-        {
-          "term": "completion auburn",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22995/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22991/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al"
-          ]
-        },
-        {
-          "term": "completion auburn university",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22995/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22991/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al"
-          ]
-        },
-        {
-          "term": "eliminating regulations",
-          "score": 5.957,
-          "mentions": 3,
-          "rate_per_10k": 300.0,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23051/improving-and-eliminating-regulations-installation-of-foam-generator-systems-in-underground-coal",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23050/improving-and-eliminating-regulations-limit-on-exposure-to-diesel-particulate-matter-in-underground",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23049/improving-and-eliminating-regulations-permissible-lamps-in-underground-coal-mines"
           ]
         }
       ]
@@ -1435,10 +1653,265 @@
       "top20": []
     },
     "health": {
-      "documents": 0,
+      "documents": 62,
       "historical_days": 0,
-      "state": "NO_DATA",
-      "top20": []
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "york post",
+          "score": 6.944,
+          "mentions": 5,
+          "rate_per_10k": 806.45,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcDZwVEt1Qjc3b2tCV0NTNlhWbWxBLTFPLWkwRF83dERTZXlwbWZJWTB4X1FqcTNRdHRUZ2hkUDI0QjRHMHBTOVRqVEVEcGR1WG1pN096Sk5fMFJUenFFVy1GejVaT29Db3c2bklQVWt6aTA3bW56N2ZuZ1FGLXZHbU1Jdw?oc=5",
+            "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdFhlWXBqTmJ5RWFSdEVWRkNERl9JMzFMSHpiTllMYnNEb3NicEVFbWNSdEw1Q1p0NGhjTGxVekNJY2MzZG9UUEhXMEo4RVJlNTFBa1g5dHI3dEJqYlFwS2kxd0pPeHJXNHNheUE4cWdCaENvVUZtVDZ4bDlQTGhTUTNLUjhpNGVuNHMyR2NVTmZBd1RFR0twUEtoUTV0N3BjeWUyQ0FKUUlvdmc?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV09JbjFhaENaeWpKT09ITjdtc3d0aWRfQ2FxUFhYTXpXcE9LeGl4QVV1a3ZFVWhkaW1vLU00S2xBR2hZYWRRZTdQaVNqU2daVmhIR2libWgwTWVsTVRZY1EyY1NsRDR0ckhEc3E4dHVURVYtQ1hpVW5jVkR3Njl5ZEh1Vl80MUVIT2IzcTU4a2xzVWI5c3I1NGdpSU95MUZwcVFhSg?oc=5"
+          ]
+        },
+        {
+          "term": "medical xpress",
+          "score": 6.721,
+          "mentions": 4,
+          "rate_per_10k": 645.16,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhS1RYZm8yTzk0WEEza1lnRnYtSGY0Q1hBa1dGSHA5SDNLRW9QdnhhckN2cjAyOFF5NjcxaGxoNzFGdW1UVUhZSjZPeEswd05SalJiZEJkNk1EVnBjRUZZX2RJVnQxSkJZWWRKR2U5MUNWSGJNUXZB?oc=5",
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZHFYUjZvRDZOTk1xZXcweUJ0bEpMZ19JbmpSZG5oRG1KWU56YXd2b1ZjVnMwR1U5MTNpVU41ZDc4czNfT3VkYlB4czZwbkZfVGp3STk1T3AyYlMtQkZoSzE2TXFLMVJmNHdtN014eEZlRlBkSDVEeWtPUnBsTTlueg?oc=5",
+            "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUzJMZkd2SmJ3NElPajVyNzhnci1nMjlPbUwwZ0FxR0EwREJHWVFxTUpGcHFrUDY5Tm9yaHR1RGM0cU56dVRMMUdGejBVSWY3NDZEZ3p6UFlJX0wtN1VXYzlDdHdfMDdHQWduWUMxLXI4aUYtYTZLSGFPblhCaUNvVEJFU2FEcFdNdFE?oc=5"
+          ]
+        },
+        {
+          "term": "science daily",
+          "score": 6.721,
+          "mentions": 4,
+          "rate_per_10k": 645.16,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE94eTRLNU1XSDlIcVkxMENhTUlrdFpQRUowUHdZU3d5YkliN1lXUzNCZFhtRjJCZEJ3T3BmNnUzRUdPZy0xMGpiclp0YVVzMzdtLWp1bWtFcUhNVlAzbnFobGk4THA0ejJ4dHBlWlg0dw?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE54S05QNXZCdF9HX2t3eS1SRThzajdRd3pXTFVDRjdzU3BLZlB1NFVPd1ZjR1UyREo4RFhzRkdTdEFkblF6S0x5Y0tpU1BsRi1xZWwtREQxcHpQRTN6TnBnQjc5Yy03QXpmMXJqdnhjSQ?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ldU54V3pZb19Ra1dpYlJKSlZWN3lKelFLOUhNaFhPNTZIZVNaeWFXQlVQczYxQkhzRzNKVnZhVTNqaE1fLWRRNnczcTd6ZzQ2QTBxVkk4SWF2aXFQU0djaFVTQThYV3RwdXY3QUR3NA?oc=5"
+          ]
+        },
+        {
+          "term": "study finds",
+          "score": 6.721,
+          "mentions": 4,
+          "rate_per_10k": 645.16,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
+          ]
+        },
+        {
+          "term": "washington post",
+          "score": 6.721,
+          "mentions": 4,
+          "rate_per_10k": 645.16,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHY4NEJfR0xmZlFrS2pLVVZiSEpSa2xLV0p5OFo1M0I0RVUtTmtFcElhOTZwa1NsbTdIVFBOTFJRc2hhc3hMcDdYbFNEYXpzcTFKQWIxVi0yaGVCbUlKYVpBVEpxMGNoanFzM1lTeHQwRDlGWlBCUjRjSk1RZ2w2dkZuWjRGSUxHbHBwLVNIWXZ4Z1dGS0NvaHFGT1A1bFdVUFZmM0Z1aEh4Ym9EeGRSUEViTml5Zw?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
+          ]
+        },
+        {
+          "term": "fox news",
+          "score": 6.434,
+          "mentions": 3,
+          "rate_per_10k": 483.87,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVnlCNDUyRzZKZC16b09zQWFxdi1vd0RZQjNVeFltbzhlMzVOVHo4dWFyRTVSaFltazV4b0JDNEQ1M3pmZWl1d0ROMkNBWm9fTWNlbXI0WXdDYkJWYkhYR2p5YU13S3hTMlNUZU1OMXV0cHNkRjNDd0YydU4wdWljTE1vUmRtdUhMUF9odFMwekZSUjZLY3NUZmhYZjRkam1ZaGfSAacBQVVfeXFMTjJNZlV4UXFDdkNqQmR6WGtMMVJIeDA1RFk2X1RObDI1R2hBZElPd0hqVktPTEJERzJ1QU9hQVEwSjljWjdfZ2tzWTNXTHJFQlRGTWpaWnhHajhBZnhabHFMQzNkU085NE4wQjZxX29MSHQtTUs0QVpqS09UampnMjloZV82SWJfVGdsa1d1STRGbmU4V2N0MnFQWUlpV0ljTXhrdXJCdWM?oc=5",
+            "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZG1IUnVOd01yd1NBUmRJellHVHptNGc1bU44cTV1YU54Q0VONDhJQVR6dlczZ2pacFl2RTN2RVZLNDhXbHQxOGRTYXBRMnRQYl9OVWtEYmoxYmplNGpDaUgwQWRqWHFGUXV6WlF4WG1ZRFo5SXMzWFVPanl0Vkd5clpLU0drd3BGbGNnamF0VjhyaWJiTjYxc2E0d9IBoAFBVV95cUxOTWtWV3RfZzR1eVRUcGV6OVRjRVkzRWJvOVJtclBHTEw5cUhHcElzRmZYVmRaX1llRE5IYkVIS2NhVFRZQUNHdjZrTUltcFdHNUg0SG5BWExFenEtSDYwTkpkR2Q1TGsyYW93bW9UOVp4ZlBwMzZSYXZqUWNPbXJSajBFdE0yLXBKVEtENWRJSVR6d2ROZEZzSjJGZkRFRk1q?oc=5",
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSHpJWTNhV1ZOVDhMTmctWXZfYU1vQW4zYU52M0U3eVpsS3NydExDUzktWnFUTkZfYnA3algxdktUeThHczRBTjFiYXUwRzdyZ0tHbGtOd1oybzFSajNGUDVUSnl0Qk9EbnFXTUdTbm1HWkhHdTU4YnhaMWpZQUJJRllYNnFxcnhOM3Q1WGlzdG5uZ3AwOUs0QTRBTmlGamvSAaQBQVVfeXFMTmVGczhVbS1QdVd1b3ZrZTRUVkR0UVlyRHBmZXdmOEQyZHdLcWpiY1VTMkF2eGtvZ2JpSkZWM3daZGU0Qk8xNUdBd1UwczRuOUF5UHBLaV9oakE1SWQ3Y2lNZ1J3RHI4U3YzWHZpbHQ3RkNqeWp2VmdjV1FLQUlldzc1d0xROWlmbDhJSWdfNklvelFuTWpKbXdMVV9iSnlKekwySVY?oc=5"
+          ]
+        },
+        {
+          "term": "phys org",
+          "score": 6.434,
+          "mentions": 3,
+          "rate_per_10k": 483.87,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5",
+            "https://news.google.com/rss/articles/CBMic0FVX3lxTFA5aUU1WGJldjFiX3dabDk5ZXNHVEt1QjVRNUIwWkFnR3JvaVR1S2o4TlFjdzJzMGVqeU1HWElJSEZlbGV5SHdmUGFIbmNGRVFBaE5yT0kzVXF1aEF3cUlrYWFDaVA4M25hS0VQLU1LQmltQ28?oc=5",
+            "https://news.google.com/rss/articles/CBMihgFBVV95cUxORmszTXpIUWJCY3pxVWpnV0lVeXpvd2tvVGZlTWlrc1hfekIyUjRhTUE0blNlZzlCS0NIVFE3LXBjNjFXSXFiemdxRzdhczA3dXZoNUtIZTFrZW91dzdBVldSYTBJSVJ0QmpYd3VURmJQekhvclJZMFFZNkZ5Q2tlb1RoVnVUZw?oc=5"
+          ]
+        },
+        {
+          "term": "abc news",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0NEQlZVejBJWGN2UUwyc09hYmNqX3NEemhXamFaRDNCUWsxMElOS19nMEd4RWJ2ZnVpaG14SVBINHVoUUFFcVpXeEYxZkx2NkI3eWd6X18tRFNENng5ZXBld3I4SmZZbzVDS0RiTUJEMU1pdHhidmU2ek8zVF9sdEJ4STQ5YmIza0hidkJNVmFiWktoMWJCV3d5ZmxLeDg?oc=5",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
+          ]
+        },
+        {
+          "term": "abc news breaking",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0NEQlZVejBJWGN2UUwyc09hYmNqX3NEemhXamFaRDNCUWsxMElOS19nMEd4RWJ2ZnVpaG14SVBINHVoUUFFcVpXeEYxZkx2NkI3eWd6X18tRFNENng5ZXBld3I4SmZZbzVDS0RiTUJEMU1pdHhidmU2ek8zVF9sdEJ4STQ5YmIza0hidkJNVmFiWktoMWJCV3d5ZmxLeDg?oc=5",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
+          ]
+        },
+        {
+          "term": "breaking news",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0NEQlZVejBJWGN2UUwyc09hYmNqX3NEemhXamFaRDNCUWsxMElOS19nMEd4RWJ2ZnVpaG14SVBINHVoUUFFcVpXeEYxZkx2NkI3eWd6X18tRFNENng5ZXBld3I4SmZZbzVDS0RiTUJEMU1pdHhidmU2ek8zVF9sdEJ4STQ5YmIza0hidkJNVmFiWktoMWJCV3d5ZmxLeDg?oc=5",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
+          ]
+        },
+        {
+          "term": "heart attack",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHY4NEJfR0xmZlFrS2pLVVZiSEpSa2xLV0p5OFo1M0I0RVUtTmtFcElhOTZwa1NsbTdIVFBOTFJRc2hhc3hMcDdYbFNEYXpzcTFKQWIxVi0yaGVCbUlKYVpBVEpxMGNoanFzM1lTeHQwRDlGWlBCUjRjSk1RZ2w2dkZuWjRGSUxHbHBwLVNIWXZ4Z1dGS0NvaHFGT1A1bFdVUFZmM0Z1aEh4Ym9EeGRSUEViTml5Zw?oc=5",
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZHFYUjZvRDZOTk1xZXcweUJ0bEpMZ19JbmpSZG5oRG1KWU56YXd2b1ZjVnMwR1U5MTNpVU41ZDc4czNfT3VkYlB4czZwbkZfVGp3STk1T3AyYlMtQkZoSzE2TXFLMVJmNHdtN014eEZlRlBkSDVEeWtPUnBsTTlueg?oc=5"
+          ]
+        },
+        {
+          "term": "heart attacks",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQVJTbnFpQlpYczUtQV90VWhEa0xNcFkxcnh5eEMxVVZDbFpDR3hKY0hJaE1GWWd4NkhkVWRfZTNkOER4V1dIeDdwMmc3X19CQmFrdEJwMjdSSXk1dUpReFdaLXF5Yi1sSm1LdkRIYWd5UDAybTVNT01BdzlkcndpekVyRzFCa3pIU3c?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRk1ZVFFDUkN1MnVmUjU3RHBYdHFCOHZ2c1NjVlBxNjJPYlQ3VC1XWVA3a3Q4Q2lSY2R2ZlRxVjFaNjlTWFJVdnp4QTRFYTlzUXB3Vm5PVlBhQTlkc3hVTXNTT2xWRmx4WVNrUEh1Yw?oc=5"
+          ]
+        },
+        {
+          "term": "immune system",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQi1MVFVnbWtrZzhpUndkVWNSOElxT1k5QkYzdHVDdE1jeDNxMzM3YWg4enRfNDc5OW81LTVEM1V4NTB2N3JXWTdtb0g4c0o5eGxyT09KOWY5bVR1UXdWWkNQZ2lQZzZpZjJEM2djLW4teG5KNDZJRkN1MnJTSDJKWHk2WC1uMHVPVnZreGlNcEFyOGJvdXFhUVJWazRwTXpUUExNeVFVQ1RETGV4Ykx3UUJYLWg?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOUZmMVUyenU0NUFybmNIckM4bW9iZWpiWkE4RzVNQ2xoVmtXZW9jVkxncThpakVzR2h6cjRzVzVWNVYwTWtYYlBvSl9YbGo2U1dGOEVySmhyTXVSSGU3cVVCQkdvOGp2SFhwUXl2Vmh3UFdmVEJYY1ZaWmFnVVp6cHB0UVZvMjlLNW81dkZPbGJrVi1EMnhNN0xiam1RM25yV1NPWg?oc=5"
+          ]
+        },
+        {
+          "term": "nbc news",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVF9tVWd5YlFSaS1lYlpydWIzRzlIbHNkRHExVlNvNXZqbjJVZHNyMGpnb0dEVmhHM08zbFBHblI2OWNRMlkxLW56dGhlamRsWVUtN243a0t1eUQ2QVh4UlV1d0NUSS1KOEUtOGFfVEtNaUtUWXF6REFMSHhrZVpaNWMwT1gxbzVJUVBia1RyaGdoVDV1R3EyMVVITEwwdXVsYlVfQQ?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzlVdy1tRjFwUGtxZmRHcm5tbVB6VzBmN2s4UjRkOUFmd0dqY0I2T3YzQ1pPbzdwQVByeU1HcXBYbEJGdVAwQ0M2dEVEWVdReEtLcDJ6LWZWX2xTdEpBY3NFUFdkNnVWVkJFdl81TEZGMm05WFphNUoxaS1WVGJiWkEzcTRBdzBjOWxRN2JucTQ3TFEtMUZ6ZzhubzJyNzhEWnptSmVGRQ?oc=5"
+          ]
+        },
+        {
+          "term": "news breaking",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0NEQlZVejBJWGN2UUwyc09hYmNqX3NEemhXamFaRDNCUWsxMElOS19nMEd4RWJ2ZnVpaG14SVBINHVoUUFFcVpXeEYxZkx2NkI3eWd6X18tRFNENng5ZXBld3I4SmZZbzVDS0RiTUJEMU1pdHhidmU2ek8zVF9sdEJ4STQ5YmIza0hidkJNVmFiWktoMWJCV3d5ZmxLeDg?oc=5",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
+          ]
+        },
+        {
+          "term": "news breaking news",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0NEQlZVejBJWGN2UUwyc09hYmNqX3NEemhXamFaRDNCUWsxMElOS19nMEd4RWJ2ZnVpaG14SVBINHVoUUFFcVpXeEYxZkx2NkI3eWd6X18tRFNENng5ZXBld3I4SmZZbzVDS0RiTUJEMU1pdHhidmU2ek8zVF9sdEJ4STQ5YmIza0hidkJNVmFiWktoMWJCV3d5ZmxLeDg?oc=5",
+            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
+          ]
+        },
+        {
+          "term": "study suggests",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSk10aDV1RG92VmxHR3JLclZhVjJyVjRDNDBIR0dLakVNZnIya3RaQ0RkNHFpVHlXYjZsOUxOTDdhWnlVV25Xazl6Y2JwWnlqVVFQTUdPQl92VGVqdE53Qk5mTHhPSmF2ZTdVX280SmIxeEVvSGoyZDJTUl9GaUtEQ3JjU193d3lXcUVfMXdSRzhiX1o0aHo1T1BRWnVMTGx4UEx4YklvcVNhLTlVRVdTb3ludVAxWWJyeFZB?oc=5"
+          ]
+        },
+        {
+          "term": "usa today",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRUQ4aTk2NkxMNVFxSkR3N0tXRHZoSzJtWjlacmpXLTNzcmROMHFpUWs0N21adnplTkF1c2Ita0JIUi01cmJsU0FQVnZmQldZS1dybzdJQzVuOU1TemR5VGlzVWJSZDhOZXVyR0pTMVRXNEh5aU1mMkRSNkZpNDJtYzA2MnF3TjhpekFjeUR1VVhkUEVFcHRqclRaMWdIcEM2SUZPemJvLWFFdTltdWJKNW9XQQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOd2dTcGI2SFVReFNoODFESk1DRWpfUjNhQW8tSS0zaU95NzVORUwzcUtRZjFUb3hSNjFhaktkMjAwem95ZEx1NVRCWlVkSVZFQ2dvMzNreFozRVAtRDI0U0hrQTM2UnRUWEF2SkxpaHZTMU85ZC1BclhENVBZNi1ndTNYUkU1cGViblFGVml6aS1YWkVQenktYUlHY2xHR0dCZG4wSmF2Z0k?oc=5"
+          ]
+        },
+        {
+          "term": "york times",
+          "score": 6.029,
+          "mentions": 2,
+          "rate_per_10k": 322.58,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQjdIZWhfQnE3LW8wYmRqeWl2Q0NOS01EOW1TNmtZTEc2d1ZoWEs0ak1paXBtSlBITHZiQWRLTHBfVTVkMDdJRkk0cDVkMTdvbFlqQUltSG5tWUttTUJBRlo3bnNEX3pUMkJMZ3lOYThvTjVOdGk2WXY4ZEFaa0tpUTRBZzRqS1FxaUJwbjVMOU1JVDY5?oc=5",
+            "https://news.google.com/rss/articles/CBMijAFBVV95cUxPV2ZrenUxeFRUV0ZERVM3OXN6cTlTQ0REQ3RJWFJCTk9Od3c1Y3N2dEctcWZ2U3BIblh2TC14R09jNVFsWjE4NmtBZnRjN0c1MGs3Y04zcDRWUXJkQmo2ZlNtSFpsZnNkYkFqb1JZTWFWRjBmOGliTjktWHllV1lWcXFvSHRFQVVXRTV1Zw?oc=5"
+          ]
+        }
+      ]
     },
     "markets": {
       "documents": 0,
@@ -1447,6 +1920,7 @@
       "top20": []
     }
   },
+  "research_queue": [],
   "investment": {
     "state": "NOT_EVALUATED",
     "reason": "No verified security pricing, fundamentals or backtest; no trading signals."
