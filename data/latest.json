@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
-  "collected_at_utc": "2026-11-11T15:34:12.509455+00:00",
-  "schema_version": 1,
+  "collected_at_utc": "2026-11-11T16:48:36.875202+00:00",
+  "schema_version": 2,
   "status": "OK",
   "source_health": [
     {
@@ -57,7 +57,7 @@
     {
       "source": "hackernews",
       "status": "OK",
-      "documents": 55
+      "documents": 57
     },
     {
       "source": "wikipedia_en",
@@ -70,6 +70,151 @@
       "documents": 500
     }
   ],
+  "source_billboard": {
+    "google_us": {
+      "source_id": "google_us",
+      "source_name": "Google Trends US",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 1,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_fr": {
+      "source_id": "google_fr",
+      "source_name": "Google Trends FR",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 1,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_ch": {
+      "source_id": "google_ch",
+      "source_name": "Google Trends CH",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 1,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "google_gb": {
+      "source_id": "google_gb",
+      "source_name": "Google Trends GB",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 1,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "arxiv_ai": {
+      "source_id": "arxiv_ai",
+      "source_name": "arXiv AI",
+      "domain": "technology",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 381,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "arxiv_robotics": {
+      "source_id": "arxiv_robotics",
+      "source_name": "arXiv Robotics",
+      "domain": "technology",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 111,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "arxiv_quantum": {
+      "source_id": "arxiv_quantum",
+      "source_name": "arXiv Quantum",
+      "domain": "science",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 156,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "arxiv_biology": {
+      "source_id": "arxiv_biology",
+      "source_name": "arXiv Biology",
+      "domain": "science",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 57,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "arxiv_economics": {
+      "source_id": "arxiv_economics",
+      "source_name": "arXiv Economics",
+      "domain": "science",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 38,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "hackernews": {
+      "source_id": "hackernews",
+      "source_name": "Hacker News",
+      "domain": "social",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 57,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "wikipedia_en": {
+      "source_id": "wikipedia_en",
+      "source_name": "Wikipedia Top Pages EN",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 493,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "wikipedia_fr": {
+      "source_id": "wikipedia_fr",
+      "source_name": "Wikipedia Top Pages FR",
+      "domain": "culture",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 500,
+      "top5": [],
+      "preview_unranked": []
+    },
+    "federal_register": {
+      "source_id": "federal_register",
+      "source_name": "US Federal Register",
+      "domain": "geopolitics",
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
+      "required_days": 21,
+      "documents_today": 100,
+      "top5": [],
+      "preview_unranked": []
+    }
+  },
   "billboard": {
     "culture": {
       "documents": 997,
@@ -169,9 +314,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda"
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
           ]
         },
         {
@@ -253,9 +398,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Godzilla_Minus_Zero",
             "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
-            "https://en.wikipedia.org/wiki/Godzilla_Minus_One",
-            "https://fr.wikipedia.org/wiki/Godzilla_Minus_Zero"
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_One"
           ]
         },
         {
@@ -267,9 +412,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
             "https://fr.wikipedia.org/wiki/Hunger_Games_%28s%C3%A9rie_de_films%29",
-            "https://fr.wikipedia.org/wiki/Hunger_Games_%3A_Lever_de_soleil_sur_la_moisson_%28film%29"
+            "https://fr.wikipedia.org/wiki/Hunger_Games_%3A_Lever_de_soleil_sur_la_moisson_%28film%29",
+            "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping"
           ]
         },
         {
@@ -281,9 +426,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
             "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
           ]
         },
         {
@@ -309,9 +454,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
             "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
-            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
           ]
         },
         {
@@ -323,9 +468,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Russell_Brand",
             "https://en.wikipedia.org/wiki/Russell_Brand",
-            "https://en.wikipedia.org/wiki/The_Russell_Brand_Show_prank_calls",
-            "https://fr.wikipedia.org/wiki/Russell_Brand"
+            "https://en.wikipedia.org/wiki/The_Russell_Brand_Show_prank_calls"
           ]
         },
         {
@@ -359,10 +504,50 @@
       ]
     },
     "social": {
-      "documents": 55,
+      "documents": 57,
       "historical_days": 0,
       "state": "EXPLORATORY",
-      "top20": []
+      "top20": [
+        {
+          "term": "coding agent",
+          "score": 6.113,
+          "mentions": 2,
+          "rate_per_10k": 350.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "your coding",
+          "score": 6.113,
+          "mentions": 2,
+          "rate_per_10k": 350.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "your coding agent",
+          "score": 6.113,
+          "mentions": 2,
+          "rate_per_10k": 350.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        }
+      ]
     },
     "news": {
       "documents": 0,
@@ -398,9 +583,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.12937",
-            "https://arxiv.org/abs/2611.12954"
+            "https://arxiv.org/abs/2611.12954",
+            "https://arxiv.org/abs/2611.14285"
           ]
         },
         {
@@ -440,9 +625,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.14186",
-            "https://arxiv.org/abs/2509.19573",
-            "https://arxiv.org/abs/2611.12940"
+            "https://arxiv.org/abs/2611.12940",
+            "https://arxiv.org/abs/2611.13161",
+            "https://arxiv.org/abs/2611.13712"
           ]
         },
         {
@@ -454,9 +639,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.06817",
             "https://arxiv.org/abs/2611.12942",
-            "https://arxiv.org/abs/2611.13402"
+            "https://arxiv.org/abs/2611.13402",
+            "https://arxiv.org/abs/2611.13849"
           ]
         },
         {
@@ -482,9 +667,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.08577",
             "https://arxiv.org/abs/2611.12936",
-            "https://arxiv.org/abs/2611.13512"
+            "https://arxiv.org/abs/2611.13512",
+            "https://arxiv.org/abs/2611.14519"
           ]
         },
         {
@@ -496,9 +681,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.13127",
-            "https://arxiv.org/abs/2611.14285"
+            "https://arxiv.org/abs/2611.14285",
+            "https://arxiv.org/abs/2611.10285"
           ]
         },
         {
@@ -510,9 +695,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.13229",
-            "https://arxiv.org/abs/2611.13592",
-            "https://arxiv.org/abs/2611.13113"
+            "https://arxiv.org/abs/2611.13113",
+            "https://arxiv.org/abs/2611.14419",
+            "https://arxiv.org/abs/2606.26969"
           ]
         },
         {
