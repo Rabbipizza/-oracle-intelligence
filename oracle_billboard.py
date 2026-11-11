@@ -62,7 +62,22 @@ def source_top5(source, day_string, current_snapshot, previous_snapshots):
         past.get((day - timedelta(days=offset)).isoformat())
         for offset in range(20, -1, -1)
     ]
-    observed = sum(bool(s and s.get("documents", 0) > 0) for s in samples)
+    # Successfully polled EMPTY feeds count as observed days, but failures do
+    # NOT. This permits irregular legal/scientific releases without inventing
+    # either false zeros or false missing observations.
+    rows_by_date = {r.get("date"): r for r in previous_snapshots}
+    rows_by_date[day_string] = current_snapshot
+    observed = 0
+    for offset, snapshot in zip(range(20, -1, -1), samples):
+        date_key = (day - timedelta(days=offset)).isoformat()
+        day_record = rows_by_date.get(date_key, {})
+        statuses = {r.get("source"): r.get("status")
+                    for r in day_record.get("source_health", [])}
+        status = statuses.get(source_id)
+        if status in ("OK", "EMPTY"):
+            observed += 1
+        elif status is None and snapshot and snapshot.get("documents", 0) > 0:
+            observed += 1
     today = past.get(day_string) or {"documents": 0, "terms": {}}
     state = {
         "source_id": source_id,

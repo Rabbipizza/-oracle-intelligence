@@ -33,3 +33,7 @@ Un signal vert n'est jamais une garantie de rendement. Le portefeuille ACTUAL, T
 Des flux RSS publics (Google News, NASA Earth Observatory, Réserve fédérale et EUR-Lex) sont ajoutés à titre expérimental. Leur fonctionnement n'est confirmé qu'après un run réussi : une URL connue ne garantit pas un flux disponible, ni une licence de redistribution.
 
 `oracle_pipeline.py` produit une file de dossiers pour les tendances confirmées par le Billboard, puis bloque les étapes marché / fournisseurs / trading lorsqu'il manque des preuves vérifiées. Aucun classement d'entreprises ni trading automatique n'en découle actuellement.
+
+## Politiques d'accès adaptées
+
+Chaque source active a un profil explicite (accès, période, quota d'articles, budget de requêtes, limites HTTP) dans [`sources/access_profiles.json`](sources/access_profiles.json). Les sources inaccessibles sont signalées sans injecter de faux zéros et les sources non configurées sont bloquées. Voir [`docs/SOURCE_ACCESS.md`](docs/SOURCE_ACCESS.md).

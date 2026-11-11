@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "default_policy": {
+    "access": "OPEN",
+    "poll_cadence": "DAILY",
+    "publication_cadence": "EVENT_DRIVEN",
+    "sampling": "PUBLIC_FEED",
+    "max_items": 100,
+    "timeout_seconds": 16,
+    "max_payload_bytes": 3000000,
+    "max_requests_per_run": 120,
+    "required_env": "",
+    "approved": false,
+    "rights_review_status": "PENDING_REVIEW"
+  },
+  "families": {
+    "google_trends": {
+      "sampling": "TOP_LIST",
+      "max_items": 30,
+      "publication_cadence": "DAILY"
+    },
+    "arxiv": {
+      "sampling": "RSS_SUBSET",
+      "max_items": 500,
+      "publication_cadence": "DAILY"
+    },
+    "hackernews": {
+      "sampling": "RANKED_TOP_LIST",
+      "max_items": 50,
+      "max_requests_per_run": 55,
+      "publication_cadence": "DAILY"
+    },
+    "wikipedia": {
+      "sampling": "TOP_PAGEVIEWS",
+      "max_items": 500,
+      "publication_cadence": "DAILY"
+    },
+    "google_news": {
+      "sampling": "RSS_SUBSET",
+      "max_items": 90,
+      "publication_cadence": "EVENT_DRIVEN"
+    },
+    "mit_environment": {
+      "sampling": "RSS_SUBSET",
+      "max_items": 60,
+      "publication_cadence": "EVENT_DRIVEN"
+    },
+    "fed_press": {
+      "sampling": "OFFICIAL_RELEASES",
+      "max_items": 50,
+      "publication_cadence": "EVENT_DRIVEN"
+    },
+    "eurlex": {
+      "sampling": "OFFICIAL_RELEASES",
+      "max_items": 60,
+      "publication_cadence": "EVENT_DRIVEN"
+    },
+    "federal_register": {
+      "sampling": "OFFICIAL_RELEASES",
+      "max_items": 100,
+      "publication_cadence": "EVENT_DRIVEN"
+    }
+  },
+  "sources": {
+    "google_us": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_fr": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_ch": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_gb": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "arxiv_ai": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "arxiv_robotics": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "arxiv_quantum": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "arxiv_biology": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "arxiv_economics": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "hackernews": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "wikipedia_en": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "wikipedia_fr": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_news_us": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_news_fr": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "google_news_health": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "mit_environment": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "fed_press": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "eurlex_law": {
+      "approved": true,
+      "access": "OPEN"
+    },
+    "federal_register": {
+      "approved": true,
+      "access": "OPEN"
+    }
+  }
+}

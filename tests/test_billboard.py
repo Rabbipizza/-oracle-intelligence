@@ -69,6 +69,26 @@ class BillboardPerSourceTests(unittest.TestCase):
         self.assertEqual(result["top5"], [])
         self.assertEqual(result["state"], "NO_POSITIVE_ACCELERATION")
 
+    def test_successful_empty_days_are_observed_without_fake_missing_days(self):
+        previous = self.days(lambda offset: 0)
+        for d in previous:
+            d["sources"][self.key]["documents"] = 0
+            d["source_health"] = [{"source": self.key, "status": "EMPTY"}]
+        current = {"date": self.today.isoformat(),
+                   "source_health": [{"source": self.key, "status": "EMPTY"}],
+                   "sources": {self.key: {"documents": 0, "terms": {}}}}
+        result = source_top5(self.source, self.today.isoformat(), current, previous)
+        self.assertEqual(result["observed_days"], 21)
+        self.assertEqual(result["state"], "NO_DATA")
+        self.assertEqual(result["top5"], [])
+
+    def test_failed_day_never_imputed_as_zero(self):
+        previous = self.days(lambda offset: 1)
+        previous[4]["source_health"] = [{"source": self.key, "status": "RATE_LIMITED"}]
+        result = source_top5(self.source, self.today.isoformat(), self.current(10), previous)
+        self.assertEqual(result["observed_days"], 20)
+        self.assertEqual(result["top5"], [])
+
     def test_no_data_fail_closed(self):
         result = source_top5(self.source, self.today.isoformat(),
             {"sources": {self.key: {"documents": 0, "terms": {}}}},

@@ -6,6 +6,9 @@ on:
   push:
     paths:
       - "oracle.py"
+      - "oracle_access.py"
+      - "sources/access_profiles.json"
+      - "sources/registry.csv"
       - "oracle_billboard.py"
       - "oracle_pipeline.py"
       - "index.html"

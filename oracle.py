@@ -21,6 +21,10 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from oracle_billboard import source_snapshots, source_billboards
 from oracle_pipeline import create_research_queue
+from oracle_access import (
+    AccessBlocked, BoundedFetcher, OversizedPayload, access_decision,
+    classify_error, policy_for, source_health_meta,
+)
 
 UTC = dt.timezone.utc
 ROOT = Path(__file__).resolve().parent
@@ -63,12 +67,15 @@ DOMAINS = [
     "commodities", "supply_chain", "health", "markets",
 ]
 
-def get_bytes(url: str) -> bytes:
+def get_bytes(url: str, *, timeout=16, max_bytes=3_000_000) -> bytes:
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT, "Accept": "application/json, application/rss+xml, application/xml",
     })
-    with urllib.request.urlopen(req, timeout=16) as response:
-        return response.read(3_000_001)[:3_000_000]
+    with urllib.request.urlopen(req, timeout=timeout) as response:
+        data = response.read(max_bytes + 1)
+    if len(data) > max_bytes:
+        raise OversizedPayload("Source response exceeds configured byte limit")
+    return data
 
 def parse_published(raw: str | None):
     if not raw:
@@ -81,8 +88,8 @@ def parse_published(raw: str | None):
         except (TypeError, ValueError):
             return None
 
-def rss_items(url: str):
-    root = ET.fromstring(get_bytes(url))
+def rss_items(url: str, *, fetch=get_bytes, max_items=500):
+    root = ET.fromstring(fetch(url))
     items = []
     for item in root.findall(".//item"):
         title = html.unescape("".join(item.find("title").itertext()) if item.find("title") is not None else "")
@@ -98,12 +105,12 @@ def rss_items(url: str):
             published = parse_published(entry.findtext(ATOM + "published") or entry.findtext(ATOM + "updated"))
             if title and link.startswith("http"):
                 items.append({"title": title, "url": link, "published": published})
-    return items
+    return items[:max_items]
 
-def hn_items():
-    ids = json.loads(get_bytes("https://hacker-news.firebaseio.com/v0/topstories.json"))[:60]
+def hn_items(*, fetch=get_bytes, max_items=60):
+    ids = json.loads(fetch("https://hacker-news.firebaseio.com/v0/topstories.json"))[:max_items]
     def fetch_one(item_id):
-        return json.loads(get_bytes("https://hacker-news.firebaseio.com/v0/item/%s.json" % item_id))
+        return json.loads(fetch("https://hacker-news.firebaseio.com/v0/item/%s.json" % item_id))
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
         raw = list(ex.map(fetch_one, ids))
     result = []
@@ -115,13 +122,13 @@ def hn_items():
                            "published": dt.datetime.fromtimestamp(obj["time"], tz=UTC) if obj.get("time") else None})
     return result
 
-def wiki_items(url: str, now: dt.datetime):
+def wiki_items(url: str, now: dt.datetime, *, fetch=get_bytes, max_items=500):
     day = (now - dt.timedelta(days=2)).date()
     endpoint = "%s/%04d/%02d/%02d" % (url, day.year, day.month, day.day)
-    data = json.loads(get_bytes(endpoint))
+    data = json.loads(fetch(endpoint))
     items = data["items"][0]["articles"]
     result = []
-    for item in items[:500]:
+    for item in items[:max_items]:
         title = item.get("article", "")
         if not title or title.startswith(("Special:", "Wikipedia:", "Main_Page", "Accueil_principal")):
             continue
@@ -130,8 +137,10 @@ def wiki_items(url: str, now: dt.datetime):
         result.append({"title": title.replace("_", " "), "url": "https://%s/wiki/%s" % (host, quote(title)), "published": None})
     return result
 
-def federal_items():
-    data = json.loads(get_bytes("https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"))
+def federal_items(*, fetch=get_bytes, max_items=100):
+    data = json.loads(fetch(
+        "https://www.federalregister.gov/api/v1/documents.json?per_page=%d&order=newest" % min(max_items, 100)
+    ))
     result = []
     for row in data.get("results", []):
         if row.get("title") and row.get("html_url"):
@@ -140,14 +149,20 @@ def federal_items():
 
 def collect(source, now):
     key, name, domain, family, kind, url = source
+    policy = policy_for(source)
+    decision = access_decision(policy)
+    if decision:
+        raise AccessBlocked(decision)
+    fetch = BoundedFetcher(policy, get_bytes)
+    limit = policy["max_items"]
     if kind == "rss":
-        docs = rss_items(url)
+        docs = rss_items(url, fetch=fetch, max_items=limit)
     elif kind == "hn":
-        docs = hn_items()
+        docs = hn_items(fetch=fetch, max_items=limit)
     elif kind == "wiki":
-        docs = wiki_items(url, now)
+        docs = wiki_items(url, now, fetch=fetch, max_items=limit)
     elif kind == "federal":
-        docs = federal_items()
+        docs = federal_items(fetch=fetch, max_items=limit)
     else:
         raise ValueError("Unsupported connector")
     # Google Trends trending RSS is itself a current ranked snapshot. Its item
@@ -253,9 +268,17 @@ def run(now=None):
             try:
                 docs = future.result()
                 good.extend(docs)
-                health.append({"source": source[0], "status": "OK" if docs else "EMPTY", "documents": len(docs)})
+                profile = policy_for(source)
+                health.append({"source": source[0], "status": "OK" if docs else "EMPTY",
+                               "documents": len(docs), **source_health_meta(profile)})
             except Exception as exc:
-                health.append({"source": source[0], "status": "ERROR", "documents": 0,
+                status = classify_error(exc)
+                try:
+                    details = source_health_meta(policy_for(source))
+                except AccessBlocked:
+                    details = {"access": "UNKNOWN"}
+                health.append({"source": source[0], "status": status,
+                               "documents": 0, **details,
                                "error": type(exc).__name__})
     health.sort(key=lambda x: x["source"])
     if not good:
@@ -275,7 +298,7 @@ def run(now=None):
                         "top20": compute_rank(day_now, previous_domains)}
     per_source = source_billboards(today, daily, past, SOURCES)
     latest = {"date": today, "collected_at_utc": now.isoformat(), "schema_version": 2,
-              "status": "PARTIAL" if any(h["status"] == "ERROR" for h in health) else "OK",
+              "status": "PARTIAL" if any(h["status"] != "OK" for h in health) else "OK",
               "source_health": health, "source_billboard": per_source, "billboard": rank,
               "research_queue": create_research_queue(per_source),
               "investment": {"state": "NOT_EVALUATED", "reason": "No verified security pricing, fundamentals or backtest; no trading signals."}}
@@ -287,7 +310,7 @@ def run(now=None):
     temp.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
     os.replace(temp, out_path)
     print(json.dumps({"date": today, "observations": len(good), "successful_sources": sum(h["status"] == "OK" for h in health),
-                      "errors": sum(h["status"] == "ERROR" for h in health), "source_billboards": sum(bool(x["top5"]) for x in per_source.values())}))
+                      "unavailable_sources": sum(h["status"] not in ("OK", "EMPTY") for h in health), "source_billboards": sum(bool(x["top5"]) for x in per_source.values())}))
     return latest
 
 if __name__ == "__main__":

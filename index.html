@@ -31,7 +31,10 @@ function metric(title,value){let box=document.createElement('div');box.className
 function render(){
  const x=state.source_billboard[selected],q=$('filter').value.trim().toLocaleLowerCase();
  $('heading').textContent=x.source_name;
- $('coverage').textContent='État : '+x.state+' · historique '+x.observed_days+'/'+x.required_days+' jours · documents du dernier prélèvement : '+x.documents_today;
+ const meta=state.source_health.find(h=>h.source===selected)||{};
+ $('coverage').textContent='État : '+x.state+' · accès : '+(meta.access||'INCONNU')+
+ ' · collecte : '+(meta.status||'INCONNU')+' · échantillon : '+(meta.sampling||'INCONNU')+
+ ' · historique '+x.observed_days+'/'+x.required_days+' jours · documents : '+x.documents_today;
  $('preview').textContent=x.top5.length?'':(x.preview_unranked.length?
   'Expressions fréquentes aujourd’hui (aperçu NON CLASSÉ par accélération) : '+x.preview_unranked.map(v=>v.term+' ('+v.mentions_today+')').join(' · ')
   :'Aperçu non disponible pour cette source.');
