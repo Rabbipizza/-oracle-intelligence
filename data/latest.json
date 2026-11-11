@@ -1,6 +1,6 @@
 {
   "date": "2026-11-11",
-  "collected_at_utc": "2026-11-11T16:52:48.203667+00:00",
+  "collected_at_utc": "2026-11-11T16:54:39.735063+00:00",
   "schema_version": 2,
   "status": "PARTIAL",
   "source_health": [
@@ -155,7 +155,53 @@
       "required_days": 21,
       "documents_today": 381,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "language models",
+          "mentions_today": 20,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954",
+            "https://arxiv.org/abs/2611.13975"
+          ]
+        },
+        {
+          "term": "large language",
+          "mentions_today": 13,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954",
+            "https://arxiv.org/abs/2611.14285"
+          ]
+        },
+        {
+          "term": "large language models",
+          "mentions_today": 11,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954",
+            "https://arxiv.org/abs/2611.14382"
+          ]
+        },
+        {
+          "term": "llm agents",
+          "mentions_today": 11,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12966",
+            "https://arxiv.org/abs/2611.13015",
+            "https://arxiv.org/abs/2611.13144"
+          ]
+        },
+        {
+          "term": "reinforcement learning",
+          "mentions_today": 9,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12940",
+            "https://arxiv.org/abs/2611.13161",
+            "https://arxiv.org/abs/2611.13712"
+          ]
+        }
+      ]
     },
     "arxiv_robotics": {
       "source_id": "arxiv_robotics",
@@ -166,7 +212,53 @@
       "required_days": 21,
       "documents_today": 111,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "autonomous driving",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13494",
+            "https://arxiv.org/abs/2611.13790",
+            "https://arxiv.org/abs/2511.22928"
+          ]
+        },
+        {
+          "term": "model predictive",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13204",
+            "https://arxiv.org/abs/2611.13766",
+            "https://arxiv.org/abs/2611.14373"
+          ]
+        },
+        {
+          "term": "whole-body control",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.14049",
+            "https://arxiv.org/abs/2610.28480",
+            "https://arxiv.org/abs/2610.41354"
+          ]
+        },
+        {
+          "term": "end-to-end autonomous",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13494",
+            "https://arxiv.org/abs/2611.13790",
+            "https://arxiv.org/abs/2605.14201"
+          ]
+        },
+        {
+          "term": "end-to-end autonomous driving",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13494",
+            "https://arxiv.org/abs/2611.13790",
+            "https://arxiv.org/abs/2605.14201"
+          ]
+        }
+      ]
     },
     "arxiv_quantum": {
       "source_id": "arxiv_quantum",
@@ -177,7 +269,53 @@
       "required_days": 21,
       "documents_today": 156,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "error correction",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13111",
+            "https://arxiv.org/abs/2608.18420",
+            "https://arxiv.org/abs/2609.07235"
+          ]
+        },
+        {
+          "term": "quantum error",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13111",
+            "https://arxiv.org/abs/2608.18420",
+            "https://arxiv.org/abs/2609.07235"
+          ]
+        },
+        {
+          "term": "quantum error correction",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13111",
+            "https://arxiv.org/abs/2608.18420",
+            "https://arxiv.org/abs/2609.07235"
+          ]
+        },
+        {
+          "term": "quantum circuits",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13175",
+            "https://arxiv.org/abs/2611.14006",
+            "https://arxiv.org/abs/2607.25345"
+          ]
+        },
+        {
+          "term": "quantum computers",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13347",
+            "https://arxiv.org/abs/2611.14398",
+            "https://arxiv.org/abs/2611.14422"
+          ]
+        }
+      ]
     },
     "arxiv_biology": {
       "source_id": "arxiv_biology",
@@ -199,7 +337,16 @@
       "required_days": 21,
       "documents_today": 38,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "local projections",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://arxiv.org/abs/2402.07743",
+            "https://arxiv.org/abs/2601.01622"
+          ]
+        }
+      ]
     },
     "hackernews": {
       "source_id": "hackernews",
@@ -210,7 +357,32 @@
       "required_days": 21,
       "documents_today": 56,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "coding agent",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "your coding",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "your coding agent",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://github.com/klad-app/klad",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        }
+      ]
     },
     "wikipedia_en": {
       "source_id": "wikipedia_en",
@@ -221,7 +393,53 @@
       "required_days": 21,
       "documents_today": 493,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "united states",
+          "mentions_today": 22,
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi"
+          ]
+        },
+        {
+          "term": "states senate",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "united states senate",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "presidential election",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "states presidential",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        }
+      ]
     },
     "wikipedia_fr": {
       "source_id": "wikipedia_fr",
@@ -232,7 +450,53 @@
       "required_days": 21,
       "documents_today": 500,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "bataille gaulle",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_L%27%C3%82ge_de_fer",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_J%27%C3%A9cris_ton_nom"
+          ]
+        },
+        {
+          "term": "série télévisée",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Cat%27s_Eyes_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29",
+            "https://fr.wikipedia.org/wiki/Lupin_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2021%29",
+            "https://fr.wikipedia.org/wiki/Le_Voyageur_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2019%29"
+          ]
+        }
+      ]
     },
     "google_news_us": {
       "source_id": "google_news_us",
@@ -243,7 +507,42 @@
       "required_days": 21,
       "documents_today": 38,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "york times",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcWFLTDF5cU9QNlRYMjdaeTI3aVhUNE9xS2Z5c2M0ZGcwdjJscnZMZjN5ak9rLXlvRnBHSV93bFhsVUg4Znp5c1F6aW5RNklCRUdBWFV5OHpYMkM5OUQ3SXZkZS1zTDJIcFgzSjk4U0x3eGUtS2ZYSV9HVTVMb3Z5OQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOHg4SG1YVGVmd216dVkydUxNRERxZjZTOHdORS16MldQUzBrXzl0Z3RmZ0VJeVplWFBZdlZUbExVSHBlSGt3VUtmUll4TzZoaGhRY3p6RzJocXVZVU1iSzk2R2VaY3NoUzBPQTVsTGtjemRLUFcwbmQ1S1hlRWlVMHNhQmtSaDAwQXlETjZrNmFLWVJjUHJXN202cDU3ZE5ZS0ww?oc=5"
+          ]
+        },
+        {
+          "term": "cbs news",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdmsyOFlFQ1BwM1V1X25KVmxpVUY1SGNOcmFTVGFSc0xLNUxrd0lDYXA4UkJ1cEtJTUJzR3BYRUhYYWx3eW5raVdtUUNlU1FJRVdEQkd4REN5OTBST0NTTjhlU3FoVFlfZ1VRMk5lWGpUYXF5VHVFZVJ6TGtNdFlyY21WX1FnbDBPdTRyMmdjeUhpZFhrdjB2R0JlazFoSEw0N0FCdk1zUUg2LXctWXBBb3FiNnY5dmdsVnc?oc=5",
+            "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JdnI2N05uOHdtZFhtb0U3MGN6bEhNN05QbE85RV81UGRMenBqY04tWXhLU1MxRzR6NWxZOUx5cnNzYmRwRFEwRWJnbi1Cc0JpMUt2aW53VEpWOFA0cEptN2xLLVB6S1RxNDlydWs5MGsySnprakktTlkwUmxqODQ?oc=5",
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5"
+          ]
+        },
+        {
+          "term": "iran war",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
+            "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JdnI2N05uOHdtZFhtb0U3MGN6bEhNN05QbE85RV81UGRMenBqY04tWXhLU1MxRzR6NWxZOUx5cnNzYmRwRFEwRWJnbi1Cc0JpMUt2aW53VEpWOFA0cEptN2xLLVB6S1RxNDlydWs5MGsySnprakktTlkwUmxqODQ?oc=5"
+          ]
+        },
+        {
+          "term": "nbc news",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdDFRRjNzVTN2NHJSRGtBMXZPeDg5U3N2YW5HSDdPMmRJeDBJRU1IS2hRRGJNNW1uc183Y29sRjNydHFsbGlYbDFoSnRWLVNocENJbXY4Q1NFbTR2NWViRmQ5QjFsa3ZfOG5OeHRGNElNcm1rWUIzM0dMWS1YTUhDRzhNYzR5VXJLUUxDZ1RqdVJxcml4aHVhMkZDV3ViZHB4T29VMExBMDZ1RGxfSmFOUDZZMG5wU1RL?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVF9tVWd5YlFSaS1lYlpydWIzRzlIbHNkRHExVlNvNXZqbjJVZHNyMGpnb0dEVmhHM08zbFBHblI2OWNRMlkxLW56dGhlamRsWVUtN243a0t1eUQ2QVh4UlV1d0NUSS1KOEUtOGFfVEtNaUtUWXF6REFMSHhrZVpaNWMwT1gxbzVJUVBia1RyaGdoVDV1R3EyMVVITEwwdXVsYlVfQQ?oc=5"
+          ]
+        }
+      ]
     },
     "google_news_fr": {
       "source_id": "google_news_fr",
@@ -254,7 +553,32 @@
       "required_days": 21,
       "documents_today": 34,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "black friday",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMinAFBVV95cUxObXNoUHhpTlY2UkZhaHU3Q0RIMENmMzh1Vlh4SURXOTJtTGxuMnBRVHFQZTg0RmxYNGl1WDNfWHZsNTVOY3R6a3RpZ1libVM2aGNXOFZ1RnhieG9wc0tuN3RxZW4yX3A4aGlvWm85ZWNWVlJZYnJWMEotTWNrNXVVWXhfb3FkbGJrSmFhQzlfSjU1QmQ5YzBTUk1mT3M?oc=5",
+            "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaVd1ZGx5QWJCdTdqSUt5QXJ6cldaUDNSR3ZuUFJqRjJFLUJpOUFkZ21uYUFlcWNpR19yVFNaQWVfeFpEcTZCb2RmczRaUG5JSG4tOWR5N2duMUNrbTlsT3dNMXNZeVZYSmNuVmcwMzZyUVpTQi1YTHpwbnZKM0lrNGpyWEF5Zm1INmpKVmZFYm14bWtBeUE3bTAwUlBOSUxJYXdTdU1fbHN6cno3bGQ0UHJ1NEtKanVIc2tZY0JualM1RW11RXBJZWtIbDc?oc=5"
+          ]
+        },
+        {
+          "term": "commémoration novembre",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5",
+            "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSG53OS05aTl0akFKTGZNMWo2ZFNVYmVicm9CZVhUVC1wb2lRcHhWdXRXbHc5UV9iX2dNQWZMTTRVdzMtb3hrX210VmxVbkNFeEJPcmM5UU9KaFR0NEduS0E5TWloa1FoV3Nxc2hicGtYaUt5X180MF9xSkl4dTFNWmNqWUstQXlUazVqdVQwejVaTXgzT2dXNElmaWxoNFF0cUVNdzRmck1saXEtSFNMVHFCWUg2dTh3RF9UcWpRWGVPNUlhSXBVNjRmV1JnRTl1QUNN?oc=5"
+          ]
+        },
+        {
+          "term": "santé mentale",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQTzIwTE01VnVJZDFYaUw0SnA2ZnkyamFWbG1lWGltalR5LVdrT1k4d1g5Q3F4TWJVNktyaWpSUXZuTmJlUzRUUUU2ZUR5eWRBTWJaak9Vck1vSkpncGhsM2lYdFNrX2llekRtaFpERW1RRHZ5UHlha0o5T3VvclVzN0NpVXR4WlZvbjN1cDlNLWRrMmxJZ2QtVGpIYjIxQjF0MkhEakdUZXJya2NGbVllaExSanRya2trNzFuZWtta0pqc1lScVZfaWRVeGRlNi1INFM4MzZqODBEeG5xdEpjR2s5alFHVi1SOGc?oc=5",
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxQV3o5OFV2UWhZSUgydFNuMXRZUThSY1R3NDItNldmLUdLNEhtbHBrYW91M1R6bVIxNDZNWEU1YWpwWVp4NkN0QkJfbkZnMktfTVlmb2lYUFJEY0FoR2VFN2djNmdWellGRlRWYkVxRExxcjNqMWlHUUNBTlREc0MtMmhwNWphZDRGN00wU28teXJHZzd5TW5seFBRNEoxUk9qZHVKcEw2X2EtSHR5V1lFVDU2VjJ5Zw?oc=5"
+          ]
+        }
+      ]
     },
     "google_news_health": {
       "source_id": "google_news_health",
@@ -265,7 +589,53 @@
       "required_days": 21,
       "documents_today": 62,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "science daily",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE94eTRLNU1XSDlIcVkxMENhTUlrdFpQRUowUHdZU3d5YkliN1lXUzNCZFhtRjJCZEJ3T3BmNnUzRUdPZy0xMGpiclp0YVVzMzdtLWp1bWtFcUhNVlAzbnFobGk4THA0ejJ4dHBlWlg0dw?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE54S05QNXZCdF9HX2t3eS1SRThzajdRd3pXTFVDRjdzU3BLZlB1NFVPd1ZjR1UyREo4RFhzRkdTdEFkblF6S0x5Y0tpU1BsRi1xZWwtREQxcHpQRTN6TnBnQjc5Yy03QXpmMXJqdnhjSQ?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ldU54V3pZb19Ra1dpYlJKSlZWN3lKelFLOUhNaFhPNTZIZVNaeWFXQlVQczYxQkhzRzNKVnZhVTNqaE1fLWRRNnczcTd6ZzQ2QTBxVkk4SWF2aXFQU0djaFVTQThYV3RwdXY3QUR3NA?oc=5"
+          ]
+        },
+        {
+          "term": "york post",
+          "mentions_today": 5,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcDZwVEt1Qjc3b2tCV0NTNlhWbWxBLTFPLWkwRF83dERTZXlwbWZJWTB4X1FqcTNRdHRUZ2hkUDI0QjRHMHBTOVRqVEVEcGR1WG1pN096Sk5fMFJUenFFVy1GejVaT29Db3c2bklQVWt6aTA3bW56N2ZuZ1FGLXZHbU1Jdw?oc=5",
+            "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdFhlWXBqTmJ5RWFSdEVWRkNERl9JMzFMSHpiTllMYnNEb3NicEVFbWNSdEw1Q1p0NGhjTGxVekNJY2MzZG9UUEhXMEo4RVJlNTFBa1g5dHI3dEJqYlFwS2kxd0pPeHJXNHNheUE4cWdCaENvVUZtVDZ4bDlQTGhTUTNLUjhpNGVuNHMyR2NVTmZBd1RFR0twUEtoUTV0N3BjeWUyQ0FKUUlvdmc?oc=5",
+            "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSk10aDV1RG92VmxHR3JLclZhVjJyVjRDNDBIR0dLakVNZnIya3RaQ0RkNHFpVHlXYjZsOUxOTDdhWnlVV25Xazl6Y2JwWnlqVVFQTUdPQl92VGVqdE53Qk5mTHhPSmF2ZTdVX280SmIxeEVvSGoyZDJTUl9GaUtEQ3JjU193d3lXcUVfMXdSRzhiX1o0aHo1T1BRWnVMTGx4UEx4YklvcVNhLTlVRVdTb3ludVAxWWJyeFZB?oc=5"
+          ]
+        },
+        {
+          "term": "medical xpress",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhS1RYZm8yTzk0WEEza1lnRnYtSGY0Q1hBa1dGSHA5SDNLRW9QdnhhckN2cjAyOFF5NjcxaGxoNzFGdW1UVUhZSjZPeEswd05SalJiZEJkNk1EVnBjRUZZX2RJVnQxSkJZWWRKR2U5MUNWSGJNUXZB?oc=5",
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZHFYUjZvRDZOTk1xZXcweUJ0bEpMZ19JbmpSZG5oRG1KWU56YXd2b1ZjVnMwR1U5MTNpVU41ZDc4czNfT3VkYlB4czZwbkZfVGp3STk1T3AyYlMtQkZoSzE2TXFLMVJmNHdtN014eEZlRlBkSDVEeWtPUnBsTTlueg?oc=5",
+            "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUzJMZkd2SmJ3NElPajVyNzhnci1nMjlPbUwwZ0FxR0EwREJHWVFxTUpGcHFrUDY5Tm9yaHR1RGM0cU56dVRMMUdGejBVSWY3NDZEZ3p6UFlJX0wtN1VXYzlDdHdfMDdHQWduWUMxLXI4aUYtYTZLSGFPblhCaUNvVEJFU2FEcFdNdFE?oc=5"
+          ]
+        },
+        {
+          "term": "study finds",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
+          ]
+        },
+        {
+          "term": "washington post",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHY4NEJfR0xmZlFrS2pLVVZiSEpSa2xLV0p5OFo1M0I0RVUtTmtFcElhOTZwa1NsbTdIVFBOTFJRc2hhc3hMcDdYbFNEYXpzcTFKQWIxVi0yaGVCbUlKYVpBVEpxMGNoanFzM1lTeHQwRDlGWlBCUjRjSk1RZ2w2dkZuWjRGSUxHbHBwLVNIWXZ4Z1dGS0NvaHFGT1A1bFdVUFZmM0Z1aEh4Ym9EeGRSUEViTml5Zw?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
+          ]
+        }
+      ]
     },
     "nasa_earth": {
       "source_id": "nasa_earth",
@@ -298,7 +668,53 @@
       "required_days": 21,
       "documents_today": 42,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "commission implementing",
+          "mentions_today": 16,
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "european parliament",
+          "mentions_today": 11,
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2486"
+          ]
+        },
+        {
+          "term": "commission implementing regulation",
+          "mentions_today": 10,
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "implementing regulation",
+          "mentions_today": 10,
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        },
+        {
+          "term": "implementing regulation november",
+          "mentions_today": 10,
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2485",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489"
+          ]
+        }
+      ]
     },
     "federal_register": {
       "source_id": "federal_register",
@@ -309,7 +725,53 @@
       "required_days": 21,
       "documents_today": 100,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "inventory completion",
+          "mentions_today": 14,
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "notice inventory",
+          "mentions_today": 14,
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "notice inventory completion",
+          "mentions_today": 14,
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "intended repatriation",
+          "mentions_today": 10,
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "notice intended",
+          "mentions_today": 10,
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        }
+      ]
     }
   },
   "billboard": {
@@ -653,9 +1115,9 @@
       "top20": [
         {
           "term": "york times",
-          "score": 6.977,
-          "mentions": 6,
-          "rate_per_10k": 833.33,
+          "score": 6.795,
+          "mentions": 5,
+          "rate_per_10k": 694.44,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -667,30 +1129,29 @@
         },
         {
           "term": "cbs news",
-          "score": 6.285,
-          "mentions": 3,
-          "rate_per_10k": 416.67,
+          "score": 6.572,
+          "mentions": 4,
+          "rate_per_10k": 555.56,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMie0FVX3lxTE51eTQ5MU1ubjg3bmZUVTZzeWEybXBuNEVWZkY2U2pmR2JmbXl4TGhlaGRSN3hjOVdIM045Um1QR1U0bGplMFZyQ0w0cy03d18tTDRIRnU2SkRsSGExRlNMWjhTcnMwblVLLTduVFVFX253Z3ZXYkFQTm5Yaw?oc=5",
-            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
-            "https://news.google.com/rss/articles/CBMif0FVX3lxTE80TE5qSEk1OUxBdXR4NFRIakNuN2NlTm1qSXBXZGNlekl6R3gzaFpHbkJZWmlRdGszZ3JJR0l6STQ3MEJ6TnF3cjZZNWo3ZUdqMTktTm8tbXVmMEFoTTV1a2RjZHpXa3RlM1pXLU5mOHZCWE9iNmZKNENzQl9JMjg?oc=5"
+            "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdmsyOFlFQ1BwM1V1X25KVmxpVUY1SGNOcmFTVGFSc0xLNUxrd0lDYXA4UkJ1cEtJTUJzR3BYRUhYYWx3eW5raVdtUUNlU1FJRVdEQkd4REN5OTBST0NTTjhlU3FoVFlfZ1VRMk5lWGpUYXF5VHVFZVJ6TGtNdFlyY21WX1FnbDBPdTRyMmdjeUhpZFhrdjB2R0JlazFoSEw0N0FCdk1zUUg2LXctWXBBb3FiNnY5dmdsVnc?oc=5",
+            "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JdnI2N05uOHdtZFhtb0U3MGN6bEhNN05QbE85RV81UGRMenBqY04tWXhLU1MxRzR6NWxZOUx5cnNzYmRwRFEwRWJnbi1Cc0JpMUt2aW53VEpWOFA0cEptN2xLLVB6S1RxNDlydWs5MGsySnprakktTlkwUmxqODQ?oc=5",
+            "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5"
           ]
         },
         {
-          "term": "nbc news",
-          "score": 6.285,
-          "mentions": 3,
-          "rate_per_10k": 416.67,
+          "term": "black friday",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMitgFBVV95cUxNS0dUSlVUZVJOSEpEOWVaeFQyWTZiMU5GdnhXM1dGb0pFc3RCcmJYU1RJcFFWMGZRcE9EY3ZhV0Nid3dsODFIZkVPM2pCTFBnSHg4b2ZWRVh3b2N2TE5ta2psYXp6R2w4aXF6R1ZPdzBvVDd6a1NYNDF2ZTlVdTVJUVhpZmNyaUh1TEF6bGVGb2lJRk5qMGZmU0ZOSDY0RkpTZzJpVHFHVlIxdDNFc0dTTFF0QWRiUQ?oc=5",
-            "https://news.google.com/rss/articles/CBMipwFBVV95cUxObUg1MUdUTG4wV2hURXN2OXN5aWp0cHNUMTEycXN3a3BBejZraTBGd1dyS2tjdFR4a2JZbkVGVjVMNXo2VUhwZjJlQnpsTFhJR0R6bjh5WENRMzdZVmRlUHpwLVUzdzRZMEdhUmg0Ymw0bFNYbkViNmk5R1RpNExid1R5a2RBQ2xjSVl5NGdQMy1pT0w3WXBMTWtRc2VHN2RZMjNkb1JxYw?oc=5",
-            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVF9tVWd5YlFSaS1lYlpydWIzRzlIbHNkRHExVlNvNXZqbjJVZHNyMGpnb0dEVmhHM08zbFBHblI2OWNRMlkxLW56dGhlamRsWVUtN243a0t1eUQ2QVh4UlV1d0NUSS1KOEUtOGFfVEtNaUtUWXF6REFMSHhrZVpaNWMwT1gxbzVJUVBia1RyaGdoVDV1R3EyMVVITEwwdXVsYlVfQQ?oc=5"
+            "https://news.google.com/rss/articles/CBMinAFBVV95cUxObXNoUHhpTlY2UkZhaHU3Q0RIMENmMzh1Vlh4SURXOTJtTGxuMnBRVHFQZTg0RmxYNGl1WDNfWHZsNTVOY3R6a3RpZ1libVM2aGNXOFZ1RnhieG9wc0tuN3RxZW4yX3A4aGlvWm85ZWNWVlJZYnJWMEotTWNrNXVVWXhfb3FkbGJrSmFhQzlfSjU1QmQ5YzBTUk1mT3M?oc=5",
+            "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaVd1ZGx5QWJCdTdqSUt5QXJ6cldaUDNSR3ZuUFJqRjJFLUJpOUFkZ21uYUFlcWNpR19yVFNaQWVfeFpEcTZCb2RmczRaUG5JSG4tOWR5N2duMUNrbTlsT3dNMXNZeVZYSmNuVmcwMzZyUVpTQi1YTHpwbnZKM0lrNGpyWEF5Zm1INmpKVmZFYm14bWtBeUE3bTAwUlBOSUxJYXdTdU1fbHN6cno3bGQ0UHJ1NEtKanVIc2tZY0JualM1RW11RXBJZWtIbDc?oc=5"
           ]
         },
         {
@@ -702,12 +1163,12 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSG53OS05aTl0akFKTGZNMWo2ZFNVYmVicm9CZVhUVC1wb2lRcHhWdXRXbHc5UV9iX2dNQWZMTTRVdzMtb3hrX210VmxVbkNFeEJPcmM5UU9KaFR0NEduS0E5TWloa1FoV3Nxc2hicGtYaUt5X180MF9xSkl4dTFNWmNqWUstQXlUazVqdVQwejVaTXgzT2dXNElmaWxoNFF0cUVNdzRmck1saXEtSFNMVHFCWUg2dTh3RF9UcWpRWGVPNUlhSXBVNjRmV1JnRTl1QUNN?oc=5",
-            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5"
+            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5",
+            "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSG53OS05aTl0akFKTGZNMWo2ZFNVYmVicm9CZVhUVC1wb2lRcHhWdXRXbHc5UV9iX2dNQWZMTTRVdzMtb3hrX210VmxVbkNFeEJPcmM5UU9KaFR0NEduS0E5TWloa1FoV3Nxc2hicGtYaUt5X180MF9xSkl4dTFNWmNqWUstQXlUazVqdVQwejVaTXgzT2dXNElmaWxoNFF0cUVNdzRmck1saXEtSFNMVHFCWUg2dTh3RF9UcWpRWGVPNUlhSXBVNjRmV1JnRTl1QUNN?oc=5"
           ]
         },
         {
-          "term": "hegseth impeachment",
+          "term": "iran war",
           "score": 5.88,
           "mentions": 2,
           "rate_per_10k": 277.78,
@@ -715,8 +1176,8 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRGhlVThwT2hMM1VuY2FNM21GbFloXzRZYWNYeDRJVG5ZTkRuLTVfRW9pMElCNzVpOXQzOWtETXN3ck9xZWVZaWRSQ0JQWXBiblRnNlJNb2pnbWdCOGphYUhsb3RzOHF1aXZFODZ2WFJLZldEaVItUktER3FCdEdnTUV3ZG9RczIyUUljQWxuV05iQ0dTR2w0QXFkLTFLeHI2bzQ0ajlXZkNGelhkamRtUHln?oc=5",
-            "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GWDRUZGRSX05ZVmdtMTAxeHYzZmpZMXcwek51d3pJal9KTldSb2FjUkhGM3hnbTJselJSdzI4VjlVVWZzNkE3X0d2MER5aExTREZmSy1Qblp0SHpxaVdZZTF2SlZqbnY3c3Fz?oc=5"
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
+            "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JdnI2N05uOHdtZFhtb0U3MGN6bEhNN05QbE85RV81UGRMenBqY04tWXhLU1MxRzR6NWxZOUx5cnNzYmRwRFEwRWJnbi1Cc0JpMUt2aW53VEpWOFA0cEptN2xLLVB6S1RxNDlydWs5MGsySnprakktTlkwUmxqODQ?oc=5"
           ]
         },
         {
@@ -730,6 +1191,19 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
             "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPUEhRNDNISEVESjQ3THBJWU55RVhadXZleHFUajNVNjUtTnFOdEFyeVZ6clJ5YjR1ME5pWTVUdWJnWnZBQjFXTDZNTGQ4c1NqaWFaZGptSDFSV0NqNW5YM2tXelZZdlJSVnVicEVNcVV5TlkwTU1kVXJBT0h2bE1oaFdVRks5YV9Xd1RQN2JscktDZ3ozeVJnMm5BQlhFOXJrMHRzcjNJQmxQN2cwVUtKMlFDTXlXWXN4U2hUeWozMXVfSlpnYXF2RVJ0WlZHZmtjSEpqTjdxNkRyVk9xT1lCc202TU5WX3VveElv?oc=5"
+          ]
+        },
+        {
+          "term": "nbc news",
+          "score": 5.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdDFRRjNzVTN2NHJSRGtBMXZPeDg5U3N2YW5HSDdPMmRJeDBJRU1IS2hRRGJNNW1uc183Y29sRjNydHFsbGlYbDFoSnRWLVNocENJbXY4Q1NFbTR2NWViRmQ5QjFsa3ZfOG5OeHRGNElNcm1rWUIzM0dMWS1YTUhDRzhNYzR5VXJLUUxDZ1RqdVJxcml4aHVhMkZDV3ViZHB4T29VMExBMDZ1RGxfSmFOUDZZMG5wU1RL?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVF9tVWd5YlFSaS1lYlpydWIzRzlIbHNkRHExVlNvNXZqbjJVZHNyMGpnb0dEVmhHM08zbFBHblI2OWNRMlkxLW56dGhlamRsWVUtN243a0t1eUQ2QVh4UlV1d0NUSS1KOEUtOGFfVEtNaUtUWXF6REFMSHhrZVpaNWMwT1gxbzVJUVBia1RyaGdoVDV1R3EyMVVITEwwdXVsYlVfQQ?oc=5"
           ]
         },
         {
@@ -756,19 +1230,6 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMidkFVX3lxTE94cjNGWFpqT2lKaG5TZElsNXFiZVFTSlVweVJoRlJuSkE5Y0w3a2gwaFRzMDdrdTBVU3Fwc3ZscE5NVDNweVpMVzNVNEVDUHJpWmFmQ2hIYnhtY09KdE9mVDVrVWxIU04zWDcyQ3ZGd2xlcG50SFE?oc=5",
             "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPUEhRNDNISEVESjQ3THBJWU55RVhadXZleHFUajNVNjUtTnFOdEFyeVZ6clJ5YjR1ME5pWTVUdWJnWnZBQjFXTDZNTGQ4c1NqaWFaZGptSDFSV0NqNW5YM2tXelZZdlJSVnVicEVNcVV5TlkwTU1kVXJBT0h2bE1oaFdVRks5YV9Xd1RQN2JscktDZ3ozeVJnMm5BQlhFOXJrMHRzcjNJQmxQN2cwVUtKMlFDTXlXWXN4U2hUeWozMXVfSlpnYXF2RVJ0WlZHZmtjSEpqTjdxNkRyVk9xT1lCc202TU5WX3VveElv?oc=5"
-          ]
-        },
-        {
-          "term": "veterans day",
-          "score": 5.88,
-          "mentions": 2,
-          "rate_per_10k": 277.78,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUFRadjFES3RzVThFMzZaM3czWmx3bkttQWtiRkc5SGJRbHJJSXU0aHh6WkRKdzh2cUZnZlBkd2xzbm5LdC16MU9KcmhwZmxHbnE1VGNVaTEtNUF1VWVFSllSSnR6R0hMYnNtRUZmQVF4SGkyZU1SWjRtZ05oZ2NHTzZMMVNVWmN4?oc=5",
-            "https://news.google.com/rss/articles/CBMie0FVX3lxTE51eTQ5MU1ubjg3bmZUVTZzeWEybXBuNEVWZkY2U2pmR2JmbXl4TGhlaGRSN3hjOVdIM045Um1QR1U0bGplMFZyQ0w0cy03d18tTDRIRnU2SkRsSGExRlNMWjhTcnMwblVLLTduVFVFX253Z3ZXYkFQTm5Yaw?oc=5"
           ]
         }
       ]
@@ -1658,6 +2119,20 @@
       "state": "EXPLORATORY",
       "top20": [
         {
+          "term": "science daily",
+          "score": 6.944,
+          "mentions": 5,
+          "rate_per_10k": 806.45,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE94eTRLNU1XSDlIcVkxMENhTUlrdFpQRUowUHdZU3d5YkliN1lXUzNCZFhtRjJCZEJ3T3BmNnUzRUdPZy0xMGpiclp0YVVzMzdtLWp1bWtFcUhNVlAzbnFobGk4THA0ejJ4dHBlWlg0dw?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE54S05QNXZCdF9HX2t3eS1SRThzajdRd3pXTFVDRjdzU3BLZlB1NFVPd1ZjR1UyREo4RFhzRkdTdEFkblF6S0x5Y0tpU1BsRi1xZWwtREQxcHpQRTN6TnBnQjc5Yy03QXpmMXJqdnhjSQ?oc=5",
+            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ldU54V3pZb19Ra1dpYlJKSlZWN3lKelFLOUhNaFhPNTZIZVNaeWFXQlVQczYxQkhzRzNKVnZhVTNqaE1fLWRRNnczcTd6ZzQ2QTBxVkk4SWF2aXFQU0djaFVTQThYV3RwdXY3QUR3NA?oc=5"
+          ]
+        },
+        {
           "term": "york post",
           "score": 6.944,
           "mentions": 5,
@@ -1668,7 +2143,7 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcDZwVEt1Qjc3b2tCV0NTNlhWbWxBLTFPLWkwRF83dERTZXlwbWZJWTB4X1FqcTNRdHRUZ2hkUDI0QjRHMHBTOVRqVEVEcGR1WG1pN096Sk5fMFJUenFFVy1GejVaT29Db3c2bklQVWt6aTA3bW56N2ZuZ1FGLXZHbU1Jdw?oc=5",
             "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdFhlWXBqTmJ5RWFSdEVWRkNERl9JMzFMSHpiTllMYnNEb3NicEVFbWNSdEw1Q1p0NGhjTGxVekNJY2MzZG9UUEhXMEo4RVJlNTFBa1g5dHI3dEJqYlFwS2kxd0pPeHJXNHNheUE4cWdCaENvVUZtVDZ4bDlQTGhTUTNLUjhpNGVuNHMyR2NVTmZBd1RFR0twUEtoUTV0N3BjeWUyQ0FKUUlvdmc?oc=5",
-            "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV09JbjFhaENaeWpKT09ITjdtc3d0aWRfQ2FxUFhYTXpXcE9LeGl4QVV1a3ZFVWhkaW1vLU00S2xBR2hZYWRRZTdQaVNqU2daVmhIR2libWgwTWVsTVRZY1EyY1NsRDR0ckhEc3E4dHVURVYtQ1hpVW5jVkR3Njl5ZEh1Vl80MUVIT2IzcTU4a2xzVWI5c3I1NGdpSU95MUZwcVFhSg?oc=5"
+            "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSk10aDV1RG92VmxHR3JLclZhVjJyVjRDNDBIR0dLakVNZnIya3RaQ0RkNHFpVHlXYjZsOUxOTDdhWnlVV25Xazl6Y2JwWnlqVVFQTUdPQl92VGVqdE53Qk5mTHhPSmF2ZTdVX280SmIxeEVvSGoyZDJTUl9GaUtEQ3JjU193d3lXcUVfMXdSRzhiX1o0aHo1T1BRWnVMTGx4UEx4YklvcVNhLTlVRVdTb3ludVAxWWJyeFZB?oc=5"
           ]
         },
         {
@@ -1683,20 +2158,6 @@
             "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhS1RYZm8yTzk0WEEza1lnRnYtSGY0Q1hBa1dGSHA5SDNLRW9QdnhhckN2cjAyOFF5NjcxaGxoNzFGdW1UVUhZSjZPeEswd05SalJiZEJkNk1EVnBjRUZZX2RJVnQxSkJZWWRKR2U5MUNWSGJNUXZB?oc=5",
             "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZHFYUjZvRDZOTk1xZXcweUJ0bEpMZ19JbmpSZG5oRG1KWU56YXd2b1ZjVnMwR1U5MTNpVU41ZDc4czNfT3VkYlB4czZwbkZfVGp3STk1T3AyYlMtQkZoSzE2TXFLMVJmNHdtN014eEZlRlBkSDVEeWtPUnBsTTlueg?oc=5",
             "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUzJMZkd2SmJ3NElPajVyNzhnci1nMjlPbUwwZ0FxR0EwREJHWVFxTUpGcHFrUDY5Tm9yaHR1RGM0cU56dVRMMUdGejBVSWY3NDZEZ3p6UFlJX0wtN1VXYzlDdHdfMDdHQWduWUMxLXI4aUYtYTZLSGFPblhCaUNvVEJFU2FEcFdNdFE?oc=5"
-          ]
-        },
-        {
-          "term": "science daily",
-          "score": 6.721,
-          "mentions": 4,
-          "rate_per_10k": 645.16,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMib0FVX3lxTE94eTRLNU1XSDlIcVkxMENhTUlrdFpQRUowUHdZU3d5YkliN1lXUzNCZFhtRjJCZEJ3T3BmNnUzRUdPZy0xMGpiclp0YVVzMzdtLWp1bWtFcUhNVlAzbnFobGk4THA0ejJ4dHBlWlg0dw?oc=5",
-            "https://news.google.com/rss/articles/CBMib0FVX3lxTE54S05QNXZCdF9HX2t3eS1SRThzajdRd3pXTFVDRjdzU3BLZlB1NFVPd1ZjR1UyREo4RFhzRkdTdEFkblF6S0x5Y0tpU1BsRi1xZWwtREQxcHpQRTN6TnBnQjc5Yy03QXpmMXJqdnhjSQ?oc=5",
-            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ldU54V3pZb19Ra1dpYlJKSlZWN3lKelFLOUhNaFhPNTZIZVNaeWFXQlVQczYxQkhzRzNKVnZhVTNqaE1fLWRRNnczcTd6ZzQ2QTBxVkk4SWF2aXFQU0djaFVTQThYV3RwdXY3QUR3NA?oc=5"
           ]
         },
         {
