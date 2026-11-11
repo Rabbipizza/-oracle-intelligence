@@ -20,6 +20,7 @@ import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from oracle_billboard import source_snapshots, source_billboards
+from oracle_pipeline import create_research_queue
 
 UTC = dt.timezone.utc
 ROOT = Path(__file__).resolve().parent
@@ -48,6 +49,12 @@ SOURCES = [
     ("hackernews", "Hacker News", "social", "hackernews", "hn", "https://hacker-news.firebaseio.com/v0/topstories.json"),
     ("wikipedia_en", "Wikipedia Top Pages EN", "culture", "wikipedia", "wiki", "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia.org/all-access"),
     ("wikipedia_fr", "Wikipedia Top Pages FR", "culture", "wikipedia", "wiki", "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/fr.wikipedia.org/all-access"),
+    ("google_news_us", "Google News US", "news", "google_news", "rss", "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"),
+    ("google_news_fr", "Google News France", "news", "google_news", "rss", "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"),
+    ("google_news_health", "Google News Santé", "health", "google_news", "rss", "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=en-US&gl=US&ceid=US:en"),
+    ("nasa_earth", "NASA Earth Observatory", "geography", "nasa_earth", "rss", "https://earthobservatory.nasa.gov/feeds/earth-observatory.rss"),
+    ("fed_press", "Federal Reserve Press", "macroeconomics", "fed_press", "rss", "https://www.federalreserve.gov/feeds/press_all.xml"),
+    ("eurlex_law", "EUR-Lex Acts", "geopolitics", "eurlex", "rss", "https://eur-lex.europa.eu/EN/display-feed.rss?rssId=165"),
     ("federal_register", "US Federal Register", "geopolitics", "federal_register", "federal", "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"),
 ]
 DOMAINS = [
@@ -260,6 +267,7 @@ def run(now=None):
     latest = {"date": today, "collected_at_utc": now.isoformat(), "schema_version": 2,
               "status": "PARTIAL" if any(h["status"] == "ERROR" for h in health) else "OK",
               "source_health": health, "source_billboard": per_source, "billboard": rank,
+              "research_queue": create_research_queue(per_source),
               "investment": {"state": "NOT_EVALUATED", "reason": "No verified security pricing, fundamentals or backtest; no trading signals."}}
     # Snapshot retains statistics, term counts, provenance URLs only — no raw post text.
     day_path = data_dir / (today + ".json")

@@ -27,3 +27,9 @@ Un signal vert n'est jamais une garantie de rendement. Le portefeuille ACTUAL, T
 ## Nouvelle feuille de route (7 étapes)
 
 [Lire le cahier des charges](docs/ORACLE_7_ETAPES.md). Top 5 par source selon accélération du wording, puis marché, goulots, fournisseurs, Top 10 sociétés et trading validé. Dashboard : [`index.html`](index.html).
+
+## Connecteurs complémentaires et chaîne de recherche
+
+Des flux RSS publics (Google News, NASA Earth Observatory, Réserve fédérale et EUR-Lex) sont ajoutés à titre expérimental. Leur fonctionnement n'est confirmé qu'après un run réussi : une URL connue ne garantit pas un flux disponible, ni une licence de redistribution.
+
+`oracle_pipeline.py` produit une file de dossiers pour les tendances confirmées par le Billboard, puis bloque les étapes marché / fournisseurs / trading lorsqu'il manque des preuves vérifiées. Aucun classement d'entreprises ni trading automatique n'en découle actuellement.
