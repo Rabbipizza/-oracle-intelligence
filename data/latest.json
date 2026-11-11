@@ -1,0 +1,1447 @@
+{
+  "date": "2026-11-11",
+  "collected_at_utc": "2026-11-11T15:31:44.043518+00:00",
+  "schema_version": 1,
+  "status": "PARTIAL",
+  "source_health": [
+    {
+      "source": "arxiv_ai",
+      "status": "OK",
+      "documents": 381
+    },
+    {
+      "source": "arxiv_biology",
+      "status": "OK",
+      "documents": 57
+    },
+    {
+      "source": "arxiv_economics",
+      "status": "OK",
+      "documents": 38
+    },
+    {
+      "source": "arxiv_quantum",
+      "status": "OK",
+      "documents": 156
+    },
+    {
+      "source": "arxiv_robotics",
+      "status": "OK",
+      "documents": 111
+    },
+    {
+      "source": "federal_register",
+      "status": "OK",
+      "documents": 100
+    },
+    {
+      "source": "google_ch",
+      "status": "OK",
+      "documents": 10
+    },
+    {
+      "source": "google_fr",
+      "status": "OK",
+      "documents": 10
+    },
+    {
+      "source": "google_gb",
+      "status": "OK",
+      "documents": 10
+    },
+    {
+      "source": "google_us",
+      "status": "OK",
+      "documents": 10
+    },
+    {
+      "source": "hackernews",
+      "status": "OK",
+      "documents": 55
+    },
+    {
+      "source": "wikipedia_en",
+      "status": "OK",
+      "documents": 493
+    },
+    {
+      "source": "wikipedia_fr",
+      "status": "ERROR",
+      "documents": 0,
+      "error": "HTTPError"
+    }
+  ],
+  "billboard": {
+    "culture": {
+      "documents": 497,
+      "historical_days": 0,
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "film",
+          "score": 6.586,
+          "mentions": 28,
+          "rate_per_10k": 563.38,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Scene_%282026_film%29",
+            "https://en.wikipedia.org/wiki/Clayface_%28film%29",
+            "https://en.wikipedia.org/wiki/The_Odyssey_%282026_film%29"
+          ]
+        },
+        {
+          "term": "united",
+          "score": 6.473,
+          "mentions": 25,
+          "rate_per_10k": 503.02,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi"
+          ]
+        },
+        {
+          "term": "states",
+          "score": 6.345,
+          "mentions": 22,
+          "rate_per_10k": 442.66,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi"
+          ]
+        },
+        {
+          "term": "united states",
+          "score": 6.345,
+          "mentions": 22,
+          "rate_per_10k": 442.66,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi"
+          ]
+        },
+        {
+          "term": "list",
+          "score": 5.894,
+          "mentions": 14,
+          "rate_per_10k": 281.69,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films",
+            "https://en.wikipedia.org/wiki/List_of_Hindi_films_of_2026",
+            "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026"
+          ]
+        },
+        {
+          "term": "series",
+          "score": 5.894,
+          "mentions": 14,
+          "rate_per_10k": 281.69,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Gilded_Age_%28TV_series%29",
+            "https://en.wikipedia.org/wiki/From_%28TV_series%29",
+            "https://en.wikipedia.org/wiki/Nocturne_%28TV_series%29"
+          ]
+        },
+        {
+          "term": "election",
+          "score": 5.821,
+          "mentions": 13,
+          "rate_per_10k": 261.57,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2026_Israeli_legislative_election",
+            "https://en.wikipedia.org/wiki/2026_New_Zealand_general_election"
+          ]
+        },
+        {
+          "term": "films",
+          "score": 5.559,
+          "mentions": 10,
+          "rate_per_10k": 201.21,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films",
+            "https://en.wikipedia.org/wiki/List_of_Hindi_films_of_2026",
+            "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026"
+          ]
+        },
+        {
+          "term": "james",
+          "score": 5.454,
+          "mentions": 9,
+          "rate_per_10k": 181.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/James_Talarico",
+            "https://en.wikipedia.org/wiki/James_Gunn",
+            "https://en.wikipedia.org/wiki/James_Stewart"
+          ]
+        },
+        {
+          "term": "senate",
+          "score": 5.052,
+          "mentions": 6,
+          "rate_per_10k": 120.72,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "states senate",
+          "score": 5.052,
+          "mentions": 6,
+          "rate_per_10k": 120.72,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "united states senate",
+          "score": 5.052,
+          "mentions": 6,
+          "rate_per_10k": 120.72,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "elections",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections"
+          ]
+        },
+        {
+          "term": "presidential",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "presidential election",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "states presidential",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "states presidential election",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "united states presidential",
+          "score": 4.871,
+          "mentions": 5,
+          "rate_per_10k": 100.6,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "american",
+          "score": 4.65,
+          "mentions": 4,
+          "rate_per_10k": 80.48,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
+            "https://en.wikipedia.org/wiki/Jason_Beck_%28American_football%29",
+            "https://en.wikipedia.org/wiki/Ben_Johnson_%28American_football_coach%29"
+          ]
+        },
+        {
+          "term": "godzilla",
+          "score": 4.65,
+          "mentions": 4,
+          "rate_per_10k": 80.48,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_One",
+            "https://en.wikipedia.org/wiki/Godzilla_%28franchise%29"
+          ]
+        }
+      ]
+    },
+    "social": {
+      "documents": 55,
+      "historical_days": 0,
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "show",
+          "score": 7.246,
+          "mentions": 6,
+          "rate_per_10k": 1090.91,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://github.com/0xdeadf1sh/AssemblyForNeovim",
+            "https://github.com/adrbn/bo2-mac",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "macos",
+          "score": 6.553,
+          "mentions": 3,
+          "rate_per_10k": 545.45,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+            "https://github.com/adrbn/bo2-mac",
+            "https://github.com/microsoft/Procexp-Mac"
+          ]
+        },
+        {
+          "term": "agent",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://blog.atuin.sh/threads-agent-sessions/",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        },
+        {
+          "term": "apple",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.theverge.com/tech/1031507/apple-community-support-forum-shutting-down",
+            "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/"
+          ]
+        },
+        {
+          "term": "attention",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://machinelearning.apple.com/research/attention-mamba-distillation",
+            "https://zellij.dev/news/terminal-inbox-session-previews/"
+          ]
+        },
+        {
+          "term": "built-in",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://github.com/lukks/like-webrtc",
+            "https://zellij.dev/news/terminal-inbox-session-previews/"
+          ]
+        },
+        {
+          "term": "every",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://blog.atuin.sh/threads-agent-sessions/",
+            "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions"
+          ]
+        },
+        {
+          "term": "make",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+            "https://ianbarber.blog/2026/11/09/make-this-forward-pass-as-fast-as-possible/"
+          ]
+        },
+        {
+          "term": "programming",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://nathan.rs/posts/weight-space-lp/",
+            "https://thingstudio.net/"
+          ]
+        },
+        {
+          "term": "users",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://blog.mozilla.org/security/2026/11/10/open-research-stronger-privacy-making-firefox-users-harder-to-fingerprint/",
+            "https://fingerprinting.study/"
+          ]
+        },
+        {
+          "term": "work",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
+            "https://docodethatmatters.com/home-automation-overnight-success/"
+          ]
+        },
+        {
+          "term": "your",
+          "score": 6.149,
+          "mentions": 2,
+          "rate_per_10k": 363.64,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://blog.atuin.sh/threads-agent-sessions/",
+            "https://github.com/GoogleChrome/modern-web-guidance"
+          ]
+        }
+      ]
+    },
+    "news": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "technology": {
+      "documents": 492,
+      "historical_days": 0,
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "learning",
+          "score": 7.233,
+          "mentions": 53,
+          "rate_per_10k": 1077.24,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13307",
+            "https://arxiv.org/abs/2611.13499",
+            "https://arxiv.org/abs/2611.13685"
+          ]
+        },
+        {
+          "term": "models",
+          "score": 7.155,
+          "mentions": 49,
+          "rate_per_10k": 995.93,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13229",
+            "https://arxiv.org/abs/2611.13592",
+            "https://arxiv.org/abs/2611.14365"
+          ]
+        },
+        {
+          "term": "agents",
+          "score": 6.79,
+          "mentions": 34,
+          "rate_per_10k": 691.06,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12934",
+            "https://arxiv.org/abs/2611.12958",
+            "https://arxiv.org/abs/2611.12966"
+          ]
+        },
+        {
+          "term": "via",
+          "score": 6.79,
+          "mentions": 34,
+          "rate_per_10k": 691.06,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13482",
+            "https://arxiv.org/abs/2611.14247",
+            "https://arxiv.org/abs/2509.19573"
+          ]
+        },
+        {
+          "term": "llm",
+          "score": 6.665,
+          "mentions": 30,
+          "rate_per_10k": 609.76,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12950",
+            "https://arxiv.org/abs/2611.12966",
+            "https://arxiv.org/abs/2611.13015"
+          ]
+        },
+        {
+          "term": "model",
+          "score": 6.665,
+          "mentions": 30,
+          "rate_per_10k": 609.76,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13204",
+            "https://arxiv.org/abs/2611.13292",
+            "https://arxiv.org/abs/2611.13766"
+          ]
+        },
+        {
+          "term": "control",
+          "score": 6.596,
+          "mentions": 28,
+          "rate_per_10k": 569.11,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12949",
+            "https://arxiv.org/abs/2611.13204",
+            "https://arxiv.org/abs/2611.13482"
+          ]
+        },
+        {
+          "term": "language",
+          "score": 6.596,
+          "mentions": 28,
+          "rate_per_10k": 569.11,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954"
+          ]
+        },
+        {
+          "term": "reasoning",
+          "score": 6.56,
+          "mentions": 27,
+          "rate_per_10k": 548.78,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13114",
+            "https://arxiv.org/abs/2611.14048",
+            "https://arxiv.org/abs/2511.22928"
+          ]
+        },
+        {
+          "term": "agent",
+          "score": 6.309,
+          "mentions": 21,
+          "rate_per_10k": 426.83,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12953",
+            "https://arxiv.org/abs/2611.13006",
+            "https://arxiv.org/abs/2611.13020"
+          ]
+        },
+        {
+          "term": "language models",
+          "score": 6.26,
+          "mentions": 20,
+          "rate_per_10k": 406.5,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954",
+            "https://arxiv.org/abs/2611.13975"
+          ]
+        },
+        {
+          "term": "generation",
+          "score": 6.155,
+          "mentions": 18,
+          "rate_per_10k": 365.85,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2610.02274",
+            "https://arxiv.org/abs/2611.11089",
+            "https://arxiv.org/abs/2611.12954"
+          ]
+        },
+        {
+          "term": "agentic",
+          "score": 6.098,
+          "mentions": 17,
+          "rate_per_10k": 345.53,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13114",
+            "https://arxiv.org/abs/2611.13344",
+            "https://arxiv.org/abs/2611.14115"
+          ]
+        },
+        {
+          "term": "human",
+          "score": 6.098,
+          "mentions": 17,
+          "rate_per_10k": 345.53,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13610",
+            "https://arxiv.org/abs/2611.13685",
+            "https://arxiv.org/abs/2611.14092"
+          ]
+        },
+        {
+          "term": "multimodal",
+          "score": 6.098,
+          "mentions": 17,
+          "rate_per_10k": 345.53,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12934",
+            "https://arxiv.org/abs/2611.13334",
+            "https://arxiv.org/abs/2611.13782"
+          ]
+        },
+        {
+          "term": "robot",
+          "score": 6.098,
+          "mentions": 17,
+          "rate_per_10k": 345.53,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13034",
+            "https://arxiv.org/abs/2611.13610",
+            "https://arxiv.org/abs/2611.13685"
+          ]
+        },
+        {
+          "term": "autonomous",
+          "score": 6.038,
+          "mentions": 16,
+          "rate_per_10k": 325.2,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.12949",
+            "https://arxiv.org/abs/2611.12983",
+            "https://arxiv.org/abs/2611.13251"
+          ]
+        },
+        {
+          "term": "evaluation",
+          "score": 6.038,
+          "mentions": 16,
+          "rate_per_10k": 325.2,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13790",
+            "https://arxiv.org/abs/2611.12942",
+            "https://arxiv.org/abs/2611.12953"
+          ]
+        },
+        {
+          "term": "foundation",
+          "score": 5.973,
+          "mentions": 15,
+          "rate_per_10k": 304.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.08577",
+            "https://arxiv.org/abs/2611.06817",
+            "https://arxiv.org/abs/2611.12936"
+          ]
+        },
+        {
+          "term": "large",
+          "score": 5.973,
+          "mentions": 15,
+          "rate_per_10k": 304.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
+            "https://arxiv.org/abs/2611.12937",
+            "https://arxiv.org/abs/2611.12954"
+          ]
+        }
+      ]
+    },
+    "science": {
+      "documents": 251,
+      "historical_days": 0,
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "quantum",
+          "score": 8.198,
+          "mentions": 71,
+          "rate_per_10k": 2828.69,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13079",
+            "https://arxiv.org/abs/2611.13089",
+            "https://arxiv.org/abs/2611.13099"
+          ]
+        },
+        {
+          "term": "dynamics",
+          "score": 6.932,
+          "mentions": 20,
+          "rate_per_10k": 796.81,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13079",
+            "https://arxiv.org/abs/2611.13221",
+            "https://arxiv.org/abs/2611.13778"
+          ]
+        },
+        {
+          "term": "model",
+          "score": 6.645,
+          "mentions": 15,
+          "rate_per_10k": 597.61,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13103",
+            "https://arxiv.org/abs/2611.14319",
+            "https://arxiv.org/abs/2611.14460"
+          ]
+        },
+        {
+          "term": "entanglement",
+          "score": 6.335,
+          "mentions": 11,
+          "rate_per_10k": 438.25,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13085",
+            "https://arxiv.org/abs/2611.13371",
+            "https://arxiv.org/abs/2611.13981"
+          ]
+        },
+        {
+          "term": "phase",
+          "score": 6.335,
+          "mentions": 11,
+          "rate_per_10k": 438.25,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13934",
+            "https://arxiv.org/abs/2611.14006",
+            "https://arxiv.org/abs/2611.14214"
+          ]
+        },
+        {
+          "term": "estimation",
+          "score": 6.24,
+          "mentions": 10,
+          "rate_per_10k": 398.41,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13948",
+            "https://arxiv.org/abs/2611.13475",
+            "https://arxiv.org/abs/2509.13423"
+          ]
+        },
+        {
+          "term": "learning",
+          "score": 6.24,
+          "mentions": 10,
+          "rate_per_10k": 398.41,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13428",
+            "https://arxiv.org/abs/2611.13815",
+            "https://arxiv.org/abs/2611.14023"
+          ]
+        },
+        {
+          "term": "inference",
+          "score": 6.135,
+          "mentions": 9,
+          "rate_per_10k": 358.57,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13169",
+            "https://arxiv.org/abs/2611.14385",
+            "https://arxiv.org/abs/2611.13212"
+          ]
+        },
+        {
+          "term": "optimal",
+          "score": 6.017,
+          "mentions": 8,
+          "rate_per_10k": 318.73,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13098",
+            "https://arxiv.org/abs/2611.13111",
+            "https://arxiv.org/abs/2507.10661"
+          ]
+        },
+        {
+          "term": "spin",
+          "score": 6.017,
+          "mentions": 8,
+          "rate_per_10k": 318.73,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13447",
+            "https://arxiv.org/abs/2611.13934",
+            "https://arxiv.org/abs/2611.14023"
+          ]
+        },
+        {
+          "term": "via",
+          "score": 6.017,
+          "mentions": 8,
+          "rate_per_10k": 318.73,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13799",
+            "https://arxiv.org/abs/2611.14114",
+            "https://arxiv.org/abs/2611.14358"
+          ]
+        },
+        {
+          "term": "codes",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13098",
+            "https://arxiv.org/abs/2611.13371",
+            "https://arxiv.org/abs/2611.13373"
+          ]
+        },
+        {
+          "term": "data",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13103",
+            "https://arxiv.org/abs/2611.14422",
+            "https://arxiv.org/abs/2611.13169"
+          ]
+        },
+        {
+          "term": "error",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13111",
+            "https://arxiv.org/abs/2611.13815",
+            "https://arxiv.org/abs/2611.14314"
+          ]
+        },
+        {
+          "term": "measurements",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13099",
+            "https://arxiv.org/abs/2611.13428",
+            "https://arxiv.org/abs/2611.14295"
+          ]
+        },
+        {
+          "term": "simulation",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13079",
+            "https://arxiv.org/abs/2611.14006",
+            "https://arxiv.org/abs/2603.04744"
+          ]
+        },
+        {
+          "term": "states",
+          "score": 5.884,
+          "mentions": 7,
+          "rate_per_10k": 278.88,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13085",
+            "https://arxiv.org/abs/2611.13428",
+            "https://arxiv.org/abs/2611.14108"
+          ]
+        },
+        {
+          "term": "control",
+          "score": 5.731,
+          "mentions": 6,
+          "rate_per_10k": 239.04,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13094",
+            "https://arxiv.org/abs/2611.13447",
+            "https://arxiv.org/abs/2611.14358"
+          ]
+        },
+        {
+          "term": "effects",
+          "score": 5.731,
+          "mentions": 6,
+          "rate_per_10k": 239.04,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2509.08890",
+            "https://arxiv.org/abs/2609.07235",
+            "https://arxiv.org/abs/2611.14434"
+          ]
+        },
+        {
+          "term": "exact",
+          "score": 5.731,
+          "mentions": 6,
+          "rate_per_10k": 239.04,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://arxiv.org/abs/2611.13094",
+            "https://arxiv.org/abs/2510.15370",
+            "https://arxiv.org/abs/2610.29279"
+          ]
+        }
+      ]
+    },
+    "patents": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "macroeconomics": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "geopolitics": {
+      "documents": 100,
+      "historical_days": 0,
+      "state": "EXPLORATORY",
+      "top20": [
+        {
+          "term": "notice",
+          "score": 8.593,
+          "mentions": 42,
+          "rate_per_10k": 4200.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/C1-2026-22802/notice-of-ofac-sanctions-actions",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23077/notice-of-availability-of-the-draft-environmental-assessment-and-finding-of-no-significant-impact",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23065/orleans-international-inc-complainant-v-hapag-lloyd-ag-respondent-notice-of-filing-of-second-amended"
+          ]
+        },
+        {
+          "term": "inventory",
+          "score": 7.564,
+          "mentions": 15,
+          "rate_per_10k": 1500.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23011/inventory-of-mercury-supply-use-and-trade-in-the-united-states-2026-report-notice-of-availability",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "completion",
+          "score": 7.495,
+          "mentions": 14,
+          "rate_per_10k": 1400.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "inventory completion",
+          "score": 7.495,
+          "mentions": 14,
+          "rate_per_10k": 1400.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "notice inventory",
+          "score": 7.495,
+          "mentions": 14,
+          "rate_per_10k": 1400.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "notice inventory completion",
+          "score": 7.495,
+          "mentions": 14,
+          "rate_per_10k": 1400.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "university",
+          "score": 7.421,
+          "mentions": 13,
+          "rate_per_10k": 1300.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23001/notice-of-inventory-completion-auburn-university-at-montgomery-montgomery-al",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "museum",
+          "score": 7.254,
+          "mentions": 11,
+          "rate_per_10k": 1100.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23000/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22998/notice-of-inventory-completion-william-s-webb-museum-of-anthropology-university-of-kentucky"
+          ]
+        },
+        {
+          "term": "information",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "intended",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "intended repatriation",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "notice intended",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "notice intended repatriation",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "repatriation",
+          "score": 7.159,
+          "mentions": 10,
+          "rate_per_10k": 1000.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
+          ]
+        },
+        {
+          "term": "collection",
+          "score": 7.054,
+          "mentions": 9,
+          "rate_per_10k": 900.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "information collection",
+          "score": 7.054,
+          "mentions": 9,
+          "rate_per_10k": 900.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "activities",
+          "score": 6.803,
+          "mentions": 7,
+          "rate_per_10k": 700.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        },
+        {
+          "term": "national",
+          "score": 6.803,
+          "mentions": 7,
+          "rate_per_10k": 700.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23113/establishment-of-the-oval-office-national-monument",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23044/agency-information-collection-activities-proposals-submissions-and-approvals-questionnaire-for"
+          ]
+        },
+        {
+          "term": "center",
+          "score": 6.649,
+          "mentions": 6,
+          "rate_per_10k": 600.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23063/center-for-scientific-review-notice-of-closed-meetings",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23031/national-cybersecurity-center-of-excellence-nccoe-projects-and-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-22985/notice-of-inventory-completion-verde-valley-archaeology-center-and-museum-camp-verde-az"
+          ]
+        },
+        {
+          "term": "collection activities",
+          "score": 6.649,
+          "mentions": 6,
+          "rate_per_10k": 600.0,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ]
+        }
+      ]
+    },
+    "geography": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "demography": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "commodities": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "supply_chain": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "health": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    },
+    "markets": {
+      "documents": 0,
+      "historical_days": 0,
+      "state": "NO_DATA",
+      "top20": []
+    }
+  },
+  "investment": {
+    "state": "NOT_EVALUATED",
+    "reason": "No verified security pricing, fundamentals or backtest; no trading signals."
+  }
+}
