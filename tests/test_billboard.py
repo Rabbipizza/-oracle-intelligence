@@ -46,6 +46,7 @@ class BillboardPerSourceTests(unittest.TestCase):
         old = self.days(lambda offset: 1)[:2]
         result = source_top5(self.source, self.today.isoformat(), self.current(10), old)
         self.assertEqual(result["top5"], [])
+        self.assertTrue(result["preview_unranked"])
         self.assertEqual(result["state"], "INSUFFICIENT_HISTORY")
 
     def test_missing_day_not_assumed_zero(self):

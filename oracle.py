@@ -52,7 +52,7 @@ SOURCES = [
     ("google_news_us", "Google News US", "news", "google_news", "rss", "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"),
     ("google_news_fr", "Google News France", "news", "google_news", "rss", "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"),
     ("google_news_health", "Google News Santé", "health", "google_news", "rss", "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=en-US&gl=US&ceid=US:en"),
-    ("nasa_earth", "NASA Earth Observatory", "geography", "nasa_earth", "rss", "https://earthobservatory.nasa.gov/feeds/earth-observatory.rss"),
+    ("nasa_earth", "NASA Earth Observatory", "geography", "nasa_earth", "rss", "https://science.nasa.gov/feed/?science_org=19791%2C22453"),
     ("fed_press", "Federal Reserve Press", "macroeconomics", "fed_press", "rss", "https://www.federalreserve.gov/feeds/press_all.xml"),
     ("eurlex_law", "EUR-Lex Acts", "geopolitics", "eurlex", "rss", "https://eur-lex.europa.eu/EN/display-feed.rss?rssId=165"),
     ("federal_register", "US Federal Register", "geopolitics", "federal_register", "federal", "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"),
@@ -150,8 +150,12 @@ def collect(source, now):
         docs = federal_items()
     else:
         raise ValueError("Unsupported connector")
-    cutoff = now - dt.timedelta(days=3)
-    docs = [x for x in docs if x["published"] is None or x["published"] >= cutoff]
+    # Google Trends trending RSS is itself a current ranked snapshot. Its item
+    # pubDate may describe the original story rather than trending-list entry;
+    # discarding it makes sample volume unpredictably shrink to 0–1 items.
+    if family != "google_trends":
+        cutoff = now - dt.timedelta(days=3)
+        docs = [x for x in docs if x["published"] is None or x["published"] >= cutoff]
     for item in docs:
         item.update({"source": key, "family": family, "domain": domain})
     return docs

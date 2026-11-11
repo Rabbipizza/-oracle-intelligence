@@ -73,7 +73,14 @@ def source_top5(source, day_string, current_snapshot, previous_snapshots):
         "required_days": MIN_DAYS,
         "documents_today": today.get("documents", 0),
         "top5": [],
-        "preview_unranked": [],
+        "preview_unranked": [
+            {"term": term, "mentions_today": info["count"],
+             "evidence_urls": info.get("links", [])}
+            for term, info in sorted(
+                today.get("terms", {}).items(),
+                key=lambda pair: (-pair[1]["count"], pair[0])
+            ) if info.get("count", 0) >= 2
+        ][:5],
     }
     if not today.get("documents"):
         state["state"] = "NO_DATA"
