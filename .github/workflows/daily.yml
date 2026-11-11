@@ -6,6 +6,9 @@ on:
   push:
     paths:
       - "oracle.py"
+      - "oracle_billboard.py"
+      - "index.html"
+      - "docs/ORACLE_7_ETAPES.md"
       - "tests/**"
       - ".github/workflows/daily.yml"
 

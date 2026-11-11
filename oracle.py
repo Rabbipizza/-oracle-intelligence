@@ -19,6 +19,7 @@ import sys
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
+from oracle_billboard import source_snapshots, source_billboards
 
 UTC = dt.timezone.utc
 ROOT = Path(__file__).resolve().parent
@@ -243,7 +244,8 @@ def run(now=None):
     if not good:
         raise RuntimeError("FAIL_CLOSED: no successfully collected observations; output not updated")
     daily = {"date": today, "collected_at_utc": now.isoformat(), "domains": aggregate(good),
-             "source_health": health, "schema_version": 1}
+             "sources": source_snapshots(good, SOURCES, terms),
+             "source_health": health, "schema_version": 2}
     data_dir.mkdir(parents=True, exist_ok=True)
     past = load_history(data_dir, today)
     rank = {}
@@ -254,9 +256,10 @@ def run(now=None):
                         "historical_days": sum(p["documents"] > 0 for p in previous_domains),
                         "state": "EXPLORATORY" if day_now["documents"] else "NO_DATA",
                         "top20": compute_rank(day_now, previous_domains)}
-    latest = {"date": today, "collected_at_utc": now.isoformat(), "schema_version": 1,
+    per_source = source_billboards(today, daily, past, SOURCES)
+    latest = {"date": today, "collected_at_utc": now.isoformat(), "schema_version": 2,
               "status": "PARTIAL" if any(h["status"] == "ERROR" for h in health) else "OK",
-              "source_health": health, "billboard": rank,
+              "source_health": health, "source_billboard": per_source, "billboard": rank,
               "investment": {"state": "NOT_EVALUATED", "reason": "No verified security pricing, fundamentals or backtest; no trading signals."}}
     # Snapshot retains statistics, term counts, provenance URLs only — no raw post text.
     day_path = data_dir / (today + ".json")
@@ -266,7 +269,7 @@ def run(now=None):
     temp.write_text(json.dumps(latest, ensure_ascii=False, indent=2), encoding="utf-8")
     os.replace(temp, out_path)
     print(json.dumps({"date": today, "observations": len(good), "successful_sources": sum(h["status"] == "OK" for h in health),
-                      "errors": sum(h["status"] == "ERROR" for h in health), "billboards": sum(bool(x["top20"]) for x in rank.values())}))
+                      "errors": sum(h["status"] == "ERROR" for h in health), "source_billboards": sum(bool(x["top5"]) for x in per_source.values())}))
     return latest
 
 if __name__ == "__main__":

@@ -1,55 +1,66 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ORACLE — Billboard</title>
+<title>ORACLE — Billboard Top 5 par source</title>
 <style>
-:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#e5edf8;background:#08111e}
-body{margin:0;max-width:1120px;padding:24px 18px 90px;margin:auto}h1{font-size:clamp(28px,5vw,48px);margin:6px 0}h2{font-size:20px}
-p,small{color:#a7b6ca}.tag{display:inline-block;background:#142840;color:#b2d2e5;border-radius:6px;padding:6px 10px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
-button{border:1px solid #2c4762;background:#142235;color:#d6eaff;border-radius:9px;padding:9px 12px;cursor:pointer}
-button[aria-pressed=true]{background:#176466;color:white}
-.card{background:#101e30;border:1px solid #2c4058;border-radius:14px;padding:18px;margin-top:18px}
-table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #304157;padding:11px 8px;text-align:left;font-size:13px}
-th{color:#9daec4}td:first-child{font-weight:bold}.mono{font-variant-numeric:tabular-nums}
-a{color:#83d2e0}.chip{border-radius:5px;padding:3px 7px;background:#384457;color:white;font-size:11px}
-.warn{color:#facd81}.error{color:#f0a0a0}input{background:#142235;color:white;padding:10px;border:1px solid #304157;border-radius:8px}
-</style></head>
-<body>
-<header class="top"><div><span class="tag">ORACLE / RESEARCH v0.1</span><h1>Billboard mondial</h1><p>Top 20 par domaine · observations publiques · aucun signal d'achat</p></div><div id="date" class="tag">Chargement…</div></header>
-<div class="card"><div id="health">Chargement des données…</div><p>Un classement exploratoire de mots n'est pas encore une tendance validée. Les domaines sans collecte demeurent vides, sans valeurs inventées.</p></div>
-<nav id="tabs"></nav>
-<div class="card"><div class="top"><h2 id="heading">Tendances</h2><input id="filter" placeholder="Filtrer un terme" aria-label="Filtrer un terme"></div><div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Terme</th><th>Mentions</th><th>Pour 10k docs</th><th>Évolution 28j</th><th>Sources</th><th>Qualité</th><th>Preuves</th></tr></thead><tbody id="rows"></tbody></table></div></div>
-<div class="card"><strong>Analyse d'investissement</strong><p id="investment">Non évaluée : aucune donnée financière vérifiée n'est intégrée. Le radar ne donne pas d'ordres.</p></div>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#ebf3fe;background:#08111f;color-scheme:dark}
+body{margin:auto;max-width:1100px;padding:22px 18px 80px}h1{font-size:clamp(29px,5vw,46px);margin:10px 0 4px}p,small{color:#a7bbd0;line-height:1.55}
+header{display:flex;justify-content:space-between;gap:20px;align-items:start;flex-wrap:wrap}.tag{border:1px solid #356378;background:#123041;border-radius:8px;padding:7px 10px;color:#b6e9e6}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}button{background:#1a2b3e;border:1px solid #385068;color:#def1ff;padding:9px 12px;border-radius:8px;cursor:pointer}
+button[aria-pressed=true]{background:#106d6d;border-color:#5ab0a7}.card{border:1px solid #293f58;background:#101f32;border-radius:14px;padding:18px;margin:16px 0}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}.metric{padding:15px;border:1px solid #2d4660;border-radius:10px}
+.metric strong{display:block;font-size:25px}table{border-collapse:collapse;width:100%;min-width:690px}td,th{text-align:left;padding:10px 7px;border-bottom:1px solid #293f58;font-size:13px}
+th{color:#9db3ce}.status{color:#eacb88}.muted{color:#a7bbd0}a{color:#93dbdc}input{background:#14283d;color:white;padding:10px;border:1px solid #385068;border-radius:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+</style></head><body>
+<header><div><span class="tag">ORACLE / RESEARCH v0.2</span><h1>Billboard mondial</h1>
+<p>Top 5 par source selon l'accélération du wording. Aucun signal boursier sans preuve.</p></div><span class="tag" id="date">Chargement…</span></header>
+<div class="metrics" id="metrics"></div>
+<div class="card"><strong>Protocole de classement</strong><p>ORACLE compare trois périodes de sept jours dans chaque source. Une expression entre au Top 5 uniquement si sa vitesse et son accélération sont positives, avec au moins 21 jours consécutifs de données et un volume minimal. Si l'historique manque, le classement reste vide : aucune tendance n'est inventée.</p></div>
+<nav id="sources" aria-label="Sources"></nav>
+<div class="card"><div class="row"><h2 id="heading">Sélectionner une source</h2><input id="filter" type="search" aria-label="Filtrer le classement" placeholder="Chercher une expression"></div>
+<p id="coverage" class="status"></p>
+<div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Expression</th><th>Accélération</th><th>Mentions sur 7j</th><th>Jours actifs</th><th>Qualité</th><th>Preuves</th></tr></thead><tbody id="rankings"></tbody></table></div>
+</div><div class="card"><h3>Étapes 3 à 7 : marché, goulots, fournisseurs, sociétés et trading</h3>
+<p>Non évaluées. Aucun classement d'entreprises ni feu vert ne sera créé sans sources vérifiées, données financières point-in-time et validation hors échantillon.</p>
+<a href="docs/ORACLE_7_ETAPES.md">Lire le cahier des charges</a></div>
 <script>
-let model=null, domain='culture';const $=id=>document.getElementById(id);
-function cell(tr,value){const td=document.createElement('td');td.textContent=String(value);tr.appendChild(td);return td}
+const $=id=>document.getElementById(id);let state=null,selected='';
+function addcell(tr,text){let td=document.createElement('td');td.textContent=String(text);tr.appendChild(td);return td}
+function metric(title,value){let box=document.createElement('div');box.className='metric';let big=document.createElement('strong');big.textContent=value;box.append(big,title);$('metrics').append(box)}
 function render(){
-  const data=model.billboard[domain], query=$('filter').value.toLowerCase();
-  $('heading').textContent=domain.replaceAll('_',' ')+' — '+data.state+' ('+data.documents+' documents)';
-  const rows=$('rows');rows.replaceChildren();
-  let shown=0;
-  for(const x of data.top20.filter(v=>v.term.toLowerCase().includes(query))){
-    shown++;const tr=document.createElement('tr');cell(tr,shown);cell(tr,x.term);cell(tr,x.mentions);
-    cell(tr,x.rate_per_10k);cell(tr,x.growth_vs_28d===null?'—':(x.growth_vs_28d*100).toFixed(1)+' %');
-    cell(tr,x.independent_source_families);cell(tr,x.quality);
-    const td=document.createElement('td');const a=document.createElement('a');
-    if(x.evidence_urls.length){a.href=x.evidence_urls[0];a.target='_blank';a.rel='noopener noreferrer';a.textContent='Voir source';td.appendChild(a)}
-    else td.textContent='—';tr.appendChild(td);rows.appendChild(tr);
-  }
-  if(!shown){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=8;
-    td.textContent='Aucune observation classée. Cela ne signifie pas que le domaine ne contient aucune tendance.';tr.appendChild(td);rows.appendChild(tr)}
-  document.querySelectorAll('#tabs button').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.domain===domain)));
+ const x=state.source_billboard[selected],q=$('filter').value.trim().toLocaleLowerCase();
+ $('heading').textContent=x.source_name;
+ $('coverage').textContent='État : '+x.state+' · historique '+x.observed_days+'/'+x.required_days+' jours · documents du dernier prélèvement : '+x.documents_today;
+ $('rankings').replaceChildren();
+ let i=0;
+ for(const term of x.top5.filter(t=>t.term.toLocaleLowerCase().includes(q))){
+   let row=document.createElement('tr');
+   addcell(row,++i);addcell(row,term.term);addcell(row,term.acceleration_per_10k_week2.toFixed(2)+' / 10k / sem²');
+   addcell(row,term.mentions_last_7d);addcell(row,term.active_days_last_7d);addcell(row,term.quality);
+   let td=document.createElement('td');
+   for(let j=0;j<term.evidence_urls.length;j++){
+     if(j)td.append(' · ');const link=document.createElement('a');
+     link.href=term.evidence_urls[j];link.rel='noopener noreferrer';link.target='_blank';
+     link.textContent='Preuve '+(j+1);td.append(link)
+   }row.append(td);$('rankings').append(row)
+ }
+ if(!i){let row=document.createElement('tr'),td=document.createElement('td');td.colSpan=7;
+   td.textContent='Pas de Top 5 mesurable pour cette source. '+(x.state==='INSUFFICIENT_HISTORY'?'Accumulation de l’historique en cours.':'Vérifier la couverture et les seuils.');
+   row.append(td);$('rankings').append(row)}
+ document.querySelectorAll('#sources button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.id===selected)));
 }
-fetch('data/latest.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Données non disponibles');return r.json()}).then(data=>{
- model=data;$('date').textContent=data.date+' · '+data.status;
- $('health').textContent='Sources actives: '+data.source_health.filter(x=>x.status==='OK').length+
- ' · Sources en erreur: '+data.source_health.filter(x=>x.status==='ERROR').length+
- ' · Domaines suivis: '+Object.keys(data.billboard).length;
- const tabs=$('tabs');for(const k of Object.keys(data.billboard)){
- const b=document.createElement('button');b.type='button';b.dataset.domain=k;b.textContent=k.replaceAll('_',' ');
- b.onclick=()=>{domain=k;render()};tabs.appendChild(b)}
- $('investment').textContent=data.investment.reason;render()
-}).catch(e=>{$('health').textContent='Aucune mesure publiée : '+e.message;$('date').textContent='NON DISPONIBLE';$('heading').textContent='Données insuffisantes'});
-$('filter').addEventListener('input',()=>{if(model)render()});
+fetch('data/latest.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Fichier introuvable');return r.json()}).then(d=>{
+ if(!d.source_billboard)throw Error('Format trop ancien');
+ state=d;$('date').textContent=d.date+' · '+d.status;
+ metric('Sources connectées',d.source_health.length);
+ metric('Sources opérationnelles',d.source_health.filter(s=>s.status==='OK').length);
+ metric('Top 5 mesurables',Object.values(d.source_billboard).filter(s=>s.top5.length>0).length);
+ metric('Analyse boursière','NON ÉVALUÉE');
+ for(const [id,x] of Object.entries(d.source_billboard)){
+   const button=document.createElement('button');button.dataset.id=id;button.type='button';
+   button.textContent=x.source_name;button.onclick=()=>{selected=id;render()};$('sources').append(button);
+ }
+ selected=Object.keys(d.source_billboard)[0];render()
+}).catch(e=>{$('date').textContent='AUCUNE DONNÉE';$('coverage').textContent='Aucune mesure disponible : '+e.message});
+$('filter').addEventListener('input',()=>{if(state)render()});
 </script></body></html>
