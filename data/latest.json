@@ -1,8 +1,8 @@
 {
   "date": "2026-11-11",
-  "collected_at_utc": "2026-11-11T17:14:18.186746+00:00",
+  "collected_at_utc": "2026-11-11T17:16:27.807062+00:00",
   "schema_version": 2,
-  "status": "PARTIAL",
+  "status": "OK",
   "source_health": [
     {
       "source": "arxiv_ai",
@@ -186,14 +186,13 @@
     },
     {
       "source": "wikipedia_fr",
-      "status": "SOURCE_NOT_FOUND",
-      "documents": 0,
+      "status": "OK",
+      "documents": 500,
       "access": "OPEN",
       "poll_cadence": "DAILY",
       "publication_cadence": "DAILY",
       "sampling": "TOP_PAGEVIEWS",
-      "rights_review_status": "PENDING_REVIEW",
-      "error": "HTTPError"
+      "rights_review_status": "PENDING_REVIEW"
     }
   ],
   "source_billboard": {
@@ -540,12 +539,58 @@
       "source_id": "wikipedia_fr",
       "source_name": "Wikipedia Top Pages FR",
       "domain": "culture",
-      "state": "NO_DATA",
-      "observed_days": 0,
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 1,
       "required_days": 21,
-      "documents_today": 0,
+      "documents_today": 500,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "bataille gaulle",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_L%27%C3%82ge_de_fer",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_J%27%C3%A9cris_ton_nom"
+          ]
+        },
+        {
+          "term": "série télévisée",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Cat%27s_Eyes_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29",
+            "https://fr.wikipedia.org/wiki/Lupin_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2021%29",
+            "https://fr.wikipedia.org/wiki/Le_Voyageur_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2019%29"
+          ]
+        }
+      ]
     },
     "google_news_us": {
       "source_id": "google_news_us",
@@ -594,14 +639,6 @@
           ]
         },
         {
-          "term": "emmanuel macron",
-          "mentions_today": 2,
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5",
-            "https://news.google.com/rss/articles/CBMizAJBVV95cUxNNUhQYlYzX0pzQlNKb0dBSVRobmcwUnpkVERfajFvb1IwSHZua1hTN3ZmWTZjNnJYdUtZTTNKa1Nyajd4TTM1YjEzNjY2UkZsUm9ua2tpcXNTcElYcEtnSE11WVdKNzdmQWlvcWpSYUdmanV1aHhhdmstTGFxOVZUZVhES1JNM0xlV2NfLXBtX3pUVFIyMkFaZE8wN1l2Q1N3UGgzMVFzT0xNRUtETUVsZnk4WFNtNDA4MFQwUEVicFBHVDZyWnZCSlk2UGtMQi16MkJvVkhzQWJZZ25TMk1qZ2VyTnhNVGZwQ0VmUTFGRVpHcjFzem5kM3o5bVV2MkZJMlQxVnZiSUhmMDhUQnB3TEJFS1hZWHBRUk1tbldiQ1Z1YUxZS2Q3cGU1R0JvbkIxV0ZVV25HcVNsZ284V3BNR1hhalA2aGs0aFpWNA?oc=5"
-          ]
-        },
-        {
           "term": "santé mentale",
           "mentions_today": 2,
           "evidence_urls": [
@@ -625,8 +662,8 @@
           "term": "study finds",
           "mentions_today": 4,
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
             "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
             "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
           ]
         },
@@ -803,15 +840,15 @@
   },
   "billboard": {
     "culture": {
-      "documents": 497,
+      "documents": 997,
       "historical_days": 0,
       "state": "EXPLORATORY",
       "top20": [
         {
           "term": "united states",
-          "score": 6.345,
+          "score": 5.651,
           "mentions": 22,
-          "rate_per_10k": 442.66,
+          "rate_per_10k": 220.66,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -822,10 +859,24 @@
           ]
         },
         {
-          "term": "states senate",
-          "score": 5.052,
+          "term": "présidentielle française",
+          "score": 4.364,
           "mentions": 6,
-          "rate_per_10k": 120.72,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "states senate",
+          "score": 4.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -837,9 +888,9 @@
         },
         {
           "term": "united states senate",
-          "score": 5.052,
+          "score": 4.364,
           "mentions": 6,
-          "rate_per_10k": 120.72,
+          "rate_per_10k": 60.18,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -850,10 +901,52 @@
           ]
         },
         {
-          "term": "presidential election",
-          "score": 4.871,
+          "term": "élection présidentielle",
+          "score": 4.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle française",
+          "score": 4.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "legend zelda",
+          "score": 4.185,
           "mentions": 5,
-          "rate_per_10k": 100.6,
+          "rate_per_10k": 50.15,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time"
+          ]
+        },
+        {
+          "term": "presidential election",
+          "score": 4.185,
+          "mentions": 5,
+          "rate_per_10k": 50.15,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -865,9 +958,9 @@
         },
         {
           "term": "states presidential",
-          "score": 4.871,
+          "score": 4.185,
           "mentions": 5,
-          "rate_per_10k": 100.6,
+          "rate_per_10k": 50.15,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -879,9 +972,9 @@
         },
         {
           "term": "states presidential election",
-          "score": 4.871,
+          "score": 4.185,
           "mentions": 5,
-          "rate_per_10k": 100.6,
+          "rate_per_10k": 50.15,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -893,9 +986,9 @@
         },
         {
           "term": "united states presidential",
-          "score": 4.871,
+          "score": 4.185,
           "mentions": 5,
-          "rate_per_10k": 100.6,
+          "rate_per_10k": 50.15,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -906,24 +999,66 @@
           ]
         },
         {
-          "term": "legend zelda",
-          "score": 4.367,
+          "term": "bataille gaulle",
+          "score": 3.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
+          "rate_per_10k": 30.09,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_L%27%C3%82ge_de_fer",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle",
+            "https://fr.wikipedia.org/wiki/La_Bataille_de_Gaulle_%3A_J%27%C3%A9cris_ton_nom"
+          ]
+        },
+        {
+          "term": "godzilla minus",
+          "score": 3.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Godzilla_Minus_Zero",
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
+            "https://en.wikipedia.org/wiki/Godzilla_Minus_One"
+          ]
+        },
+        {
+          "term": "hunger games",
+          "score": 3.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Hunger_Games_%28s%C3%A9rie_de_films%29",
+            "https://fr.wikipedia.org/wiki/Hunger_Games_%3A_Lever_de_soleil_sur_la_moisson_%28film%29",
+            "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping"
+          ]
+        },
+        {
+          "term": "legend zelda ocarina",
+          "score": 3.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
             "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
-            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda"
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
           ]
         },
         {
           "term": "list highest-grossing",
-          "score": 4.367,
+          "score": 3.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
+          "rate_per_10k": 30.09,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -934,10 +1069,38 @@
           ]
         },
         {
-          "term": "senate election",
-          "score": 4.367,
+          "term": "ocarina time",
+          "score": 3.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29"
+          ]
+        },
+        {
+          "term": "russell brand",
+          "score": 3.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": null,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Russell_Brand",
+            "https://en.wikipedia.org/wiki/Russell_Brand",
+            "https://en.wikipedia.org/wiki/The_Russell_Brand_Show_prank_calls"
+          ]
+        },
+        {
+          "term": "senate election",
+          "score": 3.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -949,9 +1112,9 @@
         },
         {
           "term": "states senate election",
-          "score": 4.367,
+          "score": 3.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
+          "rate_per_10k": 30.09,
           "growth_vs_28d": null,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
@@ -959,123 +1122,6 @@
             "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
             "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
             "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
-          ]
-        },
-        {
-          "term": "american football",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Jason_Beck_%28American_football%29",
-            "https://en.wikipedia.org/wiki/Ben_Johnson_%28American_football_coach%29"
-          ]
-        },
-        {
-          "term": "bigg boss",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Bigg_Boss_%28Hindi_TV_series%29_season_20",
-            "https://en.wikipedia.org/wiki/Bigg_Boss_%28Tamil_TV_series%29_season_10"
-          ]
-        },
-        {
-          "term": "charlie kirk",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Charlie_Kirk",
-            "https://en.wikipedia.org/wiki/Assassination_of_Charlie_Kirk"
-          ]
-        },
-        {
-          "term": "east eden",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/East_of_Eden_%28novel%29",
-            "https://en.wikipedia.org/wiki/East_of_Eden_%282026_miniseries%29"
-          ]
-        },
-        {
-          "term": "file traffic",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/File%3ATraffic_Sign_GR_-_KOK_2009_-_R-54.svg",
-            "https://en.wikipedia.org/wiki/File%3ATraffic_Sign_GR_-_KOK_2009_-_%CE%A0-26%CE%B1.svg"
-          ]
-        },
-        {
-          "term": "file traffic sign",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/File%3ATraffic_Sign_GR_-_KOK_2009_-_R-54.svg",
-            "https://en.wikipedia.org/wiki/File%3ATraffic_Sign_GR_-_KOK_2009_-_%CE%A0-26%CE%B1.svg"
-          ]
-        },
-        {
-          "term": "general election",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_New_Zealand_general_election",
-            "https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_United_Kingdom_general_election"
-          ]
-        },
-        {
-          "term": "godzilla minus",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Godzilla_Minus_Zero",
-            "https://en.wikipedia.org/wiki/Godzilla_Minus_One"
-          ]
-        },
-        {
-          "term": "hindi films",
-          "score": 3.969,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/List_of_Hindi_films_of_2026",
-            "https://en.wikipedia.org/wiki/List_of_highest_domestic_net_collection_of_Hindi_films"
           ]
         }
       ]
@@ -1142,19 +1188,6 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5",
             "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSG53OS05aTl0akFKTGZNMWo2ZFNVYmVicm9CZVhUVC1wb2lRcHhWdXRXbHc5UV9iX2dNQWZMTTRVdzMtb3hrX210VmxVbkNFeEJPcmM5UU9KaFR0NEduS0E5TWloa1FoV3Nxc2hicGtYaUt5X180MF9xSkl4dTFNWmNqWUstQXlUazVqdVQwejVaTXgzT2dXNElmaWxoNFF0cUVNdzRmck1saXEtSFNMVHFCWUg2dTh3RF9UcWpRWGVPNUlhSXBVNjRmV1JnRTl1QUNN?oc=5"
-          ]
-        },
-        {
-          "term": "emmanuel macron",
-          "score": 5.88,
-          "mentions": 2,
-          "rate_per_10k": 277.78,
-          "growth_vs_28d": null,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMipwJBVV95cUxNeGRsQVc4eVFUdWE0ajM5eGFLeklrZ3JKbzhfMy1pb1JRanJWYzFxVWpHRjdqNXpRd29SRTVMeHRzbmRfMkRtOGtwdEFUSzlGenh5dVdMNHN2T203OHFxTG5wSWhiQmNhME9kX0xkb3FzX2JBVHV3SkRGaDVaWlM1WjNHdjBHWUY4Y2U5RXdkWUQtc2Z0RkZBZGx1eTVoOVZ4QXI0VG4tVkVHRVl2OW9wb2FYY1NSVnhOTWJDQ19OUjF4M0R5V1ROOGktRnplYWZEX21KOXpVNzJWNlNwUjBrN0pfVUdzSHlCOGk1MmpJbmRvU0dDVEo1RlZoakFOYWd5amtKcFZTYkhlLVNGVTgyQUVXa05iSkc5SmdpaFhvdGdBZ3FERHZz?oc=5",
-            "https://news.google.com/rss/articles/CBMizAJBVV95cUxNNUhQYlYzX0pzQlNKb0dBSVRobmcwUnpkVERfajFvb1IwSHZua1hTN3ZmWTZjNnJYdUtZTTNKa1Nyajd4TTM1YjEzNjY2UkZsUm9ua2tpcXNTcElYcEtnSE11WVdKNzdmQWlvcWpSYUdmanV1aHhhdmstTGFxOVZUZVhES1JNM0xlV2NfLXBtX3pUVFIyMkFaZE8wN1l2Q1N3UGgzMVFzT0xNRUtETUVsZnk4WFNtNDA4MFQwUEVicFBHVDZyWnZCSlk2UGtMQi16MkJvVkhzQWJZZ25TMk1qZ2VyTnhNVGZwQ0VmUTFGRVpHcjFzem5kM3o5bVV2MkZJMlQxVnZiSUhmMDhUQnB3TEJFS1hZWHBRUk1tbldiQ1Z1YUxZS2Q3cGU1R0JvbkIxV0ZVV25HcVNsZ284V3BNR1hhalA2aGs0aFpWNA?oc=5"
           ]
         },
         {
@@ -1252,9 +1285,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.12937",
-            "https://arxiv.org/abs/2611.12954",
-            "https://arxiv.org/abs/2611.14285"
+            "https://arxiv.org/abs/2611.12954"
           ]
         },
         {
@@ -1294,9 +1327,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.12940",
-            "https://arxiv.org/abs/2611.13161",
-            "https://arxiv.org/abs/2611.13712"
+            "https://arxiv.org/abs/2611.14186",
+            "https://arxiv.org/abs/2509.19573",
+            "https://arxiv.org/abs/2611.12940"
           ]
         },
         {
@@ -1308,9 +1341,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.06817",
             "https://arxiv.org/abs/2611.12942",
-            "https://arxiv.org/abs/2611.13402",
-            "https://arxiv.org/abs/2611.13849"
+            "https://arxiv.org/abs/2611.13402"
           ]
         },
         {
@@ -1336,9 +1369,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.08577",
             "https://arxiv.org/abs/2611.12936",
-            "https://arxiv.org/abs/2611.13512",
-            "https://arxiv.org/abs/2611.14519"
+            "https://arxiv.org/abs/2611.13512"
           ]
         },
         {
@@ -1350,9 +1383,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
+            "https://arxiv.org/abs/2611.13292",
             "https://arxiv.org/abs/2611.13127",
-            "https://arxiv.org/abs/2611.14285",
-            "https://arxiv.org/abs/2611.10285"
+            "https://arxiv.org/abs/2611.14285"
           ]
         },
         {
@@ -1364,9 +1397,9 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://arxiv.org/abs/2611.13113",
-            "https://arxiv.org/abs/2611.14419",
-            "https://arxiv.org/abs/2606.26969"
+            "https://arxiv.org/abs/2611.13229",
+            "https://arxiv.org/abs/2611.13592",
+            "https://arxiv.org/abs/2611.13113"
           ]
         },
         {
@@ -1988,9 +2021,9 @@
           "independent_source_families": 2,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2512",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2523",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23056/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-sv-bella"
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23056/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-sv-bella",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23055/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-mv",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23011/inventory-of-mercury-supply-use-and-trade-in-the-united-states-2026-report-notice-of-availability"
           ]
         },
         {
@@ -2117,8 +2150,8 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
             "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
+            "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
             "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
           ]
         },
