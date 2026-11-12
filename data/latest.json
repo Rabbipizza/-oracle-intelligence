@@ -1,8 +1,8 @@
 {
   "date": "2026-11-12",
-  "collected_at_utc": "2026-11-12T01:27:15.388320+00:00",
+  "collected_at_utc": "2026-11-12T01:28:15.333841+00:00",
   "schema_version": 2,
-  "status": "OK",
+  "status": "PARTIAL",
   "source_health": [
     {
       "source": "arxiv_ai",
@@ -157,7 +157,7 @@
     {
       "source": "hackernews",
       "status": "OK",
-      "documents": 47,
+      "documents": 46,
       "access": "OPEN",
       "poll_cadence": "DAILY",
       "publication_cadence": "DAILY",
@@ -186,13 +186,14 @@
     },
     {
       "source": "wikipedia_fr",
-      "status": "OK",
-      "documents": 500,
+      "status": "SOURCE_NOT_FOUND",
+      "documents": 0,
       "access": "OPEN",
       "poll_cadence": "DAILY",
       "publication_cadence": "DAILY",
       "sampling": "TOP_PAGEVIEWS",
-      "rights_review_status": "PENDING_REVIEW"
+      "rights_review_status": "PENDING_REVIEW",
+      "error": "HTTPError"
     }
   ],
   "source_billboard": {
@@ -449,7 +450,7 @@
       "state": "INSUFFICIENT_HISTORY",
       "observed_days": 2,
       "required_days": 21,
-      "documents_today": 47,
+      "documents_today": 46,
       "top5": [],
       "preview_unranked": [
         {
@@ -548,58 +549,12 @@
       "source_id": "wikipedia_fr",
       "source_name": "Wikipedia Top Pages FR",
       "domain": "culture",
-      "state": "INSUFFICIENT_HISTORY",
-      "observed_days": 2,
+      "state": "NO_DATA",
+      "observed_days": 1,
       "required_days": 21,
-      "documents_today": 500,
+      "documents_today": 0,
       "top5": [],
-      "preview_unranked": [
-        {
-          "term": "présidentielle française",
-          "mentions_today": 6,
-          "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
-          ]
-        },
-        {
-          "term": "élection présidentielle",
-          "mentions_today": 6,
-          "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
-          ]
-        },
-        {
-          "term": "élection présidentielle française",
-          "mentions_today": 6,
-          "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
-          ]
-        },
-        {
-          "term": "série télévisée",
-          "mentions_today": 4,
-          "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Cat%27s_Eyes_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29",
-            "https://fr.wikipedia.org/wiki/Lupin_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2021%29",
-            "https://fr.wikipedia.org/wiki/Saint-Pierre_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29"
-          ]
-        },
-        {
-          "term": "grand theft",
-          "mentions_today": 3,
-          "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_V",
-            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto"
-          ]
-        }
-      ]
+      "preview_unranked": []
     },
     "google_news_us": {
       "source_id": "google_news_us",
@@ -610,7 +565,17 @@
       "required_days": 21,
       "documents_today": 38,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "live updates",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT2dqbjNScGZtYXF0TFpWM3JHRzcxRU56NmczZ2F4bjJfYjlVRUx5UUFLcy1kZVFmRkVoUGVyQ3pqckd4eG9JUElBMUtjMHhnRzZkUWRCeVc4TkRjd3pnU29YWUw2TzFiT3gyZmhLd1dhcG5oTUFXamthOHczS0hqY3dYUG4tdTRsTFZkTWk4ejhKSHByNGZBZWgwZDhZcU0xU3RCOURJQVE2UFU5ajhtYThZdDZPUUVoTS1uRk5FWjA5anU2ek9oS0NEQVNRYjhTSUlNeGFsd1pEbmpNZkE?oc=5",
+            "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdnhyVlZiYkxnRTlZMm9YMWh5TGhpSkpKaDQ5WW0xYkVBZ0dxTTlPYk0xUG1jSzF4RkJYTXctRFNpeHVRb2NUNFo2UkduaHo5R0NkcWRGR1hoZmU3ZzZvQlBmZ2FRcE84XzhhbE5PYzB1Y213bC0wdExHaWRhZnlLVDliWkhqMlk?oc=5",
+            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2NsZVpDNUticGl0NTB1VUJYUHhVVTlkTHN3RnZCcXNZTHZ5d0JNaGZGMGlxdV9HS1A5VF9QNl9sMm5HT3NIVVZObDVJMnk1dDhuRHJ6WE95eXhkNVJDS3JRdThhREpIdnZCUG5PRnF3R0hscjZOWFJDRHNPdERlVVZSTU9mc2xXcXlmbGI2RHFzcUp2SUl2YnhEOEF5SVBEelhaSy1oc0xMV3JxLVRkd1FXSGoxLTdTR3Z1OA?oc=5"
+          ]
+        }
+      ]
     },
     "google_news_fr": {
       "source_id": "google_news_fr",
@@ -621,7 +586,16 @@
       "required_days": 21,
       "documents_today": 34,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "zinedine zidane",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTjdhNHZwbU01MWdsUUV2ai00dG1TX1ZBRE5xbGNHYjd4bmFxME9Sb1pBNS1ESlUtRlN0M25JV0MzYTFxdkU2TGdLeDJRVHNlclNwZU5sbTd3aDZiNkxKQjhIUDU5ajl3RV96OTV4WEp3TUJxWTc2VW9GUE1HRUR5YXB6Q3M0bUZkWHZxVHBnMGh3cDNvdzgyam0taVZWbG02bTJFZVZ0SmNyQTRfNXJxdlRVS1lUTkZzcXVFZWxneGg1d0pzd1d1dHZ5RVBiUHhNWl9SdXh2VkxNNVdBSXQ0?oc=5",
+            "https://news.google.com/rss/articles/CBMiqwJBVV95cUxQeld6N1BuX0swWTdoUHVCUlczMFVNVkJwajVKWFBrSVBjRlpqc1FnRHoxMUFMSXZZbmNmWU1adW5obUpoUWNSYjYyTW5rTVFjOFpsRWRJdXNBdGtWUWZXLXd4a1ZyMHV5LWoyd2xoOU1GX0VQRFFkLVFXZG1weklVaHZidFJHRUY2anozSDJ2TWtjajBVYlBvMnFSM1hFbGNvSUQ1eG5xZGdaZ2pBWUM0eXd4bVhQV21FdkhaMjRrSk1JNnJyWWJJM1Q3dDhjTW5JbkpnbGdTQ2pfZ1lUdGV5eTNJaGpNS2hUZ3NnZHdfbFNyVjRkYW5MX1VzT0dKXzRZZlU5azFxcVBPbXBaYjhMM1RqRGEwSDllR0xwMGhSeW9VYkZ4ZWJrY1Fpbw?oc=5"
+          ]
+        }
+      ]
     },
     "google_news_health": {
       "source_id": "google_news_health",
@@ -816,30 +790,30 @@
   },
   "billboard": {
     "culture": {
-      "documents": 997,
+      "documents": 497,
       "historical_days": 1,
       "state": "EXPLORATORY",
       "top20": [
         {
-          "term": "vendée globe",
-          "score": 8.687,
+          "term": "american series",
+          "score": 9.367,
           "mentions": 3,
-          "rate_per_10k": 30.09,
-          "growth_vs_28d": 30.09,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 5.018,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe",
-            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_2024-2025",
-            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_1996-1997"
+            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
+            "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
+            "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
           ]
         },
         {
           "term": "american series season",
-          "score": 8.297,
+          "score": 8.969,
           "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 40.241,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -848,50 +822,11 @@
           ]
         },
         {
-          "term": "dai henwood",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Dai_Henwood",
-            "https://fr.wikipedia.org/wiki/Dai_Henwood"
-          ]
-        },
-        {
-          "term": "jude bellingham",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Jude_Bellingham",
-            "https://fr.wikipedia.org/wiki/Jude_Bellingham"
-          ]
-        },
-        {
-          "term": "kemal atatürk",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
-            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
-          ]
-        },
-        {
           "term": "kevin connell",
-          "score": 8.297,
+          "score": 8.969,
           "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 40.241,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -901,10 +836,10 @@
         },
         {
           "term": "minnesota vikings",
-          "score": 8.297,
+          "score": 8.969,
           "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 40.241,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -913,63 +848,11 @@
           ]
         },
         {
-          "term": "mustafa kemal",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
-            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
-          ]
-        },
-        {
-          "term": "mustafa kemal atatürk",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
-            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
-          ]
-        },
-        {
-          "term": "phil collins",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Phil_Collins",
-            "https://fr.wikipedia.org/wiki/Phil_Collins"
-          ]
-        },
-        {
-          "term": "rupert grint",
-          "score": 8.297,
-          "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Rupert_Grint",
-            "https://fr.wikipedia.org/wiki/Rupert_Grint"
-          ]
-        },
-        {
           "term": "spying scandal",
-          "score": 8.297,
+          "score": 8.969,
           "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 40.241,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -979,10 +862,10 @@
         },
         {
           "term": "super bowl",
-          "score": 8.297,
+          "score": 8.969,
           "mentions": 2,
-          "rate_per_10k": 20.06,
-          "growth_vs_28d": 20.06,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 40.241,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -991,11 +874,51 @@
           ]
         },
         {
+          "term": "united states",
+          "score": 7.074,
+          "mentions": 20,
+          "rate_per_10k": 402.41,
+          "growth_vs_28d": 0.824,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "david walliams",
+          "score": 6.982,
+          "mentions": 2,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 3.012,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/David_Walliams",
+            "https://en.wikipedia.org/wiki/David_Walliams_filmography"
+          ]
+        },
+        {
+          "term": "edmund fitzgerald",
+          "score": 6.982,
+          "mentions": 2,
+          "rate_per_10k": 40.24,
+          "growth_vs_28d": 3.012,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/SS_Edmund_Fitzgerald",
+            "https://en.wikipedia.org/wiki/The_Wreck_of_the_Edmund_Fitzgerald"
+          ]
+        },
+        {
           "term": "grand theft",
-          "score": 6.364,
-          "mentions": 6,
-          "rate_per_10k": 60.18,
-          "growth_vs_28d": 2.0,
+          "score": 6.376,
+          "mentions": 3,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 2.009,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -1006,101 +929,157 @@
         },
         {
           "term": "grand theft auto",
-          "score": 6.364,
-          "mentions": 6,
-          "rate_per_10k": 60.18,
-          "growth_vs_28d": 2.0,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
-          ]
-        },
-        {
-          "term": "theft auto",
-          "score": 6.364,
-          "mentions": 6,
-          "rate_per_10k": 60.18,
-          "growth_vs_28d": 2.0,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
-          ]
-        },
-        {
-          "term": "american series",
-          "score": 5.687,
+          "score": 6.376,
           "mentions": 3,
-          "rate_per_10k": 30.09,
-          "growth_vs_28d": 2.0,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 2.009,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
+          ]
+        },
+        {
+          "term": "series season",
+          "score": 6.376,
+          "mentions": 3,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 2.009,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Bigg_Boss_%28Hindi_TV_series%29_season_20",
             "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
             "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
           ]
         },
         {
-          "term": "david walliams",
-          "score": 5.687,
+          "term": "theft auto",
+          "score": 6.376,
           "mentions": 3,
-          "rate_per_10k": 30.09,
-          "growth_vs_28d": 2.0,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 2.009,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/David_Walliams",
-            "https://en.wikipedia.org/wiki/David_Walliams_filmography",
-            "https://fr.wikipedia.org/wiki/David_Walliams"
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
           ]
         },
         {
-          "term": "united states",
-          "score": 5.465,
-          "mentions": 20,
-          "rate_per_10k": 200.6,
-          "growth_vs_28d": -0.091,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
-          ]
-        },
-        {
-          "term": "présidentielle française",
-          "score": 4.364,
+          "term": "states senate",
+          "score": 6.058,
           "mentions": 6,
-          "rate_per_10k": 60.18,
-          "growth_vs_28d": 0.0,
+          "rate_per_10k": 120.72,
+          "growth_vs_28d": 1.006,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
-            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "united states senate",
+          "score": 6.058,
+          "mentions": 6,
+          "rate_per_10k": 120.72,
+          "growth_vs_28d": 1.006,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "senate election",
+          "score": 5.373,
+          "mentions": 3,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 1.006,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+          ]
+        },
+        {
+          "term": "states senate election",
+          "score": 5.373,
+          "mentions": 3,
+          "rate_per_10k": 60.36,
+          "growth_vs_28d": 1.006,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+          ]
+        },
+        {
+          "term": "presidential election",
+          "score": 5.255,
+          "mentions": 4,
+          "rate_per_10k": 80.48,
+          "growth_vs_28d": 0.605,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "states presidential",
+          "score": 5.255,
+          "mentions": 4,
+          "rate_per_10k": 80.48,
+          "growth_vs_28d": 0.605,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ]
+        },
+        {
+          "term": "states presidential election",
+          "score": 5.255,
+          "mentions": 4,
+          "rate_per_10k": 80.48,
+          "growth_vs_28d": 0.605,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
           ]
         }
       ]
     },
     "social": {
-      "documents": 47,
+      "documents": 46,
       "historical_days": 1,
       "state": "EXPLORATORY",
       "top20": [
         {
           "term": "jensen huang",
-          "score": 8.774,
+          "score": 8.862,
           "mentions": 3,
-          "rate_per_10k": 638.3,
-          "growth_vs_28d": 2.064,
+          "rate_per_10k": 652.17,
+          "growth_vs_28d": 2.13,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -1111,10 +1090,10 @@
         },
         {
           "term": "coding agent",
-          "score": 6.327,
+          "score": 6.371,
           "mentions": 2,
-          "rate_per_10k": 425.53,
-          "growth_vs_28d": 0.021,
+          "rate_per_10k": 434.78,
+          "growth_vs_28d": 0.043,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -1124,10 +1103,10 @@
         },
         {
           "term": "your coding",
-          "score": 6.327,
+          "score": 6.371,
           "mentions": 2,
-          "rate_per_10k": 425.53,
-          "growth_vs_28d": 0.021,
+          "rate_per_10k": 434.78,
+          "growth_vs_28d": 0.043,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -1137,10 +1116,10 @@
         },
         {
           "term": "your coding agent",
-          "score": 6.327,
+          "score": 6.371,
           "mentions": 2,
-          "rate_per_10k": 425.53,
-          "growth_vs_28d": 0.021,
+          "rate_per_10k": 434.78,
+          "growth_vs_28d": 0.043,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -1154,7 +1133,35 @@
       "documents": 72,
       "historical_days": 1,
       "state": "EXPLORATORY",
-      "top20": []
+      "top20": [
+        {
+          "term": "live updates",
+          "score": 11.285,
+          "mentions": 3,
+          "rate_per_10k": 416.67,
+          "growth_vs_28d": 416.667,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT2dqbjNScGZtYXF0TFpWM3JHRzcxRU56NmczZ2F4bjJfYjlVRUx5UUFLcy1kZVFmRkVoUGVyQ3pqckd4eG9JUElBMUtjMHhnRzZkUWRCeVc4TkRjd3pnU29YWUw2TzFiT3gyZmhLd1dhcG5oTUFXamthOHczS0hqY3dYUG4tdTRsTFZkTWk4ejhKSHByNGZBZWgwZDhZcU0xU3RCOURJQVE2UFU5ajhtYThZdDZPUUVoTS1uRk5FWjA5anU2ek9oS0NEQVNRYjhTSUlNeGFsd1pEbmpNZkE?oc=5",
+            "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdnhyVlZiYkxnRTlZMm9YMWh5TGhpSkpKaDQ5WW0xYkVBZ0dxTTlPYk0xUG1jSzF4RkJYTXctRFNpeHVRb2NUNFo2UkduaHo5R0NkcWRGR1hoZmU3ZzZvQlBmZ2FRcE84XzhhbE5PYzB1Y213bC0wdExHaWRhZnlLVDliWkhqMlk?oc=5",
+            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR2NsZVpDNUticGl0NTB1VUJYUHhVVTlkTHN3RnZCcXNZTHZ5d0JNaGZGMGlxdV9HS1A5VF9QNl9sMm5HT3NIVVZObDVJMnk1dDhuRHJ6WE95eXhkNVJDS3JRdThhREpIdnZCUG5PRnF3R0hscjZOWFJDRHNPdERlVVZSTU9mc2xXcXlmbGI2RHFzcUp2SUl2YnhEOEF5SVBEelhaSy1oc0xMV3JxLVRkd1FXSGoxLTdTR3Z1OA?oc=5"
+          ]
+        },
+        {
+          "term": "zinedine zidane",
+          "score": 10.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": 277.778,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTjdhNHZwbU01MWdsUUV2ai00dG1TX1ZBRE5xbGNHYjd4bmFxME9Sb1pBNS1ESlUtRlN0M25JV0MzYTFxdkU2TGdLeDJRVHNlclNwZU5sbTd3aDZiNkxKQjhIUDU5ajl3RV96OTV4WEp3TUJxWTc2VW9GUE1HRUR5YXB6Q3M0bUZkWHZxVHBnMGh3cDNvdzgyam0taVZWbG02bTJFZVZ0SmNyQTRfNXJxdlRVS1lUTkZzcXVFZWxneGg1d0pzd1d1dHZ5RVBiUHhNWl9SdXh2VkxNNVdBSXQ0?oc=5",
+            "https://news.google.com/rss/articles/CBMiqwJBVV95cUxQeld6N1BuX0swWTdoUHVCUlczMFVNVkJwajVKWFBrSVBjRlpqc1FnRHoxMUFMSXZZbmNmWU1adW5obUpoUWNSYjYyTW5rTVFjOFpsRWRJdXNBdGtWUWZXLXd4a1ZyMHV5LWoyd2xoOU1GX0VQRFFkLVFXZG1weklVaHZidFJHRUY2anozSDJ2TWtjajBVYlBvMnFSM1hFbGNvSUQ1eG5xZGdaZ2pBWUM0eXd4bVhQV21FdkhaMjRrSk1JNnJyWWJJM1Q3dDhjTW5JbkpnbGdTQ2pfZ1lUdGV5eTNJaGpNS2hUZ3NnZHdfbFNyVjRkYW5MX1VzT0dKXzRZZlU5azFxcVBPbXBaYjhMM1RqRGEwSDllR0xwMGhSeW9VYkZ4ZWJrY1Fpbw?oc=5"
+          ]
+        }
+      ]
     },
     "technology": {
       "documents": 492,
@@ -1920,9 +1927,9 @@
           "independent_source_families": 2,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2512",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2523",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23056/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-sv-bella"
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23056/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-sv-bella",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23055/request-notice-use-of-foreign-built-small-passenger-vessel-in-united-states-coastwise-trade-mv",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23011/inventory-of-mercury-supply-use-and-trade-in-the-united-states-2026-report-notice-of-availability"
           ]
         },
         {
