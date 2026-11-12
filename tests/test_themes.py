@@ -41,11 +41,11 @@ class ThemeBillboardTests(unittest.TestCase):
         for offset in range(13,0,-1):
             day=d-timedelta(days=offset)
             # Older week anime leads, current week Nintendo leads
-            p=snap(day,geek=1 if offset>=7 else 8,tech=2)
-            p["sources"]["geek_gaming"]["terms"]["anime cosplay"]["count"]=8 if offset>=7 else 1
+            p=snap(day,geek=2 if offset>=7 else 8,tech=2)
+            p["sources"]["geek_gaming"]["terms"]["anime cosplay"]["count"]=8 if offset>=7 else 2
             prev.append(p)
         today=snap(d,geek=8,tech=2)
-        today["sources"]["geek_gaming"]["terms"]["anime cosplay"]["count"]=1
+        today["sources"]["geek_gaming"]["terms"]["anime cosplay"]["count"]=2
         b=make_billboard(d.isoformat(),today,prev,SOURCES)["geek"]
         self.assertEqual(b["state"],"WEEKLY_COMPARABLE")
         self.assertEqual(b["top20"][0]["term"],"nintendo switch")
