@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "collected_at_utc": "2026-11-12T07:29:26.491368+00:00",
+  "collected_at_utc": "2026-11-12T07:31:02.114243+00:00",
   "schema_version": 2,
   "status": "PARTIAL",
   "source_health": [
@@ -206,14 +206,13 @@
     },
     {
       "source": "wikipedia_fr",
-      "status": "SOURCE_NOT_FOUND",
-      "documents": 0,
+      "status": "OK",
+      "documents": 500,
       "access": "OPEN",
       "poll_cadence": "DAILY",
       "publication_cadence": "DAILY",
       "sampling": "TOP_PAGEVIEWS",
-      "rights_review_status": "PENDING_REVIEW",
-      "error": "HTTPError"
+      "rights_review_status": "PENDING_REVIEW"
     }
   ],
   "source_billboard": {
@@ -405,12 +404,58 @@
       "source_id": "wikipedia_fr",
       "source_name": "Wikipedia Top Pages FR",
       "domain": "culture",
-      "state": "NO_DATA",
-      "observed_days": 1,
+      "state": "INSUFFICIENT_HISTORY",
+      "observed_days": 2,
       "required_days": 21,
-      "documents_today": 0,
+      "documents_today": 500,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "élection présidentielle française",
+          "mentions_today": 6,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ]
+        },
+        {
+          "term": "série télévisée",
+          "mentions_today": 4,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Cat%27s_Eyes_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29",
+            "https://fr.wikipedia.org/wiki/Lupin_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2021%29",
+            "https://fr.wikipedia.org/wiki/Saint-Pierre_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29"
+          ]
+        },
+        {
+          "term": "grand theft",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto"
+          ]
+        }
+      ]
     },
     "google_news_us": {
       "source_id": "google_news_us",
@@ -427,7 +472,7 @@
           "mentions_today": 2,
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcTlzd01BSWFhRWROazZzbHhQNmpWLXRjY3Ayd291bVRRNUFfbnhlRnpJekdIZnhMWDVSeng2Q19aOXQydWltRnlxMEpfLXctZVJRMFM4eFBUREhxQW10YkdRLXBqTmszWWdEYUx0U2k0OWtwUEg4NVV6Vy0?oc=5",
-            "https://news.google.com/rss/articles/CBMizgFBVV95cUxPMVNxeVpDN2FpOGZPSlBCeVZNa1R6UTBwWkc1RmVDVGhIaUxFTkZ2UkVOcS1HbThuUHNndTJpYjdDbzhGYThNNWFvY1hEcUY1aTFFWDhmdTJCZGlJTGZVQmxtU2xVSlJEektGMk1XWHpCbmNYZS00MHB1Y2pUbU5taGc2YnhXbExSR3d5MjVlcHZDdnZXdGNiTktYcVlWbks1ZzZLVDV1aXRaNzdVTGhzUTJCSElvalBMTk81WjlqeDg3RkF4aU1ESW9VdmoxQQ?oc=5"
+            "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV0ppMjd4Z0pxWkJVRnlaSXNZWUd6Nmd3TC0tWEVLYmp1Z3hmWVFhY2VnRS1Da0U5eXJTdnhtRHNkdTR4bFlDc21UTzctUTNodll1NlJITU81WG1jSVNmV1FVVllJZGlJcWVaSl9LS1A4N3FZeGZ6THVPbTZCOWRaSUFyMzJoaTdZNEh0Vmt3eTd0Zw?oc=5"
           ]
         }
       ]
@@ -443,19 +488,19 @@
       "top5": [],
       "preview_unranked": [
         {
-          "term": "edouard philippe",
-          "mentions_today": 2,
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMinAJBVV95cUxPMWJGWXBRR2FISzZTX2FPdVNzaHIwS2dWY2lEdG9wM0tac0dGaFV1TDAtRENITTQzbVZfOFpKN1c0cjBqMnhiMTZKbEE3SWxZMG1CZzdacDhPWG9rMHUyRk5SZ0RjdVRRSzExSnBUNldUMDQycUhXdm5zanlBcXlLRVNKU25mYzhSRFF0QmQ2WFB0RHZnRkc1RFJIUWxMNzVzeXFwSnRTYS04TmRNTjdLc0wyMjdaOGNmMnVyMWVnTWNKY2N0YlUtNG5TcW5UR3NlcHA5OXZXelRRSDFHTVZXM094QTJQTGZrcDIxd19tN21XUEpGa3hWbW1iVUdnSDNHU0NfbWI1N0FLZnNYb0VHZHo3eEtjcTRWc096Ug?oc=5",
-            "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNVnl3SjFCTmw2ejJzSjk4NVZ2NHEwZGVzNGJ1U1Fqa0JBdFlqRDMyUExURzNETlBYaGxzMWZ3SUVjci1aUXA1UDltSjFxYUYtbE1tZlBDNFdCOWlDNlltYzNDdG1YTDVFeVhpdzBmajJ1a3BiNWFVd3dhcVp0RWw0c2VRTDVkQXhvRWd6NmxuZ2FhVTFmbVlzbmwtOWkta29oRmw3VlR4Ri1hMmhhRXNoTkl4QW5OUTg3RjZvQkZWYlJIRTIxN3ZucXJhSXFTa0NhVnhVSU9lOEI1TVpjU1RDcmVBdldLZTJiU3JGZGdLb2F5WjRRLVZ3bS1n?oc=5"
-          ]
-        },
-        {
           "term": "son propre",
           "mentions_today": 2,
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOT1VKRC1Qc051cHhYelc3aHAxcW0xelJCSnVLMWNQaVp5TmZhT0lFbEQ1ZjRxQjAxVm5BN3NCc3l6NEVPaVlsUGdnalctakFNUGNVRWlRNXpWOFBLc3JIVkZuMXNQTWVwdlI3SENPSXh5SHAxc2N3Tk52VVdrZ1g0d0poNjUxYmU3T2NiNEVBY3pycDRYNzg5Q3VEVnVUZjRGUXJIMFJyeDJfOENuUmhaTnFHM29mQlNUTDFaMEJXWWtjalgxejlCRlNRcENhVUR0WWVOSDFzU1JQUldTQnFfbXhpdG1kc3FZWE4tdmp4cFRSbngz?oc=5",
             "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSHZjTTJoeGpQMU5LYU9JdVVXNHZlMmdWN3BpZXBXY1QxLW5XNVFtRkN3SDVUREp3RHBMT0tsNS05NnhyZjZTQ2JyVHRFZmtFRDR4aUpJelVhVjRfeFNHaUU2c3F2VTU3QlFCcC1mWlZMNHNXSE4xeUNzc0VHY000X3Vxek9WcU5XUjJrYmF6VTZCbFdoVDgtampIOVZWYUhQRncyWkdhTFFCYTlYalRHTTZrMGE5T0JVb0NwRDh6YlJtakRmRWZtdDFkel9KOUln?oc=5"
+          ]
+        },
+        {
+          "term": "élus démocrates",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMijAJBVV95cUxOMzhlMlVQa2liUEhmOXd2WTd4OFVsMWZyMEVuMDE3SDRTY1dGckxNYlRaMEZsWXlLendaaDZOcDRxNTZ0MWdFZy15d0ZYSFljU0c0dVJ1Y3VHaVlmNVM2OURhOUZydnFfMWtPVVFhLWdEdVd6V3dXaDlkaE1HdWdaNFViREdCd0dVZW9mdFJVS3k4bjZHWGVJZHNIRnM0TFRuaXluWTFzX0NwWnR1NGV0VTk2aVBKdlppNzQ1dEQ1WWFZbjBRODA4MlQ4X1UwcktMY2xjaV9zRWF0aWRuamNSOGxwbnZhMnMya0dLcU5mQkktS3pKU3JZMlA3WTYzM1h3VVlMa0FGUWZVYWdj?oc=5",
+            "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTzZiXzQzNkZSRmVHT1gySndMVmxRU2xLeXN0emR3aVhGM3I2TXZrREY2RndEWE5WcDVmdGQwT1NrY01IdDAwVlV0WWJDWUNaVV84QjJwT25iODU4b1VQbUxYUXhmbWVNd3dlaV9NX051OHVlMUlKUW5sRE5PaEc0U2dwckM2NlFCc3hILWw5SXJrMDZIMEZkR3B5T3Zhc1BQdEVTVzRiSERlOXdWcXZQWkIxT1RwN1JKcWFMUVVYMmdNbWhZZGhkYk80MFljTHNfaV92ZHV2dW9JcTFXYWd6RkpoUFRpTF9uNUZzY2t5aXN5WGdBdnd3?oc=5"
           ]
         }
       ]
@@ -480,6 +525,15 @@
           ]
         },
         {
+          "term": "study suggests",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczd5OEo4czF5TERBcVRidWNRU3Fod0Z1cFFubzY4LXdzQ2h3MHh6X3FVNjVUYXlvdWlSQXFLM2xoMGlYanVSU2gwS3VNX0ZteXhOQnZyd0g3NDY5bXZqY2ZrQ0dNZE16dGhmMUtVVkZLbURKd0VnMU1aVUF6bmQyTkZPNnNuQkhDbkljaXkwREVaWVdMSmlsa282c25nNUdZYld1WDM4Z9IBrAFBVV95cUxQdUhfTEFjWWRfYnZZcENYUTM1NHVVellhZ2FSUkJYN2Fxa09GdTRTNnZGRWFtWUk2Wl9PQmllc3hiRnE5TzNwQUhvQl9DbU0zWjhOeklfdmRfcGs3RmNwMGJPdDRhb25Ta0NGNF9ybjJVdnVRLUNqMFdlSDE3dDJnWTlyTVhxR1JhSWg4YlRlXzY1bHVfNWc3amNJRlQ2bVNNc0JGdjN1RkN5RU1E?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
+          ]
+        },
+        {
           "term": "amish community",
           "mentions_today": 2,
           "evidence_urls": [
@@ -501,14 +555,6 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMimgFBVV95cUxORXlYTXBmcmxQdjdsX1RRamlHU2hadUMtRlkwSGphWC03NGwybF9GVXFuUlZ4WG1tNml1WS01XzF3NjlFLTJaWjZJTms5aWJZbjJTQWRobmU2UV94TUZyTUF6aFBmekRtcXdXZXUwWmYwcWgxWlBQSVplRTJNWmpjR24zdTF5Z0Zuc1JIUEZwUU91bHFuTERSLWZ30gGfAUFVX3lxTE5Gamo3QXhZRnl2SlBYVmE1UFRIdFY4bnZpRENQR2ZPT2V4MjZJT2VEN2NaVG1SQVEtZFpOTmdvNUFoTU8xaWdzN2RBYlR4VVBiQVFZc0NmLXhEdzVKdHIyLU5Zc1ZLVW9uMGJtR3BTY2Q1NDZ3bTY5dDlXM3djc1E3dEVLakpiV3AxNEhjdmdrZ3J4cnVmbDNMRi0tZktacw?oc=5",
             "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
-          ]
-        },
-        {
-          "term": "heart attacks",
-          "mentions_today": 2,
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQVJTbnFpQlpYczUtQV90VWhEa0xNcFkxcnh5eEMxVVZDbFpDR3hKY0hJaE1GWWd4NkhkVWRfZTNkOER4V1dIeDdwMmc3X19CQmFrdEJwMjdSSXk1dUpReFdaLXF5Yi1sSm1LdkRIYWd5UDAybTVNT01BdzlkcndpekVyRzFCa3pIU3c?oc=5",
-            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRk1ZVFFDUkN1MnVmUjU3RHBYdHFCOHZ2c1NjVlBxNjJPYlQ3VC1XWVA3a3Q4Q2lSY2R2ZlRxVjFaNjlTWFJVdnp4QTRFYTlzUXB3Vm5PVlBhQTlkc3hVTXNTT2xWRmx4WVNrUEh1Yw?oc=5"
           ]
         }
       ]
@@ -664,8 +710,8 @@
           "mentions_today": 21,
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -682,8 +728,8 @@
           "mentions_today": 13,
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -691,8 +737,8 @@
           "mentions_today": 13,
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -700,8 +746,8 @@
           "mentions_today": 12,
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         }
       ]
@@ -778,7 +824,7 @@
       "top20": [
         {
           "term": "nintendo switch",
-          "score": 2000.0,
+          "score": 1058.824,
           "mentions": 18,
           "source_count": 1,
           "source_ids": [
@@ -797,7 +843,7 @@
         },
         {
           "term": "ocarina time",
-          "score": 1111.111,
+          "score": 588.235,
           "mentions": 10,
           "source_count": 1,
           "source_ids": [
@@ -816,7 +862,7 @@
         },
         {
           "term": "zelda ocarina",
-          "score": 1111.111,
+          "score": 588.235,
           "mentions": 10,
           "source_count": 1,
           "source_ids": [
@@ -835,7 +881,7 @@
         },
         {
           "term": "zelda ocarina time",
-          "score": 1111.111,
+          "score": 588.235,
           "mentions": 10,
           "source_count": 1,
           "source_ids": [
@@ -853,8 +899,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "legend zelda ocarina",
-          "score": 666.667,
+          "term": "legend zelda",
+          "score": 352.941,
           "mentions": 6,
           "source_count": 1,
           "source_ids": [
@@ -872,8 +918,27 @@
           "weeks_on_chart": null
         },
         {
+          "term": "legend zelda ocarina",
+          "score": 352.941,
+          "mentions": 6,
+          "source_count": 1,
+          "source_ids": [
+            "geek_gaming"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVkI4TjJWQTc0VS1sU3FFQjlwM3U5Vm5QSkVXbk1IM0xlTDJKR3pFMmxNYkgtZmhhSEVnSFQ2bVVKc3YwWFpPcWMwSTd1S3NUajd3R1lWYUhacDQzb0FOS3RYVldpaEV1S1BwZXNGcEJ2dWNPclQ3bnNaQ1hnYjZpMW9QYk9YN0laMVlxdUh0SzdwS09xWVJ1MjFmV0pMckxnbUxIbFBsNjhCRG1qVllyMDhyeU9UMnhxMWRGblN1WjdwV2YxWldiVFNuMmlyY3ZlS1d6M04xazBWTjV5ZnRnWDMwcWYwUkI3?oc=5",
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLU5YLUJPbF9xdmpOT1dJSzdzajRfNHdWdzk2bk1rOGhjcVhlMkh2bkpBZklFSHhiT0I1NnlXOTIzamRpNzEwMlI2enZJZlh4NWltSFdBMDdiaTFTNFR2NWYzaGtxMnBYeTNBd3ctbGRBaWliamxGZnlxalYxZlcxaDdBVEo4aVZLMEVNZ2toQlZVQktra2wwR0ZrYk45RlY1dE56RFltZ0tDbFdVZ2tN?oc=5",
+            "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3gxQThJSzhCSVpZeHNScGsxY1p2RHJxVUx5WjBMd2ZHQ3h2MGZEOHNCTXNQVExuUmIxSmVxRmtvU3dfem9oVm4zdWxUc0RyXzNaTV9xd2xRZUZLc1N2YnROZGZDV0NfOTlGZGNCRllYVHBHb2FFSGowUXdIOEVWMHpWU2wtT0VQTlJ4WXlQbHUxQ3puRUR2Y3Nwd2YwRkdray1hR1lMenY4TjY2UU1JVENCV2NrdEhsU0U3ZkJ3?oc=5"
+          ],
+          "rank": 6,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
           "term": "video games",
-          "score": 666.667,
+          "score": 352.941,
           "mentions": 6,
           "source_count": 1,
           "source_ids": [
@@ -884,25 +949,6 @@
             "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZlFKdW5yN1JIMjZEZ1U5RHlVd3FmWGFWUk9iaWp0RVRUaFU4MWFjNGhDQXg2eUJOaDFSWnhMc0tGOVBFZG1aY3FwNUZkRlVfSTJMTGtRb2dVVnBGR3k2T2dNQWZtRzZCZkVSa2RPdXBfeDMwdzU3WlhjX0FUOTh0R1RNYWE0UWN5ZFZ5bTVObXZKNnBCUkVpX1k4d0pjajZmY0E?oc=5",
             "https://news.google.com/rss/articles/CBMiakFVX3lxTE9JS2RKbXk5WkVDNmVqYldVYmUxTi1nV1NFN3RUX3d6dEE0bVhFQzlEU19EeTZ2aDRpS2VwcVc4UEt2R0x6UDZSUmlmZEw3R2R6VUlMSUhkcmNzOGs2elhZNThPTnV4ai1vZFE?oc=5"
           ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "nintendo switch edition",
-          "score": 555.556,
-          "mentions": 5,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMigwFBVV95cUxOemtGUUZfN1hrV3N2M0hqYUJaRjNldmNDZ3Q0ZjNjdEozSEI2UXRfQlEwWVRaWTI3X1F3d0tIcmV2TXhTNGxpb0k2d2F1R2Jta1FfLTZCaUEyeUkxWUdDbzlLZU10SnZOTW9XZFlDNkNfNE1sWHZqc3QybXY5ZTJ5bkEwMA?oc=5",
-            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
-            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5"
-          ],
           "rank": 7,
           "previous_rank": null,
           "movement": null,
@@ -910,8 +956,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "switch edition",
-          "score": 555.556,
+          "term": "nintendo switch edition",
+          "score": 294.118,
           "mentions": 5,
           "source_count": 1,
           "source_ids": [
@@ -929,8 +975,27 @@
           "weeks_on_chart": null
         },
         {
+          "term": "switch edition",
+          "score": 294.118,
+          "mentions": 5,
+          "source_count": 1,
+          "source_ids": [
+            "geek_gaming"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMigwFBVV95cUxOemtGUUZfN1hrV3N2M0hqYUJaRjNldmNDZ3Q0ZjNjdEozSEI2UXRfQlEwWVRaWTI3X1F3d0tIcmV2TXhTNGxpb0k2d2F1R2Jta1FfLTZCaUEyeUkxWUdDbzlLZU10SnZOTW9XZFlDNkNfNE1sWHZqc3QybXY5ZTJ5bkEwMA?oc=5",
+            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5"
+          ],
+          "rank": 9,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
           "term": "music video",
-          "score": 481.928,
+          "score": 245.399,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -941,7 +1006,26 @@
             "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUEN5WDdFNzJfc0dXNXUyNUdvaUNBa2tYU3I5VnpBM1NqcUtueDZJMDRMc2p2b0NzQ1U2bEFKbkJnUGp6T2lqMUlCYlJrUFg3dGx3OEdXZFA2RmlKcjhPX1JLTnVsaHp6eWVzeHAzd2FjNnBuU1RHU0pRS1JaNFlZNVozS3lIMGhIVDJWZGt2dzluZjNJQXZycGFUUGZNZ1ItU2RIY0ptTXQ4Tk5HdS0yZVA1VGQ3WkJ1TXB5dEljQQ?oc=5",
             "https://news.google.com/rss/articles/CBMizAFBVV95cUxOblZsMWJKVm53aXg1bjVzOHM1TjhISHdodzI4aTJ3Z1FGNTAtWHhFZ3lCSXFKRGlqQlZVWmZ6em83Z2d2ajg5NlhxNTJGdFZIaW1NRG95V1BiZ3R4VzFCcEpiZE0wTjZpaVVwVHRPWlJIZFZ3S2tNTHBsaVdmcHp6WTJacnp2NzdPT0RnWTdSblRUMlE5UVdyWDhIdVFZM1NTbjlFS1NocmRvdUh3ZFFVLTZqYkNHN1dab1Z6ZEczMlJCWjhTRFh6MThEWlo?oc=5"
           ],
-          "rank": 9,
+          "rank": 10,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "black friday",
+          "score": 235.294,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "geek_gaming"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMmpYMm9odmVTeUF3ZWp0MXFEaHhIX2o3bjVPcEw3dDNSbVFWUEMtN2ZRUnYwX3BCelNPZnoxbU93My12Qkp5WEQybVlYbTVRSWlvWXZhMmw3U2NpMGZTN2lFWlJ6dDhEUHJNbHBLMHJoZ054X0lJbFgxNkdLN3ZtLWtIOVBIREJleTBnWTc3YzF5dkcyeW1NR2xMY05CTnlCbDUyNWV1MVVMeV84?oc=5",
+            "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUlVCdnFTb00wWG1wREItN1EzdUtUb3AyUTZJY2FCM3NaeF9hZkMwY3NaOE8tQUY1MjkwSkFKOTdHZWUxbUVBaTNfQTRSX2t1V2NjcWVveFpBSmU3OUIxbVNhd0Y3RmFSbGFsNE9HQ2dvWjZWTjNreWFSeXRzM2xjUlcwb3VUVHRNcFZUdEVOZ0ptbzR5bzIxYWNEOVA?oc=5",
+            "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZkNFaWlSb1lHMFNfYXZ3b0FVeUFZa3hFcVMwTWEyVUg2RmZrcGNVQklYcnpNckVOZHBHckZQaXVjbEFneVAxY0hnWGRqYnE4Z1pNY25OclFCS2Q0TUluZzhkc1o5ZFJHc1A0bWdyVTExczlUWTk4SmRTcHc4ZEkzZGdEVmJ2clE1dDN0WVpuNEFFVmF5OGxoTWVRSDJSSkY3dUJGanVxQ04tNEpVSHBMWUY5WGNtLUE?oc=5"
+          ],
+          "rank": 11,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -949,7 +1033,7 @@
         },
         {
           "term": "cloud gaming",
-          "score": 444.444,
+          "score": 235.294,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -960,44 +1044,6 @@
             "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNFZwSUJkcmhiaDl5Rkk4SHF4RUZYeEUtdlFwWTZWdU4wcnAxSmNaVXEwZV8zVXBCM05tc20wWVlHQ3phR3otMzRmZmQ1X3UycnFRYmlxMTBpM1RzNTRYVUVSYWdMQkdGakhDcVE3dWdjalNwdGlDNC02T181WW5oSW9RZDVCa1M4NnJUUXZ2SG83ZEl4MDdEZ0h2U0QtVU9WQ2tWNENZSUMxbnM?oc=5",
             "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE42YU9LR09Ya3BoaGNieVk1TXFpcGlkZEFVb0VaM21idnBSTVM3YjlvUUgxcHk2a051TzJENlo0Q3dOUW1ISGV0YWpuMElBdmRmcE1kV0JLN1N4UXo5dGRmUXNubVZrV3c?oc=5"
           ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "dandori academy",
-          "score": 444.444,
-          "mentions": 4,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
-            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "ocarina time remake",
-          "score": 444.444,
-          "mentions": 4,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLU5YLUJPbF9xdmpOT1dJSzdzajRfNHdWdzk2bk1rOGhjcVhlMkh2bkpBZklFSHhiT0I1NnlXOTIzamRpNzEwMlI2enZJZlh4NWltSFdBMDdiaTFTNFR2NWYzaGtxMnBYeTNBd3ctbGRBaWliamxGZnlxalYxZlcxaDdBVEo4aVZLMEVNZ2toQlZVQktra2wwR0ZrYk45RlY1dE56RFltZ0tDbFdVZ2tN?oc=5",
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3gxQThJSzhCSVpZeHNScGsxY1p2RHJxVUx5WjBMd2ZHQ3h2MGZEOHNCTXNQVExuUmIxSmVxRmtvU3dfem9oVm4zdWxUc0RyXzNaTV9xd2xRZUZLc1N2YnROZGZDV0NfOTlGZGNCRllYVHBHb2FFSGowUXdIOEVWMHpWU2wtT0VQTlJ4WXlQbHUxQ3puRUR2Y3Nwd2YwRkdray1hR1lMenY4TjY2UU1JVENCV2NrdEhsU0U3ZkJ3?oc=5",
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxPR0VKSDF4V2dzN1lGeHMtSmdYbVV4c3pWZXFPZGRzREl5UFozdGlrOEMyV2k3NU81UUpCZVlkSkNzalBlaG8wLWpyc3I5MUdUNEtDMlphd09Va1diY3VLMTI5SjB1NVIwR3J2VU94UHB3dF9XRDFySHY2TkJOc0R1aklrV3JvVVdUbjNxZUpSU3pETWI3ODZRdWJsSjNXTzEwc3lUYWFzQWFnZENkdDJROW5JVXVmT1BCWm9VeWR3?oc=5"
-          ],
           "rank": 12,
           "previous_rank": null,
           "movement": null,
@@ -1005,8 +1051,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "pikmin nintendo",
-          "score": 444.444,
+          "term": "dandori academy",
+          "score": 235.294,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -1015,7 +1061,7 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
             "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
           ],
           "rank": 13,
           "previous_rank": null,
@@ -1024,27 +1070,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "pikmin nintendo switch",
-          "score": 444.444,
-          "mentions": 4,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
-            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
-          ],
-          "rank": 14,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "time remake",
-          "score": 444.444,
+          "term": "ocarina time remake",
+          "score": 235.294,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -1055,6 +1082,25 @@
             "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3gxQThJSzhCSVpZeHNScGsxY1p2RHJxVUx5WjBMd2ZHQ3h2MGZEOHNCTXNQVExuUmIxSmVxRmtvU3dfem9oVm4zdWxUc0RyXzNaTV9xd2xRZUZLc1N2YnROZGZDV0NfOTlGZGNCRllYVHBHb2FFSGowUXdIOEVWMHpWU2wtT0VQTlJ4WXlQbHUxQ3puRUR2Y3Nwd2YwRkdray1hR1lMenY4TjY2UU1JVENCV2NrdEhsU0U3ZkJ3?oc=5",
             "https://news.google.com/rss/articles/CBMivgFBVV95cUxPR0VKSDF4V2dzN1lGeHMtSmdYbVV4c3pWZXFPZGRzREl5UFozdGlrOEMyV2k3NU81UUpCZVlkSkNzalBlaG8wLWpyc3I5MUdUNEtDMlphd09Va1diY3VLMTI5SjB1NVIwR3J2VU94UHB3dF9XRDFySHY2TkJOc0R1aklrV3JvVVdUbjNxZUpSU3pETWI3ODZRdWJsSjNXTzEwc3lUYWFzQWFnZENkdDJROW5JVXVmT1BCWm9VeWR3?oc=5"
           ],
+          "rank": 14,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "pikmin nintendo",
+          "score": 235.294,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "geek_gaming"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
+          ],
           "rank": 15,
           "previous_rank": null,
           "movement": null,
@@ -1062,19 +1108,17 @@
           "weeks_on_chart": null
         },
         {
-          "term": "legend zelda",
-          "score": 393.574,
-          "mentions": 7,
-          "source_count": 2,
+          "term": "pikmin nintendo switch",
+          "score": 235.294,
+          "mentions": 4,
+          "source_count": 1,
           "source_ids": [
-            "geek_anime",
             "geek_gaming"
           ],
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVkI4TjJWQTc0VS1sU3FFQjlwM3U5Vm5QSkVXbk1IM0xlTDJKR3pFMmxNYkgtZmhhSEVnSFQ2bVVKc3YwWFpPcWMwSTd1S3NUajd3R1lWYUhacDQzb0FOS3RYVldpaEV1S1BwZXNGcEJ2dWNPclQ3bnNaQ1hnYjZpMW9QYk9YN0laMVlxdUh0SzdwS09xWVJ1MjFmV0pMckxnbUxIbFBsNjhCRG1qVllyMDhyeU9UMnhxMWRGblN1WjdwV2YxWldiVFNuMmlyY3ZlS1d6M04xazBWTjV5ZnRnWDMwcWYwUkI3?oc=5",
-            "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLU5YLUJPbF9xdmpOT1dJSzdzajRfNHdWdzk2bk1rOGhjcVhlMkh2bkpBZklFSHhiT0I1NnlXOTIzamRpNzEwMlI2enZJZlh4NWltSFdBMDdiaTFTNFR2NWYzaGtxMnBYeTNBd3ctbGRBaWliamxGZnlxalYxZlcxaDdBVEo4aVZLMEVNZ2toQlZVQktra2wwR0ZrYk45RlY1dE56RFltZ0tDbFdVZ2tN?oc=5",
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3gxQThJSzhCSVpZeHNScGsxY1p2RHJxVUx5WjBMd2ZHQ3h2MGZEOHNCTXNQVExuUmIxSmVxRmtvU3dfem9oVm4zdWxUc0RyXzNaTV9xd2xRZUZLc1N2YnROZGZDV0NfOTlGZGNCRllYVHBHb2FFSGowUXdIOEVWMHpWU2wtT0VQTlJ4WXlQbHUxQ3puRUR2Y3Nwd2YwRkdray1hR1lMenY4TjY2UU1JVENCV2NrdEhsU0U3ZkJ3?oc=5",
-            "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdUgwZUswcDJXVnU3MkhxYWdSSGtEd21LeV9wYlQ2aFcyRWMyQ3Y3d0RES1RhbW1pQjN1anY2MnZXVzR0c2JCQnJhSDR3NWV3MVN1MEsxM3VocVJQZW5mVm5UZEFzWmxiOC1XTXVRSHAwclVFSldwS1JMeVhmOTRTdThRak1KdEowdWdsSDNGTFRaczZLcm5KUQ?oc=5"
+            "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
           ],
           "rank": 16,
           "previous_rank": null,
@@ -1083,17 +1127,17 @@
           "weeks_on_chart": null
         },
         {
-          "term": "anime opening",
-          "score": 361.446,
-          "mentions": 3,
+          "term": "time remake",
+          "score": 235.294,
+          "mentions": 4,
           "source_count": 1,
           "source_ids": [
-            "geek_anime"
+            "geek_gaming"
           ],
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUEN5WDdFNzJfc0dXNXUyNUdvaUNBa2tYU3I5VnpBM1NqcUtueDZJMDRMc2p2b0NzQ1U2bEFKbkJnUGp6T2lqMUlCYlJrUFg3dGx3OEdXZFA2RmlKcjhPX1JLTnVsaHp6eWVzeHAzd2FjNnBuU1RHU0pRS1JaNFlZNVozS3lIMGhIVDJWZGt2dzluZjNJQXZycGFUUGZNZ1ItU2RIY0ptTXQ4Tk5HdS0yZVA1VGQ3WkJ1TXB5dEljQQ?oc=5",
-            "https://news.google.com/rss/articles/CBMizAFBVV95cUxOblZsMWJKVm53aXg1bjVzOHM1TjhISHdodzI4aTJ3Z1FGNTAtWHhFZ3lCSXFKRGlqQlZVWmZ6em83Z2d2ajg5NlhxNTJGdFZIaW1NRG95V1BiZ3R4VzFCcEpiZE0wTjZpaVVwVHRPWlJIZFZ3S2tNTHBsaVdmcHp6WTJacnp2NzdPT0RnWTdSblRUMlE5UVdyWDhIdVFZM1NTbjlFS1NocmRvdUh3ZFFVLTZqYkNHN1dab1Z6ZEczMlJCWjhTRFh6MThEWlo?oc=5",
-            "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPRDNtMEl1OUJ1MjlEVjliVGZGdjJIRkhCQ2NPTl9QelZURzBDU010aVlucDkyeGNxMzdDMmVnWU5kMTVGS1FaOVo4RG5jYXROMmhRMllGNTBLYmMzSW8tUFFNcFFkN1BKeE1henc3ZHk2VVVDUXFIWmZQajRvN2lDTjVmQUlrQjh4M1N4MDNydnlQazktWElaMFZLRWdTYzRTNTJxWWxCaHZVM1hfLXNQeWFlYkczY1hocDFNSVU1MllLZ0twT09LRkxqQlI2TXk0ODlhdTMxWmR0YklRUk5wQjVDQzB1dw?oc=5"
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLU5YLUJPbF9xdmpOT1dJSzdzajRfNHdWdzk2bk1rOGhjcVhlMkh2bkpBZklFSHhiT0I1NnlXOTIzamRpNzEwMlI2enZJZlh4NWltSFdBMDdiaTFTNFR2NWYzaGtxMnBYeTNBd3ctbGRBaWliamxGZnlxalYxZlcxaDdBVEo4aVZLMEVNZ2toQlZVQktra2wwR0ZrYk45RlY1dE56RFltZ0tDbFdVZ2tN?oc=5",
+            "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3gxQThJSzhCSVpZeHNScGsxY1p2RHJxVUx5WjBMd2ZHQ3h2MGZEOHNCTXNQVExuUmIxSmVxRmtvU3dfem9oVm4zdWxUc0RyXzNaTV9xd2xRZUZLc1N2YnROZGZDV0NfOTlGZGNCRllYVHBHb2FFSGowUXdIOEVWMHpWU2wtT0VQTlJ4WXlQbHUxQ3puRUR2Y3Nwd2YwRkdray1hR1lMenY4TjY2UU1JVENCV2NrdEhsU0U3ZkJ3?oc=5",
+            "https://news.google.com/rss/articles/CBMivgFBVV95cUxPR0VKSDF4V2dzN1lGeHMtSmdYbVV4c3pWZXFPZGRzREl5UFozdGlrOEMyV2k3NU81UUpCZVlkSkNzalBlaG8wLWpyc3I5MUdUNEtDMlphd09Va1diY3VLMTI5SjB1NVIwR3J2VU94UHB3dF9XRDFySHY2TkJOc0R1aklrV3JvVVdUbjNxZUpSU3pETWI3ODZRdWJsSjNXTzEwc3lUYWFzQWFnZENkdDJROW5JVXVmT1BCWm9VeWR3?oc=5"
           ],
           "rank": 17,
           "previous_rank": null,
@@ -1102,8 +1146,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "anime opening song",
-          "score": 361.446,
+          "term": "anime opening",
+          "score": 184.049,
           "mentions": 3,
           "source_count": 1,
           "source_ids": [
@@ -1121,8 +1165,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "opening song",
-          "score": 361.446,
+          "term": "anime opening song",
+          "score": 184.049,
           "mentions": 3,
           "source_count": 1,
           "source_ids": [
@@ -1140,8 +1184,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "opening song music",
-          "score": 361.446,
+          "term": "opening song",
+          "score": 184.049,
           "mentions": 3,
           "source_count": 1,
           "source_ids": [
@@ -1172,15 +1216,17 @@
       "window": "TODAY_ONLY",
       "top20": [
         {
-          "term": "argonnes serie",
-          "score": 10000.0,
-          "mentions": 1,
+          "term": "united states",
+          "score": 349.04,
+          "mentions": 20,
           "source_count": 1,
           "source_ids": [
-            "google_fr"
+            "wikipedia_en"
           ],
           "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR"
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
           ],
           "rank": 1,
           "previous_rank": null,
@@ -1189,264 +1235,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "argonnes serie histoire",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_fr"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR"
-          ],
-          "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "bbc news",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_gb"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=GB"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "bbc news scotland",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_gb"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=GB"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "former staff",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "former staff lawsuits",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "histoire vraie",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_fr"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "jenner former",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 8,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "jenner former staff",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "kylie jenner",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "kylie jenner former",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "news scotland",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_gb"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=GB"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "serie histoire",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_fr"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "serie histoire vraie",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_fr"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR"
-          ],
-          "rank": 14,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "staff lawsuits",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_us"
-          ],
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=US"
-          ],
-          "rank": 15,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "edouard philippe",
-          "score": 588.235,
-          "mentions": 2,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_fr"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMinAJBVV95cUxPMWJGWXBRR2FISzZTX2FPdVNzaHIwS2dWY2lEdG9wM0tac0dGaFV1TDAtRENITTQzbVZfOFpKN1c0cjBqMnhiMTZKbEE3SWxZMG1CZzdacDhPWG9rMHUyRk5SZ0RjdVRRSzExSnBUNldUMDQycUhXdm5zanlBcXlLRVNKU25mYzhSRFF0QmQ2WFB0RHZnRkc1RFJIUWxMNzVzeXFwSnRTYS04TmRNTjdLc0wyMjdaOGNmMnVyMWVnTWNKY2N0YlUtNG5TcW5UR3NlcHA5OXZXelRRSDFHTVZXM094QTJQTGZrcDIxd19tN21XUEpGa3hWbW1iVUdnSDNHU0NfbWI1N0FLZnNYb0VHZHo3eEtjcTRWc096Ug?oc=5",
-            "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNVnl3SjFCTmw2ejJzSjk4NVZ2NHEwZGVzNGJ1U1Fqa0JBdFlqRDMyUExURzNETlBYaGxzMWZ3SUVjci1aUXA1UDltSjFxYUYtbE1tZlBDNFdCOWlDNlltYzNDdG1YTDVFeVhpdzBmajJ1a3BiNWFVd3dhcVp0RWw0c2VRTDVkQXhvRWd6NmxuZ2FhVTFmbVlzbmwtOWkta29oRmw3VlR4Ri1hMmhhRXNoTkl4QW5OUTg3RjZvQkZWYlJIRTIxN3ZucXJhSXFTa0NhVnhVSU9lOEI1TVpjU1RDcmVBdldLZTJiU3JGZGdLb2F5WjRRLVZ3bS1n?oc=5"
-          ],
-          "rank": 16,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
           "term": "son propre",
-          "score": 588.235,
+          "score": 175.439,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1456,6 +1246,296 @@
             "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOT1VKRC1Qc051cHhYelc3aHAxcW0xelJCSnVLMWNQaVp5TmZhT0lFbEQ1ZjRxQjAxVm5BN3NCc3l6NEVPaVlsUGdnalctakFNUGNVRWlRNXpWOFBLc3JIVkZuMXNQTWVwdlI3SENPSXh5SHAxc2N3Tk52VVdrZ1g0d0poNjUxYmU3T2NiNEVBY3pycDRYNzg5Q3VEVnVUZjRGUXJIMFJyeDJfOENuUmhaTnFHM29mQlNUTDFaMEJXWWtjalgxejlCRlNRcENhVUR0WWVOSDFzU1JQUldTQnFfbXhpdG1kc3FZWE4tdmp4cFRSbngz?oc=5",
             "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSHZjTTJoeGpQMU5LYU9JdVVXNHZlMmdWN3BpZXBXY1QxLW5XNVFtRkN3SDVUREp3RHBMT0tsNS05NnhyZjZTQ2JyVHRFZmtFRDR4aUpJelVhVjRfeFNHaUU2c3F2VTU3QlFCcC1mWlZMNHNXSE4xeUNzc0VHY000X3Vxek9WcU5XUjJrYmF6VTZCbFdoVDgtampIOVZWYUhQRncyWkdhTFFCYTlYalRHTTZrMGE5T0JVb0NwRDh6YlJtakRmRWZtdDFkel9KOUln?oc=5"
           ],
+          "rank": 2,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "élus démocrates",
+          "score": 175.439,
+          "mentions": 2,
+          "source_count": 1,
+          "source_ids": [
+            "google_news_fr"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMijAJBVV95cUxOMzhlMlVQa2liUEhmOXd2WTd4OFVsMWZyMEVuMDE3SDRTY1dGckxNYlRaMEZsWXlLendaaDZOcDRxNTZ0MWdFZy15d0ZYSFljU0c0dVJ1Y3VHaVlmNVM2OURhOUZydnFfMWtPVVFhLWdEdVd6V3dXaDlkaE1HdWdaNFViREdCd0dVZW9mdFJVS3k4bjZHWGVJZHNIRnM0TFRuaXluWTFzX0NwWnR1NGV0VTk2aVBKdlppNzQ1dEQ1WWFZbjBRODA4MlQ4X1UwcktMY2xjaV9zRWF0aWRuamNSOGxwbnZhMnMya0dLcU5mQkktS3pKU3JZMlA3WTYzM1h3VVlMa0FGUWZVYWdj?oc=5",
+            "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTzZiXzQzNkZSRmVHT1gySndMVmxRU2xLeXN0emR3aVhGM3I2TXZrREY2RndEWE5WcDVmdGQwT1NrY01IdDAwVlV0WWJDWUNaVV84QjJwT25iODU4b1VQbUxYUXhmbWVNd3dlaV9NX051OHVlMUlKUW5sRE5PaEc0U2dwckM2NlFCc3hILWw5SXJrMDZIMEZkR3B5T3Zhc1BQdEVTVzRiSERlOXdWcXZQWkIxT1RwN1JKcWFMUVVYMmdNbWhZZGhkYk80MFljTHNfaV92ZHV2dW9JcTFXYWd6RkpoUFRpTF9uNUZzY2t5aXN5WGdBdnd3?oc=5"
+          ],
+          "rank": 3,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "présidentielle française",
+          "score": 103.448,
+          "mentions": 6,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+          ],
+          "rank": 4,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "jensen huang",
+          "score": 102.198,
+          "mentions": 4,
+          "source_count": 2,
+          "source_ids": [
+            "google_news_us",
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Jensen_Huang",
+            "https://en.wikipedia.org/wiki/Jensen_Huang_spying_scandal",
+            "https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcTlzd01BSWFhRWROazZzbHhQNmpWLXRjY3Ayd291bVRRNUFfbnhlRnpJekdIZnhMWDVSeng2Q19aOXQydWltRnlxMEpfLXctZVJRMFM4eFBUREhxQW10YkdRLXBqTmszWWdEYUx0U2k0OWtwUEg4NVV6Vy0?oc=5",
+            "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV0ppMjd4Z0pxWkJVRnlaSXNZWUd6Nmd3TC0tWEVLYmp1Z3hmWVFhY2VnRS1Da0U5eXJTdnhtRHNkdTR4bFlDc21UTzctUTNodll1NlJITU81WG1jSVNmV1FVVllJZGlJcWVaSl9LS1A4N3FZeGZ6THVPbTZCOWRaSUFyMzJoaTdZNEh0Vmt3eTd0Zw?oc=5"
+          ],
+          "rank": 5,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "states presidential",
+          "score": 69.808,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ],
+          "rank": 6,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "united states presidential",
+          "score": 69.808,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
+            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+          ],
+          "rank": 7,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "série télévisée",
+          "score": 68.966,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Cat%27s_Eyes_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29",
+            "https://fr.wikipedia.org/wiki/Lupin_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%2C_2021%29",
+            "https://fr.wikipedia.org/wiki/Saint-Pierre_%28s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e%29"
+          ],
+          "rank": 8,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "american series",
+          "score": 52.356,
+          "mentions": 3,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
+            "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
+            "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
+          ],
+          "rank": 9,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "legend zelda",
+          "score": 52.356,
+          "mentions": 3,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time_%282026_video_game%29",
+            "https://en.wikipedia.org/wiki/The_Legend_of_Zelda"
+          ],
+          "rank": 10,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "series season",
+          "score": 52.356,
+          "mentions": 3,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Bigg_Boss_%28Hindi_TV_series%29_season_20",
+            "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
+            "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
+          ],
+          "rank": 11,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "grand theft",
+          "score": 52.04,
+          "mentions": 6,
+          "source_count": 2,
+          "source_ids": [
+            "wikipedia_en",
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto",
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+          ],
+          "rank": 12,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "grand theft auto",
+          "score": 52.04,
+          "mentions": 6,
+          "source_count": 2,
+          "source_ids": [
+            "wikipedia_en",
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto",
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+          ],
+          "rank": 13,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "theft auto",
+          "score": 52.04,
+          "mentions": 6,
+          "source_count": 2,
+          "source_ids": [
+            "wikipedia_en",
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto",
+            "https://fr.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+          ],
+          "rank": 14,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "vendée globe",
+          "score": 51.724,
+          "mentions": 3,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_fr"
+          ],
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe",
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_2024-2025",
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_1996-1997"
+          ],
+          "rank": 15,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "american series season",
+          "score": 34.904,
+          "mentions": 2,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
+            "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
+          ],
+          "rank": 16,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "charlie kirk",
+          "score": 34.904,
+          "mentions": 2,
+          "source_count": 1,
+          "source_ids": [
+            "wikipedia_en"
+          ],
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Charlie_Kirk",
+            "https://en.wikipedia.org/wiki/Assassination_of_Charlie_Kirk"
+          ],
           "rank": 17,
           "previous_rank": null,
           "movement": null,
@@ -1463,19 +1543,16 @@
           "weeks_on_chart": null
         },
         {
-          "term": "united states",
-          "score": 334.419,
-          "mentions": 21,
-          "source_count": 2,
+          "term": "david walliams",
+          "score": 34.904,
+          "mentions": 2,
+          "source_count": 1,
           "source_ids": [
-            "google_news_us",
             "wikipedia_en"
           ],
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
-            "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ielVtR0tBWXI4cTlYTnRZM3pmbW9EVXVUdGtSVUdSN2tib2ZOamc2NTN5UWEzRUZtTklwTEpBQnp3WHcyWXJDdEVMWDl2akpycVRwT3ZEejZ2RTg?oc=5"
+            "https://en.wikipedia.org/wiki/David_Walliams",
+            "https://en.wikipedia.org/wiki/David_Walliams_filmography"
           ],
           "rank": 18,
           "previous_rank": null,
@@ -1484,15 +1561,16 @@
           "weeks_on_chart": null
         },
         {
-          "term": "accentue pression",
-          "score": 294.118,
-          "mentions": 1,
+          "term": "east eden",
+          "score": 34.904,
+          "mentions": 2,
           "source_count": 1,
           "source_ids": [
-            "google_news_fr"
+            "wikipedia_en"
           ],
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMinAJBVV95cUxPMWJGWXBRR2FISzZTX2FPdVNzaHIwS2dWY2lEdG9wM0tac0dGaFV1TDAtRENITTQzbVZfOFpKN1c0cjBqMnhiMTZKbEE3SWxZMG1CZzdacDhPWG9rMHUyRk5SZ0RjdVRRSzExSnBUNldUMDQycUhXdm5zanlBcXlLRVNKU25mYzhSRFF0QmQ2WFB0RHZnRkc1RFJIUWxMNzVzeXFwSnRTYS04TmRNTjdLc0wyMjdaOGNmMnVyMWVnTWNKY2N0YlUtNG5TcW5UR3NlcHA5OXZXelRRSDFHTVZXM094QTJQTGZrcDIxd19tN21XUEpGa3hWbW1iVUdnSDNHU0NfbWI1N0FLZnNYb0VHZHo3eEtjcTRWc096Ug?oc=5"
+            "https://en.wikipedia.org/wiki/East_of_Eden_%28novel%29",
+            "https://en.wikipedia.org/wiki/East_of_Eden_%282026_miniseries%29"
           ],
           "rank": 19,
           "previous_rank": null,
@@ -1501,15 +1579,16 @@
           "weeks_on_chart": null
         },
         {
-          "term": "acteur jean",
-          "score": 294.118,
-          "mentions": 1,
+          "term": "edmund fitzgerald",
+          "score": 34.904,
+          "mentions": 2,
           "source_count": 1,
           "source_ids": [
-            "google_news_fr"
+            "wikipedia_en"
           ],
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPd25iWlYteGh0XzU3NlR1RTJLTTlVSkhudWxUbGJaejJPSENnMjRVM1NIeW0xcnVDYlp6RHplYjFBaE5DeXowT0tkdDd1STdnTkt4aDU1ZWFrVGdITzNYQkhiaXE1Sk1walI3algxYzhSY2xGNWtYMVQ3b1J0TlBzTGpXYVVCLU9fZWxqdmV5TkhEMXFjbUdQM01qZGlxNlZsb3ZMU19ocUZ1NERGLUZ5cFdXWDB4Qy1aSW53cTZhazRaa3BqcWctbktxOFRzMlJ3SDFWWkdKaWhhczdWY0tHU2lWbnNJblZu?oc=5"
+            "https://en.wikipedia.org/wiki/SS_Edmund_Fitzgerald",
+            "https://en.wikipedia.org/wiki/The_Wreck_of_the_Edmund_Fitzgerald"
           ],
           "rank": 20,
           "previous_rank": null,
@@ -1532,7 +1611,7 @@
       "top20": [
         {
           "term": "jane street",
-          "score": 454.545,
+          "score": 161.29,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1550,7 +1629,7 @@
         },
         {
           "term": "jensen huang",
-          "score": 454.545,
+          "score": 161.29,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1561,312 +1640,6 @@
             "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html"
           ],
           "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "age magic",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://commandlinesystems.com/magic.txt"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "agent sessions",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://blog.atuin.sh/threads-agent-sessions/"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "agent sessions every",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://blog.atuin.sh/threads-agent-sessions/"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "agents found",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://pietromiotti.com/latest/maya-site"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "agents found unmapped",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://pietromiotti.com/latest/maya-site"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "airlines bans",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
-          ],
-          "rank": 8,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "airlines bans agents",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
-          ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "alarm almost",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "alarm almost drowned",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "all your",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://blog.atuin.sh/threads-agent-sessions/"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "all your agent",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://blog.atuin.sh/threads-agent-sessions/"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "almost drowned",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
-          ],
-          "rank": 14,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "almost drowned jane",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
-          ],
-          "rank": 15,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "alternative granola",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://github.com/FrigadeHQ/yogurt"
-          ],
-          "rank": 16,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "any website",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://news.ycombinator.com/item?id=50455811"
-          ],
-          "rank": 17,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "apache http",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability"
-          ],
-          "rank": 18,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "apache http server",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability"
-          ],
-          "rank": 19,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "app coming",
-          "score": 227.273,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "hackernews"
-          ],
-          "evidence_urls": [
-            "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/"
-          ],
-          "rank": 20,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -1898,8 +1671,27 @@
       "window": "TODAY_ONLY",
       "top20": [
         {
+          "term": "study suggests",
+          "score": 208.333,
+          "mentions": 3,
+          "source_count": 1,
+          "source_ids": [
+            "google_news_health"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczd5OEo4czF5TERBcVRidWNRU3Fod0Z1cFFubzY4LXdzQ2h3MHh6X3FVNjVUYXlvdWlSQXFLM2xoMGlYanVSU2gwS3VNX0ZteXhOQnZyd0g3NDY5bXZqY2ZrQ0dNZE16dGhmMUtVVkZLbURKd0VnMU1aVUF6bmQyTkZPNnNuQkhDbkljaXkwREVaWVdMSmlsa282c25nNUdZYld1WDM4Z9IBrAFBVV95cUxQdUhfTEFjWWRfYnZZcENYUTM1NHVVellhZ2FSUkJYN2Fxa09GdTRTNnZGRWFtWUk2Wl9PQmllc3hiRnE5TzNwQUhvQl9DbU0zWjhOeklfdmRfcGs3RmNwMGJPdDRhb25Ta0NGNF9ybjJVdnVRLUNqMFdlSDE3dDJnWTlyTVhxR1JhSWg4YlRlXzY1bHVfNWc3amNJRlQ2bVNNc0JGdjN1RkN5RU1E?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
+          ],
+          "rank": 1,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
           "term": "amish community",
-          "score": 312.5,
+          "score": 138.889,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1909,24 +1701,6 @@
             "https://news.google.com/rss/articles/CBMijgFBVV95cUxNME9XOWJGNk83dFVQeTgzWEs2YUROZVJGSlcxRms4QmQ3RDBudlJYU0tzQ3hCOTkxMi1Mc1pCU2QtdXhHMVBRdDFFRW1pcTBvcklnWGU4YWIzTkdZOV95SmZ5M2xMWkgwdnN0ZUtHTllqeU5lTjJXZHdOdXJLdDZBb0w4VWF0cVoxYnlfeG5R?oc=5",
             "https://news.google.com/rss/articles/CBMijAFBVV95cUxPV2ZrenUxeFRUV0ZERVM3OXN6cTlTQ0REQ3RJWFJCTk9Od3c1Y3N2dEctcWZ2U3BIblh2TC14R09jNVFsWjE4NmtBZnRjN0c1MGs3Y04zcDRWUXJkQmo2ZlNtSFpsZnNkYkFqb1JZTWFWRjBmOGliTjktWHllV1lWcXFvSHRFQVVXRTV1Zw?oc=5"
           ],
-          "rank": 1,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "biological aging",
-          "score": 312.5,
-          "mentions": 2,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
-          ],
           "rank": 2,
           "previous_rank": null,
           "movement": null,
@@ -1934,15 +1708,15 @@
           "weeks_on_chart": null
         },
         {
-          "term": "breast cancer",
-          "score": 312.5,
+          "term": "biological aging",
+          "score": 138.889,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
             "google_news_health"
           ],
           "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMimgFBVV95cUxORXlYTXBmcmxQdjdsX1RRamlHU2hadUMtRlkwSGphWC03NGwybF9GVXFuUlZ4WG1tNml1WS01XzF3NjlFLTJaWjZJTms5aWJZbjJTQWRobmU2UV94TUZyTUF6aFBmekRtcXdXZXUwWmYwcWgxWlBQSVplRTJNWmpjR24zdTF5Z0Zuc1JIUEZwUU91bHFuTERSLWZ30gGfAUFVX3lxTE5Gamo3QXhZRnl2SlBYVmE1UFRIdFY4bnZpRENQR2ZPT2V4MjZJT2VEN2NaVG1SQVEtZFpOTmdvNUFoTU8xaWdzN2RBYlR4VVBiQVFZc0NmLXhEdzVKdHIyLU5Zc1ZLVW9uMGJtR3BTY2Q1NDZ3bTY5dDlXM3djc1E3dEVLakpiV3AxNEhjdmdrZ3J4cnVmbDNMRi0tZktacw?oc=5",
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
             "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
           ],
           "rank": 3,
@@ -1952,8 +1726,26 @@
           "weeks_on_chart": null
         },
         {
+          "term": "breast cancer",
+          "score": 138.889,
+          "mentions": 2,
+          "source_count": 1,
+          "source_ids": [
+            "google_news_health"
+          ],
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMimgFBVV95cUxORXlYTXBmcmxQdjdsX1RRamlHU2hadUMtRlkwSGphWC03NGwybF9GVXFuUlZ4WG1tNml1WS01XzF3NjlFLTJaWjZJTms5aWJZbjJTQWRobmU2UV94TUZyTUF6aFBmekRtcXdXZXUwWmYwcWgxWlBQSVplRTJNWmpjR24zdTF5Z0Zuc1JIUEZwUU91bHFuTERSLWZ30gGfAUFVX3lxTE5Gamo3QXhZRnl2SlBYVmE1UFRIdFY4bnZpRENQR2ZPT2V4MjZJT2VEN2NaVG1SQVEtZFpOTmdvNUFoTU8xaWdzN2RBYlR4VVBiQVFZc0NmLXhEdzVKdHIyLU5Zc1ZLVW9uMGJtR3BTY2Q1NDZ3bTY5dDlXM3djc1E3dEVLakpiV3AxNEhjdmdrZ3J4cnVmbDNMRi0tZktacw?oc=5",
+            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
+          ],
+          "rank": 4,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
           "term": "heart attacks",
-          "score": 312.5,
+          "score": 138.889,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1963,7 +1755,7 @@
             "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQVJTbnFpQlpYczUtQV90VWhEa0xNcFkxcnh5eEMxVVZDbFpDR3hKY0hJaE1GWWd4NkhkVWRfZTNkOER4V1dIeDdwMmc3X19CQmFrdEJwMjdSSXk1dUpReFdaLXF5Yi1sSm1LdkRIYWd5UDAybTVNT01BdzlkcndpekVyRzFCa3pIU3c?oc=5",
             "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRk1ZVFFDUkN1MnVmUjU3RHBYdHFCOHZ2c1NjVlBxNjJPYlQ3VC1XWVA3a3Q4Q2lSY2R2ZlRxVjFaNjlTWFJVdnp4QTRFYTlzUXB3Vm5PVlBhQTlkc3hVTXNTT2xWRmx4WVNrUEh1Yw?oc=5"
           ],
-          "rank": 4,
+          "rank": 5,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -1971,7 +1763,7 @@
         },
         {
           "term": "study links",
-          "score": 312.5,
+          "score": 138.889,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -1981,24 +1773,6 @@
             "https://news.google.com/rss/articles/CBMihgFBVV95cUxQXzVaM3l4ZmpjSWJSZmRkYlM1MGdxMnM3dTB1VUM0MmQwTVUtZ1NFNDNJdGJQWGpaeWtnT3Uwb29ZY1pMOXJPN3pQa1Y0ZVpoWjllYUhfUVZpUjQ3ci1UQzRIeXdNYUdMWmJ0VU1nWXFNSGpyaUxiZUU0ektfM2NibWtLRXpodw?oc=5",
             "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdWhUdG5kZVRSSGhxVFlkcl95ellpYW1vWmUwcWFUeXAydmwwRUNiUlpGZDJNWFNUZmkyclBjcWg0UmtiSU5Kd3hHRDZPOG5PWmJCN0djdUcwM1d1d2JNcGZObGNobWRiMk5kUlFOVk8xeXB5S0hYSEhHY1E2MFFtWHpEQk9Kblp2NlRxTGVmbWtYRlU?oc=5"
           ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "study suggests",
-          "score": 312.5,
-          "mentions": 2,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
-          ],
           "rank": 6,
           "previous_rank": null,
           "movement": null,
@@ -2007,7 +1781,7 @@
         },
         {
           "term": "weight loss",
-          "score": 312.5,
+          "score": 138.889,
           "mentions": 2,
           "source_count": 1,
           "source_ids": [
@@ -2018,227 +1792,6 @@
             "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdG5ncF8yZC1ZNXEzWmV5cjVVMktKdTNMNVE3MktQUjJCcWFhanJmeGhmVEdvZzlBTk5rbmFsOXFPbXB3ZmJ4Z0h5cl90SFd4M3ROZThtTjVuQTFQb2FfNkoyNnBlQkZKZEVBUmhOUWNBelFGT2dwYjdvVG56TFphcm54dFpBRUgwOUZnYS05MXVJM05GRXhoZU5sN3BWSlhRTml2WUFOR1FjNWtlanc?oc=5"
           ],
           "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "abc news",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiTEFVX3lxTE90NUMzV2wzMEFkUGg4ekxXZHRnMHpfR0Q4SUU0T3VfZ2tRdkllejV6N2pRam84WGl1ZDFSV2tiS25vbEJ6X1lTSXU0aFY?oc=5"
-          ],
-          "rank": 8,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "accelerate biological",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
-          ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "accelerate biological aging",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "across cell",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0xdGl4SXQ5X3J6VG5vSzFxa0JDM3UybzFsMFU1VmdiTzBQdmZOVmFQelpwVWMwazBOTklUQk9qR3pYeHptV3p0V0plZXpmLXNFcDFOdkdRejBSNmtpY2ZJ?oc=5"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "across cell types",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0xdGl4SXQ5X3J6VG5vSzFxa0JDM3UybzFsMFU1VmdiTzBQdmZOVmFQelpwVWMwazBOTklUQk9qR3pYeHptV3p0V0plZXpmLXNFcDFOdkdRejBSNmtpY2ZJ?oc=5"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "across global",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92dTR0Z05SeS1TbmxlUmNOZy0wUGRnWXlyTzVJNWFfVnpHdDlDNnJPY01XM0VORlpnRDNHTzg2eURXWXRwYmxLWm8wQnNTaXotbmRjaE5pRmZIVkRheDA4?oc=5"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "across global cohorts",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92dTR0Z05SeS1TbmxlUmNOZy0wUGRnWXlyTzVJNWFfVnpHdDlDNnJPY01XM0VORlpnRDNHTzg2eURXWXRwYmxLWm8wQnNTaXotbmRjaE5pRmZIVkRheDA4?oc=5"
-          ],
-          "rank": 14,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "acute myeloid",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FMTdnbDhmS19TdUNXMThNWmMwb3JrOWZtVDJNaTVVV1VyOHJza1VWckxIaTBpeFpwcUNqeFRycEZSTEVnYkF4dE01SnJodmdJUVN3cl9SVzhkVml1X3Mw?oc=5"
-          ],
-          "rank": 15,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "acute myeloid leukaemia",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FMTdnbDhmS19TdUNXMThNWmMwb3JrOWZtVDJNaTVVV1VyOHJza1VWckxIaTBpeFpwcUNqeFRycEZSTEVnYkF4dE01SnJodmdJUVN3cl9SVzhkVml1X3Mw?oc=5"
-          ],
-          "rank": 16,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "additional measles",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNHp3dGE0OE9icUlJSUlJaXRoVkdLQ1FQdUNteGhHVFFrMG0zSG1fLVh5Ui1EWmZHN0txX0NlSmNuTzl6WDFlWnZScGJJQ0FmdUEzLVhaRndjOUZlYkVZa0FtS0VpUGktbEdkeWJJVl85LWVxcllrZkJ5c1NnYWtoUHAtN3JQSVN6Z2VJeWxuWTdiSmNlbUpHM0RyN2E0ZlBlOW5Pa21oc1VUWDNteUFqLUt2c05UTE8yM0Utdm5temZMaG51dTl3?oc=5"
-          ],
-          "rank": 17,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "additional measles infections",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNHp3dGE0OE9icUlJSUlJaXRoVkdLQ1FQdUNteGhHVFFrMG0zSG1fLVh5Ui1EWmZHN0txX0NlSmNuTzl6WDFlWnZScGJJQ0FmdUEzLVhaRndjOUZlYkVZa0FtS0VpUGktbEdkeWJJVl85LWVxcllrZkJ5c1NnYWtoUHAtN3JQSVN6Z2VJeWxuWTdiSmNlbUpHM0RyN2E0ZlBlOW5Pa21oc1VUWDNteUFqLUt2c05UTE8yM0Utdm5temZMaG51dTl3?oc=5"
-          ],
-          "rank": 18,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "adhd nyc",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMihgFBVV95cUxQXzVaM3l4ZmpjSWJSZmRkYlM1MGdxMnM3dTB1VUM0MmQwTVUtZ1NFNDNJdGJQWGpaeWtnT3Uwb29ZY1pMOXJPN3pQa1Y0ZVpoWjllYUhfUVZpUjQ3ci1UQzRIeXdNYUdMWmJ0VU1nWXFNSGpyaUxiZUU0ektfM2NibWtLRXpodw?oc=5"
-          ],
-          "rank": 19,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "adhd nyc deadly",
-          "score": 156.25,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "google_news_health"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMihgFBVV95cUxQXzVaM3l4ZmpjSWJSZmRkYlM1MGdxMnM3dTB1VUM0MmQwTVUtZ1NFNDNJdGJQWGpaeWtnT3Uwb29ZY1pMOXJPN3pQa1Y0ZVpoWjllYUhfUVZpUjQ3ci1UQzRIeXdNYUdMWmJ0VU1nWXFNSGpyaUxiZUU0ektfM2NibWtLRXpodw?oc=5"
-          ],
-          "rank": 20,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2256,348 +1809,7 @@
       "week_end": "2026-11-12",
       "sources_compared": 0,
       "window": "TODAY_ONLY",
-      "top20": [
-        {
-          "term": "announces approval",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 1,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "announces approval two",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "applications mutual",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "applications mutual federal",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "approval two",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "approval two applications",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "bancorp inc",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "bancorp mhc",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 8,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "board announces",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "board announces approval",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "federal bancorp",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "federal bancorp mhc",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "federal reserve",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "federal reserve board",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 14,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "mfb bancorp",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 15,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "mfb bancorp inc",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 16,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "mutual federal",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 17,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "mutual federal bancorp",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 18,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "reserve board",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 19,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "reserve board announces",
-          "score": 10000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "fed_press"
-          ],
-          "evidence_urls": [
-            "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
-          ],
-          "rank": 20,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        }
-      ]
+      "top20": []
     },
     "geopolitics": {
       "name": "Géopolitique",
@@ -2611,17 +1823,17 @@
       "window": "TODAY_ONLY",
       "top20": [
         {
-          "term": "implementing regulation",
-          "score": 2653.061,
-          "mentions": 13,
+          "term": "decision november",
+          "score": 620.155,
+          "mentions": 8,
           "source_count": 1,
           "source_ids": [
             "eurlex_law"
           ],
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602528",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602492",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
           ],
           "rank": 1,
           "previous_rank": null,
@@ -2630,122 +1842,8 @@
           "weeks_on_chart": null
         },
         {
-          "term": "implementing regulation november",
-          "score": 2448.98,
-          "mentions": 12,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
-          ],
-          "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "regulation november",
-          "score": 2448.98,
-          "mentions": 12,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "commission implementing decision",
-          "score": 1632.653,
-          "mentions": 8,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602528",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602492",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "decision november",
-          "score": 1632.653,
-          "mentions": 8,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602528",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602492",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "implementing decision",
-          "score": 1632.653,
-          "mentions": 8,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602528",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602492",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "implementing decision november",
-          "score": 1632.653,
-          "mentions": 8,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602528",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602492",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
           "term": "november amending",
-          "score": 1428.571,
+          "score": 542.636,
           "mentions": 7,
           "source_count": 1,
           "source_ids": [
@@ -2756,7 +1854,7 @@
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2508",
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2507"
           ],
-          "rank": 8,
+          "rank": 2,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2764,7 +1862,7 @@
         },
         {
           "term": "pursuant regulation",
-          "score": 1428.571,
+          "score": 542.636,
           "mentions": 7,
           "source_count": 1,
           "source_ids": [
@@ -2772,105 +1870,10 @@
           ],
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "geographical indication",
-          "score": 1224.49,
-          "mentions": 6,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "berichtigung der",
-          "score": 1020.408,
-          "mentions": 5,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1738R(03)"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "council regards",
-          "score": 1020.408,
-          "mentions": 5,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601436",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601972",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2487"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "intended repatriation",
-          "score": 1000.0,
-          "mentions": 10,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "notice intended repatriation",
-          "score": 1000.0,
-          "mentions": 10,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22999/notice-of-intended-repatriation-gregg-museum-of-art-and-design-raleigh-nc",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22994/notice-of-intended-repatriation-william-s-webb-museum-of-anthropology-university-of-kentucky",
-            "https://www.federalregister.gov/documents/2026/11/12/2026-22993/notice-of-intended-repatriation-eiteljorg-museum-of-american-indian-and-western-art-indianapolis-in"
-          ],
-          "rank": 14,
+          "rank": 3,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2878,7 +1881,7 @@
         },
         {
           "term": "information collection",
-          "score": 900.0,
+          "score": 500.0,
           "mentions": 9,
           "source_count": 1,
           "source_ids": [
@@ -2889,26 +1892,102 @@
             "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
             "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
           ],
-          "rank": 15,
+          "rank": 4,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
           "weeks_on_chart": null
         },
         {
-          "term": "amending implementing",
-          "score": 816.327,
-          "mentions": 4,
+          "term": "geographical indication",
+          "score": 465.116,
+          "mentions": 6,
           "source_count": 1,
           "source_ids": [
             "eurlex_law"
           ],
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602411",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2480",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2479"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ],
-          "rank": 16,
+          "rank": 5,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "berichtigung der",
+          "score": 387.597,
+          "mentions": 5,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1738R(03)"
+          ],
+          "rank": 6,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "council regards",
+          "score": 387.597,
+          "mentions": 5,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601436",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601972",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2487"
+          ],
+          "rank": 7,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "collection activities",
+          "score": 333.333,
+          "mentions": 6,
+          "source_count": 1,
+          "source_ids": [
+            "federal_register"
+          ],
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ],
+          "rank": 8,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "information collection activities",
+          "score": 333.333,
+          "mentions": 6,
+          "source_count": 1,
+          "source_ids": [
+            "federal_register"
+          ],
+          "evidence_urls": [
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23067/hazardous-materials-information-collection-activities",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23059/agency-information-collection-activities-proposed-ecollection-ecomments-requested-new-collection",
+            "https://www.federalregister.gov/documents/2026/11/12/2026-23054/agency-information-collection-activities-notice-and-request-for-comment-national-impaired-driving"
+          ],
+          "rank": 9,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2916,7 +1995,7 @@
         },
         {
           "term": "article regulation",
-          "score": 816.327,
+          "score": 310.078,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -2927,7 +2006,7 @@
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2489",
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2522"
           ],
-          "rank": 17,
+          "rank": 10,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2935,7 +2014,7 @@
         },
         {
           "term": "decision november amending",
-          "score": 816.327,
+          "score": 310.078,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -2946,7 +2025,7 @@
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2480",
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2479"
           ],
-          "rank": 18,
+          "rank": 11,
           "previous_rank": null,
           "movement": null,
           "movement_status": "UNAVAILABLE",
@@ -2954,7 +2033,7 @@
         },
         {
           "term": "der kommission",
-          "score": 816.327,
+          "score": 310.078,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
@@ -2964,6 +2043,139 @@
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2097R(01)"
+          ],
+          "rank": 12,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "der kommission vom",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2097R(01)"
+          ],
+          "rank": 13,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "geographical indications",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
+          ],
+          "rank": 14,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "geographical indications pursuant",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
+          ],
+          "rank": 15,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "indications pursuant",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
+          ],
+          "rank": 16,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "indications pursuant regulation",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
+          ],
+          "rank": 17,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "kommission vom",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2097R(01)"
+          ],
+          "rank": 18,
+          "previous_rank": null,
+          "movement": null,
+          "movement_status": "UNAVAILABLE",
+          "weeks_on_chart": null
+        },
+        {
+          "term": "register geographical",
+          "score": 310.078,
+          "mentions": 4,
+          "source_count": 1,
+          "source_ids": [
+            "eurlex_law"
+          ],
+          "evidence_urls": [
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ],
           "rank": 19,
           "previous_rank": null,
@@ -2972,17 +2184,17 @@
           "weeks_on_chart": null
         },
         {
-          "term": "der kommission vom",
-          "score": 816.327,
+          "term": "register geographical indications",
+          "score": 310.078,
           "mentions": 4,
           "source_count": 1,
           "source_ids": [
             "eurlex_law"
           ],
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690966",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0296R(01)",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2097R(01)"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ],
           "rank": 20,
           "previous_rank": null,
@@ -3002,127 +2214,7 @@
       "week_end": "2026-11-12",
       "sources_compared": 0,
       "window": "TODAY_ONLY",
-      "top20": [
-        {
-          "term": "climate prediction",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 1,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "faster trustworthy",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "faster trustworthy models",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "lead faster",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "lead faster trustworthy",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "somebody got",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/somebodys-got-to-do-it-why-not-me-andrew-voelsing-1110"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "trustworthy models",
-          "score": 5000.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "mit_environment"
-          ],
-          "evidence_urls": [
-            "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        }
-      ]
+      "top20": []
     },
     "energy": {
       "name": "Énergie & matières premières",
@@ -3134,229 +2226,7 @@
       "week_end": "2026-11-12",
       "sources_compared": 0,
       "window": "TODAY_ONLY",
-      "top20": [
-        {
-          "term": "copper tubes",
-          "score": 204.082,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497"
-          ],
-          "rank": 1,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "copper tubes originating",
-          "score": 204.082,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497"
-          ],
-          "rank": 2,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "duty imports copper",
-          "score": 204.082,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497"
-          ],
-          "rank": 3,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "imports copper",
-          "score": 204.082,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497"
-          ],
-          "rank": 4,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "imports copper tubes",
-          "score": 204.082,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "eurlex_law"
-          ],
-          "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2497"
-          ],
-          "rank": 5,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "battery revamps",
-          "score": 111.111,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcjc3cUNQT3lqZTYyb2ZCWG5hVjNfelQ1RVZnbFRSZDF5QTVuZFlQVi14Y29uZTJ2Z2VrM0dSWXlDQmYyNDcwZkFTdVBaSzlxR0ZiX1V4QnlzU2JmTmdGbnljT3JneU1Lb1pXcFF4WXV3Q1QxeENlRUJBb3pqOGJUV1BSbTRMTkFrZC1ISlNEd3Y4LVpucnZHR3hZRUlwSFV6aGhhMzZNSlV2a1JFbnhLWkNlTFZ0ZTUtSGtMNFFB?oc=5"
-          ],
-          "rank": 6,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "replaceable battery",
-          "score": 111.111,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcjc3cUNQT3lqZTYyb2ZCWG5hVjNfelQ1RVZnbFRSZDF5QTVuZFlQVi14Y29uZTJ2Z2VrM0dSWXlDQmYyNDcwZkFTdVBaSzlxR0ZiX1V4QnlzU2JmTmdGbnljT3JneU1Lb1pXcFF4WXV3Q1QxeENlRUJBb3pqOGJUV1BSbTRMTkFrZC1ISlNEd3Y4LVpucnZHR3hZRUlwSFV6aGhhMzZNSlV2a1JFbnhLWkNlTFZ0ZTUtSGtMNFFB?oc=5"
-          ],
-          "rank": 7,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "replaceable battery revamps",
-          "score": 111.111,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "geek_gaming"
-          ],
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcjc3cUNQT3lqZTYyb2ZCWG5hVjNfelQ1RVZnbFRSZDF5QTVuZFlQVi14Y29uZTJ2Z2VrM0dSWXlDQmYyNDcwZkFTdVBaSzlxR0ZiX1V4QnlzU2JmTmdGbnljT3JneU1Lb1pXcFF4WXV3Q1QxeENlRUJBb3pqOGJUV1BSbTRMTkFrZC1ISlNEd3Y4LVpucnZHR3hZRUlwSFV6aGhhMzZNSlV2a1JFbnhLWkNlTFZ0ZTUtSGtMNFFB?oc=5"
-          ],
-          "rank": 8,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "advanced chemistry battery",
-          "score": 100.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23024/safety-advisory-2026-02-advanced-chemistry-battery-hazards-in-passenger-railcar-operations"
-          ],
-          "rank": 9,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "battery hazards",
-          "score": 100.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23024/safety-advisory-2026-02-advanced-chemistry-battery-hazards-in-passenger-railcar-operations"
-          ],
-          "rank": 10,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "battery hazards passenger",
-          "score": 100.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23024/safety-advisory-2026-02-advanced-chemistry-battery-hazards-in-passenger-railcar-operations"
-          ],
-          "rank": 11,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "chemistry battery",
-          "score": 100.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23024/safety-advisory-2026-02-advanced-chemistry-battery-hazards-in-passenger-railcar-operations"
-          ],
-          "rank": 12,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        },
-        {
-          "term": "chemistry battery hazards",
-          "score": 100.0,
-          "mentions": 1,
-          "source_count": 1,
-          "source_ids": [
-            "federal_register"
-          ],
-          "evidence_urls": [
-            "https://www.federalregister.gov/documents/2026/11/12/2026-23024/safety-advisory-2026-02-advanced-chemistry-battery-hazards-in-passenger-railcar-operations"
-          ],
-          "rank": 13,
-          "previous_rank": null,
-          "movement": null,
-          "movement_status": "UNAVAILABLE",
-          "weeks_on_chart": null
-        }
-      ]
+      "top20": []
     },
     "society": {
       "name": "Société & démographie",
@@ -3385,30 +2255,30 @@
   },
   "billboard": {
     "culture": {
-      "documents": 497,
+      "documents": 997,
       "historical_days": 1,
       "state": "EXPLORATORY",
       "top20": [
         {
-          "term": "american series",
-          "score": 9.367,
+          "term": "vendée globe",
+          "score": 8.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 5.018,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": 30.09,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
-            "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
-            "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe",
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_2024-2025",
+            "https://fr.wikipedia.org/wiki/Vend%C3%A9e_Globe_1996-1997"
           ]
         },
         {
           "term": "american series season",
-          "score": 8.969,
+          "score": 8.297,
           "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 40.241,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3417,11 +2287,50 @@
           ]
         },
         {
-          "term": "kevin connell",
-          "score": 8.969,
+          "term": "dai henwood",
+          "score": 8.297,
           "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 40.241,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Dai_Henwood",
+            "https://fr.wikipedia.org/wiki/Dai_Henwood"
+          ]
+        },
+        {
+          "term": "jude bellingham",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Jude_Bellingham",
+            "https://fr.wikipedia.org/wiki/Jude_Bellingham"
+          ]
+        },
+        {
+          "term": "kemal atatürk",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
+          ]
+        },
+        {
+          "term": "kevin connell",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3431,10 +2340,10 @@
         },
         {
           "term": "minnesota vikings",
-          "score": 8.969,
+          "score": 8.297,
           "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 40.241,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3443,11 +2352,63 @@
           ]
         },
         {
-          "term": "spying scandal",
-          "score": 8.969,
+          "term": "mustafa kemal",
+          "score": 8.297,
           "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 40.241,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
+          ]
+        },
+        {
+          "term": "mustafa kemal atatürk",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+            "https://fr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
+          ]
+        },
+        {
+          "term": "phil collins",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Phil_Collins",
+            "https://fr.wikipedia.org/wiki/Phil_Collins"
+          ]
+        },
+        {
+          "term": "rupert grint",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/Rupert_Grint",
+            "https://fr.wikipedia.org/wiki/Rupert_Grint"
+          ]
+        },
+        {
+          "term": "spying scandal",
+          "score": 8.297,
+          "mentions": 2,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3457,10 +2418,10 @@
         },
         {
           "term": "super bowl",
-          "score": 8.969,
+          "score": 8.297,
           "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 40.241,
+          "rate_per_10k": 20.06,
+          "growth_vs_28d": 20.06,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3469,51 +2430,11 @@
           ]
         },
         {
-          "term": "united states",
-          "score": 7.074,
-          "mentions": 20,
-          "rate_per_10k": 402.41,
-          "growth_vs_28d": 0.824,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
-          ]
-        },
-        {
-          "term": "david walliams",
-          "score": 6.982,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 3.012,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/David_Walliams",
-            "https://en.wikipedia.org/wiki/David_Walliams_filmography"
-          ]
-        },
-        {
-          "term": "edmund fitzgerald",
-          "score": 6.982,
-          "mentions": 2,
-          "rate_per_10k": 40.24,
-          "growth_vs_28d": 3.012,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/SS_Edmund_Fitzgerald",
-            "https://en.wikipedia.org/wiki/The_Wreck_of_the_Edmund_Fitzgerald"
-          ]
-        },
-        {
           "term": "grand theft",
-          "score": 6.376,
-          "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 2.009,
+          "score": 6.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": 2.0,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3524,10 +2445,10 @@
         },
         {
           "term": "grand theft auto",
-          "score": 6.376,
-          "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 2.009,
+          "score": 6.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": 2.0,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -3537,129 +2458,73 @@
           ]
         },
         {
-          "term": "series season",
-          "score": 6.376,
-          "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 2.009,
+          "term": "theft auto",
+          "score": 6.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": 2.0,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Bigg_Boss_%28Hindi_TV_series%29_season_20",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
+          ]
+        },
+        {
+          "term": "american series",
+          "score": 5.687,
+          "mentions": 3,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": 2.0,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/The_Diplomat_%28American_TV_series%29",
             "https://en.wikipedia.org/wiki/The_Voice_%28American_TV_series%29_season_30",
             "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_%28American_TV_series%29_season_35"
           ]
         },
         {
-          "term": "theft auto",
-          "score": 6.376,
+          "term": "david walliams",
+          "score": 5.687,
           "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 2.009,
+          "rate_per_10k": 30.09,
+          "growth_vs_28d": 2.0,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
-            "https://en.wikipedia.org/wiki/Grand_Theft_Auto"
+            "https://en.wikipedia.org/wiki/David_Walliams",
+            "https://en.wikipedia.org/wiki/David_Walliams_filmography",
+            "https://fr.wikipedia.org/wiki/David_Walliams"
           ]
         },
         {
-          "term": "states senate",
-          "score": 6.058,
+          "term": "united states",
+          "score": 5.465,
+          "mentions": 20,
+          "rate_per_10k": 200.6,
+          "growth_vs_28d": -0.091,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://en.wikipedia.org/wiki/2026_United_States_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "présidentielle française",
+          "score": 4.364,
           "mentions": 6,
-          "rate_per_10k": 120.72,
-          "growth_vs_28d": 1.006,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": 0.0,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
-            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
-          ]
-        },
-        {
-          "term": "united states senate",
-          "score": 6.058,
-          "mentions": 6,
-          "rate_per_10k": 120.72,
-          "growth_vs_28d": 1.006,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
-            "https://en.wikipedia.org/wiki/2028_United_States_Senate_elections"
-          ]
-        },
-        {
-          "term": "senate election",
-          "score": 5.373,
-          "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 1.006,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
-          ]
-        },
-        {
-          "term": "states senate election",
-          "score": 5.373,
-          "mentions": 3,
-          "rate_per_10k": 60.36,
-          "growth_vs_28d": 1.006,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
-            "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
-          ]
-        },
-        {
-          "term": "presidential election",
-          "score": 5.255,
-          "mentions": 4,
-          "rate_per_10k": 80.48,
-          "growth_vs_28d": 0.605,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
-          ]
-        },
-        {
-          "term": "states presidential",
-          "score": 5.255,
-          "mentions": 4,
-          "rate_per_10k": 80.48,
-          "growth_vs_28d": 0.605,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
-          ]
-        },
-        {
-          "term": "states presidential election",
-          "score": 5.255,
-          "mentions": 4,
-          "rate_per_10k": 80.48,
-          "growth_vs_28d": 0.605,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://en.wikipedia.org/wiki/2024_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2028_United_States_presidential_election",
-            "https://en.wikipedia.org/wiki/2020_United_States_presidential_election"
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
           ]
         }
       ]
@@ -3703,19 +2568,6 @@
       "state": "EXPLORATORY",
       "top20": [
         {
-          "term": "edouard philippe",
-          "score": 10.88,
-          "mentions": 2,
-          "rate_per_10k": 277.78,
-          "growth_vs_28d": 277.778,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMinAJBVV95cUxPMWJGWXBRR2FISzZTX2FPdVNzaHIwS2dWY2lEdG9wM0tac0dGaFV1TDAtRENITTQzbVZfOFpKN1c0cjBqMnhiMTZKbEE3SWxZMG1CZzdacDhPWG9rMHUyRk5SZ0RjdVRRSzExSnBUNldUMDQycUhXdm5zanlBcXlLRVNKU25mYzhSRFF0QmQ2WFB0RHZnRkc1RFJIUWxMNzVzeXFwSnRTYS04TmRNTjdLc0wyMjdaOGNmMnVyMWVnTWNKY2N0YlUtNG5TcW5UR3NlcHA5OXZXelRRSDFHTVZXM094QTJQTGZrcDIxd19tN21XUEpGa3hWbW1iVUdnSDNHU0NfbWI1N0FLZnNYb0VHZHo3eEtjcTRWc096Ug?oc=5",
-            "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNVnl3SjFCTmw2ejJzSjk4NVZ2NHEwZGVzNGJ1U1Fqa0JBdFlqRDMyUExURzNETlBYaGxzMWZ3SUVjci1aUXA1UDltSjFxYUYtbE1tZlBDNFdCOWlDNlltYzNDdG1YTDVFeVhpdzBmajJ1a3BiNWFVd3dhcVp0RWw0c2VRTDVkQXhvRWd6NmxuZ2FhVTFmbVlzbmwtOWkta29oRmw3VlR4Ri1hMmhhRXNoTkl4QW5OUTg3RjZvQkZWYlJIRTIxN3ZucXJhSXFTa0NhVnhVSU9lOEI1TVpjU1RDcmVBdldLZTJiU3JGZGdLb2F5WjRRLVZ3bS1n?oc=5"
-          ]
-        },
-        {
           "term": "son propre",
           "score": 10.88,
           "mentions": 2,
@@ -3729,6 +2581,19 @@
           ]
         },
         {
+          "term": "élus démocrates",
+          "score": 10.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": 277.778,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMijAJBVV95cUxOMzhlMlVQa2liUEhmOXd2WTd4OFVsMWZyMEVuMDE3SDRTY1dGckxNYlRaMEZsWXlLendaaDZOcDRxNTZ0MWdFZy15d0ZYSFljU0c0dVJ1Y3VHaVlmNVM2OURhOUZydnFfMWtPVVFhLWdEdVd6V3dXaDlkaE1HdWdaNFViREdCd0dVZW9mdFJVS3k4bjZHWGVJZHNIRnM0TFRuaXluWTFzX0NwWnR1NGV0VTk2aVBKdlppNzQ1dEQ1WWFZbjBRODA4MlQ4X1UwcktMY2xjaV9zRWF0aWRuamNSOGxwbnZhMnMya0dLcU5mQkktS3pKU3JZMlA3WTYzM1h3VVlMa0FGUWZVYWdj?oc=5",
+            "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTzZiXzQzNkZSRmVHT1gySndMVmxRU2xLeXN0emR3aVhGM3I2TXZrREY2RndEWE5WcDVmdGQwT1NrY01IdDAwVlV0WWJDWUNaVV84QjJwT25iODU4b1VQbUxYUXhmbWVNd3dlaV9NX051OHVlMUlKUW5sRE5PaEc0U2dwckM2NlFCc3hILWw5SXJrMDZIMEZkR3B5T3Zhc1BQdEVTVzRiSERlOXdWcXZQWkIxT1RwN1JKcWFMUVVYMmdNbWhZZGhkYk80MFljTHNfaV92ZHV2dW9JcTFXYWd6RkpoUFRpTF9uNUZzY2t5aXN5WGdBdnd3?oc=5"
+          ]
+        },
+        {
           "term": "jensen huang",
           "score": 8.285,
           "mentions": 3,
@@ -3738,7 +2603,7 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcTlzd01BSWFhRWROazZzbHhQNmpWLXRjY3Ayd291bVRRNUFfbnhlRnpJekdIZnhMWDVSeng2Q19aOXQydWltRnlxMEpfLXctZVJRMFM4eFBUREhxQW10YkdRLXBqTmszWWdEYUx0U2k0OWtwUEg4NVV6Vy0?oc=5",
-            "https://news.google.com/rss/articles/CBMizgFBVV95cUxPMVNxeVpDN2FpOGZPSlBCeVZNa1R6UTBwWkc1RmVDVGhIaUxFTkZ2UkVOcS1HbThuUHNndTJpYjdDbzhGYThNNWFvY1hEcUY1aTFFWDhmdTJCZGlJTGZVQmxtU2xVSlJEektGMk1XWHpCbmNYZS00MHB1Y2pUbU5taGc2YnhXbExSR3d5MjVlcHZDdnZXdGNiTktYcVlWbks1ZzZLVDV1aXRaNzdVTGhzUTJCSElvalBMTk81WjlqeDg3RkF4aU1ESW9VdmoxQQ?oc=5",
+            "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV0ppMjd4Z0pxWkJVRnlaSXNZWUd6Nmd3TC0tWEVLYmp1Z3hmWVFhY2VnRS1Da0U5eXJTdnhtRHNkdTR4bFlDc21UTzctUTNodll1NlJITU81WG1jSVNmV1FVVllJZGlJcWVaSl9LS1A4N3FZeGZ6THVPbTZCOWRaSUFyMzJoaTdZNEh0Vmt3eTd0Zw?oc=5",
             "https://news.google.com/rss/articles/CBMiggJBVV95cUxNYThDZkFoaUlrZ0xYandrRE03MjFqV011aFg5dml5VUZPdlJuRjgtN0dSSF9Jb2NURnNCTnBsc0NtZ1VGRUQzbXhZN2VOdnJMZmJKaGoxbHA4bTVIeFAySkJNQ1JzRTRVb21rWUIxb2tQZXpZQlN1akFwWUFmZ3o1YzJMUWhKbmllOXM4bHdENDZITDBWUmtfVEtBY1VncFVFWU1mSFEwdDdXV0NoYUNrLVo5ZGxwMTVEZHlKcy0tcUpmWXJmR1RzOWJsT1Y5bzRHRjlDSG9GeW5wUld3REUxc1NFWjlBZFJxQ19qbHhEWHU3SWhKOGZ3N3ZNNU9tN3hiQUHSAYcCQVVfeXFMUGZMNWNKbzNwV2ROeWVpQWJ5T2xSZzZFd1pkVFFXUmt4U0F2SkI4ZFZlb0Z2ejBfbWx6cXpBRkUtb011VWF2eTVDaUV0bUVLZzZ3WWRBUTdNc1JDTXpqVGxqcFlhNUpwV0w2NWE1Z3l1ZzhXZGJBZmp6RmpzdzQ1OGswb194alAyMWRHQURVYW95UlpseExSeFBLVVdOSi1PTGJDbnFIeGtDYkN0dWVZMW9TdTlOU3MyNXpwWFFCdlhkQ3Z5VXp4R3ZybFRpejRnTTRfdnJxUmpLVGF0eS13eFlZY3BjUDcwdTNFYnk2V0ZpcUFqd3lKeUt0bGNYNGdjc21FcmdQVG8?oc=5"
           ]
         }
@@ -3783,8 +2648,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3797,8 +2662,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3811,8 +2676,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3825,8 +2690,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3839,8 +2704,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3853,8 +2718,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3867,8 +2732,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3881,8 +2746,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3895,8 +2760,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3908,8 +2773,8 @@
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3922,8 +2787,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3936,8 +2801,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -3992,8 +2857,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -4006,8 +2871,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -4020,8 +2885,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -4034,8 +2899,8 @@
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602513",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515",
-            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516"
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602516",
+            "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202602515"
           ]
         },
         {
@@ -4136,6 +3001,20 @@
           ]
         },
         {
+          "term": "study suggests",
+          "score": 6.855,
+          "mentions": 3,
+          "rate_per_10k": 468.75,
+          "growth_vs_28d": 0.453,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczd5OEo4czF5TERBcVRidWNRU3Fod0Z1cFFubzY4LXdzQ2h3MHh6X3FVNjVUYXlvdWlSQXFLM2xoMGlYanVSU2gwS3VNX0ZteXhOQnZyd0g3NDY5bXZqY2ZrQ0dNZE16dGhmMUtVVkZLbURKd0VnMU1aVUF6bmQyTkZPNnNuQkhDbkljaXkwREVaWVdMSmlsa282c25nNUdZYld1WDM4Z9IBrAFBVV95cUxQdUhfTEFjWWRfYnZZcENYUTM1NHVVellhZ2FSUkJYN2Fxa09GdTRTNnZGRWFtWUk2Wl9PQmllc3hiRnE5TzNwQUhvQl9DbU0zWjhOeklfdmRfcGs3RmNwMGJPdDRhb25Ta0NGNF9ybjJVdnVRLUNqMFdlSDE3dDJnWTlyTVhxR1JhSWg4YlRlXzY1bHVfNWc3amNJRlQ2bVNNc0JGdjN1RkN5RU1E?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
+          ]
+        },
+        {
           "term": "study finds",
           "score": 6.129,
           "mentions": 3,
@@ -4173,19 +3052,6 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQVJTbnFpQlpYczUtQV90VWhEa0xNcFkxcnh5eEMxVVZDbFpDR3hKY0hJaE1GWWd4NkhkVWRfZTNkOER4V1dIeDdwMmc3X19CQmFrdEJwMjdSSXk1dUpReFdaLXF5Yi1sSm1LdkRIYWd5UDAybTVNT01BdzlkcndpekVyRzFCa3pIU3c?oc=5",
             "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRk1ZVFFDUkN1MnVmUjU3RHBYdHFCOHZ2c1NjVlBxNjJPYlQ3VC1XWVA3a3Q4Q2lSY2R2ZlRxVjFaNjlTWFJVdnp4QTRFYTlzUXB3Vm5PVlBhQTlkc3hVTXNTT2xWRmx4WVNrUEh1Yw?oc=5"
-          ]
-        },
-        {
-          "term": "study suggests",
-          "score": 5.967,
-          "mentions": 2,
-          "rate_per_10k": 312.5,
-          "growth_vs_28d": -0.031,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
           ]
         }
       ]
@@ -4366,7 +3232,7 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
             "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
           ]
         },
         {
@@ -4408,7 +3274,7 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
             "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
           ]
         },
         {
@@ -4422,7 +3288,7 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeF9QYmRLYi1rUDJRUkswaTBFekdmem81TWRwNEktZnBkRzFFMndDdUwyMkJQMUxMQ2l5ZkdUY1RvQTM1UVp5NEhwbVUyZVdMd2xDNW5YcF80LWZVMUllUlBFdXM3em5QZVJ0VXlyTEVkemNVRzBPUXZROXoxbldxbGNLWTd1M2kyNzVNc2NWUnlBRjdFYk9EYlp1ZDJ6cGhUSU1seVlPQk40LVgxeEdYN1Vva1NwMm8tLUZqdA?oc=5",
             "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHVrTWkzWVNFU3ZWVG50YllmNkNibHAwaFVLTDFzS0RER08wejM3YWdWajlMMVB0RkRMcEI3ajFkUHhJUUQxLWtITGd5NmVHNWZJczg4TTBfRkw1Tjh1c09ic29PSE51eUF4WmJfc3lzNk5jeHFLRzhYZ2x1UklMaWJpNzltQ1lRQzRSd2wwT1ZpSnZtZUg2V19iSy1kdjU4Wm5nZ3d4T3hZYXAxcFlv?oc=5",
-            "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQTBuWmxRTWwydXpGYmV1aWpfSUVfeEZHRjYwV1U5NEJDLVppN0NtcDBZMmc1cmVkLUFMRWl4bmFhVUJPSEZFa2pHeDZ2UHpwNHcyLTg4RjhqajBzNWt4dXQ3bmF2NFdhZWx5RVpTT1ljemxtRWo5LWdYbEY1Z0tSQkpqSDlyRUNmRGdHeXdmZGNHalYzMjdGSjlramhGOVZwaXJtV2tOM1FiT0Y0QTlpWU5vZTBvcWFQalFXNjF3WQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQWtTQXNBVklLdmFYWks3US0wbFc2Y2ExTFBmNDBVVFNqUmUzMFFQaUpHRWc5anpRSlhZbVNCWjRCTFIyRXFOemRaWDhfcExUSnd4N0JSbVllZUJmRmVzNDlKcjlFbjRib2RUNGlBdng5VzJqTmJZUkVVSXZHb3BjRFhHdHZiYThZclVQY0pvc2U2eHRkYUtNMVVFbzhhbk9jRmJQRkl6d2lGdHh5QnkyVWpaYXRMQjRQY2stRlFvVV9fdHFlUUFCYTlZWQ?oc=5"
           ]
         },
         {
