@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "collected_at_utc": "2026-11-12T01:11:57.795661+00:00",
+  "collected_at_utc": "2026-11-12T01:21:37.938640+00:00",
   "schema_version": 2,
   "status": "OK",
   "source_health": [
@@ -127,7 +127,7 @@
     {
       "source": "google_news_health",
       "status": "OK",
-      "documents": 63,
+      "documents": 64,
       "access": "OPEN",
       "poll_cadence": "DAILY",
       "publication_cadence": "EVENT_DRIVEN",
@@ -610,7 +610,16 @@
       "required_days": 21,
       "documents_today": 38,
       "top5": [],
-      "preview_unranked": []
+      "preview_unranked": [
+        {
+          "term": "live updates",
+          "mentions_today": 2,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT2dqbjNScGZtYXF0TFpWM3JHRzcxRU56NmczZ2F4bjJfYjlVRUx5UUFLcy1kZVFmRkVoUGVyQ3pqckd4eG9JUElBMUtjMHhnRzZkUWRCeVc4TkRjd3pnU29YWUw2TzFiT3gyZmhLd1dhcG5oTUFXamthOHczS0hqY3dYUG4tdTRsTFZkTWk4ejhKSHByNGZBZWgwZDhZcU0xU3RCOURJQVE2UFU5ajhtYThZdDZPUUVoTS1uRk5FWjA5anU2ek9oS0NEQVNRYjhTSUlNeGFsd1pEbmpNZkE?oc=5",
+            "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdnhyVlZiYkxnRTlZMm9YMWh5TGhpSkpKaDQ5WW0xYkVBZ0dxTTlPYk0xUG1jSzF4RkJYTXctRFNpeHVRb2NUNFo2UkduaHo5R0NkcWRGR1hoZmU3ZzZvQlBmZ2FRcE84XzhhbE5PYzB1Y213bC0wdExHaWRhZnlLVDliWkhqMlk?oc=5"
+          ]
+        }
+      ]
     },
     "google_news_fr": {
       "source_id": "google_news_fr",
@@ -655,16 +664,25 @@
       "state": "INSUFFICIENT_HISTORY",
       "observed_days": 2,
       "required_days": 21,
-      "documents_today": 63,
+      "documents_today": 64,
       "top5": [],
       "preview_unranked": [
         {
           "term": "study finds",
-          "mentions_today": 4,
+          "mentions_today": 3,
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
-            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
-            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOUZmMVUyenU0NUFybmNIckM4bW9iZWpiWkE4RzVNQ2xoVmtXZW9jVkxncThpakVzR2h6cjRzVzVWNVYwTWtYYlBvSl9YbGo2U1dGOEVySmhyTXVSSGU3cVVCQkdvOGp2SFhwUXl2Vmh3UFdmVEJYY1ZaWmFnVVp6cHB0UVZvMjlLNW81dkZPbGJrVi1EMnhNN0xiam1RM25yV1NPWg?oc=5"
+          ]
+        },
+        {
+          "term": "study suggests",
+          "mentions_today": 3,
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczd5OEo4czF5TERBcVRidWNRU3Fod0Z1cFFubzY4LXdzQ2h3MHh6X3FVNjVUYXlvdWlSQXFLM2xoMGlYanVSU2gwS3VNX0ZteXhOQnZyd0g3NDY5bXZqY2ZrQ0dNZE16dGhmMUtVVkZLbURKd0VnMU1aVUF6bmQyTkZPNnNuQkhDbkljaXkwREVaWVdMSmlsa282c25nNUdZYld1WDM4Z9IBrAFBVV95cUxQdUhfTEFjWWRfYnZZcENYUTM1NHVVellhZ2FSUkJYN2Fxa09GdTRTNnZGRWFtWUk2Wl9PQmllc3hiRnE5TzNwQUhvQl9DbU0zWjhOeklfdmRfcGs3RmNwMGJPdDRhb25Ta0NGNF9ybjJVdnVRLUNqMFdlSDE3dDJnWTlyTVhxR1JhSWg4YlRlXzY1bHVfNWc3amNJRlQ2bVNNc0JGdjN1RkN5RU1E?oc=5"
           ]
         },
         {
@@ -680,7 +698,7 @@
           "mentions_today": 2,
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNXg3dFVsMktLeGwteG5OMm9xT0hGcUlseFhEcDg0WV9ZUzlQVE5iLTlNTi1sOWJ0b002WXVKeUdPenVnQmxoSFJVMlVRdUl1dWxMbmFQMVNOOGgtUGYxbHhTaVNfdmpEOTV3Ui1CZkVRRjAzbDk3d1NyS1ZVcmxSd3U2ZURfZkRPZjlnQnVVQ0hzT0hKNXd0cHRubTJBUzR3blp3?oc=5"
           ]
         },
         {
@@ -688,15 +706,7 @@
           "mentions_today": 2,
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMimgFBVV95cUxORXlYTXBmcmxQdjdsX1RRamlHU2hadUMtRlkwSGphWC03NGwybF9GVXFuUlZ4WG1tNml1WS01XzF3NjlFLTJaWjZJTms5aWJZbjJTQWRobmU2UV94TUZyTUF6aFBmekRtcXdXZXUwWmYwcWgxWlBQSVplRTJNWmpjR24zdTF5Z0Zuc1JIUEZwUU91bHFuTERSLWZ30gGfAUFVX3lxTE5Gamo3QXhZRnl2SlBYVmE1UFRIdFY4bnZpRENQR2ZPT2V4MjZJT2VEN2NaVG1SQVEtZFpOTmdvNUFoTU8xaWdzN2RBYlR4VVBiQVFZc0NmLXhEdzVKdHIyLU5Zc1ZLVW9uMGJtR3BTY2Q1NDZ3bTY5dDlXM3djc1E3dEVLakpiV3AxNEhjdmdrZ3J4cnVmbDNMRi0tZktacw?oc=5",
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
-          ]
-        },
-        {
-          "term": "heart attacks",
-          "mentions_today": 2,
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQVJTbnFpQlpYczUtQV90VWhEa0xNcFkxcnh5eEMxVVZDbFpDR3hKY0hJaE1GWWd4NkhkVWRfZTNkOER4V1dIeDdwMmc3X19CQmFrdEJwMjdSSXk1dUpReFdaLXF5Yi1sSm1LdkRIYWd5UDAybTVNT01BdzlkcndpekVyRzFCa3pIU3c?oc=5",
-            "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRk1ZVFFDUkN1MnVmUjU3RHBYdHFCOHZ2c1NjVlBxNjJPYlQ3VC1XWVA3a3Q4Q2lSY2R2ZlRxVjFaNjlTWFJVdnp4QTRFYTlzUXB3Vm5PVlBhQTlkc3hVTXNTT2xWRmx4WVNrUEh1Yw?oc=5"
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNXg3dFVsMktLeGwteG5OMm9xT0hGcUlseFhEcDg0WV9ZUzlQVE5iLTlNTi1sOWJ0b002WXVKeUdPenVnQmxoSFJVMlVRdUl1dWxMbmFQMVNOOGgtUGYxbHhTaVNfdmpEOTV3Ui1CZkVRRjAzbDk3d1NyS1ZVcmxSd3U2ZURfZkRPZjlnQnVVQ0hzT0hKNXd0cHRubTJBUzR3blp3?oc=5"
           ]
         }
       ]
@@ -1057,20 +1067,6 @@
           ]
         },
         {
-          "term": "pete hegseth",
-          "score": 5.937,
-          "mentions": 3,
-          "rate_per_10k": 30.09,
-          "growth_vs_28d": 2.0,
-          "independent_source_families": 2,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://trends.google.com/trending/rss?geo=FR",
-            "https://fr.wikipedia.org/wiki/Pete_Hegseth",
-            "https://en.wikipedia.org/wiki/Pete_Hegseth"
-          ]
-        },
-        {
           "term": "american series",
           "score": 5.687,
           "mentions": 3,
@@ -1110,6 +1106,20 @@
             "https://en.wikipedia.org/wiki/2026_United_States_elections",
             "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
             "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections"
+          ]
+        },
+        {
+          "term": "présidentielle française",
+          "score": 4.364,
+          "mentions": 6,
+          "rate_per_10k": 60.18,
+          "growth_vs_28d": 0.0,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027",
+            "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
           ]
         }
       ]
@@ -1203,6 +1213,19 @@
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQNEFpcUI0SWJ0RnczaW0xbXBJTWIxNWF5X05PMXFCak5IMUdjbktraEkzYmF3QzY5ZDRibEFuajhnbExudzI2M1JBLUQwZjMwcy1tS0dsc2JBWWYyTG16QnZqYXdwcnppNVpXLWc0RmRWb2lHa3VmLUZGX0ZhbHp3cGVQdWJjYjFrVjNiQTZ6ZVh3RTBUMWNQSVNKVjNEUXJwVnkwMzNlcnlnbjhoYmt5U3RDb1NqQ3kyQVpkbVNGTXBjQVZzSlN1ZzFEeTdSamRlekR1NXhueW1lR2VJVnFHM0dxa0tveGRNRklrdERUVGhJR1FvQ05UdjNLSlg3NzVxVS1fcUN5OWJuaTJ4eVhYSE5YV0RqbFI2V3ItUV9QODk1UE1zTDZIM3U1QlRhREV6TFZRUTcwYkYyZXd2STNtUzFRNlhkN080alJCYWZCYS1UbTBkbTE3OTF5dFk?oc=5",
             "https://news.google.com/rss/articles/CBMi-wJBVV95cUxQVkNBMDF0Q3pTbjJjSlZWaDloU2hPdU15dXltUm9seEVvd1kwN1RTVFRYTGV4M0VJLUR3LXJiQ1NSbUkwM2lacHk3QVlySmxHYk1VR0ZXU2VMTDgwc2toUFRlVkUwbFcwVGVMakdQSWVwZEEwZWVGVmF1OVJMRTQ2VVBWOEloeWktSVZWN2NzMW5ZS1JtYlNaY2xKUW1OSE5zU0dEOU1uclAxR3M1YnEyQk9ncUdiZUhlRmR4bmdONTJVanp3N0xaX3RRODVqM2RlNmhJMDhyS2U3bkJQeWhQQU1sZG9IY2tPMTNQRGloZzV4cFo2dDR3WmdMaEI2OFlfYnQ5WllwejFKSWRMMTZROS12YVhISGJwTmtDVFBXbzQtN0dYVl9wTUc4bEJDXzk1VmpENHhPQTltRzNURm9yZ05GMmlfWG9UbTFKZ0s1cm5HMjBYTFJTOHdWc2NoSGg5dVU0dkluQXdaODZhTjFEcEdqV1FMVlgydWNJ?oc=5"
+          ]
+        },
+        {
+          "term": "live updates",
+          "score": 10.88,
+          "mentions": 2,
+          "rate_per_10k": 277.78,
+          "growth_vs_28d": 277.778,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT2dqbjNScGZtYXF0TFpWM3JHRzcxRU56NmczZ2F4bjJfYjlVRUx5UUFLcy1kZVFmRkVoUGVyQ3pqckd4eG9JUElBMUtjMHhnRzZkUWRCeVc4TkRjd3pnU29YWUw2TzFiT3gyZmhLd1dhcG5oTUFXamthOHczS0hqY3dYUG4tdTRsTFZkTWk4ejhKSHByNGZBZWgwZDhZcU0xU3RCOURJQVE2UFU5ajhtYThZdDZPUUVoTS1uRk5FWjA5anU2ek9oS0NEQVNRYjhTSUlNeGFsd1pEbmpNZkE?oc=5",
+            "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdnhyVlZiYkxnRTlZMm9YMWh5TGhpSkpKaDQ5WW0xYkVBZ0dxTTlPYk0xUG1jSzF4RkJYTXctRFNpeHVRb2NUNFo2UkduaHo5R0NkcWRGR1hoZmU3ZzZvQlBmZ2FRcE84XzhhbE5PYzB1Y213bC0wdExHaWRhZnlLVDliWkhqMlk?oc=5"
           ]
         },
         {
@@ -2100,29 +2123,29 @@
       "top20": []
     },
     "health": {
-      "documents": 63,
+      "documents": 64,
       "historical_days": 1,
       "state": "EXPLORATORY",
       "top20": [
         {
           "term": "biological aging",
-          "score": 6.982,
+          "score": 6.935,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": 0.968,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": 0.938,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNXg3dFVsMktLeGwteG5OMm9xT0hGcUlseFhEcDg0WV9ZUzlQVE5iLTlNTi1sOWJ0b002WXVKeUdPenVnQmxoSFJVMlVRdUl1dWxMbmFQMVNOOGgtUGYxbHhTaVNfdmpEOTV3Ui1CZkVRRjAzbDk3d1NyS1ZVcmxSd3U2ZURfZkRPZjlnQnVVQ0hzT0hKNXd0cHRubTJBUzR3blp3?oc=5"
           ]
         },
         {
           "term": "prostate cancer",
-          "score": 6.982,
+          "score": 6.935,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": 0.968,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": 0.938,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -2132,10 +2155,10 @@
         },
         {
           "term": "study links",
-          "score": 6.982,
+          "score": 6.935,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": 0.968,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": 0.938,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -2144,25 +2167,39 @@
           ]
         },
         {
+          "term": "study suggests",
+          "score": 6.855,
+          "mentions": 3,
+          "rate_per_10k": 468.75,
+          "growth_vs_28d": 0.453,
+          "independent_source_families": 1,
+          "quality": "EXPLORATORY",
+          "evidence_urls": [
+            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
+            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5",
+            "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczd5OEo4czF5TERBcVRidWNRU3Fod0Z1cFFubzY4LXdzQ2h3MHh6X3FVNjVUYXlvdWlSQXFLM2xoMGlYanVSU2gwS3VNX0ZteXhOQnZyd0g3NDY5bXZqY2ZrQ0dNZE16dGhmMUtVVkZLbURKd0VnMU1aVUF6bmQyTkZPNnNuQkhDbkljaXkwREVaWVdMSmlsa282c25nNUdZYld1WDM4Z9IBrAFBVV95cUxQdUhfTEFjWWRfYnZZcENYUTM1NHVVellhZ2FSUkJYN2Fxa09GdTRTNnZGRWFtWUk2Wl9PQmllc3hiRnE5TzNwQUhvQl9DbU0zWjhOeklfdmRfcGs3RmNwMGJPdDRhb25Ta0NGNF9ybjJVdnVRLUNqMFdlSDE3dDJnWTlyTVhxR1JhSWg4YlRlXzY1bHVfNWc3amNJRlQ2bVNNc0JGdjN1RkN5RU1E?oc=5"
+          ]
+        },
+        {
           "term": "study finds",
-          "score": 6.689,
-          "mentions": 4,
-          "rate_per_10k": 634.92,
-          "growth_vs_28d": -0.016,
+          "score": 6.129,
+          "mentions": 3,
+          "rate_per_10k": 468.75,
+          "growth_vs_28d": -0.273,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdFlDaV9ORlZ2OVNhUGU3Zm82cE5LdVdUX0VEOGg0OUlPR1UtTE9uaWZOMTlNMkVxMlU0Vzd4V1o1elh3dzBwLTk1TldkYS04N01HN0h3aHl3Y01rSVU2Nkh1a2xSMDV6UWVhcXpLTThldEJFOWV3SkFxTGFrOVg5eEIwUG9WZjFmQ3ZBZEJCV3hQYzBT?oc=5",
-            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPblRkZ2xpT3pwY2tNT2pnVXVvUktOTVdaSU43MmcxQ3JXVzFaNDFQazBmZ2Y3RkxtbzEza3QxNllvRy1zVEZHVnZDZ0tTVzctd2hELXBMeTE2TDVBN0ZlclZSV0M5dnIzYTg0ZFVjM3RIT09UUDVyZFp5dUE3UHE5QlRuMERZcU05Z2dXbkd3UFpiMFlhYVVkUElHR3ZPdUlfMWZxMkUwNVY3WnZvclVnbjJyWmN2dzR5Ym91Qk02blQ?oc=5",
-            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5"
+            "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMlJza1loN1J3VDdqdUlDdnhYYnZzcUgtelRacDFZYWdCY0ZZRUxpTU1EWHIycm5NdURpZGw4Z3BySWI5M2VIcDF0TTRDWXdPWnBZYTJoSUpjc2J3MnVheTZPYWltTWl6Y3EwclpuVGRJRmliSjhoaTFoSlZtN1A3S2NR?oc=5",
+            "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOUZmMVUyenU0NUFybmNIckM4bW9iZWpiWkE4RzVNQ2xoVmtXZW9jVkxncThpakVzR2h6cjRzVzVWNVYwTWtYYlBvSl9YbGo2U1dGOEVySmhyTXVSSGU3cVVCQkdvOGp2SFhwUXl2Vmh3UFdmVEJYY1ZaWmFnVVp6cHB0UVZvMjlLNW81dkZPbGJrVi1EMnhNN0xiam1RM25yV1NPWg?oc=5"
           ]
         },
         {
           "term": "abc news",
-          "score": 5.998,
+          "score": 5.967,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": -0.016,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": -0.031,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -2172,23 +2209,23 @@
         },
         {
           "term": "breast cancer",
-          "score": 5.998,
+          "score": 5.967,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": -0.016,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": -0.031,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMimgFBVV95cUxORXlYTXBmcmxQdjdsX1RRamlHU2hadUMtRlkwSGphWC03NGwybF9GVXFuUlZ4WG1tNml1WS01XzF3NjlFLTJaWjZJTms5aWJZbjJTQWRobmU2UV94TUZyTUF6aFBmekRtcXdXZXUwWmYwcWgxWlBQSVplRTJNWmpjR24zdTF5Z0Zuc1JIUEZwUU91bHFuTERSLWZ30gGfAUFVX3lxTE5Gamo3QXhZRnl2SlBYVmE1UFRIdFY4bnZpRENQR2ZPT2V4MjZJT2VEN2NaVG1SQVEtZFpOTmdvNUFoTU8xaWdzN2RBYlR4VVBiQVFZc0NmLXhEdzVKdHIyLU5Zc1ZLVW9uMGJtR3BTY2Q1NDZ3bTY5dDlXM3djc1E3dEVLakpiV3AxNEhjdmdrZ3J4cnVmbDNMRi0tZktacw?oc=5",
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdxNFF0UG1jYzkwbGNIbXlmYU85NFJ3RDFKSThRNk1qTksxVWRlMWM0elJrTDVzanZvVm15MjB3TTNOSzBfTTBKSmJUejZ0S25LTUlOOEpTc0pNYlFDNFEyYlF1c1Y4RktkVHNjbVoyUm1SX3hma2pTUDBiT2lXclBDT1h6OEV3Z21XaktWQmV0MWNUaUFrTWpFWQ?oc=5"
+            "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNXg3dFVsMktLeGwteG5OMm9xT0hGcUlseFhEcDg0WV9ZUzlQVE5iLTlNTi1sOWJ0b002WXVKeUdPenVnQmxoSFJVMlVRdUl1dWxMbmFQMVNOOGgtUGYxbHhTaVNfdmpEOTV3Ui1CZkVRRjAzbDk3d1NyS1ZVcmxSd3U2ZURfZkRPZjlnQnVVQ0hzT0hKNXd0cHRubTJBUzR3blp3?oc=5"
           ]
         },
         {
           "term": "heart attacks",
-          "score": 5.998,
+          "score": 5.967,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": -0.016,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": -0.031,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
@@ -2198,28 +2235,15 @@
         },
         {
           "term": "immune system",
-          "score": 5.998,
+          "score": 5.967,
           "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": -0.016,
+          "rate_per_10k": 312.5,
+          "growth_vs_28d": -0.031,
           "independent_source_families": 1,
           "quality": "EXPLORATORY",
           "evidence_urls": [
             "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQi1MVFVnbWtrZzhpUndkVWNSOElxT1k5QkYzdHVDdE1jeDNxMzM3YWg4enRfNDc5OW81LTVEM1V4NTB2N3JXWTdtb0g4c0o5eGxyT09KOWY5bVR1UXdWWkNQZ2lQZzZpZjJEM2djLW4teG5KNDZJRkN1MnJTSDJKWHk2WC1uMHVPVnZreGlNcEFyOGJvdXFhUVJWazRwTXpUUExNeVFVQ1RETGV4Ykx3UUJYLWg?oc=5",
             "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOUZmMVUyenU0NUFybmNIckM4bW9iZWpiWkE4RzVNQ2xoVmtXZW9jVkxncThpakVzR2h6cjRzVzVWNVYwTWtYYlBvSl9YbGo2U1dGOEVySmhyTXVSSGU3cVVCQkdvOGp2SFhwUXl2Vmh3UFdmVEJYY1ZaWmFnVVp6cHB0UVZvMjlLNW81dkZPbGJrVi1EMnhNN0xiam1RM25yV1NPWg?oc=5"
-          ]
-        },
-        {
-          "term": "study suggests",
-          "score": 5.998,
-          "mentions": 2,
-          "rate_per_10k": 317.46,
-          "growth_vs_28d": -0.016,
-          "independent_source_families": 1,
-          "quality": "EXPLORATORY",
-          "evidence_urls": [
-            "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM1h5MTRzRjMtTXZ6RVVURGRlb0tKX3lsMVk1MWdqQzRsNkdPMVNTZzRybmpEYlpWR0NhdHNqcHppT1dhTFNDODQzblVKckVOaGhrTnBpTlJuZ1V6VVNLTTRBdmd5SWlfOG5KUHF3TVpjZ3p1VEo2WnRPR0x0N1ZnemZnaDV4Szl3QnoyUzl0LWVjQ09ySGtka1BuSXNERlZoZzZRM0ltZm9zU1BGVVFTNUNwRmVsTGJVOUxMUmRzR1hGUnRzblRyQ25QVUlYRkE?oc=5",
-            "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOFNPNDFjNHdkSmdXVUtnckNwU3NSNEVHSklxdlc2VEU2Rk5IMGNMVlkta01HemE4M0J4WDlZWGdjV19ac2dBVWRDWXp2cmdaT0JhSWhlY3N1SGpjRUJoTXJjeXVfb3VKMlc1NGp6T2xaWmxuRmppZVNLWmh4SlNUZ0RSSDllMC11T0NNLXl5RU5RdkdGZkVBeHNBZmZKMnFzV01aV2JzUXJHUEVUbElPcmJfVlNhelhodmdXREtMUHQ?oc=5"
           ]
         }
       ]
