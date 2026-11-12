@@ -49,7 +49,12 @@ NOISE = frozenset({
     "commission implementing", "commission implementing regulation",
     "european parliament", "states senate", "united states senate",
     "language models", "large language", "error correction",
-    "quantum error", "notice intended", "study finds"
+    "quantum error", "notice intended", "study finds",
+    "bbc news", "cbs news", "abc news", "new york times",
+    "implementing regulation", "implementing regulation november",
+    "regulation november", "announces approval",
+    "announces approval two", "applications mutual",
+    "notice intended repatriation"
 })
 
 def choose_theme(phrase, source_domain):
@@ -64,16 +69,23 @@ def _daily_theme_data(snapshot, source_domains):
     its category, not a misleading bulk dominance by 500 Wikipedia pages."""
     results = {key: defaultdict(dict) for key in THEMES}
     for source_id, sample in snapshot.get("sources", {}).items():
-        if not isinstance(sample, dict) or not sample.get("documents"):
+        if not isinstance(sample, dict) or sample.get("documents", 0) < 10:
+            # Tiny RSS feeds (one press release / day) are not robust
+            # wording-frequency denominators. Do not show 1/1 = 10000.
             continue
         source_domain = source_domains.get(source_id, "news")
         volume = sample["documents"]
         for phrase, info in sample.get("terms", {}).items():
-            if phrase.casefold() in NOISE or info.get("count", 0) < 1:
+            if phrase.casefold() in NOISE or info.get("count", 0) < 2:
+                continue
+            if re.search(r"\b(?:notice|implementing|repatriation|regulation november)\b", phrase, re.I):
                 continue
             category = choose_theme(phrase, source_domain)
             results[category][phrase][source_id] = {
-                "rate": 10000.0 * info["count"] / volume,
+                # Shrink low-sample ranked-list sources to limit dominance.
+                # This is a preliminary conservative heuristic, not a
+                # statistical estimate of population prevalence.
+                "rate": 10000.0 * info["count"] / (volume + 80),
                 "count": info["count"],
                 "links": info.get("links", [])[:3]
             }
