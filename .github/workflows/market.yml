@@ -1,0 +1,38 @@
+name: ORACLE market observation (experimental)
+on:
+  schedule:
+    - cron: "45 22 * * 1-5"
+  workflow_dispatch:
+  push:
+    paths:
+      - "oracle_market_monitor.py"
+      - "tests/test_market_monitor.py"
+      - ".github/workflows/market.yml"
+permissions:
+  contents: write
+concurrency:
+  group: oracle-market-data
+  cancel-in-progress: false
+jobs:
+  market:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: All unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Observe daily closing prices
+        run: python oracle_market_monitor.py
+      - name: Save explicit data / availability states
+        run: |
+          git config user.name "oracle-research-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: experimental market watchlist snapshot"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
