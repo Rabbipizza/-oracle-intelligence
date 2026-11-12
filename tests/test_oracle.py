@@ -35,7 +35,8 @@ class TestOracle(unittest.TestCase):
         self.assertEqual(compute_rank(current, []), [])
 
     def test_domain_coverage(self):
-        self.assertEqual(len(DOMAINS), 14)
+        self.assertEqual(len(DOMAINS), 15)
+        self.assertIn('geek', DOMAINS)
 
 if __name__ == "__main__":
     unittest.main()
