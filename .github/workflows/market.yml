@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: oracle-market-data
+  group: oracle-repo-writes
   cancel-in-progress: false
 jobs:
   market:
@@ -33,6 +33,10 @@ jobs:
           git add data/market.json
           if ! git diff --cached --quiet; then
             git commit -m "data: experimental market watchlist snapshot"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep $((attempt * 3))
+            done
+            exit 1
           fi

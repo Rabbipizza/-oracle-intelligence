@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: oracle-daily-data
+  group: oracle-repo-writes
   cancel-in-progress: false
 
 jobs:
@@ -43,5 +43,10 @@ jobs:
           git add data/history data/latest.json
           if ! git diff --cached --quiet; then
             git commit -m "data: daily ORACLE public-source sample"
-            git push
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep $((attempt * 3))
+            done
+            exit 1
           fi
