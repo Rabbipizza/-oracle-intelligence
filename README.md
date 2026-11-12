@@ -1,6 +1,6 @@
 # ORACLE 2.0 — radar de tendances mondiales
 
-ORACLE observe le vocabulaire et les indicateurs structurels de sources multiples, publie un **Billboard Top 5 par source**, puis construit un graphe vérifiable **tendance → goulot → fournisseurs de capacités → matières premières → entreprises cotées**.
+ORACLE observe le vocabulaire et les indicateurs structurels de sources multiples, publie un **Billboard Top 20 par thème**, puis construit un graphe vérifiable **tendance → goulot → fournisseurs de capacités → matières premières → entreprises cotées**.
 
 ## État
 
@@ -37,3 +37,9 @@ Des flux RSS publics (Google News, NASA Earth Observatory, Réserve fédérale e
 ## Politiques d'accès adaptées
 
 Chaque source active a un profil explicite (accès, période, quota d'articles, budget de requêtes, limites HTTP) dans [`sources/access_profiles.json`](sources/access_profiles.json). Les sources inaccessibles sont signalées sans injecter de faux zéros et les sources non configurées sont bloquées. Voir [`docs/SOURCE_ACCESS.md`](docs/SOURCE_ACCESS.md).
+
+## Billboard hebdomadaire style charts
+
+Le cockpit affiche désormais des **thèmes** (dont Geek & Gaming), et non les noms des sources. Chaque thème possède un Top 20 fondé sur un score de fréquence normalisé à l'intérieur de chaque source. Avant deux périodes de sept jours comparables, les positions sont marquées **PROVISOIRES** et les mouvements hebdomadaires sont **indisponibles**, jamais inventés. Les preuves restent reliées à chaque entrée.
+
+En l'absence d'un historique de 14 jours avec des sources comparables, la liste du jour n'est pas encore un classement d'accélération. Les catégories et filtres lexicaux v0.1 sont heuristiques : une validation multilingue et sémantique est nécessaire avant un usage scientifique.

@@ -21,6 +21,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from oracle_billboard import source_snapshots, source_billboards
 from oracle_pipeline import create_research_queue
+from oracle_themes import make_billboard
 from oracle_access import (
     AccessBlocked, BoundedFetcher, OversizedPayload, access_decision,
     classify_error, policy_for, should_poll, source_health_meta,
@@ -56,6 +57,8 @@ SOURCES = [
     ("google_news_us", "Google News US", "news", "google_news", "rss", "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"),
     ("google_news_fr", "Google News France", "news", "google_news", "rss", "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"),
     ("google_news_health", "Google News Santé", "health", "google_news", "rss", "https://news.google.com/rss/headlines/section/topic/HEALTH?hl=en-US&gl=US&ceid=US:en"),
+    ("geek_gaming", "Gaming and video games", "geek", "google_news", "rss", "https://news.google.com/rss/search?q=gaming+OR+%22video+games%22+OR+nintendo&hl=en-US&gl=US&ceid=US:en"),
+    ("geek_anime", "Anime and manga", "geek", "google_news", "rss", "https://news.google.com/rss/search?q=anime+OR+manga+OR+cosplay&hl=en-US&gl=US&ceid=US:en"),
     ("mit_environment", "MIT Environment", "geography", "mit_environment", "rss", "https://news.mit.edu/rss/topic/environment"),
     ("fed_press", "Federal Reserve Press", "macroeconomics", "fed_press", "rss", "https://www.federalreserve.gov/feeds/press_all.xml"),
     ("eurlex_law", "EUR-Lex Acts", "geopolitics", "eurlex", "rss", "https://eur-lex.europa.eu/EN/display-feed.rss?rssId=165"),
@@ -64,7 +67,7 @@ SOURCES = [
 DOMAINS = [
     "culture", "social", "news", "technology", "science", "patents",
     "macroeconomics", "geopolitics", "geography", "demography",
-    "commodities", "supply_chain", "health", "markets",
+    "commodities", "supply_chain", "health", "markets", "geek",
 ]
 
 def get_bytes(url: str, *, timeout=16, max_bytes=3_000_000, headers=None) -> bytes:
@@ -301,9 +304,10 @@ def run(now=None):
                         "state": "EXPLORATORY" if day_now["documents"] else "NO_DATA",
                         "top20": compute_rank(day_now, previous_domains)}
     per_source = source_billboards(today, daily, past, SOURCES)
+    themed = make_billboard(today, daily, past, SOURCES)
     latest = {"date": today, "collected_at_utc": now.isoformat(), "schema_version": 2,
               "status": "PARTIAL" if any(h["status"] != "OK" for h in health) else "OK",
-              "source_health": health, "source_billboard": per_source, "billboard": rank,
+              "source_health": health, "source_billboard": per_source, "theme_billboard": themed, "billboard": rank,
               "research_queue": create_research_queue(per_source),
               "investment": {"state": "NOT_EVALUATED", "reason": "No verified security pricing, fundamentals or backtest; no trading signals."}}
     # Snapshot retains statistics, term counts, provenance URLs only — no raw post text.
